@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/index.html</loc>
-    <lastmod>2023-04-15T14:41:48.517Z</lastmod>
+    <lastmod>2023-04-15T15:06:10.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/biomarker-catalog/NEWS.html</loc>
+    <lastmod>2023-04-15T15:06:12.875Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/graphs/index.html</loc>
-    <lastmod>2023-04-15T14:41:50.637Z</lastmod>
+    <lastmod>2023-04-15T15:06:13.307Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/tables/index.html</loc>
-    <lastmod>2023-04-15T14:41:50.985Z</lastmod>
+    <lastmod>2023-04-15T15:06:13.779Z</lastmod>
   </url>
 </urlset>

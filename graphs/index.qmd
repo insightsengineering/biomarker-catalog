@@ -1,0 +1,3 @@
+# Graphs {.unnumbered}
+
+This is a collection of Biomarker Analysis graph templates.

@@ -1,0 +1,91 @@
+---
+project:
+  type: website
+  preview:
+    port: 4200
+    browser: true
+    watch-inputs: true
+    navigate: true
+    timeout: 300
+
+format:
+  html:
+    search: true
+    theme:
+      light:
+        - flatly
+      dark:
+        - darkly
+    anchor-sections: true
+    smooth-scroll: true
+    code-link: true
+    code-fold: true
+    code-overflow: scroll
+    code-line-numbers: true
+    code-copy: true
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+    code-block-bg: true
+    code-block-border-left: "#1482FA"
+    css: assets/css/style.scss
+    number-sections: false
+    lang: en-US
+    page-layout: full
+
+execute:
+  freeze: auto
+  cache: true
+  code-line-numbers: true
+
+knitr:
+  opts_chunk:
+    echo: true
+    fig.width: 15
+
+editor: visual
+highlight-style: github
+
+website:
+  title: Biomarker Analysis Catalog
+  image: https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/StatisticalEngineering.png
+  open-graph: true
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
+  page-navigation: true
+  reader-mode: true
+  site-url: https://insightsengineering.github.io/biomarker-catalog
+  repo-url: https://github.com/insightsengineering/biomarker-catalog
+  repo-branch: main
+  google-analytics: UA-125641273-1
+  cookie-consent: true
+  page-footer:
+    left: |
+      Made with ❤️ by the Statistical Engineering Team
+  navbar:
+    pinned: true
+    collapse: false
+    background: primary
+    search: true
+    right:
+      - icon: slack
+        href: https://app.slack.com/client/T028PB489D3/
+        aria-label: Slack
+      - icon: github
+        href: https://github.com/insightsengineering/biomarker-catalog
+        aria-label: Repository
+  sidebar:
+    - id: sidebar
+      style: docked
+      collapse-level: 1
+      logo: https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/StatisticalEngineering.png
+      border: true
+      contents:
+        - text: Introduction
+          file: index.qmd
+        - text: "---"
+        - auto: tables
+        - auto: graphs

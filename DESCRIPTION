@@ -1,0 +1,26 @@
+Package: biomarker.catalog
+Type: Book
+Title: Biomarker Analysis Catalog
+Version: 0.1.0
+Date: 2023-04-15
+Author: Daniel Sebanes Bove [aut, cre]
+Maintainer: Daniel Sebanes Bove <stat-engg@noreply.roche.com>
+Depends: R (>= 4)
+Description: Development version of Biomarker catalog.
+Imports:
+    bookdown,
+    scda,
+    scda.2022,
+    teal.modules.clinical,
+    tern,
+    tern.mmrm,
+    tern.rbmi,
+    teal,
+    teal.modules.general,
+    rtables,
+    helios,
+    ggplot2.utils,
+    hermes,
+    teal.modules.hermes
+Encoding: UTF-8
+Language: en-US

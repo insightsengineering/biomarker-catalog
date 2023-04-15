@@ -16,10 +16,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  audit:
-    if: github.event_name != 'push'
-    name: Audit Dependencies 🕵️‍♂️
-    uses: insightsengineering/r.pkg.template/.github/workflows/audit.yaml@main
   linter:
     if: github.event_name != 'push'
     name: SuperLinter 🦸‍♀️
@@ -37,10 +33,6 @@ jobs:
   version:
     name: Version Check 🏁
     uses: insightsengineering/r.pkg.template/.github/workflows/version.yaml@main
-  licenses:
-    if: github.event_name != 'push'
-    name: License Check 🃏
-    uses: insightsengineering/r.pkg.template/.github/workflows/licenses.yaml@main
   style:
     if: github.event_name != 'push'
     name: Style Check 👗

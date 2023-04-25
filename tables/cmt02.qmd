@@ -1,0 +1,112 @@
+---
+title: CMT2
+subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+We prepare the data similarly as in [CMT1](../tables/cmt01.qmd).
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>% 
+  filter(PARAMCD == "OS", BEP01FL == "Y") %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0
+  ) %>% 
+  var_relabel(
+    BMRKR1 = "Biomarker (Continuous)",
+    BMRKR2 = "Biomarker (Categorical)"
+  ) 
+```
+
+## Table
+
+The multivariate Cox Proportional Hazards model is fitted using the function `fit_coxreg_multivar()` specifying the time, event, arm and covariates in a `variables` list, as well as the `data` where these variables live.
+
+```{r}
+multivar_model <- fit_coxreg_multivar(
+  variables = list(
+    time = "AVAL", 
+    event = "is_event", 
+    arm = "ARM",
+    covariates = c("AGE", "BMRKR1", "BMRKR2") 
+  ),
+  data = adtte 
+)
+```
+
+After fitting, the models are tidied with `broom::tidy()` and then arranged in a table layout.
+
+Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_multivar()`).
+We also need to use the option `multivar = TRUE` to ensure that the results are tabulated correctly (see further documentation by typing `?fit_coxreg_multivar`).
+
+```{r}
+df <- broom::tidy(multivar_model)
+
+attr(df$term, which = "label") <- "Effect/Covariate Included in the Model"
+
+result <- basic_table() %>%
+  split_rows_by("term", child_labels = "hidden", split_fun = drop_split_levels) %>%
+  append_varlabels(df, "term") %>%
+  summarize_coxreg(multivar = TRUE, conf_level = .95) %>%
+  build_table(df)
+
+result
+```
+
+## Changing Reference Levels in the Cox Proportional Hazards Model Table (CMT2A)
+
+For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before.
+The `forcats` package provides convenience functions for the level reordering.
+
+```{r}
+adtte2 <- adtte %>%
+  mutate(
+    ARM = forcats::fct_relevel(
+      ARM,
+      "B: Placebo",
+      "C: Combination",
+      "A: Drug X"
+    )
+  )
+```
+
+```{r}
+multivar_model2 <- fit_coxreg_multivar(
+  variables = list(
+    time = "AVAL", 
+    event = "is_event", 
+    arm = "ARM",
+    covariates = c("AGE", "BMRKR1", "BMRKR2") 
+  ),
+  data = adtte2
+)
+```
+
+After fitting, we can proceed in the same way as in CMT2 above.
+
+```{r}
+df2 <- broom::tidy(multivar_model2)
+
+attr(df2$term, which = "label") <- "Effect/Covariate Included in the Model"
+
+result <- basic_table() %>%
+  split_rows_by("term", child_labels = "hidden", split_fun = drop_split_levels) %>%
+  append_varlabels(df2, "term") %>%
+  summarize_coxreg(multivar = TRUE, conf_level = .95) %>%
+  build_table(df2)
+
+result
+```
+
+{{< include ../session_info.qmd >}}
+:::

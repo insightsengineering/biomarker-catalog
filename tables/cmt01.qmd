@@ -1,8 +1,16 @@
-# Cox Proportional Hazards Model Tables with a Single Covariate (CMT1)
+---
+title: CMT1
+subtitle: Cox Proportional Hazards Model Tables with a Single Covariate
+---
 
+------------------------------------------------------------------------
+
+::: panel-tabset
 ## Setup
 
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to illustrate the tables. We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival. We then convert time of overall survival to months and create a new variable for the event information.
+We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to illustrate the tables.
+We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival.
+We then convert time of overall survival to months and create a new variable for the event information.
 
 ```{r, message = FALSE}
 library(tern)
@@ -18,9 +26,9 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   )
 ```
 
-## Cox Proportional Hazards Model Table with a Single Covariate (CMT1)
+## Table
 
-The model is fitted using the function `fit_coxreg_univar()` specifying the time, event and covariate in a `variables` list, as well as the `data` where these variables live. 
+The model is fitted using the function `fit_coxreg_univar()` specifying the time, event and covariate in a `variables` list, as well as the `data` where these variables live.
 
 ```{r}
 model <- fit_coxreg_univar(
@@ -35,7 +43,8 @@ model <- fit_coxreg_univar(
 
 After fitting, the model is tidied with `broom::tidy()` and then arranged in a table layout.
 
-Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_univar()`). In addition, the option `multivar = TRUE` should be used to tabulate the covariate effect estimates (see further documentation by typing `?fit_coxreg_univar`).
+Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_univar()`).
+In addition, the option `multivar = TRUE` should be used to tabulate the covariate effect estimates (see further documentation by typing `?fit_coxreg_univar`).
 
 ```{r}
 df <- broom::tidy(model)
@@ -46,3 +55,6 @@ lyt <- basic_table() %>%
 
 build_table(lyt, df)
 ```
+
+{{< include ../session_info.qmd >}}
+:::

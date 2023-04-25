@@ -1,5 +1,11 @@
-# Cox Proportional Hazards Model Tables with Separate Models for Each Covariate (CMT3)
+---
+title: CMT3
+subtitle: Cox Proportional Hazards Model Tables with Separate Models for Each Covariate
+---
 
+------------------------------------------------------------------------
+
+::: panel-tabset
 ## Setup
 
 We prepare the data in the same way as in [CMT1](../tables/cmt01.qmd).
@@ -18,7 +24,7 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   )
 ```
 
-## Cox Proportional Hazards Model Table with Separate Models for Each Covariate (CMT3)
+## Table
 
 The separate Cox Proportional Hazards models for each covariate are fitted using the function `fit_coxreg_univar()` specifying the time and event variables and covariates in a `variables` list, as well as the `data` where these variables live.
 
@@ -35,7 +41,8 @@ model <- fit_coxreg_univar(
 
 After fitting, the models are tidied with `broom::tidy()` and then arranged in a table layout.
 
-Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_univar()`). In addition, the option `multivar = TRUE` should be used to tabulate the separate covariate effect estimates (see further documentation by typing `?fit_coxreg_univar`).
+Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_univar()`).
+In addition, the option `multivar = TRUE` should be used to tabulate the separate covariate effect estimates (see further documentation by typing `?fit_coxreg_univar`).
 
 ```{r, results = "hide"}
 df <- broom::tidy(model)
@@ -46,3 +53,6 @@ lyt <- basic_table() %>%
 
 build_table(lyt = lyt, df = df)
 ```
+
+{{< include ../session_info.qmd >}}
+:::

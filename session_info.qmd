@@ -1,0 +1,7 @@
+## Session Info
+
+```{r sessioninfo, message=FALSE}
+#| code-fold: show
+
+sessionInfo()
+```

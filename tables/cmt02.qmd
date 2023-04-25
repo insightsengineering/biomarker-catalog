@@ -15,17 +15,17 @@ library(tern)
 library(dplyr)
 
 adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-  df_explicit_na() %>% 
+  df_explicit_na() %>%
   filter(PARAMCD == "OS", BEP01FL == "Y") %>%
   mutate(
     AVAL = day2month(AVAL),
     AVALU = "Months",
     is_event = CNSR == 0
-  ) %>% 
+  ) %>%
   var_relabel(
     BMRKR1 = "Biomarker (Continuous)",
     BMRKR2 = "Biomarker (Categorical)"
-  ) 
+  )
 ```
 
 ## Table
@@ -35,12 +35,12 @@ The multivariate Cox Proportional Hazards model is fitted using the function `fi
 ```{r}
 multivar_model <- fit_coxreg_multivar(
   variables = list(
-    time = "AVAL", 
-    event = "is_event", 
+    time = "AVAL",
+    event = "is_event",
     arm = "ARM",
-    covariates = c("AGE", "BMRKR1", "BMRKR2") 
+    covariates = c("AGE", "BMRKR1", "BMRKR2")
   ),
-  data = adtte 
+  data = adtte
 )
 ```
 
@@ -83,10 +83,10 @@ adtte2 <- adtte %>%
 ```{r}
 multivar_model2 <- fit_coxreg_multivar(
   variables = list(
-    time = "AVAL", 
-    event = "is_event", 
+    time = "AVAL",
+    event = "is_event",
     arm = "ARM",
-    covariates = c("AGE", "BMRKR1", "BMRKR2") 
+    covariates = c("AGE", "BMRKR1", "BMRKR2")
   ),
   data = adtte2
 )

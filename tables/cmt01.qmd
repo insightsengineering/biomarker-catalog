@@ -16,7 +16,7 @@ We then convert time of overall survival to months and create a new variable for
 library(tern)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>% 
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   df_explicit_na() %>%
   filter(PARAMCD == "OS", BEP01FL == "Y") %>%
   mutate(

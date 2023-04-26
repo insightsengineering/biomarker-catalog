@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "tables/index.html",
+    "href": "tables/index.html",
+    "title": "Biomarker Analysis Catalog",
+    "section": "",
+    "text": "Tables\nThis is a collection of Biomarker Analysis table templates."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Biomarker Analysis Catalog",
@@ -19,12 +26,5 @@
     "title": "Biomarker Analysis Catalog",
     "section": "",
     "text": "Graphs\nThis is a collection of Biomarker Analysis graph templates."
-  },
-  {
-    "objectID": "tables/index.html",
-    "href": "tables/index.html",
-    "title": "Biomarker Analysis Catalog",
-    "section": "",
-    "text": "Tables\nThis is a collection of Biomarker Analysis table templates."
   }
 ]

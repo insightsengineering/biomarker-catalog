@@ -28,32 +28,20 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
 
 ## Table
 
-The model is fitted using the function `fit_coxreg_univar()` specifying the time, event and covariate in a `variables` list, as well as the `data` where these variables live.
+The `summarize_coxreg()` function in `tern` takes the same `variables`, `at`, and `control` arguments that are used to fit a model using the `fit_coxreg_univar()` function - specifying the time, event and covariate in a `variables` list, and `control` and `at` with any further customizations to the model.
+Note that the default confidence level is 95% but this can be customized via the `conf_level` element in `control`.
+
+Rather than fitting the model and then tidying the output via the `broom::tidy()` function, we can directly input these three arguments into the `summarize_coxreg()` function to summarize the model fit in a table layout, building the table with our pre-processed `adtte` data set.
 
 ```{r}
-model <- fit_coxreg_univar(
-  variables = list(
-    time = "AVAL",
-    event = "event",
-    covariates = "COUNTRY"
-  ),
-  data = adtte
-)
-```
-
-After fitting, the model is tidied with `broom::tidy()` and then arranged in a table layout.
-
-Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_univar()`).
-In addition, the option `multivar = TRUE` should be used to tabulate the covariate effect estimates (see further documentation by typing `?fit_coxreg_univar`).
-
-```{r}
-df <- broom::tidy(model)
-
 lyt <- basic_table() %>%
-  split_rows_by("term", child_labels = "hidden") %>%
-  summarize_coxreg(multivar = TRUE, conf_level = 0.95)
+  summarize_coxreg(variables = list(
+    time = "AVAL", 
+    event = "event", 
+    covariates = "COUNTRY"
+  ))
 
-build_table(lyt, df)
+build_table(lyt, adtte)
 ```
 
 {{< include ../session_info.qmd >}}

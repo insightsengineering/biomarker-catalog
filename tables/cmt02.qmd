@@ -40,11 +40,11 @@ Rather than fitting the model and then tidying the output via the `broom::tidy()
 result <- basic_table() %>%
   summarize_coxreg(
     variables = list(
-      time = "AVAL", 
-      event = "is_event", 
+      time = "AVAL",
+      event = "is_event",
       arm = "ARM",
-      covariates = c("AGE", "BMRKR1", "BMRKR2") 
-    ), 
+      covariates = c("AGE", "BMRKR1", "BMRKR2")
+    ),
     multivar = TRUE
   ) %>%
   append_topleft("Effect/Covariate Included in the Model") %>%
@@ -76,10 +76,10 @@ Now we can proceed in the same way as in CMT2 above.
 result <- basic_table() %>%
   summarize_coxreg(
     variables = list(
-      time = "AVAL", 
-      event = "is_event", 
+      time = "AVAL",
+      event = "is_event",
       arm = "ARM",
-      covariates = c("AGE", "BMRKR1", "BMRKR2") 
+      covariates = c("AGE", "BMRKR1", "BMRKR2")
     ),
     multivar = TRUE
   ) %>%

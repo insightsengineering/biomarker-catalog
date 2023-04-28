@@ -36,8 +36,8 @@ Rather than fitting the model and then tidying the output via the `broom::tidy()
 ```{r}
 lyt <- basic_table() %>%
   summarize_coxreg(variables = list(
-    time = "AVAL", 
-    event = "event", 
+    time = "AVAL",
+    event = "event",
     covariates = "COUNTRY"
   ))
 

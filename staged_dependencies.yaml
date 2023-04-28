@@ -47,7 +47,4 @@ upstream_repos:
   insightsengineering/rtables:
     repo: insightsengineering/rtables
     host: https://github.com
-  insightsengineering/helios:
-    repo: insightsengineering/helios
-    host: https://github.com
 downstream_repos:

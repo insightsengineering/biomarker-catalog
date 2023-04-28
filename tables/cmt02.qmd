@@ -30,35 +30,25 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
 
 ## Table
 
-The multivariate Cox Proportional Hazards model is fitted using the function `fit_coxreg_multivar()` specifying the time, event, arm and covariates in a `variables` list, as well as the `data` where these variables live.
+The multivariate Cox Proportional Hazards model can be displayed in a summary table using the `summarize_coxreg` function from `tern` with the `multivar` argument set to `TRUE`.
+Like the corresponding model fitting function `fit_coxreg_multivar()`, we specify the time, event, arm and covariates in a `variables` list, and any further customizations via the `control` argument.
+Note that the default confidence level is 95% but this can be customized via the `conf_level` element in `control`.
+
+Rather than fitting the model and then tidying the output via the `broom::tidy()` function, we can directly input these three arguments into the `summarize_coxreg()` function to summarize the model fit in a table layout, building the table with our pre-processed `adtte` data set.
 
 ```{r}
-multivar_model <- fit_coxreg_multivar(
-  variables = list(
-    time = "AVAL",
-    event = "is_event",
-    arm = "ARM",
-    covariates = c("AGE", "BMRKR1", "BMRKR2")
-  ),
-  data = adtte
-)
-```
-
-After fitting, the models are tidied with `broom::tidy()` and then arranged in a table layout.
-
-Note that the `conf_level` argument in the `summarize_coxreg()` call specifies the label that will be used in the table (95% is the default confidence interval used in `fit_coxreg_multivar()`).
-We also need to use the option `multivar = TRUE` to ensure that the results are tabulated correctly (see further documentation by typing `?fit_coxreg_multivar`).
-
-```{r}
-df <- broom::tidy(multivar_model)
-
-attr(df$term, which = "label") <- "Effect/Covariate Included in the Model"
-
 result <- basic_table() %>%
-  split_rows_by("term", child_labels = "hidden", split_fun = drop_split_levels) %>%
-  append_varlabels(df, "term") %>%
-  summarize_coxreg(multivar = TRUE, conf_level = .95) %>%
-  build_table(df)
+  summarize_coxreg(
+    variables = list(
+      time = "AVAL",
+      event = "is_event",
+      arm = "ARM",
+      covariates = c("AGE", "BMRKR1", "BMRKR2")
+    ),
+    multivar = TRUE
+  ) %>%
+  append_topleft("Effect/Covariate Included in the Model") %>%
+  build_table(adtte)
 
 result
 ```
@@ -80,30 +70,21 @@ adtte2 <- adtte %>%
   )
 ```
 
-```{r}
-multivar_model2 <- fit_coxreg_multivar(
-  variables = list(
-    time = "AVAL",
-    event = "is_event",
-    arm = "ARM",
-    covariates = c("AGE", "BMRKR1", "BMRKR2")
-  ),
-  data = adtte2
-)
-```
-
-After fitting, we can proceed in the same way as in CMT2 above.
+Now we can proceed in the same way as in CMT2 above.
 
 ```{r}
-df2 <- broom::tidy(multivar_model2)
-
-attr(df2$term, which = "label") <- "Effect/Covariate Included in the Model"
-
 result <- basic_table() %>%
-  split_rows_by("term", child_labels = "hidden", split_fun = drop_split_levels) %>%
-  append_varlabels(df2, "term") %>%
-  summarize_coxreg(multivar = TRUE, conf_level = .95) %>%
-  build_table(df2)
+  summarize_coxreg(
+    variables = list(
+      time = "AVAL",
+      event = "is_event",
+      arm = "ARM",
+      covariates = c("AGE", "BMRKR1", "BMRKR2")
+    ),
+    multivar = TRUE
+  ) %>%
+  append_topleft("Effect/Covariate Included in the Model") %>%
+  build_table(adtte2)
 
 result
 ```

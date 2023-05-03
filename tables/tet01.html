@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Biomarker Analysis Catalog - CMT2</title>
+<title>Biomarker Analysis Catalog - TET1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tables/cmt03.html" rel="next">
-<link href="../tables/cmt01.html" rel="prev">
+<link href="../graphs/index.html" rel="next">
+<link href="../tables/cmt03.html" rel="prev">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -118,8 +118,8 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../assets/css/style.scss">
-<meta property="og:title" content="Biomarker Analysis Catalog - CMT2">
-<meta property="og:description" content="Cox Proportional Hazards Model Tables with Multiple Covariates">
+<meta property="og:title" content="Biomarker Analysis Catalog - TET1">
+<meta property="og:description" content="Time-to-Event Summary Tables">
 <meta property="og:site-name" content="Biomarker Analysis Catalog">
 </head>
 <body class="nav-sidebar docked nav-fixed">
@@ -158,7 +158,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tables/index.html">Tables</a></li><li class="breadcrumb-item"><a href="../tables/cmt02.html">CMT2</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tables/index.html">Tables</a></li><li class="breadcrumb-item"><a href="../tables/tet01.html">TET1</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -194,7 +194,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tables/cmt02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../tables/cmt02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CMT2</span></a>
   </div>
 </li>
@@ -206,7 +206,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tables/tet01.html" class="sidebar-item-text sidebar-link">
+  <a href="../tables/tet01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">TET1</span></a>
   </div>
 </li>
@@ -225,8 +225,8 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">CMT2</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
-<p class="subtitle lead">Cox Proportional Hazards Model Tables with Multiple Covariates</p>
+<div class="quarto-title-block"><div><h1 class="title">TET1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<p class="subtitle lead">Time-to-Event Summary Tables</p>
 </div>
 
 
@@ -244,118 +244,132 @@ cookieconsent.run({
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Changing Reference Levels in the Cox Proportional Hazards Model Table (CMT2A)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Time-to-Event Summary Table with Stratified Analysis (TET1A)</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We prepare the data similarly as in <a href="../tables/cmt01.html">CMT1</a>.</p>
-<div class="cell" data-hash="cmt02_cache/html/unnamed-chunk-1_95c9358150c3cc4337566e006f33fa4c">
+<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
+<div class="cell" data-hash="tet01_cache/html/unnamed-chunk-1_0559c6e2a71f6c72b6c79b13463d7042">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>, BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">var_relabel</span>(</span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="at">BMRKR1 =</span> <span class="st">"Biomarker (Continuous)"</span>,</span>
-<span id="cb1-14"><a href="#cb1-14"></a>    <span class="at">BMRKR2 =</span> <span class="st">"Biomarker (Categorical)"</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">filter</span>(</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="at">is_not_event =</span> CNSR <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb1-15"><a href="#cb1-15"></a>      ARM,</span>
+<span id="cb1-16"><a href="#cb1-16"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb1-17"><a href="#cb1-17"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    )</span>
+<span id="cb1-19"><a href="#cb1-19"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>The multivariate Cox Proportional Hazards model can be displayed in a summary table using the <code>summarize_coxreg</code> function from <code>tern</code> with the <code>multivar</code> argument set to <code>TRUE</code>. Like the corresponding model fitting function <code>fit_coxreg_multivar()</code>, we specify the time, event, arm and covariates in a <code>variables</code> list, and any further customizations via the <code>control</code> argument. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
-<p>Rather than fitting the model and then tidying the output via the <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code> function, we can directly input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, building the table with our pre-processed <code>adtte</code> data set.</p>
-<div class="cell" data-hash="cmt02_cache/html/unnamed-chunk-2_3188edd08ead3cedbe66f5d264c43fb0">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb2-4"><a href="#cb2-4"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>      <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6"></a>      <span class="at">arm =</span> <span class="st">"ARM"</span>,</span>
-<span id="cb2-7"><a href="#cb2-7"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"BMRKR1"</span>, <span class="st">"BMRKR2"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a>    ),</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    <span class="at">multivar =</span> <span class="cn">TRUE</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">append_topleft</span>(<span class="st">"Effect/Covariate Included in the Model"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  <span class="fu">build_table</span>(adtte)</span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This time-to-event summary table splits the columns by treatment arm using <code>split_cols_by()</code>, creates a summary for patients with and without event using <code>summarize_vars()</code>, summarizes survival time using <code>surv_time()</code> and summarizes the analysis from unstratified Cox Proportional Hazards models using <code>coxph_pairwise()</code>.</p>
+<div class="cell" data-hash="tet01_cache/html/unnamed-chunk-2_ff24b943741f2d8dfd077392e1b7cecd">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">split_cols_by</span>(</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="at">var =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="at">ref_group =</span> <span class="st">"CTRL"</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="fu">add_colcounts</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="fu">summarize_vars</span>(</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="at">vars =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="at">.stats =</span> <span class="st">"count_fraction"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="at">.labels =</span> <span class="fu">c</span>(<span class="at">count_fraction =</span> <span class="st">"Patients with event (%)"</span>),</span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="at">nested =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">show_labels =</span> <span class="st">"hidden"</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">summarize_vars</span>(</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="at">vars =</span> <span class="st">"is_not_event"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="at">.stats =</span> <span class="st">"count_fraction"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17"></a>    <span class="at">.labels =</span> <span class="fu">c</span>(<span class="at">count_fraction =</span> <span class="st">"Patients without event (%)"</span>),</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="at">nested =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-19"><a href="#cb2-19"></a>    <span class="at">show_labels =</span> <span class="st">"hidden"</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>  <span class="fu">surv_time</span>(</span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="at">vars =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23"></a>    <span class="at">var_labels =</span> <span class="st">"Time to Event (months)"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24"></a>    <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25"></a>    <span class="at">table_names =</span> <span class="st">"time_to_event"</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>  <span class="fu">coxph_pairwise</span>(</span>
+<span id="cb2-28"><a href="#cb2-28"></a>    <span class="at">vars =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29"></a>    <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30"></a>    <span class="at">var_labels =</span> <span class="fu">c</span>(<span class="st">"Unstratified Analysis"</span>),</span>
+<span id="cb2-31"><a href="#cb2-31"></a>    <span class="at">control =</span> <span class="fu">control_coxph</span>(<span class="at">pval_method =</span> <span class="st">"log-rank"</span>),</span>
+<span id="cb2-32"><a href="#cb2-32"></a>    <span class="at">table_names =</span> <span class="st">"coxph_unstratified"</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>  )</span>
+<span id="cb2-34"><a href="#cb2-34"></a></span>
+<span id="cb2-35"><a href="#cb2-35"></a><span class="fu">build_table</span>(lyt, adtte)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>Effect/Covariate Included in the Model                 Hazard Ratio      95% CI      p-value
-————————————————————————————————————————————————————————————————————————————————————————————
-Treatment:                                                                                  
-  Description of Planned Arm (reference = A: Drug X)                                 &lt;0.0001
-    B: Placebo                                             1.49       (0.92, 2.40)   0.1037 
-    C: Combination                                         3.91       (2.53, 6.04)   &lt;0.0001
-Covariate:                                                                                  
-  Age                                                                                       
-    All                                                    1.00       (0.99, 1.02)   0.6236 
-  Biomarker (Continuous)                                                                    
-    All                                                    0.98       (0.93, 1.02)   0.3023 
-  Biomarker (Categorical) (reference = LOW)                                          0.6704 
-    MEDIUM                                                 1.00       (0.65, 1.53)   0.9909 
-    HIGH                                                   0.84       (0.56, 1.28)   0.4211 </code></pre>
+<pre><code>                                 CTRL           TRT     
+                               (N=134)        (N=266)   
+————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)    195 (73.3%) 
+Patients without event (%)    47 (35.1%)     71 (26.7%) 
+Time to Event (months)                                  
+  Median                         27.5           21.3    
+  95% CI                     (17.3, 30.2)   (16.3, 25.6)
+  25% and 75%-ile             9.5, 54.9      7.1, 50.9  
+  Range (censored)           0.9 to 91.0    0.3 to 154.7
+  Range (event)              0.0 to 122.4   0.1 to 116.4
+Unstratified Analysis                                   
+  p-value (log-rank)                           0.2146   
+  Hazard Ratio                                  1.17    
+  95% CI                                    (0.91, 1.51)</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before. The <code>forcats</code> package provides convenience functions for the level reordering.</p>
-<div class="cell" data-hash="cmt02_cache/html/unnamed-chunk-3_5d90a671b9cebb0d65a4de7d05523278">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>adtte2 <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="at">ARM =</span> forcats<span class="sc">::</span><span class="fu">fct_relevel</span>(</span>
-<span id="cb4-4"><a href="#cb4-4"></a>      ARM,</span>
-<span id="cb4-5"><a href="#cb4-5"></a>      <span class="st">"B: Placebo"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6"></a>      <span class="st">"C: Combination"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7"></a>      <span class="st">"A: Drug X"</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>    )</span>
-<span id="cb4-9"><a href="#cb4-9"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Now we can proceed in the same way as in CMT2 above.</p>
-<div class="cell" data-hash="cmt02_cache/html/unnamed-chunk-4_2725b8b6e635f798c644f3c0023a2cc3">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb5-4"><a href="#cb5-4"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5"></a>      <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6"></a>      <span class="at">arm =</span> <span class="st">"ARM"</span>,</span>
-<span id="cb5-7"><a href="#cb5-7"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"BMRKR1"</span>, <span class="st">"BMRKR2"</span>)</span>
-<span id="cb5-8"><a href="#cb5-8"></a>    ),</span>
-<span id="cb5-9"><a href="#cb5-9"></a>    <span class="at">multivar =</span> <span class="cn">TRUE</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">append_topleft</span>(<span class="st">"Effect/Covariate Included in the Model"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a>  <span class="fu">build_table</span>(adtte2)</span>
-<span id="cb5-13"><a href="#cb5-13"></a></span>
-<span id="cb5-14"><a href="#cb5-14"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can add the summary of an analysis with Cox Proportional Hazards models stratified by <code>SEX</code> to the table above using <code>coxph_pairwise()</code>.</p>
+<div class="cell" data-hash="tet01_cache/html/unnamed-chunk-3_36b9021514487fbe63c5b370eaca26a8">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>lyt2 <span class="ot">&lt;-</span> lyt <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">coxph_pairwise</span>(</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="at">vars =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="at">var_labels =</span> <span class="fu">c</span>(<span class="st">"Stratified Analysis"</span>),</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="at">strat =</span> <span class="st">"SEX"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="at">control =</span> <span class="fu">control_coxph</span>(<span class="at">pval_method =</span> <span class="st">"log-rank"</span>),</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    <span class="at">table_names =</span> <span class="st">"coxph_stratified"</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  )</span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="fu">build_table</span>(lyt2, adtte)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>Effect/Covariate Included in the Model                  Hazard Ratio      95% CI      p-value
-—————————————————————————————————————————————————————————————————————————————————————————————
-Treatment:                                                                                   
-  Description of Planned Arm (reference = B: Placebo)                                 &lt;0.0001
-    C: Combination                                          2.63       (1.70, 4.05)   &lt;0.0001
-    A: Drug X                                               0.67       (0.42, 1.08)   0.1037 
-Covariate:                                                                                   
-  Age                                                                                        
-    All                                                     1.00       (0.99, 1.02)   0.6236 
-  Biomarker (Continuous)                                                                     
-    All                                                     0.98       (0.93, 1.02)   0.3023 
-  Biomarker (Categorical) (reference = LOW)                                           0.6704 
-    MEDIUM                                                  1.00       (0.65, 1.53)   0.9909 
-    HIGH                                                    0.84       (0.56, 1.28)   0.4211 </code></pre>
+<pre><code>                                 CTRL           TRT     
+                               (N=134)        (N=266)   
+————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)    195 (73.3%) 
+Patients without event (%)    47 (35.1%)     71 (26.7%) 
+Time to Event (months)                                  
+  Median                         27.5           21.3    
+  95% CI                     (17.3, 30.2)   (16.3, 25.6)
+  25% and 75%-ile             9.5, 54.9      7.1, 50.9  
+  Range (censored)           0.9 to 91.0    0.3 to 154.7
+  Range (event)              0.0 to 122.4   0.1 to 116.4
+Unstratified Analysis                                   
+  p-value (log-rank)                           0.2146   
+  Hazard Ratio                                  1.17    
+  95% CI                                    (0.91, 1.51)
+Stratified Analysis                                     
+  p-value (log-rank)                           0.2072   
+  Hazard Ratio                                  1.18    
+  95% CI                                    (0.91, 1.52)</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="cell" data-hash="cmt02_cache/html/sessioninfo_b799a2e658b92f676be0ae20d606f5a4">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="tet01_cache/html/sessioninfo_ca373be9d2ea11efe79bb7785f4b478b">
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -385,15 +399,14 @@ loaded via a namespace (and not attached):
  [5] digest_0.6.31     lattice_0.21-8    jsonlite_1.8.4    evaluate_0.20    
  [9] lifecycle_1.0.3   tibble_3.2.1      gtable_0.3.3      checkmate_2.2.0  
 [13] pkgconfig_2.0.3   rlang_1.1.0       Matrix_1.5-4      cli_3.6.1        
-[17] yaml_2.3.7        xfun_0.39         fastmap_1.1.1     stringr_1.5.0    
-[21] knitr_1.42        generics_0.1.3    vctrs_0.6.2       htmlwidgets_1.6.2
-[25] grid_4.2.2        tidyselect_1.2.0  glue_1.6.2        R6_2.5.1         
-[29] fansi_1.0.4       Rdpack_2.4        survival_3.5-5    rmarkdown_2.21   
-[33] carData_3.0-5     scda_0.1.6.9000   car_3.1-2         ggplot2_3.4.2    
-[37] purrr_1.0.1       tidyr_1.3.0       codetools_0.2-19  splines_4.2.2    
-[41] backports_1.4.1   scales_1.2.1      htmltools_0.5.5   rbibutils_2.2.13 
-[45] abind_1.4-5       colorspace_2.1-0  utf8_1.2.3        stringi_1.7.12   
-[49] munsell_0.5.0     broom_1.0.4      </code></pre>
+[17] yaml_2.3.7        xfun_0.39         fastmap_1.1.1     knitr_1.42       
+[21] generics_0.1.3    vctrs_0.6.2       htmlwidgets_1.6.2 grid_4.2.2       
+[25] tidyselect_1.2.0  glue_1.6.2        R6_2.5.1          fansi_1.0.4      
+[29] Rdpack_2.4        survival_3.5-5    rmarkdown_2.21    scda_0.1.6.9000  
+[33] ggplot2_3.4.2     purrr_1.0.1       tidyr_1.3.0       codetools_0.2-19 
+[37] splines_4.2.2     backports_1.4.1   scales_1.2.1      htmltools_0.5.5  
+[41] rbibutils_2.2.13  colorspace_2.1-0  utf8_1.2.3        munsell_0.5.0    
+[45] broom_1.0.4      </code></pre>
 </div>
 </div>
 </div>
@@ -803,109 +816,113 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
-      <a href="../tables/cmt01.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">CMT1</span>
+      <a href="../tables/cmt03.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">CMT3</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tables/cmt03.html" class="pagination-link">
-        <span class="nav-page-text">CMT3</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../graphs/index.html" class="pagination-link">
+        <span class="nav-page-text">Graphs</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> CMT2</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="an">subtitle:</span><span class="co"> Cox Proportional Hazards Model Tables with Multiple Covariates</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="co">---</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a></span>
-<span id="cb9-6"><a href="#cb9-6"></a>------------------------------------------------------------------------</span>
-<span id="cb9-7"><a href="#cb9-7"></a></span>
-<span id="cb9-8"><a href="#cb9-8"></a>::: panel-tabset</span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="fu">## Setup</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a></span>
-<span id="cb9-11"><a href="#cb9-11"></a>We prepare the data similarly as in <span class="co">[</span><span class="ot">CMT1</span><span class="co">](../tables/cmt01.qmd)</span>.</span>
-<span id="cb9-12"><a href="#cb9-12"></a></span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a><span class="fu">library</span>(tern)</span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb9-16"><a href="#cb9-16"></a></span>
-<span id="cb9-17"><a href="#cb9-17"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb9-18"><a href="#cb9-18"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>, BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-20"><a href="#cb9-20"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-21"><a href="#cb9-21"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb9-22"><a href="#cb9-22"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb9-23"><a href="#cb9-23"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb9-24"><a href="#cb9-24"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb9-25"><a href="#cb9-25"></a>  <span class="fu">var_relabel</span>(</span>
-<span id="cb9-26"><a href="#cb9-26"></a>    <span class="at">BMRKR1 =</span> <span class="st">"Biomarker (Continuous)"</span>,</span>
-<span id="cb9-27"><a href="#cb9-27"></a>    <span class="at">BMRKR2 =</span> <span class="st">"Biomarker (Categorical)"</span></span>
-<span id="cb9-28"><a href="#cb9-28"></a>  )</span>
-<span id="cb9-29"><a href="#cb9-29"></a><span class="in">```</span></span>
-<span id="cb9-30"><a href="#cb9-30"></a></span>
-<span id="cb9-31"><a href="#cb9-31"></a><span class="fu">## Table</span></span>
-<span id="cb9-32"><a href="#cb9-32"></a></span>
-<span id="cb9-33"><a href="#cb9-33"></a>The multivariate Cox Proportional Hazards model can be displayed in a summary table using the <span class="in">`summarize_coxreg`</span> function from <span class="in">`tern`</span> with the <span class="in">`multivar`</span> argument set to <span class="in">`TRUE`</span>.</span>
-<span id="cb9-34"><a href="#cb9-34"></a>Like the corresponding model fitting function <span class="in">`fit_coxreg_multivar()`</span>, we specify the time, event, arm and covariates in a <span class="in">`variables`</span> list, and any further customizations via the <span class="in">`control`</span> argument.</span>
-<span id="cb9-35"><a href="#cb9-35"></a>Note that the default confidence level is 95% but this can be customized via the <span class="in">`conf_level`</span> element in <span class="in">`control`</span>.</span>
-<span id="cb9-36"><a href="#cb9-36"></a></span>
-<span id="cb9-37"><a href="#cb9-37"></a>Rather than fitting the model and then tidying the output via the <span class="in">`broom::tidy()`</span> function, we can directly input these three arguments into the <span class="in">`summarize_coxreg()`</span> function to summarize the model fit in a table layout, building the table with our pre-processed <span class="in">`adtte`</span> data set.</span>
-<span id="cb9-38"><a href="#cb9-38"></a></span>
-<span id="cb9-41"><a href="#cb9-41"></a><span class="in">```{r}</span></span>
-<span id="cb9-42"><a href="#cb9-42"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb9-43"><a href="#cb9-43"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb9-44"><a href="#cb9-44"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb9-45"><a href="#cb9-45"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb9-46"><a href="#cb9-46"></a>      <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb9-47"><a href="#cb9-47"></a>      <span class="at">arm =</span> <span class="st">"ARM"</span>,</span>
-<span id="cb9-48"><a href="#cb9-48"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"BMRKR1"</span>, <span class="st">"BMRKR2"</span>)</span>
-<span id="cb9-49"><a href="#cb9-49"></a>    ),</span>
-<span id="cb9-50"><a href="#cb9-50"></a>    <span class="at">multivar =</span> <span class="cn">TRUE</span></span>
-<span id="cb9-51"><a href="#cb9-51"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb9-52"><a href="#cb9-52"></a>  <span class="fu">append_topleft</span>(<span class="st">"Effect/Covariate Included in the Model"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-53"><a href="#cb9-53"></a>  <span class="fu">build_table</span>(adtte)</span>
-<span id="cb9-54"><a href="#cb9-54"></a></span>
-<span id="cb9-55"><a href="#cb9-55"></a>result</span>
-<span id="cb9-56"><a href="#cb9-56"></a><span class="in">```</span></span>
-<span id="cb9-57"><a href="#cb9-57"></a></span>
-<span id="cb9-58"><a href="#cb9-58"></a><span class="fu">## Changing Reference Levels in the Cox Proportional Hazards Model Table (CMT2A)</span></span>
-<span id="cb9-59"><a href="#cb9-59"></a></span>
-<span id="cb9-60"><a href="#cb9-60"></a>For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before.</span>
-<span id="cb9-61"><a href="#cb9-61"></a>The <span class="in">`forcats`</span> package provides convenience functions for the level reordering.</span>
-<span id="cb9-62"><a href="#cb9-62"></a></span>
-<span id="cb9-65"><a href="#cb9-65"></a><span class="in">```{r}</span></span>
-<span id="cb9-66"><a href="#cb9-66"></a>adtte2 <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
-<span id="cb9-67"><a href="#cb9-67"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-68"><a href="#cb9-68"></a>    <span class="at">ARM =</span> forcats<span class="sc">::</span><span class="fu">fct_relevel</span>(</span>
-<span id="cb9-69"><a href="#cb9-69"></a>      ARM,</span>
-<span id="cb9-70"><a href="#cb9-70"></a>      <span class="st">"B: Placebo"</span>,</span>
-<span id="cb9-71"><a href="#cb9-71"></a>      <span class="st">"C: Combination"</span>,</span>
-<span id="cb9-72"><a href="#cb9-72"></a>      <span class="st">"A: Drug X"</span></span>
-<span id="cb9-73"><a href="#cb9-73"></a>    )</span>
-<span id="cb9-74"><a href="#cb9-74"></a>  )</span>
-<span id="cb9-75"><a href="#cb9-75"></a><span class="in">```</span></span>
-<span id="cb9-76"><a href="#cb9-76"></a></span>
-<span id="cb9-77"><a href="#cb9-77"></a>Now we can proceed in the same way as in CMT2 above.</span>
-<span id="cb9-78"><a href="#cb9-78"></a></span>
-<span id="cb9-81"><a href="#cb9-81"></a><span class="in">```{r}</span></span>
-<span id="cb9-82"><a href="#cb9-82"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb9-83"><a href="#cb9-83"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb9-84"><a href="#cb9-84"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb9-85"><a href="#cb9-85"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb9-86"><a href="#cb9-86"></a>      <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb9-87"><a href="#cb9-87"></a>      <span class="at">arm =</span> <span class="st">"ARM"</span>,</span>
-<span id="cb9-88"><a href="#cb9-88"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"BMRKR1"</span>, <span class="st">"BMRKR2"</span>)</span>
-<span id="cb9-89"><a href="#cb9-89"></a>    ),</span>
-<span id="cb9-90"><a href="#cb9-90"></a>    <span class="at">multivar =</span> <span class="cn">TRUE</span></span>
-<span id="cb9-91"><a href="#cb9-91"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb9-92"><a href="#cb9-92"></a>  <span class="fu">append_topleft</span>(<span class="st">"Effect/Covariate Included in the Model"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-93"><a href="#cb9-93"></a>  <span class="fu">build_table</span>(adtte2)</span>
-<span id="cb9-94"><a href="#cb9-94"></a></span>
-<span id="cb9-95"><a href="#cb9-95"></a>result</span>
-<span id="cb9-96"><a href="#cb9-96"></a><span class="in">```</span></span>
-<span id="cb9-97"><a href="#cb9-97"></a></span>
-<span id="cb9-98"><a href="#cb9-98"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb9-99"><a href="#cb9-99"></a>:::</span>
+<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> TET1</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> Time-to-Event Summary Tables</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">---</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>------------------------------------------------------------------------</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>::: panel-tabset</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">## Setup</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a></span>
+<span id="cb8-11"><a href="#cb8-11"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package for the time-to-event summary table.</span>
+<span id="cb8-12"><a href="#cb8-12"></a>We start by filtering the <span class="in">`adtte`</span> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <span class="in">`ARM`</span> variable.</span>
+<span id="cb8-13"><a href="#cb8-13"></a></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="fu">library</span>(tern)</span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-17"><a href="#cb8-17"></a></span>
+<span id="cb8-18"><a href="#cb8-18"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a>  <span class="fu">filter</span>(</span>
+<span id="cb8-21"><a href="#cb8-21"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-23"><a href="#cb8-23"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-24"><a href="#cb8-24"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb8-25"><a href="#cb8-25"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb8-26"><a href="#cb8-26"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb8-27"><a href="#cb8-27"></a>    <span class="at">is_not_event =</span> CNSR <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb8-28"><a href="#cb8-28"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb8-29"><a href="#cb8-29"></a>      ARM,</span>
+<span id="cb8-30"><a href="#cb8-30"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb8-31"><a href="#cb8-31"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb8-32"><a href="#cb8-32"></a>    )</span>
+<span id="cb8-33"><a href="#cb8-33"></a>  )</span>
+<span id="cb8-34"><a href="#cb8-34"></a><span class="in">```</span></span>
+<span id="cb8-35"><a href="#cb8-35"></a></span>
+<span id="cb8-36"><a href="#cb8-36"></a><span class="fu">## Table</span></span>
+<span id="cb8-37"><a href="#cb8-37"></a></span>
+<span id="cb8-38"><a href="#cb8-38"></a>This time-to-event summary table splits the columns by treatment arm using <span class="in">`split_cols_by()`</span>, creates a summary for patients with and without event using <span class="in">`summarize_vars()`</span>, summarizes survival time using <span class="in">`surv_time()`</span> and summarizes the analysis from unstratified Cox Proportional Hazards models using <span class="in">`coxph_pairwise()`</span>.</span>
+<span id="cb8-39"><a href="#cb8-39"></a></span>
+<span id="cb8-42"><a href="#cb8-42"></a><span class="in">```{r}</span></span>
+<span id="cb8-43"><a href="#cb8-43"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-44"><a href="#cb8-44"></a>  <span class="fu">split_cols_by</span>(</span>
+<span id="cb8-45"><a href="#cb8-45"></a>    <span class="at">var =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb8-46"><a href="#cb8-46"></a>    <span class="at">ref_group =</span> <span class="st">"CTRL"</span></span>
+<span id="cb8-47"><a href="#cb8-47"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-48"><a href="#cb8-48"></a>  <span class="fu">add_colcounts</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-49"><a href="#cb8-49"></a>  <span class="fu">summarize_vars</span>(</span>
+<span id="cb8-50"><a href="#cb8-50"></a>    <span class="at">vars =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb8-51"><a href="#cb8-51"></a>    <span class="at">.stats =</span> <span class="st">"count_fraction"</span>,</span>
+<span id="cb8-52"><a href="#cb8-52"></a>    <span class="at">.labels =</span> <span class="fu">c</span>(<span class="at">count_fraction =</span> <span class="st">"Patients with event (%)"</span>),</span>
+<span id="cb8-53"><a href="#cb8-53"></a>    <span class="at">nested =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb8-54"><a href="#cb8-54"></a>    <span class="at">show_labels =</span> <span class="st">"hidden"</span></span>
+<span id="cb8-55"><a href="#cb8-55"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-56"><a href="#cb8-56"></a>  <span class="fu">summarize_vars</span>(</span>
+<span id="cb8-57"><a href="#cb8-57"></a>    <span class="at">vars =</span> <span class="st">"is_not_event"</span>,</span>
+<span id="cb8-58"><a href="#cb8-58"></a>    <span class="at">.stats =</span> <span class="st">"count_fraction"</span>,</span>
+<span id="cb8-59"><a href="#cb8-59"></a>    <span class="at">.labels =</span> <span class="fu">c</span>(<span class="at">count_fraction =</span> <span class="st">"Patients without event (%)"</span>),</span>
+<span id="cb8-60"><a href="#cb8-60"></a>    <span class="at">nested =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb8-61"><a href="#cb8-61"></a>    <span class="at">show_labels =</span> <span class="st">"hidden"</span></span>
+<span id="cb8-62"><a href="#cb8-62"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-63"><a href="#cb8-63"></a>  <span class="fu">surv_time</span>(</span>
+<span id="cb8-64"><a href="#cb8-64"></a>    <span class="at">vars =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb8-65"><a href="#cb8-65"></a>    <span class="at">var_labels =</span> <span class="st">"Time to Event (months)"</span>,</span>
+<span id="cb8-66"><a href="#cb8-66"></a>    <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb8-67"><a href="#cb8-67"></a>    <span class="at">table_names =</span> <span class="st">"time_to_event"</span></span>
+<span id="cb8-68"><a href="#cb8-68"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-69"><a href="#cb8-69"></a>  <span class="fu">coxph_pairwise</span>(</span>
+<span id="cb8-70"><a href="#cb8-70"></a>    <span class="at">vars =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb8-71"><a href="#cb8-71"></a>    <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb8-72"><a href="#cb8-72"></a>    <span class="at">var_labels =</span> <span class="fu">c</span>(<span class="st">"Unstratified Analysis"</span>),</span>
+<span id="cb8-73"><a href="#cb8-73"></a>    <span class="at">control =</span> <span class="fu">control_coxph</span>(<span class="at">pval_method =</span> <span class="st">"log-rank"</span>),</span>
+<span id="cb8-74"><a href="#cb8-74"></a>    <span class="at">table_names =</span> <span class="st">"coxph_unstratified"</span></span>
+<span id="cb8-75"><a href="#cb8-75"></a>  )</span>
+<span id="cb8-76"><a href="#cb8-76"></a></span>
+<span id="cb8-77"><a href="#cb8-77"></a><span class="fu">build_table</span>(lyt, adtte)</span>
+<span id="cb8-78"><a href="#cb8-78"></a><span class="in">```</span></span>
+<span id="cb8-79"><a href="#cb8-79"></a></span>
+<span id="cb8-80"><a href="#cb8-80"></a><span class="fu">## Time-to-Event Summary Table with Stratified Analysis (TET1A)</span></span>
+<span id="cb8-81"><a href="#cb8-81"></a></span>
+<span id="cb8-82"><a href="#cb8-82"></a>We can add the summary of an analysis with Cox Proportional Hazards models stratified by <span class="in">`SEX`</span> to the table above using <span class="in">`coxph_pairwise()`</span>.</span>
+<span id="cb8-83"><a href="#cb8-83"></a></span>
+<span id="cb8-86"><a href="#cb8-86"></a><span class="in">```{r}</span></span>
+<span id="cb8-87"><a href="#cb8-87"></a>lyt2 <span class="ot">&lt;-</span> lyt <span class="sc">%&gt;%</span></span>
+<span id="cb8-88"><a href="#cb8-88"></a>  <span class="fu">coxph_pairwise</span>(</span>
+<span id="cb8-89"><a href="#cb8-89"></a>    <span class="at">vars =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb8-90"><a href="#cb8-90"></a>    <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb8-91"><a href="#cb8-91"></a>    <span class="at">var_labels =</span> <span class="fu">c</span>(<span class="st">"Stratified Analysis"</span>),</span>
+<span id="cb8-92"><a href="#cb8-92"></a>    <span class="at">strat =</span> <span class="st">"SEX"</span>,</span>
+<span id="cb8-93"><a href="#cb8-93"></a>    <span class="at">control =</span> <span class="fu">control_coxph</span>(<span class="at">pval_method =</span> <span class="st">"log-rank"</span>),</span>
+<span id="cb8-94"><a href="#cb8-94"></a>    <span class="at">table_names =</span> <span class="st">"coxph_stratified"</span></span>
+<span id="cb8-95"><a href="#cb8-95"></a>  )</span>
+<span id="cb8-96"><a href="#cb8-96"></a></span>
+<span id="cb8-97"><a href="#cb8-97"></a><span class="fu">build_table</span>(lyt2, adtte)</span>
+<span id="cb8-98"><a href="#cb8-98"></a><span class="in">```</span></span>
+<span id="cb8-99"><a href="#cb8-99"></a></span>
+<span id="cb8-100"><a href="#cb8-100"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
+<span id="cb8-101"><a href="#cb8-101"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

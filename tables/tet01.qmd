@@ -15,7 +15,7 @@ We start by filtering the `adtte` data set for the overall survival observations
 library(tern)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>% 
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS"
@@ -38,32 +38,32 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
 This time-to-event summary table splits the columns by treatment arm using `split_cols_by()`, creates a summary for patients with and without event using `summarize_vars()`, summarizes survival time using `surv_time()` and summarizes the analysis from unstratified Cox Proportional Hazards models using `coxph_pairwise()`.
 
 ```{r}
-lyt <- basic_table() %>% 
+lyt <- basic_table() %>%
   split_cols_by(
     var = "ARM_BIN",
     ref_group = "CTRL"
-  ) %>% 
-  add_colcounts() %>% 
+  ) %>%
+  add_colcounts() %>%
   summarize_vars(
     vars = "is_event",
     .stats = "count_fraction",
     .labels = c(count_fraction = "Patients with event (%)"),
     nested = FALSE,
     show_labels = "hidden"
-  ) %>% 
+  ) %>%
   summarize_vars(
     vars = "is_not_event",
     .stats = "count_fraction",
     .labels = c(count_fraction = "Patients without event (%)"),
     nested = FALSE,
     show_labels = "hidden"
-  ) %>% 
+  ) %>%
   surv_time(
     vars = "AVAL",
     var_labels = "Time to Event (months)",
     is_event = "is_event",
     table_names = "time_to_event"
-  ) %>% 
+  ) %>%
   coxph_pairwise(
     vars = "AVAL",
     is_event = "is_event",
@@ -80,7 +80,7 @@ build_table(lyt, adtte)
 We can add the summary of an analysis with Cox Proportional Hazards models stratified by `SEX` to the table above using `coxph_pairwise()`.
 
 ```{r}
-lyt2 <- lyt %>% 
+lyt2 <- lyt %>%
   coxph_pairwise(
     vars = "AVAL",
     is_event = "is_event",
@@ -88,7 +88,7 @@ lyt2 <- lyt %>%
     strat = "SEX",
     control = control_coxph(pval_method = "log-rank"),
     table_names = "coxph_stratified"
-  ) 
+  )
 
 build_table(lyt2, adtte)
 ```

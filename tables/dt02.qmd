@@ -1,0 +1,65 @@
+---
+title: DT2
+subtitle: Demographics Tables Comparing BEP vs. non-BEP Population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+The tables below compare the biomarker evaluable population (BEP, below in the table "BEP Yes") with the remainder non-BEP ("BEP No") within each treatment arm with regards to selected demographic variables.
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the tables.
+
+In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable `BEP01FL` that categorises the evaluable and non evaluable subgroups.
+For readability in the tables, we define a separate label variable `BEP_label` below which is parallel to the original flag variable.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  mutate(
+    BEP_label = case_when(
+      BEP01FL == "Y" ~ "BEP Yes",
+      BEP01FL == "N" ~ "BEP No"
+    )
+  )
+```
+
+This can then be used by the `rtables` layout function `split_cols_by()` below.
+
+## Table
+
+The demographics table DT2 splits the columns by treatment arm and by the biomarker population (Yes vs. No), and summarizes selected demographic variables in the rows.
+You can see here how we use the separate labels variable to specify the labels used in the column headers.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  add_colcounts() %>%
+  split_cols_by("BEP01FL", labels_var = "BEP_label") %>%
+  summarize_vars(c("AGE", "SEX"))
+
+build_table(lyt, adsl)
+```
+
+## Demographics Table Allowing Testing to Compare Demographic Variables Between Non-BEP vs. BEP population (DT2A)
+
+The demographics table DT2A splits the columns by treatment arm and by BEP vs. non-BEP, summarizes selected demographic variables in the rows and performs tests to compare demographic variables between Non-BEP vs. BEP population.
+Note that p-values can be `NA` when the test could not be performed due to row counts being all zero, e.g.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  add_colcounts() %>%
+  split_cols_by("BEP01FL", labels_var = "BEP_label", ref_group = "Y") %>%
+  compare_vars(c("AGE", "SEX"))
+
+build_table(lyt, adsl)
+```
+
+{{< include ../session_info.qmd >}}
+:::

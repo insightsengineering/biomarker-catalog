@@ -1,0 +1,98 @@
+---
+title: DT1
+subtitle: Demographics Tables Comparing BEP vs. Overall Population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+The tables below compare the overall population ("All") with the biomarker evaluable population ("BEP") with regards to selected demographic variables.
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the tables.
+We add a second artificial BEP flag variable `BEP02FL`.
+
+In order to compare All with BEP, we need to define a list `bep_groups` defining these two groups.
+The reason is that these two groups are overlapping (BEP is a subset of All).
+Here, we refer in the list elements to the levels `Y` and `N` of the biomarker population flag variable `BEP01FL` from `adsl` which we will use below:
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+set.seed(123)
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  mutate(BEP02FL = factor(sample(c("Y", "N"), size = n(), replace = TRUE)))
+
+bep_groups <- list(
+  "All" = c("Y", "N"),
+  "BEP" = "Y"
+)
+```
+
+This can then be used by the `tern` layout function `split_cols_by_groups()` below.
+
+## Table
+
+The simplest demographics table DT1 splits the columns by treatment arm and All vs. BEP, and summarizes selected demographic variables in the rows.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  split_cols_by_groups("BEP01FL", bep_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+## Reorder Treatment Arms in Demographics Table (DT1A)
+
+We can reorder the treatment arm columns in the demographics table DT1 by using the `reorder_split_levels()` splitting function in `split_cols_by()` as done here.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM", split_fun = reorder_split_levels(c("B: Placebo", "A: Drug X", "C: Combination"))) %>%
+  split_cols_by_groups("BEP01FL", bep_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+## Combine Treatment Arms in Demographics Table (DT1B)
+
+It is simple to omit the treatment arm split in the demographics table DT1, thus effectively combining the treatment arms.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by_groups("BEP01FL", bep_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+## Alternative BEP Indicator in Demographics Table (DT1C)
+
+We can of course use a different BEP factor variable `BEP02FL` with corresponding groups definition `bep2_groups` in the demographics table DT1.
+
+```{r}
+bep2_groups <- list(
+  "All" = c("Y", "N"),
+  "BEP2" = "Y"
+)
+
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  split_cols_by_groups("BEP02FL", bep2_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+{{< include ../session_info.qmd >}}
+:::

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Biomarker Analysis Catalog - CMT3</title>
+<title>Biomarker Analysis Catalog - DT1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tables/dt01.html" rel="next">
-<link href="../tables/cmt02.html" rel="prev">
+<link href="../tables/dt02.html" rel="next">
+<link href="../tables/cmt03.html" rel="prev">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -118,8 +118,8 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../assets/css/style.scss">
-<meta property="og:title" content="Biomarker Analysis Catalog - CMT3">
-<meta property="og:description" content="Cox Proportional Hazards Model Tables with Separate Models for Each Covariate">
+<meta property="og:title" content="Biomarker Analysis Catalog - DT1">
+<meta property="og:description" content="Demographics Tables Comparing BEP vs.&nbsp;Overall Population">
 <meta property="og:site-name" content="Biomarker Analysis Catalog">
 </head>
 <body class="nav-sidebar docked nav-fixed">
@@ -158,7 +158,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tables/index.html">Tables</a></li><li class="breadcrumb-item"><a href="../tables/cmt03.html">CMT3</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tables/index.html">Tables</a></li><li class="breadcrumb-item"><a href="../tables/dt01.html">DT1</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -200,13 +200,13 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tables/cmt03.html" class="sidebar-item-text sidebar-link active">
+  <a href="../tables/cmt03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CMT3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tables/dt01.html" class="sidebar-item-text sidebar-link">
+  <a href="../tables/dt01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">DT1</span></a>
   </div>
 </li>
@@ -237,8 +237,8 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">CMT3</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
-<p class="subtitle lead">Cox Proportional Hazards Model Tables with Separate Models for Each Covariate</p>
+<div class="quarto-title-block"><div><h1 class="title">DT1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<p class="subtitle lead">Demographics Tables Comparing BEP vs.&nbsp;Overall Population</p>
 </div>
 
 
@@ -256,61 +256,147 @@ cookieconsent.run({
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Reorder Treatment Arms in Demographics Table (DT1A)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Combine Treatment Arms in Demographics Table (DT1B)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Alternative BEP Indicator in Demographics Table (DT1C)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We prepare the data in the same way as in <a href="../tables/cmt01.html">CMT1</a>.</p>
-<div class="cell" data-hash="cmt03_cache/html/unnamed-chunk-1_7cd9f29eab4e5862b2e94883233e3e28">
+<p>The tables below compare the overall population (“All”) with the biomarker evaluable population (“BEP”) with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
+<p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
+<div class="cell" data-hash="dt01_cache/html/unnamed-chunk-1_b950d7757ba6678731bb112ecd589bd9">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>, BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">event =</span> <span class="dv">1</span> <span class="sc">-</span> CNSR</span>
-<span id="cb1-11"><a href="#cb1-11"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>adsl <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adsl <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(<span class="at">BEP02FL =</span> <span class="fu">factor</span>(<span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"N"</span>), <span class="at">size =</span> <span class="fu">n</span>(), <span class="at">replace =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>bep_groups <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="st">"All"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"N"</span>),</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="st">"BEP"</span> <span class="ot">=</span> <span class="st">"Y"</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>The separate Cox Proportional Hazards models for each covariate can be fitted and summarized in a table using the <code>summarize_coxreg()</code> function in <code>tern</code>. This function takes the same <code>variables</code>, <code>at</code>, and <code>control</code> arguments that are used to fit a model using the <code>fit_coxreg_univar()</code> function - specifying the time, event and covariate in a <code>variables</code> list, and <code>control</code> and <code>at</code> with any further customizations to the model. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
-<p>We input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, and then build the table with our pre-processed <code>adtte</code> data set.</p>
-<div class="cell" data-hash="cmt03_cache/html/unnamed-chunk-2_a77cc195f4eecc9a3201a45a39e5189f">
+<p>The simplest demographics table DT1 splits the columns by treatment arm and All vs.&nbsp;BEP, and summarizes selected demographic variables in the rows.</p>
+<div class="cell" data-hash="dt01_cache/html/unnamed-chunk-2_7f328a19ea2ac03e4cca96633efda07b">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb2-4"><a href="#cb2-4"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>      <span class="at">event =</span> <span class="st">"event"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"COUNTRY"</span>, <span class="st">"AGE"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    )</span>
-<span id="cb2-8"><a href="#cb2-8"></a>  )</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">build_table</span>(<span class="at">lyt =</span> lyt, <span class="at">df =</span> adtte)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">split_cols_by</span>(<span class="st">"ARM"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP01FL"</span>, bep_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">build_table</span>(lyt, adsl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>                              Hazard Ratio      95% CI      p-value
-———————————————————————————————————————————————————————————————————
-Covariate:                                                         
-  Country (reference = CHN)                                 0.8447 
-    USA                           1.36       (0.70, 2.64)   0.3633 
-    BRA                           1.02       (0.55, 1.87)   0.9564 
-    PAK                           1.03       (0.54, 1.94)   0.9316 
-    NGA                           0.97       (0.46, 2.03)   0.9405 
-    RUS                           1.48       (0.64, 3.42)   0.3574 
-    JPN                           1.52       (0.61, 3.76)   0.3686 
-    GBR                           0.75       (0.30, 1.85)   0.5287 
-    CAN                           2.09       (0.65, 6.70)   0.2163 
-  Age                                                              
-    All                           1.01       (0.99, 1.03)   0.5869 </code></pre>
+<pre><code>                      A: Drug X                  B: Placebo                C: Combination      
+                  All           BEP           All           BEP           All           BEP    
+                (N=134)       (N=68)        (N=134)       (N=63)        (N=132)       (N=66)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               134           68            134           63            132           66     
+  Mean (SD)   33.8 (6.6)    32.9 (6.6)    35.4 (7.9)    35.7 (8.3)    35.4 (7.7)    35.1 (8.1) 
+  Median         33.0          32.0          35.0          35.0          35.0          34.0    
+  Min - Max   21.0 - 50.0   21.0 - 50.0   21.0 - 62.0   23.0 - 62.0   20.0 - 69.0   21.0 - 69.0
+SEX                                                                                            
+  n               134           68            134           63            132           66     
+  F            79 (59%)     44 (64.7%)    82 (61.2%)    42 (66.7%)     70 (53%)     40 (60.6%) 
+  M            55 (41%)     24 (35.3%)    52 (38.8%)    21 (33.3%)     62 (47%)     26 (39.4%) </code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="cmt03_cache/html/sessioninfo_673671edde6c3822bda3759566711588">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can reorder the treatment arm columns in the demographics table DT1 by using the <code>reorder_split_levels()</code> splitting function in <code>split_cols_by()</code> as done here.</p>
+<div class="cell" data-hash="dt01_cache/html/unnamed-chunk-3_7015e83e978c6c7c7a69fa4baf4d2c2f">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">split_cols_by</span>(<span class="st">"ARM"</span>, <span class="at">split_fun =</span> <span class="fu">reorder_split_levels</span>(<span class="fu">c</span>(<span class="st">"B: Placebo"</span>, <span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP01FL"</span>, bep_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="fu">build_table</span>(lyt, adsl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                     B: Placebo                   A: Drug X                C: Combination      
+                  All           BEP           All           BEP           All           BEP    
+                (N=134)       (N=63)        (N=134)       (N=68)        (N=132)       (N=66)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               134           63            134           68            132           66     
+  Mean (SD)   35.4 (7.9)    35.7 (8.3)    33.8 (6.6)    32.9 (6.6)    35.4 (7.7)    35.1 (8.1) 
+  Median         35.0          35.0          33.0          32.0          35.0          34.0    
+  Min - Max   21.0 - 62.0   23.0 - 62.0   21.0 - 50.0   21.0 - 50.0   20.0 - 69.0   21.0 - 69.0
+SEX                                                                                            
+  n               134           63            134           68            132           66     
+  F           82 (61.2%)    42 (66.7%)     79 (59%)     44 (64.7%)     70 (53%)     40 (60.6%) 
+  M           52 (38.8%)    21 (33.3%)     55 (41%)     24 (35.3%)     62 (47%)     26 (39.4%) </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>It is simple to omit the treatment arm split in the demographics table DT1, thus effectively combining the treatment arms.</p>
+<div class="cell" data-hash="dt01_cache/html/unnamed-chunk-4_7150821beb4fe6f75666bd01aa0f4ca1">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP01FL"</span>, bep_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="fu">build_table</span>(lyt, adsl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                  All           BEP    
+                (N=400)       (N=197)  
+———————————————————————————————————————
+AGE                                    
+  n               400           197    
+  Mean (SD)   34.9 (7.4)    34.6 (7.7) 
+  Median         34.0          34.0    
+  Min - Max   20.0 - 69.0   21.0 - 69.0
+SEX                                    
+  n               400           197    
+  F           231 (57.8%)    126 (64%) 
+  M           169 (42.2%)    71 (36%)  </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>We can of course use a different BEP factor variable <code>BEP02FL</code> with corresponding groups definition <code>bep2_groups</code> in the demographics table DT1.</p>
+<div class="cell" data-hash="dt01_cache/html/unnamed-chunk-5_f03dc03562adf41113178573c1af21ac">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>bep2_groups <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="st">"All"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"N"</span>),</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="st">"BEP2"</span> <span class="ot">=</span> <span class="st">"Y"</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>)</span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>  <span class="fu">split_cols_by</span>(<span class="st">"ARM"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP02FL"</span>, bep2_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb8-11"><a href="#cb8-11"></a></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="fu">build_table</span>(lyt, adsl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                      A: Drug X                  B: Placebo                C: Combination      
+                  All          BEP2           All          BEP2           All          BEP2    
+                (N=134)       (N=68)        (N=134)       (N=75)        (N=132)       (N=68)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               134           68            134           75            132           68     
+  Mean (SD)   33.8 (6.6)    32.3 (6.2)    35.4 (7.9)    35.5 (7.4)    35.4 (7.7)    35.3 (6.7) 
+  Median         33.0          31.0          35.0          36.0          35.0          35.0    
+  Min - Max   21.0 - 50.0   21.0 - 47.0   21.0 - 62.0   23.0 - 58.0   20.0 - 69.0   21.0 - 49.0
+SEX                                                                                            
+  n               134           68            134           75            132           68     
+  F            79 (59%)     42 (61.8%)    82 (61.2%)     48 (64%)      70 (53%)      34 (50%)  
+  M            55 (41%)     26 (38.2%)    52 (38.8%)     27 (36%)      62 (47%)      34 (50%)  </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell" data-hash="dt01_cache/html/sessioninfo_b08fe659bcfac4806b201d34f49ffb23">
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -340,15 +426,14 @@ loaded via a namespace (and not attached):
  [5] digest_0.6.31     lattice_0.21-8    jsonlite_1.8.4    evaluate_0.20    
  [9] lifecycle_1.0.3   tibble_3.2.1      gtable_0.3.3      checkmate_2.2.0  
 [13] pkgconfig_2.0.3   rlang_1.1.0       Matrix_1.5-4      cli_3.6.1        
-[17] yaml_2.3.7        xfun_0.39         fastmap_1.1.1     stringr_1.5.0    
-[21] knitr_1.42        generics_0.1.3    vctrs_0.6.2       htmlwidgets_1.6.2
-[25] grid_4.2.2        tidyselect_1.2.0  glue_1.6.2        R6_2.5.1         
-[29] fansi_1.0.4       Rdpack_2.4        survival_3.5-5    rmarkdown_2.21   
-[33] carData_3.0-5     scda_0.1.6.9000   car_3.1-2         ggplot2_3.4.2    
-[37] purrr_1.0.1       tidyr_1.3.0       codetools_0.2-19  splines_4.2.2    
-[41] backports_1.4.1   scales_1.2.1      htmltools_0.5.5   rbibutils_2.2.13 
-[45] abind_1.4-5       colorspace_2.1-0  utf8_1.2.3        stringi_1.7.12   
-[49] munsell_0.5.0     broom_1.0.4      </code></pre>
+[17] yaml_2.3.7        xfun_0.39         fastmap_1.1.1     knitr_1.42       
+[21] generics_0.1.3    vctrs_0.6.2       htmlwidgets_1.6.2 grid_4.2.2       
+[25] tidyselect_1.2.0  glue_1.6.2        R6_2.5.1          fansi_1.0.4      
+[29] Rdpack_2.4        survival_3.5-5    rmarkdown_2.21    scda_0.1.6.9000  
+[33] ggplot2_3.4.2     purrr_1.0.1       tidyr_1.3.0       codetools_0.2-19 
+[37] splines_4.2.2     backports_1.4.1   scales_1.2.1      htmltools_0.5.5  
+[41] rbibutils_2.2.13  colorspace_2.1-0  utf8_1.2.3        munsell_0.5.0    
+[45] broom_1.0.4      </code></pre>
 </div>
 </div>
 </div>
@@ -758,65 +843,114 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
-      <a href="../tables/cmt02.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">CMT2</span>
+      <a href="../tables/cmt03.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">CMT3</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tables/dt01.html" class="pagination-link">
-        <span class="nav-page-text">DT1</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../tables/dt02.html" class="pagination-link">
+        <span class="nav-page-text">DT2</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> CMT3</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="an">subtitle:</span><span class="co"> Cox Proportional Hazards Model Tables with Separate Models for Each Covariate</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co">---</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a>------------------------------------------------------------------------</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a>::: panel-tabset</span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="fu">## Setup</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11"></a>We prepare the data in the same way as in <span class="co">[</span><span class="ot">CMT1</span><span class="co">](../tables/cmt01.qmd)</span>.</span>
-<span id="cb6-12"><a href="#cb6-12"></a></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="fu">library</span>(tern)</span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb6-16"><a href="#cb6-16"></a></span>
-<span id="cb6-17"><a href="#cb6-17"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>, BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb6-21"><a href="#cb6-21"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb6-22"><a href="#cb6-22"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb6-23"><a href="#cb6-23"></a>    <span class="at">event =</span> <span class="dv">1</span> <span class="sc">-</span> CNSR</span>
-<span id="cb6-24"><a href="#cb6-24"></a>  )</span>
-<span id="cb6-25"><a href="#cb6-25"></a><span class="in">```</span></span>
-<span id="cb6-26"><a href="#cb6-26"></a></span>
-<span id="cb6-27"><a href="#cb6-27"></a><span class="fu">## Table</span></span>
-<span id="cb6-28"><a href="#cb6-28"></a></span>
-<span id="cb6-29"><a href="#cb6-29"></a>The separate Cox Proportional Hazards models for each covariate can be fitted and summarized in a table using the <span class="in">`summarize_coxreg()`</span> function in <span class="in">`tern`</span>.</span>
-<span id="cb6-30"><a href="#cb6-30"></a>This function takes the same <span class="in">`variables`</span>, <span class="in">`at`</span>, and <span class="in">`control`</span> arguments that are used to fit a model using the <span class="in">`fit_coxreg_univar()`</span> function - specifying the time, event and covariate in a <span class="in">`variables`</span> list, and <span class="in">`control`</span> and <span class="in">`at`</span> with any further customizations to the model.</span>
-<span id="cb6-31"><a href="#cb6-31"></a>Note that the default confidence level is 95% but this can be customized via the <span class="in">`conf_level`</span> element in <span class="in">`control`</span>.</span>
-<span id="cb6-32"><a href="#cb6-32"></a></span>
-<span id="cb6-33"><a href="#cb6-33"></a>We input these three arguments into the <span class="in">`summarize_coxreg()`</span> function to summarize the model fit in a table layout, and then build the table with our pre-processed <span class="in">`adtte`</span> data set.</span>
-<span id="cb6-34"><a href="#cb6-34"></a></span>
-<span id="cb6-37"><a href="#cb6-37"></a><span class="in">```{r}</span></span>
-<span id="cb6-38"><a href="#cb6-38"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-39"><a href="#cb6-39"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb6-40"><a href="#cb6-40"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb6-41"><a href="#cb6-41"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb6-42"><a href="#cb6-42"></a>      <span class="at">event =</span> <span class="st">"event"</span>,</span>
-<span id="cb6-43"><a href="#cb6-43"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"COUNTRY"</span>, <span class="st">"AGE"</span>)</span>
-<span id="cb6-44"><a href="#cb6-44"></a>    )</span>
-<span id="cb6-45"><a href="#cb6-45"></a>  )</span>
-<span id="cb6-46"><a href="#cb6-46"></a></span>
-<span id="cb6-47"><a href="#cb6-47"></a><span class="fu">build_table</span>(<span class="at">lyt =</span> lyt, <span class="at">df =</span> adtte)</span>
-<span id="cb6-48"><a href="#cb6-48"></a><span class="in">```</span></span>
-<span id="cb6-49"><a href="#cb6-49"></a></span>
-<span id="cb6-50"><a href="#cb6-50"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb6-51"><a href="#cb6-51"></a>:::</span>
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> DT1</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> Demographics Tables Comparing BEP vs. Overall Population</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">---</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6"></a>------------------------------------------------------------------------</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a>::: panel-tabset</span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="fu">## Setup</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a></span>
+<span id="cb12-11"><a href="#cb12-11"></a>The tables below compare the overall population ("All") with the biomarker evaluable population ("BEP") with regards to selected demographic variables.</span>
+<span id="cb12-12"><a href="#cb12-12"></a></span>
+<span id="cb12-13"><a href="#cb12-13"></a>We will use the <span class="in">`synthetic_cdisc_data$adsl`</span> data set from the <span class="in">`scda`</span> package to illustrate the tables.</span>
+<span id="cb12-14"><a href="#cb12-14"></a>We add a second artificial BEP flag variable <span class="in">`BEP02FL`</span>.</span>
+<span id="cb12-15"><a href="#cb12-15"></a></span>
+<span id="cb12-16"><a href="#cb12-16"></a>In order to compare All with BEP, we need to define a list <span class="in">`bep_groups`</span> defining these two groups.</span>
+<span id="cb12-17"><a href="#cb12-17"></a>The reason is that these two groups are overlapping (BEP is a subset of All).</span>
+<span id="cb12-18"><a href="#cb12-18"></a>Here, we refer in the list elements to the levels <span class="in">`Y`</span> and <span class="in">`N`</span> of the biomarker population flag variable <span class="in">`BEP01FL`</span> from <span class="in">`adsl`</span> which we will use below:</span>
+<span id="cb12-19"><a href="#cb12-19"></a></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="fu">library</span>(tern)</span>
+<span id="cb12-22"><a href="#cb12-22"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb12-23"><a href="#cb12-23"></a></span>
+<span id="cb12-24"><a href="#cb12-24"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb12-25"><a href="#cb12-25"></a>adsl <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adsl <span class="sc">%&gt;%</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-27"><a href="#cb12-27"></a>  <span class="fu">mutate</span>(<span class="at">BEP02FL =</span> <span class="fu">factor</span>(<span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"N"</span>), <span class="at">size =</span> <span class="fu">n</span>(), <span class="at">replace =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb12-28"><a href="#cb12-28"></a></span>
+<span id="cb12-29"><a href="#cb12-29"></a>bep_groups <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb12-30"><a href="#cb12-30"></a>  <span class="st">"All"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"N"</span>),</span>
+<span id="cb12-31"><a href="#cb12-31"></a>  <span class="st">"BEP"</span> <span class="ot">=</span> <span class="st">"Y"</span></span>
+<span id="cb12-32"><a href="#cb12-32"></a>)</span>
+<span id="cb12-33"><a href="#cb12-33"></a><span class="in">```</span></span>
+<span id="cb12-34"><a href="#cb12-34"></a></span>
+<span id="cb12-35"><a href="#cb12-35"></a>This can then be used by the <span class="in">`tern`</span> layout function <span class="in">`split_cols_by_groups()`</span> below.</span>
+<span id="cb12-36"><a href="#cb12-36"></a></span>
+<span id="cb12-37"><a href="#cb12-37"></a><span class="fu">## Table</span></span>
+<span id="cb12-38"><a href="#cb12-38"></a></span>
+<span id="cb12-39"><a href="#cb12-39"></a>The simplest demographics table DT1 splits the columns by treatment arm and All vs. BEP, and summarizes selected demographic variables in the rows.</span>
+<span id="cb12-40"><a href="#cb12-40"></a></span>
+<span id="cb12-43"><a href="#cb12-43"></a><span class="in">```{r}</span></span>
+<span id="cb12-44"><a href="#cb12-44"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-45"><a href="#cb12-45"></a>  <span class="fu">split_cols_by</span>(<span class="st">"ARM"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-46"><a href="#cb12-46"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP01FL"</span>, bep_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb12-47"><a href="#cb12-47"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-48"><a href="#cb12-48"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb12-49"><a href="#cb12-49"></a></span>
+<span id="cb12-50"><a href="#cb12-50"></a><span class="fu">build_table</span>(lyt, adsl)</span>
+<span id="cb12-51"><a href="#cb12-51"></a><span class="in">```</span></span>
+<span id="cb12-52"><a href="#cb12-52"></a></span>
+<span id="cb12-53"><a href="#cb12-53"></a><span class="fu">## Reorder Treatment Arms in Demographics Table (DT1A)</span></span>
+<span id="cb12-54"><a href="#cb12-54"></a></span>
+<span id="cb12-55"><a href="#cb12-55"></a>We can reorder the treatment arm columns in the demographics table DT1 by using the <span class="in">`reorder_split_levels()`</span> splitting function in <span class="in">`split_cols_by()`</span> as done here.</span>
+<span id="cb12-56"><a href="#cb12-56"></a></span>
+<span id="cb12-59"><a href="#cb12-59"></a><span class="in">```{r}</span></span>
+<span id="cb12-60"><a href="#cb12-60"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-61"><a href="#cb12-61"></a>  <span class="fu">split_cols_by</span>(<span class="st">"ARM"</span>, <span class="at">split_fun =</span> <span class="fu">reorder_split_levels</span>(<span class="fu">c</span>(<span class="st">"B: Placebo"</span>, <span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb12-62"><a href="#cb12-62"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP01FL"</span>, bep_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb12-63"><a href="#cb12-63"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-64"><a href="#cb12-64"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb12-65"><a href="#cb12-65"></a></span>
+<span id="cb12-66"><a href="#cb12-66"></a><span class="fu">build_table</span>(lyt, adsl)</span>
+<span id="cb12-67"><a href="#cb12-67"></a><span class="in">```</span></span>
+<span id="cb12-68"><a href="#cb12-68"></a></span>
+<span id="cb12-69"><a href="#cb12-69"></a><span class="fu">## Combine Treatment Arms in Demographics Table (DT1B)</span></span>
+<span id="cb12-70"><a href="#cb12-70"></a></span>
+<span id="cb12-71"><a href="#cb12-71"></a>It is simple to omit the treatment arm split in the demographics table DT1, thus effectively combining the treatment arms.</span>
+<span id="cb12-72"><a href="#cb12-72"></a></span>
+<span id="cb12-75"><a href="#cb12-75"></a><span class="in">```{r}</span></span>
+<span id="cb12-76"><a href="#cb12-76"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-77"><a href="#cb12-77"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP01FL"</span>, bep_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb12-78"><a href="#cb12-78"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-79"><a href="#cb12-79"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb12-80"><a href="#cb12-80"></a></span>
+<span id="cb12-81"><a href="#cb12-81"></a><span class="fu">build_table</span>(lyt, adsl)</span>
+<span id="cb12-82"><a href="#cb12-82"></a><span class="in">```</span></span>
+<span id="cb12-83"><a href="#cb12-83"></a></span>
+<span id="cb12-84"><a href="#cb12-84"></a><span class="fu">## Alternative BEP Indicator in Demographics Table (DT1C)</span></span>
+<span id="cb12-85"><a href="#cb12-85"></a></span>
+<span id="cb12-86"><a href="#cb12-86"></a>We can of course use a different BEP factor variable <span class="in">`BEP02FL`</span> with corresponding groups definition <span class="in">`bep2_groups`</span> in the demographics table DT1.</span>
+<span id="cb12-87"><a href="#cb12-87"></a></span>
+<span id="cb12-90"><a href="#cb12-90"></a><span class="in">```{r}</span></span>
+<span id="cb12-91"><a href="#cb12-91"></a>bep2_groups <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb12-92"><a href="#cb12-92"></a>  <span class="st">"All"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"N"</span>),</span>
+<span id="cb12-93"><a href="#cb12-93"></a>  <span class="st">"BEP2"</span> <span class="ot">=</span> <span class="st">"Y"</span></span>
+<span id="cb12-94"><a href="#cb12-94"></a>)</span>
+<span id="cb12-95"><a href="#cb12-95"></a></span>
+<span id="cb12-96"><a href="#cb12-96"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-97"><a href="#cb12-97"></a>  <span class="fu">split_cols_by</span>(<span class="st">"ARM"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-98"><a href="#cb12-98"></a>  <span class="fu">split_cols_by_groups</span>(<span class="st">"BEP02FL"</span>, bep2_groups) <span class="sc">%&gt;%</span></span>
+<span id="cb12-99"><a href="#cb12-99"></a>  <span class="fu">summarize_vars</span>(<span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"SEX"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-100"><a href="#cb12-100"></a>  <span class="fu">add_colcounts</span>()</span>
+<span id="cb12-101"><a href="#cb12-101"></a></span>
+<span id="cb12-102"><a href="#cb12-102"></a><span class="fu">build_table</span>(lyt, adsl)</span>
+<span id="cb12-103"><a href="#cb12-103"></a><span class="in">```</span></span>
+<span id="cb12-104"><a href="#cb12-104"></a></span>
+<span id="cb12-105"><a href="#cb12-105"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
+<span id="cb12-106"><a href="#cb12-106"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

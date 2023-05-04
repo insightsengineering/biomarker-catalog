@@ -2,38 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/tables/tet01.html</loc>
-    <lastmod>2023-05-03T17:32:49.744Z</lastmod>
+    <lastmod>2023-05-04T19:15:15.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/biomarker-catalog/tables/dt02.html</loc>
+    <lastmod>2023-05-04T19:15:23.118Z</lastmod>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/biomarker-catalog/tables/dt01.html</loc>
+    <lastmod>2023-05-04T19:15:30.090Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/tables/cmt01.html</loc>
-    <lastmod>2023-05-03T17:32:59.460Z</lastmod>
+    <lastmod>2023-05-04T19:15:36.822Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/tables/cmt02.html</loc>
-    <lastmod>2023-05-03T17:33:09.433Z</lastmod>
+    <lastmod>2023-05-04T19:15:44.498Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/tables/cmt03.html</loc>
-    <lastmod>2023-05-03T17:33:17.466Z</lastmod>
+    <lastmod>2023-05-04T19:15:50.618Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/tables/index.html</loc>
-    <lastmod>2023-05-03T17:33:17.938Z</lastmod>
+    <lastmod>2023-05-04T19:15:50.978Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/session_info.html</loc>
-    <lastmod>2023-05-03T17:33:20.226Z</lastmod>
+    <lastmod>2023-05-04T19:15:52.646Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/index.html</loc>
-    <lastmod>2023-05-03T17:33:20.666Z</lastmod>
+    <lastmod>2023-05-04T19:15:52.982Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/NEWS.html</loc>
-    <lastmod>2023-05-03T17:33:21.138Z</lastmod>
+    <lastmod>2023-05-04T19:15:53.346Z</lastmod>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/biomarker-catalog/graphs/index.html</loc>
-    <lastmod>2023-05-03T17:33:21.558Z</lastmod>
+    <lastmod>2023-05-04T19:15:53.674Z</lastmod>
   </url>
 </urlset>

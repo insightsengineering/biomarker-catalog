@@ -27,7 +27,7 @@ adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
   mutate(BEP02FL = factor(sample(c("Y", "N"), size = n(), replace = TRUE)))
 
 bep_groups <- list(
-  "All" = c("Y", "N"), 
+  "All" = c("Y", "N"),
   "BEP" = "Y"
 )
 ```
@@ -81,7 +81,7 @@ We can of course use a different BEP factor variable `BEP02FL` with correspondin
 
 ```{r}
 bep2_groups <- list(
-  "All" = c("Y", "N"), 
+  "All" = c("Y", "N"),
   "BEP2" = "Y"
 )
 

@@ -26,7 +26,7 @@ adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
       BEP01FL == "Y" ~ "BEP Yes",
       BEP01FL == "N" ~ "BEP No"
     )
-  ) 
+  )
 ```
 
 This can then be used by the `rtables` layout function `split_cols_by()` below.
@@ -41,7 +41,7 @@ lyt <- basic_table() %>%
   split_cols_by("ARM") %>%
   add_colcounts() %>%
   split_cols_by("BEP01FL", labels_var = "BEP_label") %>%
-  summarize_vars(c("AGE", "SEX")) 
+  summarize_vars(c("AGE", "SEX"))
 
 build_table(lyt, adsl)
 ```
@@ -56,7 +56,7 @@ lyt <- basic_table() %>%
   split_cols_by("ARM") %>%
   add_colcounts() %>%
   split_cols_by("BEP01FL", labels_var = "BEP_label", ref_group = "Y") %>%
-  compare_vars(c("AGE", "SEX")) 
+  compare_vars(c("AGE", "SEX"))
 
 build_table(lyt, adsl)
 ```

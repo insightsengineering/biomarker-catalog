@@ -35,8 +35,8 @@ adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
   drop_na(BMRKR1)
   
 graph <- ggplot(adsl, aes(BMRKR1)) +
-  geom_histogram(aes(y=..density..), bins = 30) + 
-  geom_density(aes(y=..density..))
+  geom_histogram(aes(y=after_stat(density)), bins = 30) + 
+  geom_density(aes(y=after_stat(density)))
 
 graph
 ```
@@ -45,15 +45,15 @@ Another possibility is to add `na.rm = TRUE` option to the `ggplot()` arguments,
 
 ```{r, message = FALSE}
 ggplot(adsl, aes(BMRKR1), na.rm = TRUE) +
-  geom_histogram(aes(y=..density..), bins = 30) + 
-  geom_density(aes(y=..density..))
+  geom_histogram(aes(y=after_stat(density)), bins = 30) + 
+  geom_density(aes(y=after_stat(density)))
 
 adsl %>%
   select(BMRKR1) %>%
   na.omit() %>%
   ggplot(aes(BMRKR1)) +
-  geom_histogram(aes(y=..density..), bins = 30) + 
-  geom_density(aes(y=..density..))
+  geom_histogram(aes(y=after_stat(density)), bins = 30) + 
+  geom_density(aes(y=after_stat(density)))
 ```
 
 ## Title, Axis and Caption Labels

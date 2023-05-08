@@ -1,0 +1,168 @@
+---
+title: AG1
+subtitle: Utilities for All Graphs
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Purpose
+
+In this page we collect standard utilities for plotting which can be applied in principle to all graphs.
+Then we don't need to repeat explaining these in each of the other graph pages.
+So it is kind of a cheat sheet for `ggplot2`.
+General introductions to `ggplot2` and a pdf cheatsheet are also recommended and linked at https://ggplot2.tidyverse.org/.
+
+## Setup
+
+We start by creating a graph.
+Note that we load our `ggplot2.utils` NEST package instead of `ggplot2` so we benefit from additional utilities selected from the `ggplot2` extension package ecosystem.
+Note that `ggplot2.utils` automatically loads also `ggplot2`, there we do not need to do that manually.
+
+We also typically apply the `df_explicit_na()` function to the incoming dataset to convert character to factor variables, and code missing values as an explicit factor level, which avoids downstream problems.
+
+Note that you may still run into warning messages after producing some of the graphs if a continuous variable you want to analyze contains NAs.
+To avoid these warning messages, you can use the `drop_na()` function from `tidyr` in the data manipulation step below to remove the rows containing NAs for the specific numeric column (e.g. `drop_na(BMRKR1)` to remove rows where `BMRKR1` is missing).
+
+```{r, message = FALSE}
+library(tern)
+library(tidyr)
+library(dplyr)
+library(ggplot2.utils)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  drop_na(BMRKR1)
+
+graph <- ggplot(adsl, aes(BMRKR1)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30) +
+  geom_density(aes(y = after_stat(density)))
+
+graph
+```
+
+Another possibility is to add `na.rm = TRUE` option to the `ggplot()` arguments, or alternatively `select()` the relevant variables and then delete any rows with missing values by `na.omit()` and finally pipe that to `ggplot()`.
+
+```{r, message = FALSE}
+ggplot(adsl, aes(BMRKR1), na.rm = TRUE) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30) +
+  geom_density(aes(y = after_stat(density)))
+
+adsl %>%
+  select(BMRKR1) %>%
+  na.omit() %>%
+  ggplot(aes(BMRKR1)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30) +
+  geom_density(aes(y = after_stat(density)))
+```
+
+## Title, Axis and Caption Labels
+
+Title, subtitle, axis as well as caption labels can be added with the `labs()` layer.
+Alternatively specific `tern` functions can be used, see \[Titles and Footnotes\] below.
+
+```{r, labels}
+graph + labs(
+  x = "Baseline Biomarker",
+  y = "Density",
+  title = "Distribution of the Baseline Biomarker",
+  subtitle = "Histogram and Density Plot",
+  caption = "Note: No outliers have been removed here."
+)
+```
+
+## Coordinates
+
+We can change the coordinate system with `coord_*()` layers, e.g. to rotate the plot.
+
+```{r, coordinates}
+graph + coord_flip()
+```
+
+We can set the limits of the coordinate axes with `coord_cartesian()`.
+This performs a real zoom into the plot, instead of just replacing outside values with `NA` as `xlim()` or `lims()` are doing it.
+It is therefore preferred.
+
+```{r, zoom}
+graph +
+  coord_cartesian(xlim = c(0, 15), ylim = c(0, 0.3)) +
+  labs(caption = "Note: biomarker values greater than 15 are not shown on this plot.")
+```
+
+## Themes
+
+General plot theme can be specified with `theme_*()` functions.
+The default theme is `theme_gray()`.
+For example in publications other themes might be preferred, such as `theme_classic()`.
+
+```{r, theme}
+graph + theme_classic()
+```
+
+## Scales
+
+Many different scales mapping data values to visual values of an aesthetic are available in `scale_*()` functions.
+
+We can change the location scale easily, for example to show `x` on a log scale:
+
+```{r, logscale}
+graph + scale_x_log10()
+```
+
+## Faceting
+
+Faceting is an elegant approach to create the same graph separately for each of the levels of one or multiple other factors.
+It can just be added as an additional layer to the existing graph.
+For example, we can show the distribution of the biomarker for each of the gender levels.
+
+```{r, faceting}
+graph + facet_grid(~SEX)
+```
+
+## Titles, Footnotes, and Page Numbers
+
+NEST provides a function to add titles, footnotes, and page numbers to `grob` objects (read: graphical objects) with `tern::decorate_grob()`.
+
+First, we need to prepare the pieces: graph, titles/footnotes.
+A ggplot object must be converted to a `grob`.
+We can use `ggplot::ggplotGrob()` to accomplish this easily.
+
+Titles and footnotes can be defined as vectors where each element is a new line.
+Tip: The `paste()` function can be helpful to split long sentences across multiple lines.
+
+```{r, message = FALSE}
+grob_graph <- ggplotGrob(graph)
+
+titles <- c(
+  "Distribution of the Baseline Biomarker 1",
+  "Biomarker Evaluable Patients",
+  "Protocol: AB12345 (Data Cut: 01 JAN 2021)"
+)
+
+footnotes <- c(
+  "Biomarker 1 = Gene ABC",
+  "Data Cut-off: 01 JAN 2021; RAVE Data Extracted: 15 JAN 2021",
+  "Program: biomark1_analysis.R"
+)
+```
+
+Now that the pieces are ready, we can put them together.
+The `grid` package allows us to manipulate grobs.
+Using `grid::grid.draw()` we can apply `tern::decorate_grob()` to our object, thus adding the titles/footnotes.
+
+```{r, message = FALSE}
+library(grid)
+
+grid.newpage()
+grid.draw(
+  decorate_grob(
+    grob = grob_graph,
+    titles = titles,
+    footnotes = footnotes,
+    page = "Page 6 of 129"
+  )
+)
+```
+
+{{< include ../session_info.qmd >}}
+:::

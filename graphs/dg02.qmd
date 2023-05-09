@@ -1,0 +1,89 @@
+---
+title: DG2
+subtitle: Boxplots of a Numeric Variable by Categorical Variables
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+The graph below plots the distribution of a biomarker variable (on a continuous scale) as a boxplot by one or more categorical clinical variables with overlaid points.
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the graph and will select the biomarker evaluable population with `BEP01FL`.
+The column `BMRKR1` contains the biomarker values on a continuous scale.
+We will use `STRATA2` and `ARM` as categorical clinical variables.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  filter(BEP01FL == "Y")
+```
+
+## Standard Plot
+
+Here below the code for a simple boxplot with the outliers displayed.
+Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs.
+To avoid these warning messages, you can use the `drop_na()` function from `tidyr` in the data manipulation step above to remove the NAs rows from the dataset (e.g `drop_na(BMRKR1)`).
+
+```{r}
+graph <- ggplot(adsl, aes(x = STRATA2, y = BMRKR1)) +
+  geom_boxplot() +
+  stat_boxplot(geom = "errorbar")
+
+graph
+```
+
+Now we overlay the original data points, and remove the display of the outliers to avoid duplicate points.
+
+```{r}
+graph <- ggplot(adsl, aes(x = STRATA2, y = BMRKR1)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_boxplot(geom = "errorbar") +
+  geom_point(
+    position = position_jitter(width = 0.2),
+    alpha = 1 / 4
+  )
+
+graph
+```
+
+We can customize the labels of the axes.
+
+```{r}
+graph +
+  scale_x_discrete(
+    breaks = c("S1", "S2"),
+    labels = c("Stratum 1", "Stratum 2"),
+    name = "Strata"
+  ) +
+  scale_y_continuous(name = "Biomarker (Units)")
+```
+
+We can add the group sizes as annotations.
+
+```{r}
+graph +
+  stat_n_text(text_box = TRUE)
+```
+
+We can also display the biomarker by a further categorical variable with the `facet_grid()` layer.
+
+```{r}
+graph +
+  facet_grid(. ~ ARM)
+```
+
+This example shows how to display the biomarker axis on a log scale.
+
+```{r}
+graph +
+  scale_y_log10(name = "Biomarker (Log(Units))")
+```
+
+{{< include ../session_info.qmd >}}
+:::

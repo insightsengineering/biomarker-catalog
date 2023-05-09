@@ -68,7 +68,7 @@ We can add the group sizes as annotations.
 
 ```{r}
 graph +
-  stat_n_text(text_box = TRUE)
+  stat_n_text(text.box = TRUE)
 ```
 
 We can also display the biomarker by a further categorical variable with the `facet_grid()` layer.

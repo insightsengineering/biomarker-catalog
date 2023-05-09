@@ -1,0 +1,137 @@
+---
+title: DG3
+subtitle: Barplots of Categorical Variables
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overalll population or by one or more categorical clinical variables.
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the graph and will select on the biomarker evaluable population with `BEP01FL`.
+The column `BMRKR2` contains the biomarker values on a categorical scale.
+We will use `ARM` as categorical clinical variable.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  filter(BEP01FL == "Y")
+```
+
+## Standard Plot
+
+Here below the code for a simple barplot showing the counts of the categories.
+
+```{r}
+graph <- ggplot(adsl, aes(BMRKR2)) +
+  geom_bar()
+
+graph
+```
+
+We can customize the labels of the axes.
+
+```{r}
+graph +
+  scale_x_discrete(
+    breaks = c("LOW", "MEDIUM", "HIGH"),
+    labels = c("Low", "Medium", "High"),
+    name = "Biomarker"
+  ) +
+  scale_y_continuous(name = "count")
+```
+
+We can also add the absolute count above each of the columns.
+
+```{r}
+graph +
+  geom_text(
+    stat = "count",
+    aes(label = after_stat(count)),
+    vjust = -.5
+  )
+```
+
+If instead of counts we want to display the percentages then the following options could be used:
+
+```{r}
+graph <- ggplot(
+  adsl,
+  aes(
+    x = BMRKR2,
+    y = prop.table(after_stat(count)),
+    label = scales::percent(prop.table(after_stat(count)))
+  )
+) +
+  geom_bar()
+
+graph
+```
+
+We can customize the axes.
+
+```{r}
+graph +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    name = "Proportion (%)"
+  ) +
+  scale_x_discrete(
+    breaks = c("LOW", "MEDIUM", "HIGH"),
+    labels = c("Low", "Medium", "High"),
+    name = "Biomarker"
+  )
+```
+
+We can add the percentages above each of the columns.
+
+```{r}
+graph +
+  geom_text(
+    stat = "count",
+    vjust = -0.5
+  )
+```
+
+## Barplot of a Categorical Variable by Another Categorical Variable (DG3A)
+
+Here below the code for a simple distribution of the category counts of a first biomarker varaible (`BMRKR2`) split by a second categorical variable (`ARM`).
+We can use again the `facet_grid()` layer.
+
+```{r}
+graph <- ggplot(adsl, aes(BMRKR2)) +
+  geom_bar() +
+  facet_grid(. ~ ARM)
+
+graph
+```
+
+We could instead display the columns next to each other within the same graph with the `fill` aesthetic and the `position_dodge()` option instead of using the `facet_grid()` layer.
+
+```{r}
+graph <- ggplot(adsl, aes(ARM, fill = BMRKR2)) +
+  geom_bar(position = position_dodge())
+
+graph
+```
+
+We can then again add the absolute count above each of the columns.
+
+```{r}
+graph +
+  geom_text(
+    stat = "count",
+    aes(label = after_stat(count)),
+    position = position_dodge(0.9),
+    vjust = -.5
+  )
+```
+
+{{< include ../session_info.qmd >}}
+:::

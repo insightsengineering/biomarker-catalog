@@ -35,9 +35,6 @@ upstream_repos:
   insightsengineering/teal.osprey:
     repo: insightsengineering/teal.osprey
     host: https://github.com
-  insightsengineering/ggplot2.utils:
-    repo: insightsengineering/ggplot2.utils
-    host: https://github.com
   insightsengineering/hermes:
     repo: insightsengineering/hermes
     host: https://github.com

@@ -1,7 +1,7 @@
-Package: biomarker.catalog
 Type: Book
+Package: biomarker.catalog
 Title: Biomarker Analysis Catalog
-Version: 0.1.0
+Version: 0.1.9.9000
 Date: 2023-05-09
 Authors@R: c(
     person("Daniel", "Sabanes Bove", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
@@ -9,10 +9,13 @@ Authors@R: c(
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
 Depends: R (>= 4)
-Description: The Biomarker Analysis Catalog (BAC) contains R templates for 
-  often used biomarker analyses. It is an entry point for molecule project teams 
-  to quickly find out how to program these analyses, then using tools such as 
-  'tern', 'rtables' and 'hermes'. 
+Description: The Biomarker Analysis Catalog ('BAC') contains R templates for 
+  often used biomarker analyses. It is an entry point to quickly find out how to 
+  program these analyses, then using R packages such as 'tern', 'rtables', 
+  'ggplot2' and 'hermes'. 
+License: Apache License 2.0
+URL: https://insightsengineering.github.io/biomarker-catalog/
+BugReports: https://github.com/insightsengineering/biomarker-catalog/issues
 Imports:
     bookdown,
     scda,

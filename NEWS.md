@@ -1,5 +1,5 @@
-# biomarker.catalog 0.1.0
+# biomarker.catalog 0.1.9.9000
 
 ### New Features
 
-* New catalog!
+-   Published the Biomarker Analysis Catalog.

@@ -2,11 +2,17 @@ Package: biomarker.catalog
 Type: Book
 Title: Biomarker Analysis Catalog
 Version: 0.1.0
-Date: 2023-04-15
-Author: Daniel Sebanes Bove [aut, cre]
-Maintainer: Daniel Sebanes Bove <stat-engg@noreply.roche.com>
+Date: 2023-05-09
+Authors@R: c(
+    person("Daniel", "Sabanes Bove", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
+    person("Paolo", "Moroni", , role = "aut"),
+    person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
+  )
 Depends: R (>= 4)
-Description: Development version of Biomarker catalog.
+Description: The Biomarker Analysis Catalog (BAC) contains R templates for 
+  often used biomarker analyses. It is an entry point for molecule project teams 
+  to quickly find out how to program these analyses, then using tools such as 
+  'tern', 'rtables' and 'hermes'. 
 Imports:
     bookdown,
     scda,
@@ -18,7 +24,6 @@ Imports:
     teal,
     teal.modules.general,
     rtables,
-    helios,
     ggplot2.utils,
     hermes,
     teal.modules.hermes

@@ -1,0 +1,107 @@
+---
+title: KG5
+subtitle: Kaplan-Meier Graphs by Treatment Arm and Continuous Biomarker Cut
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+A setup similar to [KG4](../graphs/kg04.qmd) is used.
+The difference here is that we create the initial binary biomarker variable `BMRKR1_BIN` from comparing the continuous biomarker variable `BMRKR1` with a cutoff of interest.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS" & BEP01FL == "Y") %>%
+  mutate(
+    is_event = CNSR == 0,
+    BMRKR1_BIN = ifelse(
+      BMRKR1 > 5, "High", "Low"
+    ),
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    ARM_BMRKR1 = interaction(ARM_BIN, BMRKR1_BIN)
+  )
+
+variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM_BMRKR1")
+```
+
+## Standard Plot
+
+We can produce the basic graph using the `g_km()` function from `tern`.
+
+```{r}
+g_km(
+  df = adtte,
+  variables = variables,
+  annot_surv_med = FALSE,
+  col = c("red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2)
+)
+```
+
+We can also choose to annotate the plot with the median survival time for each of the treatment arms using the `annot_surv_med = TRUE` option.
+
+```{r}
+g_km(
+  df = adtte,
+  variables = variables,
+  annot_surv_med = TRUE,
+  col = c("red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2)
+)
+```
+
+## Specify Numerical Cutoff in Kaplan-Meier Graph by Treatment Arm and Continuous Biomarker Cut (KG5A)
+
+Alternatively we can also use the `cut()` function to cut the continuous biomarker variable `BMRKR1` into a factor with two levels `BMRKR1_CAT`, and then create its interaction with the treatment arm variable, to create effectively the same graphical comparison.
+
+```{r}
+adtte2 <- adtte %>%
+  mutate(
+    BMRKR1_CAT = cut(BMRKR1, c(0, 5, 22)),
+    ARM_BMRKR1 = interaction(ARM_BIN, BMRKR1_CAT)
+  )
+
+g_km(
+  df = adtte2,
+  variables = variables,
+  annot_surv_med = TRUE,
+  col = c("red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2)
+)
+```
+
+## More than Two Groups in Kaplan-Meier Graph by Treatment Arm and Continuous Biomarker Cut (KG5B)
+
+The advantage of using the `cut()` function is that it is sufficient to add additional cutoffs in order to obtain more than two bins for the cut version of the continuous biomarker variable.
+Again we can check the order of the factor levels to determine the `col` and `lty` arguments for `g_km()`.
+Here we want to always use red for the control and blue for the treatment arm, and then vary the line type for the different biomarker bins.
+
+```{r, fig.width = 12, fig.height = 10}
+adtte3 <- adtte %>%
+  mutate(
+    BMRKR1_CAT = cut(BMRKR1, c(0, 5, 10, 22)),
+    ARM_BMRKR1 = interaction(ARM_BIN, BMRKR1_CAT)
+  )
+levels(adtte3$ARM_BMRKR1)
+
+g_km(
+  df = adtte3,
+  variables = variables,
+  annot_surv_med = TRUE,
+  col = c("red", "blue", "red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2, 3, 3)
+)
+```
+
+{{< include ../session_info.qmd >}}
+:::

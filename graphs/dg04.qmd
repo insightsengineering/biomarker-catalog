@@ -1,0 +1,49 @@
+---
+title: DG4
+subtitle: Scatterplots of Two Numerical Variables
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+The graph below plots two continuous (biomarker) variables against each other.
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the graph and will select the biomarker evaluable population with `BEP01FL`.
+The columns `AGE` and `BMRKR1` contain the biomarker values of interest on a continuous scale.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  filter(BEP01FL == "Y")
+```
+
+## Standard Plot
+
+Here is an example first on the original scale.
+Note that you may run into warning messages after producing the graph if the continuous variable you want to analyze contains NAs.
+To avoid these warning messages, you can use the `drop_na()` function from `tidyr` in the data manipulation step above to remove the NAs rows from the dataset (e.g `drop_na(AGE, BMRKR1)`).
+
+```{r}
+graph <- ggplot(adsl, aes(x = AGE, y = BMRKR1)) +
+  geom_point()
+
+graph +
+  labs(x = "Age (Years)", y = "Biomarker (Units)")
+```
+
+We can also plot it on a log scale.
+
+```{r}
+graph +
+  scale_y_log10() +
+  labs(x = "Age (Years)", y = "Biomarker (Log(Units))")
+```
+
+{{< include ../session_info.qmd >}}
+:::

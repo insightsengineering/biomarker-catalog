@@ -1,0 +1,105 @@
+---
+title: KG1
+subtitle: Kaplan-Meier Graphs for One Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to create the Kaplan-Meier (KM) plots.
+We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+library(grid)
+
+adtte_arm <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS", ARM == "A: Drug X") %>%
+  mutate(is_event = CNSR == 0)
+
+variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM")
+```
+
+## Standard Plot
+
+We can produce the basic graph using the `g_km()` function from `tern`.
+
+```{r}
+g_km(
+  df = adtte_arm,
+  variables = variables,
+  annot_surv_med = FALSE
+)
+```
+
+We can also choose to annotate the graph with the median survival time for the overall population using the `annot_surv_med = TRUE` option.
+
+```{r}
+g_km(
+  df = adtte_arm,
+  variables = variables,
+  annot_surv_med = TRUE
+)
+```
+
+## Kaplan-Meier Graph for Biomarker Evaluable Population in One Treatment Arm (KG1A)
+
+We can filter the dataset further for the biomarker evaluable population using the corresponding flag variable, here `BEP01FL`:
+
+```{r}
+adtte_arm_bep <- adtte_arm %>%
+  filter(BEP01FL == "Y")
+```
+
+Afterwards we can plot the basic KM graph, just using the further filtered dataset `adtte_bep`.
+Here we annotate the plot with median survival time, but could suppress it with `annot_surv_med = FALSE`.
+
+```{r}
+g_km(
+  df = adtte_arm_bep,
+  variables = variables,
+  annot_surv_med = TRUE
+)
+```
+
+## Kaplan-Meier Graph for Comparing ITT and BEP Populations (KG1B)
+
+Here we only filter the time-to-event dataset for the overall survival observations, but keep all treatment arms and the overall population.
+
+```{r}
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS") %>%
+  mutate(is_event = CNSR == 0)
+
+variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM")
+```
+
+First create a new empty plot, and then setup a `grid` layout to allow plotting several KM curves on a single graph device.
+Once the `grid` layout is defined, plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs.
+Note that these steps need to executed in the order specified below to enable creation of these plots in one graph.
+
+```{r, fig.width = 15, fig.height = 12}
+plot.new()
+lyt <- grid.layout(nrow = 2, ncol = 1) %>%
+  viewport(layout = .) %>%
+  pushViewport()
+
+res <- g_km(
+  df = adtte, variables = variables, newpage = FALSE, annot_surv_med = FALSE,
+  ci_ribbon = TRUE,
+  vp = viewport(layout.pos.row = 1, layout.pos.col = 1)
+)
+
+res <- g_km(
+  df = filter(adtte, BEP01FL == "Y"), variables = variables, newpage = FALSE, annot_surv_med = FALSE,
+  vp = viewport(layout.pos.row = 2, layout.pos.col = 1)
+)
+```
+
+{{< include ../session_info.qmd >}}
+:::

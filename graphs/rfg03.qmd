@@ -1,0 +1,107 @@
+---
+title: RFG3
+subtitle: Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups.
+This is similar to [SFG04](../graphs/sfg04.qmd#L31).
+
+Similarly like in [RFG1](../graphs/rfg01.qmd).
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "BESRSPI", BMEASIFL == "Y") %>%
+  mutate(
+    is_rsp = AVALC %in% c("CR", "PR"),
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    BMRKR2 = fct_explicit_na_if(BMRKR2, BEP01FL == "N")
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR2 = "Biomarker (Categorical)"
+  )
+```
+
+## Standard Plot
+
+We define a vector of all cutpoints to use for a numeric biomarker (here `BMRKR1`).
+
+We `lapply()` over this vector, each time generating a binary factor variable `BMRKR1_cut` and then tabulating the resulting statistics similar to [SFG4](../graphs/sfg04.qmd), this time including the treatment arms in the `subgroups` argument.
+Then we `rbind()` all tables in the list together.
+
+```{r}
+# across arm ----
+cutpoints <- c(4, 5, 8)
+
+adrs2 <- adrs %>%
+  mutate(
+    BMRKR1 = ifelse(BEP01FL == "N", NA, BMRKR1),
+    BMRKR1_cut = explicit_na(cut(BMRKR1, c(-Inf, cutpoints, Inf), right = FALSE))
+  ) %>%
+  var_relabel(BMRKR1_cut = "Biomarker (Binned Continuous)")
+
+tables_all_cutpoints <- lapply(cutpoints, function(cutpoint) {
+  adrs3 <- adrs2 %>%
+    filter(!is.na(BMRKR1)) %>%
+    mutate(
+      BMRKR1_thresh = explicit_na(factor(
+        ifelse(BMRKR1 > cutpoint, "Greater", "Less")
+      ))
+    )
+  tbl <- extract_rsp_subgroups(
+    variables = list(
+      rsp = "is_rsp",
+      arm = "BMRKR1_thresh",
+      subgroups = c("ARM_BIN")
+    ),
+    label_all = paste0("BMRKR1 (", cutpoint, ")"),
+    data = adrs3
+  )
+  basic_table() %>%
+    tabulate_rsp_subgroups(
+      df = tbl,
+      vars = c("n_tot", "n", "n_rsp", "prop", "or", "ci")
+    )
+})
+
+result <- do.call(rbind, tables_all_cutpoints)
+```
+
+We can look at the result in the console already.
+
+```{r}
+result
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+Similarly as in [SFG4](../graphs/sfg04.qmd) we need to specify the `col_x`, `col_y` and `forest_header` arguments for `g_forest()` by recovering them from one of the original tables.
+
+```{r, fig.width = 15}
+one_table <- tables_all_cutpoints[[1]]
+g2 <- g_forest(
+  result,
+  col_x = attr(one_table, "col_x"),
+  col_ci = attr(one_table, "col_ci"),
+  forest_header = attr(one_table, "forest_header"),
+  col_symbol_size = attr(one_table, "col_symbol_size")
+)
+```
+
+With `gridExtra::grid.arrange()` the plot can be combined e.g. with a between-treatment-arms comparison, like [RFG1A](../graphs/rfg01.qmd#L60)
+
+{{< include ../session_info.qmd >}}
+:::

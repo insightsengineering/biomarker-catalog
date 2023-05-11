@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Biomarker Analysis Catalog - KG1</title>
+<title>Biomarker Analysis Catalog - RFG3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../graphs/kg02.html" rel="next">
-<link href="../graphs/dg04.html" rel="prev">
+<link href="../graphs/rfg02.html" rel="prev">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -118,9 +117,9 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../assets/css/style.scss">
-<meta property="og:title" content="Biomarker Analysis Catalog - KG1">
-<meta property="og:description" content="Kaplan-Meier Graphs for One Treatment Arm">
-<meta property="og:image" content="https://insightsengineering.github.io/biomarker-catalog/graphs/kg01_files/figure-html/unnamed-chunk-2-1.png">
+<meta property="og:title" content="Biomarker Analysis Catalog - RFG3">
+<meta property="og:description" content="Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff">
+<meta property="og:image" content="https://insightsengineering.github.io/biomarker-catalog/graphs/rfg03_files/figure-html/unnamed-chunk-4-1.png">
 <meta property="og:site-name" content="Biomarker Analysis Catalog">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="2880">
@@ -161,7 +160,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../graphs/index.html">Graphs</a></li><li class="breadcrumb-item"><a href="../graphs/kg01.html">KG1</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../graphs/index.html">Graphs</a></li><li class="breadcrumb-item"><a href="../graphs/rfg03.html">RFG3</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -268,7 +267,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../graphs/kg01.html" class="sidebar-item-text sidebar-link active">
+  <a href="../graphs/kg01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">KG1</span></a>
   </div>
 </li>
@@ -310,7 +309,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../graphs/rfg03.html" class="sidebar-item-text sidebar-link">
+  <a href="../graphs/rfg03.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">RFG3</span></a>
   </div>
 </li>
@@ -323,8 +322,8 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">KG1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
-<p class="subtitle lead">Kaplan-Meier Graphs for One Treatment Arm</p>
+<div class="quarto-title-block"><div><h1 class="title">RFG3</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<p class="subtitle lead">Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff</p>
 </div>
 
 
@@ -342,106 +341,117 @@ cookieconsent.run({
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Standard Plot</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Kaplan-Meier Graph for Biomarker Evaluable Population in One Treatment Arm (KG1A)</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Kaplan-Meier Graph for Comparing ITT and BEP Populations (KG1B)</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-1_330d52c0898a441885f79a2d1f34002c">
+<p>For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups. This is similar to <a href="../graphs/sfg04.qmd#L31">SFG04</a>.</p>
+<p>Similarly like in <a href="../graphs/rfg01.html">RFG1</a>.</p>
+<div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-1_0f76f28df7c678af53207260d83c89d5">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(grid)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2.utils)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>adtte_arm <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>, ARM <span class="sc">==</span> <span class="st">"A: Drug X"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">mutate</span>(<span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
-<span id="cb1-9"><a href="#cb1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">tte =</span> <span class="st">"AVAL"</span>, <span class="at">is_event =</span> <span class="st">"is_event"</span>, <span class="at">arm =</span> <span class="st">"ARM"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"BESRSPI"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">is_rsp =</span> AVALC <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"CR"</span>, <span class="st">"PR"</span>),</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb1-11"><a href="#cb1-11"></a>      ARM,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb1-13"><a href="#cb1-13"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    ),</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="at">BMRKR2 =</span> <span class="fu">fct_explicit_na_if</span>(BMRKR2, BEP01FL <span class="sc">==</span> <span class="st">"N"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="at">BMRKR2 =</span> <span class="st">"Biomarker (Categorical)"</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>We can produce the basic graph using the <code>g_km()</code> function from <code>tern</code>.</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-2_e5a3e7efddbfa837bfe2f8fa3592f831">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">g_km</span>(</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">df =</span> adtte_arm,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">annot_surv_med =</span> <span class="cn">FALSE</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We define a vector of all cutpoints to use for a numeric biomarker (here <code>BMRKR1</code>).</p>
+<p>We <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> over this vector, each time generating a binary factor variable <code>BMRKR1_cut</code> and then tabulating the resulting statistics similar to <a href="../graphs/sfg04.qmd">SFG4</a>, this time including the treatment arms in the <code>subgroups</code> argument. Then we <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> all tables in the list together.</p>
+<div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-2_a7a022fa3eabe2e98b4c35f8240002b4">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># across arm ----</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>cutpoints <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">8</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>adrs2 <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1),</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="at">BMRKR1_cut =</span> <span class="fu">explicit_na</span>(<span class="fu">cut</span>(BMRKR1, <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, cutpoints, <span class="cn">Inf</span>), <span class="at">right =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="fu">var_relabel</span>(<span class="at">BMRKR1_cut =</span> <span class="st">"Biomarker (Binned Continuous)"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>tables_all_cutpoints <span class="ot">&lt;-</span> <span class="fu">lapply</span>(cutpoints, <span class="cf">function</span>(cutpoint) {</span>
+<span id="cb2-12"><a href="#cb2-12"></a>  adrs3 <span class="ot">&lt;-</span> adrs2 <span class="sc">%&gt;%</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(BMRKR1)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb2-15"><a href="#cb2-15"></a>      <span class="at">BMRKR1_thresh =</span> <span class="fu">explicit_na</span>(<span class="fu">factor</span>(</span>
+<span id="cb2-16"><a href="#cb2-16"></a>        <span class="fu">ifelse</span>(BMRKR1 <span class="sc">&gt;</span> cutpoint, <span class="st">"Greater"</span>, <span class="st">"Less"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17"></a>      ))</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    )</span>
+<span id="cb2-19"><a href="#cb2-19"></a>  tbl <span class="ot">&lt;-</span> <span class="fu">extract_rsp_subgroups</span>(</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb2-21"><a href="#cb2-21"></a>      <span class="at">rsp =</span> <span class="st">"is_rsp"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22"></a>      <span class="at">arm =</span> <span class="st">"BMRKR1_thresh"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23"></a>      <span class="at">subgroups =</span> <span class="fu">c</span>(<span class="st">"ARM_BIN"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24"></a>    ),</span>
+<span id="cb2-25"><a href="#cb2-25"></a>    <span class="at">label_all =</span> <span class="fu">paste0</span>(<span class="st">"BMRKR1 ("</span>, cutpoint, <span class="st">")"</span>),</span>
+<span id="cb2-26"><a href="#cb2-26"></a>    <span class="at">data =</span> adrs3</span>
+<span id="cb2-27"><a href="#cb2-27"></a>  )</span>
+<span id="cb2-28"><a href="#cb2-28"></a>  <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a>    <span class="fu">tabulate_rsp_subgroups</span>(</span>
+<span id="cb2-30"><a href="#cb2-30"></a>      <span class="at">df =</span> tbl,</span>
+<span id="cb2-31"><a href="#cb2-31"></a>      <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot"</span>, <span class="st">"n"</span>, <span class="st">"n_rsp"</span>, <span class="st">"prop"</span>, <span class="st">"or"</span>, <span class="st">"ci"</span>)</span>
+<span id="cb2-32"><a href="#cb2-32"></a>    )</span>
+<span id="cb2-33"><a href="#cb2-33"></a>})</span>
+<span id="cb2-34"><a href="#cb2-34"></a></span>
+<span id="cb2-35"><a href="#cb2-35"></a>result <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, tables_all_cutpoints)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>We can look at the result in the console already.</p>
+<div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-3_715a3469ee3e3a52bc84827f34a0e3c6">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>Baseline Risk Factors                             Greater                            Less                                            
+                             Total n   n    Responders   Response (%)   n    Responders   Response (%)   Odds Ratio       95% CI     
+—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+BMRKR1 (4)                     97      62       61          98.4%       35       34          97.1%          0.56       (0.03, 9.20)  
+Description of Planned Arm                                                                                                           
+  CTRL                         36      21       21          100.0%      15       15          100.0%         1.00      (0.00, &gt;999.99)
+  TRT                          61      41       40          97.6%       20       19          95.0%          0.48       (0.03, 8.01)  
+BMRKR1 (5)                     97      50       49          98.0%       47       46          97.9%          0.94       (0.06, 15.45) 
+Description of Planned Arm                                                                                                           
+  CTRL                         36      16       16          100.0%      20       20          100.0%         1.00      (0.00, &gt;999.99)
+  TRT                          61      34       33          97.1%       27       26          96.3%          0.79       (0.05, 13.21) 
+BMRKR1 (8)                     97      16       16          100.0%      81       79          97.5%         &lt;0.01      (0.00, &gt;999.99)
+Description of Planned Arm                                                                                                           
+  CTRL                         36      3        3           100.0%      33       33          100.0%         1.00      (0.00, &gt;999.99)
+  TRT                          61      13       13          100.0%      48       46          95.8%         &lt;0.01      (0.00, &gt;999.99)</code></pre>
+</div>
+</div>
+<p>We can now produce the forest plot using the <code>g_forest()</code> function. Similarly as in <a href="../graphs/sfg04.qmd">SFG4</a> we need to specify the <code>col_x</code>, <code>col_y</code> and <code>forest_header</code> arguments for <code>g_forest()</code> by recovering them from one of the original tables.</p>
+<div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-4_fba3c533cb44c1591d229de14ed0438e">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>one_table <span class="ot">&lt;-</span> tables_all_cutpoints[[<span class="dv">1</span>]]</span>
+<span id="cb5-2"><a href="#cb5-2"></a>g2 <span class="ot">&lt;-</span> <span class="fu">g_forest</span>(</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  result,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="kg01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
+<p><img src="rfg03_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
-<p>We can also choose to annotate the graph with the median survival time for the overall population using the <code>annot_surv_med = TRUE</code> option.</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-3_00b7c3dcaff7a919057ca4b041169786">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">g_km</span>(</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="at">df =</span> adtte_arm,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="at">annot_surv_med =</span> <span class="cn">TRUE</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
-<p><img src="kg01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
+<p>With <code><a href="https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html">gridExtra::grid.arrange()</a></code> the plot can be combined e.g.&nbsp;with a between-treatment-arms comparison, like <a href="../graphs/rfg01.html#L60">RFG1A</a></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>We can filter the dataset further for the biomarker evaluable population using the corresponding flag variable, here <code>BEP01FL</code>:</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-4_6a222bd3370f0a6401269c15b49d7028">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>adtte_arm_bep <span class="ot">&lt;-</span> adtte_arm <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">filter</span>(BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Afterwards we can plot the basic KM graph, just using the further filtered dataset <code>adtte_bep</code>. Here we annotate the plot with median survival time, but could suppress it with <code>annot_surv_med = FALSE</code>.</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-5_26303963c295a933bd6edd10e2242c2f">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">g_km</span>(</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="at">df =</span> adtte_arm_bep,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">annot_surv_med =</span> <span class="cn">TRUE</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
-<p><img src="kg01_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Here we only filter the time-to-event dataset for the overall survival observations, but keep all treatment arms and the overall population.</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-6_5919f4b3260534195bbc25b4051dae69">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">mutate</span>(<span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">tte =</span> <span class="st">"AVAL"</span>, <span class="at">is_event =</span> <span class="st">"is_event"</span>, <span class="at">arm =</span> <span class="st">"ARM"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>First create a new empty plot, and then setup a <code>grid</code> layout to allow plotting several KM curves on a single graph device. Once the <code>grid</code> layout is defined, plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs. Note that these steps need to executed in the order specified below to enable creation of these plots in one graph.</p>
-<div class="cell" data-hash="kg01_cache/html/unnamed-chunk-7_8acf5fd9b0a64241216cbcbccba8be5e">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">plot.new</span>()</span>
-<span id="cb7-2"><a href="#cb7-2"></a>lyt <span class="ot">&lt;-</span> <span class="fu">grid.layout</span>(<span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">viewport</span>(<span class="at">layout =</span> .) <span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">pushViewport</span>()</span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a>res <span class="ot">&lt;-</span> <span class="fu">g_km</span>(</span>
-<span id="cb7-7"><a href="#cb7-7"></a>  <span class="at">df =</span> adtte, <span class="at">variables =</span> variables, <span class="at">newpage =</span> <span class="cn">FALSE</span>, <span class="at">annot_surv_med =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb7-8"><a href="#cb7-8"></a>  <span class="at">ci_ribbon =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb7-9"><a href="#cb7-9"></a>  <span class="at">vp =</span> <span class="fu">viewport</span>(<span class="at">layout.pos.row =</span> <span class="dv">1</span>, <span class="at">layout.pos.col =</span> <span class="dv">1</span>)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>)</span>
-<span id="cb7-11"><a href="#cb7-11"></a></span>
-<span id="cb7-12"><a href="#cb7-12"></a>res <span class="ot">&lt;-</span> <span class="fu">g_km</span>(</span>
-<span id="cb7-13"><a href="#cb7-13"></a>  <span class="at">df =</span> <span class="fu">filter</span>(adtte, BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>), <span class="at">variables =</span> variables, <span class="at">newpage =</span> <span class="cn">FALSE</span>, <span class="at">annot_surv_med =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb7-14"><a href="#cb7-14"></a>  <span class="at">vp =</span> <span class="fu">viewport</span>(<span class="at">layout.pos.row =</span> <span class="dv">2</span>, <span class="at">layout.pos.col =</span> <span class="dv">1</span>)</span>
-<span id="cb7-15"><a href="#cb7-15"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
-<p><img src="kg01_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<div class="cell" data-hash="kg01_cache/html/sessioninfo_4afddfbc2bbcd2310035b89a8e34a19d">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="rfg03_cache/html/sessioninfo_dc9f600dbfc45c52aa40d2a0b23acb10">
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -460,31 +470,28 @@ locale:
 [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
-[1] grid      stats     graphics  grDevices utils     datasets  methods  
-[8] base     
+[1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.1.9012       rtables_0.6.0.3      
-[4] magrittr_2.0.3        formatters_0.4.1.9001
+[1] dplyr_1.1.2           ggplot2.utils_0.2.1   ggplot2_3.4.2        
+[4] tern_0.8.1.9012       rtables_0.6.0.3       magrittr_2.0.3       
+[7] formatters_0.4.1.9001
 
 loaded via a namespace (and not attached):
- [1] compiler_4.2.2       pillar_1.9.0         forcats_1.0.0       
- [4] tools_4.2.2          digest_0.6.31        lattice_0.21-8      
- [7] jsonlite_1.8.4       evaluate_0.21        lifecycle_1.0.3     
-[10] tibble_3.2.1         gtable_0.3.3         checkmate_2.2.0     
-[13] pkgconfig_2.0.3      rlang_1.1.1          Matrix_1.5-4        
-[16] cli_3.6.1            yaml_2.3.7           xfun_0.39           
-[19] fastmap_1.1.1        gridExtra_2.3        withr_2.5.0         
-[22] knitr_1.42           generics_0.1.3       vctrs_0.6.2         
-[25] htmlwidgets_1.6.2    tidyselect_1.2.0     glue_1.6.2          
-[28] R6_2.5.1             fansi_1.0.4          Rdpack_2.4          
-[31] survival_3.5-5       rmarkdown_2.21       scda_0.1.6.9000     
-[34] farver_2.1.1         nestcolor_0.1.1.9001 ggplot2_3.4.2       
-[37] purrr_1.0.1          tidyr_1.3.0          codetools_0.2-19    
-[40] splines_4.2.2        backports_1.4.1      scales_1.2.1        
-[43] htmltools_0.5.5      rbibutils_2.2.13     colorspace_2.1-0    
-[46] labeling_0.4.2       utf8_1.2.3           munsell_0.5.0       
-[49] broom_1.0.4         </code></pre>
+ [1] tidyselect_1.2.0   xfun_0.39          purrr_1.0.1        splines_4.2.2     
+ [5] lattice_0.21-8     colorspace_2.1-0   vctrs_0.6.2        generics_0.1.3    
+ [9] htmltools_0.5.5    yaml_2.3.7         utf8_1.2.3         survival_3.5-5    
+[13] rlang_1.1.1        pillar_1.9.0       glue_1.6.2         withr_2.5.0       
+[17] RColorBrewer_1.1-3 scda_0.1.6.9000    lifecycle_1.0.3    plyr_1.8.8        
+[21] munsell_0.5.0      gtable_0.3.3       htmlwidgets_1.6.2  codetools_0.2-19  
+[25] evaluate_0.21      knitr_1.42         GGally_2.1.2       forcats_1.0.0     
+[29] EnvStats_2.7.0     fastmap_1.1.1      fansi_1.0.4        broom_1.0.4       
+[33] Rcpp_1.0.10        ggpp_0.5.2         polynom_1.4-1      scales_1.2.1      
+[37] backports_1.4.1    checkmate_2.2.0    jsonlite_1.8.4     digest_0.6.31     
+[41] rbibutils_2.2.13   grid_4.2.2         Rdpack_2.4         cli_3.6.1         
+[45] tools_4.2.2        tibble_3.2.1       tidyr_1.3.0        pkgconfig_2.0.3   
+[49] MASS_7.3-60        Matrix_1.5-4       rmarkdown_2.21     reshape_0.8.9     
+[53] R6_2.5.1           compiler_4.2.2    </code></pre>
 </div>
 </div>
 </div>
@@ -894,121 +901,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
-      <a href="../graphs/dg04.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">DG4</span>
+      <a href="../graphs/rfg02.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">RFG2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../graphs/kg02.html" class="pagination-link">
-        <span class="nav-page-text">KG2</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="an">title:</span><span class="co"> KG1</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="an">subtitle:</span><span class="co"> Kaplan-Meier Graphs for One Treatment Arm</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="co">---</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a></span>
-<span id="cb10-6"><a href="#cb10-6"></a>------------------------------------------------------------------------</span>
-<span id="cb10-7"><a href="#cb10-7"></a></span>
-<span id="cb10-8"><a href="#cb10-8"></a>::: panel-tabset</span>
-<span id="cb10-9"><a href="#cb10-9"></a><span class="fu">## Setup</span></span>
-<span id="cb10-10"><a href="#cb10-10"></a></span>
-<span id="cb10-11"><a href="#cb10-11"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package to create the Kaplan-Meier (KM) plots.</span>
-<span id="cb10-12"><a href="#cb10-12"></a>We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.</span>
-<span id="cb10-13"><a href="#cb10-13"></a></span>
-<span id="cb10-14"><a href="#cb10-14"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb10-15"><a href="#cb10-15"></a><span class="fu">library</span>(tern)</span>
-<span id="cb10-16"><a href="#cb10-16"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb10-17"><a href="#cb10-17"></a><span class="fu">library</span>(grid)</span>
-<span id="cb10-18"><a href="#cb10-18"></a></span>
-<span id="cb10-19"><a href="#cb10-19"></a>adtte_arm <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb10-20"><a href="#cb10-20"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb10-21"><a href="#cb10-21"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>, ARM <span class="sc">==</span> <span class="st">"A: Drug X"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-22"><a href="#cb10-22"></a>  <span class="fu">mutate</span>(<span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
-<span id="cb10-23"><a href="#cb10-23"></a></span>
-<span id="cb10-24"><a href="#cb10-24"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">tte =</span> <span class="st">"AVAL"</span>, <span class="at">is_event =</span> <span class="st">"is_event"</span>, <span class="at">arm =</span> <span class="st">"ARM"</span>)</span>
-<span id="cb10-25"><a href="#cb10-25"></a><span class="in">```</span></span>
-<span id="cb10-26"><a href="#cb10-26"></a></span>
-<span id="cb10-27"><a href="#cb10-27"></a><span class="fu">## Standard Plot</span></span>
-<span id="cb10-28"><a href="#cb10-28"></a></span>
-<span id="cb10-29"><a href="#cb10-29"></a>We can produce the basic graph using the <span class="in">`g_km()`</span> function from <span class="in">`tern`</span>.</span>
-<span id="cb10-30"><a href="#cb10-30"></a></span>
-<span id="cb10-33"><a href="#cb10-33"></a><span class="in">```{r}</span></span>
-<span id="cb10-34"><a href="#cb10-34"></a><span class="fu">g_km</span>(</span>
-<span id="cb10-35"><a href="#cb10-35"></a>  <span class="at">df =</span> adtte_arm,</span>
-<span id="cb10-36"><a href="#cb10-36"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb10-37"><a href="#cb10-37"></a>  <span class="at">annot_surv_med =</span> <span class="cn">FALSE</span></span>
-<span id="cb10-38"><a href="#cb10-38"></a>)</span>
-<span id="cb10-39"><a href="#cb10-39"></a><span class="in">```</span></span>
-<span id="cb10-40"><a href="#cb10-40"></a></span>
-<span id="cb10-41"><a href="#cb10-41"></a>We can also choose to annotate the graph with the median survival time for the overall population using the <span class="in">`annot_surv_med = TRUE`</span> option.</span>
-<span id="cb10-42"><a href="#cb10-42"></a></span>
-<span id="cb10-45"><a href="#cb10-45"></a><span class="in">```{r}</span></span>
-<span id="cb10-46"><a href="#cb10-46"></a><span class="fu">g_km</span>(</span>
-<span id="cb10-47"><a href="#cb10-47"></a>  <span class="at">df =</span> adtte_arm,</span>
-<span id="cb10-48"><a href="#cb10-48"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb10-49"><a href="#cb10-49"></a>  <span class="at">annot_surv_med =</span> <span class="cn">TRUE</span></span>
-<span id="cb10-50"><a href="#cb10-50"></a>)</span>
-<span id="cb10-51"><a href="#cb10-51"></a><span class="in">```</span></span>
-<span id="cb10-52"><a href="#cb10-52"></a></span>
-<span id="cb10-53"><a href="#cb10-53"></a><span class="fu">## Kaplan-Meier Graph for Biomarker Evaluable Population in One Treatment Arm (KG1A)</span></span>
-<span id="cb10-54"><a href="#cb10-54"></a></span>
-<span id="cb10-55"><a href="#cb10-55"></a>We can filter the dataset further for the biomarker evaluable population using the corresponding flag variable, here <span class="in">`BEP01FL`</span>:</span>
-<span id="cb10-56"><a href="#cb10-56"></a></span>
-<span id="cb10-59"><a href="#cb10-59"></a><span class="in">```{r}</span></span>
-<span id="cb10-60"><a href="#cb10-60"></a>adtte_arm_bep <span class="ot">&lt;-</span> adtte_arm <span class="sc">%&gt;%</span></span>
-<span id="cb10-61"><a href="#cb10-61"></a>  <span class="fu">filter</span>(BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>)</span>
-<span id="cb10-62"><a href="#cb10-62"></a><span class="in">```</span></span>
-<span id="cb10-63"><a href="#cb10-63"></a></span>
-<span id="cb10-64"><a href="#cb10-64"></a>Afterwards we can plot the basic KM graph, just using the further filtered dataset <span class="in">`adtte_bep`</span>.</span>
-<span id="cb10-65"><a href="#cb10-65"></a>Here we annotate the plot with median survival time, but could suppress it with <span class="in">`annot_surv_med = FALSE`</span>.</span>
-<span id="cb10-66"><a href="#cb10-66"></a></span>
-<span id="cb10-69"><a href="#cb10-69"></a><span class="in">```{r}</span></span>
-<span id="cb10-70"><a href="#cb10-70"></a><span class="fu">g_km</span>(</span>
-<span id="cb10-71"><a href="#cb10-71"></a>  <span class="at">df =</span> adtte_arm_bep,</span>
-<span id="cb10-72"><a href="#cb10-72"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb10-73"><a href="#cb10-73"></a>  <span class="at">annot_surv_med =</span> <span class="cn">TRUE</span></span>
-<span id="cb10-74"><a href="#cb10-74"></a>)</span>
-<span id="cb10-75"><a href="#cb10-75"></a><span class="in">```</span></span>
-<span id="cb10-76"><a href="#cb10-76"></a></span>
-<span id="cb10-77"><a href="#cb10-77"></a><span class="fu">## Kaplan-Meier Graph for Comparing ITT and BEP Populations (KG1B)</span></span>
-<span id="cb10-78"><a href="#cb10-78"></a></span>
-<span id="cb10-79"><a href="#cb10-79"></a>Here we only filter the time-to-event dataset for the overall survival observations, but keep all treatment arms and the overall population.</span>
-<span id="cb10-80"><a href="#cb10-80"></a></span>
-<span id="cb10-83"><a href="#cb10-83"></a><span class="in">```{r}</span></span>
-<span id="cb10-84"><a href="#cb10-84"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb10-85"><a href="#cb10-85"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb10-86"><a href="#cb10-86"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-87"><a href="#cb10-87"></a>  <span class="fu">mutate</span>(<span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
-<span id="cb10-88"><a href="#cb10-88"></a></span>
-<span id="cb10-89"><a href="#cb10-89"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">tte =</span> <span class="st">"AVAL"</span>, <span class="at">is_event =</span> <span class="st">"is_event"</span>, <span class="at">arm =</span> <span class="st">"ARM"</span>)</span>
-<span id="cb10-90"><a href="#cb10-90"></a><span class="in">```</span></span>
-<span id="cb10-91"><a href="#cb10-91"></a></span>
-<span id="cb10-92"><a href="#cb10-92"></a>First create a new empty plot, and then setup a <span class="in">`grid`</span> layout to allow plotting several KM curves on a single graph device.</span>
-<span id="cb10-93"><a href="#cb10-93"></a>Once the <span class="in">`grid`</span> layout is defined, plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs.</span>
-<span id="cb10-94"><a href="#cb10-94"></a>Note that these steps need to executed in the order specified below to enable creation of these plots in one graph.</span>
-<span id="cb10-95"><a href="#cb10-95"></a></span>
-<span id="cb10-96"><a href="#cb10-96"></a><span class="in">```{r, fig.width = 15, fig.height = 12}</span></span>
-<span id="cb10-97"><a href="#cb10-97"></a><span class="fu">plot.new</span>()</span>
-<span id="cb10-98"><a href="#cb10-98"></a>lyt <span class="ot">&lt;-</span> <span class="fu">grid.layout</span>(<span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-99"><a href="#cb10-99"></a>  <span class="fu">viewport</span>(<span class="at">layout =</span> .) <span class="sc">%&gt;%</span></span>
-<span id="cb10-100"><a href="#cb10-100"></a>  <span class="fu">pushViewport</span>()</span>
-<span id="cb10-101"><a href="#cb10-101"></a></span>
-<span id="cb10-102"><a href="#cb10-102"></a>res <span class="ot">&lt;-</span> <span class="fu">g_km</span>(</span>
-<span id="cb10-103"><a href="#cb10-103"></a>  <span class="at">df =</span> adtte, <span class="at">variables =</span> variables, <span class="at">newpage =</span> <span class="cn">FALSE</span>, <span class="at">annot_surv_med =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb10-104"><a href="#cb10-104"></a>  <span class="at">ci_ribbon =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb10-105"><a href="#cb10-105"></a>  <span class="at">vp =</span> <span class="fu">viewport</span>(<span class="at">layout.pos.row =</span> <span class="dv">1</span>, <span class="at">layout.pos.col =</span> <span class="dv">1</span>)</span>
-<span id="cb10-106"><a href="#cb10-106"></a>)</span>
-<span id="cb10-107"><a href="#cb10-107"></a></span>
-<span id="cb10-108"><a href="#cb10-108"></a>res <span class="ot">&lt;-</span> <span class="fu">g_km</span>(</span>
-<span id="cb10-109"><a href="#cb10-109"></a>  <span class="at">df =</span> <span class="fu">filter</span>(adtte, BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>), <span class="at">variables =</span> variables, <span class="at">newpage =</span> <span class="cn">FALSE</span>, <span class="at">annot_surv_med =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb10-110"><a href="#cb10-110"></a>  <span class="at">vp =</span> <span class="fu">viewport</span>(<span class="at">layout.pos.row =</span> <span class="dv">2</span>, <span class="at">layout.pos.col =</span> <span class="dv">1</span>)</span>
-<span id="cb10-111"><a href="#cb10-111"></a>)</span>
-<span id="cb10-112"><a href="#cb10-112"></a><span class="in">```</span></span>
-<span id="cb10-113"><a href="#cb10-113"></a></span>
-<span id="cb10-114"><a href="#cb10-114"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb10-115"><a href="#cb10-115"></a>:::</span>
+<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> RFG3</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">---</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>------------------------------------------------------------------------</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>::: panel-tabset</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">## Setup</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a></span>
+<span id="cb8-11"><a href="#cb8-11"></a>For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups.</span>
+<span id="cb8-12"><a href="#cb8-12"></a>This is similar to <span class="co">[</span><span class="ot">SFG04</span><span class="co">](../graphs/sfg04.qmd#L31)</span>.</span>
+<span id="cb8-13"><a href="#cb8-13"></a></span>
+<span id="cb8-14"><a href="#cb8-14"></a>Similarly like in <span class="co">[</span><span class="ot">RFG1</span><span class="co">](../graphs/rfg01.qmd)</span>.</span>
+<span id="cb8-15"><a href="#cb8-15"></a></span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a><span class="fu">library</span>(tern)</span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="fu">library</span>(ggplot2.utils)</span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-20"><a href="#cb8-20"></a></span>
+<span id="cb8-21"><a href="#cb8-21"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-23"><a href="#cb8-23"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"BESRSPI"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-24"><a href="#cb8-24"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-25"><a href="#cb8-25"></a>    <span class="at">is_rsp =</span> AVALC <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"CR"</span>, <span class="st">"PR"</span>),</span>
+<span id="cb8-26"><a href="#cb8-26"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb8-27"><a href="#cb8-27"></a>      ARM,</span>
+<span id="cb8-28"><a href="#cb8-28"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb8-29"><a href="#cb8-29"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb8-30"><a href="#cb8-30"></a>    ),</span>
+<span id="cb8-31"><a href="#cb8-31"></a>    <span class="at">BMRKR2 =</span> <span class="fu">fct_explicit_na_if</span>(BMRKR2, BEP01FL <span class="sc">==</span> <span class="st">"N"</span>)</span>
+<span id="cb8-32"><a href="#cb8-32"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb8-34"><a href="#cb8-34"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
+<span id="cb8-35"><a href="#cb8-35"></a>    <span class="at">BMRKR2 =</span> <span class="st">"Biomarker (Categorical)"</span></span>
+<span id="cb8-36"><a href="#cb8-36"></a>  )</span>
+<span id="cb8-37"><a href="#cb8-37"></a><span class="in">```</span></span>
+<span id="cb8-38"><a href="#cb8-38"></a></span>
+<span id="cb8-39"><a href="#cb8-39"></a><span class="fu">## Standard Plot</span></span>
+<span id="cb8-40"><a href="#cb8-40"></a></span>
+<span id="cb8-41"><a href="#cb8-41"></a>We define a vector of all cutpoints to use for a numeric biomarker (here <span class="in">`BMRKR1`</span>).</span>
+<span id="cb8-42"><a href="#cb8-42"></a></span>
+<span id="cb8-43"><a href="#cb8-43"></a>We <span class="in">`lapply()`</span> over this vector, each time generating a binary factor variable <span class="in">`BMRKR1_cut`</span> and then tabulating the resulting statistics similar to <span class="co">[</span><span class="ot">SFG4</span><span class="co">](../graphs/sfg04.qmd)</span>, this time including the treatment arms in the <span class="in">`subgroups`</span> argument.</span>
+<span id="cb8-44"><a href="#cb8-44"></a>Then we <span class="in">`rbind()`</span> all tables in the list together.</span>
+<span id="cb8-45"><a href="#cb8-45"></a></span>
+<span id="cb8-48"><a href="#cb8-48"></a><span class="in">```{r}</span></span>
+<span id="cb8-49"><a href="#cb8-49"></a><span class="co"># across arm ----</span></span>
+<span id="cb8-50"><a href="#cb8-50"></a>cutpoints <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">8</span>)</span>
+<span id="cb8-51"><a href="#cb8-51"></a></span>
+<span id="cb8-52"><a href="#cb8-52"></a>adrs2 <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
+<span id="cb8-53"><a href="#cb8-53"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-54"><a href="#cb8-54"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1),</span>
+<span id="cb8-55"><a href="#cb8-55"></a>    <span class="at">BMRKR1_cut =</span> <span class="fu">explicit_na</span>(<span class="fu">cut</span>(BMRKR1, <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, cutpoints, <span class="cn">Inf</span>), <span class="at">right =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb8-56"><a href="#cb8-56"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-57"><a href="#cb8-57"></a>  <span class="fu">var_relabel</span>(<span class="at">BMRKR1_cut =</span> <span class="st">"Biomarker (Binned Continuous)"</span>)</span>
+<span id="cb8-58"><a href="#cb8-58"></a></span>
+<span id="cb8-59"><a href="#cb8-59"></a>tables_all_cutpoints <span class="ot">&lt;-</span> <span class="fu">lapply</span>(cutpoints, <span class="cf">function</span>(cutpoint) {</span>
+<span id="cb8-60"><a href="#cb8-60"></a>  adrs3 <span class="ot">&lt;-</span> adrs2 <span class="sc">%&gt;%</span></span>
+<span id="cb8-61"><a href="#cb8-61"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(BMRKR1)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-62"><a href="#cb8-62"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb8-63"><a href="#cb8-63"></a>      <span class="at">BMRKR1_thresh =</span> <span class="fu">explicit_na</span>(<span class="fu">factor</span>(</span>
+<span id="cb8-64"><a href="#cb8-64"></a>        <span class="fu">ifelse</span>(BMRKR1 <span class="sc">&gt;</span> cutpoint, <span class="st">"Greater"</span>, <span class="st">"Less"</span>)</span>
+<span id="cb8-65"><a href="#cb8-65"></a>      ))</span>
+<span id="cb8-66"><a href="#cb8-66"></a>    )</span>
+<span id="cb8-67"><a href="#cb8-67"></a>  tbl <span class="ot">&lt;-</span> <span class="fu">extract_rsp_subgroups</span>(</span>
+<span id="cb8-68"><a href="#cb8-68"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb8-69"><a href="#cb8-69"></a>      <span class="at">rsp =</span> <span class="st">"is_rsp"</span>,</span>
+<span id="cb8-70"><a href="#cb8-70"></a>      <span class="at">arm =</span> <span class="st">"BMRKR1_thresh"</span>,</span>
+<span id="cb8-71"><a href="#cb8-71"></a>      <span class="at">subgroups =</span> <span class="fu">c</span>(<span class="st">"ARM_BIN"</span>)</span>
+<span id="cb8-72"><a href="#cb8-72"></a>    ),</span>
+<span id="cb8-73"><a href="#cb8-73"></a>    <span class="at">label_all =</span> <span class="fu">paste0</span>(<span class="st">"BMRKR1 ("</span>, cutpoint, <span class="st">")"</span>),</span>
+<span id="cb8-74"><a href="#cb8-74"></a>    <span class="at">data =</span> adrs3</span>
+<span id="cb8-75"><a href="#cb8-75"></a>  )</span>
+<span id="cb8-76"><a href="#cb8-76"></a>  <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-77"><a href="#cb8-77"></a>    <span class="fu">tabulate_rsp_subgroups</span>(</span>
+<span id="cb8-78"><a href="#cb8-78"></a>      <span class="at">df =</span> tbl,</span>
+<span id="cb8-79"><a href="#cb8-79"></a>      <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot"</span>, <span class="st">"n"</span>, <span class="st">"n_rsp"</span>, <span class="st">"prop"</span>, <span class="st">"or"</span>, <span class="st">"ci"</span>)</span>
+<span id="cb8-80"><a href="#cb8-80"></a>    )</span>
+<span id="cb8-81"><a href="#cb8-81"></a>})</span>
+<span id="cb8-82"><a href="#cb8-82"></a></span>
+<span id="cb8-83"><a href="#cb8-83"></a>result <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, tables_all_cutpoints)</span>
+<span id="cb8-84"><a href="#cb8-84"></a><span class="in">```</span></span>
+<span id="cb8-85"><a href="#cb8-85"></a></span>
+<span id="cb8-86"><a href="#cb8-86"></a>We can look at the result in the console already.</span>
+<span id="cb8-87"><a href="#cb8-87"></a></span>
+<span id="cb8-90"><a href="#cb8-90"></a><span class="in">```{r}</span></span>
+<span id="cb8-91"><a href="#cb8-91"></a>result</span>
+<span id="cb8-92"><a href="#cb8-92"></a><span class="in">```</span></span>
+<span id="cb8-93"><a href="#cb8-93"></a></span>
+<span id="cb8-94"><a href="#cb8-94"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb8-95"><a href="#cb8-95"></a>Similarly as in <span class="co">[</span><span class="ot">SFG4</span><span class="co">](../graphs/sfg04.qmd)</span> we need to specify the <span class="in">`col_x`</span>, <span class="in">`col_y`</span> and <span class="in">`forest_header`</span> arguments for <span class="in">`g_forest()`</span> by recovering them from one of the original tables.</span>
+<span id="cb8-96"><a href="#cb8-96"></a></span>
+<span id="cb8-97"><a href="#cb8-97"></a><span class="in">```{r, fig.width = 15}</span></span>
+<span id="cb8-98"><a href="#cb8-98"></a>one_table <span class="ot">&lt;-</span> tables_all_cutpoints[[<span class="dv">1</span>]]</span>
+<span id="cb8-99"><a href="#cb8-99"></a>g2 <span class="ot">&lt;-</span> <span class="fu">g_forest</span>(</span>
+<span id="cb8-100"><a href="#cb8-100"></a>  result,</span>
+<span id="cb8-101"><a href="#cb8-101"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb8-102"><a href="#cb8-102"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb8-103"><a href="#cb8-103"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb8-104"><a href="#cb8-104"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb8-105"><a href="#cb8-105"></a>)</span>
+<span id="cb8-106"><a href="#cb8-106"></a><span class="in">```</span></span>
+<span id="cb8-107"><a href="#cb8-107"></a></span>
+<span id="cb8-108"><a href="#cb8-108"></a>With <span class="in">`gridExtra::grid.arrange()`</span> the plot can be combined e.g. with a between-treatment-arms comparison, like <span class="co">[</span><span class="ot">RFG1A</span><span class="co">](../graphs/rfg01.qmd#L60)</span></span>
+<span id="cb8-109"><a href="#cb8-109"></a></span>
+<span id="cb8-110"><a href="#cb8-110"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
+<span id="cb8-111"><a href="#cb8-111"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

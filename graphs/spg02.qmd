@@ -1,0 +1,83 @@
+---
+title: SPG2
+subtitle: STEP Graphs for Response Outcome
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+We will use the `synthetic_cdisc_data$adrs` data set from the `scda` package to create the STEP response graph.
+We start by filtering the `adrs` data set for response evaluable patients and the response parameter of interest, creating a new logical variable encoding response (response patients should solely be CR patients), binarizing the `ARM` variable.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+  df_explicit_na() %>%
+  filter(PARAM == "Best Confirmed Overall Response by Investigator", BMEASIFL == "Y") %>%
+  mutate(
+    is_rsp = AVALC == "CR",
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    )
+  )
+```
+
+## Standard Plot
+
+We then perform with the `fit_rsp_step()` function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) logistic regression models for the response outcome within each of the percentile intervals of the age variable `AGE` defining the subgroups.
+The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e. the estimated odds ratios are for the comparison of the second level vs. the first one.
+
+In this example we fit the default model where a constant treatment effect is estimated in each of the subgroups that are created according to age quantiles.
+
+```{r}
+vars <- list(
+  time = "AVAL",
+  response = "is_rsp",
+  arm = "ARM_BIN",
+  biomarker = "AGE"
+)
+
+step_matrix <- fit_rsp_step(
+  variables = vars,
+  data = adrs
+)
+```
+
+In this second example we fit instead a model with a linear age interaction term and we control the bandwidth (50% of data) of the STEP windows for the age variable.
+
+```{r}
+step_matrix <- fit_rsp_step(
+  variables = vars,
+  data = adrs,
+  control = c(control_logistic(), control_step(degree = 1, bandwidth = 0.5))
+)
+```
+
+Before we can plot the data, the `broom::tidy()` method needs to be applied to the STEP result to obtain graph ready data.
+Thereafter with the `g_step()` function we can create a graph showing the estimated odds ratio along the continuous age subgroups.
+
+```{r}
+step_data <- broom::tidy(step_matrix)
+
+graph <- g_step(step_data)
+
+graph
+```
+
+We can also add a reference line and change the axis limits.
+
+```{r}
+graph +
+  geom_hline(aes(yintercept = 1), linetype = 2) +
+  coord_cartesian(ylim = c(0, 10))
+```
+
+{{< include ../session_info.qmd >}}
+:::

@@ -32,7 +32,7 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
     is_event = CNSR == 0,
     ARM_BIN = fct_collapse_only(
       ARM,
-      CTRL = c("B: Placebo"),
+      CTRL = "B: Placebo",
       TRT = c("A: Drug X", "C: Combination")
     ),
     AGE_BIN = cut_quantile_bins(AGE, probs = AGE_probs),
@@ -93,7 +93,7 @@ tbl <- extract_survival_subgroups(
     tte = "AVAL",
     is_event = "is_event",
     arm = "ARM_BIN",
-    subgroups = c("BMRKR2")
+    subgroups = "BMRKR2"
   ),
   data = adtte
 )

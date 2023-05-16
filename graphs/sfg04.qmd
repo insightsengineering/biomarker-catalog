@@ -26,7 +26,7 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
     is_event = CNSR == 0,
     ARM_BIN = fct_collapse_only(
       ARM,
-      CTRL = c("B: Placebo"),
+      CTRL = "B: Placebo",
       TRT = c("A: Drug X", "C: Combination")
     )
   ) %>%
@@ -57,7 +57,7 @@ tables_all_cutpoints <- lapply(all_cutpoints, function(cutpoint) {
       tte = "AVAL",
       is_event = "is_event",
       arm = "BMRKR1_cut",
-      subgroups = c("ARM_BIN")
+      subgroups = "ARM_BIN"
     ),
     label_all = paste0("BMRKR1 (", cutpoint, ")"),
     data = adtte_cut

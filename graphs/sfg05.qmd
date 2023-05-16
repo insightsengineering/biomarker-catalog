@@ -14,7 +14,7 @@ We prepare the data similarly as in [SFG1](../graphs/sfg01.qmd).
 library(tern)
 library(dplyr)
 
-AGE_probs <- c(0.5)
+AGE_probs <- 0.5
 
 adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   df_explicit_na() %>%
@@ -27,14 +27,14 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
     is_event = CNSR == 0,
     ARM_BIN = fct_collapse_only(
       ARM,
-      CTRL = c("B: Placebo"),
+      CTRL = "B: Placebo",
       TRT = c("A: Drug X", "C: Combination")
     ),
     AGE_BIN = cut_quantile_bins(AGE, probs = AGE_probs),
     BMRKR2 = fct_explicit_na_if(BMRKR2, BEP01FL == "N"),
     BMRKR2_BIN = fct_collapse_only(
       BMRKR2,
-      High = c("HIGH"),
+      High = "HIGH",
       Low = c("MEDIUM", "LOW")
     )
   ) %>%

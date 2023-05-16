@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Biomarker Analysis Catalog - SFG5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../graphs/sfg06.html" rel="next">
+<link href="../graphs/sfg04.html" rel="prev">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script type="text/plain" cookie-consent="tracking">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-125641273-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script><script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<link rel="stylesheet" href="../assets/css/style.scss">
+<meta property="og:title" content="Biomarker Analysis Catalog - SFG5">
+<meta property="og:description" content="Survival Forest Graphs Comparing on Subgroups">
+<meta property="og:image" content="https://insightsengineering.github.io/biomarker-catalog/graphs/sfg05_files/figure-html/unnamed-chunk-5-1.png">
+<meta property="og:site-name" content="Biomarker Analysis Catalog">
+<meta property="og:image:height" content="1344">
+<meta property="og:image:width" content="2880">
+</head>
+<body class="nav-sidebar docked nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Biomarker Analysis Catalog</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+<div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="true"></div>
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../graphs/index.html">Graphs</a></li><li class="breadcrumb-item"><a href="../graphs/sfg05.html">SFG5</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/StatisticalEngineering.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../tables/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tables/cmt01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CMT1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tables/cmt02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CMT2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tables/cmt03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CMT3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tables/dt01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DT1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tables/dt02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DT2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tables/tet01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TET1</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../graphs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graphs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/ag01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/dg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/dg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DG2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/dg03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DG3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/dg04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DG4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/kg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">KG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/kg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">KG2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/kg03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">KG3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/kg04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">KG4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/kg05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">KG5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/rfg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RFG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/rfg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RFG2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/rfg03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RFG3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/rg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/rg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RG2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/rg03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RG3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">SFG5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/spg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SPG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/spg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SPG2</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">SFG5</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<p class="subtitle lead">Survival Forest Graphs Comparing on Subgroups</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Standard Plot</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups (SFG5A)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups, including ITT (SFG5B)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Survival Forest Graph for Subgroups Defined by Multiple Bins of Continuous Variable (SFG5C)</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>We prepare the data similarly as in <a href="../graphs/sfg01.html">SFG1</a>.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-1_34b2730b28e312f2c6b5c238005dbc43">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>AGE_probs <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">filter</span>(</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb1-16"><a href="#cb1-16"></a>      ARM,</span>
+<span id="cb1-17"><a href="#cb1-17"></a>      <span class="at">CTRL =</span> <span class="st">"B: Placebo"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    ),</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    <span class="at">AGE_BIN =</span> <span class="fu">cut_quantile_bins</span>(AGE, <span class="at">probs =</span> AGE_probs),</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="at">BMRKR2 =</span> <span class="fu">fct_explicit_na_if</span>(BMRKR2, BEP01FL <span class="sc">==</span> <span class="st">"N"</span>),</span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="at">BMRKR2_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb1-23"><a href="#cb1-23"></a>      BMRKR2,</span>
+<span id="cb1-24"><a href="#cb1-24"></a>      <span class="at">High =</span> <span class="st">"HIGH"</span>,</span>
+<span id="cb1-25"><a href="#cb1-25"></a>      <span class="at">Low =</span> <span class="fu">c</span>(<span class="st">"MEDIUM"</span>, <span class="st">"LOW"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26"></a>    )</span>
+<span id="cb1-27"><a href="#cb1-27"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb1-29"><a href="#cb1-29"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30"></a>    <span class="at">BMRKR2_BIN =</span> <span class="st">"Biomarker (Binary)"</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>We create a <code>tables_all()</code> helper function first which creates a subtable with resulting statistics as e.g.&nbsp;in <a href="../graphs/sfg01.html">SFG1</a> for each subgroup of interest.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-2_2d1f28766b4399fbd7c0b856d3621368">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>tables_all <span class="ot">&lt;-</span> <span class="cf">function</span>(filter_var, filter_condition, sub_var) {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  dataset <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">filter</span>(<span class="sc">!!</span><span class="fu">as.name</span>(filter_var) <span class="sc">==</span> filter_condition)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(dataset) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="fu">stop</span>(<span class="fu">paste</span>(<span class="st">"Subset"</span>, filter_var, <span class="st">"=="</span>, filter_condition, <span class="st">"is empty"</span>))</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  }</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  tbl <span class="ot">&lt;-</span> <span class="fu">extract_survival_subgroups</span>(</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb2-9"><a href="#cb2-9"></a>      <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>      <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11"></a>      <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>      <span class="at">subgroups =</span> sub_var</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    ),</span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="at">label_all =</span> <span class="st">"ITT"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="at">data =</span> dataset</span>
+<span id="cb2-16"><a href="#cb2-16"></a>  )</span>
+<span id="cb2-17"><a href="#cb2-17"></a>  <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="fu">tabulate_survival_subgroups</span>(</span>
+<span id="cb2-19"><a href="#cb2-19"></a>      <span class="at">df =</span> tbl,</span>
+<span id="cb2-20"><a href="#cb2-20"></a>      <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot_events"</span>, <span class="st">"n"</span>, <span class="st">"n_events"</span>, <span class="st">"median"</span>, <span class="st">"hr"</span>, <span class="st">"ci"</span>),</span>
+<span id="cb2-21"><a href="#cb2-21"></a>      <span class="at">time_unit =</span> dataset<span class="sc">$</span>AVALU[<span class="dv">1</span>]</span>
+<span id="cb2-22"><a href="#cb2-22"></a>    )</span>
+<span id="cb2-23"><a href="#cb2-23"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Then we can call this helper function on the subsets we are interested in and have prepared in the above data setup chunk. Note that e.g.&nbsp;the levels for <code>AGE_BIN</code> mentioned in the <code>filter_condition</code> argument need to be aligned with the <code>AGE_probs</code> cutoff(s) specified above. Otherwise the subset might be empty and an according error message is shown.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-3_f1080c6a661d1250fd0a35634d96fa7b">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"F"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"M"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"[0%,50%]"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>),</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"(50%,100%]"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>We can then add subtitles for each subtable, <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> them together and produce the forest plot using the <code>g_forest()</code> function. Similarly as in <a href="../graphs/sfg03.html">SFG3</a> we need to specify the <code>col_x</code>, <code>col_y</code> and <code>forest_header</code> arguments for <code>g_forest()</code> by recovering them from one of the original tables.</p>
+<p>For adding subtitles we use a small helper function:</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-4_ea3af95ae65e302471e994c3d4b6523a">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>add_subtitle <span class="ot">&lt;-</span> <span class="cf">function</span>(sub_tab, sub_title) {</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">label_at_path</span>(sub_tab, <span class="at">path =</span> <span class="fu">row_paths</span>(sub_tab)[[<span class="dv">1</span>]][<span class="dv">1</span>]) <span class="ot">&lt;-</span> sub_title</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  sub_tab</span>
+<span id="cb4-4"><a href="#cb4-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>So we can use this now:</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-5_c59bec6a3f43a66b177454acaf24454b">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb5-2"><a href="#cb5-2"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"SEX = F"</span>),</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"SEX = M"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = [0%,50%]"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">4</span>]], <span class="st">"AGE_BIN = (50%,100%]"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a>)</span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="fu">g_forest</span>(</span>
+<span id="cb5-9"><a href="#cb5-9"></a>  result,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb5-11"><a href="#cb5-11"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb5-12"><a href="#cb5-12"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb5-13"><a href="#cb5-13"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb5-14"><a href="#cb5-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="sfg05_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>The main difference here is that we ensure that <code>col_info</code> is aligned across all subtables before using <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> to combine subtables. (Generally this is worth trying out if the <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> does not work out of the box to combine subtables.)</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-6_5293e3cbd6204fc36c7f231a4e2dc68e">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"High"</span>, <span class="at">sub_var =</span> <span class="st">"SEX"</span>),</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"Low"</span>, <span class="at">sub_var =</span> <span class="st">"SEX"</span>),</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"High"</span>, <span class="at">sub_var =</span> <span class="st">"AGE_BIN"</span>),</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"Low"</span>, <span class="at">sub_var =</span> <span class="st">"AGE_BIN"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a>)</span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="fu">col_info</span>(tables_list[[<span class="dv">2</span>]]) <span class="ot">&lt;-</span> <span class="fu">col_info</span>(tables_list[[<span class="dv">1</span>]])</span>
+<span id="cb6-8"><a href="#cb6-8"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"BMRKR2_BIN = High"</span>),</span>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"BMRKR2_BIN = Low"</span>),</span>
+<span id="cb6-11"><a href="#cb6-11"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"BMRKR2_BIN = High"</span>),</span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">4</span>]], <span class="st">"BMRKR2_BIN = Low"</span>)</span>
+<span id="cb6-13"><a href="#cb6-13"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>We can now produce the forest plot using the <code>g_forest()</code> function.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-7_46b29a8ac96bca6416e5ce84daddf9df">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">g_forest</span>(</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  result,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="sfg05_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="1440"></p>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>We use the same <code>tables_all()</code> function above and combine all subtables using <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> to tabulate statistics to be able to use as an input for forest plot.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-8_47da082b437794fbed7a23c54c6f537e">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"F"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>)),</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"M"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>)),</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"[0%,50%]"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>)),</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"(50%,100%]"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>))</span>
+<span id="cb8-6"><a href="#cb8-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>We can now produce the forest plot using the <code>g_forest()</code> function.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-9_f3b550835fc7d9420c06f4460bd8c208">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb9-2"><a href="#cb9-2"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"SEX = F"</span>),</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"SEX = M"</span>),</span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = [0%,50%]"</span>),</span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">4</span>]], <span class="st">"AGE_BIN = (50%,100%]"</span>)</span>
+<span id="cb9-7"><a href="#cb9-7"></a>)</span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="fu">g_forest</span>(</span>
+<span id="cb9-9"><a href="#cb9-9"></a>  result,</span>
+<span id="cb9-10"><a href="#cb9-10"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb9-11"><a href="#cb9-11"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb9-12"><a href="#cb9-12"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb9-13"><a href="#cb9-13"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb9-14"><a href="#cb9-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="sfg05_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="1440"></p>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>First, we derive a new variable <code>AGE_BIN2</code> with three bins for age, in a similar way as we derived <code>AGE_BIN</code> above. We then use the same <code>tables_all()</code> function above and combine all subtables using <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> to tabulate statistics to be able to use as an input for forest plot.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-10_50f021179cbe5f64e79c1736694875bf">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>AGE_probs2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.33</span>, <span class="fl">0.66</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>adtte <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">mutate</span>(<span class="at">AGE_BIN2 =</span> <span class="fu">cut_quantile_bins</span>(AGE, <span class="at">probs =</span> AGE_probs2))</span>
+<span id="cb10-5"><a href="#cb10-5"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"[0%,33%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>),</span>
+<span id="cb10-7"><a href="#cb10-7"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"(33%,66%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>),</span>
+<span id="cb10-8"><a href="#cb10-8"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"(66%,100%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>We can now produce the forest plot using the <code>g_forest()</code> function.</p>
+<div class="cell" data-hash="sfg05_cache/html/unnamed-chunk-11_6d225dc26e77707b0dc6b9ef9850eb2e">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb11-2"><a href="#cb11-2"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"AGE_BIN2 = [0%,33%]"</span>),</span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"AGE_BIN2 = (33%,66%]"</span>),</span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = (66%,100%]"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6"></a>)</span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="fu">g_forest</span>(</span>
+<span id="cb11-8"><a href="#cb11-8"></a>  result,</span>
+<span id="cb11-9"><a href="#cb11-9"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb11-10"><a href="#cb11-10"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb11-12"><a href="#cb11-12"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb11-13"><a href="#cb11-13"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="sfg05_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="1440"></p>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell" data-hash="sfg05_cache/html/sessioninfo_8227a0869cbfde56cabaebe80f7b6950">
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.2.2 (2022-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.2 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.2           tern_0.8.1.9012       rtables_0.6.0.3      
+[4] magrittr_2.0.3        formatters_0.4.1.9002
+
+loaded via a namespace (and not attached):
+ [1] compiler_4.2.2    pillar_1.9.0      forcats_1.0.0     tools_4.2.2      
+ [5] digest_0.6.31     lattice_0.21-8    jsonlite_1.8.4    evaluate_0.21    
+ [9] lifecycle_1.0.3   tibble_3.2.1      gtable_0.3.3      checkmate_2.2.0  
+[13] pkgconfig_2.0.3   rlang_1.1.1       Matrix_1.5-4      cli_3.6.1        
+[17] yaml_2.3.7        xfun_0.39         fastmap_1.1.1     knitr_1.42       
+[21] generics_0.1.3    vctrs_0.6.2       htmlwidgets_1.6.2 grid_4.2.2       
+[25] tidyselect_1.2.0  glue_1.6.2        R6_2.5.1          fansi_1.0.4      
+[29] Rdpack_2.4        survival_3.5-5    rmarkdown_2.21    scda_0.1.6.9000  
+[33] ggplot2_3.4.2     purrr_1.0.1       tidyr_1.3.0       codetools_0.2-19 
+[37] splines_4.2.2     backports_1.4.1   scales_1.2.1      htmltools_0.5.5  
+[41] rbibutils_2.2.13  colorspace_2.1-0  utf8_1.2.3        munsell_0.5.0    
+[45] broom_1.0.4      </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
+      <a href="../graphs/sfg04.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">SFG4</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../graphs/sfg06.html" class="pagination-link">
+        <span class="nav-page-text">SFG6</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> SFG5</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="an">subtitle:</span><span class="co"> Survival Forest Graphs Comparing on Subgroups</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co">---</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6"></a>------------------------------------------------------------------------</span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-8"><a href="#cb14-8"></a>::: panel-tabset</span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="fu">## Setup</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a>We prepare the data similarly as in <span class="co">[</span><span class="ot">SFG1</span><span class="co">](../graphs/sfg01.qmd)</span>.</span>
+<span id="cb14-12"><a href="#cb14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="fu">library</span>(tern)</span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-16"><a href="#cb14-16"></a></span>
+<span id="cb14-17"><a href="#cb14-17"></a>AGE_probs <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a></span>
+<span id="cb14-19"><a href="#cb14-19"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a>  <span class="fu">filter</span>(</span>
+<span id="cb14-22"><a href="#cb14-22"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-25"><a href="#cb14-25"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb14-26"><a href="#cb14-26"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb14-27"><a href="#cb14-27"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb14-28"><a href="#cb14-28"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb14-29"><a href="#cb14-29"></a>      ARM,</span>
+<span id="cb14-30"><a href="#cb14-30"></a>      <span class="at">CTRL =</span> <span class="st">"B: Placebo"</span>,</span>
+<span id="cb14-31"><a href="#cb14-31"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb14-32"><a href="#cb14-32"></a>    ),</span>
+<span id="cb14-33"><a href="#cb14-33"></a>    <span class="at">AGE_BIN =</span> <span class="fu">cut_quantile_bins</span>(AGE, <span class="at">probs =</span> AGE_probs),</span>
+<span id="cb14-34"><a href="#cb14-34"></a>    <span class="at">BMRKR2 =</span> <span class="fu">fct_explicit_na_if</span>(BMRKR2, BEP01FL <span class="sc">==</span> <span class="st">"N"</span>),</span>
+<span id="cb14-35"><a href="#cb14-35"></a>    <span class="at">BMRKR2_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb14-36"><a href="#cb14-36"></a>      BMRKR2,</span>
+<span id="cb14-37"><a href="#cb14-37"></a>      <span class="at">High =</span> <span class="st">"HIGH"</span>,</span>
+<span id="cb14-38"><a href="#cb14-38"></a>      <span class="at">Low =</span> <span class="fu">c</span>(<span class="st">"MEDIUM"</span>, <span class="st">"LOW"</span>)</span>
+<span id="cb14-39"><a href="#cb14-39"></a>    )</span>
+<span id="cb14-40"><a href="#cb14-40"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-41"><a href="#cb14-41"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb14-42"><a href="#cb14-42"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
+<span id="cb14-43"><a href="#cb14-43"></a>    <span class="at">BMRKR2_BIN =</span> <span class="st">"Biomarker (Binary)"</span></span>
+<span id="cb14-44"><a href="#cb14-44"></a>  )</span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="in">```</span></span>
+<span id="cb14-46"><a href="#cb14-46"></a></span>
+<span id="cb14-47"><a href="#cb14-47"></a><span class="fu">## Standard Plot</span></span>
+<span id="cb14-48"><a href="#cb14-48"></a></span>
+<span id="cb14-49"><a href="#cb14-49"></a>We create a <span class="in">`tables_all()`</span> helper function first which creates a subtable with resulting statistics as e.g. in <span class="co">[</span><span class="ot">SFG1</span><span class="co">](../graphs/sfg01.qmd)</span> for each subgroup of interest.</span>
+<span id="cb14-50"><a href="#cb14-50"></a></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="in">```{r}</span></span>
+<span id="cb14-54"><a href="#cb14-54"></a>tables_all <span class="ot">&lt;-</span> <span class="cf">function</span>(filter_var, filter_condition, sub_var) {</span>
+<span id="cb14-55"><a href="#cb14-55"></a>  dataset <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a>    <span class="fu">filter</span>(<span class="sc">!!</span><span class="fu">as.name</span>(filter_var) <span class="sc">==</span> filter_condition)</span>
+<span id="cb14-57"><a href="#cb14-57"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(dataset) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb14-58"><a href="#cb14-58"></a>    <span class="fu">stop</span>(<span class="fu">paste</span>(<span class="st">"Subset"</span>, filter_var, <span class="st">"=="</span>, filter_condition, <span class="st">"is empty"</span>))</span>
+<span id="cb14-59"><a href="#cb14-59"></a>  }</span>
+<span id="cb14-60"><a href="#cb14-60"></a>  tbl <span class="ot">&lt;-</span> <span class="fu">extract_survival_subgroups</span>(</span>
+<span id="cb14-61"><a href="#cb14-61"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb14-62"><a href="#cb14-62"></a>      <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb14-63"><a href="#cb14-63"></a>      <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb14-64"><a href="#cb14-64"></a>      <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb14-65"><a href="#cb14-65"></a>      <span class="at">subgroups =</span> sub_var</span>
+<span id="cb14-66"><a href="#cb14-66"></a>    ),</span>
+<span id="cb14-67"><a href="#cb14-67"></a>    <span class="at">label_all =</span> <span class="st">"ITT"</span>,</span>
+<span id="cb14-68"><a href="#cb14-68"></a>    <span class="at">data =</span> dataset</span>
+<span id="cb14-69"><a href="#cb14-69"></a>  )</span>
+<span id="cb14-70"><a href="#cb14-70"></a>  <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb14-71"><a href="#cb14-71"></a>    <span class="fu">tabulate_survival_subgroups</span>(</span>
+<span id="cb14-72"><a href="#cb14-72"></a>      <span class="at">df =</span> tbl,</span>
+<span id="cb14-73"><a href="#cb14-73"></a>      <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot_events"</span>, <span class="st">"n"</span>, <span class="st">"n_events"</span>, <span class="st">"median"</span>, <span class="st">"hr"</span>, <span class="st">"ci"</span>),</span>
+<span id="cb14-74"><a href="#cb14-74"></a>      <span class="at">time_unit =</span> dataset<span class="sc">$</span>AVALU[<span class="dv">1</span>]</span>
+<span id="cb14-75"><a href="#cb14-75"></a>    )</span>
+<span id="cb14-76"><a href="#cb14-76"></a>}</span>
+<span id="cb14-77"><a href="#cb14-77"></a><span class="in">```</span></span>
+<span id="cb14-78"><a href="#cb14-78"></a></span>
+<span id="cb14-79"><a href="#cb14-79"></a>Then we can call this helper function on the subsets we are interested in and have prepared in the above data setup chunk.</span>
+<span id="cb14-80"><a href="#cb14-80"></a>Note that e.g. the levels for <span class="in">`AGE_BIN`</span> mentioned in the <span class="in">`filter_condition`</span> argument need to be aligned with the <span class="in">`AGE_probs`</span> cutoff(s) specified above.</span>
+<span id="cb14-81"><a href="#cb14-81"></a>Otherwise the subset might be empty and an according error message is shown.</span>
+<span id="cb14-82"><a href="#cb14-82"></a></span>
+<span id="cb14-85"><a href="#cb14-85"></a><span class="in">```{r}</span></span>
+<span id="cb14-86"><a href="#cb14-86"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb14-87"><a href="#cb14-87"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"F"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>),</span>
+<span id="cb14-88"><a href="#cb14-88"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"M"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>),</span>
+<span id="cb14-89"><a href="#cb14-89"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"[0%,50%]"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>),</span>
+<span id="cb14-90"><a href="#cb14-90"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"(50%,100%]"</span>, <span class="at">sub_var =</span> <span class="st">"BEP01FL"</span>)</span>
+<span id="cb14-91"><a href="#cb14-91"></a>)</span>
+<span id="cb14-92"><a href="#cb14-92"></a><span class="in">```</span></span>
+<span id="cb14-93"><a href="#cb14-93"></a></span>
+<span id="cb14-94"><a href="#cb14-94"></a>We can then add subtitles for each subtable, <span class="in">`rbind()`</span> them together and produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb14-95"><a href="#cb14-95"></a>Similarly as in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../graphs/sfg03.qmd)</span> we need to specify the <span class="in">`col_x`</span>, <span class="in">`col_y`</span> and <span class="in">`forest_header`</span> arguments for <span class="in">`g_forest()`</span> by recovering them from one of the original tables.</span>
+<span id="cb14-96"><a href="#cb14-96"></a></span>
+<span id="cb14-97"><a href="#cb14-97"></a>For adding subtitles we use a small helper function:</span>
+<span id="cb14-98"><a href="#cb14-98"></a></span>
+<span id="cb14-101"><a href="#cb14-101"></a><span class="in">```{r}</span></span>
+<span id="cb14-102"><a href="#cb14-102"></a>add_subtitle <span class="ot">&lt;-</span> <span class="cf">function</span>(sub_tab, sub_title) {</span>
+<span id="cb14-103"><a href="#cb14-103"></a>  <span class="fu">label_at_path</span>(sub_tab, <span class="at">path =</span> <span class="fu">row_paths</span>(sub_tab)[[<span class="dv">1</span>]][<span class="dv">1</span>]) <span class="ot">&lt;-</span> sub_title</span>
+<span id="cb14-104"><a href="#cb14-104"></a>  sub_tab</span>
+<span id="cb14-105"><a href="#cb14-105"></a>}</span>
+<span id="cb14-106"><a href="#cb14-106"></a><span class="in">```</span></span>
+<span id="cb14-107"><a href="#cb14-107"></a></span>
+<span id="cb14-108"><a href="#cb14-108"></a>So we can use this now:</span>
+<span id="cb14-109"><a href="#cb14-109"></a></span>
+<span id="cb14-110"><a href="#cb14-110"></a><span class="in">```{r, fig.width = 15, fig.height = 7}</span></span>
+<span id="cb14-111"><a href="#cb14-111"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb14-112"><a href="#cb14-112"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb14-113"><a href="#cb14-113"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"SEX = F"</span>),</span>
+<span id="cb14-114"><a href="#cb14-114"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"SEX = M"</span>),</span>
+<span id="cb14-115"><a href="#cb14-115"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = [0%,50%]"</span>),</span>
+<span id="cb14-116"><a href="#cb14-116"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">4</span>]], <span class="st">"AGE_BIN = (50%,100%]"</span>)</span>
+<span id="cb14-117"><a href="#cb14-117"></a>)</span>
+<span id="cb14-118"><a href="#cb14-118"></a><span class="fu">g_forest</span>(</span>
+<span id="cb14-119"><a href="#cb14-119"></a>  result,</span>
+<span id="cb14-120"><a href="#cb14-120"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb14-121"><a href="#cb14-121"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb14-122"><a href="#cb14-122"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb14-123"><a href="#cb14-123"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb14-124"><a href="#cb14-124"></a>)</span>
+<span id="cb14-125"><a href="#cb14-125"></a><span class="in">```</span></span>
+<span id="cb14-126"><a href="#cb14-126"></a></span>
+<span id="cb14-127"><a href="#cb14-127"></a><span class="fu">## Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups (SFG5A)</span></span>
+<span id="cb14-128"><a href="#cb14-128"></a></span>
+<span id="cb14-129"><a href="#cb14-129"></a>The main difference here is that we ensure that <span class="in">`col_info`</span> is aligned across all subtables before using <span class="in">`rbind()`</span> to combine subtables.</span>
+<span id="cb14-130"><a href="#cb14-130"></a>(Generally this is worth trying out if the <span class="in">`rbind()`</span> does not work out of the box to combine subtables.)</span>
+<span id="cb14-131"><a href="#cb14-131"></a></span>
+<span id="cb14-134"><a href="#cb14-134"></a><span class="in">```{r}</span></span>
+<span id="cb14-135"><a href="#cb14-135"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb14-136"><a href="#cb14-136"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"High"</span>, <span class="at">sub_var =</span> <span class="st">"SEX"</span>),</span>
+<span id="cb14-137"><a href="#cb14-137"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"Low"</span>, <span class="at">sub_var =</span> <span class="st">"SEX"</span>),</span>
+<span id="cb14-138"><a href="#cb14-138"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"High"</span>, <span class="at">sub_var =</span> <span class="st">"AGE_BIN"</span>),</span>
+<span id="cb14-139"><a href="#cb14-139"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"BMRKR2_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"Low"</span>, <span class="at">sub_var =</span> <span class="st">"AGE_BIN"</span>)</span>
+<span id="cb14-140"><a href="#cb14-140"></a>)</span>
+<span id="cb14-141"><a href="#cb14-141"></a><span class="fu">col_info</span>(tables_list[[<span class="dv">2</span>]]) <span class="ot">&lt;-</span> <span class="fu">col_info</span>(tables_list[[<span class="dv">1</span>]])</span>
+<span id="cb14-142"><a href="#cb14-142"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb14-143"><a href="#cb14-143"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"BMRKR2_BIN = High"</span>),</span>
+<span id="cb14-144"><a href="#cb14-144"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"BMRKR2_BIN = Low"</span>),</span>
+<span id="cb14-145"><a href="#cb14-145"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"BMRKR2_BIN = High"</span>),</span>
+<span id="cb14-146"><a href="#cb14-146"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">4</span>]], <span class="st">"BMRKR2_BIN = Low"</span>)</span>
+<span id="cb14-147"><a href="#cb14-147"></a>)</span>
+<span id="cb14-148"><a href="#cb14-148"></a><span class="in">```</span></span>
+<span id="cb14-149"><a href="#cb14-149"></a></span>
+<span id="cb14-150"><a href="#cb14-150"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb14-151"><a href="#cb14-151"></a></span>
+<span id="cb14-152"><a href="#cb14-152"></a><span class="in">```{r, fig.width = 15, fig.height = 7}</span></span>
+<span id="cb14-153"><a href="#cb14-153"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb14-154"><a href="#cb14-154"></a><span class="fu">g_forest</span>(</span>
+<span id="cb14-155"><a href="#cb14-155"></a>  result,</span>
+<span id="cb14-156"><a href="#cb14-156"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb14-157"><a href="#cb14-157"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb14-158"><a href="#cb14-158"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb14-159"><a href="#cb14-159"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb14-160"><a href="#cb14-160"></a>)</span>
+<span id="cb14-161"><a href="#cb14-161"></a><span class="in">```</span></span>
+<span id="cb14-162"><a href="#cb14-162"></a></span>
+<span id="cb14-163"><a href="#cb14-163"></a><span class="fu">## Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups, including ITT (SFG5B)</span></span>
+<span id="cb14-164"><a href="#cb14-164"></a></span>
+<span id="cb14-165"><a href="#cb14-165"></a>We use the same <span class="in">`tables_all()`</span> function above and combine all subtables using <span class="in">`rbind()`</span> to tabulate statistics to be able to use as an input for forest plot.</span>
+<span id="cb14-166"><a href="#cb14-166"></a></span>
+<span id="cb14-169"><a href="#cb14-169"></a><span class="in">```{r}</span></span>
+<span id="cb14-170"><a href="#cb14-170"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb14-171"><a href="#cb14-171"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"F"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>)),</span>
+<span id="cb14-172"><a href="#cb14-172"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"SEX"</span>, <span class="at">filter_condition =</span> <span class="st">"M"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>)),</span>
+<span id="cb14-173"><a href="#cb14-173"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"[0%,50%]"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>)),</span>
+<span id="cb14-174"><a href="#cb14-174"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN"</span>, <span class="at">filter_condition =</span> <span class="st">"(50%,100%]"</span>, <span class="at">sub_var =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"BMRKR2_BIN"</span>))</span>
+<span id="cb14-175"><a href="#cb14-175"></a>)</span>
+<span id="cb14-176"><a href="#cb14-176"></a><span class="in">```</span></span>
+<span id="cb14-177"><a href="#cb14-177"></a></span>
+<span id="cb14-178"><a href="#cb14-178"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb14-179"><a href="#cb14-179"></a></span>
+<span id="cb14-180"><a href="#cb14-180"></a><span class="in">```{r, fig.width = 15, fig.height = 10}</span></span>
+<span id="cb14-181"><a href="#cb14-181"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb14-182"><a href="#cb14-182"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb14-183"><a href="#cb14-183"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"SEX = F"</span>),</span>
+<span id="cb14-184"><a href="#cb14-184"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"SEX = M"</span>),</span>
+<span id="cb14-185"><a href="#cb14-185"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = [0%,50%]"</span>),</span>
+<span id="cb14-186"><a href="#cb14-186"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">4</span>]], <span class="st">"AGE_BIN = (50%,100%]"</span>)</span>
+<span id="cb14-187"><a href="#cb14-187"></a>)</span>
+<span id="cb14-188"><a href="#cb14-188"></a><span class="fu">g_forest</span>(</span>
+<span id="cb14-189"><a href="#cb14-189"></a>  result,</span>
+<span id="cb14-190"><a href="#cb14-190"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb14-191"><a href="#cb14-191"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb14-192"><a href="#cb14-192"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb14-193"><a href="#cb14-193"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb14-194"><a href="#cb14-194"></a>)</span>
+<span id="cb14-195"><a href="#cb14-195"></a><span class="in">```</span></span>
+<span id="cb14-196"><a href="#cb14-196"></a></span>
+<span id="cb14-197"><a href="#cb14-197"></a><span class="fu">## Survival Forest Graph for Subgroups Defined by Multiple Bins of Continuous Variable (SFG5C)</span></span>
+<span id="cb14-198"><a href="#cb14-198"></a></span>
+<span id="cb14-199"><a href="#cb14-199"></a>First, we derive a new variable <span class="in">`AGE_BIN2`</span> with three bins for age, in a similar way as we derived <span class="in">`AGE_BIN`</span> above.</span>
+<span id="cb14-200"><a href="#cb14-200"></a>We then use the same <span class="in">`tables_all()`</span> function above and combine all subtables using <span class="in">`rbind()`</span> to tabulate statistics to be able to use as an input for forest plot.</span>
+<span id="cb14-201"><a href="#cb14-201"></a></span>
+<span id="cb14-202"><a href="#cb14-202"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb14-203"><a href="#cb14-203"></a>AGE_probs2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.33</span>, <span class="fl">0.66</span>)</span>
+<span id="cb14-204"><a href="#cb14-204"></a></span>
+<span id="cb14-205"><a href="#cb14-205"></a>adtte <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
+<span id="cb14-206"><a href="#cb14-206"></a>  <span class="fu">mutate</span>(<span class="at">AGE_BIN2 =</span> <span class="fu">cut_quantile_bins</span>(AGE, <span class="at">probs =</span> AGE_probs2))</span>
+<span id="cb14-207"><a href="#cb14-207"></a>tables_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb14-208"><a href="#cb14-208"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"[0%,33%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>),</span>
+<span id="cb14-209"><a href="#cb14-209"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"(33%,66%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>),</span>
+<span id="cb14-210"><a href="#cb14-210"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"(66%,100%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>)</span>
+<span id="cb14-211"><a href="#cb14-211"></a>)</span>
+<span id="cb14-212"><a href="#cb14-212"></a><span class="in">```</span></span>
+<span id="cb14-213"><a href="#cb14-213"></a></span>
+<span id="cb14-214"><a href="#cb14-214"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb14-215"><a href="#cb14-215"></a></span>
+<span id="cb14-216"><a href="#cb14-216"></a><span class="in">```{r, fig.width = 15, fig.height = 6}</span></span>
+<span id="cb14-217"><a href="#cb14-217"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb14-218"><a href="#cb14-218"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb14-219"><a href="#cb14-219"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"AGE_BIN2 = [0%,33%]"</span>),</span>
+<span id="cb14-220"><a href="#cb14-220"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"AGE_BIN2 = (33%,66%]"</span>),</span>
+<span id="cb14-221"><a href="#cb14-221"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = (66%,100%]"</span>)</span>
+<span id="cb14-222"><a href="#cb14-222"></a>)</span>
+<span id="cb14-223"><a href="#cb14-223"></a><span class="fu">g_forest</span>(</span>
+<span id="cb14-224"><a href="#cb14-224"></a>  result,</span>
+<span id="cb14-225"><a href="#cb14-225"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb14-226"><a href="#cb14-226"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb14-227"><a href="#cb14-227"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb14-228"><a href="#cb14-228"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb14-229"><a href="#cb14-229"></a>)</span>
+<span id="cb14-230"><a href="#cb14-230"></a><span class="in">```</span></span>
+<span id="cb14-231"><a href="#cb14-231"></a></span>
+<span id="cb14-232"><a href="#cb14-232"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
+<span id="cb14-233"><a href="#cb14-233"></a>:::</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
+    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

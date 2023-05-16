@@ -334,6 +334,42 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../graphs/sfg06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SFG6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../graphs/spg01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SPG1</span></a>
   </div>
@@ -376,7 +412,7 @@ cookieconsent.run({
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups. This is similar to <a href="../graphs/sfg04.qmd#L31">SFG04</a>.</p>
+<p>For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups. This is similar to <a href="../graphs/sfg04.html#L31">SFG04</a>.</p>
 <p>Similarly like in <a href="../graphs/rfg01.html">RFG1</a>.</p>
 <div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-1_0f76f28df7c678af53207260d83c89d5">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
@@ -404,7 +440,7 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>We define a vector of all cutpoints to use for a numeric biomarker (here <code>BMRKR1</code>).</p>
-<p>We <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> over this vector, each time generating a binary factor variable <code>BMRKR1_cut</code> and then tabulating the resulting statistics similar to <a href="../graphs/sfg04.qmd">SFG4</a>, this time including the treatment arms in the <code>subgroups</code> argument. Then we <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> all tables in the list together.</p>
+<p>We <code><a href="https://rdrr.io/r/base/lapply.html">lapply()</a></code> over this vector, each time generating a binary factor variable <code>BMRKR1_cut</code> and then tabulating the resulting statistics similar to <a href="../graphs/sfg04.html">SFG4</a>, this time including the treatment arms in the <code>subgroups</code> argument. Then we <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> all tables in the list together.</p>
 <div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-2_a7a022fa3eabe2e98b4c35f8240002b4">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># across arm ----</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>cutpoints <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">8</span>)</span>
@@ -464,7 +500,7 @@ Description of Planned Arm
   TRT                          61      13       13          100.0%      48       46          95.8%         &lt;0.01      (0.00, &gt;999.99)</code></pre>
 </div>
 </div>
-<p>We can now produce the forest plot using the <code>g_forest()</code> function. Similarly as in <a href="../graphs/sfg04.qmd">SFG4</a> we need to specify the <code>col_x</code>, <code>col_y</code> and <code>forest_header</code> arguments for <code>g_forest()</code> by recovering them from one of the original tables.</p>
+<p>We can now produce the forest plot using the <code>g_forest()</code> function. Similarly as in <a href="../graphs/sfg04.html">SFG4</a> we need to specify the <code>col_x</code>, <code>col_y</code> and <code>forest_header</code> arguments for <code>g_forest()</code> by recovering them from one of the original tables.</p>
 <div class="cell" data-hash="rfg03_cache/html/unnamed-chunk-4_fba3c533cb44c1591d229de14ed0438e">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>one_table <span class="ot">&lt;-</span> tables_all_cutpoints[[<span class="dv">1</span>]]</span>
 <span id="cb5-2"><a href="#cb5-2"></a>g2 <span class="ot">&lt;-</span> <span class="fu">g_forest</span>(</span>

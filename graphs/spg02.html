@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Biomarker Analysis Catalog - DG4</title>
+<title>Biomarker Analysis Catalog - SPG2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../graphs/kg01.html" rel="next">
-<link href="../graphs/dg03.html" rel="prev">
+<link href="../graphs/spg01.html" rel="prev">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -118,9 +117,9 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../assets/css/style.scss">
-<meta property="og:title" content="Biomarker Analysis Catalog - DG4">
-<meta property="og:description" content="Scatterplots of Two Numerical Variables">
-<meta property="og:image" content="https://insightsengineering.github.io/biomarker-catalog/graphs/dg04_files/figure-html/unnamed-chunk-2-1.png">
+<meta property="og:title" content="Biomarker Analysis Catalog - SPG2">
+<meta property="og:description" content="STEP Graphs for Response Outcome">
+<meta property="og:image" content="https://insightsengineering.github.io/biomarker-catalog/graphs/spg02_files/figure-html/unnamed-chunk-4-1.png">
 <meta property="og:site-name" content="Biomarker Analysis Catalog">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="2880">
@@ -161,7 +160,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../graphs/index.html">Graphs</a></li><li class="breadcrumb-item"><a href="../graphs/dg04.html">DG4</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../graphs/index.html">Graphs</a></li><li class="breadcrumb-item"><a href="../graphs/spg02.html">SPG2</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -262,7 +261,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../graphs/dg04.html" class="sidebar-item-text sidebar-link active">
+  <a href="../graphs/dg04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DG4</span></a>
   </div>
 </li>
@@ -340,7 +339,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../graphs/spg02.html" class="sidebar-item-text sidebar-link">
+  <a href="../graphs/spg02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">SPG2</span></a>
   </div>
 </li>
@@ -353,8 +352,8 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">DG4</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
-<p class="subtitle lead">Scatterplots of Two Numerical Variables</p>
+<div class="quarto-title-block"><div><h1 class="title">SPG2</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<p class="subtitle lead">STEP Graphs for Response Outcome</p>
 </div>
 
 
@@ -376,44 +375,76 @@ cookieconsent.run({
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>The graph below plots two continuous (biomarker) variables against each other.</p>
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the graph and will select the biomarker evaluable population with <code>BEP01FL</code>. The columns <code>AGE</code> and <code>BMRKR1</code> contain the biomarker values of interest on a continuous scale.</p>
-<div class="cell" data-hash="dg04_cache/html/unnamed-chunk-1_8414b18d84b10d5d9cf453eea78e7a8e">
+<p>We will use the <code>synthetic_cdisc_data$adrs</code> data set from the <code>scda</code> package to create the STEP response graph. We start by filtering the <code>adrs</code> data set for response evaluable patients and the response parameter of interest, creating a new logical variable encoding response (response patients should solely be CR patients), binarizing the <code>ARM</code> variable.</p>
+<div class="cell" data-hash="spg02_cache/html/unnamed-chunk-1_c939c11e2f82e4bfcd8e5336db7b50fe">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2.utils)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>adsl <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adsl <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">filter</span>(BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">filter</span>(PARAM <span class="sc">==</span> <span class="st">"Best Confirmed Overall Response by Investigator"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">is_rsp =</span> AVALC <span class="sc">==</span> <span class="st">"CR"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb1-11"><a href="#cb1-11"></a>      ARM,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb1-13"><a href="#cb1-13"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    )</span>
+<span id="cb1-15"><a href="#cb1-15"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Here is an example first on the original scale. Note that you may run into warning messages after producing the graph if the continuous variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(AGE, BMRKR1)</code>).</p>
-<div class="cell" data-hash="dg04_cache/html/unnamed-chunk-2_730e91d16dfd7ef0e055b79ea4e90a42">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adsl, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> BMRKR1)) <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>graph <span class="sc">+</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (Years)"</span>, <span class="at">y =</span> <span class="st">"Biomarker (Units)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We then perform with the <code>fit_rsp_step()</code> function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) logistic regression models for the response outcome within each of the percentile intervals of the age variable <code>AGE</code> defining the subgroups. The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e.&nbsp;the estimated odds ratios are for the comparison of the second level vs.&nbsp;the first one.</p>
+<p>In this example we fit the default model where a constant treatment effect is estimated in each of the subgroups that are created according to age quantiles.</p>
+<div class="cell" data-hash="spg02_cache/html/unnamed-chunk-2_9301a63e62542c79ca3b2980c7401d2d">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">response =</span> <span class="st">"is_rsp"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="at">biomarker =</span> <span class="st">"AGE"</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_rsp_step</span>(</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="at">variables =</span> vars,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="at">data =</span> adrs</span>
+<span id="cb2-11"><a href="#cb2-11"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>In this second example we fit instead a model with a linear age interaction term and we control the bandwidth (50% of data) of the STEP windows for the age variable.</p>
+<div class="cell" data-hash="spg02_cache/html/unnamed-chunk-3_509e2de602993d0d85afc7bdac60f018">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_rsp_step</span>(</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="at">variables =</span> vars,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="at">data =</span> adrs,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="at">control =</span> <span class="fu">c</span>(<span class="fu">control_logistic</span>(), <span class="fu">control_step</span>(<span class="at">degree =</span> <span class="dv">1</span>, <span class="at">bandwidth =</span> <span class="fl">0.5</span>))</span>
+<span id="cb3-5"><a href="#cb3-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Before we can plot the data, the <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code> method needs to be applied to the STEP result to obtain graph ready data. Thereafter with the <code>g_step()</code> function we can create a graph showing the estimated odds ratio along the continuous age subgroups.</p>
+<div class="cell" data-hash="spg02_cache/html/unnamed-chunk-4_44e6c40715765f6cdce0fe2eea305e25">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>step_data <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(step_matrix)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>graph <span class="ot">&lt;-</span> <span class="fu">g_step</span>(step_data)</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a>graph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="dg04_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
+<p><img src="spg02_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
-<p>We can also plot it on a log scale.</p>
-<div class="cell" data-hash="dg04_cache/html/unnamed-chunk-3_4104378e83c3fa225c8128fe0da67ed0">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>graph <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (Years)"</span>, <span class="at">y =</span> <span class="st">"Biomarker (Log(Units))"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can also add a reference line and change the axis limits.</p>
+<div class="cell" data-hash="spg02_cache/html/unnamed-chunk-5_2a781221ccc3ab1dacf75974bc70ec24">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>graph <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">1</span>), <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="dg04_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
+<p><img src="spg02_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg04_cache/html/sessioninfo_6b526f739ed64f7e4ca7b60436108750">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="spg02_cache/html/sessioninfo_0ee74437a2ed517a3679cb14c7889168">
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -863,65 +894,96 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
-      <a href="../graphs/dg03.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">DG3</span>
+      <a href="../graphs/spg01.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">SPG1</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../graphs/kg01.html" class="pagination-link">
-        <span class="nav-page-text">KG1</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> DG4</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="an">subtitle:</span><span class="co"> Scatterplots of Two Numerical Variables</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co">---</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a>------------------------------------------------------------------------</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a>::: panel-tabset</span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="fu">## Setup</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11"></a>The graph below plots two continuous (biomarker) variables against each other.</span>
-<span id="cb6-12"><a href="#cb6-12"></a></span>
-<span id="cb6-13"><a href="#cb6-13"></a>We will use the <span class="in">`synthetic_cdisc_data$adsl`</span> data set from the <span class="in">`scda`</span> package to illustrate the graph and will select the biomarker evaluable population with <span class="in">`BEP01FL`</span>.</span>
-<span id="cb6-14"><a href="#cb6-14"></a>The columns <span class="in">`AGE`</span> and <span class="in">`BMRKR1`</span> contain the biomarker values of interest on a continuous scale.</span>
-<span id="cb6-15"><a href="#cb6-15"></a></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="fu">library</span>(tern)</span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="fu">library</span>(ggplot2.utils)</span>
-<span id="cb6-19"><a href="#cb6-19"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb6-20"><a href="#cb6-20"></a></span>
-<span id="cb6-21"><a href="#cb6-21"></a>adsl <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adsl <span class="sc">%&gt;%</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>  <span class="fu">filter</span>(BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>)</span>
-<span id="cb6-24"><a href="#cb6-24"></a><span class="in">```</span></span>
-<span id="cb6-25"><a href="#cb6-25"></a></span>
-<span id="cb6-26"><a href="#cb6-26"></a><span class="fu">## Standard Plot</span></span>
-<span id="cb6-27"><a href="#cb6-27"></a></span>
-<span id="cb6-28"><a href="#cb6-28"></a>Here is an example first on the original scale.</span>
-<span id="cb6-29"><a href="#cb6-29"></a>Note that you may run into warning messages after producing the graph if the continuous variable you want to analyze contains NAs.</span>
-<span id="cb6-30"><a href="#cb6-30"></a>To avoid these warning messages, you can use the <span class="in">`drop_na()`</span> function from <span class="in">`tidyr`</span> in the data manipulation step above to remove the NAs rows from the dataset (e.g <span class="in">`drop_na(AGE, BMRKR1)`</span>).</span>
-<span id="cb6-31"><a href="#cb6-31"></a></span>
-<span id="cb6-34"><a href="#cb6-34"></a><span class="in">```{r}</span></span>
-<span id="cb6-35"><a href="#cb6-35"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adsl, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> BMRKR1)) <span class="sc">+</span></span>
-<span id="cb6-36"><a href="#cb6-36"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb6-37"><a href="#cb6-37"></a></span>
-<span id="cb6-38"><a href="#cb6-38"></a>graph <span class="sc">+</span></span>
-<span id="cb6-39"><a href="#cb6-39"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (Years)"</span>, <span class="at">y =</span> <span class="st">"Biomarker (Units)"</span>)</span>
-<span id="cb6-40"><a href="#cb6-40"></a><span class="in">```</span></span>
-<span id="cb6-41"><a href="#cb6-41"></a></span>
-<span id="cb6-42"><a href="#cb6-42"></a>We can also plot it on a log scale.</span>
-<span id="cb6-43"><a href="#cb6-43"></a></span>
-<span id="cb6-46"><a href="#cb6-46"></a><span class="in">```{r}</span></span>
-<span id="cb6-47"><a href="#cb6-47"></a>graph <span class="sc">+</span></span>
-<span id="cb6-48"><a href="#cb6-48"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb6-49"><a href="#cb6-49"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (Years)"</span>, <span class="at">y =</span> <span class="st">"Biomarker (Log(Units))"</span>)</span>
-<span id="cb6-50"><a href="#cb6-50"></a><span class="in">```</span></span>
-<span id="cb6-51"><a href="#cb6-51"></a></span>
-<span id="cb6-52"><a href="#cb6-52"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb6-53"><a href="#cb6-53"></a>:::</span>
+<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> SPG2</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> STEP Graphs for Response Outcome</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">---</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>------------------------------------------------------------------------</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>::: panel-tabset</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">## Setup</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a></span>
+<span id="cb8-11"><a href="#cb8-11"></a>We will use the <span class="in">`synthetic_cdisc_data$adrs`</span> data set from the <span class="in">`scda`</span> package to create the STEP response graph.</span>
+<span id="cb8-12"><a href="#cb8-12"></a>We start by filtering the <span class="in">`adrs`</span> data set for response evaluable patients and the response parameter of interest, creating a new logical variable encoding response (response patients should solely be CR patients), binarizing the <span class="in">`ARM`</span> variable.</span>
+<span id="cb8-13"><a href="#cb8-13"></a></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="fu">library</span>(tern)</span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="fu">library</span>(ggplot2.utils)</span>
+<span id="cb8-17"><a href="#cb8-17"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-18"><a href="#cb8-18"></a></span>
+<span id="cb8-19"><a href="#cb8-19"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a>  <span class="fu">filter</span>(PARAM <span class="sc">==</span> <span class="st">"Best Confirmed Overall Response by Investigator"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-23"><a href="#cb8-23"></a>    <span class="at">is_rsp =</span> AVALC <span class="sc">==</span> <span class="st">"CR"</span>,</span>
+<span id="cb8-24"><a href="#cb8-24"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb8-25"><a href="#cb8-25"></a>      ARM,</span>
+<span id="cb8-26"><a href="#cb8-26"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb8-27"><a href="#cb8-27"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb8-28"><a href="#cb8-28"></a>    )</span>
+<span id="cb8-29"><a href="#cb8-29"></a>  )</span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="in">```</span></span>
+<span id="cb8-31"><a href="#cb8-31"></a></span>
+<span id="cb8-32"><a href="#cb8-32"></a><span class="fu">## Standard Plot</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a></span>
+<span id="cb8-34"><a href="#cb8-34"></a>We then perform with the <span class="in">`fit_rsp_step()`</span> function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) logistic regression models for the response outcome within each of the percentile intervals of the age variable <span class="in">`AGE`</span> defining the subgroups.</span>
+<span id="cb8-35"><a href="#cb8-35"></a>The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e. the estimated odds ratios are for the comparison of the second level vs. the first one.</span>
+<span id="cb8-36"><a href="#cb8-36"></a></span>
+<span id="cb8-37"><a href="#cb8-37"></a>In this example we fit the default model where a constant treatment effect is estimated in each of the subgroups that are created according to age quantiles.</span>
+<span id="cb8-38"><a href="#cb8-38"></a></span>
+<span id="cb8-41"><a href="#cb8-41"></a><span class="in">```{r}</span></span>
+<span id="cb8-42"><a href="#cb8-42"></a>vars <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb8-43"><a href="#cb8-43"></a>  <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb8-44"><a href="#cb8-44"></a>  <span class="at">response =</span> <span class="st">"is_rsp"</span>,</span>
+<span id="cb8-45"><a href="#cb8-45"></a>  <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb8-46"><a href="#cb8-46"></a>  <span class="at">biomarker =</span> <span class="st">"AGE"</span></span>
+<span id="cb8-47"><a href="#cb8-47"></a>)</span>
+<span id="cb8-48"><a href="#cb8-48"></a></span>
+<span id="cb8-49"><a href="#cb8-49"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_rsp_step</span>(</span>
+<span id="cb8-50"><a href="#cb8-50"></a>  <span class="at">variables =</span> vars,</span>
+<span id="cb8-51"><a href="#cb8-51"></a>  <span class="at">data =</span> adrs</span>
+<span id="cb8-52"><a href="#cb8-52"></a>)</span>
+<span id="cb8-53"><a href="#cb8-53"></a><span class="in">```</span></span>
+<span id="cb8-54"><a href="#cb8-54"></a></span>
+<span id="cb8-55"><a href="#cb8-55"></a>In this second example we fit instead a model with a linear age interaction term and we control the bandwidth (50% of data) of the STEP windows for the age variable.</span>
+<span id="cb8-56"><a href="#cb8-56"></a></span>
+<span id="cb8-59"><a href="#cb8-59"></a><span class="in">```{r}</span></span>
+<span id="cb8-60"><a href="#cb8-60"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_rsp_step</span>(</span>
+<span id="cb8-61"><a href="#cb8-61"></a>  <span class="at">variables =</span> vars,</span>
+<span id="cb8-62"><a href="#cb8-62"></a>  <span class="at">data =</span> adrs,</span>
+<span id="cb8-63"><a href="#cb8-63"></a>  <span class="at">control =</span> <span class="fu">c</span>(<span class="fu">control_logistic</span>(), <span class="fu">control_step</span>(<span class="at">degree =</span> <span class="dv">1</span>, <span class="at">bandwidth =</span> <span class="fl">0.5</span>))</span>
+<span id="cb8-64"><a href="#cb8-64"></a>)</span>
+<span id="cb8-65"><a href="#cb8-65"></a><span class="in">```</span></span>
+<span id="cb8-66"><a href="#cb8-66"></a></span>
+<span id="cb8-67"><a href="#cb8-67"></a>Before we can plot the data, the <span class="in">`broom::tidy()`</span> method needs to be applied to the STEP result to obtain graph ready data.</span>
+<span id="cb8-68"><a href="#cb8-68"></a>Thereafter with the <span class="in">`g_step()`</span> function we can create a graph showing the estimated odds ratio along the continuous age subgroups.</span>
+<span id="cb8-69"><a href="#cb8-69"></a></span>
+<span id="cb8-72"><a href="#cb8-72"></a><span class="in">```{r}</span></span>
+<span id="cb8-73"><a href="#cb8-73"></a>step_data <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(step_matrix)</span>
+<span id="cb8-74"><a href="#cb8-74"></a></span>
+<span id="cb8-75"><a href="#cb8-75"></a>graph <span class="ot">&lt;-</span> <span class="fu">g_step</span>(step_data)</span>
+<span id="cb8-76"><a href="#cb8-76"></a></span>
+<span id="cb8-77"><a href="#cb8-77"></a>graph</span>
+<span id="cb8-78"><a href="#cb8-78"></a><span class="in">```</span></span>
+<span id="cb8-79"><a href="#cb8-79"></a></span>
+<span id="cb8-80"><a href="#cb8-80"></a>We can also add a reference line and change the axis limits.</span>
+<span id="cb8-81"><a href="#cb8-81"></a></span>
+<span id="cb8-84"><a href="#cb8-84"></a><span class="in">```{r}</span></span>
+<span id="cb8-85"><a href="#cb8-85"></a>graph <span class="sc">+</span></span>
+<span id="cb8-86"><a href="#cb8-86"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">1</span>), <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb8-87"><a href="#cb8-87"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span>
+<span id="cb8-88"><a href="#cb8-88"></a><span class="in">```</span></span>
+<span id="cb8-89"><a href="#cb8-89"></a></span>
+<span id="cb8-90"><a href="#cb8-90"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
+<span id="cb8-91"><a href="#cb8-91"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

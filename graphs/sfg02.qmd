@@ -1,0 +1,247 @@
+---
+title: SFG2
+subtitle: Survival Forest Graphs for Overall Population and by Percentiles of Continuous Biomarker
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+We prepare the data similarly as in [SFG1](../graphs/sfg01.qmd).
+In particular we use again the `cut_quantile_bins()` function, here to obtain quartile bins of the continuous biomarker `BMRKR1`.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+BMRKR1_probs <- c(0.25, 0.5, 0.75)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS"
+  ) %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0,
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    BMRKR1 = ifelse(BEP01FL == "N", NA, BMRKR1),
+    BMRKR1_BIN = explicit_na(cut_quantile_bins(BMRKR1, BMRKR1_probs)),
+    BMRKR2 = fct_explicit_na_if(BMRKR2, BEP01FL == "N")
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR2 = "Biomarker (Categorical)",
+    BMRKR1_BIN = "Biomarker (Binned)"
+  )
+```
+
+## Standard Plot
+
+For the calculations, we start by getting the levels from `BMRKR1_BIN` which saves us typing them manually in the `groups_lists` definition.
+This definition is required here so that we can have overlapping subgroups.
+
+```{r}
+BMRKR1_BIN_levels <- levels(adtte$BMRKR1_BIN)
+
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  groups_lists = list(
+    BMRKR1_BIN = list(
+      "(25%,100%]" = BMRKR1_BIN_levels[2:4],
+      "(50%,100%]" = BMRKR1_BIN_levels[3:4],
+      "(75%,100%]" = BMRKR1_BIN_levels[4]
+    )
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function from `tern` based on this `result` table.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+## Survival Forest Graph for Overall Population and by Percentiles of Continuous Biomarker with "Less than Percentage" Cutoffs (SFG2A)
+
+With a different `groups_lists` definition we can also tabulate statistics for the "below than cutoff" grouped bins.
+
+```{r}
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  groups_lists = list(
+    BMRKR1_BIN = list(
+      "[0%,25%]" = BMRKR1_BIN_levels[1],
+      "[0%,50%]" = BMRKR1_BIN_levels[1:2],
+      "[0%,75%]" = BMRKR1_BIN_levels[1:3]
+    )
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+## Survival Forest Graph for Overall Population and by Continuous Biomarker with "Above and Below Percentage" Cutoffs (SFG2B)
+
+In this template we are looking for each percentage cutoff at above vs. below subgroups: So we just provide yet another `groups_lists` specification for the `BMRKR1_BIN` binned variable.
+
+```{r}
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  groups_lists = list(
+    BMRKR1_BIN = list(
+      "[0%, 25%]" = BMRKR1_BIN_levels[1],
+      "(25%, 100%]" = BMRKR1_BIN_levels[2:4],
+      "[0%, 50%]" = BMRKR1_BIN_levels[1:2],
+      "(50%, 100%]" = BMRKR1_BIN_levels[3:4],
+      "[0%, 75%]" = BMRKR1_BIN_levels[1:3],
+      "(75%, 100%]" = BMRKR1_BIN_levels[4]
+    )
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+## Survival Forest Graph for Overall Population and by Percentiles of Continuous Biomarker Within Percentile Cutoff Bins (SFG2C)
+
+Here we use the biomarker variable `BMRKR1_BIN` with its original percentage bins to tabulate the statistics to be able to use as an input for the forest plot.
+
+```{r}
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We remove the last line with the `<Missing>` level.
+
+```{r}
+result <- result[-10, , keep_topleft = TRUE]
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+## Survival Forest Graph for Overall Population and by Intervals of Continuous Biomarker with "Greater Than a Numerical Cutoff" (SFG2D)
+
+We start by deriving a new biomarker variable `BMRKR1_BIN2` with greater than numerical cutoffs for `BMRKR1` using the `cut()` funciton, and then tabulate the statistics as above to be able to use them as an input for the forest plot.
+
+```{r}
+BMRKR1_cuts <- c(0, 5, 10, Inf)
+
+adtte <- adtte %>%
+  mutate(
+    BMRKR1_BIN2 = explicit_na(cut(
+      BMRKR1,
+      BMRKR1_cuts,
+      include.lowest = FALSE,
+      right = FALSE
+    ))
+  )
+
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN2")
+  ),
+  label_all = "ITT",
+  groups_lists = list(
+    BMRKR1_BIN2 = list(
+      "> 5" = c("[5,10)", "[10,Inf)"),
+      "> 10" = "[10,Inf)"
+    )
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce forest plot using `g_forest()` function from `tern` based on this `result` table.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../session_info.qmd >}}
+:::

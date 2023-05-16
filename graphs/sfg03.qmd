@@ -1,0 +1,134 @@
+---
+title: SFG3
+subtitle: Survival Forest Graphs for One Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+We prepare the data similarly as in [SFG1](../graphs/sfg01.qmd), focusing on a single arm in the biomarker evaluable population.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS",
+    ARM == "A: Drug X",
+    BEP01FL == "Y"
+  ) %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR1 = "Biomarker (Countinuous)"
+  )
+```
+
+## Standard Plot
+
+We define a vector of all cutpoints to use for a numeric biomarker (here `BMRKR1`).
+We `lapply()` over this vector, each time generating a binary factor variable `BMRKR1_cut` and then tabulating the resulting statistics as e.g. in [SFG1](../graphs/sfg01.qmd).
+Then we `rbind()` all tables in the list together.
+
+```{r}
+all_cutpoints <- c(2.5, 5, 7.5, 10)
+
+tables_all_cutpoints <- lapply(all_cutpoints, function(cutpoint) {
+  adtte_cut <- adtte %>%
+    mutate(
+      BMRKR1_cut = explicit_na(factor(
+        ifelse(BMRKR1 > cutpoint, "Greater", "Less")
+      ))
+    )
+  tbl <- extract_survival_subgroups(
+    variables = list(
+      tte = "AVAL",
+      is_event = "is_event",
+      arm = "BMRKR1_cut"
+    ),
+    label_all = paste0("BMRKR1 (", cutpoint, ")"),
+    data = adtte_cut
+  )
+  basic_table() %>%
+    tabulate_survival_subgroups(
+      df = tbl,
+      vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+      time_unit = adtte_cut$AVALU[1]
+    )
+})
+result <- do.call(rbind, tables_all_cutpoints)
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+Notice that the `result` object in these derivation steps has lost its attributes.
+In order to specify the column indices for the estimator, confidence interval, and header, we need to derive the attributes from one of the original tables and specify them using the `col_x`, `col_y` and `forest_header` arguments of `g_forest()`.
+
+```{r, fig.width = 15}
+one_table <- tables_all_cutpoints[[1]]
+g_forest(result,
+  col_x = attr(one_table, "col_x"),
+  col_ci = attr(one_table, "col_ci"),
+  forest_header = attr(one_table, "forest_header")
+)
+```
+
+## Comparing Between Genders in Survival Forest Graph for One Treatment Arm (SFG3A)
+
+We prepare the data similarly as in `SFG3` above on this page.
+Additionally we are filtering `synthetic_cdisc_data$adtte` to keep only two categories for the `SEX` variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients.
+We then tabulate statistics to be able to use them as an input for the forest plot.
+
+```{r}
+adtte_mf <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS",
+    ARM == "A: Drug X",
+    SEX %in% c("M", "F")
+  ) %>%
+  droplevels() %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR1 = "Biomarker (Countinuous)"
+  )
+
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "SEX",
+    subgroups = "BEP01FL"
+  ),
+  label_all = "ITT",
+  data = adtte_mf
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte_mf$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../session_info.qmd >}}
+:::

@@ -1,0 +1,145 @@
+---
+title: RNAG1
+subtitle: RNAseq QC Graphs
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup
+
+This page can be used as a template of how to use the available `hermes` functions for simple QC analyses of RNA-seq gene expression data and to create interactive QC graphs using `teal.modules.hermes`.
+
+We start by creating `HermesData` from a `SummarizedExperiment` (SE) object.
+An example SE object `summarized_experiment` is available in `hermes`.
+
+```{r, message = FALSE}
+library(hermes)
+library(teal.modules.hermes)
+
+HermesData(summarized_experiment)
+```
+
+At this point we can also take the already prepared object `hermes_data` instead, as this has the correct mapping of legacy to standard names already.
+First we add all quality flags (low expression, low read depth, technical failure).
+
+```{r}
+object <- hermes_data %>%
+  add_quality_flags()
+```
+
+We can look at how many samples or genes have been flagged.
+
+```{r}
+table(get_low_expression(object))
+table(get_tech_failure(object))
+table(get_low_depth(object))
+```
+
+We then filter for samples that pass all quality checks (i.e. all flags are `FALSE`).
+
+```{r}
+result <- filter(object)
+```
+
+It is also possible to only filter genes or samples via the `what` argument of `filter()`.
+
+## Normalization
+
+Now that the samples are properly filtered, we can apply our normalization method.
+By default, if a method is not specified for `normalize()` then five methods (`cpm`, `rpkm`, `tpm`, `voom`, `vst`) will be performed and results saved as separate assays.
+If only one method is needed, it can be easily specified in the `methods` argument.
+In addition, if the `rlog` transformation method is preferred, it can also be specified in the `methods` argument.
+
+```{r}
+norm_result <- normalize(result)
+```
+
+## Graphs: Separate Graph Functions
+
+The `hermes` package offers a series of `draw_*` functions to help in the QC process.
+First we introduce `draw_libsize_hist()` which displays a histogram of the sample library sizes.
+
+```{r}
+draw_libsize_hist(norm_result, fill = "lightblue")
+```
+
+The `draw_libsize_qq()` displays a QQ plot of the samples library size.
+Here we look for potential outliers.
+
+```{r}
+draw_libsize_qq(norm_result, color = "red")
+```
+
+The `draw_libsize_densities()` displays a density plot of the (log) counts distributions.
+Distribution lines correspond to each sample.
+
+```{r}
+draw_libsize_densities(norm_result)
+```
+
+The `draw_nonzero_boxplot()` displays a box plot of the non-zero expressed genes per sample.
+It's also possible to add an additional `ggplot2` layer to get the sample ID of any points of interest.
+
+```{r, message = FALSE}
+draw_nonzero_boxplot(norm_result)
+
+# Additional layer to find the sample IDs and reusing the same position for labeling.
+library(ggrepel)
+pos <- position_jitter(0.2)
+draw_nonzero_boxplot(norm_result, position = pos) +
+  geom_text_repel(aes(label = norm_result$SampleID), position = pos, max.overlaps = 20)
+```
+
+The `draw_nonzero_boxplot()` displays a box plot of the non-zero expressed genes per sample.
+
+```{r}
+draw_genes_barplot(norm_result)
+```
+
+We can also select for specific chromosomes by specifying the values in the `chromosomes` parameter.
+For example, to only display chromosomes 1 and 2 separately and ignore all others:
+
+```{r}
+draw_genes_barplot(norm_result, chromosomes = c("1", "2"), include_others = FALSE)
+```
+
+## Graphs: All Graphs at Once
+
+It is also possible to call all available `draw_*` functions with one function, `autoplot()`.
+Note: `autoplot()` does not allow for customization of the plots.
+We recommend using the appropriate `draw_*` function if you wish to make adjustments to the plots.
+
+```{r}
+autoplot(norm_result)
+```
+
+## Teal Module for QC Graphs
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+
+```{r,  message = FALSE}
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+data <- teal_data(mae_data)
+```
+
+We can then use the provided teal module `tm_g_quality` to include a QC module in our teal app.
+
+```{r delay = 20, warning = FALSE, cache=FALSE}
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_quality(
+      label = "quality",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

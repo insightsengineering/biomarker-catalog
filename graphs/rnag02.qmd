@@ -1,0 +1,106 @@
+---
+title: RNAG2
+subtitle: RNAseq Top Genes Plot
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import, Filter and Normalize
+
+This page can be used as a template of how to use the available `hermes` functions to derive and plot top genes for RNA-seq RNA-seq gene expression data and to create an interactive top genes plot using `teal.modules.hermes`.
+
+Derivation of top genes uses `HermesData` as input.
+See [RNAG1](../graphs/rnag01.qmd) for details on how to import, filter and normalize `HermesData`.
+
+```{r, message = FALSE}
+library(hermes)
+object <- hermes_data %>%
+  add_quality_flags() %>%
+  filter() %>%
+  normalize()
+```
+
+## Derive Top Genes
+
+We can derive top most expressed genes in `HermesData` using the `top_genes()` function.
+By default, this function uses the `counts` assay and summary statistic function `rowMeans()` with no minimum threshold to derive the 10 most expressed genes.
+You can change this number, or instead work with a minimum threshold on the derived statistic.
+
+```{r}
+result <- top_genes(object)
+```
+
+If we want to derive only the 5 most expressed genes, we can specify this via `n_top`.
+
+```{r}
+result <- top_genes(object, n_top = 5)
+```
+
+Alternatively, we can also set a minimum threshold of average counts (across samples).
+
+```{r}
+result <- top_genes(object, min_threshold = 50000)
+```
+
+If we want to derive top genes for a specific assay, we can also specify this via `assay_name`.
+By default, `top_genes()` function uses the `counts` assay.
+It is important to ensure that the same normalization method is applied on the `HermesData` object prior to deriving top genes, otherwise the assay would not be available here.
+
+```{r}
+result <- top_genes(object, assay_name = "tpm")
+```
+
+You can also change which summary statistic function is used.
+Most important here is that this function needs to work on the matrix (genes in rows, samples in columns) and return back a value for each gene, thus summarizing the values from all samples for this gene.
+Thus all row-wise statistic functions (like `rowMeans()` from package `stats`, `rowMaxs()`, `rowSds()`, ... from package `matrixStats`) are well suited.
+
+Here, the statistic chosen is the maximum count across samples:
+
+```{r}
+result <- top_genes(object, summary_fun = rowMaxs)
+```
+
+## Plot Top Genes
+
+We can then create a simple bar plot for these top genes using `autoplot()` function.
+
+```{r}
+autoplot(result)
+```
+
+By default, y-axis label is set to summary function name and assay name used to generate the object with top genes using `top_genes()` function.
+It is up to the user to optionally adjust the y-axis label via the `y_lab` argument, and also the x-axis label and title can be adjusted.
+
+```{r}
+autoplot(result, y_lab = "Maximum Count per Sample", x_lab = "Genes", title = "Top Genes")
+```
+
+## Teal Module for Top Genes Plot
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+We can select the top genes plot under the plot type menu.
+We can then use the provided teal module `tm_g_quality` to include a QC module in our teal app.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+data <- teal_data(mae_data)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_quality(
+      label = "quality",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

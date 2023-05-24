@@ -1,0 +1,81 @@
+---
+title: RNAG4
+subtitle: RNAseq PCA Graphs
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import, Filter and Normalize
+
+This page can be used as a template of how to use the available `hermes` functions to calculate the correlation between samples in `HermesData`, visualize them in a heatmap, and create an interactive sample correlation graph using `teal.modules.hermes`.
+
+The function used to calculate correlation uses `HermesData` as input.
+See [RNAG1](../graphs/rnag01.qmd) for details.
+
+```{r, message = FALSE}
+library(hermes)
+
+object <- hermes_data %>%
+  add_quality_flags() %>%
+  filter() %>%
+  normalize()
+```
+
+## Calculate Correlation
+
+We can calculate correlation matrix between samples in `HermesData` using `correlate()` function.
+By default, `correlate()` function uses the `counts` assay to calculate the Pearson correlation coefficients, unless specified otherwise in the arguments.
+
+```{r}
+result <- correlate(object)
+
+result <- correlate(object, assay_name = "tpm", method = "spearman")
+```
+
+## Plot Correlation
+
+We can then plot a heatmap for correlation between samples in `HermesData` using the `autoplot()` function.
+See `?calc_cor` for details.
+
+```{r}
+autoplot(result)
+```
+
+If there are still (because we already filtered some samples above) samples that have low correlation with others, we might want to flag them manually as technical failures and filter again.
+Here just as an example:
+
+```{r}
+object <- object %>%
+  set_tech_failure("06520011B0023R") %>%
+  filter()
+```
+
+## Teal Module for Sample Correlation Graph
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+We can select the sample correlation tab above the plot area.
+We can then use the provided teal module `tm_g_pca` to include a PCA module in our teal app.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+data <- teal_data(mae_data)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_pca(
+      label = "pca",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

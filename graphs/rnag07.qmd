@@ -1,0 +1,127 @@
+---
+title: RNAG7
+subtitle: RNAseq Boxplot
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import, Filter and Normalize
+
+This page can be used as a template of how to create boxplots for RNA-seq gene expression data using available `hermes`, and to create interactive boxplot for RNA-seq gene expression analysis using `teal.modules.hermes`.
+
+The `draw_boxplot()` function used below needs `HermesData` as input.
+See [RNAG1](../graphs/rnag01.qmd) for details on how to import, filter and normalize `HermesData`.
+
+```{r, message = FALSE}
+library(hermes)
+object <- hermes_data %>%
+  add_quality_flags() %>%
+  filter() %>%
+  normalize()
+```
+
+## Boxplot for Single Gene Expression Values (RNAG7A)
+
+We can create boxplots for expression values of single genes by providing the gene ID in a `gene_spec` (gene specification) as follows.
+
+```{r}
+draw_boxplot(
+  object = object,
+  assay_name = "counts",
+  genes = gene_spec("GeneID:11185")
+)
+```
+
+## Boxplot for Multiple Genes Expression Values (RNAG7B)
+
+We can also create boxplots for multiple genes next to each other, simply by specifying multiple gene IDs in the `gene_spec`.
+Note that names given to the gene ID vector are used in the plot instead of the IDs.
+
+```{r}
+draw_boxplot(
+  object = object,
+  assay_name = "counts",
+  genes = gene_spec(c(
+    A = "GeneID:11185", B = "GeneID:10677", C = "GeneID:286205", D = "GeneID:8365", E = "GeneID:6804"
+  ))
+)
+```
+
+## Boxplot for Gene Signatures (RNAG7C)
+
+We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.
+Note that here we just want to use the first 6 genes from the `object` without explicitly specifying the gene IDs, and this can be done through the `genes()` function in `hermes`.
+
+```{r}
+draw_boxplot(
+  object = object,
+  assay_name = "counts",
+  genes = gene_spec(genes(object)[1:6], fun = colMeans)
+)
+```
+
+## Additional Options for Customization
+
+We can add sample variables for stratification (`x_var`), faceting (`facet_var`) or coloring (`color_var`).
+
+```{r}
+draw_boxplot(
+  object = object,
+  assay_name = "counts",
+  genes = gene_spec(genes(object)[1]),
+  x_var = "AGE18",
+  facet_var = "SEX",
+  color_var = "RACE"
+)
+```
+
+We can also add jittering to the data points overlaying the boxplot using the `jitter` flag.
+
+```{r}
+draw_boxplot(
+  object = object,
+  assay_name = "counts",
+  genes = gene_spec(genes(object)[1]),
+  jitter = TRUE
+)
+```
+
+We can also create violin plots instead of boxplots using the `violin` flag.
+
+```{r}
+draw_boxplot(
+  object = object,
+  assay_name = "counts",
+  genes = gene_spec(genes(object)[1]),
+  violin = TRUE
+)
+```
+
+## Teal Module for Boxplot
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+We can then use the provided teal module `tm_g_boxplot` to have a boxplot module in our teal app.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+
+app <- init(
+  data = teal_data(mae_data),
+  modules = modules(
+    tm_g_boxplot(
+      label = "boxplot",
+      mae_name = "MAE"
+    )
+  )
+)
+
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

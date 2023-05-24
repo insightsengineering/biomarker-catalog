@@ -1,0 +1,134 @@
+---
+title: RNAG10
+subtitle: RNAseq Survival Forest Graph
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import & Data Manipulation
+
+This page can be used as a template of how to produce survival forest graphs for RNA-seq gene expression analysis using available `tern` and `hermes` functions, and to create an interactive survival forest graph for RNA-seq gene expression analysis using `teal.modules.hermes`.
+
+The code below needs both RNA-seq data (in `HermesData` format) and time-to-event data (in `ADTTE` format) as input.
+
+We first prepare the time-to-event data.
+We define an event indicator variable, transform the time to months and filter down to the overall survival subset.
+
+```{r, message = FALSE}
+library(tern)
+
+adtte_f <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  dplyr::mutate(
+    is_event = .data$CNSR == 0,
+    AVAL = day2month(.data$AVAL),
+    AVALU = "Months"
+  ) %>%
+  dplyr::filter(.data$PARAMCD == "OS")
+```
+
+Then we prepare the RNA-seq data and join with `ADTTE`, see [RNAG9](../graphs/rnag09.qmd) for details.
+
+```{r,  message = FALSE}
+library(hermes)
+
+gene_data <- col_data_with_genes(
+  object = hermes_data,
+  assay_name = "counts",
+  genes = gene_spec("GeneID:1820")
+)
+joined_data <- inner_join_cdisc(
+  gene_data = gene_data,
+  cdisc_data = adtte_f
+)
+```
+
+We can then cut the resulting gene column in the joined `adtte_data` into quantile bins.
+In this example we want two equally sized groups so set `probs` to 0.5, and we then label the bins as `Low` and `High`.
+We could choose a different quantile cutoff.
+The only important restriction here is that we need to bin the genes into exactly two groups, otherwise the forest plot below cannot compare these two groups with each other.
+
+```{r}
+arm_name <- attr(gene_data, "gene_cols")
+binned_data <- joined_data %>%
+  dplyr::mutate(
+    gene_factor = cut_quantile_bins(
+      joined_data[[arm_name]],
+      probs = 0.5,
+      labels = c("Low", "High")
+    )
+  ) %>%
+  df_explicit_na(omit_columns = "AVALU")
+```
+
+## Survival Forest Graph (RNAG10)
+
+It is now simple to create the survival forest graph by providing the data set created above with the variable specification.
+First we calculate the survival estimates with `extract_survival_subgroups()` by providing the necessary variable specification.
+Here we specify our derived `gene_bin` for the arm.
+Then we build the table portion with `tabulate_survival_subgroups()` and pass our calculations from the previous step.
+Lastly, we generate the final graph with `g_forest`.
+
+```{r}
+variables <- list(
+  tte = "AVAL",
+  is_event = "is_event",
+  arm = "gene_factor",
+  subgroups = c("BEP01FL", "SAFFL")
+)
+tbl <- extract_survival_subgroups(
+  variables = variables,
+  data = binned_data
+)
+
+lyt <- basic_table()
+result <- tabulate_survival_subgroups(
+  lyt = lyt,
+  df = tbl,
+  vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+  time_unit = binned_data$AVALU[1]
+)
+
+g_forest(result)
+```
+
+See [SFG01](../graphs/sfg01.qmd) to [SFG05](../graphs/sfg05.qmd) for additional customization options for the survival forest graphs or the help page `?g_forest()`.
+
+## Teal Module for Survival Forest Graph
+
+We start by importing a `MultiAssayExperiment` and sample `ADTTE` data; here we use the example `multi_assay_experiment` available in `hermes` and example `ADTTE` data from `scda`.
+We can then use the provided teal module `tm_g_forest_tte` to include the corresponding interactive survival forest analysis in our teal app.
+In case that we have different non-standard column names in our ADTTE data set we could also specify them via the `adtte_vars` argument, see the documentation `?tm_g_forest_tte` for more details.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  dplyr::mutate(is_event = .data$CNSR == 0)
+
+data <- teal_data(
+  dataset(
+    "ADTTE",
+    adtte,
+    code = 'adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+        dplyr::mutate(is_event = .data$CNSR == 0)'
+  ),
+  dataset("MAE", mae)
+)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_forest_tte(
+      label = "forest",
+      adtte_name = "ADTTE",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

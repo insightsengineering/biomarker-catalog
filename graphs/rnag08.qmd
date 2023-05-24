@@ -1,0 +1,144 @@
+---
+title: RNAG8
+subtitle: RNAseq Scatterplot
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import, Filter and Normalize
+
+This page can be used as a template of how to use the available `hermes` functions to produce a scatterplot of two genes or gene signatures and to create an interactive scatterplot for RNA-seq gene expression analysis using `teal.modules.hermes`.
+
+The `draw_scatterplot()` function used below needs `HermesData` as input.
+See [RNAG1](../graphs/rnag01.qmd) for details on how to import, filter and normalize `HermesData`.
+
+```{r, message = FALSE}
+library(hermes)
+object <- hermes_data %>%
+  add_quality_flags() %>%
+  filter() %>%
+  normalize()
+```
+
+## Scatterplot for Gene Expression Values (RNAG8A)
+
+We can create scatterplots for gene expression values by providing a gene in the `gene_spec` (gene specification) as follows.
+
+```{r}
+draw_scatterplot(
+  object = object,
+  assay_name = "counts",
+  x_spec = gene_spec(genes(object)[1]),
+  y_spec = gene_spec(genes(object)[2])
+)
+```
+
+## Scatterplot for Gene Signatures (RNAG8B)
+
+We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.
+Note that we use the first 10 genes and the next 10 genes from the `object` without explicitly specifying the gene IDs, and this can be done through the `genes()` function in `hermes`.
+
+```{r}
+draw_scatterplot(
+  object = object,
+  assay_name = "counts",
+  x_spec = gene_spec(
+    genes(object)[1:10],
+    fun = colMeans,
+    fun_name = "Mean"
+  ),
+  y_spec = gene_spec(
+    genes(object)[11:20],
+    fun = colMedians,
+    fun_name = "Median"
+  ),
+)
+```
+
+## Additional Options for Customization
+
+It is also possible to pass additional arguments to the function `draw_scatterplot()`, e.g. if we wish to specify an optional faceting variable, optional color variable or specific smoothing method.
+See `?hermes::draw_scatterplot()` for details about the additional parameters available.
+
+```{r}
+draw_scatterplot(
+  object = object,
+  assay_name = "tpm",
+  x_spec = gene_spec(
+    genes(object)[1:10],
+    fun = colMeans,
+    fun_name = "Mean"
+  ),
+  y_spec = gene_spec(
+    genes(object)[11:20],
+    fun = colMedians,
+    fun_name = "Median"
+  ),
+  color = "RACE"
+)
+```
+
+```{r}
+draw_scatterplot(
+  object = object,
+  assay_name = "tpm",
+  x_spec = gene_spec(
+    genes(object)[1:10],
+    fun = colMeans,
+    fun_name = "Mean"
+  ),
+  y_spec = gene_spec(
+    genes(object)[11:20],
+    fun = colMedians,
+    fun_name = "Median"
+  ),
+  facet_var = "SEX"
+)
+```
+
+```{r}
+draw_scatterplot(
+  object = object,
+  assay_name = "tpm",
+  x_spec = gene_spec(
+    genes(object)[1:10],
+    fun = colMeans,
+    fun_name = "Mean"
+  ),
+  y_spec = gene_spec(
+    genes(object)[11:20],
+    fun = colMedians,
+    fun_name = "Median"
+  ),
+  smooth_method = "loess"
+)
+```
+
+## Teal Module for Scatterplot
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+We can then use the provided teal module `tm_g_scatterplot` to have add a scatterplot module in our teal app.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+data <- teal_data(mae_data)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_scatterplot(
+      label = "scatterplot",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

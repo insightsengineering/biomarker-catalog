@@ -11,7 +11,7 @@ subtitle: RNAseq QC Graphs
 This page can be used as a template of how to use the available `hermes` functions for simple QC analyses of RNA-seq gene expression data and to create interactive QC graphs using `teal.modules.hermes`.
 
 We start by creating `HermesData` from a `SummarizedExperiment` (SE) object.
-An example SE object `summarized_experiment` is available in `hermes`.
+An example `SummarizedExperiment` object with name `summarized_experiment` is available in `hermes`.
 
 ```{r, message = FALSE}
 library(hermes)
@@ -19,7 +19,7 @@ library(hermes)
 HermesData(summarized_experiment)
 ```
 
-At this point we can also take the already prepared object `hermes_data` instead, as this has the correct mapping of legacy to standard names already.
+At this point we can also take the already prepared object `hermes_data` instead.
 First we add all quality flags (low expression, low read depth, technical failure).
 
 ```{r, message = FALSE}

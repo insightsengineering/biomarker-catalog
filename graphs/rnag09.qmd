@@ -1,0 +1,123 @@
+---
+title: RNAG9
+subtitle: RNAseq Kaplan-Meier Graph
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import & Data Manipulation
+
+This page can be used as a template of how to produce Kaplan-Meier graphs for RNA-seq gene expression analysis using available `tern` and `hermes` functions, and to create an interactive Kaplan-Meier graph for RNA-seq gene expression analysis using `teal.modules.hermes`.
+
+The code below needs both RNA-seq data (in `HermesData` format) and time-to-event data (in `ADTTE` format) as input.
+
+We first prepare the time-to-event data.
+We define an event indicator variable, transform the time to months and filter down to the overall survival subset.
+
+```{r, message = FALSE}
+library(tern)
+
+adtte_f <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  dplyr::mutate(
+    is_event = .data$CNSR == 0,
+    AVAL = day2month(.data$AVAL),
+    AVALU = "Months"
+  ) %>%
+  dplyr::filter(.data$PARAMCD == "OS")
+```
+
+Then we prepare the RNA-seq data.
+See [RNAG1](../graphs/rnag01.qmd) for basic details on how to import, filter and normalize `HermesData`.
+We use `col_data_with_genes()` to extract the sample variables (`colData`) from the object, together with a single specified gene or a specified gene signature.
+See `?hermes::gene_spec` for details on how to do this.
+Then we use `inner_join_cdisc()` to join this genetic data with the `ADTTE` data from above.
+See the help page for more details, in particular how the join keys can be customized if needed - here we just join based on `USUBJID` by default.
+
+```{r,  message = FALSE}
+library(hermes)
+
+gene_data <- col_data_with_genes(
+  object = hermes_data,
+  assay_name = "counts",
+  genes = gene_spec("GeneID:1820")
+)
+joined_data <- inner_join_cdisc(
+  gene_data = gene_data,
+  cdisc_data = adtte_f
+)
+```
+
+We can then cut the resulting gene column (we figure out the column name and save it in `arm_name` below) in the `joined_data` into quantile bins (in this example we want three equally sized groups).
+
+```{r}
+arm_name <- attr(gene_data, "gene_cols")
+binned_data <- joined_data %>%
+  dplyr::mutate(
+    gene_factor = cut_quantile_bins(
+      joined_data[[arm_name]],
+      probs = c(1 / 3, 2 / 3)
+    )
+  ) %>%
+  df_explicit_na()
+```
+
+## Kaplan-Meier Graph (RNAG9A)
+
+It is now simple to create the Kaplan-Meier graph by providing the data set created above with the variable specification.
+Note that we specify the above created `gene_factor` as arm variable here.
+
+```{r}
+variables <- list(
+  tte = "AVAL",
+  is_event = "is_event",
+  arm = "gene_factor"
+)
+g_km(
+  binned_data,
+  variables = variables,
+  annot_coxph = TRUE
+)
+```
+
+See [KG1](../graphs/kg01.qmd) to [KG5](../graphs/kg05.qmd) for additional customization options for the Kaplan-Meier graphs or the help page `?g_km()`.
+
+## Teal Module for Kaplan-Meier Graph
+
+We start by importing a `MultiAssayExperiment` and sample `ADTTE` data; here we use the example `multi_assay_experiment` available in `hermes` and example `ADTTE` data from `scda`.
+We can then use the provided teal module `tm_g_km` to include the corresponding interactive Kaplan-Meier analysis in our teal app.
+Note that by default the `counts` assay is excluded via the `exclude_assays` argument, but we can include it by just saying that we don't want to exclude any assays.
+In case that we have different non-standard column names in our ADTTE data set we could also specify them via the `adtte_vars` argument, see the documentation `?tm_g_km` for more details.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  dplyr::mutate(is_event = .data$CNSR == 0)
+data <- teal_data(
+  dataset(
+    "ADTTE",
+    adtte,
+    code = 'adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+        dplyr::mutate(is_event = .data$CNSR == 0)'
+  ),
+  dataset("mae", mae)
+)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_km(
+      label = "Kaplan-Meier Graph",
+      adtte_name = "ADTTE",
+      mae_name = "mae",
+      exclude_assays = character()
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

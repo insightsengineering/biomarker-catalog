@@ -1,0 +1,132 @@
+---
+title: RNAG3
+subtitle: RNAseq PCA Graphs
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import, Filter and Normalize
+
+This page can be used as a template of how to use the available `hermes` functions for principal components analysis and plots of RNAseq data sets.
+
+The principal components analysis function uses `HermesData` as input.
+See [RNAG1](../graphs/rnag01.qmd) for details.
+
+```{r, message = FALSE}
+library(hermes)
+
+object <- hermes_data %>%
+  add_quality_flags() %>%
+  filter() %>%
+  normalize()
+```
+
+## Principal Components Analysis
+
+Once we have filtered out low quality genes and samples, and normalized the counts, we can perform principal components analysis of the gene counts across all samples using the `calc_pca()` function.
+The `calc_pca()` function uses by default the raw counts, unless otherwise specified in the `assay_name` argument of the function.
+
+```{r}
+result <- calc_pca(object)
+
+result_cpm <- calc_pca(object, assay_name = "cpm")
+```
+
+## Principal Components Plot
+
+We can then also plot these principal component results using the corresponding `autoplot()` method.
+
+```{r}
+autoplot(result)
+```
+
+There are many different options for plotting.
+See `?autoplot.pca_common` for the full details.
+Here some examples.
+
+We can specify which principal components should be plotted against each other.
+
+```{r}
+autoplot(result, x = 2, y = 3)
+```
+
+We can also include sample labels on the plot.
+
+```{r}
+autoplot(result, label = TRUE)
+```
+
+Or we can exclude the variance percentages from the axis labels.
+
+```{r}
+autoplot(result, variance_percentage = FALSE)
+```
+
+As a last example, we can also color the points by a sample variable.
+
+```{r}
+autoplot(result, data = as.data.frame(colData(object)), colour = "COUNTRY")
+```
+
+## Correlation of Principal Components with Sample Variables
+
+We can also calculate the correlation (in R2 values) between sample variables in `HermesData` and the principal components of these samples using `correlate()`:
+
+```{r}
+cors <- correlate(result, object)
+```
+
+We can then also plot these R2 values between sample variables and principal components again using the `autoplot()` method.
+Sample variables that have high correlation with major principal components can point to potential batch effects.
+
+```{r}
+autoplot(cors)
+```
+
+We can also avoid reordering the principal components column.
+
+```{r}
+autoplot(cors, cluster_columns = FALSE)
+```
+
+We can also update the color definitions of R2 values in the heatmap.
+
+```{r}
+autoplot(cors,
+  cor_colors = circlize::colorRamp2(
+    breaks = c(-1, -0.5, 0, 0.5, 1),
+    colors = c("blue", "purple", "yellow", "orange", "red")
+  )
+)
+```
+
+See `?pca_cor_samplevar` for the detailed options.
+
+## Teal Module for PCA Graphs
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+We can then use the provided teal module `tm_g_pca` to include a PCA module in our teal app.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+data <- teal_data(mae_data)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_pca(
+      label = "pca",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

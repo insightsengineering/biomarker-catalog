@@ -1,0 +1,99 @@
+---
+title: RNAG5
+subtitle: RNAseq Differential Gene Expression Analysis
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Setup: Import and Filter
+
+This page can be used as a template of how to use the available `hermes` functions to take differential gene expression analysis between samples in `HermesData`, visualize them in a volcano graph, and create an interactive volcano graph using `teal.module.hermes`.
+
+The function used to calculate differential gene expression uses `HermesData` as input.
+See [RNAG1](../graphs/rnag01.qmd) for details.
+In particular, the differential gene expression analysis does not require to normalize `HermesData`.
+
+```{r, message = FALSE}
+library(hermes)
+
+object <- hermes_data %>%
+  add_quality_flags() %>%
+  filter()
+
+colData(object) <- df_cols_to_factor(colData(object))
+```
+
+## Differential Gene Expression Analysis via Limma-Voom Method
+
+We can calculate a data frame in `HermesDataDiffExpr` class to include the gene differential expression between groups in `HermesData` using `diff_expression()` function.
+By default, `diff_expression()` function uses the `limma-voom` method to calculate the gene differential expression, unless specified otherwise as argument.
+The `group` argument is to set the groups for comparison.
+The `group` factors should be a 2-level factor in `colData(HermesData)`.
+
+```{r}
+result1 <- diff_expression(object, group = "SEX")
+```
+
+## Differential Gene Expression Analysis via DESeq2 Method
+
+We can also use the `DESeq2` Method for gene differential expression.
+
+```{r}
+result2 <- diff_expression(object, group = "SEX", method = "deseq2")
+```
+
+## Additional Arguments
+
+It is also possible to pass additional arguments to the function behind the methods in the `diff_expression()`, ex.
+if we wish to change the type of size factor estimation when using the `DESeq2` method.
+See `?DESeq2::DESeq()` or `?limma::eBayes()` for details about the additional parameters available.
+
+```{r}
+result3 <- diff_expression(object, group = "SEX", method = "deseq2", sfType = "ratio")
+```
+
+## Plot Differential Gene Expression in Volcano Graph
+
+We can then plot a volcano graph for differential gene expression between groups in `HermesData` using the `autoplot()` function.
+The threshold values for adjusted p-values and log2 folder change can be specified.
+
+```{r}
+autoplot(result1)
+```
+
+```{r}
+autoplot(result2, adj_p_val_thresh = 0.025, log2_fc_thresh = 5)
+```
+
+```{r}
+autoplot(result3)
+```
+
+## Teal Module for Sample Differential Gene Expression
+
+We start by importing a `MultiAssayExperiment`; here we use the example `multi_assay_experiment` available in `hermes`.
+It is wrapped as a `teal::dataset`.
+We can then use the provided teal module `tm_g_volcanoplot` to include a volcano graph module in our teal app.
+
+```{r,  message = FALSE, cache = FALSE}
+#| screenshot.opts = list(delay = 24)
+library(teal.modules.hermes)
+mae <- hermes::multi_assay_experiment
+mae_data <- dataset("MAE", mae)
+data <- teal_data(mae_data)
+
+app <- init(
+  data = data,
+  modules = modules(
+    tm_g_volcanoplot(
+      label = "volcanoplot",
+      mae_name = "MAE"
+    )
+  )
+)
+shinyApp(app$ui, app$server)
+```
+
+{{< include ../session_info.qmd >}}
+:::

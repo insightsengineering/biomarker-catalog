@@ -92,3 +92,16 @@ website:
         - text: "---"
         - text: Index
           file: bac_index.qmd
+  comments:
+    giscus:
+      # Reference: https://quarto.org/docs/reference/projects/books.html#giscus
+      # Also https://giscus.app/ for all options
+      repo: insightsengineering/biomarker-catalog
+      repo-id: "R_kgDOJMeENQ"
+      category: General
+      category-id: "DIC_kwDOJMeENc4CVB9s"
+      reactions-enabled: true
+      theme: light
+      language: en
+      loading: lazy
+      mapping: pathname

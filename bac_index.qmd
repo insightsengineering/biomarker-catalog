@@ -1,0 +1,21 @@
+---
+title: Index
+toc: true
+toc-depth: 4
+---
+
+------------------------------------------------------------------------
+
+### Tables
+
+-   [CMT1 -- Cox Proportional Hazards Model Tables with a Single Covariate](./tables/cmt01.qmd)
+-   [CMT2 -- Cox Proportional Hazards Model Tables with Multiple Covariates](./tables/cmt01.qmd)
+-   [CMT3 -- Cox Proportional Hazards Model Tables with Separate Models for Each Covariate](./tables/cmt01.qmd)
+-   [DT1 -- Demographics Tables Comparing BEP vs. Overall Population](./tables/dt01.qmd)
+-   [DT2 -- Demographics Tables Comparing BEP vs. non-BEP Population](./tables/dt02.qmd)
+-   [TET1 -- Time-to-Event Summary Tables](./tables/tet01.qmd)
+
+### Graphs
+
+-   [AG1 -- Utilities for All Graphs](./graphs/ag01.qmd)
+-   [DG1 -- Histograms of Numeric Variables](./graphs/dg01.qmd)

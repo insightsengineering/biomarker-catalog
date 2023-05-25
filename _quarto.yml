@@ -89,3 +89,6 @@ website:
         - text: "---"
         - auto: tables
         - auto: graphs
+        - text: "---"
+        - text: Index
+          file: bac_index.qmd

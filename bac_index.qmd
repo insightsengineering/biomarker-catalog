@@ -1,0 +1,53 @@
+---
+title: Index
+toc: true
+toc-depth: 4
+---
+
+------------------------------------------------------------------------
+
+### Tables
+
+-   [CMT1 -- Cox Proportional Hazards Model Tables with a Single Covariate](./tables/cmt01.qmd)
+-   [CMT2 -- Cox Proportional Hazards Model Tables with Multiple Covariates](./tables/cmt01.qmd)
+-   [CMT3 -- Cox Proportional Hazards Model Tables with Separate Models for Each Covariate](./tables/cmt01.qmd)
+-   [DT1 -- Demographics Tables Comparing BEP vs. Overall Population](./tables/dt01.qmd)
+-   [DT2 -- Demographics Tables Comparing BEP vs. non-BEP Population](./tables/dt02.qmd)
+-   [TET1 -- Time-to-Event Summary Tables](./tables/tet01.qmd)
+
+### Graphs
+
+-   [AG1 -- Utilities for All Graphs](./graphs/ag01.qmd)
+-   [DG1 -- Histograms of Numeric Variables](./graphs/dg01.qmd)
+-   [DG2 -- Boxplots of a Numeric Variable by Categorical Variables](./graphs/dg02.qmd)
+-   [DG3 -- Barplots of Categorical Variables](./graphs/dg03.qmd)
+-   [DG4 -- Scatterplots of Two Numerical Variables](./graphs/dg04.qmd)
+-   [KG1 -- Kaplan-Meier Graphs for One Treatment Arm](./graphs/kg01.qmd)
+-   [KG2 -- Kaplan-Meier Graphs by Treatment Arm](./graphs/kg02.qmd)
+-   [KG3 -- Kaplan-Meier Graphs by Biomarker Subgroups](./graphs/kg03.qmd)
+-   [KG4 -- Kaplan-Meier Graphs by Treatment Arm and Biomarker Subgroups](./graphs/kg04.qmd)
+-   [KG5 -- Kaplan-Meier Graphs by Treatment Arm and Continuous Biomarker Cut](./graphs/kg05.qmd)
+-   [RFG1 -- Response Forest Graphs for Comparing Treatment Effects Across Subgroups](./graphs/rfg01.qmd)
+-   [RFG2 -- Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups](./graphs/rfg02.qmd)
+-   [RFG3 -- Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff](./graphs/rfg03.qmd)
+-   [RG1 -- Response Graphs for Overall Population](./graphs/rg01.qmd)
+-   [RG2 -- Response Graphs by Treatment Arms](./graphs/rg02.qmd)
+-   [RG3 -- Response Graphs Comparing BEP vs. Overall Population](./graphs/rg03.qmd)
+-   [RNAG1 -- RNAseq QC Graphs](./graphs/rnag01.qmd)
+-   [RNAG2 -- RNAseq Top Genes Plot](./graphs/rnag02.qmd)
+-   [RNAG3 -- RNAseq PCA Graphs](./graphs/rnag03.qmd)
+-   [RNAG4 -- RNAseq PCA Graphs](./graphs/rnag04.qmd)
+-   [RNAG5 -- RNAseq Differential Gene Expression Analysis](./graphs/rnag05.qmd)
+-   [RNAG6 -- RNAseq Barplot](./graphs/rnag06.qmd)
+-   [RNAG7 -- RNAseq Boxplot](./graphs/rnag07.qmd)
+-   [RNAG8 -- RNAseq Scatterplot](./graphs/rnag08.qmd)
+-   [RNAG9 -- RNAseq Kaplan-Meier Graph](./graphs/rnag09.qmd)
+-   [RNAG10 -- RNAseq Survival Forest Graph](./graphs/rnag10.qmd)
+-   [SFG1 -- Survival Forest Graphs for Overall Population and by Categorical Biomarker](./graphs/sfg01.qmd)
+-   [SFG2 -- Survival Forest Graphs for Overall Population and by Percentiles of Continuous Biomarker](./graphs/sfg02.qmd)
+-   [SFG3 -- Survival Forest Graphs for One Treatment Arm](./graphs/sfg03.qmd)
+-   [SFG4 -- Survival Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff](./graphs/sfg04.qmd)
+-   [SFG5 -- Survival Forest Graphs Comparing on Subgroups](./graphs/sfg05.qmd)
+-   [SFG6 -- Survival Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups](./graphs/sfg06.qmd)
+-   [SPG1 -- STEP Graphs for Survival Outcome](./graphs/spg01.qmd)
+-   [SPG2 -- STEP Graphs for Response Outcome](./graphs/spg02.qmd)

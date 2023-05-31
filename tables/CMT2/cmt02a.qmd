@@ -6,7 +6,7 @@ subtitle: Changing Reference Levels in the Cox Proportional Hazards Model Table
 ------------------------------------------------------------------------
 
 ::: panel-tabset
-{{< include ../setups/setup_cmt02.qmd >}}
+{{< include ../../setups/setup_cmt02.qmd >}}
 
 ## Table
 
@@ -25,7 +25,7 @@ adtte2 <- adtte %>%
   )
 ```
 
-Now we can proceed in the same way as in [CMT2](../tables/cmt02.qmd).
+Now we can proceed in the same way as in [CMT2](../tables/cmt2/cmt02.qmd).
 
 ```{r}
 result <- basic_table() %>%
@@ -44,5 +44,5 @@ result <- basic_table() %>%
 result
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../../session_info.qmd >}}
 :::

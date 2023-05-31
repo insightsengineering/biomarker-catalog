@@ -6,7 +6,7 @@ subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
 ------------------------------------------------------------------------
 
 ::: panel-tabset
-{{< include ../setups/setup_cmt02.qmd >}}
+{{< include ../../setups/setup_cmt02.qmd >}}
 
 ## Table
 
@@ -33,5 +33,5 @@ result <- basic_table() %>%
 result
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../../session_info.qmd >}}
 :::

@@ -6,7 +6,7 @@ subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
 ------------------------------------------------------------------------
 
 ::: panel-tabset
-{{< include ../../setups/setup_cmt02.qmd >}}
+{{< include setup_cmt02.qmd >}}
 
 ## Table
 

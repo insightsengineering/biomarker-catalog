@@ -1,6 +1,6 @@
 ## Setup
 
-We prepare the data similarly as in [CMT1](../tables/cmt01.qmd).
+We prepare the data similarly as in [CMT1](../cmt01.qmd).
 
 ```{r, message = FALSE}
 library(tern)

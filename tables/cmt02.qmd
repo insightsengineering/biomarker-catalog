@@ -6,27 +6,7 @@ subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
 ------------------------------------------------------------------------
 
 ::: panel-tabset
-## Setup
-
-We prepare the data similarly as in [CMT1](../tables/cmt01.qmd).
-
-```{r, message = FALSE}
-library(tern)
-library(dplyr)
-
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-  df_explicit_na() %>%
-  filter(PARAMCD == "OS", BEP01FL == "Y") %>%
-  mutate(
-    AVAL = day2month(AVAL),
-    AVALU = "Months",
-    is_event = CNSR == 0
-  ) %>%
-  var_relabel(
-    BMRKR1 = "Biomarker (Continuous)",
-    BMRKR2 = "Biomarker (Categorical)"
-  )
-```
+{{< include ../setups/setup_cmt02.qmd >}}
 
 ## Table
 
@@ -49,42 +29,6 @@ result <- basic_table() %>%
   ) %>%
   append_topleft("Effect/Covariate Included in the Model") %>%
   build_table(adtte)
-
-result
-```
-
-## Changing Reference Levels in the Cox Proportional Hazards Model Table (CMT2A)
-
-For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before.
-The `forcats` package provides convenience functions for the level reordering.
-
-```{r}
-adtte2 <- adtte %>%
-  mutate(
-    ARM = forcats::fct_relevel(
-      ARM,
-      "B: Placebo",
-      "C: Combination",
-      "A: Drug X"
-    )
-  )
-```
-
-Now we can proceed in the same way as in CMT2 above.
-
-```{r}
-result <- basic_table() %>%
-  summarize_coxreg(
-    variables = list(
-      time = "AVAL",
-      event = "is_event",
-      arm = "ARM",
-      covariates = c("AGE", "BMRKR1", "BMRKR2")
-    ),
-    multivar = TRUE
-  ) %>%
-  append_topleft("Effect/Covariate Included in the Model") %>%
-  build_table(adtte2)
 
 result
 ```

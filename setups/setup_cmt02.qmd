@@ -1,0 +1,21 @@
+## Setup
+
+We prepare the data similarly as in [CMT1](../tables/cmt01.qmd).
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS", BEP01FL == "Y") %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0
+  ) %>%
+  var_relabel(
+    BMRKR1 = "Biomarker (Continuous)",
+    BMRKR2 = "Biomarker (Categorical)"
+  )
+```

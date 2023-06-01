@@ -1,0 +1,37 @@
+---
+title: CMT2
+subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup_cmt02.qmd >}}
+
+## Table
+
+The multivariate Cox Proportional Hazards model can be displayed in a summary table using the `summarize_coxreg` function from `tern` with the `multivar` argument set to `TRUE`.
+Like the corresponding model fitting function `fit_coxreg_multivar()`, we specify the time, event, arm and covariates in a `variables` list, and any further customizations via the `control` argument.
+Note that the default confidence level is 95% but this can be customized via the `conf_level` element in `control`.
+
+Rather than fitting the model and then tidying the output via the `broom::tidy()` function, we can directly input these three arguments into the `summarize_coxreg()` function to summarize the model fit in a table layout, building the table with our pre-processed `adtte` data set.
+
+```{r}
+result <- basic_table() %>%
+  summarize_coxreg(
+    variables = list(
+      time = "AVAL",
+      event = "is_event",
+      arm = "ARM",
+      covariates = c("AGE", "BMRKR1", "BMRKR2")
+    ),
+    multivar = TRUE
+  ) %>%
+  append_topleft("Effect/Covariate Included in the Model") %>%
+  build_table(adtte)
+
+result
+```
+
+{{< include ../../session_info.qmd >}}
+:::

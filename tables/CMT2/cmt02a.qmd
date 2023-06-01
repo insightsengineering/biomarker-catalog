@@ -1,0 +1,48 @@
+---
+title: CMT2A
+subtitle: Changing Reference Levels in the Cox Proportional Hazards Model Table
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup_cmt02.qmd >}}
+
+## Table
+
+For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before.
+The `forcats` package provides convenience functions for the level reordering.
+
+```{r}
+adtte2 <- adtte %>%
+  mutate(
+    ARM = forcats::fct_relevel(
+      ARM,
+      "B: Placebo",
+      "C: Combination",
+      "A: Drug X"
+    )
+  )
+```
+
+Now we can proceed in the same way as in [CMT2](cmt02.qmd).
+
+```{r}
+result <- basic_table() %>%
+  summarize_coxreg(
+    variables = list(
+      time = "AVAL",
+      event = "is_event",
+      arm = "ARM",
+      covariates = c("AGE", "BMRKR1", "BMRKR2")
+    ),
+    multivar = TRUE
+  ) %>%
+  append_topleft("Effect/Covariate Included in the Model") %>%
+  build_table(adtte2)
+
+result
+```
+
+{{< include ../../session_info.qmd >}}
+:::

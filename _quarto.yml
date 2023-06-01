@@ -92,11 +92,9 @@ website:
           contents:
             - file: tables/cmt01.qmd
               text: CMT1
-            - file: tables/CMT2/index.qmd
+            - file: tables/CMT2/cmt02.qmd
               text: CMT2
               contents: 
-                - file: tables/CMT2/cmt02.qmd
-                  text: CMT2
                 - file: tables/CMT2/cmt02a.qmd
                   text: CMT2A
             - file: tables/cmt03.qmd

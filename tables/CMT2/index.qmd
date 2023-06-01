@@ -1,7 +1,0 @@
----
-title: "CMT2"
----
-
-------------------------------------------------------------------------
-
-Cox Proportional Hazards Model Tables with Multiple Covariates

@@ -1,0 +1,26 @@
+---
+title: DT1
+subtitle: Demographics Tables Comparing BEP vs. Overall Population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Table
+
+The simplest demographics table DT1 splits the columns by treatment arm and All vs. BEP, and summarizes selected demographic variables in the rows.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  split_cols_by_groups("BEP01FL", bep_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

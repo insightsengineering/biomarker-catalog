@@ -1,0 +1,27 @@
+---
+title: DT2A
+subtitle: Demographics Table Allowing Testing to Compare Demographic Variables Between Non-BEP vs. BEP population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Table
+
+The demographics table DT2A splits the columns by treatment arm and by BEP vs. non-BEP, summarizes selected demographic variables in the rows and performs tests to compare demographic variables between Non-BEP vs. BEP population.
+Note that p-values can be `NA` when the test could not be performed due to row counts being all zero, e.g.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  add_colcounts() %>%
+  split_cols_by("BEP01FL", labels_var = "BEP_label", ref_group = "Y") %>%
+  compare_vars(c("AGE", "SEX"))
+
+build_table(lyt, adsl)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

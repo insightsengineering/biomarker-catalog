@@ -1,0 +1,63 @@
+---
+title: TET1A
+subtitle: Time-to-Event Summary Table with Stratified Analysis
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Table
+
+We can add the summary of an analysis with Cox Proportional Hazards models stratified by `SEX` to the table above using `coxph_pairwise()`.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by(
+    var = "ARM_BIN",
+    ref_group = "CTRL"
+  ) %>%
+  add_colcounts() %>%
+  summarize_vars(
+    vars = "is_event",
+    .stats = "count_fraction",
+    .labels = c(count_fraction = "Patients with event (%)"),
+    nested = FALSE,
+    show_labels = "hidden"
+  ) %>%
+  summarize_vars(
+    vars = "is_not_event",
+    .stats = "count_fraction",
+    .labels = c(count_fraction = "Patients without event (%)"),
+    nested = FALSE,
+    show_labels = "hidden"
+  ) %>%
+  surv_time(
+    vars = "AVAL",
+    var_labels = "Time to Event (months)",
+    is_event = "is_event",
+    table_names = "time_to_event"
+  ) %>%
+  coxph_pairwise(
+    vars = "AVAL",
+    is_event = "is_event",
+    var_labels = c("Unstratified Analysis"),
+    control = control_coxph(pval_method = "log-rank"),
+    table_names = "coxph_unstratified"
+  )
+lyt2 <- lyt %>%
+  coxph_pairwise(
+    vars = "AVAL",
+    is_event = "is_event",
+    var_labels = c("Stratified Analysis"),
+    strat = "SEX",
+    control = control_coxph(pval_method = "log-rank"),
+    table_names = "coxph_stratified"
+  )
+
+build_table(lyt2, adtte)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

@@ -6,32 +6,7 @@ subtitle: Time-to-Event Summary Tables
 ------------------------------------------------------------------------
 
 ::: panel-tabset
-## Setup
-
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package for the time-to-event summary table.
-We start by filtering the `adtte` data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the `ARM` variable.
-
-```{r, message = FALSE}
-library(tern)
-library(dplyr)
-
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-  df_explicit_na() %>%
-  filter(
-    PARAMCD == "OS"
-  ) %>%
-  mutate(
-    AVAL = day2month(AVAL),
-    AVALU = "Months",
-    is_event = CNSR == 0,
-    is_not_event = CNSR == 1,
-    ARM_BIN = fct_collapse_only(
-      ARM,
-      CTRL = c("B: Placebo"),
-      TRT = c("A: Drug X", "C: Combination")
-    )
-  )
-```
+{{< include setup.qmd >}}
 
 ## Table
 
@@ -75,23 +50,5 @@ lyt <- basic_table() %>%
 build_table(lyt, adtte)
 ```
 
-## Time-to-Event Summary Table with Stratified Analysis (TET1A)
-
-We can add the summary of an analysis with Cox Proportional Hazards models stratified by `SEX` to the table above using `coxph_pairwise()`.
-
-```{r}
-lyt2 <- lyt %>%
-  coxph_pairwise(
-    vars = "AVAL",
-    is_event = "is_event",
-    var_labels = c("Stratified Analysis"),
-    strat = "SEX",
-    control = control_coxph(pval_method = "log-rank"),
-    table_names = "coxph_stratified"
-  )
-
-build_table(lyt2, adtte)
-```
-
-{{< include ../session_info.qmd >}}
+{{< include ../../session_info.qmd >}}
 :::

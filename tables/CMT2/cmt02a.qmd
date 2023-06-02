@@ -6,7 +6,7 @@ subtitle: Changing Reference Levels in the Cox Proportional Hazards Model Table
 ------------------------------------------------------------------------
 
 ::: panel-tabset
-{{< include setup_cmt02.qmd >}}
+{{< include setup.qmd >}}
 
 ## Table
 

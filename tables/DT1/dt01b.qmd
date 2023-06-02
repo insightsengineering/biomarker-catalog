@@ -1,0 +1,25 @@
+---
+title: DT1B
+subtitle: Combine Treatment Arms in Demographics Table
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Table
+
+It is simple to omit the treatment arm split in the demographics table DT1, thus effectively combining the treatment arms.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by_groups("BEP01FL", bep_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

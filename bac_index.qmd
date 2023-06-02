@@ -9,8 +9,8 @@ toc-depth: 4
 ### Tables
 
 -   [CMT -- Cox Proportional Hazards Model Tables](./tables/cmt01.qmd)
--   [DT -- Demographics Tables](./tables/dt01.qmd)
--   [TET -- Time-to-Event Summary Tables](./tables/tet01.qmd)
+-   [DT -- Demographics Tables](./tables/DT1/dt01.qmd)
+-   [TET -- Time-to-Event Summary Tables](./tables/TET1/tet01.qmd)
 
 ### Graphs
 

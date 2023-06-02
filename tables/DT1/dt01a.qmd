@@ -1,0 +1,26 @@
+---
+title: DT1A
+subtitle: Reorder Treatment Arms in Demographics Table
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Table
+
+We can reorder the treatment arm columns in the demographics table DT1 by using the `reorder_split_levels()` splitting function in `split_cols_by()` as done here.
+
+```{r}
+lyt <- basic_table() %>%
+  split_cols_by("ARM", split_fun = reorder_split_levels(c("B: Placebo", "A: Drug X", "C: Combination"))) %>%
+  split_cols_by_groups("BEP01FL", bep_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

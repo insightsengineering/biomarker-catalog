@@ -99,12 +99,25 @@ website:
                   text: CMT2A
             - file: tables/cmt03.qmd
               text: CMT3
-            - file: tables/dt01.qmd
+            - file: tables/DT1/dt01.qmd
               text: DT1
-            - file: tables/dt02.qmd
+              contents: 
+                - file: tables/DT1/dt01a.qmd
+                  text: DT1A
+                - file: tables/DT1/dt01b.qmd
+                  text: DT1B
+                - file: tables/DT1/dt01c.qmd
+                  text: DT1C
+            - file: tables/DT2/dt02.qmd
               text: DT2
-            - file: tables/tet01.qmd
+              contents: 
+                - file: tables/DT2/dt02a.qmd
+                  text: DT2A
+            - file: tables/TET1/tet01.qmd
               text: TET1
+              contents: 
+                - file: tables/TET1/tet01a.qmd
+                  text: TET1A
         - text: "---"
         - auto: graphs
         - text: "---"

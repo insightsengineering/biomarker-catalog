@@ -1,0 +1,31 @@
+---
+title: DT1C
+subtitle: Alternative BEP Indicator in Demographics Table
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Table
+
+We can of course use a different BEP factor variable `BEP02FL` with corresponding groups definition `bep2_groups` in the demographics table DT1.
+
+```{r}
+bep2_groups <- list(
+  "All" = c("Y", "N"),
+  "BEP2" = "Y"
+)
+
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  split_cols_by_groups("BEP02FL", bep2_groups) %>%
+  summarize_vars(c("AGE", "SEX")) %>%
+  add_colcounts()
+
+build_table(lyt, adsl)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

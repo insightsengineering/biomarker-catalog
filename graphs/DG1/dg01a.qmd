@@ -1,0 +1,61 @@
+---
+title: DG1A
+subtitle: Histograms of Two Numeric Variables
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+In this example, we will manipulate the variables that we want to show in the graph into a long data format using the `pivot_longer()` function from `tidyr`.
+This is necessary such that below we can use the faceting layer `facet_grid()` to plot each variable in its own facet.
+
+```{r}
+num_var_long <- adsl %>%
+  pivot_longer(
+    c(BMRKR1, BMRKR3),
+    names_to = "var",
+    values_to = "value"
+  ) %>%
+  select(var, value)
+```
+
+Producing the base plot is then simple: We use the same code as above but just add the faceting layer.
+
+```{r}
+graph <- ggplot(num_var_long, aes(value)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30) +
+  geom_density(aes(y = after_stat(density))) +
+  facet_grid(var ~ .)
+
+graph
+```
+
+Similar to the DG1 example, we will calculate and populate the statistics table to accompany the plot.
+Note that also here we can use the `pivot_longer()` function to also obtain the statistics table input `orig_tb` and then `data_tb` in long format, and thus parallel to the biomarker variable format in `num_var_long`.
+
+```{r}
+orig_tb <- num_var_long %>%
+  group_by(var) %>%
+  summarize_at("value", list(mean = mean, median = median)) %>%
+  pivot_longer(
+    c(mean, median),
+    names_to = "Statistic",
+    values_to = "Value"
+  )
+
+data_tb <- orig_tb %>%
+  group_by(var) %>%
+  summarize(x = 1, y = 1, tb = list(tibble(Statistic, Value)))
+
+graph <- graph +
+  geom_table_npc(data = data_tb, aes(npcx = x, npcy = y, label = tb))
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

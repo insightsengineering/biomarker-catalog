@@ -1,0 +1,18 @@
+## Setup
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package and `ggplot2` to create the plots.
+In this example, we will plot histograms of one or multiple numeric variables.
+We start by selecting the biomarker evaluable population with the flag variable `BEP01FL` and then populating a new continuous biomarker variable, `BMRKR3`.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+library(tibble)
+library(tidyr)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  filter(BEP01FL == "Y") %>%
+  mutate(BMRKR3 = rnorm(n(), mean = 7, sd = 2))
+```

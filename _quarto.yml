@@ -119,7 +119,18 @@ website:
                 - file: tables/TET1/tet01a.qmd
                   text: TET1A
         - text: "---"
-        - auto: graphs
+        - file: graphs/index.qmd
+          text: Graphs
+          contents:
+            - file: graphs/ag01.qmd
+              text: AG1
+            - file: graphs/DG1/dg01.qmd
+              text: DG1
+              contents: 
+                - file: graphs/DG1/dg01a.qmd
+                  text: DG1A
+                - file: graphs/DG1/dg01b.qmd
+                  text: DG1B
         - text: "---"
         - text: Index
           file: bac_index.qmd

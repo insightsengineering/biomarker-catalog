@@ -1,0 +1,29 @@
+## Setup
+
+A setup similar to [KG1](../../graphs/KG1/kg01.qmd) is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine both into a new interaction variable `ARM_BMRKR2`.
+Since we are using biomarker information, we filter on the biomarker evaluable population using the flag variable `BEP01FL`.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS" & BEP01FL == "Y") %>%
+  mutate(
+    is_event = CNSR == 0,
+    BMRKR2_BIN = fct_collapse_only(
+      BMRKR2,
+      High = c("HIGH"),
+      Low = c("MEDIUM", "LOW")
+    ),
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    ARM_BMRKR2 = interaction(ARM_BIN, BMRKR2_BIN)
+  )
+
+variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM_BMRKR2")
+```

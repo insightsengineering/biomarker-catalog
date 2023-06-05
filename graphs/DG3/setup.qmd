@@ -1,0 +1,17 @@
+## Setup
+
+The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.
+
+We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the graph and will select on the biomarker evaluable population with `BEP01FL`.
+The column `BMRKR2` contains the biomarker values on a categorical scale.
+We will use `ARM` as categorical clinical variable.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+  df_explicit_na() %>%
+  filter(BEP01FL == "Y")
+```

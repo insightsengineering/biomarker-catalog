@@ -1,0 +1,32 @@
+---
+title: KG1A
+subtitle: Kaplan-Meier Graph for Biomarker Evaluable Population in One Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We can filter the dataset further for the biomarker evaluable population using the corresponding flag variable, here `BEP01FL`:
+
+```{r}
+adtte_arm_bep <- adtte_arm %>%
+  filter(BEP01FL == "Y")
+```
+
+Afterwards we can plot the basic KM graph, just using the further filtered dataset `adtte_bep`.
+Here we annotate the plot with median survival time, but could suppress it with `annot_surv_med = FALSE`.
+
+```{r}
+g_km(
+  df = adtte_arm_bep,
+  variables = variables,
+  annot_surv_med = TRUE
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

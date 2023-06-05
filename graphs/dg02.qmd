@@ -24,7 +24,7 @@ adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
   filter(BEP01FL == "Y")
 ```
 
-## Standard Plot
+## Plot
 
 Here below the code for a simple boxplot with the outliers displayed.
 Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs.

@@ -1,0 +1,34 @@
+---
+title: KG2
+subtitle: Kaplan-Meier Graphs by Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We can produce the basic plot using the `g_km()` function from `tern`.
+
+```{r}
+g_km(
+  df = adtte,
+  variables = variables,
+  annot_surv_med = FALSE
+)
+```
+
+We can also choose to annotate the plot with the median survival time for each of the treatment arms using the `annot_surv_med = TRUE` option.
+
+```{r}
+g_km(
+  df = adtte,
+  variables = variables,
+  annot_surv_med = TRUE
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

@@ -1,0 +1,37 @@
+---
+title: KG4B
+subtitle: Reorder and Rename Treatment Arms or Biomarker Groups in Kaplan-Meier Graph by Treatment Arm and Biomarker Subgroups
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+For reordering or renaming we can just modify the levels of the corresponding factors of the treatment arm and biomarker variables, and pass the result to `g_km()` as before.
+
+```{r}
+adtte_mod <- adtte %>%
+  mutate(
+    ARM_BMRKR2 = fct_collapse_only(
+      ARM_BMRKR2,
+      TRT.Low = "TRT.Low",
+      TRT.High = "TRT.High",
+      CTRL.Low = "CTRL.Low",
+      CTRL.High = "CTRL.High"
+    )
+  )
+
+g_km(
+  df = adtte_mod,
+  variables = variables,
+  annot_surv_med = FALSE,
+  col = c("red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2)
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

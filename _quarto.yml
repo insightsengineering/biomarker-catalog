@@ -131,6 +131,43 @@ website:
                   text: DG1A
                 - file: graphs/DG1/dg01b.qmd
                   text: DG1B
+            - file: graphs/dg02.qmd
+              text: DG2
+            - file: graphs/DG3/dg03.qmd
+              text: DG3
+              contents: 
+                - file: graphs/DG3/dg03a.qmd
+                  text: DG3A
+            - file: graphs/dg04.qmd
+              text: DG4
+            - file: graphs/KG1/kg01.qmd
+              text: KG1
+              contents: 
+                - file: graphs/KG1/kg01a.qmd
+                  text: KG1A
+                - file: graphs/KG1/kg01b.qmd
+                  text: KG1B
+            - file: graphs/KG2/kg02.qmd
+              text: KG2
+              contents: 
+                - file: graphs/KG2/kg02a.qmd
+                  text: KG2A
+            - file: graphs/kg03.qmd
+              text: KG3
+            - file: graphs/KG4/kg04.qmd
+              text: KG4
+              contents: 
+                - file: graphs/KG4/kg04a.qmd
+                  text: KG4A
+                - file: graphs/KG4/kg04b.qmd
+                  text: KG4B
+            - file: graphs/KG5/kg05.qmd
+              text: KG5
+              contents: 
+                - file: graphs/KG5/kg05a.qmd
+                  text: KG5A
+                - file: graphs/KG5/kg05b.qmd
+                  text: KG5B
         - text: "---"
         - text: Index
           file: bac_index.qmd

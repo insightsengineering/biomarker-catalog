@@ -1,0 +1,32 @@
+---
+title: KG5A
+subtitle: Specify Numerical Cutoff in Kaplan-Meier Graph by Treatment Arm and Continuous Biomarker Cut
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Alternatively we can also use the `cut()` function to cut the continuous biomarker variable `BMRKR1` into a factor with two levels `BMRKR1_CAT`, and then create its interaction with the treatment arm variable, to create effectively the same graphical comparison.
+
+```{r}
+adtte2 <- adtte %>%
+  mutate(
+    BMRKR1_CAT = cut(BMRKR1, c(0, 5, 22)),
+    ARM_BMRKR1 = interaction(ARM_BIN, BMRKR1_CAT)
+  )
+
+g_km(
+  df = adtte2,
+  variables = variables,
+  annot_surv_med = TRUE,
+  col = c("red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2)
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

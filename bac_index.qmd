@@ -16,7 +16,7 @@ toc-depth: 4
 
 -   [AG -- Utilities for All Graphs](./graphs/ag01.qmd)
 -   [DG -- Histograms, Barplots, Scatterplots](./graphs/DG1/dg01.qmd)
--   [KG -- Kaplan-Meier Graphs](./graphs/kg01.qmd)
+-   [KG -- Kaplan-Meier Graphs](./graphs/KG1/kg01.qmd)
 -   [RFG -- Response Forest Graphs](./graphs/rfg01.qmd)
 -   [RG -- Response Graphs](./graphs/rg01.qmd)
 -   [RNAG -- RNAseq Graphs](./graphs/rnag01.qmd)

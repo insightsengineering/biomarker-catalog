@@ -1,0 +1,15 @@
+## Setup
+
+The same setup as in [KG1](../../graphs/KG1/kg01.qmd) is used.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS") %>%
+  mutate(is_event = CNSR == 0)
+
+variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM")
+```

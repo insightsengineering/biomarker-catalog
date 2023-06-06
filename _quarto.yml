@@ -91,33 +91,42 @@ website:
           text: Tables
           contents:
             - file: tables/cmt01.qmd
-              text: CMT1
-            - file: tables/CMT2/cmt02.qmd
-              text: CMT2
+              text: CMT
               contents: 
-                - file: tables/CMT2/cmt02a.qmd
-                  text: CMT2A
-            - file: tables/cmt03.qmd
-              text: CMT3
+                - file: tables/cmt01.qmd
+                  text: CMT1
+                - file: tables/CMT2/cmt02.qmd
+                  text: CMT2
+                  contents: 
+                    - file: tables/CMT2/cmt02a.qmd
+                      text: CMT2A
+                - file: tables/cmt03.qmd
+                  text: CMT3
             - file: tables/DT1/dt01.qmd
-              text: DT1
+              text: DT
               contents: 
-                - file: tables/DT1/dt01a.qmd
-                  text: DT1A
-                - file: tables/DT1/dt01b.qmd
-                  text: DT1B
-                - file: tables/DT1/dt01c.qmd
-                  text: DT1C
-            - file: tables/DT2/dt02.qmd
-              text: DT2
-              contents: 
-                - file: tables/DT2/dt02a.qmd
-                  text: DT2A
+                - file: tables/DT1/dt01.qmd
+                  text: DT1
+                  contents: 
+                    - file: tables/DT1/dt01a.qmd
+                      text: DT1A
+                    - file: tables/DT1/dt01b.qmd
+                      text: DT1B
+                    - file: tables/DT1/dt01c.qmd
+                      text: DT1C
+                - file: tables/DT2/dt02.qmd
+                  text: DT2
+                  contents: 
+                    - file: tables/DT2/dt02a.qmd
+                      text: DT2A
             - file: tables/TET1/tet01.qmd
-              text: TET1
+              text: TET
               contents: 
-                - file: tables/TET1/tet01a.qmd
-                  text: TET1A
+                - file: tables/TET1/tet01.qmd
+                  text: TET1
+                  contents: 
+                    - file: tables/TET1/tet01a.qmd
+                      text: TET1A
         - text: "---"
         - file: graphs/index.qmd
           text: Graphs

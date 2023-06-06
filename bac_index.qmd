@@ -8,17 +8,22 @@ toc-depth: 4
 
 ### Tables
 
--   [CMT -- Cox Proportional Hazards Model Tables](./tables/cmt01.qmd)
--   [DT -- Demographics Tables](./tables/DT1/dt01.qmd)
--   [TET -- Time-to-Event Summary Tables](./tables/TET1/tet01.qmd)
+-   [CMT1 -- Cox Proportional Hazards Model Tables with a Single Covariate](./tables/cmt01.qmd)
+-   [CMT2 -- Cox Proportional Hazards Model Tables with Multiple Covariates](./tables/CMT2/cmt02.qmd)
+-   [CMT3 -- Cox Proportional Hazards Model Tables with Separate Models for Each Covariate](./tables/cmt03.qmd)
+-   [DT1 -- Demographics Tables Comparing BEP vs. Overall Population](./tables/DT1/dt01.qmd)
+-   [DT2 -- Demographics Tables Comparing BEP vs. non-BEP Population](./tables/DT2/dt02.qmd)
+-   [TET1 -- Time-to-Event Summary Tables](./tables/TET1/tet01.qmd)
 
 ### Graphs
 
 -   [AG -- Utilities for All Graphs](./graphs/ag01.qmd)
--   [DG -- Histograms, Barplots, Scatterplots](./graphs/DG1/dg01.qmd)
--   [KG -- Kaplan-Meier Graphs](./graphs/KG1/kg01.qmd)
--   [RFG -- Response Forest Graphs](./graphs/rfg01.qmd)
--   [RG -- Response Graphs](./graphs/rg01.qmd)
--   [RNAG -- RNAseq Graphs](./graphs/rnag01.qmd)
--   [SFG -- Survival Forest Graphs](./graphs/sfg01.qmd)
--   [SPG -- STEP Graphs](./graphs/spg01.qmd)
+-   [DG1 -- Histograms of Numeric Variables](./graphs/DG1/dg01.qmd)
+-   [DG2 -- Boxplots of a Numeric Variable by Categorical Variables](./graphs/dg02.qmd)
+-   [DG3 -- Barplots of Categorical Variables](./graphs/DG3/dg03.qmd)
+-   [DG4 -- Scatterplots of Two Numerical Variables](./graphs/dg04.qmd)
+-   [KG1 -- Kaplan-Meier Graphs for One Treatment Arm](./graphs/KG1/kg01.qmd)
+-   [KG2 -- Kaplan-Meier Graphs by Treatment Arm](./graphs/KG2/kg02.qmd)
+-   [KG3 -- Kaplan-Meier Graphs by Biomarker Subgroups](./graphs/kg03.qmd)
+-   [KG4 -- Kaplan-Meier Graphs by Treatment Arm and Biomarker Subgroups](./graphs/KG4/kg04.qmd)
+-   [KG5 -- Kaplan-Meier Graphs by Treatment Arm and Continuous Biomarker Cut](./graphs/KG5/kg05.qmd)

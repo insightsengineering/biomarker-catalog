@@ -1,0 +1,55 @@
+---
+title: RFG1A
+subtitle: Response Forest Graph Only by Categorical or Binned Continuous Biomarker
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We define a binned factor variable `BMRKR1_cut` from the continuous biomarker variable `BMRKR1` to illustrate.
+Note that the remaining code would work the same for an originally categorical biomarker.
+
+```{r, fig.width = 15}
+BMRKR1_cutpoint <- 5
+
+adrs2 <- adrs %>%
+  mutate(
+    BMRKR1 = ifelse(BEP01FL == "N", NA, BMRKR1),
+    BMRKR1_cut = explicit_na(factor(
+      ifelse(BMRKR1 > BMRKR1_cutpoint, "Greater", "Less")
+    ))
+  ) %>%
+  var_relabel(BMRKR1_cut = "Biomarker (Binned Continuous)")
+
+df <- extract_rsp_subgroups(
+  variables = list(
+    rsp = "is_rsp",
+    arm = "ARM_BIN",
+    subgroups = c("BMRKR1_cut", "BMRKR2")
+  ),
+  data = adrs2,
+  conf_level = 0.95
+)
+
+result <- basic_table() %>%
+  tabulate_rsp_subgroups(df, vars = c("n_tot", "n", "n_rsp", "prop", "or", "ci"))
+```
+
+We can remove the first line showing the `All Patients` category from the `result` table as follows.
+
+```{r}
+result <- result[-1, , keep_topleft = TRUE]
+```
+
+We can then produce the forest plot again using `g_forest()` on this trimmed `result` table.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

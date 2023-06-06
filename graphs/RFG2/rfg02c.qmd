@@ -1,0 +1,32 @@
+---
+title: RFG2C
+subtitle: Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups (Multiple Continuous Biomarkers with Stratification)
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Finally we can also specify stratification variables with the `strat` variable element, which leads to the use of conditional logistic regression models.
+
+```{r, fig.width = 15}
+df <- extract_rsp_biomarkers(
+  variables = list(
+    rsp = "COMPRESP",
+    biomarkers = c("BMRKR1", "AGE"),
+    covariates = "SEX",
+    subgroups = "BMRKR2",
+    strat = c("STRATA1", "STRATA2")
+  ),
+  data = adrs_f
+)
+
+result <- tabulate_rsp_biomarkers(df, vars = c("n_tot", "n_rsp", "prop", "or", "ci"))
+g_forest(result, xlim = c(0.7, 1.4))
+```
+
+{{< include ../../session_info.qmd >}}
+:::

@@ -32,3 +32,6 @@ toc-depth: 4
     -   [KG3 -- Kaplan-Meier Graphs by Biomarker Subgroups](./graphs/kg03.qmd)
     -   [KG4 -- Kaplan-Meier Graphs by Treatment Arm and Biomarker Subgroups](./graphs/KG4/kg04.qmd)
     -   [KG5 -- Kaplan-Meier Graphs by Treatment Arm and Continuous Biomarker Cut](./graphs/KG5/kg05.qmd)
+-   [RFG -- Response Forest Graphs](./graphs/RFG1/rfg01.qmd)
+    -   [RFG1 -- Response Forest Graphs for Comparing Treatment Effects Across Subgroups](./graphs/RFG1/rfg01.qmd)
+    -   [RFG2 -- Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups](./graphs/RFG2/rfg02a.qmd)

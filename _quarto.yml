@@ -91,35 +91,92 @@ website:
           text: Tables
           contents:
             - file: tables/cmt01.qmd
-              text: CMT1
-            - file: tables/CMT2/cmt02.qmd
-              text: CMT2
+              text: CMT
               contents: 
-                - file: tables/CMT2/cmt02a.qmd
-                  text: CMT2A
-            - file: tables/cmt03.qmd
-              text: CMT3
+                - file: tables/cmt01.qmd
+                  text: CMT1
+                - file: tables/CMT2/cmt02.qmd
+                  text: CMT2
+                  contents: 
+                    - file: tables/CMT2/cmt02a.qmd
+                      text: CMT2A
+                - file: tables/cmt03.qmd
+                  text: CMT3
             - file: tables/DT1/dt01.qmd
-              text: DT1
+              text: DT
               contents: 
-                - file: tables/DT1/dt01a.qmd
-                  text: DT1A
-                - file: tables/DT1/dt01b.qmd
-                  text: DT1B
-                - file: tables/DT1/dt01c.qmd
-                  text: DT1C
-            - file: tables/DT2/dt02.qmd
-              text: DT2
-              contents: 
-                - file: tables/DT2/dt02a.qmd
-                  text: DT2A
+                - file: tables/DT1/dt01.qmd
+                  text: DT1
+                  contents: 
+                    - file: tables/DT1/dt01a.qmd
+                      text: DT1A
+                    - file: tables/DT1/dt01b.qmd
+                      text: DT1B
+                    - file: tables/DT1/dt01c.qmd
+                      text: DT1C
+                - file: tables/DT2/dt02.qmd
+                  text: DT2
+                  contents: 
+                    - file: tables/DT2/dt02a.qmd
+                      text: DT2A
             - file: tables/TET1/tet01.qmd
-              text: TET1
+              text: TET
               contents: 
-                - file: tables/TET1/tet01a.qmd
-                  text: TET1A
+                - file: tables/TET1/tet01.qmd
+                  text: TET1
+                  contents: 
+                    - file: tables/TET1/tet01a.qmd
+                      text: TET1A
         - text: "---"
-        - auto: graphs
+        - file: graphs/index.qmd
+          text: Graphs
+          contents:
+            - file: graphs/ag01.qmd
+              text: AG1
+            - file: graphs/DG1/dg01.qmd
+              text: DG1
+              contents: 
+                - file: graphs/DG1/dg01a.qmd
+                  text: DG1A
+                - file: graphs/DG1/dg01b.qmd
+                  text: DG1B
+            - file: graphs/dg02.qmd
+              text: DG2
+            - file: graphs/DG3/dg03.qmd
+              text: DG3
+              contents: 
+                - file: graphs/DG3/dg03a.qmd
+                  text: DG3A
+            - file: graphs/dg04.qmd
+              text: DG4
+            - file: graphs/KG1/kg01.qmd
+              text: KG1
+              contents: 
+                - file: graphs/KG1/kg01a.qmd
+                  text: KG1A
+                - file: graphs/KG1/kg01b.qmd
+                  text: KG1B
+            - file: graphs/KG2/kg02.qmd
+              text: KG2
+              contents: 
+                - file: graphs/KG2/kg02a.qmd
+                  text: KG2A
+            - file: graphs/kg03.qmd
+              text: KG3
+            - file: graphs/KG4/kg04.qmd
+              text: KG4
+              contents: 
+                - file: graphs/KG4/kg04a.qmd
+                  text: KG4A
+                - file: graphs/KG4/kg04b.qmd
+                  text: KG4B
+            - file: graphs/KG5/kg05.qmd
+              text: KG5
+              contents: 
+                - file: graphs/KG5/kg05a.qmd
+                  text: KG5A
+                - file: graphs/KG5/kg05b.qmd
+                  text: KG5B
         - text: "---"
         - text: Index
           file: bac_index.qmd

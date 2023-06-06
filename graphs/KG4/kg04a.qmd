@@ -1,0 +1,28 @@
+---
+title: KG4A
+subtitle: Change Color and Line Type in Kaplan-Meier Graph by Treatment Arm and Biomarker Subgroups
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We can customize the color and line type used in the graph with the `col` and `lty` arguments of `g_km()`.
+We can first check the level order of the `ARM_BMRKR2` factor variable to know which color and line type order we need.
+
+```{r}
+levels(adtte$ARM_BMRKR2)
+g_km(
+  df = adtte,
+  variables = variables,
+  annot_surv_med = TRUE,
+  col = c("green", "orange", "green", "orange"),
+  lty = c(5, 5, 3, 3)
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

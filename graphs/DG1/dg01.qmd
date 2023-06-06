@@ -1,0 +1,51 @@
+---
+title: DG1
+subtitle: Histograms of Numeric Variables
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+In this example, we will create a combined histogram/density graph of a continuous biomarker variable.
+Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs.
+To avoid these warning messages, you can use the `drop_na()` function from `tidyr` in the data manipulation step above to remove the NAs rows from the dataset (e.g `drop_na(BMRKR1)`).
+
+```{r}
+graph <- ggplot(adsl, aes(BMRKR1)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30) +
+  geom_density(aes(y = after_stat(density)))
+
+graph
+```
+
+We can also calculate some descriptive statistics and populate a table that we can overlay on top of the plot.
+The `tibble` function is used to build a data frame `data_tb` with 3 variables.
+The `x` and `y` variables represent the coordinates on the plot to show the statistic values and can be modified based on preference.
+For example, `x = 1` and `y = 1` will put the statistics table in the top right corner of the graph, while `x = 0` and `y = 0` will put the statistics table in the bottom left corner of the graph.
+The `tb` variable contains the statistics to be shown on the plot, in the form of a nested list column starting from the original statistics tibble `orig_tb`.
+Finally, we can use the `geom_table_npc()` layer function to process the `data_tb` input and add the statistics table to the existing graph.
+
+```{r}
+orig_tb <- with(adsl, tribble(
+  ~Statistic, ~Value,
+  "N", length(BMRKR1),
+  "SD", sd(BMRKR1),
+  "Median", median(BMRKR1),
+  "Min.", min(BMRKR1),
+  "Max.", max(BMRKR1)
+))
+
+data_tb <- tibble(x = 1, y = 1, tb = list(orig_tb))
+
+graph <- graph +
+  geom_table_npc(data = data_tb, aes(npcx = x, npcy = y, label = tb))
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

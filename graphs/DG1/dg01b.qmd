@@ -1,0 +1,26 @@
+---
+title: DG1B
+subtitle: Histogram of One Numeric Variable by Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Below example shows histograms for the `BMRKR1` variable by treatment `ARM`.
+Including a statistics table in this graph works in the same way as we did above for DG1A.
+
+```{r}
+graph <- ggplot(adsl, aes(BMRKR1)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30) +
+  geom_density(aes(y = after_stat(density))) +
+  facet_grid(ARM ~ .)
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

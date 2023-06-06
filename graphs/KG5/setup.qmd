@@ -1,0 +1,27 @@
+## Setup
+
+A setup similar to [KG4](../../graphs/KG4/kg04.qmd) is used.
+The difference here is that we create the initial binary biomarker variable `BMRKR1_BIN` from comparing the continuous biomarker variable `BMRKR1` with a cutoff of interest.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(PARAMCD == "OS" & BEP01FL == "Y") %>%
+  mutate(
+    is_event = CNSR == 0,
+    BMRKR1_BIN = ifelse(
+      BMRKR1 > 5, "High", "Low"
+    ),
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    ARM_BMRKR1 = interaction(ARM_BIN, BMRKR1_BIN)
+  )
+
+variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM_BMRKR1")
+```

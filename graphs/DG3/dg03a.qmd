@@ -1,0 +1,46 @@
+---
+title: DG3A
+subtitle: Barplot of a Categorical Variable by Another Categorical Variable
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Here below the code for a simple distribution of the category counts of a first biomarker variable (`BMRKR2`) split by a second categorical variable (`ARM`).
+We can use again the `facet_grid()` layer.
+
+```{r}
+graph <- ggplot(adsl, aes(BMRKR2)) +
+  geom_bar() +
+  facet_grid(. ~ ARM)
+
+graph
+```
+
+We could instead display the columns next to each other within the same graph with the `fill` aesthetic and the `position_dodge()` option instead of using the `facet_grid()` layer.
+
+```{r}
+graph <- ggplot(adsl, aes(ARM, fill = BMRKR2)) +
+  geom_bar(position = position_dodge())
+
+graph
+```
+
+We can then again add the absolute count above each of the columns.
+
+```{r}
+graph +
+  geom_text(
+    stat = "count",
+    aes(label = after_stat(count)),
+    position = position_dodge(0.9),
+    vjust = -.5
+  )
+```
+
+{{< include ../../session_info.qmd >}}
+:::

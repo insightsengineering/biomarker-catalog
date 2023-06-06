@@ -1,0 +1,35 @@
+---
+title: KG5B
+subtitle: More than Two Groups in Kaplan-Meier Graph by Treatment Arm and Continuous Biomarker Cut
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+The advantage of using the `cut()` function is that it is sufficient to add additional cutoffs in order to obtain more than two bins for the cut version of the continuous biomarker variable.
+Again we can check the order of the factor levels to determine the `col` and `lty` arguments for `g_km()`.
+Here we want to always use red for the control and blue for the treatment arm, and then vary the line type for the different biomarker bins.
+
+```{r, fig.width = 12, fig.height = 10}
+adtte3 <- adtte %>%
+  mutate(
+    BMRKR1_CAT = cut(BMRKR1, c(0, 5, 10, 22)),
+    ARM_BMRKR1 = interaction(ARM_BIN, BMRKR1_CAT)
+  )
+levels(adtte3$ARM_BMRKR1)
+
+g_km(
+  df = adtte3,
+  variables = variables,
+  annot_surv_med = TRUE,
+  col = c("red", "blue", "red", "blue", "red", "blue"),
+  lty = c(1, 1, 2, 2, 3, 3)
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

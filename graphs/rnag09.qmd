@@ -17,6 +17,7 @@ We define an event indicator variable, transform the time to months and filter d
 
 ```{r, message = FALSE}
 library(tern)
+library(dplyr)
 
 adtte_f <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   dplyr::mutate(

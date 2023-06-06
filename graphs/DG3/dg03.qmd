@@ -1,0 +1,87 @@
+---
+title: DG3
+subtitle: Barplots of Categorical Variables
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Here below the code for a simple barplot showing the counts of the categories.
+
+```{r}
+graph <- ggplot(adsl, aes(BMRKR2)) +
+  geom_bar()
+
+graph
+```
+
+We can customize the labels of the axes.
+
+```{r}
+graph +
+  scale_x_discrete(
+    breaks = c("LOW", "MEDIUM", "HIGH"),
+    labels = c("Low", "Medium", "High"),
+    name = "Biomarker"
+  ) +
+  scale_y_continuous(name = "count")
+```
+
+We can also add the absolute count above each of the columns.
+
+```{r}
+graph +
+  geom_text(
+    stat = "count",
+    aes(label = after_stat(count)),
+    vjust = -.5
+  )
+```
+
+If instead of counts we want to display the percentages then the following options could be used:
+
+```{r}
+graph <- ggplot(
+  adsl,
+  aes(
+    x = BMRKR2,
+    y = prop.table(after_stat(count)),
+    label = scales::percent(prop.table(after_stat(count)))
+  )
+) +
+  geom_bar()
+
+graph
+```
+
+We can customize the axes.
+
+```{r}
+graph +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    name = "Proportion (%)"
+  ) +
+  scale_x_discrete(
+    breaks = c("LOW", "MEDIUM", "HIGH"),
+    labels = c("Low", "Medium", "High"),
+    name = "Biomarker"
+  )
+```
+
+We can add the percentages above each of the columns.
+
+```{r}
+graph +
+  geom_text(
+    stat = "count",
+    vjust = -0.5
+  )
+```
+
+{{< include ../../session_info.qmd >}}
+:::

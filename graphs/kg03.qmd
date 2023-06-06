@@ -8,7 +8,7 @@ subtitle: Kaplan-Meier Graphs by Biomarker Subgroups
 ::: panel-tabset
 ## Setup
 
-The same data set as in [KG1A](../graphs/kg01.qmd) is used.
+The same data set as in [KG1A](../graphs/KG1/kg01a.qmd) is used.
 The difference is that here we use the categorical biomarker variable `BMRKR2` as the treatment arm in `variables` which is then used by `g_km()` below.
 
 ```{r, message = FALSE}
@@ -23,7 +23,7 @@ adtte_arm_bep <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
 variables <- list(tte = "AVAL", is_event = "is_event", arm = "BMRKR2")
 ```
 
-## Standard Plot
+## Plot
 
 We can produce the basic plot using the `g_km()` function from `tern`.
 

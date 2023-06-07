@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.361">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Biomarker Analysis Catalog - RNAG10</title>
 <style>
@@ -87,7 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script><script type="text/plain" cookie-consent="tracking">
 
@@ -153,7 +154,7 @@ cookieconsent.run({
   </div>
 </a>
 </div>
-            <div id="quarto-search" class="" title="true"></div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -620,7 +621,7 @@ Loglik converged before variable 1 ; coefficient may be infinite.</code></pre>
 <span id="cb7-24"><a href="#cb7-24"></a>  )</span>
 <span id="cb7-25"><a href="#cb7-25"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-06-06 15:12:39.8720 pid:4666 token:[] teal.modules.hermes Initializing tm_g_forest_tte</code></pre>
+<pre><code>[INFO] 2023-06-07 17:48:03.0079 pid:4666 token:[] teal.modules.hermes Initializing tm_g_forest_tte</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
@@ -663,8 +664,8 @@ other attached packages:
  [9] GenomicRanges_1.50.2           GenomeInfoDb_1.34.9           
 [11] IRanges_2.32.0                 S4Vectors_0.36.2              
 [13] BiocGenerics_0.44.0            MatrixGenerics_1.10.0         
-[15] matrixStats_0.63.0             ggfortify_0.4.16              
-[17] ggplot2_3.4.2                  tern_0.8.2.9005               
+[15] matrixStats_1.0.0              ggfortify_0.4.16              
+[17] ggplot2_3.4.2                  tern_0.8.2.9006               
 [19] rtables_0.6.1.9002             magrittr_2.0.3                
 [21] formatters_0.5.0.9000         
 
@@ -683,7 +684,7 @@ loaded via a namespace (and not attached):
  [23] textshaping_0.3.6           rbibutils_2.2.13           
  [25] xfun_0.39                   dplyr_1.1.2                
  [27] callr_3.7.3                 crayon_1.5.2               
- [29] RCurl_1.98-1.12             jsonlite_1.8.4             
+ [29] RCurl_1.98-1.12             jsonlite_1.8.5             
  [31] survival_3.5-5              iterators_1.0.14           
  [33] glue_1.6.2                  gtable_0.3.3               
  [35] zlibbioc_1.44.0             XVector_0.38.0             
@@ -706,30 +707,30 @@ loaded via a namespace (and not attached):
  [69] broom_1.0.4                 evaluate_0.21              
  [71] stringr_1.5.0               fastmap_1.1.1              
  [73] ragg_1.2.5                  yaml_2.3.7                 
- [75] processx_3.8.1              knitr_1.42                 
+ [75] processx_3.8.1              knitr_1.43                 
  [77] bit64_4.0.5                 purrr_1.0.1                
  [79] KEGGREST_1.38.0             teal.reporter_0.1.1.9015   
  [81] mime_0.12                   xml2_1.3.4                 
  [83] biomaRt_2.54.1              compiler_4.2.2             
- [85] filelock_1.0.2              curl_5.0.0                 
- [87] png_0.1-8                   tibble_3.2.1               
- [89] bslib_0.4.2                 stringi_1.7.12             
- [91] ps_1.7.5                    forcats_1.0.0              
- [93] logger_0.2.2                lattice_0.21-8             
- [95] Matrix_1.5-4.1              shinyjs_2.1.0              
- [97] vctrs_0.6.2                 pillar_1.9.0               
- [99] lifecycle_1.0.3             Rdpack_2.4                 
-[101] jquerylib_0.1.4             GlobalOptions_0.1.2        
-[103] bitops_1.0-7                httpuv_1.6.11              
-[105] R6_2.5.1                    teal.widgets_0.3.0.9000    
-[107] promises_1.2.0.1            gridExtra_2.3              
-[109] codetools_0.2-19            assertthat_0.2.1           
-[111] fontawesome_0.5.1           rjson_0.2.21               
-[113] shinyWidgets_0.7.6          withr_2.5.0                
-[115] GenomeInfoDbData_1.2.9      parallel_4.2.2             
-[117] hms_1.1.3                   MultiAssayExperiment_1.24.0
-[119] grid_4.2.2                  tidyr_1.3.0                
-[121] rmarkdown_2.21             </code></pre>
+ [85] rstudioapi_0.14             filelock_1.0.2             
+ [87] curl_5.0.0                  png_0.1-8                  
+ [89] tibble_3.2.1                bslib_0.4.2                
+ [91] stringi_1.7.12              ps_1.7.5                   
+ [93] forcats_1.0.0               logger_0.2.2               
+ [95] lattice_0.21-8              Matrix_1.5-4.1             
+ [97] shinyjs_2.1.0               vctrs_0.6.2                
+ [99] pillar_1.9.0                lifecycle_1.0.3            
+[101] Rdpack_2.4                  jquerylib_0.1.4            
+[103] GlobalOptions_0.1.2         bitops_1.0-7               
+[105] httpuv_1.6.11               R6_2.5.1                   
+[107] teal.widgets_0.3.0.9000     promises_1.2.0.1           
+[109] gridExtra_2.3               codetools_0.2-19           
+[111] assertthat_0.2.1            fontawesome_0.5.1          
+[113] rjson_0.2.21                shinyWidgets_0.7.6         
+[115] withr_2.5.0                 GenomeInfoDbData_1.2.9     
+[117] parallel_4.2.2              hms_1.1.3                  
+[119] MultiAssayExperiment_1.24.0 grid_4.2.2                 
+[121] tidyr_1.3.0                 rmarkdown_2.22             </code></pre>
 </div>
 </div>
 </div>

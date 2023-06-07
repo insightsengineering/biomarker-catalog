@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.361">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Biomarker Analysis Catalog - RFG2</title>
 <style>
@@ -87,7 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script><script type="text/plain" cookie-consent="tracking">
 
@@ -153,7 +154,7 @@ cookieconsent.run({
   </div>
 </a>
 </div>
-            <div id="quarto-search" class="" title="true"></div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -658,9 +659,9 @@ other attached packages:
  [3] Biobase_2.58.0              GenomicRanges_1.50.2       
  [5] GenomeInfoDb_1.34.9         IRanges_2.32.0             
  [7] S4Vectors_0.36.2            BiocGenerics_0.44.0        
- [9] MatrixGenerics_1.10.0       matrixStats_0.63.0         
+ [9] MatrixGenerics_1.10.0       matrixStats_1.0.0          
 [11] ggfortify_0.4.16            ggplot2_3.4.2              
-[13] dplyr_1.1.2                 tern_0.8.2.9005            
+[13] dplyr_1.1.2                 tern_0.8.2.9006            
 [15] rtables_0.6.1.9002          magrittr_2.0.3             
 [17] formatters_0.5.0.9000      
 
@@ -679,40 +680,40 @@ loaded via a namespace (and not attached):
 [23] xml2_1.3.4                  DelayedArray_0.24.0        
 [25] scales_1.2.1                checkmate_2.2.0            
 [27] rappdirs_0.3.3              stringr_1.5.0              
-[29] digest_0.6.31               rmarkdown_2.21             
+[29] digest_0.6.31               rmarkdown_2.22             
 [31] XVector_0.38.0              pkgconfig_2.0.3            
 [33] htmltools_0.5.5             dbplyr_2.3.2               
 [35] fastmap_1.1.1               htmlwidgets_1.6.2          
 [37] rlang_1.1.1                 GlobalOptions_0.1.2        
-[39] RSQLite_2.3.1               shape_1.4.6                
-[41] generics_0.1.3              jsonlite_1.8.4             
-[43] RCurl_1.98-1.12             GenomeInfoDbData_1.2.9     
-[45] Matrix_1.5-4.1              Rcpp_1.0.10                
-[47] munsell_0.5.0               fansi_1.0.4                
-[49] lifecycle_1.0.3             stringi_1.7.12             
-[51] yaml_2.3.7                  zlibbioc_1.44.0            
-[53] BiocFileCache_2.6.1         blob_1.2.4                 
-[55] grid_4.2.2                  parallel_4.2.2             
-[57] ggrepel_0.9.3               forcats_1.0.0              
-[59] crayon_1.5.2                lattice_0.21-8             
-[61] Biostrings_2.66.0           splines_4.2.2              
-[63] hms_1.1.3                   KEGGREST_1.38.0            
-[65] circlize_0.4.15             knitr_1.42                 
-[67] ComplexHeatmap_2.14.0       pillar_1.9.0               
-[69] rjson_0.2.21                codetools_0.2-19           
-[71] biomaRt_2.54.1              XML_3.99-0.14              
-[73] glue_1.6.2                  evaluate_0.21              
-[75] MultiAssayExperiment_1.24.0 png_0.1-8                  
-[77] vctrs_0.6.2                 Rdpack_2.4                 
-[79] foreach_1.5.2               gtable_0.3.3               
-[81] purrr_1.0.1                 tidyr_1.3.0                
-[83] clue_0.3-64                 assertthat_0.2.1           
-[85] cachem_1.0.8                xfun_0.39                  
-[87] scda_0.1.6.9001             rbibutils_2.2.13           
-[89] broom_1.0.4                 survival_3.5-5             
-[91] tibble_3.2.1                iterators_1.0.14           
-[93] memoise_2.0.1               AnnotationDbi_1.60.2       
-[95] cluster_2.1.4              </code></pre>
+[39] rstudioapi_0.14             RSQLite_2.3.1              
+[41] shape_1.4.6                 generics_0.1.3             
+[43] jsonlite_1.8.5              RCurl_1.98-1.12            
+[45] GenomeInfoDbData_1.2.9      Matrix_1.5-4.1             
+[47] Rcpp_1.0.10                 munsell_0.5.0              
+[49] fansi_1.0.4                 lifecycle_1.0.3            
+[51] stringi_1.7.12              yaml_2.3.7                 
+[53] zlibbioc_1.44.0             BiocFileCache_2.6.1        
+[55] blob_1.2.4                  grid_4.2.2                 
+[57] parallel_4.2.2              ggrepel_0.9.3              
+[59] forcats_1.0.0               crayon_1.5.2               
+[61] lattice_0.21-8              Biostrings_2.66.0          
+[63] splines_4.2.2               hms_1.1.3                  
+[65] KEGGREST_1.38.0             circlize_0.4.15            
+[67] knitr_1.43                  ComplexHeatmap_2.14.0      
+[69] pillar_1.9.0                rjson_0.2.21               
+[71] codetools_0.2-19            biomaRt_2.54.1             
+[73] XML_3.99-0.14               glue_1.6.2                 
+[75] evaluate_0.21               MultiAssayExperiment_1.24.0
+[77] png_0.1-8                   vctrs_0.6.2                
+[79] Rdpack_2.4                  foreach_1.5.2              
+[81] gtable_0.3.3                purrr_1.0.1                
+[83] tidyr_1.3.0                 clue_0.3-64                
+[85] assertthat_0.2.1            cachem_1.0.8               
+[87] xfun_0.39                   scda_0.1.6.9001            
+[89] rbibutils_2.2.13            broom_1.0.4                
+[91] survival_3.5-5              tibble_3.2.1               
+[93] iterators_1.0.14            memoise_2.0.1              
+[95] AnnotationDbi_1.60.2        cluster_2.1.4              </code></pre>
 </div>
 </div>
 </div>

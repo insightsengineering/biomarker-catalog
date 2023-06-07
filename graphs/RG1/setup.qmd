@@ -1,0 +1,19 @@
+## Setup
+
+We will use the `synthetic_cdisc_data$adrs` data set from the `scda` package to create the response plots.
+We transform the response variable into an `ordered` factor to ensure that the response labels are ordered correctly and a sequential color scheme is used in the graph.
+We select Best Confirmed Overall Response by Investigator to evaluate response.
+Finally, we select patients with measurable disease at baseline `(BMEASIFL == "Y")` as response evaluable patients.
+
+For `ggplot()` used in all analyses, we add `by = BMEASIFL` in the aesthetics to support the calculation of proportions using `geom_text(stat = "prop")`.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+  df_explicit_na() %>%
+  mutate(AVALC = ordered(AVALC, levels = c("<Missing>", "NE", "PD", "SD", "PR", "CR"))) %>%
+  filter(PARAMCD == "BESRSPI", BMEASIFL == "Y")
+```

@@ -1,0 +1,24 @@
+---
+title: RG1
+subtitle: Response Graphs for Overall Population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+```{r}
+graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC, by = BMEASIFL)) +
+  geom_bar(aes(BMEASIFL), position = "fill") +
+  geom_text(stat = "prop", position = position_fill(.5)) +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("%")
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

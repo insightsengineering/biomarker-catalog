@@ -35,3 +35,8 @@ toc-depth: 4
 -   [RFG -- Response Forest Graphs](./graphs/RFG1/rfg01.qmd)
     -   [RFG1 -- Response Forest Graphs for Comparing Treatment Effects Across Subgroups](./graphs/RFG1/rfg01.qmd)
     -   [RFG2 -- Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups](./graphs/RFG2/rfg02a.qmd)
+    -   [RFG3 -- Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff](./graphs/rfg03.qmd)
+-   [RG -- Response Graphs](./graphs/RG1/rg01.qmd)
+    -   [RG1 -- Response Graphs for Overall Population](./graphs/RG1/rg01.qmd)
+    -   [RG2 -- Response Graphs by Treatment Arms](./graphs/RG2/rg02.qmd)
+    -   [RG3 -- Response Graphs Comparing BEP vs. Overall Population](./graphs/RG3/rg03.qmd)

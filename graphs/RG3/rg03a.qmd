@@ -1,0 +1,33 @@
+---
+title: RG3A
+subtitle: Response Graph Comparing Subgroups of BEP
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+In this example we compare the responses across subgroups of the BEP defined by the levels of a categorical biomarker, and overall BEP, again using the `facet_grid()` layer with the option `margins = TRUE`.
+We do need to filter first on the BEP flag to restrict the data to the BEP.
+
+```{r}
+adrs_bep <- adrs %>%
+  filter(BEP01FL == "Y")
+
+graph <- ggplot(adrs_bep, aes(BMEASIFL, fill = AVALC_BIN, by = BMEASIFL)) +
+  geom_bar(position = "fill") +
+  scale_y_continuous(
+    labels = scales::percent,
+    name = "Proportion %"
+  ) +
+  geom_text(stat = "prop", position = position_fill(.5), colour = "white") +
+  facet_grid(BMRKR2 ~ ARM_BIN, margins = TRUE)
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

@@ -203,6 +203,32 @@ website:
                       text: RFG2B
                     - file: graphs/RFG2/rfg02c.qmd
                       text: RFG2C
+                - file: graphs/rfg03.qmd
+                  text: RFG3
+            - file: graphs/RG1/rg01.qmd
+              text: RG
+              contents:     
+                - file: graphs/RG1/rg01.qmd
+                  text: RG1
+                  contents: 
+                    - file: graphs/RG1/rg01a.qmd
+                      text: RG1A
+                    - file: graphs/RG1/rg01b.qmd
+                      text: RG1B
+                    - file: graphs/RG1/rg01c.qmd
+                      text: RG1C
+                - file: graphs/RG2/rg02.qmd
+                  text: RG2
+                  contents: 
+                    - file: graphs/RG2/rg02a.qmd
+                      text: RG2A
+                - file: graphs/RG3/rg03.qmd
+                  text: RG3
+                  contents: 
+                    - file: graphs/RG3/rg03a.qmd
+                      text: RG3A
+                    - file: graphs/RG3/rg03b.qmd
+                      text: RG3B
         - text: "---"
         - text: Index
           file: bac_index.qmd

@@ -40,3 +40,6 @@ toc-depth: 4
     -   [RG1 -- Response Graphs for Overall Population](./graphs/RG1/rg01.qmd)
     -   [RG2 -- Response Graphs by Treatment Arms](./graphs/RG2/rg02.qmd)
     -   [RG3 -- Response Graphs Comparing BEP vs. Overall Population](./graphs/RG3/rg03.qmd)
+-   [SPG -- STEP Graphs](./graphs/spg01.qmd)
+    -   [SPG1 -- STEP Graphs for Survival Outcome](./graphs/spg01.qmd)
+    -   [SPG2 -- STEP Graphs for Response Outcome](./graphs/spg02.qmd)

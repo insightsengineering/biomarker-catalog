@@ -229,6 +229,13 @@ website:
                       text: RG3A
                     - file: graphs/RG3/rg03b.qmd
                       text: RG3B
+            - file: graphs/spg01.qmd
+              text: SPG
+              contents:     
+                - file: graphs/spg01.qmd
+                  text: SPG1
+                - file: graphs/spg02.qmd
+                  text: SPG2
         - text: "---"
         - text: Index
           file: bac_index.qmd

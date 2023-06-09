@@ -1,0 +1,47 @@
+---
+title: SFG1A
+subtitle: Survival Forest Graph Only by Categorical Biomarker
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+This works analogously to [SFG1](sfg01.qmd), we just only include `BMRKR2` in the `subgroups` list element.
+
+```{r}
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = "BMRKR2"
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now remove the first line with `All Patients` and the last line with the `<Missing>` category from the `result` table to display the survival forest plot only by the categorical biomarker `BMRKR2`.
+
+```{r}
+result <- result[c(-1, -6), , keep_topleft = TRUE]
+```
+
+We can then again produce the forest plot using `g_forest()`.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

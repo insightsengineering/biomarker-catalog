@@ -1,0 +1,25 @@
+## Setup
+
+We prepare the data similarly as in [SFG1](../../graphs/SFG1/sfg01.qmd), focusing on a single arm in the biomarker evaluable population.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS",
+    ARM == "A: Drug X",
+    BEP01FL == "Y"
+  ) %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR1 = "Biomarker (Countinuous)"
+  )
+```

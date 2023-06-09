@@ -1,0 +1,52 @@
+---
+title: SFG6A
+subtitle: Survival Forest Graph for Multiple Continuous Biomarkers
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Here we specify that we would like to analyze the two continuous biomarkers `BMRKR1` and `AGE`, conditional on the covariate `SEX`, in the subgroups defined by the levels of `BMRKR2`.
+
+```{r}
+df <- extract_survival_biomarkers(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    biomarkers = c("BMRKR1", "AGE"),
+    covariates = "SEX",
+    subgroups = "BMRKR2"
+  ),
+  data = adtte_f
+)
+
+result <- tabulate_survival_biomarkers(
+  df = df,
+  vars = c("n_tot_events", "n_tot", "median", "hr", "ci"),
+  time_unit = adtte_f$AVALU[1]
+)
+```
+
+We can look at the result in the console already.
+
+```{r}
+result
+```
+
+Note that in addition to the `Categorical Level Biomarker 2` subgroups we automatically also get the estimates for the overall patient population in the `All Patients` rows.
+
+We can then produce the final forest plot using the `g_forest()` function on this tabular result.
+
+```{r, fig.width = 15}
+g_forest(result, xlim = c(0.7, 1.4))
+```
+
+Here we can see that the continuous biomarker (`BMRKR1`) shows a trend towards an estimated positive effect on survival (it is not statistically significant though as the confidence intervals still overlap the hazard ratio 1).
+It is a bit easier to see this here rather than in a cutpoint analysis as presented in [SFG3](../../graphs/SFG3/sfg03.qmd).
+
+{{< include ../../session_info.qmd >}}
+:::

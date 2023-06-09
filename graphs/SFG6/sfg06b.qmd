@@ -1,0 +1,43 @@
+---
+title: SFG6B
+subtitle: Survival Forest Graph for Multiple Continuous Biomarkers by Manual Subgroup Categories
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+It is also possible to join and select subgroup categories manually using the `groups_lists` argument, as follows.
+Here we join the low and medium levels of `BMRKR2` into a category `one` and compare with the high level labeled as category `two`.
+
+```{r, fig.width = 15}
+df <- extract_survival_biomarkers(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    biomarkers = c("BMRKR1", "AGE"),
+    covariates = "SEX",
+    subgroups = "BMRKR2"
+  ),
+  data = adtte_f,
+  groups_list = list(
+    BMRKR2 = list(
+      one = c("LOW", "MEDIUM"),
+      two = "HIGH"
+    )
+  )
+)
+
+result <- tabulate_survival_biomarkers(
+  df = df,
+  vars = c("n_tot_events", "n_tot", "median", "hr", "ci"),
+  time_unit = adtte_f$AVALU[1]
+)
+g_forest(result, xlim = c(0.7, 1.4))
+```
+
+{{< include ../../session_info.qmd >}}
+:::

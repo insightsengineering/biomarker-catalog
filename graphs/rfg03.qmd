@@ -9,7 +9,7 @@ subtitle: Response Forest Graphs Within Treatment Arms by Continuous Biomarker C
 ## Setup
 
 For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups.
-This is similar to [SFG04](../graphs/sfg04.qmd#L31).
+This is similar to [SFG04](../graphs/sfg04.qmd).
 
 Similarly like in [RFG1](../graphs/RFG1/rfg01.qmd).
 

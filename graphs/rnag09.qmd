@@ -63,7 +63,7 @@ binned_data <- joined_data %>%
   df_explicit_na()
 ```
 
-## Kaplan-Meier Graph (RNAG9A)
+## Kaplan-Meier Graph
 
 It is now simple to create the Kaplan-Meier graph by providing the data set created above with the variable specification.
 Note that we specify the above created `gene_factor` as arm variable here.
@@ -81,7 +81,7 @@ g_km(
 )
 ```
 
-See [KG1](../graphs/kg01.qmd) to [KG5](../graphs/kg05.qmd) for additional customization options for the Kaplan-Meier graphs or the help page `?g_km()`.
+See [KG1](../graphs/KG1/kg01.qmd) to [KG5](../graphs/KG5/kg05.qmd) for additional customization options for the Kaplan-Meier graphs or the help page `?g_km()`.
 
 ## Teal Module for Kaplan-Meier Graph
 

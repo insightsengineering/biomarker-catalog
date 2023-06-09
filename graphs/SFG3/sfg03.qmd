@@ -1,0 +1,60 @@
+---
+title: SFG3
+subtitle: Survival Forest Graphs for One Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We define a vector of all cutpoints to use for a numeric biomarker (here `BMRKR1`).
+We `lapply()` over this vector, each time generating a binary factor variable `BMRKR1_cut` and then tabulating the resulting statistics as e.g. in [SFG1](../../graphs/SFG1/sfg01.qmd).
+Then we `rbind()` all tables in the list together.
+
+```{r}
+all_cutpoints <- c(2.5, 5, 7.5, 10)
+
+tables_all_cutpoints <- lapply(all_cutpoints, function(cutpoint) {
+  adtte_cut <- adtte %>%
+    mutate(
+      BMRKR1_cut = explicit_na(factor(
+        ifelse(BMRKR1 > cutpoint, "Greater", "Less")
+      ))
+    )
+  tbl <- extract_survival_subgroups(
+    variables = list(
+      tte = "AVAL",
+      is_event = "is_event",
+      arm = "BMRKR1_cut"
+    ),
+    label_all = paste0("BMRKR1 (", cutpoint, ")"),
+    data = adtte_cut
+  )
+  basic_table() %>%
+    tabulate_survival_subgroups(
+      df = tbl,
+      vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+      time_unit = adtte_cut$AVALU[1]
+    )
+})
+result <- do.call(rbind, tables_all_cutpoints)
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+Notice that the `result` object in these derivation steps has lost its attributes.
+In order to specify the column indices for the estimator, confidence interval, and header, we need to derive the attributes from one of the original tables and specify them using the `col_x`, `col_y` and `forest_header` arguments of `g_forest()`.
+
+```{r, fig.width = 15}
+one_table <- tables_all_cutpoints[[1]]
+g_forest(result,
+  col_x = attr(one_table, "col_x"),
+  col_ci = attr(one_table, "col_ci"),
+  forest_header = attr(one_table, "forest_header")
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

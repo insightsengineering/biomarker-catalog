@@ -1,0 +1,48 @@
+---
+title: SFG2C
+subtitle: Survival Forest Graph for Overall Population and by Percentiles of Continuous Biomarker Within Percentile Cutoff Bins
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Here we use the biomarker variable `BMRKR1_BIN` with its original percentage bins to tabulate the statistics to be able to use as an input for the forest plot.
+
+```{r}
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We remove the last line with the `<Missing>` level.
+
+```{r}
+result <- result[-10, , keep_topleft = TRUE]
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

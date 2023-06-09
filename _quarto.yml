@@ -236,6 +236,75 @@ website:
                   text: SPG1
                 - file: graphs/spg02.qmd
                   text: SPG2
+            - file: graphs/rnag01.qmd
+              text: RNAG
+              contents:     
+                - file: graphs/rnag01.qmd
+                  text: RNAG1
+                - file: graphs/rnag02.qmd
+                  text: RNAG2
+                - file: graphs/rnag03.qmd
+                  text: RNAG3
+                - file: graphs/rnag04.qmd
+                  text: RNAG4
+                - file: graphs/rnag05.qmd
+                  text: RNAG5
+                - file: graphs/rnag06.qmd
+                  text: RNAG6
+                - file: graphs/rnag07.qmd
+                  text: RNAG7
+                - file: graphs/rnag08.qmd
+                  text: RNAG8
+                - file: graphs/rnag09.qmd
+                  text: RNAG9
+                - file: graphs/rnag10.qmd
+                  text: RNAG10
+            - file: graphs/SFG1/sfg01.qmd
+              text: SFG
+              contents:     
+                - file: graphs/SFG1/sfg01.qmd
+                  text: SFG1
+                  contents: 
+                    - file: graphs/SFG1/sfg01a.qmd
+                      text: SFG1A
+                    - file: graphs/SFG1/sfg01b.qmd
+                      text: SFG1B
+                - file: graphs/SFG2/sfg02.qmd
+                  text: SFG2
+                  contents: 
+                    - file: graphs/SFG2/sfg02a.qmd
+                      text: SFG2A
+                    - file: graphs/SFG2/sfg02b.qmd
+                      text: SFG2B
+                    - file: graphs/SFG2/sfg02c.qmd
+                      text: SFG2C
+                    - file: graphs/SFG2/sfg02d.qmd
+                      text: SFG2D
+                - file: graphs/SFG3/sfg03.qmd
+                  text: SFG3
+                  contents: 
+                    - file: graphs/SFG3/sfg03a.qmd
+                      text: SFG3A
+                - file: graphs/sfg04.qmd
+                  text: SFG4
+                - file: graphs/SFG5/sfg05.qmd
+                  text: SFG5
+                  contents: 
+                    - file: graphs/SFG5/sfg05a.qmd
+                      text: SFG5A
+                    - file: graphs/SFG5/sfg05b.qmd
+                      text: SFG5B
+                    - file: graphs/SFG5/sfg05c.qmd
+                      text: SFG5C
+                - file: graphs/SFG6/sfg06a.qmd
+                  text: SFG6
+                  contents: 
+                    - file: graphs/SFG6/sfg06a.qmd
+                      text: SFG6A
+                    - file: graphs/SFG6/sfg06b.qmd
+                      text: SFG6B
+                    - file: graphs/SFG6/sfg06c.qmd
+                      text: SFG6C
         - text: "---"
         - text: Index
           file: bac_index.qmd

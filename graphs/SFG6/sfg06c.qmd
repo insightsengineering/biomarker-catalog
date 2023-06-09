@@ -1,0 +1,39 @@
+---
+title: SFG6C
+subtitle: Survival Forest Graph for Multiple Continuous Biomarkers with Stratification
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+Finally we can also specify stratification variables with the `strata` variable element, then the corresponding variables are used for stratification in the Cox proportional hazards models.
+
+```{r, fig.width = 15, warning=FALSE}
+df <- extract_survival_biomarkers(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    biomarkers = c("BMRKR1", "AGE"),
+    covariates = "SEX",
+    subgroups = "BMRKR2",
+    strata = c("STRATA1", "STRATA2")
+  ),
+  data = adtte_f
+)
+
+result <- tabulate_survival_biomarkers(
+  df = df,
+  vars = c("n_tot_events", "n_tot", "median", "hr", "ci"),
+  time_unit = adtte_f$AVALU[1]
+)
+g_forest(result, xlim = c(0.6, 1.4))
+```
+
+Note that warnings might be issued if the model contains e.g. too few events in the resulting strata, in that case you might want to reduce the number of stratification variables.
+
+{{< include ../../session_info.qmd >}}
+:::

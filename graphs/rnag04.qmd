@@ -1,6 +1,6 @@
 ---
 title: RNAG4
-subtitle: RNAseq PCA Graphs
+subtitle: RNAseq Sample Correlation Graph
 ---
 
 ------------------------------------------------------------------------

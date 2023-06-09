@@ -1,0 +1,52 @@
+---
+title: SFG2
+subtitle: Survival Forest Graphs for Overall Population and by Percentiles of Continuous Biomarker
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+For the calculations, we start by getting the levels from `BMRKR1_BIN` which saves us typing them manually in the `groups_lists` definition.
+This definition is required here so that we can have overlapping subgroups.
+
+```{r}
+BMRKR1_BIN_levels <- levels(adtte$BMRKR1_BIN)
+
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  groups_lists = list(
+    BMRKR1_BIN = list(
+      "(25%,100%]" = BMRKR1_BIN_levels[2:4],
+      "(50%,100%]" = BMRKR1_BIN_levels[3:4],
+      "(75%,100%]" = BMRKR1_BIN_levels[4]
+    )
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function from `tern` based on this `result` table.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

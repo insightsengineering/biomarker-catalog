@@ -21,7 +21,7 @@ object <- hermes_data %>%
   normalize()
 ```
 
-## Scatterplot for Gene Expression Values (RNAG8A)
+## Scatterplot for Gene Expression Values
 
 We can create scatterplots for gene expression values by providing a gene in the `gene_spec` (gene specification) as follows.
 
@@ -34,7 +34,7 @@ draw_scatterplot(
 )
 ```
 
-## Scatterplot for Gene Signatures (RNAG8B)
+## Scatterplot for Gene Signatures
 
 We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.
 Note that we use the first 10 genes and the next 10 genes from the `object` without explicitly specifying the gene IDs, and this can be done through the `genes()` function in `hermes`.

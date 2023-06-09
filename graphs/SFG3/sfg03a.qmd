@@ -1,0 +1,62 @@
+---
+title: SFG3A
+subtitle: Comparing Between Genders in Survival Forest Graph for One Treatment Arm
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We prepare the data similarly as in [SFG3](sfg03.qmd).
+Additionally we are filtering `synthetic_cdisc_data$adtte` to keep only two categories for the `SEX` variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients.
+We then tabulate statistics to be able to use them as an input for the forest plot.
+
+```{r}
+adtte_mf <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS",
+    ARM == "A: Drug X",
+    SEX %in% c("M", "F")
+  ) %>%
+  droplevels() %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR1 = "Biomarker (Countinuous)"
+  )
+
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "SEX",
+    subgroups = "BEP01FL"
+  ),
+  label_all = "ITT",
+  data = adtte_mf
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte_mf$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

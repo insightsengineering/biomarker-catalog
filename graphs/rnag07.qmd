@@ -21,7 +21,7 @@ object <- hermes_data %>%
   normalize()
 ```
 
-## Boxplot for Single Gene Expression Values (RNAG7A)
+## Boxplot for Single Gene Expression Values
 
 We can create boxplots for expression values of single genes by providing the gene ID in a `gene_spec` (gene specification) as follows.
 
@@ -33,7 +33,7 @@ draw_boxplot(
 )
 ```
 
-## Boxplot for Multiple Genes Expression Values (RNAG7B)
+## Boxplot for Multiple Genes Expression Values
 
 We can also create boxplots for multiple genes next to each other, simply by specifying multiple gene IDs in the `gene_spec`.
 Note that names given to the gene ID vector are used in the plot instead of the IDs.
@@ -48,7 +48,7 @@ draw_boxplot(
 )
 ```
 
-## Boxplot for Gene Signatures (RNAG7C)
+## Boxplot for Gene Signatures
 
 We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.
 Note that here we just want to use the first 6 genes from the `object` without explicitly specifying the gene IDs, and this can be done through the `genes()` function in `hermes`.

@@ -1,0 +1,41 @@
+---
+title: RG1B
+subtitle: Change Color Scheme of Response Graph for Overall Population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We can use the `scale_fill_manual()` function from `ggplot2` to change the color scheme of the plot by manually selecting colors to assign to the values.
+
+```{r}
+adrs <- adrs %>%
+  mutate(
+    AVALC_BIN = fct_collapse_only(
+      AVALC,
+      Yes = c("CR", "PR"),
+      No = c("PD", "SD", "NE", "<Missing>")
+    )
+  )
+graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC_BIN, by = BMEASIFL)) +
+  geom_bar(position = "fill") +
+  geom_text(stat = "prop", position = position_fill(.5)) +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("%")
+graph +
+  scale_fill_manual("AVALC_BIN", values = c("Yes" = "blue", "No" = "red"))
+```
+
+Alternatively we can also use the `scale_fill_brewer()` function from `ggplot2` to change the color scheme of the plot by selecting a preset color palette.
+
+```{r}
+graph +
+  scale_fill_brewer(palette = "Set1")
+```
+
+{{< include ../../session_info.qmd >}}
+:::

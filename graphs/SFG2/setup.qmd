@@ -1,0 +1,35 @@
+## Setup
+
+We prepare the data similarly as in [SFG1](../../graphs/SFG1/sfg01.qmd).
+In particular we use again the `cut_quantile_bins()` function, here to obtain quartile bins of the continuous biomarker `BMRKR1`.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+BMRKR1_probs <- c(0.25, 0.5, 0.75)
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS"
+  ) %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0,
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = c("B: Placebo"),
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    BMRKR1 = ifelse(BEP01FL == "N", NA, BMRKR1),
+    BMRKR1_BIN = explicit_na(cut_quantile_bins(BMRKR1, BMRKR1_probs)),
+    BMRKR2 = fct_explicit_na_if(BMRKR2, BEP01FL == "N")
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR2 = "Biomarker (Categorical)",
+    BMRKR1_BIN = "Biomarker (Binned)"
+  )
+```

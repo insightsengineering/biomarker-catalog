@@ -1,0 +1,38 @@
+## Setup
+
+We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to create the survival forest graph.
+We start by filtering the `adtte` data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the `ARM` variable and creating a binned age variable by using the function `cut_quantile_bins()`.
+Note that we do not include the boundaries `0` and `1` in the corresponding cutoffs vector `AGE_probs`, but only the true cutoff probabilities to use (here `0.5`, i.e. the median).
+We restrict the analysis of the biomarker variables `BMRKR1` and `BMRKR2` to the BEP by setting them as missing for the non-BEP.
+
+We also relabel the biomarker evaluable population flag variable `BEP01FL` and the categorical biomarker variable `BMRKR2` to update the display label of these variables in the graph.
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+AGE_probs <- 0.5
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS"
+  ) %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0,
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = "B: Placebo",
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    AGE_BIN = cut_quantile_bins(AGE, probs = AGE_probs),
+    BMRKR1 = ifelse(BEP01FL == "N", NA, BMRKR1),
+    BMRKR2 = fct_explicit_na_if(BMRKR2, BEP01FL == "N")
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR2 = "Biomarker (Categorical)"
+  )
+```

@@ -61,7 +61,7 @@ binned_data <- joined_data %>%
   df_explicit_na(omit_columns = "AVALU")
 ```
 
-## Survival Forest Graph (RNAG10)
+## Survival Forest Graph
 
 It is now simple to create the survival forest graph by providing the data set created above with the variable specification.
 First we calculate the survival estimates with `extract_survival_subgroups()` by providing the necessary variable specification.
@@ -92,7 +92,7 @@ result <- tabulate_survival_subgroups(
 g_forest(result)
 ```
 
-See [SFG01](../graphs/sfg01.qmd) to [SFG05](../graphs/sfg05.qmd) for additional customization options for the survival forest graphs or the help page `?g_forest()`.
+See [SFG01](../graphs/SFG1/sfg01.qmd) to [SFG05](../graphs/SFG5/sfg05.qmd) for additional customization options for the survival forest graphs or the help page `?g_forest()`.
 
 ## Teal Module for Survival Forest Graph
 

@@ -29,7 +29,7 @@ adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
   )
 ```
 
-## Standard Plot
+## Plot
 
 We then perform with the `fit_rsp_step()` function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) logistic regression models for the response outcome within each of the percentile intervals of the age variable `AGE` defining the subgroups.
 The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e. the estimated odds ratios are for the comparison of the second level vs. the first one.

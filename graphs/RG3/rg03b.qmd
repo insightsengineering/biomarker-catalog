@@ -1,0 +1,27 @@
+---
+title: RG3B
+subtitle: Plot Counts Instead of Percentages in Response Graph Comparing Subgroups of BEP
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+In this example we compare the responses across treatment arms between the BEP and the full population using the option `position = "stack"` in the `geom_bar()` layer to display counts instead of percentages.
+
+```{r}
+graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC_BIN, by = BMEASIFL)) +
+  geom_bar(position = "stack") +
+  scale_x_discrete(labels = NULL) +
+  xlab(NULL) +
+  geom_text(stat = "count", aes(label = after_stat(count)), position = position_stack(.5), colour = "white") +
+  facet_grid(BEP01FL ~ ARM_BIN, margins = TRUE)
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

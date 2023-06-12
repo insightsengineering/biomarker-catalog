@@ -1,0 +1,27 @@
+---
+title: RG2
+subtitle: Response Graphs by Treatment Arms
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+The `facet_grid()` layer from `ggplot2` can be used to plot response by treatment arm and the `margins` argument can be used to produce the `(all)` column.
+
+```{r}
+graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC, by = BMEASIFL)) +
+  geom_bar(aes(BMEASIFL), position = "fill") +
+  geom_text(stat = "prop", position = position_fill(.5)) +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("%") +
+  facet_grid(. ~ ARM, margins = TRUE)
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

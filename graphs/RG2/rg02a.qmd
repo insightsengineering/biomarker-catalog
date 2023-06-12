@@ -1,0 +1,42 @@
+---
+title: RG2A
+subtitle: Binarize Response Outcome for Response Graph by Treatment Arms
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We can use the `fct_collapse_only()` function from `tern` to binarize the response variable.
+
+```{r}
+adrs <- adrs %>%
+  mutate(
+    AVALC_BIN = fct_collapse_only(
+      AVALC,
+      Yes = c("CR", "PR"),
+      No = c("PD", "SD", "NE", "<Missing>")
+    )
+  )
+```
+
+We can then produce the response plot with the newly binarized response variable.
+
+```{r}
+graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC_BIN, by = BMEASIFL)) +
+  geom_bar(aes(BMEASIFL), position = "fill") +
+  geom_text(stat = "prop", position = position_fill(.5)) +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("%") +
+  facet_grid(. ~ ARM, margins = TRUE)
+
+graph
+```
+
+Note that colors and horizontal plotting is possible as described in [RG1B](../../graphs/RG1/rg01b.qmd) and [RG1C](../../graphs/RG1/rg01c.qmd).
+
+{{< include ../../session_info.qmd >}}
+:::

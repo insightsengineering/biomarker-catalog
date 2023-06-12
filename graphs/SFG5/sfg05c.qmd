@@ -1,0 +1,76 @@
+---
+title: SFG5C
+subtitle: Survival Forest Graph for Subgroups Defined by Multiple Bins of Continuous Variable
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+First, we derive a new variable `AGE_BIN2` with three bins for age, in a similar way as we derived `AGE_BIN` above.
+We then use the same `tables_all()` function above and combine all subtables using `rbind()` to tabulate statistics to be able to use as an input for forest plot.
+
+```{r, message = FALSE}
+tables_all <- function(filter_var, filter_condition, sub_var) {
+  dataset <- adtte %>%
+    filter(!!as.name(filter_var) == filter_condition)
+  if (nrow(dataset) == 0) {
+    stop(paste("Subset", filter_var, "==", filter_condition, "is empty"))
+  }
+  tbl <- extract_survival_subgroups(
+    variables = list(
+      tte = "AVAL",
+      is_event = "is_event",
+      arm = "ARM_BIN",
+      subgroups = sub_var
+    ),
+    label_all = "ITT",
+    data = dataset
+  )
+  basic_table() %>%
+    tabulate_survival_subgroups(
+      df = tbl,
+      vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+      time_unit = dataset$AVALU[1]
+    )
+}
+
+add_subtitle <- function(sub_tab, sub_title) {
+  label_at_path(sub_tab, path = row_paths(sub_tab)[[1]][1]) <- sub_title
+  sub_tab
+}
+
+AGE_probs2 <- c(0.33, 0.66)
+
+adtte <- adtte %>%
+  mutate(AGE_BIN2 = cut_quantile_bins(AGE, probs = AGE_probs2))
+tables_list <- list(
+  tables_all(filter_var = "AGE_BIN2", filter_condition = "[0%,33%]", sub_var = "BMRKR2_BIN"),
+  tables_all(filter_var = "AGE_BIN2", filter_condition = "(33%,66%]", sub_var = "BMRKR2_BIN"),
+  tables_all(filter_var = "AGE_BIN2", filter_condition = "(66%,100%]", sub_var = "BMRKR2_BIN")
+)
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15, fig.height = 6}
+one_table <- tables_list[[1]]
+result <- rbind(
+  add_subtitle(tables_list[[1]], "AGE_BIN2 = [0%,33%]"),
+  add_subtitle(tables_list[[2]], "AGE_BIN2 = (33%,66%]"),
+  add_subtitle(tables_list[[3]], "AGE_BIN = (66%,100%]")
+)
+g_forest(
+  result,
+  col_x = attr(one_table, "col_x"),
+  col_ci = attr(one_table, "col_ci"),
+  forest_header = attr(one_table, "forest_header"),
+  col_symbol_size = attr(one_table, "col_symbol_size")
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

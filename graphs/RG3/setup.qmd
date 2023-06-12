@@ -1,0 +1,28 @@
+## Setup
+
+The same setup as in [RG1](../../graphs/RG1/rg01.qmd) is used.
+
+For `ggplot()` used in all analyses, we add `by = BMEASIFL` in the aesthetics to support the calculation of proportions using `geom_text(stat = "prop")`.
+
+```{r, message = FALSE}
+library(tern)
+library(ggplot2.utils)
+library(dplyr)
+
+adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+  df_explicit_na() %>%
+  mutate(
+    AVALC = ordered(AVALC, levels = c("<Missing>", "NE", "PD", "SD", "PR", "CR")),
+    AVALC_BIN = fct_collapse_only(
+      AVALC,
+      Yes = c("CR", "PR"),
+      No = c("PD", "SD", "NE", "<Missing>")
+    ),
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      Ctrl = c("B: Placebo"),
+      Trt = c("A: Drug X", "C: Combination")
+    )
+  ) %>%
+  filter(PARAMCD == "BESRSPI", BMEASIFL == "Y")
+```

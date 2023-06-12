@@ -1,0 +1,75 @@
+---
+title: SFG5A
+subtitle: Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+The main difference here is that we ensure that `col_info` is aligned across all subtables before using `rbind()` to combine subtables.
+(Generally this is worth trying out if the `rbind()` does not work out of the box to combine subtables.)
+
+```{r}
+tables_all <- function(filter_var, filter_condition, sub_var) {
+  dataset <- adtte %>%
+    filter(!!as.name(filter_var) == filter_condition)
+  if (nrow(dataset) == 0) {
+    stop(paste("Subset", filter_var, "==", filter_condition, "is empty"))
+  }
+  tbl <- extract_survival_subgroups(
+    variables = list(
+      tte = "AVAL",
+      is_event = "is_event",
+      arm = "ARM_BIN",
+      subgroups = sub_var
+    ),
+    label_all = "ITT",
+    data = dataset
+  )
+  basic_table() %>%
+    tabulate_survival_subgroups(
+      df = tbl,
+      vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+      time_unit = dataset$AVALU[1]
+    )
+}
+
+add_subtitle <- function(sub_tab, sub_title) {
+  label_at_path(sub_tab, path = row_paths(sub_tab)[[1]][1]) <- sub_title
+  sub_tab
+}
+
+tables_list <- list(
+  tables_all(filter_var = "BMRKR2_BIN", filter_condition = "High", sub_var = "SEX"),
+  tables_all(filter_var = "BMRKR2_BIN", filter_condition = "Low", sub_var = "SEX"),
+  tables_all(filter_var = "BMRKR2_BIN", filter_condition = "High", sub_var = "AGE_BIN"),
+  tables_all(filter_var = "BMRKR2_BIN", filter_condition = "Low", sub_var = "AGE_BIN")
+)
+col_info(tables_list[[2]]) <- col_info(tables_list[[1]])
+result <- rbind(
+  add_subtitle(tables_list[[1]], "BMRKR2_BIN = High"),
+  add_subtitle(tables_list[[2]], "BMRKR2_BIN = Low"),
+  add_subtitle(tables_list[[3]], "BMRKR2_BIN = High"),
+  add_subtitle(tables_list[[4]], "BMRKR2_BIN = Low")
+)
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15, fig.height = 7}
+one_table <- tables_list[[1]]
+g_forest(
+  result,
+  col_x = attr(one_table, "col_x"),
+  col_ci = attr(one_table, "col_ci"),
+  forest_header = attr(one_table, "forest_header"),
+  col_symbol_size = attr(one_table, "col_symbol_size")
+)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

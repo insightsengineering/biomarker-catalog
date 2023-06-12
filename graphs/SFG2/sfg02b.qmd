@@ -1,0 +1,54 @@
+---
+title: SFG2B
+subtitle: Survival Forest Graph for Overall Population and by Continuous Biomarker with "Above and Below Percentage" Cutoffs Biomarker
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+In this template we are looking for each percentage cutoff at above vs. below subgroups: So we just provide yet another `groups_lists` specification for the `BMRKR1_BIN` binned variable.
+
+```{r}
+BMRKR1_BIN_levels <- levels(adtte$BMRKR1_BIN)
+
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("BEP01FL", "BMRKR1_BIN")
+  ),
+  label_all = "ITT",
+  groups_lists = list(
+    BMRKR1_BIN = list(
+      "[0%, 25%]" = BMRKR1_BIN_levels[1],
+      "(25%, 100%]" = BMRKR1_BIN_levels[2:4],
+      "[0%, 50%]" = BMRKR1_BIN_levels[1:2],
+      "(50%, 100%]" = BMRKR1_BIN_levels[3:4],
+      "[0%, 75%]" = BMRKR1_BIN_levels[1:3],
+      "(75%, 100%]" = BMRKR1_BIN_levels[4]
+    )
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using the `g_forest()` function.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

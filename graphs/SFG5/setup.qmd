@@ -1,0 +1,37 @@
+## Setup
+
+We prepare the data similarly as in [SFG1](../../graphs/SFG1/sfg01.qmd).
+
+```{r, message = FALSE}
+library(tern)
+library(dplyr)
+
+AGE_probs <- 0.5
+
+adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+  df_explicit_na() %>%
+  filter(
+    PARAMCD == "OS"
+  ) %>%
+  mutate(
+    AVAL = day2month(AVAL),
+    AVALU = "Months",
+    is_event = CNSR == 0,
+    ARM_BIN = fct_collapse_only(
+      ARM,
+      CTRL = "B: Placebo",
+      TRT = c("A: Drug X", "C: Combination")
+    ),
+    AGE_BIN = cut_quantile_bins(AGE, probs = AGE_probs),
+    BMRKR2 = fct_explicit_na_if(BMRKR2, BEP01FL == "N"),
+    BMRKR2_BIN = fct_collapse_only(
+      BMRKR2,
+      High = "HIGH",
+      Low = c("MEDIUM", "LOW")
+    )
+  ) %>%
+  var_relabel(
+    BEP01FL = "BEP",
+    BMRKR2_BIN = "Biomarker (Binary)"
+  )
+```

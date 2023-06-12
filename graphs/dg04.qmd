@@ -23,7 +23,7 @@ adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
   filter(BEP01FL == "Y")
 ```
 
-## Standard Plot
+## Plot
 
 Here is an example first on the original scale.
 Note that you may run into warning messages after producing the graph if the continuous variable you want to analyze contains NAs.

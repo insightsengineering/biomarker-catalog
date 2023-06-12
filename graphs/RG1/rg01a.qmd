@@ -1,0 +1,39 @@
+---
+title: RG1A
+subtitle: Binarize Response Outcome for Response Graph for Overall Population
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+We can use the `fct_collapse_only()` function from `tern` to binarize the response variable.
+
+```{r}
+adrs <- adrs %>%
+  mutate(
+    AVALC_BIN = fct_collapse_only(
+      AVALC,
+      Yes = c("CR", "PR"),
+      No = c("PD", "SD", "NE", "<Missing>")
+    )
+  )
+```
+
+We can then produce the response plot with the newly binarized response variable.
+
+```{r}
+graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC_BIN, by = BMEASIFL)) +
+  geom_bar(position = "fill") +
+  geom_text(stat = "prop", position = position_fill(.5)) +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("%")
+
+graph
+```
+
+{{< include ../../session_info.qmd >}}
+:::

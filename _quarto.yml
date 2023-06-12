@@ -132,51 +132,179 @@ website:
           text: Graphs
           contents:
             - file: graphs/ag01.qmd
-              text: AG1
+              text: AG
+              contents: 
+                - file: graphs/ag01.qmd
+                  text: AG1
             - file: graphs/DG1/dg01.qmd
-              text: DG1
+              text: DG
               contents: 
-                - file: graphs/DG1/dg01a.qmd
-                  text: DG1A
-                - file: graphs/DG1/dg01b.qmd
-                  text: DG1B
-            - file: graphs/dg02.qmd
-              text: DG2
-            - file: graphs/DG3/dg03.qmd
-              text: DG3
-              contents: 
-                - file: graphs/DG3/dg03a.qmd
-                  text: DG3A
-            - file: graphs/dg04.qmd
-              text: DG4
+                - file: graphs/DG1/dg01.qmd
+                  text: DG1
+                  contents: 
+                    - file: graphs/DG1/dg01a.qmd
+                      text: DG1A
+                    - file: graphs/DG1/dg01b.qmd
+                      text: DG1B
+                - file: graphs/dg02.qmd
+                  text: DG2
+                - file: graphs/DG3/dg03.qmd
+                  text: DG3
+                  contents: 
+                    - file: graphs/DG3/dg03a.qmd
+                      text: DG3A
+                - file: graphs/dg04.qmd
+                  text: DG4
             - file: graphs/KG1/kg01.qmd
-              text: KG1
-              contents: 
-                - file: graphs/KG1/kg01a.qmd
-                  text: KG1A
-                - file: graphs/KG1/kg01b.qmd
-                  text: KG1B
-            - file: graphs/KG2/kg02.qmd
-              text: KG2
-              contents: 
-                - file: graphs/KG2/kg02a.qmd
-                  text: KG2A
-            - file: graphs/kg03.qmd
-              text: KG3
-            - file: graphs/KG4/kg04.qmd
-              text: KG4
-              contents: 
-                - file: graphs/KG4/kg04a.qmd
-                  text: KG4A
-                - file: graphs/KG4/kg04b.qmd
-                  text: KG4B
-            - file: graphs/KG5/kg05.qmd
-              text: KG5
-              contents: 
-                - file: graphs/KG5/kg05a.qmd
-                  text: KG5A
-                - file: graphs/KG5/kg05b.qmd
-                  text: KG5B
+              text: KG
+              contents:     
+                - file: graphs/KG1/kg01.qmd
+                  text: KG1
+                  contents: 
+                    - file: graphs/KG1/kg01a.qmd
+                      text: KG1A
+                    - file: graphs/KG1/kg01b.qmd
+                      text: KG1B
+                - file: graphs/KG2/kg02.qmd
+                  text: KG2
+                  contents: 
+                    - file: graphs/KG2/kg02a.qmd
+                      text: KG2A
+                - file: graphs/kg03.qmd
+                  text: KG3
+                - file: graphs/KG4/kg04.qmd
+                  text: KG4
+                  contents: 
+                    - file: graphs/KG4/kg04a.qmd
+                      text: KG4A
+                    - file: graphs/KG4/kg04b.qmd
+                      text: KG4B
+                - file: graphs/KG5/kg05.qmd
+                  text: KG5
+                  contents: 
+                    - file: graphs/KG5/kg05a.qmd
+                      text: KG5A
+                    - file: graphs/KG5/kg05b.qmd
+                      text: KG5B
+            - file: graphs/RFG1/rfg01.qmd
+              text: RFG
+              contents:     
+                - file: graphs/RFG1/rfg01.qmd
+                  text: RFG1
+                  contents: 
+                    - file: graphs/RFG1/rfg01a.qmd
+                      text: RFG1A
+                - file: graphs/RFG2/rfg02a.qmd
+                  text: RFG2
+                  contents: 
+                    - file: graphs/RFG2/rfg02a.qmd
+                      text: RFG2A
+                    - file: graphs/RFG2/rfg02b.qmd
+                      text: RFG2B
+                    - file: graphs/RFG2/rfg02c.qmd
+                      text: RFG2C
+                - file: graphs/rfg03.qmd
+                  text: RFG3
+            - file: graphs/RG1/rg01.qmd
+              text: RG
+              contents:     
+                - file: graphs/RG1/rg01.qmd
+                  text: RG1
+                  contents: 
+                    - file: graphs/RG1/rg01a.qmd
+                      text: RG1A
+                    - file: graphs/RG1/rg01b.qmd
+                      text: RG1B
+                    - file: graphs/RG1/rg01c.qmd
+                      text: RG1C
+                - file: graphs/RG2/rg02.qmd
+                  text: RG2
+                  contents: 
+                    - file: graphs/RG2/rg02a.qmd
+                      text: RG2A
+                - file: graphs/RG3/rg03.qmd
+                  text: RG3
+                  contents: 
+                    - file: graphs/RG3/rg03a.qmd
+                      text: RG3A
+                    - file: graphs/RG3/rg03b.qmd
+                      text: RG3B
+            - file: graphs/spg01.qmd
+              text: SPG
+              contents:     
+                - file: graphs/spg01.qmd
+                  text: SPG1
+                - file: graphs/spg02.qmd
+                  text: SPG2
+            - file: graphs/rnag01.qmd
+              text: RNAG
+              contents:     
+                - file: graphs/rnag01.qmd
+                  text: RNAG1
+                - file: graphs/rnag02.qmd
+                  text: RNAG2
+                - file: graphs/rnag03.qmd
+                  text: RNAG3
+                - file: graphs/rnag04.qmd
+                  text: RNAG4
+                - file: graphs/rnag05.qmd
+                  text: RNAG5
+                - file: graphs/rnag06.qmd
+                  text: RNAG6
+                - file: graphs/rnag07.qmd
+                  text: RNAG7
+                - file: graphs/rnag08.qmd
+                  text: RNAG8
+                - file: graphs/rnag09.qmd
+                  text: RNAG9
+                - file: graphs/rnag10.qmd
+                  text: RNAG10
+            - file: graphs/SFG1/sfg01.qmd
+              text: SFG
+              contents:     
+                - file: graphs/SFG1/sfg01.qmd
+                  text: SFG1
+                  contents: 
+                    - file: graphs/SFG1/sfg01a.qmd
+                      text: SFG1A
+                    - file: graphs/SFG1/sfg01b.qmd
+                      text: SFG1B
+                - file: graphs/SFG2/sfg02.qmd
+                  text: SFG2
+                  contents: 
+                    - file: graphs/SFG2/sfg02a.qmd
+                      text: SFG2A
+                    - file: graphs/SFG2/sfg02b.qmd
+                      text: SFG2B
+                    - file: graphs/SFG2/sfg02c.qmd
+                      text: SFG2C
+                    - file: graphs/SFG2/sfg02d.qmd
+                      text: SFG2D
+                - file: graphs/SFG3/sfg03.qmd
+                  text: SFG3
+                  contents: 
+                    - file: graphs/SFG3/sfg03a.qmd
+                      text: SFG3A
+                - file: graphs/sfg04.qmd
+                  text: SFG4
+                - file: graphs/SFG5/sfg05.qmd
+                  text: SFG5
+                  contents: 
+                    - file: graphs/SFG5/sfg05a.qmd
+                      text: SFG5A
+                    - file: graphs/SFG5/sfg05b.qmd
+                      text: SFG5B
+                    - file: graphs/SFG5/sfg05c.qmd
+                      text: SFG5C
+                - file: graphs/SFG6/sfg06a.qmd
+                  text: SFG6
+                  contents: 
+                    - file: graphs/SFG6/sfg06a.qmd
+                      text: SFG6A
+                    - file: graphs/SFG6/sfg06b.qmd
+                      text: SFG6B
+                    - file: graphs/SFG6/sfg06c.qmd
+                      text: SFG6C
         - text: "---"
         - text: Index
           file: bac_index.qmd

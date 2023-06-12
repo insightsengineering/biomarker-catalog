@@ -38,7 +38,7 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   )
 ```
 
-## Standard Plot
+## Plot
 
 We then perform with the `fit_survival_step()` function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) models for the survival outcome within each of the percentile intervals of the biomarker variable defining the subgroups.
 The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e. the estimated hazard ratios are for the comparison of the second level vs. the first one.

@@ -1,0 +1,41 @@
+---
+title: SFG1B
+subtitle: Survival Forest Graph Only by Binned Continuous Variable
+---
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+{{< include setup.qmd >}}
+
+## Plot
+
+This works analogously to [SFG1](sfg01.qmd), we just specify different factor variables in `subgroups`, here including the binned continuous variable `AGE_BIN` as well as `SEX`.
+
+```{r}
+tbl <- extract_survival_subgroups(
+  variables = list(
+    tte = "AVAL",
+    is_event = "is_event",
+    arm = "ARM_BIN",
+    subgroups = c("SEX", "AGE_BIN")
+  ),
+  data = adtte
+)
+
+result <- basic_table() %>%
+  tabulate_survival_subgroups(
+    df = tbl,
+    vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),
+    time_unit = adtte$AVALU[1]
+  )
+```
+
+We can now produce the forest plot using `g_forest()`.
+
+```{r, fig.width = 15}
+g_forest(result)
+```
+
+{{< include ../../session_info.qmd >}}
+:::

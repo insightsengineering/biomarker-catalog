@@ -21,7 +21,7 @@ object <- hermes_data %>%
   normalize()
 ```
 
-## Barplot for a Single Gene (RNAG6A)
+## Barplot for a Single Gene
 
 We can create a barplot for gene expression counts of single genes by specifying a gene in the `gene_spec` (gene specification) as follows.
 This function creates a scatterplot with the default percentiles (0.33, 0.67), to specify custom percentiles, please use the `percentile` argument.
@@ -34,7 +34,7 @@ draw_barplot(
 )
 ```
 
-## Barplot for Gene Signatures (RNAG6B)
+## Barplot for Gene Signatures
 
 We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.
 Note that here we just want to use the first 3 genes from the `object` without explicitly specifying the gene IDs, and this can be done through the `genes()` function in `hermes`.

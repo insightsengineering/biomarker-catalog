@@ -8,10 +8,10 @@ toc-depth: 4
 
 ### Tables
 
--   [CMT -- Cox Proportional Hazards Model Tables](./tables/cmt01.qmd)
-    -   [CMT1 -- Cox Proportional Hazards Model Tables with a Single Covariate](./tables/cmt01.qmd)
-    -   [CMT2 -- Cox Proportional Hazards Model Tables with Multiple Covariates](./tables/CMT2/cmt02.qmd)
-    -   [CMT3 -- Cox Proportional Hazards Model Tables with Separate Models for Each Covariate](./tables/cmt03.qmd)
+-   [CPMT -- Cox Proportional Hazards Model Tables](./tables/cpmt01.qmd)
+    -   [CPMT1 -- Cox Proportional Hazards Model Tables with a Single Covariate](./tables/cpmt01.qmd)
+    -   [CPMT2 -- Cox Proportional Hazards Model Tables with Multiple Covariates](./tables/CPMT2/cpmt02.qmd)
+    -   [CPMT3 -- Cox Proportional Hazards Model Tables with Separate Models for Each Covariate](./tables/cpmt03.qmd)
 -   [DT -- Demographics Tables](./tables/DT1/dt01.qmd)
     -   [DT1 -- Demographics Tables Comparing BEP vs. Overall Population](./tables/DT1/dt01.qmd)
     -   [DT2 -- Demographics Tables Comparing BEP vs. non-BEP Population](./tables/DT2/dt02.qmd)

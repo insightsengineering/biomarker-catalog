@@ -1,5 +1,5 @@
 ---
-title: CMT2A
+title: CPMT2A
 subtitle: Changing Reference Levels in the Cox Proportional Hazards Model Table
 ---
 
@@ -25,7 +25,7 @@ adtte2 <- adtte %>%
   )
 ```
 
-Now we can proceed in the same way as in [CMT2](cmt02.qmd).
+Now we can proceed in the same way as in [CPMT2](cpmt02.qmd).
 
 ```{r}
 result <- basic_table() %>%

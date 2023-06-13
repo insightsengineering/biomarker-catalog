@@ -1,5 +1,5 @@
 ---
-title: CMT3
+title: CPMT3
 subtitle: Cox Proportional Hazards Model Tables with Separate Models for Each Covariate
 ---
 
@@ -8,7 +8,7 @@ subtitle: Cox Proportional Hazards Model Tables with Separate Models for Each Co
 ::: panel-tabset
 ## Setup
 
-We prepare the data in the same way as in [CMT1](../tables/cmt01.qmd).
+We prepare the data in the same way as in [CPMT1](../tables/cpmt01.qmd).
 
 ```{r, message = FALSE}
 library(tern)

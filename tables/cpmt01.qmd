@@ -1,5 +1,5 @@
 ---
-title: CMT1
+title: CPMT1
 subtitle: Cox Proportional Hazards Model Tables with a Single Covariate
 ---
 

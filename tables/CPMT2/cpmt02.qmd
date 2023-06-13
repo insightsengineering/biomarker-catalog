@@ -1,5 +1,5 @@
 ---
-title: CMT2
+title: CPMT2
 subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
 ---
 

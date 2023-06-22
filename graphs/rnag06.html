@@ -1034,7 +1034,7 @@ cookieconsent.run({
 <span id="cb6-13"><a href="#cb6-13"></a>  )</span>
 <span id="cb6-14"><a href="#cb6-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-06-21 17:41:49.5368 pid:4229 token:[] teal.modules.hermes Initializing tm_g_barplot</code></pre>
+<pre><code>[INFO] 2023-06-22 16:11:15.1188 pid:7805 token:[] teal.modules.hermes Initializing tm_g_barplot</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
@@ -1049,13 +1049,13 @@ cookieconsent.run({
 <div class="cell" data-hash="rnag06_cache/html/sessioninfo_4f2b02722c512bb0d1afa29d94a2e7ba">
 <details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.2 (2022-10-31)
+<pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu 22.04.2 LTS
 
 Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -1065,6 +1065,9 @@ locale:
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
 [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
 attached base packages:
 [1] stats4    stats     graphics  grDevices utils     datasets  methods  
 [8] base     
@@ -1073,79 +1076,79 @@ other attached packages:
  [1] teal.modules.hermes_0.1.4.9011 teal_0.13.0.9002              
  [3] teal.transform_0.3.0.9001      magrittr_2.0.3                
  [5] teal.data_0.2.0.9002           shiny_1.7.4                   
- [7] hermes_1.0.1.9013              SummarizedExperiment_1.28.0   
- [9] Biobase_2.58.0                 GenomicRanges_1.50.2          
-[11] GenomeInfoDb_1.34.9            IRanges_2.32.0                
-[13] S4Vectors_0.36.2               BiocGenerics_0.44.0           
-[15] MatrixGenerics_1.10.0          matrixStats_1.0.0             
+ [7] hermes_1.0.1.9013              SummarizedExperiment_1.30.2   
+ [9] Biobase_2.60.0                 GenomicRanges_1.52.0          
+[11] GenomeInfoDb_1.36.0            IRanges_2.34.0                
+[13] S4Vectors_0.38.1               BiocGenerics_0.46.0           
+[15] MatrixGenerics_1.12.2          matrixStats_1.0.0             
 [17] ggfortify_0.4.16               ggplot2_3.4.2                 
 
 loaded via a namespace (and not attached):
-  [1] backports_1.4.1             circlize_0.4.15            
-  [3] systemfonts_1.0.4           BiocBaseUtils_1.3.0        
-  [5] BiocFileCache_2.6.1         BiocParallel_1.32.6        
-  [7] teal.logger_0.1.1.9006      digest_0.6.31              
-  [9] foreach_1.5.2               htmltools_0.5.5            
- [11] fansi_1.0.4                 checkmate_2.2.0            
- [13] memoise_2.0.1               cluster_2.1.4              
- [15] doParallel_1.0.17           limma_3.54.2               
- [17] ComplexHeatmap_2.14.0       Biostrings_2.66.0          
- [19] annotate_1.76.0             prettyunits_1.1.1          
- [21] colorspace_2.1-0            blob_1.2.4                 
- [23] rappdirs_0.3.3              ggrepel_0.9.3              
- [25] textshaping_0.3.6           rbibutils_2.2.13           
- [27] xfun_0.39                   dplyr_1.1.2                
- [29] callr_3.7.3                 crayon_1.5.2               
- [31] RCurl_1.98-1.12             jsonlite_1.8.5             
- [33] iterators_1.0.14            glue_1.6.2                 
- [35] gtable_0.3.3                zlibbioc_1.44.0            
- [37] XVector_0.38.0              webshot_0.5.4              
- [39] GetoptLong_1.0.5            DelayedArray_0.24.0        
- [41] shape_1.4.6                 scales_1.2.1               
- [43] DBI_1.1.3                   edgeR_3.40.2               
- [45] Rcpp_1.0.10                 xtable_1.8-4               
- [47] progress_1.2.2              clue_0.3-64                
- [49] bit_4.0.5                   htmlwidgets_1.6.2          
- [51] httr_1.4.6                  RColorBrewer_1.1-3         
- [53] ellipsis_0.3.2              teal.slice_0.3.0.9003      
- [55] pkgconfig_2.0.3             XML_3.99-0.14              
- [57] farver_2.1.1                sass_0.4.6                 
- [59] dbplyr_2.3.2                locfit_1.5-9.7             
- [61] utf8_1.2.3                  tidyselect_1.2.0           
- [63] labeling_0.4.2              rlang_1.1.1                
- [65] later_1.3.1                 AnnotationDbi_1.60.2       
- [67] munsell_0.5.0               tools_4.2.2                
- [69] cachem_1.0.8                cli_3.6.1                  
- [71] generics_0.1.3              RSQLite_2.3.1              
- [73] evaluate_0.21               stringr_1.5.0              
- [75] fastmap_1.1.1               ragg_1.2.5                 
- [77] yaml_2.3.7                  processx_3.8.1             
- [79] knitr_1.43                  bit64_4.0.5                
- [81] purrr_1.0.1                 KEGGREST_1.38.0            
- [83] teal.reporter_0.1.1.9015    mime_0.12                  
- [85] xml2_1.3.4                  biomaRt_2.54.1             
- [87] brio_1.1.3                  compiler_4.2.2             
- [89] rstudioapi_0.14             filelock_1.0.2             
- [91] curl_5.0.0                  png_0.1-8                  
- [93] testthat_3.1.8              tibble_3.2.1               
- [95] geneplotter_1.76.0          bslib_0.4.2                
- [97] stringi_1.7.12              ps_1.7.5                   
- [99] forcats_1.0.0               logger_0.2.2               
-[101] lattice_0.21-8              Matrix_1.5-4.1             
-[103] shinyjs_2.1.0               vctrs_0.6.2                
-[105] pillar_1.9.0                lifecycle_1.0.3            
-[107] jquerylib_0.1.4             Rdpack_2.4                 
-[109] GlobalOptions_0.1.2         bitops_1.0-7               
-[111] httpuv_1.6.11               R6_2.5.1                   
-[113] teal.widgets_0.3.0.9001     promises_1.2.0.1           
-[115] gridExtra_2.3               codetools_0.2-19           
-[117] formatters_0.5.0.9001       assertthat_0.2.1           
-[119] fontawesome_0.5.1           DESeq2_1.38.3              
-[121] rjson_0.2.21                shinyWidgets_0.7.6         
-[123] withr_2.5.0                 GenomeInfoDbData_1.2.9     
-[125] parallel_4.2.2              hms_1.1.3                  
-[127] MultiAssayExperiment_1.24.0 grid_4.2.2                 
-[129] tidyr_1.3.0                 rmarkdown_2.22             </code></pre>
+  [1] RColorBrewer_1.1-3          rstudioapi_0.14            
+  [3] jsonlite_1.8.5              shape_1.4.6                
+  [5] MultiAssayExperiment_1.26.0 farver_2.1.1               
+  [7] rmarkdown_2.22              ragg_1.2.5                 
+  [9] GlobalOptions_0.1.2         zlibbioc_1.46.0            
+ [11] vctrs_0.6.3                 memoise_2.0.1              
+ [13] RCurl_1.98-1.12             webshot_0.5.4              
+ [15] BiocBaseUtils_1.3.0         htmltools_0.5.5            
+ [17] S4Arrays_1.0.4              forcats_1.0.0              
+ [19] progress_1.2.2              curl_5.0.1                 
+ [21] sass_0.4.6                  bslib_0.5.0                
+ [23] fontawesome_0.5.1           htmlwidgets_1.6.2          
+ [25] testthat_3.1.9              cachem_1.0.8               
+ [27] teal.widgets_0.3.0.9001     mime_0.12                  
+ [29] lifecycle_1.0.3             iterators_1.0.14           
+ [31] pkgconfig_2.0.3             Matrix_1.5-4.1             
+ [33] R6_2.5.1                    fastmap_1.1.1              
+ [35] GenomeInfoDbData_1.2.10     rbibutils_2.2.13           
+ [37] clue_0.3-64                 digest_0.6.31              
+ [39] colorspace_2.1-0            ps_1.7.5                   
+ [41] AnnotationDbi_1.62.1        DESeq2_1.40.1              
+ [43] textshaping_0.3.6           RSQLite_2.3.1              
+ [45] filelock_1.0.2              labeling_0.4.2             
+ [47] fansi_1.0.4                 httr_1.4.6                 
+ [49] compiler_4.3.1              bit64_4.0.5                
+ [51] withr_2.5.0                 doParallel_1.0.17          
+ [53] backports_1.4.1             BiocParallel_1.34.2        
+ [55] DBI_1.1.3                   logger_0.2.2               
+ [57] biomaRt_2.56.1              rappdirs_0.3.3             
+ [59] DelayedArray_0.26.3         rjson_0.2.21               
+ [61] tools_4.3.1                 httpuv_1.6.11              
+ [63] glue_1.6.2                  callr_3.7.3                
+ [65] promises_1.2.0.1            grid_4.3.1                 
+ [67] checkmate_2.2.0             cluster_2.1.4              
+ [69] generics_0.1.3              gtable_0.3.3               
+ [71] teal.slice_0.3.0.9003       tidyr_1.3.0                
+ [73] hms_1.1.3                   xml2_1.3.4                 
+ [75] utf8_1.2.3                  XVector_0.40.0             
+ [77] ggrepel_0.9.3               foreach_1.5.2              
+ [79] pillar_1.9.0                stringr_1.5.0              
+ [81] limma_3.56.2                later_1.3.1                
+ [83] circlize_0.4.15             dplyr_1.1.2                
+ [85] BiocFileCache_2.8.0         lattice_0.21-8             
+ [87] bit_4.0.5                   tidyselect_1.2.0           
+ [89] ComplexHeatmap_2.16.0       locfit_1.5-9.8             
+ [91] Biostrings_2.68.1           knitr_1.43                 
+ [93] gridExtra_2.3               teal.logger_0.1.1.9006     
+ [95] edgeR_3.42.4                xfun_0.39                  
+ [97] brio_1.1.3                  stringi_1.7.12             
+ [99] yaml_2.3.7                  shinyWidgets_0.7.6         
+[101] evaluate_0.21               codetools_0.2-19           
+[103] tibble_3.2.1                cli_3.6.1                  
+[105] systemfonts_1.0.4           xtable_1.8-4               
+[107] Rdpack_2.4                  processx_3.8.1             
+[109] jquerylib_0.1.4             munsell_0.5.0              
+[111] teal.reporter_0.1.1.9015    Rcpp_1.0.10                
+[113] dbplyr_2.3.2                png_0.1-8                  
+[115] XML_3.99-0.14               parallel_4.3.1             
+[117] ellipsis_0.3.2              assertthat_0.2.1           
+[119] blob_1.2.4                  prettyunits_1.1.1          
+[121] formatters_0.5.0.9001       bitops_1.0-7               
+[123] scales_1.2.1                purrr_1.0.1                
+[125] crayon_1.5.2                GetoptLong_1.0.5           
+[127] rlang_1.1.1                 KEGGREST_1.40.0            
+[129] shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>

@@ -80,6 +80,9 @@ website:
       - icon: github
         href: https://github.com/insightsengineering/biomarker-catalog
         aria-label: BAC GitHub
+      - icon: rss
+        href: https://insightsengineering.github.io/biomarker-catalog/index.xml
+        text: BAC RSS
   navbar:
     pinned: true
     collapse: false
@@ -103,6 +106,9 @@ website:
         href: https://github.com/insightsengineering/biomarker-catalog
         aria-label: Repository
         text: BAC GitHub
+      - icon: rss
+        href: https://insightsengineering.github.io/biomarker-catalog/index.xml
+        text: BAC RSS
   sidebar:
     - id: sidebar
       style: docked

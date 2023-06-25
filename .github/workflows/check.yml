@@ -30,9 +30,6 @@ jobs:
     uses: insightsengineering/r.pkg.template/.github/workflows/version-bump.yaml@main
     secrets:
       REPO_GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
-  version:
-    name: Version Check 🏁
-    uses: insightsengineering/r.pkg.template/.github/workflows/version.yaml@main
   style:
     if: github.event_name != 'push'
     name: Style Check 👗

@@ -5,7 +5,7 @@ exclude-listing: true
 
 ```{r}
 #| echo: false
-license <- read.dcf("../DESCRIPTION")[1,]["License"]
+license <- read.dcf("../DESCRIPTION")[1, ]["License"]
 ```
 
 This catalog as well as code examples are licensed under the <b>`r license`</b>.

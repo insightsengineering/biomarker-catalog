@@ -1,3 +1,7 @@
+---
+exclude-listing: true
+---
+
 ## Setup
 
 These templates are helpful when we are interested in the odds ratios between two groups, usually two treatment arms.

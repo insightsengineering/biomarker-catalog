@@ -1,6 +1,7 @@
 ---
 title: KG1B
 subtitle: Kaplan-Meier Graph for Comparing ITT and BEP Populations
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -43,5 +44,5 @@ res <- g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

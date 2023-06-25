@@ -1,6 +1,7 @@
 ---
 title: SFG2D
 subtitle: Survival Forest Graph for Overall Population and by Intervals of Continuous Biomarker with "Greater Than a Numerical Cutoff"
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -56,5 +57,5 @@ We can now produce forest plot using `g_forest()` function from `tern` based on 
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

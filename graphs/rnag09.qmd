@@ -1,6 +1,7 @@
 ---
 title: RNAG9
 subtitle: RNAseq Kaplan-Meier Graph
+categories: [RNAG]
 ---
 
 ------------------------------------------------------------------------
@@ -120,5 +121,5 @@ app <- init(
 shinyApp(app$ui, app$server)
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

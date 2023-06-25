@@ -1,6 +1,7 @@
 ---
 title: RG1B
 subtitle: Change Color Scheme of Response Graph for Overall Population
+categories: [RG]
 ---
 
 ------------------------------------------------------------------------
@@ -37,5 +38,5 @@ graph +
   scale_fill_brewer(palette = "Set1")
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

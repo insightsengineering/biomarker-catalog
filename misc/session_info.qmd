@@ -1,3 +1,8 @@
+---
+title: Copyright
+exclude-listing: true
+---
+
 ## Session Info
 
 ```{r sessioninfo, message=FALSE}

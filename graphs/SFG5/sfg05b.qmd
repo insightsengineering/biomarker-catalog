@@ -1,6 +1,7 @@
 ---
 title: SFG5B
 subtitle: Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups, including ITT
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -69,5 +70,5 @@ g_forest(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

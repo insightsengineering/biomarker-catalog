@@ -1,3 +1,7 @@
+---
+exclude-listing: true
+---
+
 ## Setup
 
 We prepare the data similarly as in [SFG1](../../graphs/SFG1/sfg01.qmd).

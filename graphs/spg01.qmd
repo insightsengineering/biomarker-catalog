@@ -1,6 +1,7 @@
 ---
 title: SPG1
 subtitle: STEP Graphs for Survival Outcome
+categories: [SPG]
 ---
 
 ------------------------------------------------------------------------
@@ -87,5 +88,5 @@ graph +
   geom_hline(aes(yintercept = 1), linetype = 2)
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

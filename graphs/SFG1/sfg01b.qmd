@@ -1,6 +1,7 @@
 ---
 title: SFG1B
 subtitle: Survival Forest Graph Only by Binned Continuous Variable
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -37,5 +38,5 @@ We can now produce the forest plot using `g_forest()`.
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

@@ -1,6 +1,7 @@
 ---
 title: RNAG7
 subtitle: RNAseq Boxplot
+categories: [RNAG]
 ---
 
 ------------------------------------------------------------------------
@@ -123,5 +124,5 @@ app <- init(
 shinyApp(app$ui, app$server)
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

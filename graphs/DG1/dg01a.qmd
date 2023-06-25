@@ -1,6 +1,7 @@
 ---
 title: DG1A
 subtitle: Histograms of Two Numeric Variables
+categories: [DG]
 ---
 
 ------------------------------------------------------------------------
@@ -57,5 +58,5 @@ graph <- graph +
 graph
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

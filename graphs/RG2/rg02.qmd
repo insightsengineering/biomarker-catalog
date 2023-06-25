@@ -1,6 +1,7 @@
 ---
 title: RG2
 subtitle: Response Graphs by Treatment Arms
+categories: [RG]
 ---
 
 ------------------------------------------------------------------------
@@ -23,5 +24,5 @@ graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC, by = BMEASIFL)) +
 graph
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

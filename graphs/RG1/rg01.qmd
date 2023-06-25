@@ -1,6 +1,7 @@
 ---
 title: RG1
 subtitle: Response Graphs for Overall Population
+categories: [RG]
 ---
 
 ------------------------------------------------------------------------
@@ -20,5 +21,5 @@ graph <- ggplot(adrs, aes(BMEASIFL, fill = AVALC, by = BMEASIFL)) +
 graph
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

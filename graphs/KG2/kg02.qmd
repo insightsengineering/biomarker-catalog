@@ -1,6 +1,7 @@
 ---
 title: KG2
 subtitle: Kaplan-Meier Graphs by Treatment Arm
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -30,5 +31,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

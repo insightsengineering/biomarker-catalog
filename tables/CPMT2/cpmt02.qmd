@@ -1,6 +1,7 @@
 ---
 title: CPMT2
 subtitle: Cox Proportional Hazards Model Tables with Multiple Covariates
+categories: [CPM]
 ---
 
 ------------------------------------------------------------------------
@@ -33,5 +34,5 @@ result <- basic_table() %>%
 result
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

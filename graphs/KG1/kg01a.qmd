@@ -1,6 +1,7 @@
 ---
 title: KG1A
 subtitle: Kaplan-Meier Graph for Biomarker Evaluable Population in One Treatment Arm
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -28,5 +29,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

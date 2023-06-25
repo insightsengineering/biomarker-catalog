@@ -1,6 +1,7 @@
 ---
 title: SFG2A
 subtitle: Survival Forest Graph for Overall Population and by Percentiles of Continuous Biomarker with "Less than Percentage" Cutoffs Biomarker
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -47,5 +48,5 @@ We can now produce the forest plot using the `g_forest()` function.
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

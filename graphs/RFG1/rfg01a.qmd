@@ -1,6 +1,7 @@
 ---
 title: RFG1A
 subtitle: Response Forest Graph Only by Categorical or Binned Continuous Biomarker
+categories: [RFG]
 ---
 
 ------------------------------------------------------------------------
@@ -51,5 +52,5 @@ We can then produce the forest plot again using `g_forest()` on this trimmed `re
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

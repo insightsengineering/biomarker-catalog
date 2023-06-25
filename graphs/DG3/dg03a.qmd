@@ -1,6 +1,7 @@
 ---
 title: DG3A
 subtitle: Barplot of a Categorical Variable by Another Categorical Variable
+categories: [DG]
 ---
 
 ------------------------------------------------------------------------
@@ -42,5 +43,5 @@ graph +
   )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

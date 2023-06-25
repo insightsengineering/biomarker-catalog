@@ -1,6 +1,7 @@
 ---
 title: SFG6C
 subtitle: Survival Forest Graph for Multiple Continuous Biomarkers with Stratification
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -35,5 +36,5 @@ g_forest(result, xlim = c(0.6, 1.4))
 
 Note that warnings might be issued if the model contains e.g. too few events in the resulting strata, in that case you might want to reduce the number of stratification variables.
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

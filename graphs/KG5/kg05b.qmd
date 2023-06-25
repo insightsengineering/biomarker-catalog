@@ -1,6 +1,7 @@
 ---
 title: KG5B
 subtitle: More than Two Groups in Kaplan-Meier Graph by Treatment Arm and Continuous Biomarker Cut
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -31,5 +32,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

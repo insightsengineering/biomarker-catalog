@@ -1,6 +1,7 @@
 ---
 title: RFG3
 subtitle: Response Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff
+categories: [RFG]
 ---
 
 ------------------------------------------------------------------------
@@ -103,5 +104,5 @@ g2 <- g_forest(
 
 With `gridExtra::grid.arrange()` the plot can be combined e.g. with a between-treatment-arms comparison, like [RFG1A](../graphs/RFG1/rfg01a.qmd)
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

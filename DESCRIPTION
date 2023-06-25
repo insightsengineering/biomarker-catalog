@@ -1,8 +1,8 @@
 Type: Book
 Package: biomarker.catalog
 Title: Biomarker Analysis Catalog
-Version: 0.1.9.9000
-Date: 2023-05-09
+Version: 0.2.0
+Date: 2023-06-25
 Authors@R: c(
     person("Daniel", "Sabanes Bove", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
     person("Paolo", "Moroni", , role = "aut"),
@@ -17,7 +17,7 @@ License: Apache License 2.0
 URL: https://insightsengineering.github.io/biomarker-catalog/
 BugReports: https://github.com/insightsengineering/biomarker-catalog/issues
 Imports:
-    bookdown,
+    pkgdown,
     scda,
     scda.2022,
     teal.modules.clinical,

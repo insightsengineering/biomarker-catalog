@@ -1,6 +1,7 @@
 ---
 title: RG2A
 subtitle: Binarize Response Outcome for Response Graph by Treatment Arms
+categories: [RG]
 ---
 
 ------------------------------------------------------------------------
@@ -38,5 +39,5 @@ graph
 
 Note that colors and horizontal plotting is possible as described in [RG1B](../../graphs/RG1/rg01b.qmd) and [RG1C](../../graphs/RG1/rg01c.qmd).
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

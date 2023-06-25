@@ -1,6 +1,7 @@
 ---
 title: AG1
 subtitle: Utilities for All Graphs
+categories: [AG]
 ---
 
 ------------------------------------------------------------------------
@@ -164,5 +165,5 @@ grid.draw(
 )
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

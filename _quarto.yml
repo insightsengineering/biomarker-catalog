@@ -8,6 +8,8 @@ project:
     navigate: true
     timeout: 300
 
+license: "Copyright 2023, Hoffmann-La Roche Ltd."
+
 format:
   html:
     search: true
@@ -50,6 +52,7 @@ highlight-style: github
 website:
   title: Biomarker Analysis Catalog
   image: assets/images/logo.png
+  favicon: assets/images/logo.png
   open-graph: true
   search:
     location: navbar
@@ -59,24 +62,53 @@ website:
   reader-mode: true
   site-url: https://insightsengineering.github.io/biomarker-catalog
   repo-url: https://github.com/insightsengineering/biomarker-catalog
+  issue-url: https://github.com/insightsengineering/biomarker-catalog/issues/new/choose
+  repo-actions: [edit, issue]
   repo-branch: main
   google-analytics: UA-125641273-1
   cookie-consent: true
   page-footer:
     left: |
       Made with ❤️ by the Statistical Engineering Team
+      [![](https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg){fig-alt="StatisticalEngineering" width=15px}](https://github.com/insightsengineering)
+    center:
+      - text: "Citation"
+        href: misc/citation.qmd
+      - text: "License"
+        href: misc/license.qmd
+    right:
+      - icon: github
+        href: https://github.com/insightsengineering/biomarker-catalog
+        aria-label: BAC GitHub
+      - icon: rss
+        href: https://insightsengineering.github.io/biomarker-catalog/index.xml
+        text: BAC RSS
   navbar:
     pinned: true
     collapse: false
     background: primary
     search: true
-    right:
+    left:
+      - text: "Help"
+        menu:
+          - text: "Report a Bug"
+            icon: "bug"
+            href: "https://github.com/insightsengineering/biomarker-catalog/issues"
+          - text: "Ask a Question"
+            icon: "chat-right-text"
+            href: "https://github.com/insightsengineering/biomarker-catalog/discussions"
+    tools:
       - icon: slack
         href: https://app.slack.com/client/T028PB489D3/
         aria-label: Slack
+        text: Pharmaverse Slack
       - icon: github
         href: https://github.com/insightsengineering/biomarker-catalog
         aria-label: Repository
+        text: BAC GitHub
+      - icon: rss
+        href: https://insightsengineering.github.io/biomarker-catalog/index.xml
+        text: BAC RSS
   sidebar:
     - id: sidebar
       style: docked
@@ -84,30 +116,34 @@ website:
       logo: assets/images/logo.png
       border: true
       contents:
-        - text: Introduction
+        - text: Index
           file: index.qmd
         - text: "---"
+        # If the content needs to be auto-organized
+        # consider uncommenting this line and removing
+        # the lines in this tree below
+        #- auto: tables
         - file: tables/index.qmd
           text: Tables
           contents:
             - file: tables/cpmt01.qmd
               text: CPMT
-              contents: 
+              contents:
                 - file: tables/cpmt01.qmd
                   text: CPMT1
                 - file: tables/CPMT2/cpmt02.qmd
                   text: CPMT2
-                  contents: 
+                  contents:
                     - file: tables/CPMT2/cpmt02a.qmd
                       text: CPMT2A
                 - file: tables/cpmt03.qmd
                   text: CPMT3
             - file: tables/DT1/dt01.qmd
               text: DT
-              contents: 
+              contents:
                 - file: tables/DT1/dt01.qmd
                   text: DT1
-                  contents: 
+                  contents:
                     - file: tables/DT1/dt01a.qmd
                       text: DT1A
                     - file: tables/DT1/dt01b.qmd
@@ -116,32 +152,36 @@ website:
                       text: DT1C
                 - file: tables/DT2/dt02.qmd
                   text: DT2
-                  contents: 
+                  contents:
                     - file: tables/DT2/dt02a.qmd
                       text: DT2A
             - file: tables/TET1/tet01.qmd
               text: TET
-              contents: 
+              contents:
                 - file: tables/TET1/tet01.qmd
                   text: TET1
-                  contents: 
+                  contents:
                     - file: tables/TET1/tet01a.qmd
                       text: TET1A
         - text: "---"
+        # If the content needs to be auto-organized
+        # consider uncommenting this line and removing
+        # the lines in this tree below
+        #- auto: graphs
         - file: graphs/index.qmd
           text: Graphs
           contents:
             - file: graphs/ag01.qmd
               text: AG
-              contents: 
+              contents:
                 - file: graphs/ag01.qmd
                   text: AG1
             - file: graphs/DG1/dg01.qmd
               text: DG
-              contents: 
+              contents:
                 - file: graphs/DG1/dg01.qmd
                   text: DG1
-                  contents: 
+                  contents:
                     - file: graphs/DG1/dg01a.qmd
                       text: DG1A
                     - file: graphs/DG1/dg01b.qmd
@@ -150,53 +190,53 @@ website:
                   text: DG2
                 - file: graphs/DG3/dg03.qmd
                   text: DG3
-                  contents: 
+                  contents:
                     - file: graphs/DG3/dg03a.qmd
                       text: DG3A
                 - file: graphs/dg04.qmd
                   text: DG4
             - file: graphs/KG1/kg01.qmd
               text: KG
-              contents:     
+              contents:
                 - file: graphs/KG1/kg01.qmd
                   text: KG1
-                  contents: 
+                  contents:
                     - file: graphs/KG1/kg01a.qmd
                       text: KG1A
                     - file: graphs/KG1/kg01b.qmd
                       text: KG1B
                 - file: graphs/KG2/kg02.qmd
                   text: KG2
-                  contents: 
+                  contents:
                     - file: graphs/KG2/kg02a.qmd
                       text: KG2A
                 - file: graphs/kg03.qmd
                   text: KG3
                 - file: graphs/KG4/kg04.qmd
                   text: KG4
-                  contents: 
+                  contents:
                     - file: graphs/KG4/kg04a.qmd
                       text: KG4A
                     - file: graphs/KG4/kg04b.qmd
                       text: KG4B
                 - file: graphs/KG5/kg05.qmd
                   text: KG5
-                  contents: 
+                  contents:
                     - file: graphs/KG5/kg05a.qmd
                       text: KG5A
                     - file: graphs/KG5/kg05b.qmd
                       text: KG5B
             - file: graphs/RFG1/rfg01.qmd
               text: RFG
-              contents:     
+              contents:
                 - file: graphs/RFG1/rfg01.qmd
                   text: RFG1
-                  contents: 
+                  contents:
                     - file: graphs/RFG1/rfg01a.qmd
                       text: RFG1A
                 - file: graphs/RFG2/rfg02a.qmd
                   text: RFG2
-                  contents: 
+                  contents:
                     - file: graphs/RFG2/rfg02a.qmd
                       text: RFG2A
                     - file: graphs/RFG2/rfg02b.qmd
@@ -207,10 +247,10 @@ website:
                   text: RFG3
             - file: graphs/RG1/rg01.qmd
               text: RG
-              contents:     
+              contents:
                 - file: graphs/RG1/rg01.qmd
                   text: RG1
-                  contents: 
+                  contents:
                     - file: graphs/RG1/rg01a.qmd
                       text: RG1A
                     - file: graphs/RG1/rg01b.qmd
@@ -219,26 +259,26 @@ website:
                       text: RG1C
                 - file: graphs/RG2/rg02.qmd
                   text: RG2
-                  contents: 
+                  contents:
                     - file: graphs/RG2/rg02a.qmd
                       text: RG2A
                 - file: graphs/RG3/rg03.qmd
                   text: RG3
-                  contents: 
+                  contents:
                     - file: graphs/RG3/rg03a.qmd
                       text: RG3A
                     - file: graphs/RG3/rg03b.qmd
                       text: RG3B
             - file: graphs/spg01.qmd
               text: SPG
-              contents:     
+              contents:
                 - file: graphs/spg01.qmd
                   text: SPG1
                 - file: graphs/spg02.qmd
                   text: SPG2
             - file: graphs/rnag01.qmd
               text: RNAG
-              contents:     
+              contents:
                 - file: graphs/rnag01.qmd
                   text: RNAG1
                 - file: graphs/rnag02.qmd
@@ -261,17 +301,17 @@ website:
                   text: RNAG10
             - file: graphs/SFG1/sfg01.qmd
               text: SFG
-              contents:     
+              contents:
                 - file: graphs/SFG1/sfg01.qmd
                   text: SFG1
-                  contents: 
+                  contents:
                     - file: graphs/SFG1/sfg01a.qmd
                       text: SFG1A
                     - file: graphs/SFG1/sfg01b.qmd
                       text: SFG1B
                 - file: graphs/SFG2/sfg02.qmd
                   text: SFG2
-                  contents: 
+                  contents:
                     - file: graphs/SFG2/sfg02a.qmd
                       text: SFG2A
                     - file: graphs/SFG2/sfg02b.qmd
@@ -282,14 +322,14 @@ website:
                       text: SFG2D
                 - file: graphs/SFG3/sfg03.qmd
                   text: SFG3
-                  contents: 
+                  contents:
                     - file: graphs/SFG3/sfg03a.qmd
                       text: SFG3A
                 - file: graphs/sfg04.qmd
                   text: SFG4
                 - file: graphs/SFG5/sfg05.qmd
                   text: SFG5
-                  contents: 
+                  contents:
                     - file: graphs/SFG5/sfg05a.qmd
                       text: SFG5A
                     - file: graphs/SFG5/sfg05b.qmd
@@ -298,16 +338,13 @@ website:
                       text: SFG5C
                 - file: graphs/SFG6/sfg06a.qmd
                   text: SFG6
-                  contents: 
+                  contents:
                     - file: graphs/SFG6/sfg06a.qmd
                       text: SFG6A
                     - file: graphs/SFG6/sfg06b.qmd
                       text: SFG6B
                     - file: graphs/SFG6/sfg06c.qmd
                       text: SFG6C
-        - text: "---"
-        - text: Index
-          file: bac_index.qmd
   comments:
     giscus:
       # Reference: https://quarto.org/docs/reference/projects/books.html#giscus

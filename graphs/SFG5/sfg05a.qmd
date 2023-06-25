@@ -1,6 +1,7 @@
 ---
 title: SFG5A
 subtitle: Survival Forest Graph Comparing Categorical Biomarker Groups on Subgroups
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -71,5 +72,5 @@ g_forest(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

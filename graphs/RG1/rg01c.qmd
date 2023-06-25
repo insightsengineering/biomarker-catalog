@@ -1,6 +1,7 @@
 ---
 title: RG1C
 subtitle: Horizontal Response Graph for Overall Population
+categories: [RG]
 ---
 
 ------------------------------------------------------------------------
@@ -30,5 +31,5 @@ graph +
   coord_flip()
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

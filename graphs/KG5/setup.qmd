@@ -1,3 +1,7 @@
+---
+exclude-listing: true
+---
+
 ## Setup
 
 A setup similar to [KG4](../../graphs/KG4/kg04.qmd) is used.

@@ -1,6 +1,7 @@
 ---
 title: RG3
 subtitle: Response Graphs Comparing BEP vs. Overall Population
+categories: [RG]
 ---
 
 ------------------------------------------------------------------------
@@ -35,5 +36,5 @@ graph +
   facet_grid(BEP01FL ~ ARM_BIN, margins = TRUE)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

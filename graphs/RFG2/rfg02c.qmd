@@ -1,6 +1,7 @@
 ---
 title: RFG2C
 subtitle: Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups (Multiple Continuous Biomarkers with Stratification)
+categories: [RFG]
 ---
 
 ------------------------------------------------------------------------
@@ -28,5 +29,5 @@ result <- tabulate_rsp_biomarkers(df, vars = c("n_tot", "n_rsp", "prop", "or", "
 g_forest(result, xlim = c(0.7, 1.4))
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

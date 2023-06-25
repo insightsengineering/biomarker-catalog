@@ -1,6 +1,7 @@
 ---
 title: KG4B
 subtitle: Reorder and Rename Treatment Arms or Biomarker Groups in Kaplan-Meier Graph by Treatment Arm and Biomarker Subgroups
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -33,5 +34,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

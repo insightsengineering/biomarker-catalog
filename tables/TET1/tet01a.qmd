@@ -1,6 +1,7 @@
 ---
 title: TET1A
 subtitle: Time-to-Event Summary Table with Stratified Analysis
+categories: [TET]
 ---
 
 ------------------------------------------------------------------------
@@ -59,5 +60,5 @@ lyt2 <- lyt %>%
 build_table(lyt2, adtte)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

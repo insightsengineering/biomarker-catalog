@@ -1,6 +1,7 @@
 ---
 title: KG2A
 subtitle: Change Color and Line Type in Kaplan-Meier Plot by Treatment Arm
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -23,5 +24,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

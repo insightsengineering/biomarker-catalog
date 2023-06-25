@@ -1,6 +1,7 @@
 ---
 title: DG1B
 subtitle: Histogram of One Numeric Variable by Treatment Arm
+categories: [DG]
 ---
 
 ------------------------------------------------------------------------
@@ -22,5 +23,5 @@ graph <- ggplot(adsl, aes(BMRKR1)) +
 graph
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

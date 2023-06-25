@@ -1,3 +1,7 @@
+---
+exclude-listing: true
+---
+
 ## Setup
 
 We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package and `ggplot2` to create the plots.

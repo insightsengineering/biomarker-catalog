@@ -1,6 +1,7 @@
 ---
 title: SFG4
 subtitle: Survival Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -87,5 +88,5 @@ g_forest(
 )
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

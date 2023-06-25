@@ -1,6 +1,7 @@
 ---
 title: DG2
 subtitle: Boxplots of a Numeric Variable by Categorical Variables
+categories: [DG]
 ---
 
 ------------------------------------------------------------------------
@@ -85,5 +86,5 @@ graph +
   scale_y_log10(name = "Biomarker (Log(Units))")
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

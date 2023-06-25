@@ -1,6 +1,7 @@
 ---
 title: SFG2
 subtitle: Survival Forest Graphs for Overall Population and by Percentiles of Continuous Biomarker
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -48,5 +49,5 @@ We can now produce the forest plot using the `g_forest()` function from `tern` b
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

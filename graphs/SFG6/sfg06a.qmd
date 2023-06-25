@@ -1,6 +1,7 @@
 ---
 title: SFG6A
 subtitle: Survival Forest Graph for Multiple Continuous Biomarkers
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -48,5 +49,5 @@ g_forest(result, xlim = c(0.7, 1.4))
 Here we can see that the continuous biomarker (`BMRKR1`) shows a trend towards an estimated positive effect on survival (it is not statistically significant though as the confidence intervals still overlap the hazard ratio 1).
 It is a bit easier to see this here rather than in a cutpoint analysis as presented in [SFG3](../../graphs/SFG3/sfg03.qmd).
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

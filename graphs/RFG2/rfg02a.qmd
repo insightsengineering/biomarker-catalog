@@ -1,6 +1,7 @@
 ---
 title: RFG2A
 subtitle: Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups (Multiple Continuous Biomarkers)
+categories: [RFG]
 ---
 
 ------------------------------------------------------------------------
@@ -40,5 +41,5 @@ We can then produce the final forest plot using the `g_forest()` function on thi
 g_forest(result, xlim = c(0.7, 1.4))
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

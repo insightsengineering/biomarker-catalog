@@ -1,6 +1,7 @@
 ---
 title: KG5
 subtitle: Kaplan-Meier Graphs by Treatment Arm and Continuous Biomarker Cut
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -34,5 +35,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

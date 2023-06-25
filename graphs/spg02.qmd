@@ -1,6 +1,7 @@
 ---
 title: SPG2
 subtitle: STEP Graphs for Response Outcome
+categories: [SPG]
 ---
 
 ------------------------------------------------------------------------
@@ -79,5 +80,5 @@ graph +
   coord_cartesian(ylim = c(0, 10))
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

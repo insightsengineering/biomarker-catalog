@@ -1,0 +1,11 @@
+---
+exclude-listing: true
+---
+
+```{r}
+#| echo: false
+version <- packageVersion("biomarker.catalog")
+git_sha <- system('git log -1 --format="%H"', intern = TRUE)
+```
+
+This catalog entry's outputs were generated on version <code>`r version`</code> and commit SHA [<code>`r git_sha`</code>](https://github.com/insightsengineering/biomarker-catalog/tree/`r git_sha`) of the Biomarker Analysis Catalog.

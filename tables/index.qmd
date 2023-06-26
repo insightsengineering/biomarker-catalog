@@ -1,8 +1,24 @@
 ---
 title: "Tables"
 exclude-listing: true
+listing:
+  - id: tables
+    type: table
+    contents: "**/*.qmd"
+    fields: [title, subtitle]
+    categories: true
+    table-hover: true
+    table-striped: false
+    feed: true
+    exclude:
+      exclude-listing: true
+    sort:
+      - "title asc"
 ---
 
-------------------------------------------------------------------------
+---
 
 This is a collection of Biomarker Analysis table templates.
+
+:::{#tables}
+:::

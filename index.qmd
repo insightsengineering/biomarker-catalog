@@ -1,39 +1,24 @@
 ---
 title: "Biomarker Analysis Catalog"
-listing:
-  - id: tables
-    type: table
-    contents: "tables/**/*.qmd"
-    fields: [title, subtitle]
-    categories: true
-    table-hover: true
-    table-striped: false
-    feed: true
-    exclude:
-      exclude-listing: true
-    sort:
-      - "title asc"
-  - id: graphs
-    type: grid
-    contents: "graphs/**/*.qmd"
-    categories: true
-    feed: true
-    exclude:
-      exclude-listing: true
-    sort:
-      - "title asc"
 ---
 
 ---
 
 This is a collection of Biomarker Analysis templates including tables and graphs.
 
-## Tables
+### Citation
 
-:::{#tables}
-:::
+```{r}
+#| results: asis
+#| echo: false
+pkg <- pkgdown:::as_pkgdown(".")
+citations <- pkgdown:::data_citations(pkg)
+cat(paste(citations$html, "\n\n"))
+cat(paste("```bibtex", "\n"))
+cat(paste(citations$bibtex, "\n"))
+cat("```\n\n")
+```
 
-## Graphs
+### Version
 
-:::{#graphs}
-:::
+{{< include misc/version.qmd >}}

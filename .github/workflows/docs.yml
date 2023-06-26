@@ -42,7 +42,9 @@ jobs:
           direction: upstream
 
       - name: Render catalog 🖨
-        run: quarto render
+        run: |
+          R CMD INSTALL .
+          quarto render
         shell: bash
 
       - name: Create artifact 📂

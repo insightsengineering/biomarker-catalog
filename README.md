@@ -44,6 +44,12 @@ x <- dependency_table(project = ".", verbose = 1)
 install_deps(x, verbose = 1, install_project = FALSE)
 ```
 
+Then, install this "package" (because it's not really a package, but it emulates a package as it has a `DESCRIPTION` file from which metadata is inferred):
+
+```shell
+R CMD INSTALL .
+```
+
 You'll see that files under [tables](tables) and [graphs](graphs) are in a `.qmd` file format, which translates to a **q**uarto **m**ark**d**own format. Note that the format is _almost exactly_ the same as Rmarkdown, with some minor differences, so you would write content within those files exactly as you would write Rmarkdown.
 
 If you are adding a new table or graph in the form a a new `qmd` file, then you will also need to update the index in the [_quarto.yml](_quarto.yml) file with the new file name.

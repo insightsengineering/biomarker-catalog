@@ -156,7 +156,7 @@ cookieconsent.run({
 <div class="quarto-navbar-tools ms-auto tools-wide">
     <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
     <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
-    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -914,7 +914,7 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">CPMT2A</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Changing Reference Levels in the Cox Proportional Hazards Model Table</p>
   <div class="quarto-categories">
     <div class="quarto-category">CPM</div>
@@ -937,7 +937,6 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -1056,15 +1055,7 @@ loaded via a namespace (and not attached):
 </div>
 </div>
 <hr>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="cell" data-hash="cpmt02a_cache/html/unnamed-chunk-4_ca9d4ebd9c40ebc9ea178788eb23c60d">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
-'git log -1 --format="%H"' had status 128</code></pre>
-</div>
-</div>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1483,55 +1474,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> CPMT2A</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> Changing Reference Levels in the Cox Proportional Hazards Model Table</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="an">categories:</span><span class="co"> [CPM]</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="co">---</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a>------------------------------------------------------------------------</span>
-<span id="cb8-8"><a href="#cb8-8"></a></span>
-<span id="cb8-9"><a href="#cb8-9"></a>::: panel-tabset</span>
-<span id="cb8-10"><a href="#cb8-10"></a>{{&lt; include setup.qmd &gt;}}</span>
-<span id="cb8-11"><a href="#cb8-11"></a></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="fu">## Table</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a></span>
-<span id="cb8-14"><a href="#cb8-14"></a>For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before.</span>
-<span id="cb8-15"><a href="#cb8-15"></a>The <span class="in">`forcats`</span> package provides convenience functions for the level reordering.</span>
-<span id="cb8-16"><a href="#cb8-16"></a></span>
-<span id="cb8-19"><a href="#cb8-19"></a><span class="in">```{r}</span></span>
-<span id="cb8-20"><a href="#cb8-20"></a>adtte2 <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
-<span id="cb8-21"><a href="#cb8-21"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb8-22"><a href="#cb8-22"></a>    <span class="at">ARM =</span> forcats<span class="sc">::</span><span class="fu">fct_relevel</span>(</span>
-<span id="cb8-23"><a href="#cb8-23"></a>      ARM,</span>
-<span id="cb8-24"><a href="#cb8-24"></a>      <span class="st">"B: Placebo"</span>,</span>
-<span id="cb8-25"><a href="#cb8-25"></a>      <span class="st">"C: Combination"</span>,</span>
-<span id="cb8-26"><a href="#cb8-26"></a>      <span class="st">"A: Drug X"</span></span>
-<span id="cb8-27"><a href="#cb8-27"></a>    )</span>
-<span id="cb8-28"><a href="#cb8-28"></a>  )</span>
-<span id="cb8-29"><a href="#cb8-29"></a><span class="in">```</span></span>
-<span id="cb8-30"><a href="#cb8-30"></a></span>
-<span id="cb8-31"><a href="#cb8-31"></a>Now we can proceed in the same way as in <span class="co">[</span><span class="ot">CPMT2</span><span class="co">](cpmt02.qmd)</span>.</span>
-<span id="cb8-32"><a href="#cb8-32"></a></span>
-<span id="cb8-35"><a href="#cb8-35"></a><span class="in">```{r}</span></span>
-<span id="cb8-36"><a href="#cb8-36"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-37"><a href="#cb8-37"></a>  <span class="fu">summarize_coxreg</span>(</span>
-<span id="cb8-38"><a href="#cb8-38"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb8-39"><a href="#cb8-39"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb8-40"><a href="#cb8-40"></a>      <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb8-41"><a href="#cb8-41"></a>      <span class="at">arm =</span> <span class="st">"ARM"</span>,</span>
-<span id="cb8-42"><a href="#cb8-42"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"BMRKR1"</span>, <span class="st">"BMRKR2"</span>)</span>
-<span id="cb8-43"><a href="#cb8-43"></a>    ),</span>
-<span id="cb8-44"><a href="#cb8-44"></a>    <span class="at">multivar =</span> <span class="cn">TRUE</span></span>
-<span id="cb8-45"><a href="#cb8-45"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-46"><a href="#cb8-46"></a>  <span class="fu">append_topleft</span>(<span class="st">"Effect/Covariate Included in the Model"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb8-47"><a href="#cb8-47"></a>  <span class="fu">build_table</span>(adtte2)</span>
-<span id="cb8-48"><a href="#cb8-48"></a></span>
-<span id="cb8-49"><a href="#cb8-49"></a>result</span>
-<span id="cb8-50"><a href="#cb8-50"></a><span class="in">```</span></span>
-<span id="cb8-51"><a href="#cb8-51"></a></span>
-<span id="cb8-52"><a href="#cb8-52"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
-<span id="cb8-53"><a href="#cb8-53"></a>:::</span>
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> CPMT2A</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="an">subtitle:</span><span class="co"> Changing Reference Levels in the Cox Proportional Hazards Model Table</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="an">categories:</span><span class="co"> [CPM]</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">---</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>------------------------------------------------------------------------</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>::: panel-tabset</span>
+<span id="cb7-10"><a href="#cb7-10"></a>{{&lt; include setup.qmd &gt;}}</span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">## Table</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before.</span>
+<span id="cb7-15"><a href="#cb7-15"></a>The <span class="in">`forcats`</span> package provides convenience functions for the level reordering.</span>
+<span id="cb7-16"><a href="#cb7-16"></a></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="in">```{r}</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a>adtte2 <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-22"><a href="#cb7-22"></a>    <span class="at">ARM =</span> forcats<span class="sc">::</span><span class="fu">fct_relevel</span>(</span>
+<span id="cb7-23"><a href="#cb7-23"></a>      ARM,</span>
+<span id="cb7-24"><a href="#cb7-24"></a>      <span class="st">"B: Placebo"</span>,</span>
+<span id="cb7-25"><a href="#cb7-25"></a>      <span class="st">"C: Combination"</span>,</span>
+<span id="cb7-26"><a href="#cb7-26"></a>      <span class="st">"A: Drug X"</span></span>
+<span id="cb7-27"><a href="#cb7-27"></a>    )</span>
+<span id="cb7-28"><a href="#cb7-28"></a>  )</span>
+<span id="cb7-29"><a href="#cb7-29"></a><span class="in">```</span></span>
+<span id="cb7-30"><a href="#cb7-30"></a></span>
+<span id="cb7-31"><a href="#cb7-31"></a>Now we can proceed in the same way as in <span class="co">[</span><span class="ot">CPMT2</span><span class="co">](cpmt02.qmd)</span>.</span>
+<span id="cb7-32"><a href="#cb7-32"></a></span>
+<span id="cb7-35"><a href="#cb7-35"></a><span class="in">```{r}</span></span>
+<span id="cb7-36"><a href="#cb7-36"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a>  <span class="fu">summarize_coxreg</span>(</span>
+<span id="cb7-38"><a href="#cb7-38"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb7-39"><a href="#cb7-39"></a>      <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb7-40"><a href="#cb7-40"></a>      <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb7-41"><a href="#cb7-41"></a>      <span class="at">arm =</span> <span class="st">"ARM"</span>,</span>
+<span id="cb7-42"><a href="#cb7-42"></a>      <span class="at">covariates =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"BMRKR1"</span>, <span class="st">"BMRKR2"</span>)</span>
+<span id="cb7-43"><a href="#cb7-43"></a>    ),</span>
+<span id="cb7-44"><a href="#cb7-44"></a>    <span class="at">multivar =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-45"><a href="#cb7-45"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-46"><a href="#cb7-46"></a>  <span class="fu">append_topleft</span>(<span class="st">"Effect/Covariate Included in the Model"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-47"><a href="#cb7-47"></a>  <span class="fu">build_table</span>(adtte2)</span>
+<span id="cb7-48"><a href="#cb7-48"></a></span>
+<span id="cb7-49"><a href="#cb7-49"></a>result</span>
+<span id="cb7-50"><a href="#cb7-50"></a><span class="in">```</span></span>
+<span id="cb7-51"><a href="#cb7-51"></a></span>
+<span id="cb7-52"><a href="#cb7-52"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb7-53"><a href="#cb7-53"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -1555,8 +1546,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </i> 
     </a>
   </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="BAC RSS">
+</i> 
+    </a>
   </li>  
 </ul>
 </div>

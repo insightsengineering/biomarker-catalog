@@ -159,7 +159,7 @@ cookieconsent.run({
 <div class="quarto-navbar-tools ms-auto tools-wide">
     <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
     <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
-    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -917,7 +917,7 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">RFG1A</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Response Forest Graph Only by Categorical or Binned Continuous Biomarker</p>
   <div class="quarto-categories">
     <div class="quarto-category">RFG</div>
@@ -940,7 +940,6 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -1061,15 +1060,7 @@ loaded via a namespace (and not attached):
 </div>
 </div>
 <hr>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="cell" data-hash="rfg01a_cache/html/unnamed-chunk-5_43058b2e1b9ce048eb79c8d8ed8689e7">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
-'git log -1 --format="%H"' had status 128</code></pre>
-</div>
-</div>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1488,62 +1479,62 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> RFG1A</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> Response Forest Graph Only by Categorical or Binned Continuous Biomarker</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="an">categories:</span><span class="co"> [RFG]</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="co">---</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a>------------------------------------------------------------------------</span>
-<span id="cb8-8"><a href="#cb8-8"></a></span>
-<span id="cb8-9"><a href="#cb8-9"></a>::: panel-tabset</span>
-<span id="cb8-10"><a href="#cb8-10"></a>{{&lt; include setup.qmd &gt;}}</span>
-<span id="cb8-11"><a href="#cb8-11"></a></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="fu">## Plot</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a></span>
-<span id="cb8-14"><a href="#cb8-14"></a>We define a binned factor variable <span class="in">`BMRKR1_cut`</span> from the continuous biomarker variable <span class="in">`BMRKR1`</span> to illustrate.</span>
-<span id="cb8-15"><a href="#cb8-15"></a>Note that the remaining code would work the same for an originally categorical biomarker.</span>
-<span id="cb8-16"><a href="#cb8-16"></a></span>
-<span id="cb8-17"><a href="#cb8-17"></a><span class="in">```{r, fig.width = 15}</span></span>
-<span id="cb8-18"><a href="#cb8-18"></a>BMRKR1_cutpoint <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb8-19"><a href="#cb8-19"></a></span>
-<span id="cb8-20"><a href="#cb8-20"></a>adrs2 <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
-<span id="cb8-21"><a href="#cb8-21"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb8-22"><a href="#cb8-22"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1),</span>
-<span id="cb8-23"><a href="#cb8-23"></a>    <span class="at">BMRKR1_cut =</span> <span class="fu">explicit_na</span>(<span class="fu">factor</span>(</span>
-<span id="cb8-24"><a href="#cb8-24"></a>      <span class="fu">ifelse</span>(BMRKR1 <span class="sc">&gt;</span> BMRKR1_cutpoint, <span class="st">"Greater"</span>, <span class="st">"Less"</span>)</span>
-<span id="cb8-25"><a href="#cb8-25"></a>    ))</span>
-<span id="cb8-26"><a href="#cb8-26"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-27"><a href="#cb8-27"></a>  <span class="fu">var_relabel</span>(<span class="at">BMRKR1_cut =</span> <span class="st">"Biomarker (Binned Continuous)"</span>)</span>
-<span id="cb8-28"><a href="#cb8-28"></a></span>
-<span id="cb8-29"><a href="#cb8-29"></a>df <span class="ot">&lt;-</span> <span class="fu">extract_rsp_subgroups</span>(</span>
-<span id="cb8-30"><a href="#cb8-30"></a>  <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb8-31"><a href="#cb8-31"></a>    <span class="at">rsp =</span> <span class="st">"is_rsp"</span>,</span>
-<span id="cb8-32"><a href="#cb8-32"></a>    <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
-<span id="cb8-33"><a href="#cb8-33"></a>    <span class="at">subgroups =</span> <span class="fu">c</span>(<span class="st">"BMRKR1_cut"</span>, <span class="st">"BMRKR2"</span>)</span>
-<span id="cb8-34"><a href="#cb8-34"></a>  ),</span>
-<span id="cb8-35"><a href="#cb8-35"></a>  <span class="at">data =</span> adrs2,</span>
-<span id="cb8-36"><a href="#cb8-36"></a>  <span class="at">conf_level =</span> <span class="fl">0.95</span></span>
-<span id="cb8-37"><a href="#cb8-37"></a>)</span>
-<span id="cb8-38"><a href="#cb8-38"></a></span>
-<span id="cb8-39"><a href="#cb8-39"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-40"><a href="#cb8-40"></a>  <span class="fu">tabulate_rsp_subgroups</span>(df, <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot"</span>, <span class="st">"n"</span>, <span class="st">"n_rsp"</span>, <span class="st">"prop"</span>, <span class="st">"or"</span>, <span class="st">"ci"</span>))</span>
-<span id="cb8-41"><a href="#cb8-41"></a><span class="in">```</span></span>
-<span id="cb8-42"><a href="#cb8-42"></a></span>
-<span id="cb8-43"><a href="#cb8-43"></a>We can remove the first line showing the <span class="in">`All Patients`</span> category from the <span class="in">`result`</span> table as follows.</span>
-<span id="cb8-44"><a href="#cb8-44"></a></span>
-<span id="cb8-47"><a href="#cb8-47"></a><span class="in">```{r}</span></span>
-<span id="cb8-48"><a href="#cb8-48"></a>result <span class="ot">&lt;-</span> result[<span class="sc">-</span><span class="dv">1</span>, , keep_topleft <span class="ot">=</span> <span class="cn">TRUE</span>]</span>
-<span id="cb8-49"><a href="#cb8-49"></a><span class="in">```</span></span>
-<span id="cb8-50"><a href="#cb8-50"></a></span>
-<span id="cb8-51"><a href="#cb8-51"></a>We can then produce the forest plot again using <span class="in">`g_forest()`</span> on this trimmed <span class="in">`result`</span> table.</span>
-<span id="cb8-52"><a href="#cb8-52"></a></span>
-<span id="cb8-53"><a href="#cb8-53"></a><span class="in">```{r, fig.width = 15}</span></span>
-<span id="cb8-54"><a href="#cb8-54"></a><span class="fu">g_forest</span>(result)</span>
-<span id="cb8-55"><a href="#cb8-55"></a><span class="in">```</span></span>
-<span id="cb8-56"><a href="#cb8-56"></a></span>
-<span id="cb8-57"><a href="#cb8-57"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
-<span id="cb8-58"><a href="#cb8-58"></a>:::</span>
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> RFG1A</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="an">subtitle:</span><span class="co"> Response Forest Graph Only by Categorical or Binned Continuous Biomarker</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="an">categories:</span><span class="co"> [RFG]</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">---</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>------------------------------------------------------------------------</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>::: panel-tabset</span>
+<span id="cb7-10"><a href="#cb7-10"></a>{{&lt; include setup.qmd &gt;}}</span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">## Plot</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>We define a binned factor variable <span class="in">`BMRKR1_cut`</span> from the continuous biomarker variable <span class="in">`BMRKR1`</span> to illustrate.</span>
+<span id="cb7-15"><a href="#cb7-15"></a>Note that the remaining code would work the same for an originally categorical biomarker.</span>
+<span id="cb7-16"><a href="#cb7-16"></a></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="in">```{r, fig.width = 15}</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a>BMRKR1_cutpoint <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a></span>
+<span id="cb7-20"><a href="#cb7-20"></a>adrs2 <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-22"><a href="#cb7-22"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1),</span>
+<span id="cb7-23"><a href="#cb7-23"></a>    <span class="at">BMRKR1_cut =</span> <span class="fu">explicit_na</span>(<span class="fu">factor</span>(</span>
+<span id="cb7-24"><a href="#cb7-24"></a>      <span class="fu">ifelse</span>(BMRKR1 <span class="sc">&gt;</span> BMRKR1_cutpoint, <span class="st">"Greater"</span>, <span class="st">"Less"</span>)</span>
+<span id="cb7-25"><a href="#cb7-25"></a>    ))</span>
+<span id="cb7-26"><a href="#cb7-26"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-27"><a href="#cb7-27"></a>  <span class="fu">var_relabel</span>(<span class="at">BMRKR1_cut =</span> <span class="st">"Biomarker (Binned Continuous)"</span>)</span>
+<span id="cb7-28"><a href="#cb7-28"></a></span>
+<span id="cb7-29"><a href="#cb7-29"></a>df <span class="ot">&lt;-</span> <span class="fu">extract_rsp_subgroups</span>(</span>
+<span id="cb7-30"><a href="#cb7-30"></a>  <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb7-31"><a href="#cb7-31"></a>    <span class="at">rsp =</span> <span class="st">"is_rsp"</span>,</span>
+<span id="cb7-32"><a href="#cb7-32"></a>    <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb7-33"><a href="#cb7-33"></a>    <span class="at">subgroups =</span> <span class="fu">c</span>(<span class="st">"BMRKR1_cut"</span>, <span class="st">"BMRKR2"</span>)</span>
+<span id="cb7-34"><a href="#cb7-34"></a>  ),</span>
+<span id="cb7-35"><a href="#cb7-35"></a>  <span class="at">data =</span> adrs2,</span>
+<span id="cb7-36"><a href="#cb7-36"></a>  <span class="at">conf_level =</span> <span class="fl">0.95</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a>)</span>
+<span id="cb7-38"><a href="#cb7-38"></a></span>
+<span id="cb7-39"><a href="#cb7-39"></a>result <span class="ot">&lt;-</span> <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-40"><a href="#cb7-40"></a>  <span class="fu">tabulate_rsp_subgroups</span>(df, <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot"</span>, <span class="st">"n"</span>, <span class="st">"n_rsp"</span>, <span class="st">"prop"</span>, <span class="st">"or"</span>, <span class="st">"ci"</span>))</span>
+<span id="cb7-41"><a href="#cb7-41"></a><span class="in">```</span></span>
+<span id="cb7-42"><a href="#cb7-42"></a></span>
+<span id="cb7-43"><a href="#cb7-43"></a>We can remove the first line showing the <span class="in">`All Patients`</span> category from the <span class="in">`result`</span> table as follows.</span>
+<span id="cb7-44"><a href="#cb7-44"></a></span>
+<span id="cb7-47"><a href="#cb7-47"></a><span class="in">```{r}</span></span>
+<span id="cb7-48"><a href="#cb7-48"></a>result <span class="ot">&lt;-</span> result[<span class="sc">-</span><span class="dv">1</span>, , keep_topleft <span class="ot">=</span> <span class="cn">TRUE</span>]</span>
+<span id="cb7-49"><a href="#cb7-49"></a><span class="in">```</span></span>
+<span id="cb7-50"><a href="#cb7-50"></a></span>
+<span id="cb7-51"><a href="#cb7-51"></a>We can then produce the forest plot again using <span class="in">`g_forest()`</span> on this trimmed <span class="in">`result`</span> table.</span>
+<span id="cb7-52"><a href="#cb7-52"></a></span>
+<span id="cb7-53"><a href="#cb7-53"></a><span class="in">```{r, fig.width = 15}</span></span>
+<span id="cb7-54"><a href="#cb7-54"></a><span class="fu">g_forest</span>(result)</span>
+<span id="cb7-55"><a href="#cb7-55"></a><span class="in">```</span></span>
+<span id="cb7-56"><a href="#cb7-56"></a></span>
+<span id="cb7-57"><a href="#cb7-57"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb7-58"><a href="#cb7-58"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -1567,8 +1558,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </i> 
     </a>
   </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="BAC RSS">
+</i> 
+    </a>
   </li>  
 </ul>
 </div>

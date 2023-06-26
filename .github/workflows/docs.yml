@@ -44,6 +44,7 @@ jobs:
       - name: Render catalog 🖨
         run: |
           R CMD INSTALL .
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
           quarto render
         shell: bash
 

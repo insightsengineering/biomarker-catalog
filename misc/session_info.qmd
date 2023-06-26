@@ -1,5 +1,4 @@
 ---
-title: Copyright
 exclude-listing: true
 ---
 
@@ -12,8 +11,6 @@ sessionInfo()
 ```
 
 ---
-
-## Biomarker Analysis Catalog Version
 
 ```{r}
 #| echo: false

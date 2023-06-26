@@ -82,7 +82,7 @@ website:
         aria-label: BAC GitHub
       - icon: rss
         href: https://insightsengineering.github.io/biomarker-catalog/index.xml
-        text: BAC RSS
+        aria-label: BAC RSS
   navbar:
     pinned: true
     collapse: false
@@ -108,6 +108,7 @@ website:
         text: BAC GitHub
       - icon: rss
         href: https://insightsengineering.github.io/biomarker-catalog/index.xml
+        aria-label: RSS
         text: BAC RSS
   sidebar:
     - id: sidebar

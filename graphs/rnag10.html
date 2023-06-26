@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <link href="../graphs/SFG1/sfg01.html" rel="next">
 <link href="../graphs/rnag09.html" rel="prev">
+<link href="../assets/images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -136,19 +137,29 @@ cookieconsent.run({
     <span class="navbar-title">Biomarker Analysis Catalog</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
+<li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Report a Bug</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+        <li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Ask a Question</span></a>
   </li>  
+    </ul>
+</li>
 </ul>
-<div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
+    <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -177,7 +188,7 @@ cookieconsent.run({
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Index</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -899,13 +910,6 @@ cookieconsent.run({
 </li>
       </ul>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../bac_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
-  </div>
-</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
@@ -913,9 +917,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">RNAG10</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">RNAseq Survival Forest Graph</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">RNAG</div>
+  </div>
+  </div>
 
 
 
@@ -934,6 +941,7 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Survival Forest Graph</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Teal Module for Survival Forest Graph</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -1043,7 +1051,7 @@ Loglik converged before variable 1 ; coefficient may be infinite.</code></pre>
 <span id="cb7-24"><a href="#cb7-24"></a>  )</span>
 <span id="cb7-25"><a href="#cb7-25"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-06-24 17:37:19.9262 pid:4543 token:[] teal.modules.hermes Initializing tm_g_forest_tte</code></pre>
+<pre><code>[INFO] 2023-06-26 13:39:06.5860 pid:4588 token:[] teal.modules.hermes Initializing tm_g_forest_tte</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
@@ -1055,7 +1063,7 @@ Loglik converged before variable 1 ; coefficient may be infinite.</code></pre>
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="cell" data-hash="rnag10_cache/html/sessioninfo_cdd1a09bc692e2a4d448a98c94a46ba5">
+<div class="cell" data-hash="rnag10_cache/html/sessioninfo_a7ab4fe993482c0a41c71815e97fa862">
 <details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
@@ -1084,7 +1092,7 @@ attached base packages:
 other attached packages:
  [1] teal.modules.hermes_0.1.4.9011 teal_0.13.0.9002              
  [3] teal.transform_0.3.0.9001      teal.data_0.2.0.9002          
- [5] shiny_1.7.4                    hermes_1.0.1.9013             
+ [5] shiny_1.7.4                    hermes_1.0.1.9014             
  [7] SummarizedExperiment_1.30.2    Biobase_2.60.0                
  [9] GenomicRanges_1.52.0           GenomeInfoDb_1.36.0           
 [11] IRanges_2.34.0                 S4Vectors_0.38.1              
@@ -1159,6 +1167,16 @@ loaded via a namespace (and not attached):
 [123] shinyjs_2.1.0              </code></pre>
 </div>
 </div>
+<hr>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell" data-hash="rnag10_cache/html/unnamed-chunk-6_c83b589340275e3c9dd841a297c90568">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
+'git log -1 --format="%H"' had status 128</code></pre>
+</div>
+</div>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1167,7 +1185,7 @@ loaded via a namespace (and not attached):
 <!-- -->
 
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1577,149 +1595,169 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> RNAG10</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Survival Forest Graph</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co">---</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a></span>
-<span id="cb13-6"><a href="#cb13-6"></a>------------------------------------------------------------------------</span>
-<span id="cb13-7"><a href="#cb13-7"></a></span>
-<span id="cb13-8"><a href="#cb13-8"></a>::: panel-tabset</span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="fu">## Setup: Import &amp; Data Manipulation</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a></span>
-<span id="cb13-11"><a href="#cb13-11"></a>This page can be used as a template of how to produce survival forest graphs for RNA-seq gene expression analysis using available <span class="in">`tern`</span> and <span class="in">`hermes`</span> functions, and to create an interactive survival forest graph for RNA-seq gene expression analysis using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb13-12"><a href="#cb13-12"></a></span>
-<span id="cb13-13"><a href="#cb13-13"></a>The code below needs both RNA-seq data (in <span class="in">`HermesData`</span> format) and time-to-event data (in <span class="in">`ADTTE`</span> format) as input.</span>
-<span id="cb13-14"><a href="#cb13-14"></a></span>
-<span id="cb13-15"><a href="#cb13-15"></a>We first prepare the time-to-event data.</span>
-<span id="cb13-16"><a href="#cb13-16"></a>We define an event indicator variable, transform the time to months and filter down to the overall survival subset.</span>
-<span id="cb13-17"><a href="#cb13-17"></a></span>
-<span id="cb13-18"><a href="#cb13-18"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb13-19"><a href="#cb13-19"></a><span class="fu">library</span>(tern)</span>
-<span id="cb13-20"><a href="#cb13-20"></a></span>
-<span id="cb13-21"><a href="#cb13-21"></a>adtte_f <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb13-22"><a href="#cb13-22"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb13-23"><a href="#cb13-23"></a>    <span class="at">is_event =</span> .data<span class="sc">$</span>CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
-<span id="cb13-24"><a href="#cb13-24"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(.data<span class="sc">$</span>AVAL),</span>
-<span id="cb13-25"><a href="#cb13-25"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb13-27"><a href="#cb13-27"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(.data<span class="sc">$</span>PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>)</span>
-<span id="cb13-28"><a href="#cb13-28"></a><span class="in">```</span></span>
-<span id="cb13-29"><a href="#cb13-29"></a></span>
-<span id="cb13-30"><a href="#cb13-30"></a>Then we prepare the RNA-seq data and join with <span class="in">`ADTTE`</span>, see <span class="co">[</span><span class="ot">RNAG9</span><span class="co">](../graphs/rnag09.qmd)</span> for details.</span>
-<span id="cb13-31"><a href="#cb13-31"></a></span>
-<span id="cb13-32"><a href="#cb13-32"></a><span class="in">```{r,  message = FALSE}</span></span>
-<span id="cb13-33"><a href="#cb13-33"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb13-34"><a href="#cb13-34"></a></span>
-<span id="cb13-35"><a href="#cb13-35"></a>gene_data <span class="ot">&lt;-</span> <span class="fu">col_data_with_genes</span>(</span>
-<span id="cb13-36"><a href="#cb13-36"></a>  <span class="at">object =</span> hermes_data,</span>
-<span id="cb13-37"><a href="#cb13-37"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb13-38"><a href="#cb13-38"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="st">"GeneID:1820"</span>)</span>
-<span id="cb13-39"><a href="#cb13-39"></a>)</span>
-<span id="cb13-40"><a href="#cb13-40"></a>joined_data <span class="ot">&lt;-</span> <span class="fu">inner_join_cdisc</span>(</span>
-<span id="cb13-41"><a href="#cb13-41"></a>  <span class="at">gene_data =</span> gene_data,</span>
-<span id="cb13-42"><a href="#cb13-42"></a>  <span class="at">cdisc_data =</span> adtte_f</span>
-<span id="cb13-43"><a href="#cb13-43"></a>)</span>
-<span id="cb13-44"><a href="#cb13-44"></a><span class="in">```</span></span>
-<span id="cb13-45"><a href="#cb13-45"></a></span>
-<span id="cb13-46"><a href="#cb13-46"></a>We can then cut the resulting gene column in the joined <span class="in">`adtte_data`</span> into quantile bins.</span>
-<span id="cb13-47"><a href="#cb13-47"></a>In this example we want two equally sized groups so set <span class="in">`probs`</span> to 0.5, and we then label the bins as <span class="in">`Low`</span> and <span class="in">`High`</span>.</span>
-<span id="cb13-48"><a href="#cb13-48"></a>We could choose a different quantile cutoff.</span>
-<span id="cb13-49"><a href="#cb13-49"></a>The only important restriction here is that we need to bin the genes into exactly two groups, otherwise the forest plot below cannot compare these two groups with each other.</span>
-<span id="cb13-50"><a href="#cb13-50"></a></span>
-<span id="cb13-53"><a href="#cb13-53"></a><span class="in">```{r}</span></span>
-<span id="cb13-54"><a href="#cb13-54"></a>arm_name <span class="ot">&lt;-</span> <span class="fu">attr</span>(gene_data, <span class="st">"gene_cols"</span>)</span>
-<span id="cb13-55"><a href="#cb13-55"></a>binned_data <span class="ot">&lt;-</span> joined_data <span class="sc">%&gt;%</span></span>
-<span id="cb13-56"><a href="#cb13-56"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb13-57"><a href="#cb13-57"></a>    <span class="at">gene_factor =</span> <span class="fu">cut_quantile_bins</span>(</span>
-<span id="cb13-58"><a href="#cb13-58"></a>      joined_data[[arm_name]],</span>
-<span id="cb13-59"><a href="#cb13-59"></a>      <span class="at">probs =</span> <span class="fl">0.5</span>,</span>
-<span id="cb13-60"><a href="#cb13-60"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Low"</span>, <span class="st">"High"</span>)</span>
-<span id="cb13-61"><a href="#cb13-61"></a>    )</span>
-<span id="cb13-62"><a href="#cb13-62"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb13-63"><a href="#cb13-63"></a>  <span class="fu">df_explicit_na</span>(<span class="at">omit_columns =</span> <span class="st">"AVALU"</span>)</span>
-<span id="cb13-64"><a href="#cb13-64"></a><span class="in">```</span></span>
-<span id="cb13-65"><a href="#cb13-65"></a></span>
-<span id="cb13-66"><a href="#cb13-66"></a><span class="fu">## Survival Forest Graph</span></span>
-<span id="cb13-67"><a href="#cb13-67"></a></span>
-<span id="cb13-68"><a href="#cb13-68"></a>It is now simple to create the survival forest graph by providing the data set created above with the variable specification.</span>
-<span id="cb13-69"><a href="#cb13-69"></a>First we calculate the survival estimates with <span class="in">`extract_survival_subgroups()`</span> by providing the necessary variable specification.</span>
-<span id="cb13-70"><a href="#cb13-70"></a>Here we specify our derived <span class="in">`gene_bin`</span> for the arm.</span>
-<span id="cb13-71"><a href="#cb13-71"></a>Then we build the table portion with <span class="in">`tabulate_survival_subgroups()`</span> and pass our calculations from the previous step.</span>
-<span id="cb13-72"><a href="#cb13-72"></a>Lastly, we generate the final graph with <span class="in">`g_forest`</span>.</span>
-<span id="cb13-73"><a href="#cb13-73"></a></span>
-<span id="cb13-76"><a href="#cb13-76"></a><span class="in">```{r}</span></span>
-<span id="cb13-77"><a href="#cb13-77"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb13-78"><a href="#cb13-78"></a>  <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb13-79"><a href="#cb13-79"></a>  <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb13-80"><a href="#cb13-80"></a>  <span class="at">arm =</span> <span class="st">"gene_factor"</span>,</span>
-<span id="cb13-81"><a href="#cb13-81"></a>  <span class="at">subgroups =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"SAFFL"</span>)</span>
-<span id="cb13-82"><a href="#cb13-82"></a>)</span>
-<span id="cb13-83"><a href="#cb13-83"></a>tbl <span class="ot">&lt;-</span> <span class="fu">extract_survival_subgroups</span>(</span>
-<span id="cb13-84"><a href="#cb13-84"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb13-85"><a href="#cb13-85"></a>  <span class="at">data =</span> binned_data</span>
-<span id="cb13-86"><a href="#cb13-86"></a>)</span>
-<span id="cb13-87"><a href="#cb13-87"></a></span>
-<span id="cb13-88"><a href="#cb13-88"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>()</span>
-<span id="cb13-89"><a href="#cb13-89"></a>result <span class="ot">&lt;-</span> <span class="fu">tabulate_survival_subgroups</span>(</span>
-<span id="cb13-90"><a href="#cb13-90"></a>  <span class="at">lyt =</span> lyt,</span>
-<span id="cb13-91"><a href="#cb13-91"></a>  <span class="at">df =</span> tbl,</span>
-<span id="cb13-92"><a href="#cb13-92"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot_events"</span>, <span class="st">"n"</span>, <span class="st">"n_events"</span>, <span class="st">"median"</span>, <span class="st">"hr"</span>, <span class="st">"ci"</span>),</span>
-<span id="cb13-93"><a href="#cb13-93"></a>  <span class="at">time_unit =</span> binned_data<span class="sc">$</span>AVALU[<span class="dv">1</span>]</span>
-<span id="cb13-94"><a href="#cb13-94"></a>)</span>
-<span id="cb13-95"><a href="#cb13-95"></a></span>
-<span id="cb13-96"><a href="#cb13-96"></a><span class="fu">g_forest</span>(result)</span>
-<span id="cb13-97"><a href="#cb13-97"></a><span class="in">```</span></span>
-<span id="cb13-98"><a href="#cb13-98"></a></span>
-<span id="cb13-99"><a href="#cb13-99"></a>See <span class="co">[</span><span class="ot">SFG01</span><span class="co">](../graphs/SFG1/sfg01.qmd)</span> to <span class="co">[</span><span class="ot">SFG05</span><span class="co">](../graphs/SFG5/sfg05.qmd)</span> for additional customization options for the survival forest graphs or the help page <span class="in">`?g_forest()`</span>.</span>
-<span id="cb13-100"><a href="#cb13-100"></a></span>
-<span id="cb13-101"><a href="#cb13-101"></a><span class="fu">## Teal Module for Survival Forest Graph</span></span>
-<span id="cb13-102"><a href="#cb13-102"></a></span>
-<span id="cb13-103"><a href="#cb13-103"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span> and sample <span class="in">`ADTTE`</span> data; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span> and example <span class="in">`ADTTE`</span> data from <span class="in">`scda`</span>.</span>
-<span id="cb13-104"><a href="#cb13-104"></a>We can then use the provided teal module <span class="in">`tm_g_forest_tte`</span> to include the corresponding interactive survival forest analysis in our teal app.</span>
-<span id="cb13-105"><a href="#cb13-105"></a>In case that we have different non-standard column names in our ADTTE data set we could also specify them via the <span class="in">`adtte_vars`</span> argument, see the documentation <span class="in">`?tm_g_forest_tte`</span> for more details.</span>
-<span id="cb13-106"><a href="#cb13-106"></a></span>
-<span id="cb13-107"><a href="#cb13-107"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
-<span id="cb13-108"><a href="#cb13-108"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
-<span id="cb13-109"><a href="#cb13-109"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb13-110"><a href="#cb13-110"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb13-111"><a href="#cb13-111"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb13-112"><a href="#cb13-112"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">is_event =</span> .data<span class="sc">$</span>CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
-<span id="cb13-113"><a href="#cb13-113"></a></span>
-<span id="cb13-114"><a href="#cb13-114"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(</span>
-<span id="cb13-115"><a href="#cb13-115"></a>  <span class="fu">dataset</span>(</span>
-<span id="cb13-116"><a href="#cb13-116"></a>    <span class="st">"ADTTE"</span>,</span>
-<span id="cb13-117"><a href="#cb13-117"></a>    adtte,</span>
-<span id="cb13-118"><a href="#cb13-118"></a>    <span class="at">code =</span> <span class="st">'adtte &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %&gt;%</span></span>
-<span id="cb13-119"><a href="#cb13-119"></a><span class="st">        dplyr::mutate(is_event = .data$CNSR == 0)'</span></span>
-<span id="cb13-120"><a href="#cb13-120"></a>  ),</span>
-<span id="cb13-121"><a href="#cb13-121"></a>  <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb13-122"><a href="#cb13-122"></a>)</span>
-<span id="cb13-123"><a href="#cb13-123"></a></span>
-<span id="cb13-124"><a href="#cb13-124"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb13-125"><a href="#cb13-125"></a>  <span class="at">data =</span> data,</span>
-<span id="cb13-126"><a href="#cb13-126"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb13-127"><a href="#cb13-127"></a>    <span class="fu">tm_g_forest_tte</span>(</span>
-<span id="cb13-128"><a href="#cb13-128"></a>      <span class="at">label =</span> <span class="st">"forest"</span>,</span>
-<span id="cb13-129"><a href="#cb13-129"></a>      <span class="at">adtte_name =</span> <span class="st">"ADTTE"</span>,</span>
-<span id="cb13-130"><a href="#cb13-130"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb13-131"><a href="#cb13-131"></a>    )</span>
-<span id="cb13-132"><a href="#cb13-132"></a>  )</span>
-<span id="cb13-133"><a href="#cb13-133"></a>)</span>
-<span id="cb13-134"><a href="#cb13-134"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb13-135"><a href="#cb13-135"></a><span class="in">```</span></span>
-<span id="cb13-136"><a href="#cb13-136"></a></span>
-<span id="cb13-137"><a href="#cb13-137"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb13-138"><a href="#cb13-138"></a>:::</span>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> RNAG10</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Survival Forest Graph</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="co">---</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>------------------------------------------------------------------------</span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a>::: panel-tabset</span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="fu">## Setup: Import &amp; Data Manipulation</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a></span>
+<span id="cb14-12"><a href="#cb14-12"></a>This page can be used as a template of how to produce survival forest graphs for RNA-seq gene expression analysis using available <span class="in">`tern`</span> and <span class="in">`hermes`</span> functions, and to create an interactive survival forest graph for RNA-seq gene expression analysis using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb14-13"><a href="#cb14-13"></a></span>
+<span id="cb14-14"><a href="#cb14-14"></a>The code below needs both RNA-seq data (in <span class="in">`HermesData`</span> format) and time-to-event data (in <span class="in">`ADTTE`</span> format) as input.</span>
+<span id="cb14-15"><a href="#cb14-15"></a></span>
+<span id="cb14-16"><a href="#cb14-16"></a>We first prepare the time-to-event data.</span>
+<span id="cb14-17"><a href="#cb14-17"></a>We define an event indicator variable, transform the time to months and filter down to the overall survival subset.</span>
+<span id="cb14-18"><a href="#cb14-18"></a></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="fu">library</span>(tern)</span>
+<span id="cb14-21"><a href="#cb14-21"></a></span>
+<span id="cb14-22"><a href="#cb14-22"></a>adtte_f <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb14-24"><a href="#cb14-24"></a>    <span class="at">is_event =</span> .data<span class="sc">$</span>CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb14-25"><a href="#cb14-25"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(.data<span class="sc">$</span>AVAL),</span>
+<span id="cb14-26"><a href="#cb14-26"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(.data<span class="sc">$</span>PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>)</span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="in">```</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a></span>
+<span id="cb14-31"><a href="#cb14-31"></a>Then we prepare the RNA-seq data and join with <span class="in">`ADTTE`</span>, see <span class="co">[</span><span class="ot">RNAG9</span><span class="co">](../graphs/rnag09.qmd)</span> for details.</span>
+<span id="cb14-32"><a href="#cb14-32"></a></span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="in">```{r,  message = FALSE}</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb14-35"><a href="#cb14-35"></a></span>
+<span id="cb14-36"><a href="#cb14-36"></a>gene_data <span class="ot">&lt;-</span> <span class="fu">col_data_with_genes</span>(</span>
+<span id="cb14-37"><a href="#cb14-37"></a>  <span class="at">object =</span> hermes_data,</span>
+<span id="cb14-38"><a href="#cb14-38"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb14-39"><a href="#cb14-39"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="st">"GeneID:1820"</span>)</span>
+<span id="cb14-40"><a href="#cb14-40"></a>)</span>
+<span id="cb14-41"><a href="#cb14-41"></a>joined_data <span class="ot">&lt;-</span> <span class="fu">inner_join_cdisc</span>(</span>
+<span id="cb14-42"><a href="#cb14-42"></a>  <span class="at">gene_data =</span> gene_data,</span>
+<span id="cb14-43"><a href="#cb14-43"></a>  <span class="at">cdisc_data =</span> adtte_f</span>
+<span id="cb14-44"><a href="#cb14-44"></a>)</span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="in">```</span></span>
+<span id="cb14-46"><a href="#cb14-46"></a></span>
+<span id="cb14-47"><a href="#cb14-47"></a>We can then cut the resulting gene column in the joined <span class="in">`adtte_data`</span> into quantile bins.</span>
+<span id="cb14-48"><a href="#cb14-48"></a>In this example we want two equally sized groups so set <span class="in">`probs`</span> to 0.5, and we then label the bins as <span class="in">`Low`</span> and <span class="in">`High`</span>.</span>
+<span id="cb14-49"><a href="#cb14-49"></a>We could choose a different quantile cutoff.</span>
+<span id="cb14-50"><a href="#cb14-50"></a>The only important restriction here is that we need to bin the genes into exactly two groups, otherwise the forest plot below cannot compare these two groups with each other.</span>
+<span id="cb14-51"><a href="#cb14-51"></a></span>
+<span id="cb14-54"><a href="#cb14-54"></a><span class="in">```{r}</span></span>
+<span id="cb14-55"><a href="#cb14-55"></a>arm_name <span class="ot">&lt;-</span> <span class="fu">attr</span>(gene_data, <span class="st">"gene_cols"</span>)</span>
+<span id="cb14-56"><a href="#cb14-56"></a>binned_data <span class="ot">&lt;-</span> joined_data <span class="sc">%&gt;%</span></span>
+<span id="cb14-57"><a href="#cb14-57"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb14-58"><a href="#cb14-58"></a>    <span class="at">gene_factor =</span> <span class="fu">cut_quantile_bins</span>(</span>
+<span id="cb14-59"><a href="#cb14-59"></a>      joined_data[[arm_name]],</span>
+<span id="cb14-60"><a href="#cb14-60"></a>      <span class="at">probs =</span> <span class="fl">0.5</span>,</span>
+<span id="cb14-61"><a href="#cb14-61"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Low"</span>, <span class="st">"High"</span>)</span>
+<span id="cb14-62"><a href="#cb14-62"></a>    )</span>
+<span id="cb14-63"><a href="#cb14-63"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-64"><a href="#cb14-64"></a>  <span class="fu">df_explicit_na</span>(<span class="at">omit_columns =</span> <span class="st">"AVALU"</span>)</span>
+<span id="cb14-65"><a href="#cb14-65"></a><span class="in">```</span></span>
+<span id="cb14-66"><a href="#cb14-66"></a></span>
+<span id="cb14-67"><a href="#cb14-67"></a><span class="fu">## Survival Forest Graph</span></span>
+<span id="cb14-68"><a href="#cb14-68"></a></span>
+<span id="cb14-69"><a href="#cb14-69"></a>It is now simple to create the survival forest graph by providing the data set created above with the variable specification.</span>
+<span id="cb14-70"><a href="#cb14-70"></a>First we calculate the survival estimates with <span class="in">`extract_survival_subgroups()`</span> by providing the necessary variable specification.</span>
+<span id="cb14-71"><a href="#cb14-71"></a>Here we specify our derived <span class="in">`gene_bin`</span> for the arm.</span>
+<span id="cb14-72"><a href="#cb14-72"></a>Then we build the table portion with <span class="in">`tabulate_survival_subgroups()`</span> and pass our calculations from the previous step.</span>
+<span id="cb14-73"><a href="#cb14-73"></a>Lastly, we generate the final graph with <span class="in">`g_forest`</span>.</span>
+<span id="cb14-74"><a href="#cb14-74"></a></span>
+<span id="cb14-77"><a href="#cb14-77"></a><span class="in">```{r}</span></span>
+<span id="cb14-78"><a href="#cb14-78"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb14-79"><a href="#cb14-79"></a>  <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb14-80"><a href="#cb14-80"></a>  <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb14-81"><a href="#cb14-81"></a>  <span class="at">arm =</span> <span class="st">"gene_factor"</span>,</span>
+<span id="cb14-82"><a href="#cb14-82"></a>  <span class="at">subgroups =</span> <span class="fu">c</span>(<span class="st">"BEP01FL"</span>, <span class="st">"SAFFL"</span>)</span>
+<span id="cb14-83"><a href="#cb14-83"></a>)</span>
+<span id="cb14-84"><a href="#cb14-84"></a>tbl <span class="ot">&lt;-</span> <span class="fu">extract_survival_subgroups</span>(</span>
+<span id="cb14-85"><a href="#cb14-85"></a>  <span class="at">variables =</span> variables,</span>
+<span id="cb14-86"><a href="#cb14-86"></a>  <span class="at">data =</span> binned_data</span>
+<span id="cb14-87"><a href="#cb14-87"></a>)</span>
+<span id="cb14-88"><a href="#cb14-88"></a></span>
+<span id="cb14-89"><a href="#cb14-89"></a>lyt <span class="ot">&lt;-</span> <span class="fu">basic_table</span>()</span>
+<span id="cb14-90"><a href="#cb14-90"></a>result <span class="ot">&lt;-</span> <span class="fu">tabulate_survival_subgroups</span>(</span>
+<span id="cb14-91"><a href="#cb14-91"></a>  <span class="at">lyt =</span> lyt,</span>
+<span id="cb14-92"><a href="#cb14-92"></a>  <span class="at">df =</span> tbl,</span>
+<span id="cb14-93"><a href="#cb14-93"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot_events"</span>, <span class="st">"n"</span>, <span class="st">"n_events"</span>, <span class="st">"median"</span>, <span class="st">"hr"</span>, <span class="st">"ci"</span>),</span>
+<span id="cb14-94"><a href="#cb14-94"></a>  <span class="at">time_unit =</span> binned_data<span class="sc">$</span>AVALU[<span class="dv">1</span>]</span>
+<span id="cb14-95"><a href="#cb14-95"></a>)</span>
+<span id="cb14-96"><a href="#cb14-96"></a></span>
+<span id="cb14-97"><a href="#cb14-97"></a><span class="fu">g_forest</span>(result)</span>
+<span id="cb14-98"><a href="#cb14-98"></a><span class="in">```</span></span>
+<span id="cb14-99"><a href="#cb14-99"></a></span>
+<span id="cb14-100"><a href="#cb14-100"></a>See <span class="co">[</span><span class="ot">SFG01</span><span class="co">](../graphs/SFG1/sfg01.qmd)</span> to <span class="co">[</span><span class="ot">SFG05</span><span class="co">](../graphs/SFG5/sfg05.qmd)</span> for additional customization options for the survival forest graphs or the help page <span class="in">`?g_forest()`</span>.</span>
+<span id="cb14-101"><a href="#cb14-101"></a></span>
+<span id="cb14-102"><a href="#cb14-102"></a><span class="fu">## Teal Module for Survival Forest Graph</span></span>
+<span id="cb14-103"><a href="#cb14-103"></a></span>
+<span id="cb14-104"><a href="#cb14-104"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span> and sample <span class="in">`ADTTE`</span> data; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span> and example <span class="in">`ADTTE`</span> data from <span class="in">`scda`</span>.</span>
+<span id="cb14-105"><a href="#cb14-105"></a>We can then use the provided teal module <span class="in">`tm_g_forest_tte`</span> to include the corresponding interactive survival forest analysis in our teal app.</span>
+<span id="cb14-106"><a href="#cb14-106"></a>In case that we have different non-standard column names in our ADTTE data set we could also specify them via the <span class="in">`adtte_vars`</span> argument, see the documentation <span class="in">`?tm_g_forest_tte`</span> for more details.</span>
+<span id="cb14-107"><a href="#cb14-107"></a></span>
+<span id="cb14-108"><a href="#cb14-108"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
+<span id="cb14-109"><a href="#cb14-109"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
+<span id="cb14-110"><a href="#cb14-110"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb14-111"><a href="#cb14-111"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb14-112"><a href="#cb14-112"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb14-113"><a href="#cb14-113"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">is_event =</span> .data<span class="sc">$</span>CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb14-114"><a href="#cb14-114"></a></span>
+<span id="cb14-115"><a href="#cb14-115"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(</span>
+<span id="cb14-116"><a href="#cb14-116"></a>  <span class="fu">dataset</span>(</span>
+<span id="cb14-117"><a href="#cb14-117"></a>    <span class="st">"ADTTE"</span>,</span>
+<span id="cb14-118"><a href="#cb14-118"></a>    adtte,</span>
+<span id="cb14-119"><a href="#cb14-119"></a>    <span class="at">code =</span> <span class="st">'adtte &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %&gt;%</span></span>
+<span id="cb14-120"><a href="#cb14-120"></a><span class="st">        dplyr::mutate(is_event = .data$CNSR == 0)'</span></span>
+<span id="cb14-121"><a href="#cb14-121"></a>  ),</span>
+<span id="cb14-122"><a href="#cb14-122"></a>  <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb14-123"><a href="#cb14-123"></a>)</span>
+<span id="cb14-124"><a href="#cb14-124"></a></span>
+<span id="cb14-125"><a href="#cb14-125"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb14-126"><a href="#cb14-126"></a>  <span class="at">data =</span> data,</span>
+<span id="cb14-127"><a href="#cb14-127"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb14-128"><a href="#cb14-128"></a>    <span class="fu">tm_g_forest_tte</span>(</span>
+<span id="cb14-129"><a href="#cb14-129"></a>      <span class="at">label =</span> <span class="st">"forest"</span>,</span>
+<span id="cb14-130"><a href="#cb14-130"></a>      <span class="at">adtte_name =</span> <span class="st">"ADTTE"</span>,</span>
+<span id="cb14-131"><a href="#cb14-131"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb14-132"><a href="#cb14-132"></a>    )</span>
+<span id="cb14-133"><a href="#cb14-133"></a>  )</span>
+<span id="cb14-134"><a href="#cb14-134"></a>)</span>
+<span id="cb14-135"><a href="#cb14-135"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb14-136"><a href="#cb14-136"></a><span class="in">```</span></span>
+<span id="cb14-137"><a href="#cb14-137"></a></span>
+<span id="cb14-138"><a href="#cb14-138"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb14-139"><a href="#cb14-139"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team <a href="https://github.com/insightsengineering"><img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg" class="img-fluid" alt="StatisticalEngineering" width="15"></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../misc/citation.html">Citation</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../misc/license.html">License</a>
+  </li>  
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/insightsengineering/biomarker-catalog/edit/main/graphs/rnag10.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/insightsengineering/biomarker-catalog/issues/new/choose" class="toc-action">Report an issue</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog">
+      <i class="bi bi-github" role="img" aria-label="BAC GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+  </li>  
+</ul>
+</div>
   </div>
 </footer>
 

@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <link href="../graphs/SFG5/sfg05.html" rel="next">
 <link href="../graphs/SFG3/sfg03a.html" rel="prev">
+<link href="../assets/images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -136,19 +137,29 @@ cookieconsent.run({
     <span class="navbar-title">Biomarker Analysis Catalog</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
+<li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Report a Bug</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+        <li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Ask a Question</span></a>
   </li>  
+    </ul>
+</li>
 </ul>
-<div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
+    <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -177,7 +188,7 @@ cookieconsent.run({
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Index</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -899,13 +910,6 @@ cookieconsent.run({
 </li>
       </ul>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../bac_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
-  </div>
-</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
@@ -913,9 +917,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">SFG4</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Survival Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">SFG</div>
+  </div>
+  </div>
 
 
 
@@ -933,6 +940,7 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -1013,7 +1021,7 @@ cookieconsent.run({
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="sfg04_cache/html/sessioninfo_35c1587099baafb3e649538b7069fc43">
+<div class="cell" data-hash="sfg04_cache/html/sessioninfo_6304613147c35cbe464c24c8d9d984f8">
 <details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
@@ -1057,6 +1065,16 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
+<hr>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell" data-hash="sfg04_cache/html/unnamed-chunk-4_5cee8ca8f3cd4cb8316b7ff2426aba20">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
+'git log -1 --format="%H"' had status 128</code></pre>
+</div>
+</div>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1065,7 +1083,7 @@ loaded via a namespace (and not attached):
 <!-- -->
 
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1475,106 +1493,126 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> SFG4</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="an">subtitle:</span><span class="co"> Survival Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co">---</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a>------------------------------------------------------------------------</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a>::: panel-tabset</span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="fu">## Setup</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11"></a>We prepare the data similarly as in <span class="co">[</span><span class="ot">SFG1</span><span class="co">](../graphs/SFG1/sfg01.qmd)</span>.</span>
-<span id="cb6-12"><a href="#cb6-12"></a></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="fu">library</span>(tern)</span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb6-16"><a href="#cb6-16"></a></span>
-<span id="cb6-17"><a href="#cb6-17"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a>  <span class="fu">filter</span>(</span>
-<span id="cb6-20"><a href="#cb6-20"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>,</span>
-<span id="cb6-21"><a href="#cb6-21"></a>    BEP01FL <span class="sc">==</span> <span class="st">"Y"</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb6-24"><a href="#cb6-24"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb6-25"><a href="#cb6-25"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb6-26"><a href="#cb6-26"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
-<span id="cb6-27"><a href="#cb6-27"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
-<span id="cb6-28"><a href="#cb6-28"></a>      ARM,</span>
-<span id="cb6-29"><a href="#cb6-29"></a>      <span class="at">CTRL =</span> <span class="st">"B: Placebo"</span>,</span>
-<span id="cb6-30"><a href="#cb6-30"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
-<span id="cb6-31"><a href="#cb6-31"></a>    )</span>
-<span id="cb6-32"><a href="#cb6-32"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb6-33"><a href="#cb6-33"></a>  <span class="fu">var_relabel</span>(</span>
-<span id="cb6-34"><a href="#cb6-34"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
-<span id="cb6-35"><a href="#cb6-35"></a>    <span class="at">BMRKR1 =</span> <span class="st">"Biomarker (Countinuous)"</span></span>
-<span id="cb6-36"><a href="#cb6-36"></a>  )</span>
-<span id="cb6-37"><a href="#cb6-37"></a><span class="in">```</span></span>
-<span id="cb6-38"><a href="#cb6-38"></a></span>
-<span id="cb6-39"><a href="#cb6-39"></a><span class="fu">## Plot</span></span>
-<span id="cb6-40"><a href="#cb6-40"></a></span>
-<span id="cb6-41"><a href="#cb6-41"></a>We define a vector of all cutpoints to use for a numeric biomarker (here <span class="in">`BMRKR1`</span>).</span>
-<span id="cb6-42"><a href="#cb6-42"></a>We <span class="in">`lapply()`</span> over this vector, each time generating a binary factor variable <span class="in">`BMRKR1_cut`</span> and then tabulating the resulting statistics similar to <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../graphs/SFG3/sfg03.qmd)</span>, this time including the treatment arms in the <span class="in">`subgroups`</span> argument.</span>
-<span id="cb6-43"><a href="#cb6-43"></a>Then we <span class="in">`rbind()`</span> all tables in the list together.</span>
-<span id="cb6-44"><a href="#cb6-44"></a></span>
-<span id="cb6-47"><a href="#cb6-47"></a><span class="in">```{r}</span></span>
-<span id="cb6-48"><a href="#cb6-48"></a>all_cutpoints <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="dv">5</span>, <span class="fl">7.5</span>, <span class="dv">10</span>)</span>
-<span id="cb6-49"><a href="#cb6-49"></a></span>
-<span id="cb6-50"><a href="#cb6-50"></a>tables_all_cutpoints <span class="ot">&lt;-</span> <span class="fu">lapply</span>(all_cutpoints, <span class="cf">function</span>(cutpoint) {</span>
-<span id="cb6-51"><a href="#cb6-51"></a>  adtte_cut <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
-<span id="cb6-52"><a href="#cb6-52"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb6-53"><a href="#cb6-53"></a>      <span class="at">BMRKR1_cut =</span> <span class="fu">explicit_na</span>(<span class="fu">factor</span>(</span>
-<span id="cb6-54"><a href="#cb6-54"></a>        <span class="fu">ifelse</span>(BMRKR1 <span class="sc">&gt;</span> cutpoint, <span class="st">"Greater"</span>, <span class="st">"Less"</span>)</span>
-<span id="cb6-55"><a href="#cb6-55"></a>      ))</span>
-<span id="cb6-56"><a href="#cb6-56"></a>    )</span>
-<span id="cb6-57"><a href="#cb6-57"></a>  tbl <span class="ot">&lt;-</span> <span class="fu">extract_survival_subgroups</span>(</span>
-<span id="cb6-58"><a href="#cb6-58"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
-<span id="cb6-59"><a href="#cb6-59"></a>      <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb6-60"><a href="#cb6-60"></a>      <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb6-61"><a href="#cb6-61"></a>      <span class="at">arm =</span> <span class="st">"BMRKR1_cut"</span>,</span>
-<span id="cb6-62"><a href="#cb6-62"></a>      <span class="at">subgroups =</span> <span class="st">"ARM_BIN"</span></span>
-<span id="cb6-63"><a href="#cb6-63"></a>    ),</span>
-<span id="cb6-64"><a href="#cb6-64"></a>    <span class="at">label_all =</span> <span class="fu">paste0</span>(<span class="st">"BMRKR1 ("</span>, cutpoint, <span class="st">")"</span>),</span>
-<span id="cb6-65"><a href="#cb6-65"></a>    <span class="at">data =</span> adtte_cut</span>
-<span id="cb6-66"><a href="#cb6-66"></a>  )</span>
-<span id="cb6-67"><a href="#cb6-67"></a>  <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-68"><a href="#cb6-68"></a>    <span class="fu">tabulate_survival_subgroups</span>(</span>
-<span id="cb6-69"><a href="#cb6-69"></a>      <span class="at">df =</span> tbl,</span>
-<span id="cb6-70"><a href="#cb6-70"></a>      <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot_events"</span>, <span class="st">"n"</span>, <span class="st">"n_events"</span>, <span class="st">"median"</span>, <span class="st">"hr"</span>, <span class="st">"ci"</span>),</span>
-<span id="cb6-71"><a href="#cb6-71"></a>      <span class="at">time_unit =</span> adtte_cut<span class="sc">$</span>AVALU[<span class="dv">1</span>]</span>
-<span id="cb6-72"><a href="#cb6-72"></a>    )</span>
-<span id="cb6-73"><a href="#cb6-73"></a>})</span>
-<span id="cb6-74"><a href="#cb6-74"></a></span>
-<span id="cb6-75"><a href="#cb6-75"></a>result <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, tables_all_cutpoints)</span>
-<span id="cb6-76"><a href="#cb6-76"></a><span class="in">```</span></span>
-<span id="cb6-77"><a href="#cb6-77"></a></span>
-<span id="cb6-78"><a href="#cb6-78"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
-<span id="cb6-79"><a href="#cb6-79"></a>Similarly as in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../graphs/SFG3/sfg03.qmd)</span> we need to specify the <span class="in">`col_x`</span>, <span class="in">`col_y`</span> and <span class="in">`forest_header`</span> arguments for <span class="in">`g_forest()`</span> by recovering them from one of the original tables.</span>
-<span id="cb6-80"><a href="#cb6-80"></a></span>
-<span id="cb6-81"><a href="#cb6-81"></a><span class="in">```{r, fig.width = 15}</span></span>
-<span id="cb6-82"><a href="#cb6-82"></a>one_table <span class="ot">&lt;-</span> tables_all_cutpoints[[<span class="dv">1</span>]]</span>
-<span id="cb6-83"><a href="#cb6-83"></a><span class="fu">g_forest</span>(</span>
-<span id="cb6-84"><a href="#cb6-84"></a>  result,</span>
-<span id="cb6-85"><a href="#cb6-85"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
-<span id="cb6-86"><a href="#cb6-86"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
-<span id="cb6-87"><a href="#cb6-87"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
-<span id="cb6-88"><a href="#cb6-88"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
-<span id="cb6-89"><a href="#cb6-89"></a>)</span>
-<span id="cb6-90"><a href="#cb6-90"></a><span class="in">```</span></span>
-<span id="cb6-91"><a href="#cb6-91"></a></span>
-<span id="cb6-92"><a href="#cb6-92"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb6-93"><a href="#cb6-93"></a>:::</span>
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> SFG4</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="an">subtitle:</span><span class="co"> Survival Forest Graphs Within Treatment Arms by Continuous Biomarker Cutoff</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="an">categories:</span><span class="co"> [SFG]</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">---</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>------------------------------------------------------------------------</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>::: panel-tabset</span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="fu">## Setup</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a>We prepare the data similarly as in <span class="co">[</span><span class="ot">SFG1</span><span class="co">](../graphs/SFG1/sfg01.qmd)</span>.</span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="fu">library</span>(tern)</span>
+<span id="cb7-16"><a href="#cb7-16"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-17"><a href="#cb7-17"></a></span>
+<span id="cb7-18"><a href="#cb7-18"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a>  <span class="fu">filter</span>(</span>
+<span id="cb7-21"><a href="#cb7-21"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>,</span>
+<span id="cb7-22"><a href="#cb7-22"></a>    BEP01FL <span class="sc">==</span> <span class="st">"Y"</span></span>
+<span id="cb7-23"><a href="#cb7-23"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-25"><a href="#cb7-25"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb7-26"><a href="#cb7-26"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb7-27"><a href="#cb7-27"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb7-28"><a href="#cb7-28"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb7-29"><a href="#cb7-29"></a>      ARM,</span>
+<span id="cb7-30"><a href="#cb7-30"></a>      <span class="at">CTRL =</span> <span class="st">"B: Placebo"</span>,</span>
+<span id="cb7-31"><a href="#cb7-31"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb7-32"><a href="#cb7-32"></a>    )</span>
+<span id="cb7-33"><a href="#cb7-33"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-34"><a href="#cb7-34"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb7-35"><a href="#cb7-35"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
+<span id="cb7-36"><a href="#cb7-36"></a>    <span class="at">BMRKR1 =</span> <span class="st">"Biomarker (Countinuous)"</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a>  )</span>
+<span id="cb7-38"><a href="#cb7-38"></a><span class="in">```</span></span>
+<span id="cb7-39"><a href="#cb7-39"></a></span>
+<span id="cb7-40"><a href="#cb7-40"></a><span class="fu">## Plot</span></span>
+<span id="cb7-41"><a href="#cb7-41"></a></span>
+<span id="cb7-42"><a href="#cb7-42"></a>We define a vector of all cutpoints to use for a numeric biomarker (here <span class="in">`BMRKR1`</span>).</span>
+<span id="cb7-43"><a href="#cb7-43"></a>We <span class="in">`lapply()`</span> over this vector, each time generating a binary factor variable <span class="in">`BMRKR1_cut`</span> and then tabulating the resulting statistics similar to <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../graphs/SFG3/sfg03.qmd)</span>, this time including the treatment arms in the <span class="in">`subgroups`</span> argument.</span>
+<span id="cb7-44"><a href="#cb7-44"></a>Then we <span class="in">`rbind()`</span> all tables in the list together.</span>
+<span id="cb7-45"><a href="#cb7-45"></a></span>
+<span id="cb7-48"><a href="#cb7-48"></a><span class="in">```{r}</span></span>
+<span id="cb7-49"><a href="#cb7-49"></a>all_cutpoints <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="dv">5</span>, <span class="fl">7.5</span>, <span class="dv">10</span>)</span>
+<span id="cb7-50"><a href="#cb7-50"></a></span>
+<span id="cb7-51"><a href="#cb7-51"></a>tables_all_cutpoints <span class="ot">&lt;-</span> <span class="fu">lapply</span>(all_cutpoints, <span class="cf">function</span>(cutpoint) {</span>
+<span id="cb7-52"><a href="#cb7-52"></a>  adtte_cut <span class="ot">&lt;-</span> adtte <span class="sc">%&gt;%</span></span>
+<span id="cb7-53"><a href="#cb7-53"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb7-54"><a href="#cb7-54"></a>      <span class="at">BMRKR1_cut =</span> <span class="fu">explicit_na</span>(<span class="fu">factor</span>(</span>
+<span id="cb7-55"><a href="#cb7-55"></a>        <span class="fu">ifelse</span>(BMRKR1 <span class="sc">&gt;</span> cutpoint, <span class="st">"Greater"</span>, <span class="st">"Less"</span>)</span>
+<span id="cb7-56"><a href="#cb7-56"></a>      ))</span>
+<span id="cb7-57"><a href="#cb7-57"></a>    )</span>
+<span id="cb7-58"><a href="#cb7-58"></a>  tbl <span class="ot">&lt;-</span> <span class="fu">extract_survival_subgroups</span>(</span>
+<span id="cb7-59"><a href="#cb7-59"></a>    <span class="at">variables =</span> <span class="fu">list</span>(</span>
+<span id="cb7-60"><a href="#cb7-60"></a>      <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb7-61"><a href="#cb7-61"></a>      <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb7-62"><a href="#cb7-62"></a>      <span class="at">arm =</span> <span class="st">"BMRKR1_cut"</span>,</span>
+<span id="cb7-63"><a href="#cb7-63"></a>      <span class="at">subgroups =</span> <span class="st">"ARM_BIN"</span></span>
+<span id="cb7-64"><a href="#cb7-64"></a>    ),</span>
+<span id="cb7-65"><a href="#cb7-65"></a>    <span class="at">label_all =</span> <span class="fu">paste0</span>(<span class="st">"BMRKR1 ("</span>, cutpoint, <span class="st">")"</span>),</span>
+<span id="cb7-66"><a href="#cb7-66"></a>    <span class="at">data =</span> adtte_cut</span>
+<span id="cb7-67"><a href="#cb7-67"></a>  )</span>
+<span id="cb7-68"><a href="#cb7-68"></a>  <span class="fu">basic_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-69"><a href="#cb7-69"></a>    <span class="fu">tabulate_survival_subgroups</span>(</span>
+<span id="cb7-70"><a href="#cb7-70"></a>      <span class="at">df =</span> tbl,</span>
+<span id="cb7-71"><a href="#cb7-71"></a>      <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot_events"</span>, <span class="st">"n"</span>, <span class="st">"n_events"</span>, <span class="st">"median"</span>, <span class="st">"hr"</span>, <span class="st">"ci"</span>),</span>
+<span id="cb7-72"><a href="#cb7-72"></a>      <span class="at">time_unit =</span> adtte_cut<span class="sc">$</span>AVALU[<span class="dv">1</span>]</span>
+<span id="cb7-73"><a href="#cb7-73"></a>    )</span>
+<span id="cb7-74"><a href="#cb7-74"></a>})</span>
+<span id="cb7-75"><a href="#cb7-75"></a></span>
+<span id="cb7-76"><a href="#cb7-76"></a>result <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, tables_all_cutpoints)</span>
+<span id="cb7-77"><a href="#cb7-77"></a><span class="in">```</span></span>
+<span id="cb7-78"><a href="#cb7-78"></a></span>
+<span id="cb7-79"><a href="#cb7-79"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb7-80"><a href="#cb7-80"></a>Similarly as in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../graphs/SFG3/sfg03.qmd)</span> we need to specify the <span class="in">`col_x`</span>, <span class="in">`col_y`</span> and <span class="in">`forest_header`</span> arguments for <span class="in">`g_forest()`</span> by recovering them from one of the original tables.</span>
+<span id="cb7-81"><a href="#cb7-81"></a></span>
+<span id="cb7-82"><a href="#cb7-82"></a><span class="in">```{r, fig.width = 15}</span></span>
+<span id="cb7-83"><a href="#cb7-83"></a>one_table <span class="ot">&lt;-</span> tables_all_cutpoints[[<span class="dv">1</span>]]</span>
+<span id="cb7-84"><a href="#cb7-84"></a><span class="fu">g_forest</span>(</span>
+<span id="cb7-85"><a href="#cb7-85"></a>  result,</span>
+<span id="cb7-86"><a href="#cb7-86"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb7-87"><a href="#cb7-87"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb7-88"><a href="#cb7-88"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb7-89"><a href="#cb7-89"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb7-90"><a href="#cb7-90"></a>)</span>
+<span id="cb7-91"><a href="#cb7-91"></a><span class="in">```</span></span>
+<span id="cb7-92"><a href="#cb7-92"></a></span>
+<span id="cb7-93"><a href="#cb7-93"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb7-94"><a href="#cb7-94"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team <a href="https://github.com/insightsengineering"><img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg" class="img-fluid" alt="StatisticalEngineering" width="15"></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../misc/citation.html">Citation</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../misc/license.html">License</a>
+  </li>  
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/insightsengineering/biomarker-catalog/edit/main/graphs/sfg04.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/insightsengineering/biomarker-catalog/issues/new/choose" class="toc-action">Report an issue</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog">
+      <i class="bi bi-github" role="img" aria-label="BAC GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+  </li>  
+</ul>
+</div>
   </div>
 </footer>
 

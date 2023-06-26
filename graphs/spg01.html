@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <link href="../graphs/spg02.html" rel="next">
 <link href="../graphs/RG3/rg03b.html" rel="prev">
+<link href="../assets/images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -136,19 +137,29 @@ cookieconsent.run({
     <span class="navbar-title">Biomarker Analysis Catalog</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
+<li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Report a Bug</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+        <li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Ask a Question</span></a>
   </li>  
+    </ul>
+</li>
 </ul>
-<div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
+    <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -177,7 +188,7 @@ cookieconsent.run({
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Index</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -899,13 +910,6 @@ cookieconsent.run({
 </li>
       </ul>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../bac_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
-  </div>
-</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
@@ -913,9 +917,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">SPG1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">STEP Graphs for Survival Outcome</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">SPG</div>
+  </div>
+  </div>
 
 
 
@@ -933,6 +940,7 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -1011,7 +1019,7 @@ cookieconsent.run({
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="spg01_cache/html/sessioninfo_abffa39b44d19bc05bbf2cbe654e46fd">
+<div class="cell" data-hash="spg01_cache/html/sessioninfo_bd657653f382dce5b09ca0fe72382a20">
 <details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
@@ -1037,7 +1045,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.2.1   ggplot2_3.4.2        
+[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
 [4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
 [7] formatters_0.5.0.9001
 
@@ -1059,6 +1067,16 @@ loaded via a namespace (and not attached):
 [57] compiler_4.3.1    </code></pre>
 </div>
 </div>
+<hr>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell" data-hash="spg01_cache/html/unnamed-chunk-6_f1f88c10db6b1b6c3df0452ae3f849d7">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
+'git log -1 --format="%H"' had status 128</code></pre>
+</div>
+</div>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1067,7 +1085,7 @@ loaded via a namespace (and not attached):
 <!-- -->
 
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1477,106 +1495,126 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> SPG1</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> STEP Graphs for Survival Outcome</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co">---</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a>------------------------------------------------------------------------</span>
-<span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>::: panel-tabset</span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">## Setup</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a></span>
-<span id="cb8-11"><a href="#cb8-11"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package to create the STEP survival graph.</span>
-<span id="cb8-12"><a href="#cb8-12"></a>We start by filtering the <span class="in">`adtte`</span> data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the <span class="in">`ARM`</span> variable, and discarding <span class="in">`BMRKR1`</span> values for the non-BEP.</span>
-<span id="cb8-13"><a href="#cb8-13"></a>We also relabel the biomarker evaluable population flag variable <span class="in">`BEP01FL`</span>.</span>
-<span id="cb8-14"><a href="#cb8-14"></a></span>
-<span id="cb8-15"><a href="#cb8-15"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a><span class="fu">library</span>(tern)</span>
-<span id="cb8-17"><a href="#cb8-17"></a><span class="fu">library</span>(ggplot2.utils)</span>
-<span id="cb8-18"><a href="#cb8-18"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb8-19"><a href="#cb8-19"></a></span>
-<span id="cb8-20"><a href="#cb8-20"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb8-21"><a href="#cb8-21"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-22"><a href="#cb8-22"></a>  <span class="fu">filter</span>(</span>
-<span id="cb8-23"><a href="#cb8-23"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
-<span id="cb8-24"><a href="#cb8-24"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-25"><a href="#cb8-25"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb8-26"><a href="#cb8-26"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb8-27"><a href="#cb8-27"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb8-28"><a href="#cb8-28"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
-<span id="cb8-29"><a href="#cb8-29"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
-<span id="cb8-30"><a href="#cb8-30"></a>      ARM,</span>
-<span id="cb8-31"><a href="#cb8-31"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
-<span id="cb8-32"><a href="#cb8-32"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
-<span id="cb8-33"><a href="#cb8-33"></a>    ),</span>
-<span id="cb8-34"><a href="#cb8-34"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1)</span>
-<span id="cb8-35"><a href="#cb8-35"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-36"><a href="#cb8-36"></a>  <span class="fu">var_relabel</span>(</span>
-<span id="cb8-37"><a href="#cb8-37"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span></span>
-<span id="cb8-38"><a href="#cb8-38"></a>  )</span>
-<span id="cb8-39"><a href="#cb8-39"></a><span class="in">```</span></span>
-<span id="cb8-40"><a href="#cb8-40"></a></span>
-<span id="cb8-41"><a href="#cb8-41"></a><span class="fu">## Plot</span></span>
-<span id="cb8-42"><a href="#cb8-42"></a></span>
-<span id="cb8-43"><a href="#cb8-43"></a>We then perform with the <span class="in">`fit_survival_step()`</span> function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) models for the survival outcome within each of the percentile intervals of the biomarker variable defining the subgroups.</span>
-<span id="cb8-44"><a href="#cb8-44"></a>The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e. the estimated hazard ratios are for the comparison of the second level vs. the first one.</span>
-<span id="cb8-45"><a href="#cb8-45"></a></span>
-<span id="cb8-46"><a href="#cb8-46"></a>In this example we fit the default model where a constant treatment effect is estimated in each of the subgroups that are created according to biomarker quantiles.</span>
-<span id="cb8-47"><a href="#cb8-47"></a></span>
-<span id="cb8-50"><a href="#cb8-50"></a><span class="in">```{r}</span></span>
-<span id="cb8-51"><a href="#cb8-51"></a>vars <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb8-52"><a href="#cb8-52"></a>  <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb8-53"><a href="#cb8-53"></a>  <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb8-54"><a href="#cb8-54"></a>  <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
-<span id="cb8-55"><a href="#cb8-55"></a>  <span class="at">biomarker =</span> <span class="st">"BMRKR1"</span></span>
-<span id="cb8-56"><a href="#cb8-56"></a>)</span>
-<span id="cb8-57"><a href="#cb8-57"></a></span>
-<span id="cb8-58"><a href="#cb8-58"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_survival_step</span>(</span>
-<span id="cb8-59"><a href="#cb8-59"></a>  <span class="at">variables =</span> vars,</span>
-<span id="cb8-60"><a href="#cb8-60"></a>  <span class="at">data =</span> adtte</span>
-<span id="cb8-61"><a href="#cb8-61"></a>)</span>
-<span id="cb8-62"><a href="#cb8-62"></a><span class="in">```</span></span>
-<span id="cb8-63"><a href="#cb8-63"></a></span>
-<span id="cb8-64"><a href="#cb8-64"></a>In this second example we fit instead a model with quadratic biomarker interaction term and we control the number of points at which the hazard ratios are estimated.</span>
-<span id="cb8-65"><a href="#cb8-65"></a></span>
-<span id="cb8-68"><a href="#cb8-68"></a><span class="in">```{r}</span></span>
-<span id="cb8-69"><a href="#cb8-69"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_survival_step</span>(</span>
-<span id="cb8-70"><a href="#cb8-70"></a>  <span class="at">variables =</span> vars,</span>
-<span id="cb8-71"><a href="#cb8-71"></a>  <span class="at">data =</span> adtte,</span>
-<span id="cb8-72"><a href="#cb8-72"></a>  <span class="at">control =</span> <span class="fu">c</span>(<span class="fu">control_coxph</span>(), <span class="fu">control_step</span>(<span class="at">degree =</span> <span class="dv">2</span>, <span class="at">num_points =</span> 15L))</span>
-<span id="cb8-73"><a href="#cb8-73"></a>)</span>
-<span id="cb8-74"><a href="#cb8-74"></a><span class="in">```</span></span>
-<span id="cb8-75"><a href="#cb8-75"></a></span>
-<span id="cb8-76"><a href="#cb8-76"></a>Before we can plot the data, the <span class="in">`broom::tidy()`</span> method needs to be applied to the STEP result to obtain graph ready data.</span>
-<span id="cb8-77"><a href="#cb8-77"></a>Thereafter with the <span class="in">`g_step()`</span> function we can create a graph showing the estimated HR along the continuous biomarker subgroups.</span>
-<span id="cb8-78"><a href="#cb8-78"></a></span>
-<span id="cb8-81"><a href="#cb8-81"></a><span class="in">```{r}</span></span>
-<span id="cb8-82"><a href="#cb8-82"></a>step_data <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(step_matrix)</span>
-<span id="cb8-83"><a href="#cb8-83"></a></span>
-<span id="cb8-84"><a href="#cb8-84"></a>graph <span class="ot">&lt;-</span> <span class="fu">g_step</span>(step_data)</span>
-<span id="cb8-85"><a href="#cb8-85"></a></span>
-<span id="cb8-86"><a href="#cb8-86"></a>graph</span>
-<span id="cb8-87"><a href="#cb8-87"></a><span class="in">```</span></span>
-<span id="cb8-88"><a href="#cb8-88"></a></span>
-<span id="cb8-89"><a href="#cb8-89"></a>We can also add a reference line.</span>
-<span id="cb8-90"><a href="#cb8-90"></a></span>
-<span id="cb8-93"><a href="#cb8-93"></a><span class="in">```{r}</span></span>
-<span id="cb8-94"><a href="#cb8-94"></a>graph <span class="sc">+</span></span>
-<span id="cb8-95"><a href="#cb8-95"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">1</span>), <span class="at">linetype =</span> <span class="dv">2</span>)</span>
-<span id="cb8-96"><a href="#cb8-96"></a><span class="in">```</span></span>
-<span id="cb8-97"><a href="#cb8-97"></a></span>
-<span id="cb8-98"><a href="#cb8-98"></a>{{&lt; include ../session_info.qmd &gt;}}</span>
-<span id="cb8-99"><a href="#cb8-99"></a>:::</span>
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> SPG1</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="an">subtitle:</span><span class="co"> STEP Graphs for Survival Outcome</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="an">categories:</span><span class="co"> [SPG]</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">---</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a>------------------------------------------------------------------------</span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a>::: panel-tabset</span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="fu">## Setup</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a></span>
+<span id="cb9-12"><a href="#cb9-12"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package to create the STEP survival graph.</span>
+<span id="cb9-13"><a href="#cb9-13"></a>We start by filtering the <span class="in">`adtte`</span> data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the <span class="in">`ARM`</span> variable, and discarding <span class="in">`BMRKR1`</span> values for the non-BEP.</span>
+<span id="cb9-14"><a href="#cb9-14"></a>We also relabel the biomarker evaluable population flag variable <span class="in">`BEP01FL`</span>.</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="fu">library</span>(tern)</span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="fu">library</span>(ggplot2.utils)</span>
+<span id="cb9-19"><a href="#cb9-19"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb9-20"><a href="#cb9-20"></a></span>
+<span id="cb9-21"><a href="#cb9-21"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb9-22"><a href="#cb9-22"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb9-23"><a href="#cb9-23"></a>  <span class="fu">filter</span>(</span>
+<span id="cb9-24"><a href="#cb9-24"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
+<span id="cb9-25"><a href="#cb9-25"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb9-26"><a href="#cb9-26"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-27"><a href="#cb9-27"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb9-28"><a href="#cb9-28"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb9-29"><a href="#cb9-29"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb9-30"><a href="#cb9-30"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb9-31"><a href="#cb9-31"></a>      ARM,</span>
+<span id="cb9-32"><a href="#cb9-32"></a>      <span class="at">CTRL =</span> <span class="fu">c</span>(<span class="st">"B: Placebo"</span>),</span>
+<span id="cb9-33"><a href="#cb9-33"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb9-34"><a href="#cb9-34"></a>    ),</span>
+<span id="cb9-35"><a href="#cb9-35"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1)</span>
+<span id="cb9-36"><a href="#cb9-36"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb9-37"><a href="#cb9-37"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb9-38"><a href="#cb9-38"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span></span>
+<span id="cb9-39"><a href="#cb9-39"></a>  )</span>
+<span id="cb9-40"><a href="#cb9-40"></a><span class="in">```</span></span>
+<span id="cb9-41"><a href="#cb9-41"></a></span>
+<span id="cb9-42"><a href="#cb9-42"></a><span class="fu">## Plot</span></span>
+<span id="cb9-43"><a href="#cb9-43"></a></span>
+<span id="cb9-44"><a href="#cb9-44"></a>We then perform with the <span class="in">`fit_survival_step()`</span> function the required calculations: this function fits the Subgroup Treatment Effect Pattern (STEP) models for the survival outcome within each of the percentile intervals of the biomarker variable defining the subgroups.</span>
+<span id="cb9-45"><a href="#cb9-45"></a>The treatment arm variable must have exactly two levels, where the first one is taken as reference, i.e. the estimated hazard ratios are for the comparison of the second level vs. the first one.</span>
+<span id="cb9-46"><a href="#cb9-46"></a></span>
+<span id="cb9-47"><a href="#cb9-47"></a>In this example we fit the default model where a constant treatment effect is estimated in each of the subgroups that are created according to biomarker quantiles.</span>
+<span id="cb9-48"><a href="#cb9-48"></a></span>
+<span id="cb9-51"><a href="#cb9-51"></a><span class="in">```{r}</span></span>
+<span id="cb9-52"><a href="#cb9-52"></a>vars <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb9-53"><a href="#cb9-53"></a>  <span class="at">time =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb9-54"><a href="#cb9-54"></a>  <span class="at">event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb9-55"><a href="#cb9-55"></a>  <span class="at">arm =</span> <span class="st">"ARM_BIN"</span>,</span>
+<span id="cb9-56"><a href="#cb9-56"></a>  <span class="at">biomarker =</span> <span class="st">"BMRKR1"</span></span>
+<span id="cb9-57"><a href="#cb9-57"></a>)</span>
+<span id="cb9-58"><a href="#cb9-58"></a></span>
+<span id="cb9-59"><a href="#cb9-59"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_survival_step</span>(</span>
+<span id="cb9-60"><a href="#cb9-60"></a>  <span class="at">variables =</span> vars,</span>
+<span id="cb9-61"><a href="#cb9-61"></a>  <span class="at">data =</span> adtte</span>
+<span id="cb9-62"><a href="#cb9-62"></a>)</span>
+<span id="cb9-63"><a href="#cb9-63"></a><span class="in">```</span></span>
+<span id="cb9-64"><a href="#cb9-64"></a></span>
+<span id="cb9-65"><a href="#cb9-65"></a>In this second example we fit instead a model with quadratic biomarker interaction term and we control the number of points at which the hazard ratios are estimated.</span>
+<span id="cb9-66"><a href="#cb9-66"></a></span>
+<span id="cb9-69"><a href="#cb9-69"></a><span class="in">```{r}</span></span>
+<span id="cb9-70"><a href="#cb9-70"></a>step_matrix <span class="ot">&lt;-</span> <span class="fu">fit_survival_step</span>(</span>
+<span id="cb9-71"><a href="#cb9-71"></a>  <span class="at">variables =</span> vars,</span>
+<span id="cb9-72"><a href="#cb9-72"></a>  <span class="at">data =</span> adtte,</span>
+<span id="cb9-73"><a href="#cb9-73"></a>  <span class="at">control =</span> <span class="fu">c</span>(<span class="fu">control_coxph</span>(), <span class="fu">control_step</span>(<span class="at">degree =</span> <span class="dv">2</span>, <span class="at">num_points =</span> 15L))</span>
+<span id="cb9-74"><a href="#cb9-74"></a>)</span>
+<span id="cb9-75"><a href="#cb9-75"></a><span class="in">```</span></span>
+<span id="cb9-76"><a href="#cb9-76"></a></span>
+<span id="cb9-77"><a href="#cb9-77"></a>Before we can plot the data, the <span class="in">`broom::tidy()`</span> method needs to be applied to the STEP result to obtain graph ready data.</span>
+<span id="cb9-78"><a href="#cb9-78"></a>Thereafter with the <span class="in">`g_step()`</span> function we can create a graph showing the estimated HR along the continuous biomarker subgroups.</span>
+<span id="cb9-79"><a href="#cb9-79"></a></span>
+<span id="cb9-82"><a href="#cb9-82"></a><span class="in">```{r}</span></span>
+<span id="cb9-83"><a href="#cb9-83"></a>step_data <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(step_matrix)</span>
+<span id="cb9-84"><a href="#cb9-84"></a></span>
+<span id="cb9-85"><a href="#cb9-85"></a>graph <span class="ot">&lt;-</span> <span class="fu">g_step</span>(step_data)</span>
+<span id="cb9-86"><a href="#cb9-86"></a></span>
+<span id="cb9-87"><a href="#cb9-87"></a>graph</span>
+<span id="cb9-88"><a href="#cb9-88"></a><span class="in">```</span></span>
+<span id="cb9-89"><a href="#cb9-89"></a></span>
+<span id="cb9-90"><a href="#cb9-90"></a>We can also add a reference line.</span>
+<span id="cb9-91"><a href="#cb9-91"></a></span>
+<span id="cb9-94"><a href="#cb9-94"></a><span class="in">```{r}</span></span>
+<span id="cb9-95"><a href="#cb9-95"></a>graph <span class="sc">+</span></span>
+<span id="cb9-96"><a href="#cb9-96"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">1</span>), <span class="at">linetype =</span> <span class="dv">2</span>)</span>
+<span id="cb9-97"><a href="#cb9-97"></a><span class="in">```</span></span>
+<span id="cb9-98"><a href="#cb9-98"></a></span>
+<span id="cb9-99"><a href="#cb9-99"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb9-100"><a href="#cb9-100"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team <a href="https://github.com/insightsengineering"><img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg" class="img-fluid" alt="StatisticalEngineering" width="15"></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../misc/citation.html">Citation</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../misc/license.html">License</a>
+  </li>  
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/insightsengineering/biomarker-catalog/edit/main/graphs/spg01.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/insightsengineering/biomarker-catalog/issues/new/choose" class="toc-action">Report an issue</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog">
+      <i class="bi bi-github" role="img" aria-label="BAC GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+  </li>  
+</ul>
+</div>
   </div>
 </footer>
 

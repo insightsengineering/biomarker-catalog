@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <link href="../../graphs/RG3/rg03b.html" rel="next">
 <link href="../../graphs/RG3/rg03.html" rel="prev">
+<link href="../../assets/images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -136,19 +137,29 @@ cookieconsent.run({
     <span class="navbar-title">Biomarker Analysis Catalog</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
+<li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Report a Bug</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+        <li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Ask a Question</span></a>
   </li>  
+    </ul>
+</li>
 </ul>
-<div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
+    <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -177,7 +188,7 @@ cookieconsent.run({
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Index</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -899,13 +910,6 @@ cookieconsent.run({
 </li>
       </ul>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../bac_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
-  </div>
-</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
@@ -913,9 +917,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">RG3A</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Response Graph Comparing Subgroups of BEP</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">RG</div>
+  </div>
+  </div>
 
 
 
@@ -933,6 +940,7 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -984,7 +992,7 @@ cookieconsent.run({
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="rg03a_cache/html/sessioninfo_dbc49a4d7e7097ebd0e86573703b3d52">
+<div class="cell" data-hash="rg03a_cache/html/sessioninfo_bee9a7c95950b83bd48d31eeac1a9bcc">
 <details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
@@ -1010,7 +1018,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.2.1   ggplot2_3.4.2        
+[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
 [4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
 [7] formatters_0.5.0.9001
 
@@ -1032,6 +1040,16 @@ loaded via a namespace (and not attached):
 [57] rmarkdown_2.22     compiler_4.3.1    </code></pre>
 </div>
 </div>
+<hr>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell" data-hash="rg03a_cache/html/unnamed-chunk-3_ce52ecea5140d3173e49bde48074fe48">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
+'git log -1 --format="%H"' had status 128</code></pre>
+</div>
+</div>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1040,7 +1058,7 @@ loaded via a namespace (and not attached):
 <!-- -->
 
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1450,48 +1468,68 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">---</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="an">title:</span><span class="co"> RG3A</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="an">subtitle:</span><span class="co"> Response Graph Comparing Subgroups of BEP</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co">---</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a>------------------------------------------------------------------------</span>
-<span id="cb5-7"><a href="#cb5-7"></a></span>
-<span id="cb5-8"><a href="#cb5-8"></a>::: panel-tabset</span>
-<span id="cb5-9"><a href="#cb5-9"></a>{{&lt; include setup.qmd &gt;}}</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="fu">## Plot</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a>In this example we compare the responses across subgroups of the BEP defined by the levels of a categorical biomarker, and overall BEP, again using the <span class="in">`facet_grid()`</span> layer with the option <span class="in">`margins = TRUE`</span>.</span>
-<span id="cb5-14"><a href="#cb5-14"></a>We do need to filter first on the BEP flag to restrict the data to the BEP.</span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="in">```{r}</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a>adrs_bep <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>  <span class="fu">filter</span>(BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>)</span>
-<span id="cb5-21"><a href="#cb5-21"></a></span>
-<span id="cb5-22"><a href="#cb5-22"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adrs_bep, <span class="fu">aes</span>(BMEASIFL, <span class="at">fill =</span> AVALC_BIN, <span class="at">by =</span> BMEASIFL)) <span class="sc">+</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb5-24"><a href="#cb5-24"></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb5-25"><a href="#cb5-25"></a>    <span class="at">labels =</span> scales<span class="sc">::</span>percent,</span>
-<span id="cb5-26"><a href="#cb5-26"></a>    <span class="at">name =</span> <span class="st">"Proportion %"</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a>  <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"prop"</span>, <span class="at">position =</span> <span class="fu">position_fill</span>(.<span class="dv">5</span>), <span class="at">colour =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb5-29"><a href="#cb5-29"></a>  <span class="fu">facet_grid</span>(BMRKR2 <span class="sc">~</span> ARM_BIN, <span class="at">margins =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-30"><a href="#cb5-30"></a></span>
-<span id="cb5-31"><a href="#cb5-31"></a>graph</span>
-<span id="cb5-32"><a href="#cb5-32"></a><span class="in">```</span></span>
-<span id="cb5-33"><a href="#cb5-33"></a></span>
-<span id="cb5-34"><a href="#cb5-34"></a>{{&lt; include ../../session_info.qmd &gt;}}</span>
-<span id="cb5-35"><a href="#cb5-35"></a>:::</span>
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> RG3A</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="an">subtitle:</span><span class="co"> Response Graph Comparing Subgroups of BEP</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="an">categories:</span><span class="co"> [RG]</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">---</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>------------------------------------------------------------------------</span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a>::: panel-tabset</span>
+<span id="cb6-10"><a href="#cb6-10"></a>{{&lt; include setup.qmd &gt;}}</span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">## Plot</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a></span>
+<span id="cb6-14"><a href="#cb6-14"></a>In this example we compare the responses across subgroups of the BEP defined by the levels of a categorical biomarker, and overall BEP, again using the <span class="in">`facet_grid()`</span> layer with the option <span class="in">`margins = TRUE`</span>.</span>
+<span id="cb6-15"><a href="#cb6-15"></a>We do need to filter first on the BEP flag to restrict the data to the BEP.</span>
+<span id="cb6-16"><a href="#cb6-16"></a></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="in">```{r}</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a>adrs_bep <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a>  <span class="fu">filter</span>(BEP01FL <span class="sc">==</span> <span class="st">"Y"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22"></a></span>
+<span id="cb6-23"><a href="#cb6-23"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adrs_bep, <span class="fu">aes</span>(BMEASIFL, <span class="at">fill =</span> AVALC_BIN, <span class="at">by =</span> BMEASIFL)) <span class="sc">+</span></span>
+<span id="cb6-24"><a href="#cb6-24"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb6-25"><a href="#cb6-25"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb6-26"><a href="#cb6-26"></a>    <span class="at">labels =</span> scales<span class="sc">::</span>percent,</span>
+<span id="cb6-27"><a href="#cb6-27"></a>    <span class="at">name =</span> <span class="st">"Proportion %"</span></span>
+<span id="cb6-28"><a href="#cb6-28"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-29"><a href="#cb6-29"></a>  <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"prop"</span>, <span class="at">position =</span> <span class="fu">position_fill</span>(.<span class="dv">5</span>), <span class="at">colour =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb6-30"><a href="#cb6-30"></a>  <span class="fu">facet_grid</span>(BMRKR2 <span class="sc">~</span> ARM_BIN, <span class="at">margins =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-31"><a href="#cb6-31"></a></span>
+<span id="cb6-32"><a href="#cb6-32"></a>graph</span>
+<span id="cb6-33"><a href="#cb6-33"></a><span class="in">```</span></span>
+<span id="cb6-34"><a href="#cb6-34"></a></span>
+<span id="cb6-35"><a href="#cb6-35"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb6-36"><a href="#cb6-36"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team <a href="https://github.com/insightsengineering"><img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg" class="img-fluid" alt="StatisticalEngineering" width="15"></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../../misc/citation.html">Citation</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../misc/license.html">License</a>
+  </li>  
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/insightsengineering/biomarker-catalog/edit/main/graphs/RG3/rg03a.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/insightsengineering/biomarker-catalog/issues/new/choose" class="toc-action">Report an issue</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog">
+      <i class="bi bi-github" role="img" aria-label="BAC GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+  </li>  
+</ul>
+</div>
   </div>
 </footer>
 

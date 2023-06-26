@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <link href="../../graphs/dg04.html" rel="next">
 <link href="../../graphs/DG3/dg03.html" rel="prev">
+<link href="../../assets/images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -136,19 +137,29 @@ cookieconsent.run({
     <span class="navbar-title">Biomarker Analysis Catalog</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
+<li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Report a Bug</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+        <li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Ask a Question</span></a>
   </li>  
+    </ul>
+</li>
 </ul>
-<div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
+    <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -177,7 +188,7 @@ cookieconsent.run({
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Index</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -899,13 +910,6 @@ cookieconsent.run({
 </li>
       </ul>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../bac_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
-  </div>
-</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
@@ -913,9 +917,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">DG3A</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Copyright</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Barplot of a Categorical Variable by Another Categorical Variable</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">DG</div>
+  </div>
+  </div>
 
 
 
@@ -933,6 +940,7 @@ cookieconsent.run({
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Biomarker Analysis Catalog Version</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -986,7 +994,7 @@ cookieconsent.run({
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg03a_cache/html/sessioninfo_d5c70e11221a8865bf8d81e3f1b6f059">
+<div class="cell" data-hash="dg03a_cache/html/sessioninfo_d6b4be12fb4eea26bf22a8906d27548b">
 <details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
@@ -1012,7 +1020,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.2.1   ggplot2_3.4.2        
+[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
 [4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
 [7] formatters_0.5.0.9001
 
@@ -1034,6 +1042,16 @@ loaded via a namespace (and not attached):
 [57] compiler_4.3.1    </code></pre>
 </div>
 </div>
+<hr>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell" data-hash="dg03a_cache/html/unnamed-chunk-5_bc5e1f22e7d9ef8d54bbe2025d2583ab">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in system("git log -1 --format=\"%H\"", intern = TRUE): running command
+'git log -1 --format="%H"' had status 128</code></pre>
+</div>
+</div>
+<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/"><code></code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1042,7 +1060,7 @@ loaded via a namespace (and not attached):
 <!-- -->
 
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1452,61 +1470,81 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> DG3A</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="an">subtitle:</span><span class="co"> Barplot of a Categorical Variable by Another Categorical Variable</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co">---</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a>------------------------------------------------------------------------</span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a>::: panel-tabset</span>
-<span id="cb7-9"><a href="#cb7-9"></a>{{&lt; include setup.qmd &gt;}}</span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="fu">## Plot</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a></span>
-<span id="cb7-13"><a href="#cb7-13"></a>Here below the code for a simple distribution of the category counts of a first biomarker variable (<span class="in">`BMRKR2`</span>) split by a second categorical variable (<span class="in">`ARM`</span>).</span>
-<span id="cb7-14"><a href="#cb7-14"></a>We can use again the <span class="in">`facet_grid()`</span> layer.</span>
-<span id="cb7-15"><a href="#cb7-15"></a></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="in">```{r}</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adsl, <span class="fu">aes</span>(BMRKR2)) <span class="sc">+</span></span>
-<span id="cb7-20"><a href="#cb7-20"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb7-21"><a href="#cb7-21"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> ARM)</span>
-<span id="cb7-22"><a href="#cb7-22"></a></span>
-<span id="cb7-23"><a href="#cb7-23"></a>graph</span>
-<span id="cb7-24"><a href="#cb7-24"></a><span class="in">```</span></span>
-<span id="cb7-25"><a href="#cb7-25"></a></span>
-<span id="cb7-26"><a href="#cb7-26"></a>We could instead display the columns next to each other within the same graph with the <span class="in">`fill`</span> aesthetic and the <span class="in">`position_dodge()`</span> option instead of using the <span class="in">`facet_grid()`</span> layer.</span>
-<span id="cb7-27"><a href="#cb7-27"></a></span>
-<span id="cb7-30"><a href="#cb7-30"></a><span class="in">```{r}</span></span>
-<span id="cb7-31"><a href="#cb7-31"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adsl, <span class="fu">aes</span>(ARM, <span class="at">fill =</span> BMRKR2)) <span class="sc">+</span></span>
-<span id="cb7-32"><a href="#cb7-32"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>())</span>
-<span id="cb7-33"><a href="#cb7-33"></a></span>
-<span id="cb7-34"><a href="#cb7-34"></a>graph</span>
-<span id="cb7-35"><a href="#cb7-35"></a><span class="in">```</span></span>
-<span id="cb7-36"><a href="#cb7-36"></a></span>
-<span id="cb7-37"><a href="#cb7-37"></a>We can then again add the absolute count above each of the columns.</span>
-<span id="cb7-38"><a href="#cb7-38"></a></span>
-<span id="cb7-41"><a href="#cb7-41"></a><span class="in">```{r}</span></span>
-<span id="cb7-42"><a href="#cb7-42"></a>graph <span class="sc">+</span></span>
-<span id="cb7-43"><a href="#cb7-43"></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb7-44"><a href="#cb7-44"></a>    <span class="at">stat =</span> <span class="st">"count"</span>,</span>
-<span id="cb7-45"><a href="#cb7-45"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(count)),</span>
-<span id="cb7-46"><a href="#cb7-46"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>),</span>
-<span id="cb7-47"><a href="#cb7-47"></a>    <span class="at">vjust =</span> <span class="sc">-</span>.<span class="dv">5</span></span>
-<span id="cb7-48"><a href="#cb7-48"></a>  )</span>
-<span id="cb7-49"><a href="#cb7-49"></a><span class="in">```</span></span>
-<span id="cb7-50"><a href="#cb7-50"></a></span>
-<span id="cb7-51"><a href="#cb7-51"></a>{{&lt; include ../../session_info.qmd &gt;}}</span>
-<span id="cb7-52"><a href="#cb7-52"></a>:::</span>
+<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> DG3A</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> Barplot of a Categorical Variable by Another Categorical Variable</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="an">categories:</span><span class="co"> [DG]</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co">---</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a>------------------------------------------------------------------------</span>
+<span id="cb8-8"><a href="#cb8-8"></a></span>
+<span id="cb8-9"><a href="#cb8-9"></a>::: panel-tabset</span>
+<span id="cb8-10"><a href="#cb8-10"></a>{{&lt; include setup.qmd &gt;}}</span>
+<span id="cb8-11"><a href="#cb8-11"></a></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="fu">## Plot</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a></span>
+<span id="cb8-14"><a href="#cb8-14"></a>Here below the code for a simple distribution of the category counts of a first biomarker variable (<span class="in">`BMRKR2`</span>) split by a second categorical variable (<span class="in">`ARM`</span>).</span>
+<span id="cb8-15"><a href="#cb8-15"></a>We can use again the <span class="in">`facet_grid()`</span> layer.</span>
+<span id="cb8-16"><a href="#cb8-16"></a></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="in">```{r}</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adsl, <span class="fu">aes</span>(BMRKR2)) <span class="sc">+</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> ARM)</span>
+<span id="cb8-23"><a href="#cb8-23"></a></span>
+<span id="cb8-24"><a href="#cb8-24"></a>graph</span>
+<span id="cb8-25"><a href="#cb8-25"></a><span class="in">```</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a></span>
+<span id="cb8-27"><a href="#cb8-27"></a>We could instead display the columns next to each other within the same graph with the <span class="in">`fill`</span> aesthetic and the <span class="in">`position_dodge()`</span> option instead of using the <span class="in">`facet_grid()`</span> layer.</span>
+<span id="cb8-28"><a href="#cb8-28"></a></span>
+<span id="cb8-31"><a href="#cb8-31"></a><span class="in">```{r}</span></span>
+<span id="cb8-32"><a href="#cb8-32"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(adsl, <span class="fu">aes</span>(ARM, <span class="at">fill =</span> BMRKR2)) <span class="sc">+</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>())</span>
+<span id="cb8-34"><a href="#cb8-34"></a></span>
+<span id="cb8-35"><a href="#cb8-35"></a>graph</span>
+<span id="cb8-36"><a href="#cb8-36"></a><span class="in">```</span></span>
+<span id="cb8-37"><a href="#cb8-37"></a></span>
+<span id="cb8-38"><a href="#cb8-38"></a>We can then again add the absolute count above each of the columns.</span>
+<span id="cb8-39"><a href="#cb8-39"></a></span>
+<span id="cb8-42"><a href="#cb8-42"></a><span class="in">```{r}</span></span>
+<span id="cb8-43"><a href="#cb8-43"></a>graph <span class="sc">+</span></span>
+<span id="cb8-44"><a href="#cb8-44"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb8-45"><a href="#cb8-45"></a>    <span class="at">stat =</span> <span class="st">"count"</span>,</span>
+<span id="cb8-46"><a href="#cb8-46"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(count)),</span>
+<span id="cb8-47"><a href="#cb8-47"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>),</span>
+<span id="cb8-48"><a href="#cb8-48"></a>    <span class="at">vjust =</span> <span class="sc">-</span>.<span class="dv">5</span></span>
+<span id="cb8-49"><a href="#cb8-49"></a>  )</span>
+<span id="cb8-50"><a href="#cb8-50"></a><span class="in">```</span></span>
+<span id="cb8-51"><a href="#cb8-51"></a></span>
+<span id="cb8-52"><a href="#cb8-52"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb8-53"><a href="#cb8-53"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team <a href="https://github.com/insightsengineering"><img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg" class="img-fluid" alt="StatisticalEngineering" width="15"></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../../misc/citation.html">Citation</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../misc/license.html">License</a>
+  </li>  
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/insightsengineering/biomarker-catalog/edit/main/graphs/DG3/dg03a.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/insightsengineering/biomarker-catalog/issues/new/choose" class="toc-action">Report an issue</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog">
+      <i class="bi bi-github" role="img" aria-label="BAC GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+  </li>  
+</ul>
+</div>
   </div>
 </footer>
 

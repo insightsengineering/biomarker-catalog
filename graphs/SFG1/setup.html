@@ -59,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -128,19 +129,29 @@ cookieconsent.run({
     <span class="navbar-title">Biomarker Analysis Catalog</span>
     </a>
   </div>
-          <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://app.slack.com/client/T028PB489D3/" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
+<li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Report a Bug</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog" rel="" target=""><i class="bi bi-github" role="img" aria-label="Repository">
+        <li>
+    <a class="dropdown-item" href="https://github.com/insightsengineering/biomarker-catalog/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="dropdown-text">Ask a Question</span></a>
   </li>  
+    </ul>
+</li>
 </ul>
-<div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://app.slack.com/client/T028PB489D3/" title="Pharmaverse Slack" class="quarto-navigation-tool px-1" aria-label="Slack"><i class="bi bi-slack"></i></a>
+    <a href="https://github.com/insightsengineering/biomarker-catalog" title="BAC GitHub" class="quarto-navigation-tool px-1" aria-label="Repository"><i class="bi bi-github"></i></a>
+    <a href="https://insightsengineering.github.io/biomarker-catalog/index.xml" title="BAC RSS" class="quarto-navigation-tool px-1" aria-label="BAC RSS"><i class="bi bi-rss"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -169,7 +180,7 @@ cookieconsent.run({
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Index</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -891,13 +902,6 @@ cookieconsent.run({
 </li>
       </ul>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../bac_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
-  </div>
-</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
@@ -941,7 +945,7 @@ cookieconsent.run({
 
 <!-- -->
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1341,52 +1345,75 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><script src="https://giscus.app/client.js" data-repo="insightsengineering/biomarker-catalog" data-repo-id="R_kgDOJMeENQ" data-category="General" data-category-id="DIC_kwDOJMeENc4CVB9s" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">## Setup</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package to create the survival forest graph.</span>
-<span id="cb2-4"><a href="#cb2-4"></a>We start by filtering the <span class="in">`adtte`</span> data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the <span class="in">`ARM`</span> variable and creating a binned age variable by using the function <span class="in">`cut_quantile_bins()`</span>.</span>
-<span id="cb2-5"><a href="#cb2-5"></a>Note that we do not include the boundaries <span class="in">`0`</span> and <span class="in">`1`</span> in the corresponding cutoffs vector <span class="in">`AGE_probs`</span>, but only the true cutoff probabilities to use (here <span class="in">`0.5`</span>, i.e. the median).</span>
-<span id="cb2-6"><a href="#cb2-6"></a>We restrict the analysis of the biomarker variables <span class="in">`BMRKR1`</span> and <span class="in">`BMRKR2`</span> to the BEP by setting them as missing for the non-BEP.</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a>We also relabel the biomarker evaluable population flag variable <span class="in">`BEP01FL`</span> and the categorical biomarker variable <span class="in">`BMRKR2`</span> to update the display label of these variables in the graph.</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="fu">library</span>(tern)</span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="fu">library</span>(dplyr)</span>
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="an">exclude-listing:</span><span class="co"> true</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">## Setup</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package to create the survival forest graph.</span>
+<span id="cb2-8"><a href="#cb2-8"></a>We start by filtering the <span class="in">`adtte`</span> data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the <span class="in">`ARM`</span> variable and creating a binned age variable by using the function <span class="in">`cut_quantile_bins()`</span>.</span>
+<span id="cb2-9"><a href="#cb2-9"></a>Note that we do not include the boundaries <span class="in">`0`</span> and <span class="in">`1`</span> in the corresponding cutoffs vector <span class="in">`AGE_probs`</span>, but only the true cutoff probabilities to use (here <span class="in">`0.5`</span>, i.e. the median).</span>
+<span id="cb2-10"><a href="#cb2-10"></a>We restrict the analysis of the biomarker variables <span class="in">`BMRKR1`</span> and <span class="in">`BMRKR2`</span> to the BEP by setting them as missing for the non-BEP.</span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a>We also relabel the biomarker evaluable population flag variable <span class="in">`BEP01FL`</span> and the categorical biomarker variable <span class="in">`BMRKR2`</span> to update the display label of these variables in the graph.</span>
 <span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a>AGE_probs <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>  <span class="fu">filter</span>(</span>
-<span id="cb2-19"><a href="#cb2-19"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-22"><a href="#cb2-22"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
-<span id="cb2-23"><a href="#cb2-23"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
-<span id="cb2-24"><a href="#cb2-24"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
-<span id="cb2-25"><a href="#cb2-25"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
-<span id="cb2-26"><a href="#cb2-26"></a>      ARM,</span>
-<span id="cb2-27"><a href="#cb2-27"></a>      <span class="at">CTRL =</span> <span class="st">"B: Placebo"</span>,</span>
-<span id="cb2-28"><a href="#cb2-28"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
-<span id="cb2-29"><a href="#cb2-29"></a>    ),</span>
-<span id="cb2-30"><a href="#cb2-30"></a>    <span class="at">AGE_BIN =</span> <span class="fu">cut_quantile_bins</span>(AGE, <span class="at">probs =</span> AGE_probs),</span>
-<span id="cb2-31"><a href="#cb2-31"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1),</span>
-<span id="cb2-32"><a href="#cb2-32"></a>    <span class="at">BMRKR2 =</span> <span class="fu">fct_explicit_na_if</span>(BMRKR2, BEP01FL <span class="sc">==</span> <span class="st">"N"</span>)</span>
-<span id="cb2-33"><a href="#cb2-33"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-34"><a href="#cb2-34"></a>  <span class="fu">var_relabel</span>(</span>
-<span id="cb2-35"><a href="#cb2-35"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
-<span id="cb2-36"><a href="#cb2-36"></a>    <span class="at">BMRKR2 =</span> <span class="st">"Biomarker (Categorical)"</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a>  )</span>
-<span id="cb2-38"><a href="#cb2-38"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="fu">library</span>(tern)</span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a>AGE_probs <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a>  <span class="fu">filter</span>(</span>
+<span id="cb2-23"><a href="#cb2-23"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-26"><a href="#cb2-26"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(AVAL),</span>
+<span id="cb2-27"><a href="#cb2-27"></a>    <span class="at">AVALU =</span> <span class="st">"Months"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28"></a>    <span class="at">is_event =</span> CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb2-29"><a href="#cb2-29"></a>    <span class="at">ARM_BIN =</span> <span class="fu">fct_collapse_only</span>(</span>
+<span id="cb2-30"><a href="#cb2-30"></a>      ARM,</span>
+<span id="cb2-31"><a href="#cb2-31"></a>      <span class="at">CTRL =</span> <span class="st">"B: Placebo"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32"></a>      <span class="at">TRT =</span> <span class="fu">c</span>(<span class="st">"A: Drug X"</span>, <span class="st">"C: Combination"</span>)</span>
+<span id="cb2-33"><a href="#cb2-33"></a>    ),</span>
+<span id="cb2-34"><a href="#cb2-34"></a>    <span class="at">AGE_BIN =</span> <span class="fu">cut_quantile_bins</span>(AGE, <span class="at">probs =</span> AGE_probs),</span>
+<span id="cb2-35"><a href="#cb2-35"></a>    <span class="at">BMRKR1 =</span> <span class="fu">ifelse</span>(BEP01FL <span class="sc">==</span> <span class="st">"N"</span>, <span class="cn">NA</span>, BMRKR1),</span>
+<span id="cb2-36"><a href="#cb2-36"></a>    <span class="at">BMRKR2 =</span> <span class="fu">fct_explicit_na_if</span>(BMRKR2, BEP01FL <span class="sc">==</span> <span class="st">"N"</span>)</span>
+<span id="cb2-37"><a href="#cb2-37"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-38"><a href="#cb2-38"></a>  <span class="fu">var_relabel</span>(</span>
+<span id="cb2-39"><a href="#cb2-39"></a>    <span class="at">BEP01FL =</span> <span class="st">"BEP"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40"></a>    <span class="at">BMRKR2 =</span> <span class="st">"Biomarker (Categorical)"</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a>  )</span>
+<span id="cb2-42"><a href="#cb2-42"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team</div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">Made with ❤️ by the Statistical Engineering Team <a href="https://github.com/insightsengineering"><img src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg" class="img-fluid" alt="StatisticalEngineering" width="15"></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../../misc/citation.html">Citation</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../misc/license.html">License</a>
+  </li>  
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/insightsengineering/biomarker-catalog/edit/main/graphs/SFG1/setup.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/insightsengineering/biomarker-catalog/issues/new/choose" class="toc-action">Report an issue</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/insightsengineering/biomarker-catalog">
+      <i class="bi bi-github" role="img" aria-label="BAC GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://insightsengineering.github.io/biomarker-catalog/index.xml">BAC RSS</a>
+  </li>  
+</ul>
+</div>
   </div>
 </footer>
 

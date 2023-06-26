@@ -17,7 +17,7 @@ sessionInfo()
 
 ```{r}
 #| echo: false
-version <- read.dcf("../DESCRIPTION")[1, ]["Version"]
+version <- packageVersion("biomarker.catalog")
 git_sha <- system('git log -1 --format="%H"', intern = TRUE)
 ```
 

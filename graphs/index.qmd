@@ -1,8 +1,21 @@
 ---
 title: "Graphs"
 exclude-listing: true
+listing:
+  - id: graphs
+    type: grid
+    contents: "**/*.qmd"
+    categories: true
+    feed: true
+    exclude:
+      exclude-listing: true
+    sort:
+      - "title asc"
 ---
 
-------------------------------------------------------------------------
+---
 
 This is a collection of Biomarker Analysis graph templates.
+
+:::{#graphs}
+:::

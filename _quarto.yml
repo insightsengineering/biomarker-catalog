@@ -72,8 +72,6 @@ website:
       Made with ❤️ by the Statistical Engineering Team
       [![](https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/SVG/StatisticalEngineering.svg){fig-alt="StatisticalEngineering" width=15px}](https://github.com/insightsengineering)
     center:
-      - text: "Citation"
-        href: misc/citation.qmd
       - text: "License"
         href: misc/license.qmd
     right:
@@ -88,15 +86,6 @@ website:
     collapse: false
     background: primary
     search: true
-    left:
-      - text: "Help"
-        menu:
-          - text: "Report a Bug"
-            icon: "bug"
-            href: "https://github.com/insightsengineering/biomarker-catalog/issues"
-          - text: "Ask a Question"
-            icon: "chat-right-text"
-            href: "https://github.com/insightsengineering/biomarker-catalog/discussions"
     tools:
       - icon: slack
         href: https://app.slack.com/client/T028PB489D3/

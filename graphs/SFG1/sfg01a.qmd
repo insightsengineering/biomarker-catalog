@@ -1,6 +1,7 @@
 ---
 title: SFG1A
 subtitle: Survival Forest Graph Only by Categorical Biomarker
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -43,5 +44,5 @@ We can then again produce the forest plot using `g_forest()`.
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

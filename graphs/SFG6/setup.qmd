@@ -1,3 +1,7 @@
+---
+exclude-listing: true
+---
+
 ## Setup
 
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on a time-to-event (survival) outcome, conditional on covariates and/or stratification variables included in Cox proportional hazards regression models.

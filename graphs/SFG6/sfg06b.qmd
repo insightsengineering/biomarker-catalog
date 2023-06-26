@@ -1,6 +1,7 @@
 ---
 title: SFG6B
 subtitle: Survival Forest Graph for Multiple Continuous Biomarkers by Manual Subgroup Categories
+categories: [SFG]
 ---
 
 ------------------------------------------------------------------------
@@ -39,5 +40,5 @@ result <- tabulate_survival_biomarkers(
 g_forest(result, xlim = c(0.7, 1.4))
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

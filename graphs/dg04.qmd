@@ -1,6 +1,7 @@
 ---
 title: DG4
 subtitle: Scatterplots of Two Numerical Variables
+categories: [DG]
 ---
 
 ------------------------------------------------------------------------
@@ -45,5 +46,5 @@ graph +
   labs(x = "Age (Years)", y = "Biomarker (Log(Units))")
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

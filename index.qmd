@@ -1,13 +1,39 @@
 ---
 title: "Biomarker Analysis Catalog"
+listing:
+  - id: tables
+    type: table
+    contents: "tables/**/*.qmd"
+    fields: [title, subtitle]
+    categories: true
+    table-hover: true
+    table-striped: false
+    feed: true
+    exclude:
+      exclude-listing: true
+    sort:
+      - "title asc"
+  - id: graphs
+    type: grid
+    contents: "graphs/**/*.qmd"
+    categories: true
+    feed: true
+    exclude:
+      exclude-listing: true
+    sort:
+      - "title asc"
 ---
 
-------------------------------------------------------------------------
-
-### Introduction
+---
 
 This is a collection of Biomarker Analysis templates including tables and graphs.
 
-### License
+## Tables
 
-This catalog as well as code examples are licensed under the Apache License, Version 2.0.
+:::{#tables}
+:::
+
+## Graphs
+
+:::{#graphs}
+:::

@@ -1,6 +1,7 @@
 ---
 title: RNAG5
 subtitle: RNAseq Differential Gene Expression Analysis
+categories: [RNAG]
 ---
 
 ------------------------------------------------------------------------
@@ -95,5 +96,5 @@ app <- init(
 shinyApp(app$ui, app$server)
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

@@ -1,6 +1,7 @@
 ---
 title: RFG1
 subtitle: Response Forest Graphs for Comparing Treatment Effects Across Subgroups
+categories: [RFG]
 ---
 
 ------------------------------------------------------------------------
@@ -33,5 +34,5 @@ We can then produce the final forest plot using `g_forest()` function based on t
 g_forest(result)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

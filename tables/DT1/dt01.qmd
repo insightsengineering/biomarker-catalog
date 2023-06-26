@@ -1,6 +1,7 @@
 ---
 title: DT1
 subtitle: Demographics Tables Comparing BEP vs. Overall Population
+categories: [DT]
 ---
 
 ------------------------------------------------------------------------
@@ -22,5 +23,5 @@ lyt <- basic_table() %>%
 build_table(lyt, adsl)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

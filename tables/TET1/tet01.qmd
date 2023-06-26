@@ -1,6 +1,7 @@
 ---
 title: TET1
 subtitle: Time-to-Event Summary Tables
+categories: [TET]
 ---
 
 ------------------------------------------------------------------------
@@ -50,5 +51,5 @@ lyt <- basic_table() %>%
 build_table(lyt, adtte)
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

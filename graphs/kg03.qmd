@@ -1,6 +1,7 @@
 ---
 title: KG3
 subtitle: Kaplan-Meier Graphs by Biomarker Subgroups
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -45,5 +46,5 @@ g_km(
 )
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

@@ -1,6 +1,7 @@
 ---
 title: CPMT3
 subtitle: Cox Proportional Hazards Model Tables with Separate Models for Each Covariate
+categories: [CPM]
 ---
 
 ------------------------------------------------------------------------
@@ -45,5 +46,5 @@ lyt <- basic_table() %>%
 build_table(lyt = lyt, df = adtte)
 ```
 
-{{< include ../session_info.qmd >}}
+{{< include ../misc/session_info.qmd >}}
 :::

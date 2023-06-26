@@ -1,6 +1,7 @@
 ---
 title: KG4A
 subtitle: Change Color and Line Type in Kaplan-Meier Graph by Treatment Arm and Biomarker Subgroups
+categories: [KG]
 ---
 
 ------------------------------------------------------------------------
@@ -24,5 +25,5 @@ g_km(
 )
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

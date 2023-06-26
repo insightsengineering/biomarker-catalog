@@ -1,6 +1,7 @@
 ---
 title: CPMT2A
 subtitle: Changing Reference Levels in the Cox Proportional Hazards Model Table
+categories: [CPM]
 ---
 
 ------------------------------------------------------------------------
@@ -44,5 +45,5 @@ result <- basic_table() %>%
 result
 ```
 
-{{< include ../../session_info.qmd >}}
+{{< include ../../misc/session_info.qmd >}}
 :::

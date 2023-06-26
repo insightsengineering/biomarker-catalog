@@ -1,0 +1,16 @@
+---
+title: Citation
+exclude-listing: true
+---
+
+```{r}
+#| results: asis
+#| echo: false
+pkg <- pkgdown:::as_pkgdown("../.")
+cat(paste(pkgdown:::repo_source(pkg, "DESCRIPTION"), "\n\n"))
+citations <- pkgdown:::data_citations(pkg)
+cat(paste(citations$html, "\n\n"))
+cat(paste("```bibtex", "\n"))
+cat(paste(citations$bibtex, "\n"))
+cat("```\n\n")
+```

@@ -6,18 +6,18 @@
       version="2.0">
 <channel>
 <title>Biomarker Analysis Catalog</title>
-<link>https://insightsengineering.github.io/biomarker-catalog/index.html</link>
-<atom:link href="https://insightsengineering.github.io/biomarker-catalog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://insightsengineering.github.io/biomarker-catalog/tables/index.html</link>
+<atom:link href="https://insightsengineering.github.io/biomarker-catalog/tables/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <image>
 <url>https://insightsengineering.github.io/biomarker-catalog/assets/images/logo.png</url>
 <title>Biomarker Analysis Catalog</title>
-<link>https://insightsengineering.github.io/biomarker-catalog/index.html</link>
+<link>https://insightsengineering.github.io/biomarker-catalog/tables/index.html</link>
 <height>144</height>
 <width>144</width>
 </image>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Mon, 26 Jun 2023 14:09:36 GMT</lastBuildDate>
+<lastBuildDate>Mon, 26 Jun 2023 18:35:49 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
@@ -177,7 +177,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -196,8 +196,6 @@ loaded via a namespace (and not attached):
 [49] tools_4.3.1       pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -209,7 +207,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -416,7 +414,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -435,8 +433,6 @@ loaded via a namespace (and not attached):
 [49] tools_4.3.1       pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -448,7 +444,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -685,7 +681,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -704,8 +700,6 @@ loaded via a namespace (and not attached):
 [49] tools_4.3.1       pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -717,7 +711,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -890,7 +884,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -909,8 +903,6 @@ loaded via a namespace (and not attached):
 [49] tools_4.3.1       pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -922,7 +914,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -1110,7 +1102,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -1128,8 +1120,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1141,7 +1131,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1341,7 +1331,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -1359,8 +1349,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1372,7 +1360,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1552,7 +1540,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -1570,8 +1558,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1583,7 +1569,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1796,7 +1782,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -1814,8 +1800,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -1827,7 +1811,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -1994,7 +1978,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -2012,8 +1996,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -2025,7 +2007,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -2196,7 +2178,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -2214,8 +2196,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -2227,7 +2207,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2547,7 +2527,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -2565,8 +2545,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -2578,7 +2556,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2947,7 +2925,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.3.9003       rtables_0.6.1.9006   
+[1] dplyr_1.1.2           tern_0.8.3.9005       rtables_0.6.1.9006   
 [4] magrittr_2.0.3        formatters_0.5.0.9001
 
 loaded via a namespace (and not attached):
@@ -2965,8 +2943,6 @@ loaded via a namespace (and not attached):
 [45] pkgconfig_2.0.3   htmltools_0.5.5  </code></pre>
 </div>
 </div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
 </div>
 </div>
 </div>
@@ -2978,2302 +2954,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>AG1</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Purpose</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Title, Axis and Caption Labels</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false">Coordinates</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false">Themes</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" aria-controls="tabset-1-6" aria-selected="false">Scales</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" aria-controls="tabset-1-7" aria-selected="false">Faceting</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" aria-controls="tabset-1-8" aria-selected="false">Titles, Footnotes, and Page Numbers</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" aria-controls="tabset-1-9" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>In this page we collect standard utilities for plotting which can be applied in principle to all graphs. Then we don’t need to repeat explaining these in each of the other graph pages. So it is kind of a cheat sheet for <code>ggplot2</code>. General introductions to <code>ggplot2</code> and a pdf cheatsheet are also recommended and linked at https://ggplot2.tidyverse.org/.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>We start by creating a graph. Note that we load our <code>ggplot2.utils</code> NEST package instead of <code>ggplot2</code> so we benefit from additional utilities selected from the <code>ggplot2</code> extension package ecosystem. Note that <code>ggplot2.utils</code> automatically loads also <code>ggplot2</code>, there we do not need to do that manually.</p>
-<p>We also typically apply the <code>df_explicit_na()</code> function to the incoming dataset to convert character to factor variables, and code missing values as an explicit factor level, which avoids downstream problems.</p>
-<p>Note that you may still run into warning messages after producing some of the graphs if a continuous variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step below to remove the rows containing NAs for the specific numeric column (e.g.&nbsp;<code>drop_na(BMRKR1)</code> to remove rows where <code>BMRKR1</code> is missing).</p>
-<div class="cell" data-hash="ag01_cache/html/unnamed-chunk-1_babb836ec2363fa5605bec7ce91b269d">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tidyr)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-5"></span>
-<span id="cb1-6">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">drop_na</span>(BMRKR1)</span>
-<span id="cb1-9"></span>
-<span id="cb1-10">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb1-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_histogram</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb1-12">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_density</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)))</span>
-<span id="cb1-13"></span>
-<span id="cb1-14">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>Another possibility is to add <code>na.rm = TRUE</code> option to the <code>ggplot()</code> arguments, or alternatively <code>select()</code> the relevant variables and then delete any rows with missing values by <code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code> and finally pipe that to <code>ggplot()</code>.</p>
-<div class="cell" data-hash="ag01_cache/html/unnamed-chunk-2_9752675b0ae60a867deca9b80be01578">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR1), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_histogram</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_density</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)))</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">select</span>(BMRKR1) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb3-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">na.omit</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb3-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-5">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_histogram</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_density</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)))</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<p>Title, subtitle, axis as well as caption labels can be added with the <code>labs()</code> layer. Alternatively specific <code>tern</code> functions can be used, see [Titles and Footnotes] below.</p>
-<div class="cell" data-hash="ag01_cache/html/labels_2849c93575a346245026377a8ed44944">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(</span>
-<span id="cb4-2">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Baseline Biomarker"</span>,</span>
-<span id="cb4-3">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Density"</span>,</span>
-<span id="cb4-4">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Distribution of the Baseline Biomarker"</span>,</span>
-<span id="cb4-5">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Histogram and Density Plot"</span>,</span>
-<span id="cb4-6">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Note: No outliers have been removed here."</span></span>
-<span id="cb4-7">)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/labels-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-4" class="tab-pane" aria-labelledby="tabset-1-4-tab">
-<p>We can change the coordinate system with <code>coord_*()</code> layers, e.g.&nbsp;to rotate the plot.</p>
-<div class="cell" data-hash="ag01_cache/html/coordinates_382c03a4354147481ab0b2afd21f1ff8">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coord_flip</span>()</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/coordinates-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can set the limits of the coordinate axes with <code>coord_cartesian()</code>. This performs a real zoom into the plot, instead of just replacing outside values with <code>NA</code> as <code>xlim()</code> or <code>lims()</code> are doing it. It is therefore preferred.</p>
-<div class="cell" data-hash="ag01_cache/html/zoom_8b4e24f4beacac634c9bda4c45b9976b">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb6-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coord_cartesian</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.3</span>)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb6-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Note: biomarker values greater than 15 are not shown on this plot."</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/zoom-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-5" class="tab-pane" aria-labelledby="tabset-1-5-tab">
-<p>General plot theme can be specified with <code>theme_*()</code> functions. The default theme is <code>theme_gray()</code>. For example in publications other themes might be preferred, such as <code>theme_classic()</code>.</p>
-<div class="cell" data-hash="ag01_cache/html/theme_4b934d89a071676e8be43cc5ac3e9e1b">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme_classic</span>()</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/theme-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-6" class="tab-pane" aria-labelledby="tabset-1-6-tab">
-<p>Many different scales mapping data values to visual values of an aesthetic are available in <code>scale_*()</code> functions.</p>
-<p>We can change the location scale easily, for example to show <code>x</code> on a log scale:</p>
-<div class="cell" data-hash="ag01_cache/html/logscale_b9c0e55a7e4e4e7b9acc2217e145648c">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_x_log10</span>()</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/logscale-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-7" class="tab-pane" aria-labelledby="tabset-1-7-tab">
-<p>Faceting is an elegant approach to create the same graph separately for each of the levels of one or multiple other factors. It can just be added as an additional layer to the existing graph. For example, we can show the distribution of the biomarker for each of the gender levels.</p>
-<div class="cell" data-hash="ag01_cache/html/faceting_8c7492662da9fd78578db02d68091ae7">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">facet_grid</span>(<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span>SEX)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/faceting-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-8" class="tab-pane" aria-labelledby="tabset-1-8-tab">
-<p>NEST provides a function to add titles, footnotes, and page numbers to <code>grob</code> objects (read: graphical objects) with <code><a href="https://rdrr.io/pkg/tern/man/decorate_grob.html">tern::decorate_grob()</a></code>.</p>
-<p>First, we need to prepare the pieces: graph, titles/footnotes. A ggplot object must be converted to a <code>grob</code>. We can use <code>ggplot::ggplotGrob()</code> to accomplish this easily.</p>
-<p>Titles and footnotes can be defined as vectors where each element is a new line. Tip: The <code><a href="https://rdrr.io/r/base/paste.html">paste()</a></code> function can be helpful to split long sentences across multiple lines.</p>
-<div class="cell" data-hash="ag01_cache/html/unnamed-chunk-3_fe0993ee6c130970dc868ad0c0534edf">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1">grob_graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplotGrob</span>(graph)</span>
-<span id="cb10-2"></span>
-<span id="cb10-3">titles <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(</span>
-<span id="cb10-4">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Distribution of the Baseline Biomarker 1"</span>,</span>
-<span id="cb10-5">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker Evaluable Patients"</span>,</span>
-<span id="cb10-6">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Protocol: AB12345 (Data Cut: 01 JAN 2021)"</span></span>
-<span id="cb10-7">)</span>
-<span id="cb10-8"></span>
-<span id="cb10-9">footnotes <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(</span>
-<span id="cb10-10">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker 1 = Gene ABC"</span>,</span>
-<span id="cb10-11">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Data Cut-off: 01 JAN 2021; RAVE Data Extracted: 15 JAN 2021"</span>,</span>
-<span id="cb10-12">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Program: biomark1_analysis.R"</span></span>
-<span id="cb10-13">)</span></code></pre></div>
-</details>
-</div>
-<p>Now that the pieces are ready, we can put them together. The <code>grid</code> package allows us to manipulate grobs. Using <code><a href="https://rdrr.io/r/grid/grid.draw.html">grid::grid.draw()</a></code> we can apply <code><a href="https://rdrr.io/pkg/tern/man/decorate_grob.html">tern::decorate_grob()</a></code> to our object, thus adding the titles/footnotes.</p>
-<div class="cell" data-hash="ag01_cache/html/unnamed-chunk-4_ae921f381ef01d24fad31284461ea38c">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(grid)</span>
-<span id="cb11-2"></span>
-<span id="cb11-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">grid.newpage</span>()</span>
-<span id="cb11-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">grid.draw</span>(</span>
-<span id="cb11-5">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">decorate_grob</span>(</span>
-<span id="cb11-6">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">grob =</span> grob_graph,</span>
-<span id="cb11-7">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">titles =</span> titles,</span>
-<span id="cb11-8">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">footnotes =</span> footnotes,</span>
-<span id="cb11-9">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">page =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Page 6 of 129"</span></span>
-<span id="cb11-10">  )</span>
-<span id="cb11-11">)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-9" class="tab-pane" aria-labelledby="tabset-1-9-tab">
-<div class="cell" data-hash="ag01_cache/html/sessioninfo_1a3b5bd20919541492ff1e16c5dc9107">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] grid      stats     graphics  grDevices utils     datasets  methods  
-[8] base     
-
-other attached packages:
-[1] ggplot2.utils_0.3.0   ggplot2_3.4.2         dplyr_1.1.2          
-[4] tidyr_1.3.0           tern_0.8.3.9003       rtables_0.6.1.9006   
-[7] magrittr_2.0.3        formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9002    EnvStats_2.7.0    
- [5] lattice_0.21-8     digest_0.6.31      evaluate_0.21      RColorBrewer_1.1-3
- [9] fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.5     Matrix_1.5-4.1    
-[13] backports_1.4.1    reshape_0.8.9      survival_3.5-5     GGally_2.1.2      
-[17] purrr_1.0.1        fansi_1.0.4        scales_1.2.1       codetools_0.2-19  
-[21] Rdpack_2.4         cli_3.6.1          ggpp_0.5.2         rlang_1.1.1       
-[25] rbibutils_2.2.13   munsell_0.5.0      splines_4.3.1      withr_2.5.0       
-[29] yaml_2.3.7         tools_4.3.1        polynom_1.4-1      checkmate_2.2.0   
-[33] colorspace_2.1-0   forcats_1.0.0      broom_1.0.5        vctrs_0.6.3       
-[37] R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2  MASS_7.3-60       
-[41] pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.3       glue_1.6.2        
-[45] Rcpp_1.0.10        xfun_0.39          tibble_3.2.1       tidyselect_1.2.0  
-[49] rstudioapi_0.14    knitr_1.43         farver_2.1.1       htmltools_0.5.5   
-[53] labeling_0.4.2     rmarkdown_2.22     compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>AG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG1</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric variables. We start by selecting the biomarker evaluable population with the flag variable <code>BEP01FL</code> and then populating a new continuous biomarker variable, <code>BMRKR3</code>.</p>
-<div class="cell" data-hash="dg01_cache/html/unnamed-chunk-1_5370a249dfe919664c297dcf85971f32">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tibble)</span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tidyr)</span>
-<span id="cb1-6"></span>
-<span id="cb1-7">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">BMRKR3 =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rnorm</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>))</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>In this example, we will create a combined histogram/density graph of a continuous biomarker variable. Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(BMRKR1)</code>).</p>
-<div class="cell" data-hash="dg01_cache/html/unnamed-chunk-2_41d08195ccc4479288c34514c6892e3a">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_histogram</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_density</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)))</span>
-<span id="cb2-4"></span>
-<span id="cb2-5">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can also calculate some descriptive statistics and populate a table that we can overlay on top of the plot. The <code>tibble</code> function is used to build a data frame <code>data_tb</code> with 3 variables. The <code>x</code> and <code>y</code> variables represent the coordinates on the plot to show the statistic values and can be modified based on preference. For example, <code>x = 1</code> and <code>y = 1</code> will put the statistics table in the top right corner of the graph, while <code>x = 0</code> and <code>y = 0</code> will put the statistics table in the bottom left corner of the graph. The <code>tb</code> variable contains the statistics to be shown on the plot, in the form of a nested list column starting from the original statistics tibble <code>orig_tb</code>. Finally, we can use the <code>geom_table_npc()</code> layer function to process the <code>data_tb</code> input and add the statistics table to the existing graph.</p>
-<div class="cell" data-hash="dg01_cache/html/unnamed-chunk-3_00bb9d5ea34006ed4a75bde4c0a8b973">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">orig_tb <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tribble</span>(</span>
-<span id="cb3-2">  <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span>Statistic, <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span>Value,</span>
-<span id="cb3-3">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"N"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">length</span>(BMRKR1),</span>
-<span id="cb3-4">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"SD"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sd</span>(BMRKR1),</span>
-<span id="cb3-5">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Median"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">median</span>(BMRKR1),</span>
-<span id="cb3-6">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Min."</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">min</span>(BMRKR1),</span>
-<span id="cb3-7">  <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Max."</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">max</span>(BMRKR1)</span>
-<span id="cb3-8">))</span>
-<span id="cb3-9"></span>
-<span id="cb3-10">data_tb <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tibble</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">tb =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(orig_tb))</span>
-<span id="cb3-11"></span>
-<span id="cb3-12">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-13">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_table_npc</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> data_tb, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">npcx =</span> x, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">npcy =</span> y, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">label =</span> tb))</span>
-<span id="cb3-14"></span>
-<span id="cb3-15">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg01_cache/html/sessioninfo_62da6a310a48f62df957c86b4ba58b5d">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.2          
-[4] ggplot2.utils_0.3.0   ggplot2_3.4.2         tern_0.8.3.9003      
-[7] rtables_0.6.1.9006    magrittr_2.0.3        formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9002    EnvStats_2.7.0    
- [5] lattice_0.21-8     digest_0.6.31      evaluate_0.21      grid_4.3.1        
- [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.5    
-[13] Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9      survival_3.5-5    
-[17] gridExtra_2.3      GGally_2.1.2       purrr_1.0.1        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.2         rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0     
-[29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
-[33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
-[41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.10        xfun_0.39         
-[49] tidyselect_1.2.0   rstudioapi_0.14    knitr_1.43         farver_2.1.1      
-[53] htmltools_0.5.5    labeling_0.4.2     rmarkdown_2.22     compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG1A</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric variables. We start by selecting the biomarker evaluable population with the flag variable <code>BEP01FL</code> and then populating a new continuous biomarker variable, <code>BMRKR3</code>.</p>
-<div class="cell" data-hash="dg01a_cache/html/unnamed-chunk-1_03cb5cbd07f0a2d37fd425713cecb2d8">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tibble)</span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tidyr)</span>
-<span id="cb1-6"></span>
-<span id="cb1-7">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">BMRKR3 =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rnorm</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>))</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>In this example, we will manipulate the variables that we want to show in the graph into a long data format using the <code>pivot_longer()</code> function from <code>tidyr</code>. This is necessary such that below we can use the faceting layer <code>facet_grid()</code> to plot each variable in its own facet.</p>
-<div class="cell" data-hash="dg01a_cache/html/unnamed-chunk-2_44c55085c3829e705b8068da65508477">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">num_var_long <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">pivot_longer</span>(</span>
-<span id="cb2-3">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(BMRKR1, BMRKR3),</span>
-<span id="cb2-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">names_to =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"var"</span>,</span>
-<span id="cb2-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">values_to =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"value"</span></span>
-<span id="cb2-6">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb2-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">select</span>(var, value)</span></code></pre></div>
-</details>
-</div>
-<p>Producing the base plot is then simple: We use the same code as above but just add the faceting layer.</p>
-<div class="cell" data-hash="dg01a_cache/html/unnamed-chunk-3_884e7518429d6419ef5315dee0393be7">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(num_var_long, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(value)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_histogram</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_density</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density))) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">facet_grid</span>(var <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> .)</span>
-<span id="cb3-5"></span>
-<span id="cb3-6">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>Similar to the DG1 example, we will calculate and populate the statistics table to accompany the plot. Note that also here we can use the <code>pivot_longer()</code> function to also obtain the statistics table input <code>orig_tb</code> and then <code>data_tb</code> in long format, and thus parallel to the biomarker variable format in <code>num_var_long</code>.</p>
-<div class="cell" data-hash="dg01a_cache/html/unnamed-chunk-4_46df9580812ce1f3107eb27c48eda333">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">orig_tb <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> num_var_long <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group_by</span>(var) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarize_at</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"value"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">mean =</span> mean, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">median =</span> median)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">pivot_longer</span>(</span>
-<span id="cb4-5">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(mean, median),</span>
-<span id="cb4-6">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">names_to =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Statistic"</span>,</span>
-<span id="cb4-7">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">values_to =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Value"</span></span>
-<span id="cb4-8">  )</span>
-<span id="cb4-9"></span>
-<span id="cb4-10">data_tb <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> orig_tb <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group_by</span>(var) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-12">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">tb =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tibble</span>(Statistic, Value)))</span>
-<span id="cb4-13"></span>
-<span id="cb4-14">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb4-15">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_table_npc</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> data_tb, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">npcx =</span> x, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">npcy =</span> y, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">label =</span> tb))</span>
-<span id="cb4-16"></span>
-<span id="cb4-17">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg01a_cache/html/sessioninfo_75291658d6c6602385a05c6d979c8710">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.2          
-[4] ggplot2.utils_0.3.0   ggplot2_3.4.2         tern_0.8.3.9003      
-[7] rtables_0.6.1.9006    magrittr_2.0.3        formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9002    EnvStats_2.7.0    
- [5] lattice_0.21-8     digest_0.6.31      evaluate_0.21      grid_4.3.1        
- [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.5    
-[13] Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9      survival_3.5-5    
-[17] gridExtra_2.3      GGally_2.1.2       purrr_1.0.1        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.2         rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0     
-[29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
-[33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
-[41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.10        xfun_0.39         
-[49] tidyselect_1.2.0   rstudioapi_0.14    knitr_1.43         farver_2.1.1      
-[53] htmltools_0.5.5    labeling_0.4.2     rmarkdown_2.22     compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG1B</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric variables. We start by selecting the biomarker evaluable population with the flag variable <code>BEP01FL</code> and then populating a new continuous biomarker variable, <code>BMRKR3</code>.</p>
-<div class="cell" data-hash="dg01b_cache/html/unnamed-chunk-1_57a8b09eaac3b03f1612c1e43f6c6bbb">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tibble)</span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tidyr)</span>
-<span id="cb1-6"></span>
-<span id="cb1-7">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">BMRKR3 =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rnorm</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>))</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>Below example shows histograms for the <code>BMRKR1</code> variable by treatment <code>ARM</code>. Including a statistics table in this graph works in the same way as we did above for DG1A.</p>
-<div class="cell" data-hash="dg01b_cache/html/unnamed-chunk-2_66d8707048c12d918afc228024f4f612">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_histogram</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density)), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_density</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(density))) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">facet_grid</span>(ARM <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> .)</span>
-<span id="cb2-5"></span>
-<span id="cb2-6">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg01b_cache/html/sessioninfo_c47b408ce119e38c6bb690b8ccd8b12d">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.2          
-[4] ggplot2.utils_0.3.0   ggplot2_3.4.2         tern_0.8.3.9003      
-[7] rtables_0.6.1.9006    magrittr_2.0.3        formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9002    EnvStats_2.7.0    
- [5] lattice_0.21-8     digest_0.6.31      evaluate_0.21      grid_4.3.1        
- [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.5    
-[13] Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9      survival_3.5-5    
-[17] GGally_2.1.2       purrr_1.0.1        fansi_1.0.4        scales_1.2.1      
-[21] codetools_0.2-19   Rdpack_2.4         cli_3.6.1          ggpp_0.5.2        
-[25] rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0      splines_4.3.1     
-[29] withr_2.5.0        yaml_2.3.7         tools_4.3.1        polynom_1.4-1     
-[33] checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0      broom_1.0.5       
-[37] vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2 
-[41] MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.3      
-[45] glue_1.6.2         Rcpp_1.0.10        xfun_0.39          tidyselect_1.2.0  
-[49] rstudioapi_0.14    knitr_1.43         farver_2.1.1       htmltools_0.5.5   
-[53] labeling_0.4.2     rmarkdown_2.22     compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG2</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>The graph below plots the distribution of a biomarker variable (on a continuous scale) as a boxplot by one or more categorical clinical variables with overlaid points.</p>
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the graph and will select the biomarker evaluable population with <code>BEP01FL</code>. The column <code>BMRKR1</code> contains the biomarker values on a continuous scale. We will use <code>STRATA2</code> and <code>ARM</code> as categorical clinical variables.</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-1_28016e9a06f295bdf5a382ce81bf9a27">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>Here below the code for a simple boxplot with the outliers displayed. Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(BMRKR1)</code>).</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-2_9eea5c89d237f2380015bcb219ecb3d7">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> STRATA2, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_boxplot</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">stat_boxplot</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">geom =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"errorbar"</span>)</span>
-<span id="cb2-4"></span>
-<span id="cb2-5">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>Now we overlay the original data points, and remove the display of the outliers to avoid duplicate points.</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-3_77220c85643133acabf647ad777b87dc">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> STRATA2, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_boxplot</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">outlier.shape =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">NA</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">stat_boxplot</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">geom =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"errorbar"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_point</span>(</span>
-<span id="cb3-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">position =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">position_jitter</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.2</span>),</span>
-<span id="cb3-6">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">alpha =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span></span>
-<span id="cb3-7">  )</span>
-<span id="cb3-8"></span>
-<span id="cb3-9">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can customize the labels of the axes.</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-4_47c75044c97fb25ebbad3af893298808">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb4-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_x_discrete</span>(</span>
-<span id="cb4-3">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">breaks =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"S1"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"S2"</span>),</span>
-<span id="cb4-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">labels =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Stratum 1"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Stratum 2"</span>),</span>
-<span id="cb4-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Strata"</span></span>
-<span id="cb4-6">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb4-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can add the group sizes as annotations.</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-5_bf52d4e5378b6fcb542a8aa8eb44cd8f">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">stat_n_text</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">text.box =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can also display the biomarker by a further categorical variable with the <code>facet_grid()</code> layer.</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-6_0a39a260e3ac37fe291203405a77e669">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb6-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> ARM)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>This example shows how to display the biomarker axis on a log scale.</p>
-<div class="cell" data-hash="dg02_cache/html/unnamed-chunk-7_101d7fe2b18148f183c3737b33cbbc67">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb7-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_y_log10</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg02_cache/html/sessioninfo_78f7c1a4b3ca1ae865be1e0a37f7ca3f">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
-[4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
-[7] formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9002   
- [5] EnvStats_2.7.0     lattice_0.21-8     digest_0.6.31      evaluate_0.21     
- [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.5     Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9     
-[17] survival_3.5-5     GGally_2.1.2       purrr_1.0.1        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.2         rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0     
-[29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
-[33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
-[41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.10        xfun_0.39         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.14    knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.5    labeling_0.4.2     rmarkdown_2.22    
-[57] compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG3</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.</p>
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the graph and will select on the biomarker evaluable population with <code>BEP01FL</code>. The column <code>BMRKR2</code> contains the biomarker values on a categorical scale. We will use <code>ARM</code> as categorical clinical variable.</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-1_d160215df4bec4146ce0d1daf5896501">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>Here below the code for a simple barplot showing the counts of the categories.</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-2_97fbb3610a296b1c70ef6a625b81f80e">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR2)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>()</span>
-<span id="cb2-3"></span>
-<span id="cb2-4">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can customize the labels of the axes.</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-3_91cbea2a0fed6a045dddc945cc720be7">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_x_discrete</span>(</span>
-<span id="cb3-3">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">breaks =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"LOW"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"MEDIUM"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"HIGH"</span>),</span>
-<span id="cb3-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">labels =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Low"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Medium"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"High"</span>),</span>
-<span id="cb3-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker"</span></span>
-<span id="cb3-6">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"count"</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can also add the absolute count above each of the columns.</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-4_b362797ca95375caaf001ebe68b7e03d">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb4-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_text</span>(</span>
-<span id="cb4-3">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"count"</span>,</span>
-<span id="cb4-4">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">label =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(count)),</span>
-<span id="cb4-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">vjust =</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>.<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span></span>
-<span id="cb4-6">  )</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>If instead of counts we want to display the percentages then the following options could be used:</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-5_133e4edcf869b11038bad4fb3077d9a6">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(</span>
-<span id="cb5-2">  adsl,</span>
-<span id="cb5-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(</span>
-<span id="cb5-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> BMRKR2,</span>
-<span id="cb5-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">prop.table</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(count)),</span>
-<span id="cb5-6">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">label =</span> scales<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">percent</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">prop.table</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(count)))</span>
-<span id="cb5-7">  )</span>
-<span id="cb5-8">) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>()</span>
-<span id="cb5-10"></span>
-<span id="cb5-11">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can customize the axes.</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-6_99022b07aaf771a0324f64e01771ebe1">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb6-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_y_continuous</span>(</span>
-<span id="cb6-3">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">labels =</span> scales<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">percent_format</span>(),</span>
-<span id="cb6-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Proportion (%)"</span></span>
-<span id="cb6-5">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb6-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_x_discrete</span>(</span>
-<span id="cb6-7">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">breaks =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"LOW"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"MEDIUM"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"HIGH"</span>),</span>
-<span id="cb6-8">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">labels =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Low"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Medium"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"High"</span>),</span>
-<span id="cb6-9">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker"</span></span>
-<span id="cb6-10">  )</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can add the percentages above each of the columns.</p>
-<div class="cell" data-hash="dg03_cache/html/unnamed-chunk-7_6c9c43579d4f037b44189c7f8d876c7f">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb7-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_text</span>(</span>
-<span id="cb7-3">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"count"</span>,</span>
-<span id="cb7-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">vjust =</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.5</span></span>
-<span id="cb7-5">  )</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg03_cache/html/sessioninfo_7a6dbda14da1aa6be58d40fb4c296745">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
-[4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
-[7] formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9002   
- [5] EnvStats_2.7.0     lattice_0.21-8     digest_0.6.31      evaluate_0.21     
- [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.5     Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9     
-[17] survival_3.5-5     GGally_2.1.2       purrr_1.0.1        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.2         rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0     
-[29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
-[33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
-[41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.10        xfun_0.39         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.14    knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.5    labeling_0.4.2     rmarkdown_2.22    
-[57] compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG3A</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.</p>
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the graph and will select on the biomarker evaluable population with <code>BEP01FL</code>. The column <code>BMRKR2</code> contains the biomarker values on a categorical scale. We will use <code>ARM</code> as categorical clinical variable.</p>
-<div class="cell" data-hash="dg03a_cache/html/unnamed-chunk-1_d6b95611faf07499a03251c6b1b0410a">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>Here below the code for a simple distribution of the category counts of a first biomarker variable (<code>BMRKR2</code>) split by a second categorical variable (<code>ARM</code>). We can use again the <code>facet_grid()</code> layer.</p>
-<div class="cell" data-hash="dg03a_cache/html/unnamed-chunk-2_e51e3f252111808e58d6e2f05f3ccc6e">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(BMRKR2)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> ARM)</span>
-<span id="cb2-4"></span>
-<span id="cb2-5">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We could instead display the columns next to each other within the same graph with the <code>fill</code> aesthetic and the <code>position_dodge()</code> option instead of using the <code>facet_grid()</code> layer.</p>
-<div class="cell" data-hash="dg03a_cache/html/unnamed-chunk-3_42346c0638ff1ea9bd05fb885eda42ff">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(ARM, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">fill =</span> BMRKR2)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">position =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">position_dodge</span>())</span>
-<span id="cb3-3"></span>
-<span id="cb3-4">graph</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can then again add the absolute count above each of the columns.</p>
-<div class="cell" data-hash="dg03a_cache/html/unnamed-chunk-4_db96d6ffea5f791efc913ccd2730eeda">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb4-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_text</span>(</span>
-<span id="cb4-3">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"count"</span>,</span>
-<span id="cb4-4">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">label =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">after_stat</span>(count)),</span>
-<span id="cb4-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">position =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">position_dodge</span>(<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.9</span>),</span>
-<span id="cb4-6">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">vjust =</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>.<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span></span>
-<span id="cb4-7">  )</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg03a_cache/html/sessioninfo_d6b4be12fb4eea26bf22a8906d27548b">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
-[4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
-[7] formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9002   
- [5] EnvStats_2.7.0     lattice_0.21-8     digest_0.6.31      evaluate_0.21     
- [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.5     Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9     
-[17] survival_3.5-5     GGally_2.1.2       purrr_1.0.1        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.2         rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0     
-[29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
-[33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
-[41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.10        xfun_0.39         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.14    knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.5    labeling_0.4.2     rmarkdown_2.22    
-[57] compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
-</item>
-<item>
-  <title>DG4</title>
-  <link>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</link>
-  <description><![CDATA[ <hr>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>The graph below plots two continuous (biomarker) variables against each other.</p>
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the graph and will select the biomarker evaluable population with <code>BEP01FL</code>. The columns <code>AGE</code> and <code>BMRKR1</code> contain the biomarker values of interest on a continuous scale.</p>
-<div class="cell" data-hash="dg04_cache/html/unnamed-chunk-1_8414b18d84b10d5d9cf453eea78e7a8e">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tern)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2.utils)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb1-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
-</details>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p>Here is an example first on the original scale. Note that you may run into warning messages after producing the graph if the continuous variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(AGE, BMRKR1)</code>).</p>
-<div class="cell" data-hash="dg04_cache/html/unnamed-chunk-2_730e91d16dfd7ef0e055b79ea4e90a42">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> AGE, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> BMRKR1)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_point</span>()</span>
-<span id="cb2-3"></span>
-<span id="cb2-4">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-5">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Age (Years)"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg04_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-<p>We can also plot it on a log scale.</p>
-<div class="cell" data-hash="dg04_cache/html/unnamed-chunk-3_4104378e83c3fa225c8128fe0da67ed0">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_y_log10</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Age (Years)"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
-</details><div class="cell-output-display">
-<p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg04_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1440"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="cell" data-hash="dg04_cache/html/sessioninfo_fad653c3f4d41152f9d1717c232ef2eb">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Etc/UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.2        
-[4] tern_0.8.3.9003       rtables_0.6.1.9006    magrittr_2.0.3       
-[7] formatters_0.5.0.9001
-
-loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9002   
- [5] EnvStats_2.7.0     lattice_0.21-8     digest_0.6.31      evaluate_0.21     
- [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.5     Matrix_1.5-4.1     backports_1.4.1    reshape_0.8.9     
-[17] survival_3.5-5     GGally_2.1.2       purrr_1.0.1        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.2         rlang_1.1.1        rbibutils_2.2.13   munsell_0.5.0     
-[29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
-[33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
-[41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.10        xfun_0.39         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.14    knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.5    labeling_0.4.2     rmarkdown_2.22    
-[57] compiler_4.3.1    </code></pre>
-</div>
-</div>
-<hr>
-<p>This catalog entry’s outputs were generated on version <code>0.2.0</code> and commit SHA <a href="https://github.com/insightsengineering/biomarker-catalog/tree/982f8b22729fe2d36ffb8608f847d47e0c1c8be8"><code>982f8b22729fe2d36ffb8608f847d47e0c1c8be8</code></a> of the Biomarker Analysis Catalog.</p>
-</div>
-</div>
-</div>
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
-  <category>DG</category>
-  <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</guid>
-  <pubDate>Mon, 26 Jun 2023 14:09:36 GMT</pubDate>
+  <pubDate>Mon, 26 Jun 2023 18:35:49 GMT</pubDate>
 </item>
 </channel>
 </rss>

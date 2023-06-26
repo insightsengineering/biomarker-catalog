@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/tables/index.html",
     "items": [
       "/tables/cpmt01.html",
       "/tables/CPMT2/cpmt02.html",
@@ -13,7 +13,12 @@
       "/tables/DT2/dt02.html",
       "/tables/DT2/dt02a.html",
       "/tables/TET1/tet01.html",
-      "/tables/TET1/tet01a.html",
+      "/tables/TET1/tet01a.html"
+    ]
+  },
+  {
+    "listing": "/graphs/index.html",
+    "items": [
       "/graphs/ag01.html",
       "/graphs/DG1/dg01.html",
       "/graphs/DG1/dg01a.html",

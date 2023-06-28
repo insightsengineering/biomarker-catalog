@@ -6,6 +6,15 @@ Date: 2023-06-25
 Authors@R: c(
     person("Daniel", "Sabanes Bove", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
     person("Paolo", "Moroni", , role = "aut"),
+    person("Simona", "Rossomanno", , role = "aut"),
+    person("Jeff", "Luong", , role = "aut"),
+    person("Namrata", "Bhatia", , role = "aut"),
+    person("Simona", "Rossomanno", , role = "aut"),
+    person("Haocheng", "Li", , role = "aut"),
+    person("Lyndsee", "Midori Zhang", , role = "aut"),
+    person("Emily", "de la Rua", , role = "aut"),
+    person("Stella", "Banjo", , role = "aut"),
+    person("Benoit", "Falquet", , role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
 Depends: R (>= 4.0)

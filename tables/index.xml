@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.3.433</generator>
-<lastBuildDate>Wed, 19 Jul 2023 17:57:56 GMT</lastBuildDate>
+<lastBuildDate>Sat, 22 Jul 2023 17:54:44 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
@@ -177,7 +177,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -187,7 +187,7 @@ loaded via a namespace (and not attached):
 [13] ggplot2_3.4.2     R6_2.5.1          generics_0.1.3    knitr_1.43       
 [17] forcats_1.0.0     rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1  
 [21] checkmate_2.2.0   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
-[25] scda_0.1.6.9008   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
+[25] scda_0.1.6.9009   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
 [29] stringi_1.7.12    broom_1.0.5       xfun_0.39         cli_3.6.1        
 [33] Rdpack_2.4        digest_0.6.33     grid_4.3.1        rstudioapi_0.15.0
 [37] lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21     glue_1.6.2       
@@ -207,7 +207,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -414,7 +414,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -424,7 +424,7 @@ loaded via a namespace (and not attached):
 [13] ggplot2_3.4.2     R6_2.5.1          generics_0.1.3    knitr_1.43       
 [17] forcats_1.0.0     rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1  
 [21] checkmate_2.2.0   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
-[25] scda_0.1.6.9008   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
+[25] scda_0.1.6.9009   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
 [29] stringi_1.7.12    broom_1.0.5       xfun_0.39         cli_3.6.1        
 [33] Rdpack_2.4        digest_0.6.33     grid_4.3.1        rstudioapi_0.15.0
 [37] lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21     glue_1.6.2       
@@ -444,7 +444,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -681,7 +681,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -691,7 +691,7 @@ loaded via a namespace (and not attached):
 [13] ggplot2_3.4.2     R6_2.5.1          generics_0.1.3    knitr_1.43       
 [17] forcats_1.0.0     rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1  
 [21] checkmate_2.2.0   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
-[25] scda_0.1.6.9008   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
+[25] scda_0.1.6.9009   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
 [29] stringi_1.7.12    broom_1.0.5       xfun_0.39         cli_3.6.1        
 [33] Rdpack_2.4        digest_0.6.33     grid_4.3.1        rstudioapi_0.15.0
 [37] lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21     glue_1.6.2       
@@ -711,7 +711,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -884,7 +884,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -894,7 +894,7 @@ loaded via a namespace (and not attached):
 [13] ggplot2_3.4.2     R6_2.5.1          generics_0.1.3    knitr_1.43       
 [17] forcats_1.0.0     rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1  
 [21] checkmate_2.2.0   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
-[25] scda_0.1.6.9008   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
+[25] scda_0.1.6.9009   pillar_1.9.0      rlang_1.1.1       utf8_1.2.3       
 [29] stringi_1.7.12    broom_1.0.5       xfun_0.39         cli_3.6.1        
 [33] Rdpack_2.4        digest_0.6.33     grid_4.3.1        rstudioapi_0.15.0
 [37] lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21     glue_1.6.2       
@@ -914,7 +914,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -1102,7 +1102,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -1111,7 +1111,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -1131,7 +1131,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1331,7 +1331,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -1340,7 +1340,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -1360,7 +1360,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1540,7 +1540,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -1549,7 +1549,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -1569,7 +1569,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1782,7 +1782,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -1791,7 +1791,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -1811,7 +1811,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -1978,7 +1978,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -1987,7 +1987,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -2007,7 +2007,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -2178,7 +2178,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -2187,7 +2187,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -2207,7 +2207,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2527,7 +2527,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -2536,7 +2536,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -2556,7 +2556,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2925,7 +2925,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.1.9014   
+[1] dplyr_1.1.2           tern_0.8.4.9005       rtables_0.6.2.9000   
 [4] magrittr_2.0.3        formatters_0.5.1.9000
 
 loaded via a namespace (and not attached):
@@ -2934,7 +2934,7 @@ loaded via a namespace (and not attached):
  [9] yaml_2.3.7        fastmap_1.1.1     lattice_0.21-8    ggplot2_3.4.2    
 [13] R6_2.5.1          generics_0.1.3    knitr_1.43        forcats_1.0.0    
 [17] rbibutils_2.2.13  htmlwidgets_1.6.2 backports_1.4.1   checkmate_2.2.0  
-[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9008   pillar_1.9.0     
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9009   pillar_1.9.0     
 [25] rlang_1.1.1       utf8_1.2.3        broom_1.0.5       xfun_0.39        
 [29] cli_3.6.1         Rdpack_2.4        digest_0.6.33     grid_4.3.1       
 [33] rstudioapi_0.15.0 lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21    
@@ -2954,7 +2954,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Wed, 19 Jul 2023 17:57:56 GMT</pubDate>
+  <pubDate>Sat, 22 Jul 2023 17:54:44 GMT</pubDate>
 </item>
 </channel>
 </rss>

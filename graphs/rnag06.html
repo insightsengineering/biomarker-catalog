@@ -1022,17 +1022,10 @@ cookieconsent.run({
 <span id="cb6-13"><a href="#cb6-13"></a>  )</span>
 <span id="cb6-14"><a href="#cb6-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-07-19 17:55:11.5469 pid:8274 token:[] teal.modules.hermes Initializing tm_g_barplot</code></pre>
+<pre><code>[INFO] 2023-07-22 17:52:09.8850 pid:8274 token:[] teal.modules.hermes Initializing tm_g_barplot</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
-<pre><code>Warning: Error in &lt;reactive&gt;: object 'slices_for_subset' not found
-
-Warning: Error in &lt;reactive&gt;: object 'slices_for_subset' not found
-
-Warning: Error in &lt;reactive&gt;: object 'slices_for_subset' not found</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
 <pre><code>Warning: 'experiments' dropped; see 'metadata'</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1042,7 +1035,7 @@ Warning: Error in &lt;reactive&gt;: object 'slices_for_subset' not found</code><
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
 <div class="cell" data-hash="rnag06_cache/html/sessioninfo_ae8e442c393f96e6d1df50ee34ff3bdf">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -1068,9 +1061,9 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.4.9014 teal_0.13.0.9009              
+ [1] teal.modules.hermes_0.1.4.9014 teal_0.13.0.9011              
  [3] teal.transform_0.3.0.9006      magrittr_2.0.3                
- [5] teal.slice_0.3.0.9013          teal.data_0.2.0.9003          
+ [5] teal.slice_0.3.0.9016          teal.data_0.2.0.9003          
  [7] shiny_1.7.4.1                  hermes_1.0.1.9017             
  [9] SummarizedExperiment_1.30.2    Biobase_2.60.0                
 [11] GenomicRanges_1.52.0           GenomeInfoDb_1.36.1           
@@ -1083,66 +1076,67 @@ loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          rstudioapi_0.15.0          
   [3] jsonlite_1.8.7              shape_1.4.6                
   [5] MultiAssayExperiment_1.26.0 farver_2.1.1               
-  [7] rmarkdown_2.23              GlobalOptions_0.1.2        
-  [9] zlibbioc_1.46.0             vctrs_0.6.3                
- [11] memoise_2.0.1               RCurl_1.98-1.12            
- [13] webshot_0.5.5               BiocBaseUtils_1.3.0        
- [15] htmltools_0.5.5             S4Arrays_1.0.4             
- [17] forcats_1.0.0               progress_1.2.2             
- [19] curl_5.0.1                  sass_0.4.6                 
- [21] bslib_0.5.0                 fontawesome_0.5.1          
- [23] htmlwidgets_1.6.2           testthat_3.1.10            
- [25] cachem_1.0.8                teal.widgets_0.3.0.9004    
- [27] mime_0.12                   lifecycle_1.0.3            
- [29] iterators_1.0.14            pkgconfig_2.0.3            
- [31] Matrix_1.6-0                R6_2.5.1                   
- [33] fastmap_1.1.1               GenomeInfoDbData_1.2.10    
- [35] rbibutils_2.2.13            clue_0.3-64                
- [37] digest_0.6.33               colorspace_2.1-0           
- [39] ps_1.7.5                    AnnotationDbi_1.62.2       
- [41] DESeq2_1.40.2               RSQLite_2.3.1              
- [43] filelock_1.0.2              labeling_0.4.2             
- [45] fansi_1.0.4                 httr_1.4.6                 
- [47] compiler_4.3.1              bit64_4.0.5                
- [49] withr_2.5.0                 doParallel_1.0.17          
- [51] backports_1.4.1             BiocParallel_1.34.2        
- [53] DBI_1.1.3                   logger_0.2.2               
- [55] biomaRt_2.56.1              rappdirs_0.3.3             
- [57] DelayedArray_0.26.6         rjson_0.2.21               
- [59] tools_4.3.1                 httpuv_1.6.11              
- [61] glue_1.6.2                  callr_3.7.3                
- [63] promises_1.2.0.1            grid_4.3.1                 
- [65] checkmate_2.2.0             cluster_2.1.4              
- [67] generics_0.1.3              gtable_0.3.3               
- [69] tidyr_1.3.0                 hms_1.1.3                  
- [71] xml2_1.3.5                  utf8_1.2.3                 
- [73] XVector_0.40.0              ggrepel_0.9.3              
- [75] foreach_1.5.2               pillar_1.9.0               
- [77] stringr_1.5.0               limma_3.56.2               
- [79] later_1.3.1                 circlize_0.4.15            
- [81] dplyr_1.1.2                 BiocFileCache_2.8.0        
- [83] lattice_0.21-8              bit_4.0.5                  
- [85] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
- [87] locfit_1.5-9.8              Biostrings_2.68.1          
- [89] knitr_1.43                  gridExtra_2.3              
- [91] teal.logger_0.1.1.9007      edgeR_3.42.4               
- [93] xfun_0.39                   brio_1.1.3                 
- [95] stringi_1.7.12              yaml_2.3.7                 
- [97] shinyWidgets_0.7.6          evaluate_0.21              
- [99] codetools_0.2-19            tibble_3.2.1               
-[101] cli_3.6.1                   xtable_1.8-4               
-[103] Rdpack_2.4                  processx_3.8.2             
-[105] jquerylib_0.1.4             munsell_0.5.0              
-[107] teal.reporter_0.1.1.9018    Rcpp_1.0.11                
-[109] dbplyr_2.3.3                png_0.1-8                  
-[111] XML_3.99-0.14               parallel_4.3.1             
-[113] ellipsis_0.3.2              assertthat_0.2.1           
-[115] blob_1.2.4                  prettyunits_1.1.1          
-[117] formatters_0.5.1.9000       bitops_1.0-7               
-[119] scales_1.2.1                purrr_1.0.1                
-[121] crayon_1.5.2                GetoptLong_1.0.5           
-[123] rlang_1.1.1                 KEGGREST_1.40.0            
-[125] shinyjs_2.1.0              </code></pre>
+  [7] rmarkdown_2.23              ragg_1.2.5                 
+  [9] GlobalOptions_0.1.2         zlibbioc_1.46.0            
+ [11] vctrs_0.6.3                 memoise_2.0.1              
+ [13] RCurl_1.98-1.12             webshot_0.5.5              
+ [15] BiocBaseUtils_1.3.2         htmltools_0.5.5            
+ [17] S4Arrays_1.0.4              forcats_1.0.0              
+ [19] progress_1.2.2              curl_5.0.1                 
+ [21] sass_0.4.7                  bslib_0.5.0                
+ [23] fontawesome_0.5.1           htmlwidgets_1.6.2          
+ [25] testthat_3.1.10             cachem_1.0.8               
+ [27] teal.widgets_0.3.0.9004     mime_0.12                  
+ [29] lifecycle_1.0.3             iterators_1.0.14           
+ [31] pkgconfig_2.0.3             Matrix_1.6-0               
+ [33] R6_2.5.1                    fastmap_1.1.1              
+ [35] GenomeInfoDbData_1.2.10     rbibutils_2.2.13           
+ [37] clue_0.3-64                 digest_0.6.33              
+ [39] colorspace_2.1-0            ps_1.7.5                   
+ [41] AnnotationDbi_1.62.2        DESeq2_1.40.2              
+ [43] textshaping_0.3.6           RSQLite_2.3.1              
+ [45] filelock_1.0.2              labeling_0.4.2             
+ [47] fansi_1.0.4                 httr_1.4.6                 
+ [49] compiler_4.3.1              bit64_4.0.5                
+ [51] withr_2.5.0                 doParallel_1.0.17          
+ [53] backports_1.4.1             BiocParallel_1.34.2        
+ [55] DBI_1.1.3                   logger_0.2.2               
+ [57] biomaRt_2.56.1              rappdirs_0.3.3             
+ [59] DelayedArray_0.26.6         rjson_0.2.21               
+ [61] tools_4.3.1                 httpuv_1.6.11              
+ [63] glue_1.6.2                  callr_3.7.3                
+ [65] promises_1.2.0.1            grid_4.3.1                 
+ [67] checkmate_2.2.0             cluster_2.1.4              
+ [69] generics_0.1.3              gtable_0.3.3               
+ [71] tidyr_1.3.0                 hms_1.1.3                  
+ [73] xml2_1.3.5                  utf8_1.2.3                 
+ [75] XVector_0.40.0              ggrepel_0.9.3              
+ [77] foreach_1.5.2               pillar_1.9.0               
+ [79] stringr_1.5.0               limma_3.56.2               
+ [81] later_1.3.1                 circlize_0.4.15            
+ [83] dplyr_1.1.2                 BiocFileCache_2.8.0        
+ [85] lattice_0.21-8              bit_4.0.5                  
+ [87] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
+ [89] locfit_1.5-9.8              Biostrings_2.68.1          
+ [91] knitr_1.43                  gridExtra_2.3              
+ [93] teal.logger_0.1.1.9007      edgeR_3.42.4               
+ [95] xfun_0.39                   brio_1.1.3                 
+ [97] stringi_1.7.12              yaml_2.3.7                 
+ [99] shinyWidgets_0.7.6          evaluate_0.21              
+[101] codetools_0.2-19            tibble_3.2.1               
+[103] cli_3.6.1                   systemfonts_1.0.4          
+[105] xtable_1.8-4                Rdpack_2.4                 
+[107] processx_3.8.2              jquerylib_0.1.4            
+[109] munsell_0.5.0               teal.reporter_0.1.1.9018   
+[111] Rcpp_1.0.11                 dbplyr_2.3.3               
+[113] png_0.1-8                   XML_3.99-0.14              
+[115] parallel_4.3.1              ellipsis_0.3.2             
+[117] assertthat_0.2.1            blob_1.2.4                 
+[119] prettyunits_1.1.1           formatters_0.5.1.9000      
+[121] bitops_1.0-7                scales_1.2.1               
+[123] purrr_1.0.1                 crayon_1.5.2               
+[125] GetoptLong_1.0.5            rlang_1.1.1                
+[127] KEGGREST_1.40.0             shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>
@@ -1563,122 +1557,122 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> RNAG6</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Barplot</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="co">---</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a></span>
-<span id="cb13-7"><a href="#cb13-7"></a>------------------------------------------------------------------------</span>
-<span id="cb13-8"><a href="#cb13-8"></a></span>
-<span id="cb13-9"><a href="#cb13-9"></a>::: panel-tabset</span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a></span>
-<span id="cb13-12"><a href="#cb13-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to produce a barplot of the dichotomized gene expression counts into two or three categories based on custom defined percentiles.</span>
-<span id="cb13-13"><a href="#cb13-13"></a></span>
-<span id="cb13-14"><a href="#cb13-14"></a>The <span class="in">`draw_barplot()`</span> function used below needs <span class="in">`HermesData`</span> as input.</span>
-<span id="cb13-15"><a href="#cb13-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
-<span id="cb13-16"><a href="#cb13-16"></a></span>
-<span id="cb13-17"><a href="#cb13-17"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb13-18"><a href="#cb13-18"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb13-19"><a href="#cb13-19"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
-<span id="cb13-20"><a href="#cb13-20"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb13-21"><a href="#cb13-21"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb13-22"><a href="#cb13-22"></a>  <span class="fu">normalize</span>()</span>
-<span id="cb13-23"><a href="#cb13-23"></a><span class="in">```</span></span>
-<span id="cb13-24"><a href="#cb13-24"></a></span>
-<span id="cb13-25"><a href="#cb13-25"></a><span class="fu">## Barplot for a Single Gene</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a></span>
-<span id="cb13-27"><a href="#cb13-27"></a>We can create a barplot for gene expression counts of single genes by specifying a gene in the <span class="in">`gene_spec`</span> (gene specification) as follows.</span>
-<span id="cb13-28"><a href="#cb13-28"></a>This function creates a scatterplot with the default percentiles (0.33, 0.67), to specify custom percentiles, please use the <span class="in">`percentile`</span> argument.</span>
-<span id="cb13-29"><a href="#cb13-29"></a></span>
-<span id="cb13-32"><a href="#cb13-32"></a><span class="in">```{r}</span></span>
-<span id="cb13-33"><a href="#cb13-33"></a><span class="fu">draw_barplot</span>(</span>
-<span id="cb13-34"><a href="#cb13-34"></a>  <span class="at">object =</span> object,</span>
-<span id="cb13-35"><a href="#cb13-35"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb13-36"><a href="#cb13-36"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>])</span>
-<span id="cb13-37"><a href="#cb13-37"></a>)</span>
-<span id="cb13-38"><a href="#cb13-38"></a><span class="in">```</span></span>
-<span id="cb13-39"><a href="#cb13-39"></a></span>
-<span id="cb13-40"><a href="#cb13-40"></a><span class="fu">## Barplot for Gene Signatures</span></span>
-<span id="cb13-41"><a href="#cb13-41"></a></span>
-<span id="cb13-42"><a href="#cb13-42"></a>We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.</span>
-<span id="cb13-43"><a href="#cb13-43"></a>Note that here we just want to use the first 3 genes from the <span class="in">`object`</span> without explicitly specifying the gene IDs, and this can be done through the <span class="in">`genes()`</span> function in <span class="in">`hermes`</span>.</span>
-<span id="cb13-44"><a href="#cb13-44"></a></span>
-<span id="cb13-47"><a href="#cb13-47"></a><span class="in">```{r}</span></span>
-<span id="cb13-48"><a href="#cb13-48"></a><span class="fu">draw_barplot</span>(</span>
-<span id="cb13-49"><a href="#cb13-49"></a>  <span class="at">object =</span> object,</span>
-<span id="cb13-50"><a href="#cb13-50"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb13-51"><a href="#cb13-51"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(</span>
-<span id="cb13-52"><a href="#cb13-52"></a>    <span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],</span>
-<span id="cb13-53"><a href="#cb13-53"></a>    <span class="at">fun =</span> colMeans,</span>
-<span id="cb13-54"><a href="#cb13-54"></a>    <span class="at">fun_name =</span> <span class="st">"Median"</span></span>
-<span id="cb13-55"><a href="#cb13-55"></a>  )</span>
-<span id="cb13-56"><a href="#cb13-56"></a>)</span>
-<span id="cb13-57"><a href="#cb13-57"></a><span class="in">```</span></span>
-<span id="cb13-58"><a href="#cb13-58"></a></span>
-<span id="cb13-59"><a href="#cb13-59"></a><span class="fu">## Additional Options for Customization</span></span>
-<span id="cb13-60"><a href="#cb13-60"></a></span>
-<span id="cb13-61"><a href="#cb13-61"></a>It is also possible to pass additional arguments to the function <span class="in">`draw_barplot()`</span>, ex.</span>
-<span id="cb13-62"><a href="#cb13-62"></a>if we wish to specify an optional faceting variable or optional fill variable.</span>
-<span id="cb13-63"><a href="#cb13-63"></a>See <span class="in">`?hermes::draw_barplot()`</span> for details about the additional parameters available.</span>
-<span id="cb13-64"><a href="#cb13-64"></a></span>
-<span id="cb13-67"><a href="#cb13-67"></a><span class="in">```{r}</span></span>
-<span id="cb13-68"><a href="#cb13-68"></a><span class="fu">draw_barplot</span>(</span>
-<span id="cb13-69"><a href="#cb13-69"></a>  <span class="at">object =</span> object,</span>
-<span id="cb13-70"><a href="#cb13-70"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb13-71"><a href="#cb13-71"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(</span>
-<span id="cb13-72"><a href="#cb13-72"></a>    <span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],</span>
-<span id="cb13-73"><a href="#cb13-73"></a>    <span class="at">fun =</span> colMeans,</span>
-<span id="cb13-74"><a href="#cb13-74"></a>    <span class="at">fun_name =</span> <span class="st">"Median"</span></span>
-<span id="cb13-75"><a href="#cb13-75"></a>  ),</span>
-<span id="cb13-76"><a href="#cb13-76"></a>  <span class="at">facet_var =</span> <span class="st">"SEX"</span>,</span>
-<span id="cb13-77"><a href="#cb13-77"></a>  <span class="at">fill_var =</span> <span class="st">"AGE18"</span></span>
-<span id="cb13-78"><a href="#cb13-78"></a>)</span>
-<span id="cb13-79"><a href="#cb13-79"></a><span class="in">```</span></span>
-<span id="cb13-80"><a href="#cb13-80"></a></span>
-<span id="cb13-83"><a href="#cb13-83"></a><span class="in">```{r}</span></span>
-<span id="cb13-84"><a href="#cb13-84"></a><span class="fu">draw_barplot</span>(</span>
-<span id="cb13-85"><a href="#cb13-85"></a>  <span class="at">object =</span> object,</span>
-<span id="cb13-86"><a href="#cb13-86"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb13-87"><a href="#cb13-87"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(</span>
-<span id="cb13-88"><a href="#cb13-88"></a>    <span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],</span>
-<span id="cb13-89"><a href="#cb13-89"></a>    <span class="at">fun =</span> colMeans,</span>
-<span id="cb13-90"><a href="#cb13-90"></a>    <span class="at">fun_name =</span> <span class="st">"Median"</span></span>
-<span id="cb13-91"><a href="#cb13-91"></a>  ),</span>
-<span id="cb13-92"><a href="#cb13-92"></a>  <span class="at">facet_var =</span> <span class="st">"SEX"</span>,</span>
-<span id="cb13-93"><a href="#cb13-93"></a>  <span class="at">fill_var =</span> <span class="st">"AGE18"</span>,</span>
-<span id="cb13-94"><a href="#cb13-94"></a>  <span class="at">percentiles =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>)</span>
-<span id="cb13-95"><a href="#cb13-95"></a>)</span>
-<span id="cb13-96"><a href="#cb13-96"></a><span class="in">```</span></span>
-<span id="cb13-97"><a href="#cb13-97"></a></span>
-<span id="cb13-98"><a href="#cb13-98"></a><span class="fu">## Teal Module for Barplot</span></span>
-<span id="cb13-99"><a href="#cb13-99"></a></span>
-<span id="cb13-100"><a href="#cb13-100"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb13-101"><a href="#cb13-101"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb13-102"><a href="#cb13-102"></a>We can then use the provided teal module <span class="in">`tm_g_barplot`</span> to have add a barplot module in our teal app.</span>
-<span id="cb13-103"><a href="#cb13-103"></a></span>
-<span id="cb13-104"><a href="#cb13-104"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
-<span id="cb13-105"><a href="#cb13-105"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
-<span id="cb13-106"><a href="#cb13-106"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb13-107"><a href="#cb13-107"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb13-108"><a href="#cb13-108"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb13-109"><a href="#cb13-109"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb13-110"><a href="#cb13-110"></a></span>
-<span id="cb13-111"><a href="#cb13-111"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb13-112"><a href="#cb13-112"></a>  <span class="at">data =</span> data,</span>
-<span id="cb13-113"><a href="#cb13-113"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb13-114"><a href="#cb13-114"></a>    <span class="fu">tm_g_barplot</span>(</span>
-<span id="cb13-115"><a href="#cb13-115"></a>      <span class="at">label =</span> <span class="st">"barplot"</span>,</span>
-<span id="cb13-116"><a href="#cb13-116"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb13-117"><a href="#cb13-117"></a>    )</span>
-<span id="cb13-118"><a href="#cb13-118"></a>  )</span>
-<span id="cb13-119"><a href="#cb13-119"></a>)</span>
-<span id="cb13-120"><a href="#cb13-120"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb13-121"><a href="#cb13-121"></a><span class="in">```</span></span>
-<span id="cb13-122"><a href="#cb13-122"></a></span>
-<span id="cb13-123"><a href="#cb13-123"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb13-124"><a href="#cb13-124"></a>:::</span>
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> RNAG6</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Barplot</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">---</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a>------------------------------------------------------------------------</span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a>::: panel-tabset</span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a></span>
+<span id="cb12-12"><a href="#cb12-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to produce a barplot of the dichotomized gene expression counts into two or three categories based on custom defined percentiles.</span>
+<span id="cb12-13"><a href="#cb12-13"></a></span>
+<span id="cb12-14"><a href="#cb12-14"></a>The <span class="in">`draw_barplot()`</span> function used below needs <span class="in">`HermesData`</span> as input.</span>
+<span id="cb12-15"><a href="#cb12-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
+<span id="cb12-16"><a href="#cb12-16"></a></span>
+<span id="cb12-17"><a href="#cb12-17"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb12-19"><a href="#cb12-19"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a>  <span class="fu">normalize</span>()</span>
+<span id="cb12-23"><a href="#cb12-23"></a><span class="in">```</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a></span>
+<span id="cb12-25"><a href="#cb12-25"></a><span class="fu">## Barplot for a Single Gene</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a></span>
+<span id="cb12-27"><a href="#cb12-27"></a>We can create a barplot for gene expression counts of single genes by specifying a gene in the <span class="in">`gene_spec`</span> (gene specification) as follows.</span>
+<span id="cb12-28"><a href="#cb12-28"></a>This function creates a scatterplot with the default percentiles (0.33, 0.67), to specify custom percentiles, please use the <span class="in">`percentile`</span> argument.</span>
+<span id="cb12-29"><a href="#cb12-29"></a></span>
+<span id="cb12-32"><a href="#cb12-32"></a><span class="in">```{r}</span></span>
+<span id="cb12-33"><a href="#cb12-33"></a><span class="fu">draw_barplot</span>(</span>
+<span id="cb12-34"><a href="#cb12-34"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-35"><a href="#cb12-35"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-36"><a href="#cb12-36"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>])</span>
+<span id="cb12-37"><a href="#cb12-37"></a>)</span>
+<span id="cb12-38"><a href="#cb12-38"></a><span class="in">```</span></span>
+<span id="cb12-39"><a href="#cb12-39"></a></span>
+<span id="cb12-40"><a href="#cb12-40"></a><span class="fu">## Barplot for Gene Signatures</span></span>
+<span id="cb12-41"><a href="#cb12-41"></a></span>
+<span id="cb12-42"><a href="#cb12-42"></a>We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.</span>
+<span id="cb12-43"><a href="#cb12-43"></a>Note that here we just want to use the first 3 genes from the <span class="in">`object`</span> without explicitly specifying the gene IDs, and this can be done through the <span class="in">`genes()`</span> function in <span class="in">`hermes`</span>.</span>
+<span id="cb12-44"><a href="#cb12-44"></a></span>
+<span id="cb12-47"><a href="#cb12-47"></a><span class="in">```{r}</span></span>
+<span id="cb12-48"><a href="#cb12-48"></a><span class="fu">draw_barplot</span>(</span>
+<span id="cb12-49"><a href="#cb12-49"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-50"><a href="#cb12-50"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-51"><a href="#cb12-51"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(</span>
+<span id="cb12-52"><a href="#cb12-52"></a>    <span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],</span>
+<span id="cb12-53"><a href="#cb12-53"></a>    <span class="at">fun =</span> colMeans,</span>
+<span id="cb12-54"><a href="#cb12-54"></a>    <span class="at">fun_name =</span> <span class="st">"Median"</span></span>
+<span id="cb12-55"><a href="#cb12-55"></a>  )</span>
+<span id="cb12-56"><a href="#cb12-56"></a>)</span>
+<span id="cb12-57"><a href="#cb12-57"></a><span class="in">```</span></span>
+<span id="cb12-58"><a href="#cb12-58"></a></span>
+<span id="cb12-59"><a href="#cb12-59"></a><span class="fu">## Additional Options for Customization</span></span>
+<span id="cb12-60"><a href="#cb12-60"></a></span>
+<span id="cb12-61"><a href="#cb12-61"></a>It is also possible to pass additional arguments to the function <span class="in">`draw_barplot()`</span>, ex.</span>
+<span id="cb12-62"><a href="#cb12-62"></a>if we wish to specify an optional faceting variable or optional fill variable.</span>
+<span id="cb12-63"><a href="#cb12-63"></a>See <span class="in">`?hermes::draw_barplot()`</span> for details about the additional parameters available.</span>
+<span id="cb12-64"><a href="#cb12-64"></a></span>
+<span id="cb12-67"><a href="#cb12-67"></a><span class="in">```{r}</span></span>
+<span id="cb12-68"><a href="#cb12-68"></a><span class="fu">draw_barplot</span>(</span>
+<span id="cb12-69"><a href="#cb12-69"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-70"><a href="#cb12-70"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-71"><a href="#cb12-71"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(</span>
+<span id="cb12-72"><a href="#cb12-72"></a>    <span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],</span>
+<span id="cb12-73"><a href="#cb12-73"></a>    <span class="at">fun =</span> colMeans,</span>
+<span id="cb12-74"><a href="#cb12-74"></a>    <span class="at">fun_name =</span> <span class="st">"Median"</span></span>
+<span id="cb12-75"><a href="#cb12-75"></a>  ),</span>
+<span id="cb12-76"><a href="#cb12-76"></a>  <span class="at">facet_var =</span> <span class="st">"SEX"</span>,</span>
+<span id="cb12-77"><a href="#cb12-77"></a>  <span class="at">fill_var =</span> <span class="st">"AGE18"</span></span>
+<span id="cb12-78"><a href="#cb12-78"></a>)</span>
+<span id="cb12-79"><a href="#cb12-79"></a><span class="in">```</span></span>
+<span id="cb12-80"><a href="#cb12-80"></a></span>
+<span id="cb12-83"><a href="#cb12-83"></a><span class="in">```{r}</span></span>
+<span id="cb12-84"><a href="#cb12-84"></a><span class="fu">draw_barplot</span>(</span>
+<span id="cb12-85"><a href="#cb12-85"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-86"><a href="#cb12-86"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-87"><a href="#cb12-87"></a>  <span class="at">x_spec =</span> <span class="fu">gene_spec</span>(</span>
+<span id="cb12-88"><a href="#cb12-88"></a>    <span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],</span>
+<span id="cb12-89"><a href="#cb12-89"></a>    <span class="at">fun =</span> colMeans,</span>
+<span id="cb12-90"><a href="#cb12-90"></a>    <span class="at">fun_name =</span> <span class="st">"Median"</span></span>
+<span id="cb12-91"><a href="#cb12-91"></a>  ),</span>
+<span id="cb12-92"><a href="#cb12-92"></a>  <span class="at">facet_var =</span> <span class="st">"SEX"</span>,</span>
+<span id="cb12-93"><a href="#cb12-93"></a>  <span class="at">fill_var =</span> <span class="st">"AGE18"</span>,</span>
+<span id="cb12-94"><a href="#cb12-94"></a>  <span class="at">percentiles =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>)</span>
+<span id="cb12-95"><a href="#cb12-95"></a>)</span>
+<span id="cb12-96"><a href="#cb12-96"></a><span class="in">```</span></span>
+<span id="cb12-97"><a href="#cb12-97"></a></span>
+<span id="cb12-98"><a href="#cb12-98"></a><span class="fu">## Teal Module for Barplot</span></span>
+<span id="cb12-99"><a href="#cb12-99"></a></span>
+<span id="cb12-100"><a href="#cb12-100"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb12-101"><a href="#cb12-101"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb12-102"><a href="#cb12-102"></a>We can then use the provided teal module <span class="in">`tm_g_barplot`</span> to have add a barplot module in our teal app.</span>
+<span id="cb12-103"><a href="#cb12-103"></a></span>
+<span id="cb12-104"><a href="#cb12-104"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
+<span id="cb12-105"><a href="#cb12-105"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
+<span id="cb12-106"><a href="#cb12-106"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb12-107"><a href="#cb12-107"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb12-108"><a href="#cb12-108"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb12-109"><a href="#cb12-109"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
+<span id="cb12-110"><a href="#cb12-110"></a></span>
+<span id="cb12-111"><a href="#cb12-111"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb12-112"><a href="#cb12-112"></a>  <span class="at">data =</span> data,</span>
+<span id="cb12-113"><a href="#cb12-113"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb12-114"><a href="#cb12-114"></a>    <span class="fu">tm_g_barplot</span>(</span>
+<span id="cb12-115"><a href="#cb12-115"></a>      <span class="at">label =</span> <span class="st">"barplot"</span>,</span>
+<span id="cb12-116"><a href="#cb12-116"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb12-117"><a href="#cb12-117"></a>    )</span>
+<span id="cb12-118"><a href="#cb12-118"></a>  )</span>
+<span id="cb12-119"><a href="#cb12-119"></a>)</span>
+<span id="cb12-120"><a href="#cb12-120"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb12-121"><a href="#cb12-121"></a><span class="in">```</span></span>
+<span id="cb12-122"><a href="#cb12-122"></a></span>
+<span id="cb12-123"><a href="#cb12-123"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb12-124"><a href="#cb12-124"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

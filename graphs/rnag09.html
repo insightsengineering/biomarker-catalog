@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Biomarker Analysis Catalog - RNAG9</title>
 <style>
@@ -1018,7 +1018,7 @@ cookieconsent.run({
 <span id="cb5-24"><a href="#cb5-24"></a>  )</span>
 <span id="cb5-25"><a href="#cb5-25"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-08-05 17:45:57.9428 pid:7058 token:[] teal.modules.hermes Initializing tm_g_km</code></pre>
+<pre><code>[INFO] 2023-08-09 17:54:02.9090 pid:6983 token:[] teal.modules.hermes Initializing tm_g_km</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
@@ -1057,18 +1057,18 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.4.9017 teal_0.13.0.9024              
- [3] teal.transform_0.3.0.9009      teal.slice_0.3.0.9028         
+ [1] teal.modules.hermes_0.1.4.9017 teal_0.13.0.9025              
+ [3] teal.transform_0.3.0.9009      teal.slice_0.3.0.9032         
  [5] teal.data_0.2.0.9007           shiny_1.7.4.1                 
  [7] hermes_1.0.1.9017              SummarizedExperiment_1.30.2   
  [9] Biobase_2.60.0                 GenomicRanges_1.52.0          
 [11] GenomeInfoDb_1.36.1            IRanges_2.34.1                
 [13] S4Vectors_0.38.1               BiocGenerics_0.46.0           
-[15] MatrixGenerics_1.12.2          matrixStats_1.0.0             
+[15] MatrixGenerics_1.12.3          matrixStats_1.0.0             
 [17] ggfortify_0.4.16               ggplot2_3.4.2                 
 [19] dplyr_1.1.2                    tern_0.8.5.9006               
 [21] rtables_0.6.2.9001             magrittr_2.0.3                
-[23] formatters_0.5.1.9001         
+[23] formatters_0.5.1.9002         
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          rstudioapi_0.15.0          
@@ -1080,60 +1080,60 @@ loaded via a namespace (and not attached):
  [13] vctrs_0.6.3                 memoise_2.0.1              
  [15] RCurl_1.98-1.12             webshot_0.5.5              
  [17] BiocBaseUtils_1.3.2         htmltools_0.5.5            
- [19] S4Arrays_1.0.4              forcats_1.0.0              
+ [19] S4Arrays_1.0.5              forcats_1.0.0              
  [21] progress_1.2.2              curl_5.0.1                 
  [23] broom_1.0.5                 sass_0.4.7                 
  [25] bslib_0.5.0                 fontawesome_0.5.1          
  [27] htmlwidgets_1.6.2           cachem_1.0.8               
- [29] teal.widgets_0.3.0.9007     mime_0.12                  
+ [29] teal.widgets_0.3.0.9009     mime_0.12                  
  [31] lifecycle_1.0.3             iterators_1.0.14           
  [33] pkgconfig_2.0.3             Matrix_1.6-0               
  [35] R6_2.5.1                    fastmap_1.1.1              
- [37] GenomeInfoDbData_1.2.10     rbibutils_2.2.13           
+ [37] GenomeInfoDbData_1.2.10     rbibutils_2.2.14           
  [39] clue_0.3-64                 digest_0.6.33              
  [41] colorspace_2.1-0            shinycssloaders_1.0.0      
  [43] ps_1.7.5                    AnnotationDbi_1.62.2       
  [45] textshaping_0.3.6           RSQLite_2.3.1              
  [47] filelock_1.0.2              labeling_0.4.2             
  [49] fansi_1.0.4                 httr_1.4.6                 
- [51] compiler_4.3.1              bit64_4.0.5                
- [53] withr_2.5.0                 doParallel_1.0.17          
- [55] backports_1.4.1             DBI_1.1.3                  
- [57] logger_0.2.2                biomaRt_2.56.1             
- [59] rappdirs_0.3.3              DelayedArray_0.26.6        
- [61] rjson_0.2.21                tools_4.3.1                
- [63] httpuv_1.6.11               glue_1.6.2                 
- [65] callr_3.7.3                 promises_1.2.0.1           
- [67] grid_4.3.1                  checkmate_2.2.0            
- [69] cluster_2.1.4               generics_0.1.3             
- [71] gtable_0.3.3                tidyr_1.3.0                
- [73] hms_1.1.3                   xml2_1.3.5                 
- [75] utf8_1.2.3                  XVector_0.40.0             
- [77] ggrepel_0.9.3               foreach_1.5.2              
- [79] pillar_1.9.0                stringr_1.5.0              
- [81] later_1.3.1                 circlize_0.4.15            
- [83] splines_4.3.1               BiocFileCache_2.8.0        
- [85] lattice_0.21-8              survival_3.5-5             
- [87] bit_4.0.5                   tidyselect_1.2.0           
- [89] ComplexHeatmap_2.16.0       Biostrings_2.68.1          
- [91] knitr_1.43                  gridExtra_2.3              
- [93] teal.logger_0.1.1.9009      xfun_0.39                  
- [95] stringi_1.7.12              yaml_2.3.7                 
- [97] shinyWidgets_0.7.6          evaluate_0.21              
- [99] codetools_0.2-19            tibble_3.2.1               
-[101] cli_3.6.1                   systemfonts_1.0.4          
-[103] xtable_1.8-4                Rdpack_2.4                 
-[105] processx_3.8.2              jquerylib_0.1.4            
-[107] munsell_0.5.0               teal.reporter_0.1.1.9020   
-[109] Rcpp_1.0.11                 dbplyr_2.3.3               
-[111] png_0.1-8                   XML_3.99-0.14              
-[113] parallel_4.3.1              ellipsis_0.3.2             
-[115] assertthat_0.2.1            blob_1.2.4                 
-[117] prettyunits_1.1.1           bitops_1.0-7               
-[119] scales_1.2.1                purrr_1.0.1                
-[121] crayon_1.5.2                GetoptLong_1.0.5           
-[123] rlang_1.1.1                 KEGGREST_1.40.0            
-[125] shinyjs_2.1.0              </code></pre>
+ [51] abind_1.4-5                 compiler_4.3.1             
+ [53] bit64_4.0.5                 withr_2.5.0                
+ [55] doParallel_1.0.17           backports_1.4.1            
+ [57] DBI_1.1.3                   logger_0.2.2               
+ [59] biomaRt_2.56.1              rappdirs_0.3.3             
+ [61] DelayedArray_0.26.7         rjson_0.2.21               
+ [63] tools_4.3.1                 httpuv_1.6.11              
+ [65] glue_1.6.2                  callr_3.7.3                
+ [67] promises_1.2.0.1            grid_4.3.1                 
+ [69] checkmate_2.2.0             cluster_2.1.4              
+ [71] generics_0.1.3              gtable_0.3.3               
+ [73] tidyr_1.3.0                 hms_1.1.3                  
+ [75] xml2_1.3.5                  utf8_1.2.3                 
+ [77] XVector_0.40.0              ggrepel_0.9.3              
+ [79] foreach_1.5.2               pillar_1.9.0               
+ [81] stringr_1.5.0               later_1.3.1                
+ [83] circlize_0.4.15             splines_4.3.1              
+ [85] BiocFileCache_2.8.0         lattice_0.21-8             
+ [87] survival_3.5-5              bit_4.0.5                  
+ [89] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
+ [91] Biostrings_2.68.1           knitr_1.43                 
+ [93] gridExtra_2.3               teal.logger_0.1.1.9009     
+ [95] xfun_0.39                   stringi_1.7.12             
+ [97] yaml_2.3.7                  shinyWidgets_0.7.6         
+ [99] evaluate_0.21               codetools_0.2-19           
+[101] tibble_3.2.1                cli_3.6.1                  
+[103] systemfonts_1.0.4           xtable_1.8-4               
+[105] Rdpack_2.4                  processx_3.8.2             
+[107] jquerylib_0.1.4             munsell_0.5.0              
+[109] teal.reporter_0.1.1.9020    Rcpp_1.0.11                
+[111] dbplyr_2.3.3                png_0.1-8                  
+[113] XML_3.99-0.14               parallel_4.3.1             
+[115] ellipsis_0.3.2              assertthat_0.2.1           
+[117] blob_1.2.4                  prettyunits_1.1.1          
+[119] bitops_1.0-7                scales_1.2.1               
+[121] purrr_1.0.1                 crayon_1.5.2               
+[123] GetoptLong_1.0.5            rlang_1.1.1                
+[125] KEGGREST_1.40.0             shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>

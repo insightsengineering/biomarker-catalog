@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 21 Sep 2023 19:26:30 GMT</lastBuildDate>
+<lastBuildDate>Sat, 23 Sep 2023 17:32:41 GMT</lastBuildDate>
 <item>
   <title>AG1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</link>
@@ -425,7 +425,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -447,25 +447,25 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] ggplot2.utils_0.3.0   ggplot2_3.4.3         dplyr_1.1.2          
+[1] ggplot2.utils_0.3.0   ggplot2_3.4.3         dplyr_1.1.3          
 [4] tidyr_1.3.0           tern_0.9.0.9006       rtables_0.6.3.9001   
 [7] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.0    
+ [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.1    
  [5] lattice_0.21-8     digest_0.6.33      evaluate_0.21      RColorBrewer_1.1-3
- [9] fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.7     Matrix_1.6-1      
+ [9] fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.7     Matrix_1.6-1.1    
 [13] backports_1.4.1    reshape_0.8.9      survival_3.5-7     GGally_2.1.2      
 [17] purrr_1.0.2        fansi_1.0.4        scales_1.2.1       codetools_0.2-19  
-[21] Rdpack_2.4         cli_3.6.1          ggpp_0.5.4         rlang_1.1.1       
-[25] rbibutils_2.2.14   munsell_0.5.0      splines_4.3.1      withr_2.5.0       
+[21] Rdpack_2.5         cli_3.6.1          ggpp_0.5.4         rlang_1.1.1       
+[25] rbibutils_2.2.15   munsell_0.5.0      splines_4.3.1      withr_2.5.0       
 [29] yaml_2.3.7         tools_4.3.1        polynom_1.4-1      checkmate_2.2.0   
 [33] colorspace_2.1-0   forcats_1.0.0      broom_1.0.5        vctrs_0.6.3       
 [37] R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2  MASS_7.3-60       
-[41] pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.3       glue_1.6.2        
+[41] pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.4       glue_1.6.2        
 [45] Rcpp_1.0.11        xfun_0.40          tibble_3.2.1       tidyselect_1.2.0  
-[49] rstudioapi_0.15.0  knitr_1.43         farver_2.1.1       htmltools_0.5.6   
-[53] labeling_0.4.2     rmarkdown_2.24     compiler_4.3.1    </code></pre>
+[49] rstudioapi_0.15.0  knitr_1.44         farver_2.1.1       htmltools_0.5.6   
+[53] labeling_0.4.3     rmarkdown_2.25     compiler_4.3.1    </code></pre>
 </div>
 </div>
 </div>
@@ -479,7 +479,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>AG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG1</title>
@@ -692,7 +692,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -713,25 +713,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.2          
+[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.3          
 [4] ggplot2.utils_0.3.0   ggplot2_3.4.3         tern_0.9.0.9006      
 [7] rtables_0.6.3.9001    magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.0    
+ [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.1    
  [5] lattice_0.21-8     digest_0.6.33      evaluate_0.21      grid_4.3.1        
  [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.7    
-[13] Matrix_1.6-1       backports_1.4.1    reshape_0.8.9      survival_3.5-7    
+[13] Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9      survival_3.5-7    
 [17] gridExtra_2.3      GGally_2.1.2       purrr_1.0.2        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0     
+[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.5         cli_3.6.1         
+[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
 [37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
-[49] tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.43         farver_2.1.1      
-[53] htmltools_0.5.6    labeling_0.4.2     rmarkdown_2.24     compiler_4.3.1    </code></pre>
+[45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
+[49] tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44         farver_2.1.1      
+[53] htmltools_0.5.6    labeling_0.4.3     rmarkdown_2.25     compiler_4.3.1    </code></pre>
 </div>
 </div>
 </div>
@@ -745,7 +745,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG1A</title>
@@ -1008,7 +1008,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1029,25 +1029,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.2          
+[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.3          
 [4] ggplot2.utils_0.3.0   ggplot2_3.4.3         tern_0.9.0.9006      
 [7] rtables_0.6.3.9001    magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.0    
+ [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.1    
  [5] lattice_0.21-8     digest_0.6.33      evaluate_0.21      grid_4.3.1        
  [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.7    
-[13] Matrix_1.6-1       backports_1.4.1    reshape_0.8.9      survival_3.5-7    
+[13] Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9      survival_3.5-7    
 [17] gridExtra_2.3      GGally_2.1.2       purrr_1.0.2        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0     
+[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.5         cli_3.6.1         
+[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
 [37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
-[49] tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.43         farver_2.1.1      
-[53] htmltools_0.5.6    labeling_0.4.2     rmarkdown_2.24     compiler_4.3.1    </code></pre>
+[45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
+[49] tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44         farver_2.1.1      
+[53] htmltools_0.5.6    labeling_0.4.3     rmarkdown_2.25     compiler_4.3.1    </code></pre>
 </div>
 </div>
 </div>
@@ -1061,7 +1061,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG1B</title>
@@ -1198,7 +1198,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1219,25 +1219,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.2          
+[1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.3          
 [4] ggplot2.utils_0.3.0   ggplot2_3.4.3         tern_0.9.0.9006      
 [7] rtables_0.6.3.9001    magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.0    
+ [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9012    EnvStats_2.8.1    
  [5] lattice_0.21-8     digest_0.6.33      evaluate_0.21      grid_4.3.1        
  [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8         jsonlite_1.8.7    
-[13] Matrix_1.6-1       backports_1.4.1    reshape_0.8.9      survival_3.5-7    
+[13] Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9      survival_3.5-7    
 [17] GGally_2.1.2       purrr_1.0.2        fansi_1.0.4        scales_1.2.1      
-[21] codetools_0.2-19   Rdpack_2.4         cli_3.6.1          ggpp_0.5.4        
-[25] rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0      splines_4.3.1     
+[21] codetools_0.2-19   Rdpack_2.5         cli_3.6.1          ggpp_0.5.4        
+[25] rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0      splines_4.3.1     
 [29] withr_2.5.0        yaml_2.3.7         tools_4.3.1        polynom_1.4-1     
 [33] checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0      broom_1.0.5       
 [37] vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2 
-[41] MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.3      
+[41] MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.4      
 [45] glue_1.6.2         Rcpp_1.0.11        xfun_0.40          tidyselect_1.2.0  
-[49] rstudioapi_0.15.0  knitr_1.43         farver_2.1.1       htmltools_0.5.6   
-[53] labeling_0.4.2     rmarkdown_2.24     compiler_4.3.1    </code></pre>
+[49] rstudioapi_0.15.0  knitr_1.44         farver_2.1.1       htmltools_0.5.6   
+[53] labeling_0.4.3     rmarkdown_2.25     compiler_4.3.1    </code></pre>
 </div>
 </div>
 </div>
@@ -1251,7 +1251,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG2</title>
@@ -1501,7 +1501,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1522,25 +1522,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.3        
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
 [4] tern_0.9.0.9006       rtables_0.6.3.9001    magrittr_2.0.3       
 [7] formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
  [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9012   
- [5] EnvStats_2.8.0     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
+ [5] EnvStats_2.8.1     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.7     Matrix_1.6-1       backports_1.4.1    reshape_0.8.9     
+[13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0     
+[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.5         cli_3.6.1         
+[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
 [37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.2     rmarkdown_2.24    
+[45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
+[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
+[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.3     rmarkdown_2.25    
 [57] compiler_4.3.1    </code></pre>
 </div>
 </div>
@@ -1555,7 +1555,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG3</title>
@@ -1849,7 +1849,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1870,25 +1870,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.3        
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
 [4] tern_0.9.0.9006       rtables_0.6.3.9001    magrittr_2.0.3       
 [7] formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
  [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9012   
- [5] EnvStats_2.8.0     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
+ [5] EnvStats_2.8.1     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.7     Matrix_1.6-1       backports_1.4.1    reshape_0.8.9     
+[13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0     
+[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.5         cli_3.6.1         
+[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
 [37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.2     rmarkdown_2.24    
+[45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
+[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
+[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.3     rmarkdown_2.25    
 [57] compiler_4.3.1    </code></pre>
 </div>
 </div>
@@ -1903,7 +1903,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG3A</title>
@@ -2060,7 +2060,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -2081,25 +2081,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.3        
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
 [4] tern_0.9.0.9006       rtables_0.6.3.9001    magrittr_2.0.3       
 [7] formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
  [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9012   
- [5] EnvStats_2.8.0     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
+ [5] EnvStats_2.8.1     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.7     Matrix_1.6-1       backports_1.4.1    reshape_0.8.9     
+[13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0     
+[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.5         cli_3.6.1         
+[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
 [37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.2     rmarkdown_2.24    
+[45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
+[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
+[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.3     rmarkdown_2.25    
 [57] compiler_4.3.1    </code></pre>
 </div>
 </div>
@@ -2114,7 +2114,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>DG4</title>
@@ -2241,7 +2241,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -2262,25 +2262,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           ggplot2.utils_0.3.0   ggplot2_3.4.3        
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
 [4] tern_0.9.0.9006       rtables_0.6.3.9001    magrittr_2.0.3       
 [7] formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
  [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9012   
- [5] EnvStats_2.8.0     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
+ [5] EnvStats_2.8.1     lattice_0.21-8     digest_0.6.33      evaluate_0.21     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.8        
-[13] jsonlite_1.8.7     Matrix_1.6-1       backports_1.4.1    reshape_0.8.9     
+[13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.4       
-[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.4         cli_3.6.1         
-[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.14   munsell_0.5.0     
+[21] scales_1.2.1       codetools_0.2-19   Rdpack_2.5         cli_3.6.1         
+[25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.0        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
 [37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
-[45] gtable_0.3.3       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
-[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.43        
-[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.2     rmarkdown_2.24    
+[45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
+[49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
+[53] farver_2.1.1       htmltools_0.5.6    labeling_0.4.3     rmarkdown_2.25    
 [57] compiler_4.3.1    </code></pre>
 </div>
 </div>
@@ -2295,7 +2295,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG1</title>
@@ -2434,7 +2434,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -2456,26 +2456,26 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        rstudioapi_0.15.0    lifecycle_1.0.3     
 [37] vctrs_0.6.3          evaluate_0.21        glue_1.6.2          
 [40] farver_2.1.1         nestcolor_0.1.2.9006 codetools_0.2-19    
 [43] survival_3.5-7       fansi_1.0.4          colorspace_2.1-0    
-[46] rmarkdown_2.24       purrr_1.0.2          tools_4.3.1         
+[46] rmarkdown_2.25       purrr_1.0.2          tools_4.3.1         
 [49] pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -2490,7 +2490,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG1A</title>
@@ -2624,7 +2624,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -2646,26 +2646,26 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        rstudioapi_0.15.0    lifecycle_1.0.3     
 [37] vctrs_0.6.3          evaluate_0.21        glue_1.6.2          
 [40] farver_2.1.1         nestcolor_0.1.2.9006 codetools_0.2-19    
 [43] survival_3.5-7       fansi_1.0.4          colorspace_2.1-0    
-[46] rmarkdown_2.24       purrr_1.0.2          tools_4.3.1         
+[46] rmarkdown_2.25       purrr_1.0.2          tools_4.3.1         
 [49] pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -2680,7 +2680,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01a.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG1B</title>
@@ -2946,7 +2946,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -2968,25 +2968,25 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     tidyr_1.3.0         
  [7] splines_4.3.1        scales_1.2.1         yaml_2.3.7          
 [10] fastmap_1.1.1        lattice_0.21-8       ggplot2_3.4.3       
-[13] R6_2.5.1             labeling_0.4.2       generics_0.1.3      
-[16] knitr_1.43           forcats_1.0.0        rbibutils_2.2.14    
+[13] R6_2.5.1             labeling_0.4.3       generics_0.1.3      
+[16] knitr_1.44           forcats_1.0.0        rbibutils_2.2.15    
 [19] htmlwidgets_1.6.2    backports_1.4.1      checkmate_2.2.0     
 [22] tibble_3.2.1         munsell_0.5.0        scda_0.1.6.9012     
 [25] pillar_1.9.0         rlang_1.1.1          utf8_1.2.3          
 [28] broom_1.0.5          xfun_0.40            cli_3.6.1           
-[31] withr_2.5.0          Rdpack_2.4           digest_0.6.33       
+[31] withr_2.5.0          Rdpack_2.5           digest_0.6.33       
 [34] rstudioapi_0.15.0    lifecycle_1.0.3      vctrs_0.6.3         
 [37] evaluate_0.21        glue_1.6.2           farver_2.1.1        
 [40] nestcolor_0.1.2.9006 codetools_0.2-19     survival_3.5-7      
-[43] fansi_1.0.4          colorspace_2.1-0     rmarkdown_2.24      
+[43] fansi_1.0.4          colorspace_2.1-0     rmarkdown_2.25      
 [46] purrr_1.0.2          tools_4.3.1          pkgconfig_2.0.3     
 [49] htmltools_0.5.6     </code></pre>
 </div>
@@ -3002,7 +3002,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01b.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG2</title>
@@ -3134,7 +3134,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -3155,26 +3155,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -3189,7 +3189,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG2A</title>
@@ -3316,7 +3316,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -3337,26 +3337,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -3371,7 +3371,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02a.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG3</title>
@@ -3511,7 +3511,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -3532,26 +3532,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -3566,7 +3566,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/kg03.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG4</title>
@@ -3809,7 +3809,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -3830,26 +3830,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -3864,7 +3864,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG4A</title>
@@ -4068,7 +4068,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -4089,26 +4089,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -4123,7 +4123,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04a.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG4B</title>
@@ -4356,7 +4356,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -4377,26 +4377,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     tidyr_1.3.0         
  [7] splines_4.3.1        scales_1.2.1         yaml_2.3.7          
 [10] fastmap_1.1.1        lattice_0.21-8       ggplot2_3.4.3       
-[13] R6_2.5.1             labeling_0.4.2       generics_0.1.3      
-[16] knitr_1.43           forcats_1.0.0        rbibutils_2.2.14    
+[13] R6_2.5.1             labeling_0.4.3       generics_0.1.3      
+[16] knitr_1.44           forcats_1.0.0        rbibutils_2.2.15    
 [19] htmlwidgets_1.6.2    backports_1.4.1      checkmate_2.2.0     
 [22] tibble_3.2.1         munsell_0.5.0        scda_0.1.6.9012     
 [25] pillar_1.9.0         rlang_1.1.1          utf8_1.2.3          
 [28] broom_1.0.5          xfun_0.40            cli_3.6.1           
-[31] withr_2.5.0          Rdpack_2.4           digest_0.6.33       
+[31] withr_2.5.0          Rdpack_2.5           digest_0.6.33       
 [34] grid_4.3.1           rstudioapi_0.15.0    lifecycle_1.0.3     
 [37] vctrs_0.6.3          evaluate_0.21        glue_1.6.2          
 [40] farver_2.1.1         nestcolor_0.1.2.9006 codetools_0.2-19    
 [43] survival_3.5-7       fansi_1.0.4          colorspace_2.1-0    
-[46] rmarkdown_2.24       purrr_1.0.2          tools_4.3.1         
+[46] rmarkdown_2.25       purrr_1.0.2          tools_4.3.1         
 [49] pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -4411,7 +4411,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04b.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG5</title>
@@ -4646,7 +4646,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -4667,26 +4667,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -4701,7 +4701,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG5A</title>
@@ -4917,7 +4917,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -4938,26 +4938,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -4972,7 +4972,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05a.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 <item>
   <title>KG5B</title>
@@ -5206,7 +5206,7 @@ font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+Running under: Ubuntu 22.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -5227,26 +5227,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.2           tern_0.9.0.9006       rtables_0.6.3.9001   
+[1] dplyr_1.1.3           tern_0.9.0.9006       rtables_0.6.3.9001   
 [4] magrittr_2.0.3        formatters_0.5.2.9003
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-1         gtable_0.3.3         jsonlite_1.8.7      
+ [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
 [10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-8      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.2      
-[16] generics_0.1.3       knitr_1.43           forcats_1.0.0       
-[19] rbibutils_2.2.14     htmlwidgets_1.6.2    backports_1.4.1     
+[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
+[19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9012      pillar_1.9.0         rlang_1.1.1         
 [28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
-[31] cli_3.6.1            withr_2.5.0          Rdpack_2.4          
+[31] cli_3.6.1            withr_2.5.0          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
 [37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.21       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.4         
-[46] colorspace_2.1-0     rmarkdown_2.24       purrr_1.0.2         
+[46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
 [49] tools_4.3.1          pkgconfig_2.0.3      htmltools_0.5.6     </code></pre>
 </div>
 </div>
@@ -5261,7 +5261,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05b.html</guid>
-  <pubDate>Thu, 21 Sep 2023 19:26:30 GMT</pubDate>
+  <pubDate>Sat, 23 Sep 2023 17:32:41 GMT</pubDate>
 </item>
 </channel>
 </rss>

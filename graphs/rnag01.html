@@ -1021,24 +1021,20 @@ FALSE
 <span id="cb16-2"><a href="#cb16-2"></a>pos <span class="ot">&lt;-</span> <span class="fu">position_jitter</span>(<span class="fl">0.4</span>)</span>
 <span id="cb16-3"><a href="#cb16-3"></a><span class="fu">draw_nonzero_boxplot</span>(norm_result, <span class="at">position =</span> pos) <span class="sc">+</span></span>
 <span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> norm_result<span class="sc">$</span>SampleID), <span class="at">position =</span> pos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Warning: ggrepel: 1 unlabeled data points (too many overlaps). Consider
-increasing max.overlaps</code></pre>
-</div>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 <p>The <code>draw_nonzero_boxplot()</code> displays a box plot of the non-zero expressed genes per sample.</p>
 <div class="cell" data-hash="rnag01_cache/html/unnamed-chunk-11_7fef0411a31108b60ac1b453174b0461">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">draw_genes_barplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">draw_genes_barplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 <p>We can also select for specific chromosomes by specifying the values in the <code>chromosomes</code> parameter. For example, to only display chromosomes 1 and 2 separately and ignore all others:</p>
 <div class="cell" data-hash="rnag01_cache/html/unnamed-chunk-12_2ae2a1220809ae23c6c92de6dbe38458">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">draw_genes_barplot</span>(norm_result, <span class="at">chromosomes =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>), <span class="at">include_others =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">draw_genes_barplot</span>(norm_result, <span class="at">chromosomes =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>), <span class="at">include_others =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="1440"></p>
 </div>
@@ -1047,7 +1043,7 @@ increasing max.overlaps</code></pre>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p>It is also possible to call all available <code>draw_*</code> functions with one function, <code>autoplot()</code>. Note: <code>autoplot()</code> does not allow for customization of the plots. We recommend using the appropriate <code>draw_*</code> function if you wish to make adjustments to the plots.</p>
 <div class="cell" data-hash="rnag01_cache/html/unnamed-chunk-13_ed8be1ea2d4b1f28faa998cfdbb0b5d1">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">autoplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">autoplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="1440"></p>
 </div>
@@ -1068,22 +1064,25 @@ increasing max.overlaps</code></pre>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <p>We start by importing a <code>MultiAssayExperiment</code>; here we use the example <code>multi_assay_experiment</code> available in <code>hermes</code>. It is wrapped as a <code>teal::dataset</code>. We can then use the provided teal module <code>tm_g_quality</code> to include a QC module in our teal app.</p>
 <div class="cell" data-screenshot.opts="{&quot;delay&quot;:24}">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb21-2"><a href="#cb21-2"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb21-3"><a href="#cb21-3"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb21-4"><a href="#cb21-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb21-5"><a href="#cb21-5"></a></span>
-<span id="cb21-6"><a href="#cb21-6"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb21-7"><a href="#cb21-7"></a>  <span class="at">data =</span> data,</span>
-<span id="cb21-8"><a href="#cb21-8"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb21-9"><a href="#cb21-9"></a>    <span class="fu">tm_g_quality</span>(</span>
-<span id="cb21-10"><a href="#cb21-10"></a>      <span class="at">label =</span> <span class="st">"quality"</span>,</span>
-<span id="cb21-11"><a href="#cb21-11"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb21-12"><a href="#cb21-12"></a>    )</span>
-<span id="cb21-13"><a href="#cb21-13"></a>  )</span>
-<span id="cb21-14"><a href="#cb21-14"></a>)</span>
-<span id="cb21-15"><a href="#cb21-15"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb20-3"><a href="#cb20-3"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb20-4"><a href="#cb20-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
+<span id="cb20-5"><a href="#cb20-5"></a></span>
+<span id="cb20-6"><a href="#cb20-6"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb20-7"><a href="#cb20-7"></a>  <span class="at">data =</span> data,</span>
+<span id="cb20-8"><a href="#cb20-8"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb20-9"><a href="#cb20-9"></a>    <span class="fu">tm_g_quality</span>(</span>
+<span id="cb20-10"><a href="#cb20-10"></a>      <span class="at">label =</span> <span class="st">"quality"</span>,</span>
+<span id="cb20-11"><a href="#cb20-11"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb20-12"><a href="#cb20-12"></a>    )</span>
+<span id="cb20-13"><a href="#cb20-13"></a>  )</span>
+<span id="cb20-14"><a href="#cb20-14"></a>)</span>
+<span id="cb20-15"><a href="#cb20-15"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[INFO] 2023-10-25 17:57:53.9143 pid:9306 token:[80fa75fa] teal Initializing reporter_previewer_module</code></pre>
+</div>
+<div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
@@ -1116,23 +1115,23 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9014              
+ [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9016              
  [3] teal.transform_0.4.0.9006      magrittr_2.0.3                
- [5] teal.slice_0.4.0.9018          teal.data_0.3.0.9007          
- [7] shiny_1.7.5                    ggrepel_0.9.3                 
+ [5] teal.slice_0.4.0.9021          teal.data_0.3.0.9007          
+ [7] shiny_1.7.5.1                  ggrepel_0.9.4                 
  [9] hermes_1.0.1.9019              SummarizedExperiment_1.30.2   
 [11] Biobase_2.60.0                 GenomicRanges_1.52.1          
 [13] GenomeInfoDb_1.36.4            IRanges_2.34.1                
 [15] S4Vectors_0.38.2               BiocGenerics_0.46.0           
 [17] MatrixGenerics_1.12.3          matrixStats_1.0.0             
-[19] ggfortify_0.4.16               ggplot2_3.4.3                 
+[19] ggfortify_0.4.16               ggplot2_3.4.4                 
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          rstudioapi_0.15.0          
   [3] jsonlite_1.8.7              shape_1.4.6                
   [5] MultiAssayExperiment_1.26.0 farver_2.1.1               
   [7] rmarkdown_2.25              GlobalOptions_0.1.2        
-  [9] zlibbioc_1.46.0             vctrs_0.6.3                
+  [9] zlibbioc_1.46.0             vctrs_0.6.4                
  [11] memoise_2.0.1               RCurl_1.98-1.12            
  [13] webshot_0.5.5               htmltools_0.5.6.1          
  [15] S4Arrays_1.0.6              forcats_1.0.0              
@@ -1158,18 +1157,18 @@ loaded via a namespace (and not attached):
  [55] logger_0.2.2                biomaRt_2.56.1             
  [57] rappdirs_0.3.3              DelayedArray_0.26.7        
  [59] rjson_0.2.21                tools_4.3.1                
- [61] httpuv_1.6.11               glue_1.6.2                 
+ [61] httpuv_1.6.12               glue_1.6.2                 
  [63] callr_3.7.3                 promises_1.2.1             
  [65] grid_4.3.1                  checkmate_2.2.0            
  [67] cluster_2.1.4               generics_0.1.3             
  [69] gtable_0.3.4                tidyr_1.3.0                
  [71] hms_1.1.3                   xml2_1.3.5                 
- [73] utf8_1.2.3                  XVector_0.40.0             
+ [73] utf8_1.2.4                  XVector_0.40.0             
  [75] foreach_1.5.2               pillar_1.9.0               
  [77] stringr_1.5.0               limma_3.56.2               
  [79] later_1.3.1                 circlize_0.4.15            
  [81] dplyr_1.1.3                 BiocFileCache_2.8.0        
- [83] lattice_0.21-9              bit_4.0.5                  
+ [83] lattice_0.22-5              bit_4.0.5                  
  [85] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
  [87] locfit_1.5-9.8              Biostrings_2.68.1          
  [89] knitr_1.44                  gridExtra_2.3              

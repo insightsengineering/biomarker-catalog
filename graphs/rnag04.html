@@ -981,17 +981,20 @@ cookieconsent.run({
 <span id="cb5-13"><a href="#cb5-13"></a>  )</span>
 <span id="cb5-14"><a href="#cb5-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-10-21 17:42:36.6149 pid:5172 token:[] teal.modules.hermes Initializing tm_g_pca</code></pre>
+<pre><code>[INFO] 2023-10-25 17:48:11.9663 pid:5235 token:[] teal.modules.hermes Initializing tm_g_pca</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[INFO] 2023-10-25 17:48:13.5455 pid:5235 token:[cd15994e] teal Initializing reporter_previewer_module</code></pre>
+</div>
+<div class="cell-output-display">
 <p><img src="rnag04_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <div class="cell" data-hash="rnag04_cache/html/sessioninfo_9a8c5aea2d9e736d1bbd6c2ab55820a0">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -1017,23 +1020,23 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9014              
+ [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9016              
  [3] teal.transform_0.4.0.9006      magrittr_2.0.3                
- [5] teal.slice_0.4.0.9018          teal.data_0.3.0.9007          
- [7] shiny_1.7.5                    hermes_1.0.1.9019             
+ [5] teal.slice_0.4.0.9021          teal.data_0.3.0.9007          
+ [7] shiny_1.7.5.1                  hermes_1.0.1.9019             
  [9] SummarizedExperiment_1.30.2    Biobase_2.60.0                
 [11] GenomicRanges_1.52.1           GenomeInfoDb_1.36.4           
 [13] IRanges_2.34.1                 S4Vectors_0.38.2              
 [15] BiocGenerics_0.46.0            MatrixGenerics_1.12.3         
 [17] matrixStats_1.0.0              ggfortify_0.4.16              
-[19] ggplot2_3.4.3                 
+[19] ggplot2_3.4.4                 
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          rstudioapi_0.15.0          
   [3] jsonlite_1.8.7              shape_1.4.6                
-  [5] MultiAssayExperiment_1.26.0 magick_2.8.0               
+  [5] MultiAssayExperiment_1.26.0 magick_2.8.1               
   [7] rmarkdown_2.25              GlobalOptions_0.1.2        
-  [9] zlibbioc_1.46.0             vctrs_0.6.3                
+  [9] zlibbioc_1.46.0             vctrs_0.6.4                
  [11] memoise_2.0.1               RCurl_1.98-1.12            
  [13] webshot_0.5.5               htmltools_0.5.6.1          
  [15] S4Arrays_1.0.6              forcats_1.0.0              
@@ -1059,18 +1062,18 @@ loaded via a namespace (and not attached):
  [55] logger_0.2.2                biomaRt_2.56.1             
  [57] rappdirs_0.3.3              DelayedArray_0.26.7        
  [59] rjson_0.2.21                tools_4.3.1                
- [61] httpuv_1.6.11               glue_1.6.2                 
+ [61] httpuv_1.6.12               glue_1.6.2                 
  [63] callr_3.7.3                 promises_1.2.1             
  [65] grid_4.3.1                  checkmate_2.2.0            
  [67] cluster_2.1.4               generics_0.1.3             
  [69] gtable_0.3.4                tidyr_1.3.0                
  [71] hms_1.1.3                   xml2_1.3.5                 
- [73] utf8_1.2.3                  XVector_0.40.0             
- [75] ggrepel_0.9.3               foreach_1.5.2              
+ [73] utf8_1.2.4                  XVector_0.40.0             
+ [75] ggrepel_0.9.4               foreach_1.5.2              
  [77] pillar_1.9.0                stringr_1.5.0              
  [79] limma_3.56.2                later_1.3.1                
  [81] circlize_0.4.15             dplyr_1.1.3                
- [83] BiocFileCache_2.8.0         lattice_0.21-9             
+ [83] BiocFileCache_2.8.0         lattice_0.22-5             
  [85] bit_4.0.5                   tidyselect_1.2.0           
  [87] ComplexHeatmap_2.16.0       locfit_1.5-9.8             
  [89] Biostrings_2.68.1           knitr_1.44                 
@@ -1513,88 +1516,88 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="an">title:</span><span class="co"> RNAG4</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Sample Correlation Graph</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="co">---</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a></span>
-<span id="cb10-7"><a href="#cb10-7"></a>------------------------------------------------------------------------</span>
-<span id="cb10-8"><a href="#cb10-8"></a></span>
-<span id="cb10-9"><a href="#cb10-9"></a>::: panel-tabset</span>
-<span id="cb10-10"><a href="#cb10-10"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
-<span id="cb10-11"><a href="#cb10-11"></a></span>
-<span id="cb10-12"><a href="#cb10-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to calculate the correlation between samples in <span class="in">`HermesData`</span>, visualize them in a heatmap, and create an interactive sample correlation graph using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb10-13"><a href="#cb10-13"></a></span>
-<span id="cb10-14"><a href="#cb10-14"></a>The function used to calculate correlation uses <span class="in">`HermesData`</span> as input.</span>
-<span id="cb10-15"><a href="#cb10-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
-<span id="cb10-16"><a href="#cb10-16"></a></span>
-<span id="cb10-17"><a href="#cb10-17"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb10-18"><a href="#cb10-18"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb10-19"><a href="#cb10-19"></a></span>
-<span id="cb10-20"><a href="#cb10-20"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
-<span id="cb10-21"><a href="#cb10-21"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb10-22"><a href="#cb10-22"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb10-23"><a href="#cb10-23"></a>  <span class="fu">normalize</span>()</span>
-<span id="cb10-24"><a href="#cb10-24"></a><span class="in">```</span></span>
-<span id="cb10-25"><a href="#cb10-25"></a></span>
-<span id="cb10-26"><a href="#cb10-26"></a><span class="fu">## Calculate Correlation</span></span>
-<span id="cb10-27"><a href="#cb10-27"></a></span>
-<span id="cb10-28"><a href="#cb10-28"></a>We can calculate correlation matrix between samples in <span class="in">`HermesData`</span> using <span class="in">`correlate()`</span> function.</span>
-<span id="cb10-29"><a href="#cb10-29"></a>By default, <span class="in">`correlate()`</span> function uses the <span class="in">`counts`</span> assay to calculate the Pearson correlation coefficients, unless specified otherwise in the arguments.</span>
-<span id="cb10-30"><a href="#cb10-30"></a></span>
-<span id="cb10-33"><a href="#cb10-33"></a><span class="in">```{r}</span></span>
-<span id="cb10-34"><a href="#cb10-34"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object)</span>
-<span id="cb10-35"><a href="#cb10-35"></a></span>
-<span id="cb10-36"><a href="#cb10-36"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object, <span class="at">assay_name =</span> <span class="st">"tpm"</span>, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
-<span id="cb10-37"><a href="#cb10-37"></a><span class="in">```</span></span>
-<span id="cb10-38"><a href="#cb10-38"></a></span>
-<span id="cb10-39"><a href="#cb10-39"></a><span class="fu">## Plot Correlation</span></span>
-<span id="cb10-40"><a href="#cb10-40"></a></span>
-<span id="cb10-41"><a href="#cb10-41"></a>We can then plot a heatmap for correlation between samples in <span class="in">`HermesData`</span> using the <span class="in">`autoplot()`</span> function.</span>
-<span id="cb10-42"><a href="#cb10-42"></a>See <span class="in">`?calc_cor`</span> for details.</span>
-<span id="cb10-43"><a href="#cb10-43"></a></span>
-<span id="cb10-46"><a href="#cb10-46"></a><span class="in">```{r}</span></span>
-<span id="cb10-47"><a href="#cb10-47"></a><span class="fu">autoplot</span>(result)</span>
-<span id="cb10-48"><a href="#cb10-48"></a><span class="in">```</span></span>
-<span id="cb10-49"><a href="#cb10-49"></a></span>
-<span id="cb10-50"><a href="#cb10-50"></a>If there are still (because we already filtered some samples above) samples that have low correlation with others, we might want to flag them manually as technical failures and filter again.</span>
-<span id="cb10-51"><a href="#cb10-51"></a>Here just as an example:</span>
-<span id="cb10-52"><a href="#cb10-52"></a></span>
-<span id="cb10-55"><a href="#cb10-55"></a><span class="in">```{r}</span></span>
-<span id="cb10-56"><a href="#cb10-56"></a>object <span class="ot">&lt;-</span> object <span class="sc">%&gt;%</span></span>
-<span id="cb10-57"><a href="#cb10-57"></a>  <span class="fu">set_tech_failure</span>(<span class="st">"06520011B0023R"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-58"><a href="#cb10-58"></a>  <span class="fu">filter</span>()</span>
-<span id="cb10-59"><a href="#cb10-59"></a><span class="in">```</span></span>
-<span id="cb10-60"><a href="#cb10-60"></a></span>
-<span id="cb10-61"><a href="#cb10-61"></a><span class="fu">## Teal Module for Sample Correlation Graph</span></span>
-<span id="cb10-62"><a href="#cb10-62"></a></span>
-<span id="cb10-63"><a href="#cb10-63"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb10-64"><a href="#cb10-64"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb10-65"><a href="#cb10-65"></a>We can select the sample correlation tab above the plot area.</span>
-<span id="cb10-66"><a href="#cb10-66"></a>We can then use the provided teal module <span class="in">`tm_g_pca`</span> to include a PCA module in our teal app.</span>
-<span id="cb10-67"><a href="#cb10-67"></a></span>
-<span id="cb10-68"><a href="#cb10-68"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
-<span id="cb10-69"><a href="#cb10-69"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
-<span id="cb10-70"><a href="#cb10-70"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb10-71"><a href="#cb10-71"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb10-72"><a href="#cb10-72"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb10-73"><a href="#cb10-73"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb10-74"><a href="#cb10-74"></a></span>
-<span id="cb10-75"><a href="#cb10-75"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb10-76"><a href="#cb10-76"></a>  <span class="at">data =</span> data,</span>
-<span id="cb10-77"><a href="#cb10-77"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb10-78"><a href="#cb10-78"></a>    <span class="fu">tm_g_pca</span>(</span>
-<span id="cb10-79"><a href="#cb10-79"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
-<span id="cb10-80"><a href="#cb10-80"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb10-81"><a href="#cb10-81"></a>    )</span>
-<span id="cb10-82"><a href="#cb10-82"></a>  )</span>
-<span id="cb10-83"><a href="#cb10-83"></a>)</span>
-<span id="cb10-84"><a href="#cb10-84"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb10-85"><a href="#cb10-85"></a><span class="in">```</span></span>
-<span id="cb10-86"><a href="#cb10-86"></a></span>
-<span id="cb10-87"><a href="#cb10-87"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb10-88"><a href="#cb10-88"></a>:::</span>
+<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">---</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="an">title:</span><span class="co"> RNAG4</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Sample Correlation Graph</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co">---</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a></span>
+<span id="cb11-7"><a href="#cb11-7"></a>------------------------------------------------------------------------</span>
+<span id="cb11-8"><a href="#cb11-8"></a></span>
+<span id="cb11-9"><a href="#cb11-9"></a>::: panel-tabset</span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a></span>
+<span id="cb11-12"><a href="#cb11-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to calculate the correlation between samples in <span class="in">`HermesData`</span>, visualize them in a heatmap, and create an interactive sample correlation graph using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb11-13"><a href="#cb11-13"></a></span>
+<span id="cb11-14"><a href="#cb11-14"></a>The function used to calculate correlation uses <span class="in">`HermesData`</span> as input.</span>
+<span id="cb11-15"><a href="#cb11-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
+<span id="cb11-16"><a href="#cb11-16"></a></span>
+<span id="cb11-17"><a href="#cb11-17"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb11-18"><a href="#cb11-18"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb11-19"><a href="#cb11-19"></a></span>
+<span id="cb11-20"><a href="#cb11-20"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
+<span id="cb11-21"><a href="#cb11-21"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-22"><a href="#cb11-22"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-23"><a href="#cb11-23"></a>  <span class="fu">normalize</span>()</span>
+<span id="cb11-24"><a href="#cb11-24"></a><span class="in">```</span></span>
+<span id="cb11-25"><a href="#cb11-25"></a></span>
+<span id="cb11-26"><a href="#cb11-26"></a><span class="fu">## Calculate Correlation</span></span>
+<span id="cb11-27"><a href="#cb11-27"></a></span>
+<span id="cb11-28"><a href="#cb11-28"></a>We can calculate correlation matrix between samples in <span class="in">`HermesData`</span> using <span class="in">`correlate()`</span> function.</span>
+<span id="cb11-29"><a href="#cb11-29"></a>By default, <span class="in">`correlate()`</span> function uses the <span class="in">`counts`</span> assay to calculate the Pearson correlation coefficients, unless specified otherwise in the arguments.</span>
+<span id="cb11-30"><a href="#cb11-30"></a></span>
+<span id="cb11-33"><a href="#cb11-33"></a><span class="in">```{r}</span></span>
+<span id="cb11-34"><a href="#cb11-34"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object)</span>
+<span id="cb11-35"><a href="#cb11-35"></a></span>
+<span id="cb11-36"><a href="#cb11-36"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object, <span class="at">assay_name =</span> <span class="st">"tpm"</span>, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
+<span id="cb11-37"><a href="#cb11-37"></a><span class="in">```</span></span>
+<span id="cb11-38"><a href="#cb11-38"></a></span>
+<span id="cb11-39"><a href="#cb11-39"></a><span class="fu">## Plot Correlation</span></span>
+<span id="cb11-40"><a href="#cb11-40"></a></span>
+<span id="cb11-41"><a href="#cb11-41"></a>We can then plot a heatmap for correlation between samples in <span class="in">`HermesData`</span> using the <span class="in">`autoplot()`</span> function.</span>
+<span id="cb11-42"><a href="#cb11-42"></a>See <span class="in">`?calc_cor`</span> for details.</span>
+<span id="cb11-43"><a href="#cb11-43"></a></span>
+<span id="cb11-46"><a href="#cb11-46"></a><span class="in">```{r}</span></span>
+<span id="cb11-47"><a href="#cb11-47"></a><span class="fu">autoplot</span>(result)</span>
+<span id="cb11-48"><a href="#cb11-48"></a><span class="in">```</span></span>
+<span id="cb11-49"><a href="#cb11-49"></a></span>
+<span id="cb11-50"><a href="#cb11-50"></a>If there are still (because we already filtered some samples above) samples that have low correlation with others, we might want to flag them manually as technical failures and filter again.</span>
+<span id="cb11-51"><a href="#cb11-51"></a>Here just as an example:</span>
+<span id="cb11-52"><a href="#cb11-52"></a></span>
+<span id="cb11-55"><a href="#cb11-55"></a><span class="in">```{r}</span></span>
+<span id="cb11-56"><a href="#cb11-56"></a>object <span class="ot">&lt;-</span> object <span class="sc">%&gt;%</span></span>
+<span id="cb11-57"><a href="#cb11-57"></a>  <span class="fu">set_tech_failure</span>(<span class="st">"06520011B0023R"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-58"><a href="#cb11-58"></a>  <span class="fu">filter</span>()</span>
+<span id="cb11-59"><a href="#cb11-59"></a><span class="in">```</span></span>
+<span id="cb11-60"><a href="#cb11-60"></a></span>
+<span id="cb11-61"><a href="#cb11-61"></a><span class="fu">## Teal Module for Sample Correlation Graph</span></span>
+<span id="cb11-62"><a href="#cb11-62"></a></span>
+<span id="cb11-63"><a href="#cb11-63"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb11-64"><a href="#cb11-64"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb11-65"><a href="#cb11-65"></a>We can select the sample correlation tab above the plot area.</span>
+<span id="cb11-66"><a href="#cb11-66"></a>We can then use the provided teal module <span class="in">`tm_g_pca`</span> to include a PCA module in our teal app.</span>
+<span id="cb11-67"><a href="#cb11-67"></a></span>
+<span id="cb11-68"><a href="#cb11-68"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
+<span id="cb11-69"><a href="#cb11-69"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
+<span id="cb11-70"><a href="#cb11-70"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb11-71"><a href="#cb11-71"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb11-72"><a href="#cb11-72"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb11-73"><a href="#cb11-73"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
+<span id="cb11-74"><a href="#cb11-74"></a></span>
+<span id="cb11-75"><a href="#cb11-75"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb11-76"><a href="#cb11-76"></a>  <span class="at">data =</span> data,</span>
+<span id="cb11-77"><a href="#cb11-77"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb11-78"><a href="#cb11-78"></a>    <span class="fu">tm_g_pca</span>(</span>
+<span id="cb11-79"><a href="#cb11-79"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
+<span id="cb11-80"><a href="#cb11-80"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb11-81"><a href="#cb11-81"></a>    )</span>
+<span id="cb11-82"><a href="#cb11-82"></a>  )</span>
+<span id="cb11-83"><a href="#cb11-83"></a>)</span>
+<span id="cb11-84"><a href="#cb11-84"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb11-85"><a href="#cb11-85"></a><span class="in">```</span></span>
+<span id="cb11-86"><a href="#cb11-86"></a></span>
+<span id="cb11-87"><a href="#cb11-87"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb11-88"><a href="#cb11-88"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

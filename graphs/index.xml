@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sat, 21 Oct 2023 17:44:52 GMT</lastBuildDate>
+<lastBuildDate>Wed, 25 Oct 2023 17:51:00 GMT</lastBuildDate>
 <item>
   <title>AG1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</link>
@@ -447,20 +447,20 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] ggplot2.utils_0.3.0   ggplot2_3.4.3         dplyr_1.1.3          
-[4] tidyr_1.3.0           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] ggplot2.utils_0.3.0   ggplot2_3.4.4         dplyr_1.1.3          
+[4] tidyr_1.3.0           tern_0.9.2.9001       rtables_0.6.5.9003   
 [7] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
- [5] lattice_0.21-9     digest_0.6.33      evaluate_0.22      RColorBrewer_1.1-3
+ [1] utf8_1.2.4         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
+ [5] lattice_0.22-5     digest_0.6.33      evaluate_0.22      RColorBrewer_1.1-3
  [9] fastmap_1.1.1      plyr_1.8.9         jsonlite_1.8.7     Matrix_1.6-1.1    
 [13] backports_1.4.1    reshape_0.8.9      survival_3.5-7     GGally_2.1.2      
 [17] purrr_1.0.2        fansi_1.0.5        scales_1.2.1       codetools_0.2-19  
 [21] Rdpack_2.5         cli_3.6.1          ggpp_0.5.4         rlang_1.1.1       
 [25] rbibutils_2.2.15   munsell_0.5.0      splines_4.3.1      withr_2.5.1       
 [29] yaml_2.3.7         tools_4.3.1        polynom_1.4-1      checkmate_2.2.0   
-[33] colorspace_2.1-0   forcats_1.0.0      broom_1.0.5        vctrs_0.6.3       
+[33] colorspace_2.1-0   forcats_1.0.0      broom_1.0.5        vctrs_0.6.4       
 [37] R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2  MASS_7.3-60       
 [41] pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.4       glue_1.6.2        
 [45] Rcpp_1.0.11        xfun_0.40          tibble_3.2.1       tidyselect_1.2.0  
@@ -479,7 +479,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>AG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG1</title>
@@ -714,12 +714,12 @@ attached base packages:
 
 other attached packages:
 [1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.3          
-[4] ggplot2.utils_0.3.0   ggplot2_3.4.3         tern_0.9.2.9000      
+[4] ggplot2.utils_0.3.0   ggplot2_3.4.4         tern_0.9.2.9001      
 [7] rtables_0.6.5.9003    magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
- [5] lattice_0.21-9     digest_0.6.33      evaluate_0.22      grid_4.3.1        
+ [1] utf8_1.2.4         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
+ [5] lattice_0.22-5     digest_0.6.33      evaluate_0.22      grid_4.3.1        
  [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9         jsonlite_1.8.7    
 [13] Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9      survival_3.5-7    
 [17] gridExtra_2.3      GGally_2.1.2       purrr_1.0.2        fansi_1.0.5       
@@ -727,7 +727,7 @@ loaded via a namespace (and not attached):
 [25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.1        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
+[37] broom_1.0.5        vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
 [45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
 [49] tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44         farver_2.1.1      
@@ -745,7 +745,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG1A</title>
@@ -1030,12 +1030,12 @@ attached base packages:
 
 other attached packages:
 [1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.3          
-[4] ggplot2.utils_0.3.0   ggplot2_3.4.3         tern_0.9.2.9000      
+[4] ggplot2.utils_0.3.0   ggplot2_3.4.4         tern_0.9.2.9001      
 [7] rtables_0.6.5.9003    magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
- [5] lattice_0.21-9     digest_0.6.33      evaluate_0.22      grid_4.3.1        
+ [1] utf8_1.2.4         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
+ [5] lattice_0.22-5     digest_0.6.33      evaluate_0.22      grid_4.3.1        
  [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9         jsonlite_1.8.7    
 [13] Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9      survival_3.5-7    
 [17] gridExtra_2.3      GGally_2.1.2       purrr_1.0.2        fansi_1.0.5       
@@ -1043,7 +1043,7 @@ loaded via a namespace (and not attached):
 [25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.1        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
+[37] broom_1.0.5        vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
 [45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
 [49] tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44         farver_2.1.1      
@@ -1061,7 +1061,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG1B</title>
@@ -1220,12 +1220,12 @@ attached base packages:
 
 other attached packages:
 [1] tidyr_1.3.0           tibble_3.2.1          dplyr_1.1.3          
-[4] ggplot2.utils_0.3.0   ggplot2_3.4.3         tern_0.9.2.9000      
+[4] ggplot2.utils_0.3.0   ggplot2_3.4.4         tern_0.9.2.9001      
 [7] rtables_0.6.5.9003    magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
- [5] lattice_0.21-9     digest_0.6.33      evaluate_0.22      grid_4.3.1        
+ [1] utf8_1.2.4         generics_0.1.3     scda_0.1.6.9013    EnvStats_2.8.1    
+ [5] lattice_0.22-5     digest_0.6.33      evaluate_0.22      grid_4.3.1        
  [9] RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9         jsonlite_1.8.7    
 [13] Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9      survival_3.5-7    
 [17] GGally_2.1.2       purrr_1.0.2        fansi_1.0.5        scales_1.2.1      
@@ -1233,7 +1233,7 @@ loaded via a namespace (and not attached):
 [25] rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0      splines_4.3.1     
 [29] withr_2.5.1        yaml_2.3.7         tools_4.3.1        polynom_1.4-1     
 [33] checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0      broom_1.0.5       
-[37] vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2 
+[37] vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3    htmlwidgets_1.6.2 
 [41] MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.4      
 [45] glue_1.6.2         Rcpp_1.0.11        xfun_0.40          tidyselect_1.2.0  
 [49] rstudioapi_0.15.0  knitr_1.44         farver_2.1.1       htmltools_0.5.6.1 
@@ -1251,7 +1251,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG2</title>
@@ -1522,13 +1522,13 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
-[4] tern_0.9.2.9000       rtables_0.6.5.9003    magrittr_2.0.3       
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.4        
+[4] tern_0.9.2.9001       rtables_0.6.5.9003    magrittr_2.0.3       
 [7] formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
- [5] EnvStats_2.8.1     lattice_0.21-9     digest_0.6.33      evaluate_0.22     
+ [1] utf8_1.2.4         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
+ [5] EnvStats_2.8.1     lattice_0.22-5     digest_0.6.33      evaluate_0.22     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9        
 [13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.5       
@@ -1536,7 +1536,7 @@ loaded via a namespace (and not attached):
 [25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.1        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
+[37] broom_1.0.5        vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
 [45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
 [49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
@@ -1555,7 +1555,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG3</title>
@@ -1870,13 +1870,13 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
-[4] tern_0.9.2.9000       rtables_0.6.5.9003    magrittr_2.0.3       
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.4        
+[4] tern_0.9.2.9001       rtables_0.6.5.9003    magrittr_2.0.3       
 [7] formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
- [5] EnvStats_2.8.1     lattice_0.21-9     digest_0.6.33      evaluate_0.22     
+ [1] utf8_1.2.4         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
+ [5] EnvStats_2.8.1     lattice_0.22-5     digest_0.6.33      evaluate_0.22     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9        
 [13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.5       
@@ -1884,7 +1884,7 @@ loaded via a namespace (and not attached):
 [25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.1        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
+[37] broom_1.0.5        vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
 [45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
 [49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
@@ -1903,7 +1903,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG3A</title>
@@ -2081,13 +2081,13 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
-[4] tern_0.9.2.9000       rtables_0.6.5.9003    magrittr_2.0.3       
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.4        
+[4] tern_0.9.2.9001       rtables_0.6.5.9003    magrittr_2.0.3       
 [7] formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
- [5] EnvStats_2.8.1     lattice_0.21-9     digest_0.6.33      evaluate_0.22     
+ [1] utf8_1.2.4         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
+ [5] EnvStats_2.8.1     lattice_0.22-5     digest_0.6.33      evaluate_0.22     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9        
 [13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.5       
@@ -2095,7 +2095,7 @@ loaded via a namespace (and not attached):
 [25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.1        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
+[37] broom_1.0.5        vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
 [45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
 [49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
@@ -2114,7 +2114,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>DG4</title>
@@ -2262,13 +2262,13 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.3        
-[4] tern_0.9.2.9000       rtables_0.6.5.9003    magrittr_2.0.3       
+[1] dplyr_1.1.3           ggplot2.utils_0.3.0   ggplot2_3.4.4        
+[4] tern_0.9.2.9001       rtables_0.6.5.9003    magrittr_2.0.3       
 [7] formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
- [1] utf8_1.2.3         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
- [5] EnvStats_2.8.1     lattice_0.21-9     digest_0.6.33      evaluate_0.22     
+ [1] utf8_1.2.4         generics_0.1.3     tidyr_1.3.0        scda_0.1.6.9013   
+ [5] EnvStats_2.8.1     lattice_0.22-5     digest_0.6.33      evaluate_0.22     
  [9] grid_4.3.1         RColorBrewer_1.1-3 fastmap_1.1.1      plyr_1.8.9        
 [13] jsonlite_1.8.7     Matrix_1.6-1.1     backports_1.4.1    reshape_0.8.9     
 [17] survival_3.5-7     GGally_2.1.2       purrr_1.0.2        fansi_1.0.5       
@@ -2276,7 +2276,7 @@ loaded via a namespace (and not attached):
 [25] ggpp_0.5.4         rlang_1.1.1        rbibutils_2.2.15   munsell_0.5.0     
 [29] splines_4.3.1      withr_2.5.1        yaml_2.3.7         tools_4.3.1       
 [33] polynom_1.4-1      checkmate_2.2.0    colorspace_2.1-0   forcats_1.0.0     
-[37] broom_1.0.5        vctrs_0.6.3        R6_2.5.1           lifecycle_1.0.3   
+[37] broom_1.0.5        vctrs_0.6.4        R6_2.5.1           lifecycle_1.0.3   
 [41] htmlwidgets_1.6.2  MASS_7.3-60        pkgconfig_2.0.3    pillar_1.9.0      
 [45] gtable_0.3.4       glue_1.6.2         Rcpp_1.0.11        xfun_0.40         
 [49] tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.44        
@@ -2295,7 +2295,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG1</title>
@@ -2456,23 +2456,23 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        rstudioapi_0.15.0    lifecycle_1.0.3     
-[37] vctrs_0.6.3          evaluate_0.22        glue_1.6.2          
+[37] vctrs_0.6.4          evaluate_0.22        glue_1.6.2          
 [40] farver_2.1.1         nestcolor_0.1.2.9006 codetools_0.2-19    
 [43] survival_3.5-7       fansi_1.0.5          colorspace_2.1-0    
 [46] rmarkdown_2.25       purrr_1.0.2          tools_4.3.1         
@@ -2490,7 +2490,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG1A</title>
@@ -2646,23 +2646,23 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        rstudioapi_0.15.0    lifecycle_1.0.3     
-[37] vctrs_0.6.3          evaluate_0.22        glue_1.6.2          
+[37] vctrs_0.6.4          evaluate_0.22        glue_1.6.2          
 [40] farver_2.1.1         nestcolor_0.1.2.9006 codetools_0.2-19    
 [43] survival_3.5-7       fansi_1.0.5          colorspace_2.1-0    
 [46] rmarkdown_2.25       purrr_1.0.2          tools_4.3.1         
@@ -2680,7 +2680,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01a.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG1B</title>
@@ -2968,22 +2968,22 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     tidyr_1.3.0         
  [7] splines_4.3.1        scales_1.2.1         yaml_2.3.7          
-[10] fastmap_1.1.1        lattice_0.21-9       ggplot2_3.4.3       
+[10] fastmap_1.1.1        lattice_0.22-5       ggplot2_3.4.4       
 [13] R6_2.5.1             labeling_0.4.3       generics_0.1.3      
 [16] knitr_1.44           forcats_1.0.0        rbibutils_2.2.15    
 [19] htmlwidgets_1.6.2    backports_1.4.1      checkmate_2.2.0     
 [22] tibble_3.2.1         munsell_0.5.0        scda_0.1.6.9013     
-[25] pillar_1.9.0         rlang_1.1.1          utf8_1.2.3          
+[25] pillar_1.9.0         rlang_1.1.1          utf8_1.2.4          
 [28] broom_1.0.5          xfun_0.40            cli_3.6.1           
 [31] withr_2.5.1          Rdpack_2.5           digest_0.6.33       
-[34] rstudioapi_0.15.0    lifecycle_1.0.3      vctrs_0.6.3         
+[34] rstudioapi_0.15.0    lifecycle_1.0.3      vctrs_0.6.4         
 [37] evaluate_0.22        glue_1.6.2           farver_2.1.1        
 [40] nestcolor_0.1.2.9006 codetools_0.2-19     survival_3.5-7      
 [43] fansi_1.0.5          colorspace_2.1-0     rmarkdown_2.25      
@@ -3002,7 +3002,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01b.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG2</title>
@@ -3155,23 +3155,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -3189,7 +3189,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG2A</title>
@@ -3337,23 +3337,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -3371,7 +3371,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02a.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG3</title>
@@ -3532,23 +3532,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -3566,7 +3566,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/kg03.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG4</title>
@@ -3830,23 +3830,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -3864,7 +3864,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG4A</title>
@@ -4089,23 +4089,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -4123,7 +4123,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04a.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG4B</title>
@@ -4377,23 +4377,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     tidyr_1.3.0         
  [7] splines_4.3.1        scales_1.2.1         yaml_2.3.7          
-[10] fastmap_1.1.1        lattice_0.21-9       ggplot2_3.4.3       
+[10] fastmap_1.1.1        lattice_0.22-5       ggplot2_3.4.4       
 [13] R6_2.5.1             labeling_0.4.3       generics_0.1.3      
 [16] knitr_1.44           forcats_1.0.0        rbibutils_2.2.15    
 [19] htmlwidgets_1.6.2    backports_1.4.1      checkmate_2.2.0     
 [22] tibble_3.2.1         munsell_0.5.0        scda_0.1.6.9013     
-[25] pillar_1.9.0         rlang_1.1.1          utf8_1.2.3          
+[25] pillar_1.9.0         rlang_1.1.1          utf8_1.2.4          
 [28] broom_1.0.5          xfun_0.40            cli_3.6.1           
 [31] withr_2.5.1          Rdpack_2.5           digest_0.6.33       
 [34] grid_4.3.1           rstudioapi_0.15.0    lifecycle_1.0.3     
-[37] vctrs_0.6.3          evaluate_0.22        glue_1.6.2          
+[37] vctrs_0.6.4          evaluate_0.22        glue_1.6.2          
 [40] farver_2.1.1         nestcolor_0.1.2.9006 codetools_0.2-19    
 [43] survival_3.5-7       fansi_1.0.5          colorspace_2.1-0    
 [46] rmarkdown_2.25       purrr_1.0.2          tools_4.3.1         
@@ -4411,7 +4411,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04b.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG5</title>
@@ -4667,23 +4667,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -4701,7 +4701,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG5A</title>
@@ -4938,23 +4938,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -4972,7 +4972,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05a.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 <item>
   <title>KG5B</title>
@@ -5227,23 +5227,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9000       rtables_0.6.5.9003   
+[1] dplyr_1.1.3           tern_0.9.2.9001       rtables_0.6.5.9003   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.6-1.1       gtable_0.3.4         jsonlite_1.8.7      
  [4] compiler_4.3.1       tidyselect_1.2.0     gridExtra_2.3       
  [7] tidyr_1.3.0          splines_4.3.1        scales_1.2.1        
-[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.21-9      
-[13] ggplot2_3.4.3        R6_2.5.1             labeling_0.4.3      
+[10] yaml_2.3.7           fastmap_1.1.1        lattice_0.22-5      
+[13] ggplot2_3.4.4        R6_2.5.1             labeling_0.4.3      
 [16] generics_0.1.3       knitr_1.44           forcats_1.0.0       
 [19] rbibutils_2.2.15     htmlwidgets_1.6.2    backports_1.4.1     
 [22] checkmate_2.2.0      tibble_3.2.1         munsell_0.5.0       
 [25] scda_0.1.6.9013      pillar_1.9.0         rlang_1.1.1         
-[28] utf8_1.2.3           broom_1.0.5          xfun_0.40           
+[28] utf8_1.2.4           broom_1.0.5          xfun_0.40           
 [31] cli_3.6.1            withr_2.5.1          Rdpack_2.5          
 [34] digest_0.6.33        grid_4.3.1           rstudioapi_0.15.0   
-[37] lifecycle_1.0.3      vctrs_0.6.3          evaluate_0.22       
+[37] lifecycle_1.0.3      vctrs_0.6.4          evaluate_0.22       
 [40] glue_1.6.2           farver_2.1.1         nestcolor_0.1.2.9006
 [43] codetools_0.2-19     survival_3.5-7       fansi_1.0.5         
 [46] colorspace_2.1-0     rmarkdown_2.25       purrr_1.0.2         
@@ -5261,7 +5261,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05b.html</guid>
-  <pubDate>Sat, 21 Oct 2023 17:44:52 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 17:51:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

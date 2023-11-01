@@ -1026,23 +1026,28 @@ cookieconsent.run({
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
 <span id="cb12-2"><a href="#cb12-2"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
 <span id="cb12-3"><a href="#cb12-3"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb12-4"><a href="#cb12-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb12-5"><a href="#cb12-5"></a></span>
-<span id="cb12-6"><a href="#cb12-6"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb12-7"><a href="#cb12-7"></a>  <span class="at">data =</span> data,</span>
-<span id="cb12-8"><a href="#cb12-8"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb12-9"><a href="#cb12-9"></a>    <span class="fu">tm_g_pca</span>(</span>
-<span id="cb12-10"><a href="#cb12-10"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
-<span id="cb12-11"><a href="#cb12-11"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb12-12"><a href="#cb12-12"></a>    )</span>
-<span id="cb12-13"><a href="#cb12-13"></a>  )</span>
-<span id="cb12-14"><a href="#cb12-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-10-28 17:42:58.4550 pid:5763 token:[] teal.modules.hermes Initializing tm_g_pca</code></pre>
+<span id="cb12-4"><a href="#cb12-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `data_objects` argument of `teal_data()` should use data directly. Using
+TealDatasetConnector and TealDataset is deprecated. Find more information on
+https://github.com/insightsengineering/teal/discussions/945 as of teal.data
+0.3.1.</code></pre>
 </div>
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="at">data =</span> data,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    <span class="fu">tm_g_pca</span>(</span>
+<span id="cb14-5"><a href="#cb14-5"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>    )</span>
+<span id="cb14-8"><a href="#cb14-8"></a>  )</span>
+<span id="cb14-9"><a href="#cb14-9"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-10-28 17:42:59.7964 pid:5763 token:[72e062d9] teal Initializing reporter_previewer_module</code></pre>
+<pre><code>[INFO] 2023-11-01 17:47:51.0642 pid:6471 token:[] teal.modules.hermes Initializing tm_g_pca</code></pre>
+</div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[INFO] 2023-11-01 17:47:52.6324 pid:6471 token:[f9d7cdd1] teal Initializing reporter_previewer_module</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="rnag03_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="1440"></p>
@@ -1051,7 +1056,7 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
 <div class="cell" data-hash="rnag03_cache/html/sessioninfo_6d93c6aca9de35eb8e0d951de1eb8da0">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -1077,9 +1082,9 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9016              
+ [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9017              
  [3] teal.transform_0.4.0.9006      magrittr_2.0.3                
- [5] teal.slice_0.4.0.9021          teal.data_0.3.0.9007          
+ [5] teal.slice_0.4.0.9022          teal.data_0.3.0.9008          
  [7] shiny_1.7.5.1                  hermes_1.0.1.9019             
  [9] SummarizedExperiment_1.30.2    Biobase_2.60.0                
 [11] GenomicRanges_1.52.1           GenomeInfoDb_1.36.4           
@@ -1111,49 +1116,52 @@ loaded via a namespace (and not attached):
  [39] shinycssloaders_1.0.0       ps_1.7.5                   
  [41] AnnotationDbi_1.62.2        DESeq2_1.40.2              
  [43] crosstalk_1.2.0             RSQLite_2.3.1              
- [45] filelock_1.0.2              labeling_0.4.3             
- [47] fansi_1.0.5                 httr_1.4.7                 
- [49] abind_1.4-5                 compiler_4.3.1             
- [51] bit64_4.0.5                 withr_2.5.1                
- [53] doParallel_1.0.17           backports_1.4.1            
- [55] BiocParallel_1.34.2         DBI_1.1.3                  
- [57] logger_0.2.2                biomaRt_2.56.1             
- [59] rappdirs_0.3.3              DelayedArray_0.26.7        
- [61] rjson_0.2.21                tools_4.3.1                
- [63] httpuv_1.6.12               glue_1.6.2                 
- [65] callr_3.7.3                 promises_1.2.1             
- [67] grid_4.3.1                  checkmate_2.2.0            
- [69] cluster_2.1.4               generics_0.1.3             
- [71] gtable_0.3.4                tidyr_1.3.0                
- [73] hms_1.1.3                   xml2_1.3.5                 
- [75] utf8_1.2.4                  XVector_0.40.0             
- [77] ggrepel_0.9.4               foreach_1.5.2              
- [79] pillar_1.9.0                stringr_1.5.0              
- [81] limma_3.56.2                later_1.3.1                
- [83] circlize_0.4.15             dplyr_1.1.3                
- [85] BiocFileCache_2.8.0         lattice_0.22-5             
- [87] bit_4.0.5                   tidyselect_1.2.0           
- [89] ComplexHeatmap_2.16.0       locfit_1.5-9.8             
- [91] Biostrings_2.68.1           knitr_1.44                 
- [93] gridExtra_2.3               teal.logger_0.1.3.9007     
- [95] edgeR_3.42.4                xfun_0.40                  
- [97] brio_1.1.3                  DT_0.30                    
- [99] stringi_1.7.12              yaml_2.3.7                 
-[101] shinyWidgets_0.8.0          evaluate_0.22              
-[103] codetools_0.2-19            tibble_3.2.1               
-[105] cli_3.6.1                   xtable_1.8-4               
-[107] Rdpack_2.5                  processx_3.8.2             
-[109] jquerylib_0.1.4             munsell_0.5.0              
-[111] teal.reporter_0.2.1.9011    Rcpp_1.0.11                
-[113] dbplyr_2.3.4                png_0.1-8                  
-[115] XML_3.99-0.14               parallel_4.3.1             
-[117] ellipsis_0.3.2              assertthat_0.2.1           
-[119] blob_1.2.4                  prettyunits_1.2.0          
-[121] bitops_1.0-7                scales_1.2.1               
-[123] purrr_1.0.2                 crayon_1.5.2               
-[125] GetoptLong_1.0.5            rlang_1.1.1                
-[127] formatR_1.14                KEGGREST_1.40.1            
-[129] shinyjs_2.1.0              </code></pre>
+ [45] teal.code_0.4.1.9005        filelock_1.0.2             
+ [47] labeling_0.4.3              fansi_1.0.5                
+ [49] httr_1.4.7                  abind_1.4-5                
+ [51] compiler_4.3.1              bit64_4.0.5                
+ [53] withr_2.5.1                 doParallel_1.0.17          
+ [55] backports_1.4.1             BiocParallel_1.34.2        
+ [57] DBI_1.1.3                   logger_0.2.2               
+ [59] R.utils_2.12.2              biomaRt_2.56.1             
+ [61] rappdirs_0.3.3              DelayedArray_0.26.7        
+ [63] rjson_0.2.21                tools_4.3.1                
+ [65] httpuv_1.6.12               R.oo_1.25.0                
+ [67] glue_1.6.2                  callr_3.7.3                
+ [69] R.cache_0.16.0              promises_1.2.1             
+ [71] grid_4.3.1                  checkmate_2.2.0            
+ [73] cluster_2.1.4               generics_0.1.3             
+ [75] gtable_0.3.4                R.methodsS3_1.8.2          
+ [77] tidyr_1.3.0                 hms_1.1.3                  
+ [79] xml2_1.3.5                  utf8_1.2.4                 
+ [81] XVector_0.40.0              ggrepel_0.9.4              
+ [83] foreach_1.5.2               pillar_1.9.0               
+ [85] stringr_1.5.0               limma_3.56.2               
+ [87] later_1.3.1                 circlize_0.4.15            
+ [89] dplyr_1.1.3                 BiocFileCache_2.8.0        
+ [91] lattice_0.22-5              bit_4.0.5                  
+ [93] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
+ [95] locfit_1.5-9.8              Biostrings_2.68.1          
+ [97] knitr_1.44                  gridExtra_2.3              
+ [99] teal.logger_0.1.3.9007      edgeR_3.42.4               
+[101] xfun_0.40                   brio_1.1.3                 
+[103] DT_0.30                     stringi_1.7.12             
+[105] yaml_2.3.7                  shinyWidgets_0.8.0         
+[107] evaluate_0.22               codetools_0.2-19           
+[109] tibble_3.2.1                cli_3.6.1                  
+[111] xtable_1.8-4                Rdpack_2.5                 
+[113] processx_3.8.2              jquerylib_0.1.4            
+[115] munsell_0.5.0               styler_1.10.2              
+[117] teal.reporter_0.2.1.9011    Rcpp_1.0.11                
+[119] dbplyr_2.3.4                png_0.1-8                  
+[121] XML_3.99-0.14               parallel_4.3.1             
+[123] ellipsis_0.3.2              assertthat_0.2.1           
+[125] blob_1.2.4                  prettyunits_1.2.0          
+[127] bitops_1.0-7                scales_1.2.1               
+[129] purrr_1.0.2                 crayon_1.5.2               
+[131] GetoptLong_1.0.5            rlang_1.1.1                
+[133] formatR_1.14                KEGGREST_1.40.1            
+[135] shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>
@@ -1574,139 +1582,139 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb18" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">---</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a><span class="an">title:</span><span class="co"> RNAG3</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq PCA Graphs</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb18-5"><a href="#cb18-5"></a><span class="co">---</span></span>
-<span id="cb18-6"><a href="#cb18-6"></a></span>
-<span id="cb18-7"><a href="#cb18-7"></a>------------------------------------------------------------------------</span>
-<span id="cb18-8"><a href="#cb18-8"></a></span>
-<span id="cb18-9"><a href="#cb18-9"></a>::: panel-tabset</span>
-<span id="cb18-10"><a href="#cb18-10"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
-<span id="cb18-11"><a href="#cb18-11"></a></span>
-<span id="cb18-12"><a href="#cb18-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions for principal components analysis and plots of RNAseq data sets.</span>
-<span id="cb18-13"><a href="#cb18-13"></a></span>
-<span id="cb18-14"><a href="#cb18-14"></a>The principal components analysis function uses <span class="in">`HermesData`</span> as input.</span>
-<span id="cb18-15"><a href="#cb18-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
-<span id="cb18-16"><a href="#cb18-16"></a></span>
-<span id="cb18-17"><a href="#cb18-17"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb18-18"><a href="#cb18-18"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb18-19"><a href="#cb18-19"></a></span>
-<span id="cb18-20"><a href="#cb18-20"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
-<span id="cb18-21"><a href="#cb18-21"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb18-22"><a href="#cb18-22"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb18-23"><a href="#cb18-23"></a>  <span class="fu">normalize</span>()</span>
-<span id="cb18-24"><a href="#cb18-24"></a><span class="in">```</span></span>
-<span id="cb18-25"><a href="#cb18-25"></a></span>
-<span id="cb18-26"><a href="#cb18-26"></a><span class="fu">## Principal Components Analysis</span></span>
-<span id="cb18-27"><a href="#cb18-27"></a></span>
-<span id="cb18-28"><a href="#cb18-28"></a>Once we have filtered out low quality genes and samples, and normalized the counts, we can perform principal components analysis of the gene counts across all samples using the <span class="in">`calc_pca()`</span> function.</span>
-<span id="cb18-29"><a href="#cb18-29"></a>The <span class="in">`calc_pca()`</span> function uses by default the raw counts, unless otherwise specified in the <span class="in">`assay_name`</span> argument of the function.</span>
-<span id="cb18-30"><a href="#cb18-30"></a></span>
-<span id="cb18-33"><a href="#cb18-33"></a><span class="in">```{r}</span></span>
-<span id="cb18-34"><a href="#cb18-34"></a>result <span class="ot">&lt;-</span> <span class="fu">calc_pca</span>(object)</span>
-<span id="cb18-35"><a href="#cb18-35"></a></span>
-<span id="cb18-36"><a href="#cb18-36"></a>result_cpm <span class="ot">&lt;-</span> <span class="fu">calc_pca</span>(object, <span class="at">assay_name =</span> <span class="st">"cpm"</span>)</span>
-<span id="cb18-37"><a href="#cb18-37"></a><span class="in">```</span></span>
-<span id="cb18-38"><a href="#cb18-38"></a></span>
-<span id="cb18-39"><a href="#cb18-39"></a><span class="fu">## Principal Components Plot</span></span>
-<span id="cb18-40"><a href="#cb18-40"></a></span>
-<span id="cb18-41"><a href="#cb18-41"></a>We can then also plot these principal component results using the corresponding <span class="in">`autoplot()`</span> method.</span>
-<span id="cb18-42"><a href="#cb18-42"></a></span>
-<span id="cb18-45"><a href="#cb18-45"></a><span class="in">```{r}</span></span>
-<span id="cb18-46"><a href="#cb18-46"></a><span class="fu">autoplot</span>(result)</span>
-<span id="cb18-47"><a href="#cb18-47"></a><span class="in">```</span></span>
-<span id="cb18-48"><a href="#cb18-48"></a></span>
-<span id="cb18-49"><a href="#cb18-49"></a>There are many different options for plotting.</span>
-<span id="cb18-50"><a href="#cb18-50"></a>See <span class="in">`?autoplot.pca_common`</span> for the full details.</span>
-<span id="cb18-51"><a href="#cb18-51"></a>Here some examples.</span>
-<span id="cb18-52"><a href="#cb18-52"></a></span>
-<span id="cb18-53"><a href="#cb18-53"></a>We can specify which principal components should be plotted against each other.</span>
-<span id="cb18-54"><a href="#cb18-54"></a></span>
-<span id="cb18-57"><a href="#cb18-57"></a><span class="in">```{r}</span></span>
-<span id="cb18-58"><a href="#cb18-58"></a><span class="fu">autoplot</span>(result, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">3</span>)</span>
-<span id="cb18-59"><a href="#cb18-59"></a><span class="in">```</span></span>
-<span id="cb18-60"><a href="#cb18-60"></a></span>
-<span id="cb18-61"><a href="#cb18-61"></a>We can also include sample labels on the plot.</span>
-<span id="cb18-62"><a href="#cb18-62"></a></span>
-<span id="cb18-65"><a href="#cb18-65"></a><span class="in">```{r}</span></span>
-<span id="cb18-66"><a href="#cb18-66"></a><span class="fu">autoplot</span>(result, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-67"><a href="#cb18-67"></a><span class="in">```</span></span>
-<span id="cb18-68"><a href="#cb18-68"></a></span>
-<span id="cb18-69"><a href="#cb18-69"></a>Or we can exclude the variance percentages from the axis labels.</span>
-<span id="cb18-70"><a href="#cb18-70"></a></span>
-<span id="cb18-73"><a href="#cb18-73"></a><span class="in">```{r}</span></span>
-<span id="cb18-74"><a href="#cb18-74"></a><span class="fu">autoplot</span>(result, <span class="at">variance_percentage =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb18-75"><a href="#cb18-75"></a><span class="in">```</span></span>
-<span id="cb18-76"><a href="#cb18-76"></a></span>
-<span id="cb18-77"><a href="#cb18-77"></a>As a last example, we can also color the points by a sample variable.</span>
-<span id="cb18-78"><a href="#cb18-78"></a></span>
-<span id="cb18-81"><a href="#cb18-81"></a><span class="in">```{r}</span></span>
-<span id="cb18-82"><a href="#cb18-82"></a><span class="fu">autoplot</span>(result, <span class="at">data =</span> <span class="fu">as.data.frame</span>(<span class="fu">colData</span>(object)), <span class="at">colour =</span> <span class="st">"COUNTRY"</span>)</span>
-<span id="cb18-83"><a href="#cb18-83"></a><span class="in">```</span></span>
-<span id="cb18-84"><a href="#cb18-84"></a></span>
-<span id="cb18-85"><a href="#cb18-85"></a><span class="fu">## Correlation of Principal Components with Sample Variables</span></span>
-<span id="cb18-86"><a href="#cb18-86"></a></span>
-<span id="cb18-87"><a href="#cb18-87"></a>We can also calculate the correlation (in R2 values) between sample variables in <span class="in">`HermesData`</span> and the principal components of these samples using <span class="in">`correlate()`</span>:</span>
-<span id="cb18-88"><a href="#cb18-88"></a></span>
-<span id="cb18-91"><a href="#cb18-91"></a><span class="in">```{r}</span></span>
-<span id="cb18-92"><a href="#cb18-92"></a>cors <span class="ot">&lt;-</span> <span class="fu">correlate</span>(result, object)</span>
-<span id="cb18-93"><a href="#cb18-93"></a><span class="in">```</span></span>
-<span id="cb18-94"><a href="#cb18-94"></a></span>
-<span id="cb18-95"><a href="#cb18-95"></a>We can then also plot these R2 values between sample variables and principal components again using the <span class="in">`autoplot()`</span> method.</span>
-<span id="cb18-96"><a href="#cb18-96"></a>Sample variables that have high correlation with major principal components can point to potential batch effects.</span>
-<span id="cb18-97"><a href="#cb18-97"></a></span>
-<span id="cb18-100"><a href="#cb18-100"></a><span class="in">```{r}</span></span>
-<span id="cb18-101"><a href="#cb18-101"></a><span class="fu">autoplot</span>(cors)</span>
-<span id="cb18-102"><a href="#cb18-102"></a><span class="in">```</span></span>
-<span id="cb18-103"><a href="#cb18-103"></a></span>
-<span id="cb18-104"><a href="#cb18-104"></a>We can also avoid reordering the principal components column.</span>
-<span id="cb18-105"><a href="#cb18-105"></a></span>
-<span id="cb18-108"><a href="#cb18-108"></a><span class="in">```{r}</span></span>
-<span id="cb18-109"><a href="#cb18-109"></a><span class="fu">autoplot</span>(cors, <span class="at">cluster_columns =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb18-110"><a href="#cb18-110"></a><span class="in">```</span></span>
-<span id="cb18-111"><a href="#cb18-111"></a></span>
-<span id="cb18-112"><a href="#cb18-112"></a>We can also update the color definitions of R2 values in the heatmap.</span>
-<span id="cb18-113"><a href="#cb18-113"></a></span>
-<span id="cb18-116"><a href="#cb18-116"></a><span class="in">```{r}</span></span>
-<span id="cb18-117"><a href="#cb18-117"></a><span class="fu">autoplot</span>(cors,</span>
-<span id="cb18-118"><a href="#cb18-118"></a>  <span class="at">cor_colors =</span> circlize<span class="sc">::</span><span class="fu">colorRamp2</span>(</span>
-<span id="cb18-119"><a href="#cb18-119"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>),</span>
-<span id="cb18-120"><a href="#cb18-120"></a>    <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"purple"</span>, <span class="st">"yellow"</span>, <span class="st">"orange"</span>, <span class="st">"red"</span>)</span>
-<span id="cb18-121"><a href="#cb18-121"></a>  )</span>
-<span id="cb18-122"><a href="#cb18-122"></a>)</span>
-<span id="cb18-123"><a href="#cb18-123"></a><span class="in">```</span></span>
-<span id="cb18-124"><a href="#cb18-124"></a></span>
-<span id="cb18-125"><a href="#cb18-125"></a>See <span class="in">`?pca_cor_samplevar`</span> for the detailed options.</span>
-<span id="cb18-126"><a href="#cb18-126"></a></span>
-<span id="cb18-127"><a href="#cb18-127"></a><span class="fu">## Teal Module for PCA Graphs</span></span>
-<span id="cb18-128"><a href="#cb18-128"></a></span>
-<span id="cb18-129"><a href="#cb18-129"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb18-130"><a href="#cb18-130"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb18-131"><a href="#cb18-131"></a>We can then use the provided teal module <span class="in">`tm_g_pca`</span> to include a PCA module in our teal app.</span>
-<span id="cb18-132"><a href="#cb18-132"></a></span>
-<span id="cb18-133"><a href="#cb18-133"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
-<span id="cb18-134"><a href="#cb18-134"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
-<span id="cb18-135"><a href="#cb18-135"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb18-136"><a href="#cb18-136"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb18-137"><a href="#cb18-137"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb18-138"><a href="#cb18-138"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb18-139"><a href="#cb18-139"></a></span>
-<span id="cb18-140"><a href="#cb18-140"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb18-141"><a href="#cb18-141"></a>  <span class="at">data =</span> data,</span>
-<span id="cb18-142"><a href="#cb18-142"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb18-143"><a href="#cb18-143"></a>    <span class="fu">tm_g_pca</span>(</span>
-<span id="cb18-144"><a href="#cb18-144"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
-<span id="cb18-145"><a href="#cb18-145"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb18-146"><a href="#cb18-146"></a>    )</span>
-<span id="cb18-147"><a href="#cb18-147"></a>  )</span>
-<span id="cb18-148"><a href="#cb18-148"></a>)</span>
-<span id="cb18-149"><a href="#cb18-149"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb18-150"><a href="#cb18-150"></a><span class="in">```</span></span>
-<span id="cb18-151"><a href="#cb18-151"></a></span>
-<span id="cb18-152"><a href="#cb18-152"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb18-153"><a href="#cb18-153"></a>:::</span>
+<div class="sourceCode" id="cb20" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1"></a><span class="co">---</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="an">title:</span><span class="co"> RNAG3</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq PCA Graphs</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="co">---</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a></span>
+<span id="cb20-7"><a href="#cb20-7"></a>------------------------------------------------------------------------</span>
+<span id="cb20-8"><a href="#cb20-8"></a></span>
+<span id="cb20-9"><a href="#cb20-9"></a>::: panel-tabset</span>
+<span id="cb20-10"><a href="#cb20-10"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
+<span id="cb20-11"><a href="#cb20-11"></a></span>
+<span id="cb20-12"><a href="#cb20-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions for principal components analysis and plots of RNAseq data sets.</span>
+<span id="cb20-13"><a href="#cb20-13"></a></span>
+<span id="cb20-14"><a href="#cb20-14"></a>The principal components analysis function uses <span class="in">`HermesData`</span> as input.</span>
+<span id="cb20-15"><a href="#cb20-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
+<span id="cb20-16"><a href="#cb20-16"></a></span>
+<span id="cb20-17"><a href="#cb20-17"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb20-18"><a href="#cb20-18"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb20-19"><a href="#cb20-19"></a></span>
+<span id="cb20-20"><a href="#cb20-20"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
+<span id="cb20-21"><a href="#cb20-21"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb20-22"><a href="#cb20-22"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb20-23"><a href="#cb20-23"></a>  <span class="fu">normalize</span>()</span>
+<span id="cb20-24"><a href="#cb20-24"></a><span class="in">```</span></span>
+<span id="cb20-25"><a href="#cb20-25"></a></span>
+<span id="cb20-26"><a href="#cb20-26"></a><span class="fu">## Principal Components Analysis</span></span>
+<span id="cb20-27"><a href="#cb20-27"></a></span>
+<span id="cb20-28"><a href="#cb20-28"></a>Once we have filtered out low quality genes and samples, and normalized the counts, we can perform principal components analysis of the gene counts across all samples using the <span class="in">`calc_pca()`</span> function.</span>
+<span id="cb20-29"><a href="#cb20-29"></a>The <span class="in">`calc_pca()`</span> function uses by default the raw counts, unless otherwise specified in the <span class="in">`assay_name`</span> argument of the function.</span>
+<span id="cb20-30"><a href="#cb20-30"></a></span>
+<span id="cb20-33"><a href="#cb20-33"></a><span class="in">```{r}</span></span>
+<span id="cb20-34"><a href="#cb20-34"></a>result <span class="ot">&lt;-</span> <span class="fu">calc_pca</span>(object)</span>
+<span id="cb20-35"><a href="#cb20-35"></a></span>
+<span id="cb20-36"><a href="#cb20-36"></a>result_cpm <span class="ot">&lt;-</span> <span class="fu">calc_pca</span>(object, <span class="at">assay_name =</span> <span class="st">"cpm"</span>)</span>
+<span id="cb20-37"><a href="#cb20-37"></a><span class="in">```</span></span>
+<span id="cb20-38"><a href="#cb20-38"></a></span>
+<span id="cb20-39"><a href="#cb20-39"></a><span class="fu">## Principal Components Plot</span></span>
+<span id="cb20-40"><a href="#cb20-40"></a></span>
+<span id="cb20-41"><a href="#cb20-41"></a>We can then also plot these principal component results using the corresponding <span class="in">`autoplot()`</span> method.</span>
+<span id="cb20-42"><a href="#cb20-42"></a></span>
+<span id="cb20-45"><a href="#cb20-45"></a><span class="in">```{r}</span></span>
+<span id="cb20-46"><a href="#cb20-46"></a><span class="fu">autoplot</span>(result)</span>
+<span id="cb20-47"><a href="#cb20-47"></a><span class="in">```</span></span>
+<span id="cb20-48"><a href="#cb20-48"></a></span>
+<span id="cb20-49"><a href="#cb20-49"></a>There are many different options for plotting.</span>
+<span id="cb20-50"><a href="#cb20-50"></a>See <span class="in">`?autoplot.pca_common`</span> for the full details.</span>
+<span id="cb20-51"><a href="#cb20-51"></a>Here some examples.</span>
+<span id="cb20-52"><a href="#cb20-52"></a></span>
+<span id="cb20-53"><a href="#cb20-53"></a>We can specify which principal components should be plotted against each other.</span>
+<span id="cb20-54"><a href="#cb20-54"></a></span>
+<span id="cb20-57"><a href="#cb20-57"></a><span class="in">```{r}</span></span>
+<span id="cb20-58"><a href="#cb20-58"></a><span class="fu">autoplot</span>(result, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">3</span>)</span>
+<span id="cb20-59"><a href="#cb20-59"></a><span class="in">```</span></span>
+<span id="cb20-60"><a href="#cb20-60"></a></span>
+<span id="cb20-61"><a href="#cb20-61"></a>We can also include sample labels on the plot.</span>
+<span id="cb20-62"><a href="#cb20-62"></a></span>
+<span id="cb20-65"><a href="#cb20-65"></a><span class="in">```{r}</span></span>
+<span id="cb20-66"><a href="#cb20-66"></a><span class="fu">autoplot</span>(result, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb20-67"><a href="#cb20-67"></a><span class="in">```</span></span>
+<span id="cb20-68"><a href="#cb20-68"></a></span>
+<span id="cb20-69"><a href="#cb20-69"></a>Or we can exclude the variance percentages from the axis labels.</span>
+<span id="cb20-70"><a href="#cb20-70"></a></span>
+<span id="cb20-73"><a href="#cb20-73"></a><span class="in">```{r}</span></span>
+<span id="cb20-74"><a href="#cb20-74"></a><span class="fu">autoplot</span>(result, <span class="at">variance_percentage =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb20-75"><a href="#cb20-75"></a><span class="in">```</span></span>
+<span id="cb20-76"><a href="#cb20-76"></a></span>
+<span id="cb20-77"><a href="#cb20-77"></a>As a last example, we can also color the points by a sample variable.</span>
+<span id="cb20-78"><a href="#cb20-78"></a></span>
+<span id="cb20-81"><a href="#cb20-81"></a><span class="in">```{r}</span></span>
+<span id="cb20-82"><a href="#cb20-82"></a><span class="fu">autoplot</span>(result, <span class="at">data =</span> <span class="fu">as.data.frame</span>(<span class="fu">colData</span>(object)), <span class="at">colour =</span> <span class="st">"COUNTRY"</span>)</span>
+<span id="cb20-83"><a href="#cb20-83"></a><span class="in">```</span></span>
+<span id="cb20-84"><a href="#cb20-84"></a></span>
+<span id="cb20-85"><a href="#cb20-85"></a><span class="fu">## Correlation of Principal Components with Sample Variables</span></span>
+<span id="cb20-86"><a href="#cb20-86"></a></span>
+<span id="cb20-87"><a href="#cb20-87"></a>We can also calculate the correlation (in R2 values) between sample variables in <span class="in">`HermesData`</span> and the principal components of these samples using <span class="in">`correlate()`</span>:</span>
+<span id="cb20-88"><a href="#cb20-88"></a></span>
+<span id="cb20-91"><a href="#cb20-91"></a><span class="in">```{r}</span></span>
+<span id="cb20-92"><a href="#cb20-92"></a>cors <span class="ot">&lt;-</span> <span class="fu">correlate</span>(result, object)</span>
+<span id="cb20-93"><a href="#cb20-93"></a><span class="in">```</span></span>
+<span id="cb20-94"><a href="#cb20-94"></a></span>
+<span id="cb20-95"><a href="#cb20-95"></a>We can then also plot these R2 values between sample variables and principal components again using the <span class="in">`autoplot()`</span> method.</span>
+<span id="cb20-96"><a href="#cb20-96"></a>Sample variables that have high correlation with major principal components can point to potential batch effects.</span>
+<span id="cb20-97"><a href="#cb20-97"></a></span>
+<span id="cb20-100"><a href="#cb20-100"></a><span class="in">```{r}</span></span>
+<span id="cb20-101"><a href="#cb20-101"></a><span class="fu">autoplot</span>(cors)</span>
+<span id="cb20-102"><a href="#cb20-102"></a><span class="in">```</span></span>
+<span id="cb20-103"><a href="#cb20-103"></a></span>
+<span id="cb20-104"><a href="#cb20-104"></a>We can also avoid reordering the principal components column.</span>
+<span id="cb20-105"><a href="#cb20-105"></a></span>
+<span id="cb20-108"><a href="#cb20-108"></a><span class="in">```{r}</span></span>
+<span id="cb20-109"><a href="#cb20-109"></a><span class="fu">autoplot</span>(cors, <span class="at">cluster_columns =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb20-110"><a href="#cb20-110"></a><span class="in">```</span></span>
+<span id="cb20-111"><a href="#cb20-111"></a></span>
+<span id="cb20-112"><a href="#cb20-112"></a>We can also update the color definitions of R2 values in the heatmap.</span>
+<span id="cb20-113"><a href="#cb20-113"></a></span>
+<span id="cb20-116"><a href="#cb20-116"></a><span class="in">```{r}</span></span>
+<span id="cb20-117"><a href="#cb20-117"></a><span class="fu">autoplot</span>(cors,</span>
+<span id="cb20-118"><a href="#cb20-118"></a>  <span class="at">cor_colors =</span> circlize<span class="sc">::</span><span class="fu">colorRamp2</span>(</span>
+<span id="cb20-119"><a href="#cb20-119"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>),</span>
+<span id="cb20-120"><a href="#cb20-120"></a>    <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"purple"</span>, <span class="st">"yellow"</span>, <span class="st">"orange"</span>, <span class="st">"red"</span>)</span>
+<span id="cb20-121"><a href="#cb20-121"></a>  )</span>
+<span id="cb20-122"><a href="#cb20-122"></a>)</span>
+<span id="cb20-123"><a href="#cb20-123"></a><span class="in">```</span></span>
+<span id="cb20-124"><a href="#cb20-124"></a></span>
+<span id="cb20-125"><a href="#cb20-125"></a>See <span class="in">`?pca_cor_samplevar`</span> for the detailed options.</span>
+<span id="cb20-126"><a href="#cb20-126"></a></span>
+<span id="cb20-127"><a href="#cb20-127"></a><span class="fu">## Teal Module for PCA Graphs</span></span>
+<span id="cb20-128"><a href="#cb20-128"></a></span>
+<span id="cb20-129"><a href="#cb20-129"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb20-130"><a href="#cb20-130"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb20-131"><a href="#cb20-131"></a>We can then use the provided teal module <span class="in">`tm_g_pca`</span> to include a PCA module in our teal app.</span>
+<span id="cb20-132"><a href="#cb20-132"></a></span>
+<span id="cb20-133"><a href="#cb20-133"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
+<span id="cb20-134"><a href="#cb20-134"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
+<span id="cb20-135"><a href="#cb20-135"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb20-136"><a href="#cb20-136"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb20-137"><a href="#cb20-137"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb20-138"><a href="#cb20-138"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
+<span id="cb20-139"><a href="#cb20-139"></a></span>
+<span id="cb20-140"><a href="#cb20-140"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb20-141"><a href="#cb20-141"></a>  <span class="at">data =</span> data,</span>
+<span id="cb20-142"><a href="#cb20-142"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb20-143"><a href="#cb20-143"></a>    <span class="fu">tm_g_pca</span>(</span>
+<span id="cb20-144"><a href="#cb20-144"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
+<span id="cb20-145"><a href="#cb20-145"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb20-146"><a href="#cb20-146"></a>    )</span>
+<span id="cb20-147"><a href="#cb20-147"></a>  )</span>
+<span id="cb20-148"><a href="#cb20-148"></a>)</span>
+<span id="cb20-149"><a href="#cb20-149"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb20-150"><a href="#cb20-150"></a><span class="in">```</span></span>
+<span id="cb20-151"><a href="#cb20-151"></a></span>
+<span id="cb20-152"><a href="#cb20-152"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb20-153"><a href="#cb20-153"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

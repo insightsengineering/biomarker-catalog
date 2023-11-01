@@ -995,23 +995,28 @@ cookieconsent.run({
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
 <span id="cb10-2"><a href="#cb10-2"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
 <span id="cb10-3"><a href="#cb10-3"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb10-4"><a href="#cb10-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb10-5"><a href="#cb10-5"></a></span>
-<span id="cb10-6"><a href="#cb10-6"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb10-7"><a href="#cb10-7"></a>  <span class="at">data =</span> data,</span>
-<span id="cb10-8"><a href="#cb10-8"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb10-9"><a href="#cb10-9"></a>    <span class="fu">tm_g_volcanoplot</span>(</span>
-<span id="cb10-10"><a href="#cb10-10"></a>      <span class="at">label =</span> <span class="st">"volcanoplot"</span>,</span>
-<span id="cb10-11"><a href="#cb10-11"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb10-12"><a href="#cb10-12"></a>    )</span>
-<span id="cb10-13"><a href="#cb10-13"></a>  )</span>
-<span id="cb10-14"><a href="#cb10-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-10-28 17:41:11.2407 pid:5521 token:[] teal.modules.hermes Initializing tm_g_volcanoplot</code></pre>
+<span id="cb10-4"><a href="#cb10-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `data_objects` argument of `teal_data()` should use data directly. Using
+TealDatasetConnector and TealDataset is deprecated. Find more information on
+https://github.com/insightsengineering/teal/discussions/945 as of teal.data
+0.3.1.</code></pre>
 </div>
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="at">data =</span> data,</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="fu">tm_g_volcanoplot</span>(</span>
+<span id="cb12-5"><a href="#cb12-5"></a>      <span class="at">label =</span> <span class="st">"volcanoplot"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>    )</span>
+<span id="cb12-8"><a href="#cb12-8"></a>  )</span>
+<span id="cb12-9"><a href="#cb12-9"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-10-28 17:41:12.5482 pid:5521 token:[8095daee] teal Initializing reporter_previewer_module</code></pre>
+<pre><code>[INFO] 2023-11-01 17:56:33.3137 pid:9234 token:[] teal.modules.hermes Initializing tm_g_volcanoplot</code></pre>
+</div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[INFO] 2023-11-01 17:56:34.8412 pid:9234 token:[9d462bd9] teal Initializing reporter_previewer_module</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="rnag05_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="1440"></p>
@@ -1020,7 +1025,7 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
 <div class="cell" data-hash="rnag05_cache/html/sessioninfo_f947cfa1b0faf22ddd3cb6ea147c610c">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -1046,9 +1051,9 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9016              
+ [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9017              
  [3] teal.transform_0.4.0.9006      magrittr_2.0.3                
- [5] teal.slice_0.4.0.9021          teal.data_0.3.0.9007          
+ [5] teal.slice_0.4.0.9022          teal.data_0.3.0.9008          
  [7] shiny_1.7.5.1                  hermes_1.0.1.9019             
  [9] SummarizedExperiment_1.30.2    Biobase_2.60.0                
 [11] GenomicRanges_1.52.1           GenomeInfoDb_1.36.4           
@@ -1079,49 +1084,52 @@ loaded via a namespace (and not attached):
  [37] colorspace_2.1-0            shinycssloaders_1.0.0      
  [39] ps_1.7.5                    AnnotationDbi_1.62.2       
  [41] DESeq2_1.40.2               crosstalk_1.2.0            
- [43] RSQLite_2.3.1               filelock_1.0.2             
- [45] labeling_0.4.3              fansi_1.0.5                
- [47] httr_1.4.7                  abind_1.4-5                
- [49] compiler_4.3.1              bit64_4.0.5                
- [51] withr_2.5.1                 doParallel_1.0.17          
- [53] backports_1.4.1             BiocParallel_1.34.2        
- [55] DBI_1.1.3                   logger_0.2.2               
- [57] biomaRt_2.56.1              rappdirs_0.3.3             
- [59] DelayedArray_0.26.7         rjson_0.2.21               
- [61] tools_4.3.1                 httpuv_1.6.12              
- [63] glue_1.6.2                  callr_3.7.3                
- [65] promises_1.2.1              grid_4.3.1                 
- [67] checkmate_2.2.0             cluster_2.1.4              
- [69] generics_0.1.3              gtable_0.3.4               
- [71] tidyr_1.3.0                 hms_1.1.3                  
- [73] xml2_1.3.5                  utf8_1.2.4                 
- [75] XVector_0.40.0              ggrepel_0.9.4              
- [77] foreach_1.5.2               pillar_1.9.0               
- [79] stringr_1.5.0               limma_3.56.2               
- [81] later_1.3.1                 circlize_0.4.15            
- [83] dplyr_1.1.3                 BiocFileCache_2.8.0        
- [85] lattice_0.22-5              bit_4.0.5                  
- [87] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
- [89] locfit_1.5-9.8              Biostrings_2.68.1          
- [91] knitr_1.44                  gridExtra_2.3              
- [93] teal.logger_0.1.3.9007      edgeR_3.42.4               
- [95] xfun_0.40                   brio_1.1.3                 
- [97] DT_0.30                     stringi_1.7.12             
- [99] yaml_2.3.7                  shinyWidgets_0.8.0         
-[101] evaluate_0.22               codetools_0.2-19           
-[103] tibble_3.2.1                cli_3.6.1                  
-[105] xtable_1.8-4                Rdpack_2.5                 
-[107] processx_3.8.2              jquerylib_0.1.4            
-[109] munsell_0.5.0               teal.reporter_0.2.1.9011   
-[111] Rcpp_1.0.11                 dbplyr_2.3.4               
-[113] png_0.1-8                   XML_3.99-0.14              
-[115] parallel_4.3.1              ellipsis_0.3.2             
-[117] assertthat_0.2.1            blob_1.2.4                 
-[119] prettyunits_1.2.0           bitops_1.0-7               
-[121] scales_1.2.1                purrr_1.0.2                
-[123] crayon_1.5.2                GetoptLong_1.0.5           
-[125] rlang_1.1.1                 formatR_1.14               
-[127] KEGGREST_1.40.1             shinyjs_2.1.0              </code></pre>
+ [43] RSQLite_2.3.1               teal.code_0.4.1.9005       
+ [45] filelock_1.0.2              labeling_0.4.3             
+ [47] fansi_1.0.5                 httr_1.4.7                 
+ [49] abind_1.4-5                 compiler_4.3.1             
+ [51] bit64_4.0.5                 withr_2.5.1                
+ [53] doParallel_1.0.17           backports_1.4.1            
+ [55] BiocParallel_1.34.2         DBI_1.1.3                  
+ [57] logger_0.2.2                R.utils_2.12.2             
+ [59] biomaRt_2.56.1              rappdirs_0.3.3             
+ [61] DelayedArray_0.26.7         rjson_0.2.21               
+ [63] tools_4.3.1                 httpuv_1.6.12              
+ [65] R.oo_1.25.0                 glue_1.6.2                 
+ [67] callr_3.7.3                 R.cache_0.16.0             
+ [69] promises_1.2.1              grid_4.3.1                 
+ [71] checkmate_2.2.0             cluster_2.1.4              
+ [73] generics_0.1.3              gtable_0.3.4               
+ [75] R.methodsS3_1.8.2           tidyr_1.3.0                
+ [77] hms_1.1.3                   xml2_1.3.5                 
+ [79] utf8_1.2.4                  XVector_0.40.0             
+ [81] ggrepel_0.9.4               foreach_1.5.2              
+ [83] pillar_1.9.0                stringr_1.5.0              
+ [85] limma_3.56.2                later_1.3.1                
+ [87] circlize_0.4.15             dplyr_1.1.3                
+ [89] BiocFileCache_2.8.0         lattice_0.22-5             
+ [91] bit_4.0.5                   tidyselect_1.2.0           
+ [93] ComplexHeatmap_2.16.0       locfit_1.5-9.8             
+ [95] Biostrings_2.68.1           knitr_1.44                 
+ [97] gridExtra_2.3               teal.logger_0.1.3.9007     
+ [99] edgeR_3.42.4                xfun_0.40                  
+[101] brio_1.1.3                  DT_0.30                    
+[103] stringi_1.7.12              yaml_2.3.7                 
+[105] shinyWidgets_0.8.0          evaluate_0.22              
+[107] codetools_0.2-19            tibble_3.2.1               
+[109] cli_3.6.1                   xtable_1.8-4               
+[111] Rdpack_2.5                  processx_3.8.2             
+[113] jquerylib_0.1.4             munsell_0.5.0              
+[115] styler_1.10.2               teal.reporter_0.2.1.9011   
+[117] Rcpp_1.0.11                 dbplyr_2.3.4               
+[119] png_0.1-8                   XML_3.99-0.14              
+[121] parallel_4.3.1              ellipsis_0.3.2             
+[123] assertthat_0.2.1            blob_1.2.4                 
+[125] prettyunits_1.2.0           bitops_1.0-7               
+[127] scales_1.2.1                purrr_1.0.2                
+[129] crayon_1.5.2                GetoptLong_1.0.5           
+[131] rlang_1.1.1                 formatR_1.14               
+[133] KEGGREST_1.40.1             shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>
@@ -1542,106 +1550,106 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb16" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a><span class="co">---</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="an">title:</span><span class="co"> RNAG5</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Differential Gene Expression Analysis</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="co">---</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a></span>
-<span id="cb16-7"><a href="#cb16-7"></a>------------------------------------------------------------------------</span>
-<span id="cb16-8"><a href="#cb16-8"></a></span>
-<span id="cb16-9"><a href="#cb16-9"></a>::: panel-tabset</span>
-<span id="cb16-10"><a href="#cb16-10"></a><span class="fu">## Setup: Import and Filter</span></span>
-<span id="cb16-11"><a href="#cb16-11"></a></span>
-<span id="cb16-12"><a href="#cb16-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to take differential gene expression analysis between samples in <span class="in">`HermesData`</span>, visualize them in a volcano graph, and create an interactive volcano graph using <span class="in">`teal.module.hermes`</span>.</span>
-<span id="cb16-13"><a href="#cb16-13"></a></span>
-<span id="cb16-14"><a href="#cb16-14"></a>The function used to calculate differential gene expression uses <span class="in">`HermesData`</span> as input.</span>
-<span id="cb16-15"><a href="#cb16-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
-<span id="cb16-16"><a href="#cb16-16"></a>In particular, the differential gene expression analysis does not require to normalize <span class="in">`HermesData`</span>.</span>
-<span id="cb16-17"><a href="#cb16-17"></a></span>
-<span id="cb16-18"><a href="#cb16-18"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb16-19"><a href="#cb16-19"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb16-20"><a href="#cb16-20"></a></span>
-<span id="cb16-21"><a href="#cb16-21"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
-<span id="cb16-22"><a href="#cb16-22"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb16-23"><a href="#cb16-23"></a>  <span class="fu">filter</span>()</span>
-<span id="cb16-24"><a href="#cb16-24"></a></span>
-<span id="cb16-25"><a href="#cb16-25"></a><span class="fu">colData</span>(object) <span class="ot">&lt;-</span> <span class="fu">df_cols_to_factor</span>(<span class="fu">colData</span>(object))</span>
-<span id="cb16-26"><a href="#cb16-26"></a><span class="in">```</span></span>
-<span id="cb16-27"><a href="#cb16-27"></a></span>
-<span id="cb16-28"><a href="#cb16-28"></a><span class="fu">## Differential Gene Expression Analysis via Limma-Voom Method</span></span>
-<span id="cb16-29"><a href="#cb16-29"></a></span>
-<span id="cb16-30"><a href="#cb16-30"></a>We can calculate a data frame in <span class="in">`HermesDataDiffExpr`</span> class to include the gene differential expression between groups in <span class="in">`HermesData`</span> using <span class="in">`diff_expression()`</span> function.</span>
-<span id="cb16-31"><a href="#cb16-31"></a>By default, <span class="in">`diff_expression()`</span> function uses the <span class="in">`limma-voom`</span> method to calculate the gene differential expression, unless specified otherwise as argument.</span>
-<span id="cb16-32"><a href="#cb16-32"></a>The <span class="in">`group`</span> argument is to set the groups for comparison.</span>
-<span id="cb16-33"><a href="#cb16-33"></a>The <span class="in">`group`</span> factors should be a 2-level factor in <span class="in">`colData(HermesData)`</span>.</span>
-<span id="cb16-34"><a href="#cb16-34"></a></span>
-<span id="cb16-37"><a href="#cb16-37"></a><span class="in">```{r}</span></span>
-<span id="cb16-38"><a href="#cb16-38"></a>result1 <span class="ot">&lt;-</span> <span class="fu">diff_expression</span>(object, <span class="at">group =</span> <span class="st">"SEX"</span>)</span>
-<span id="cb16-39"><a href="#cb16-39"></a><span class="in">```</span></span>
-<span id="cb16-40"><a href="#cb16-40"></a></span>
-<span id="cb16-41"><a href="#cb16-41"></a><span class="fu">## Differential Gene Expression Analysis via DESeq2 Method</span></span>
-<span id="cb16-42"><a href="#cb16-42"></a></span>
-<span id="cb16-43"><a href="#cb16-43"></a>We can also use the <span class="in">`DESeq2`</span> Method for gene differential expression.</span>
-<span id="cb16-44"><a href="#cb16-44"></a></span>
-<span id="cb16-47"><a href="#cb16-47"></a><span class="in">```{r}</span></span>
-<span id="cb16-48"><a href="#cb16-48"></a>result2 <span class="ot">&lt;-</span> <span class="fu">diff_expression</span>(object, <span class="at">group =</span> <span class="st">"SEX"</span>, <span class="at">method =</span> <span class="st">"deseq2"</span>)</span>
-<span id="cb16-49"><a href="#cb16-49"></a><span class="in">```</span></span>
-<span id="cb16-50"><a href="#cb16-50"></a></span>
-<span id="cb16-51"><a href="#cb16-51"></a><span class="fu">## Additional Arguments</span></span>
-<span id="cb16-52"><a href="#cb16-52"></a></span>
-<span id="cb16-53"><a href="#cb16-53"></a>It is also possible to pass additional arguments to the function behind the methods in the <span class="in">`diff_expression()`</span>, ex.</span>
-<span id="cb16-54"><a href="#cb16-54"></a>if we wish to change the type of size factor estimation when using the <span class="in">`DESeq2`</span> method.</span>
-<span id="cb16-55"><a href="#cb16-55"></a>See <span class="in">`?DESeq2::DESeq()`</span> or <span class="in">`?limma::eBayes()`</span> for details about the additional parameters available.</span>
-<span id="cb16-56"><a href="#cb16-56"></a></span>
-<span id="cb16-59"><a href="#cb16-59"></a><span class="in">```{r}</span></span>
-<span id="cb16-60"><a href="#cb16-60"></a>result3 <span class="ot">&lt;-</span> <span class="fu">diff_expression</span>(object, <span class="at">group =</span> <span class="st">"SEX"</span>, <span class="at">method =</span> <span class="st">"deseq2"</span>, <span class="at">sfType =</span> <span class="st">"ratio"</span>)</span>
-<span id="cb16-61"><a href="#cb16-61"></a><span class="in">```</span></span>
-<span id="cb16-62"><a href="#cb16-62"></a></span>
-<span id="cb16-63"><a href="#cb16-63"></a><span class="fu">## Plot Differential Gene Expression in Volcano Graph</span></span>
-<span id="cb16-64"><a href="#cb16-64"></a></span>
-<span id="cb16-65"><a href="#cb16-65"></a>We can then plot a volcano graph for differential gene expression between groups in <span class="in">`HermesData`</span> using the <span class="in">`autoplot()`</span> function.</span>
-<span id="cb16-66"><a href="#cb16-66"></a>The threshold values for adjusted p-values and log2 folder change can be specified.</span>
-<span id="cb16-67"><a href="#cb16-67"></a></span>
-<span id="cb16-70"><a href="#cb16-70"></a><span class="in">```{r}</span></span>
-<span id="cb16-71"><a href="#cb16-71"></a><span class="fu">autoplot</span>(result1)</span>
-<span id="cb16-72"><a href="#cb16-72"></a><span class="in">```</span></span>
-<span id="cb16-73"><a href="#cb16-73"></a></span>
-<span id="cb16-76"><a href="#cb16-76"></a><span class="in">```{r}</span></span>
-<span id="cb16-77"><a href="#cb16-77"></a><span class="fu">autoplot</span>(result2, <span class="at">adj_p_val_thresh =</span> <span class="fl">0.025</span>, <span class="at">log2_fc_thresh =</span> <span class="dv">5</span>)</span>
-<span id="cb16-78"><a href="#cb16-78"></a><span class="in">```</span></span>
-<span id="cb16-79"><a href="#cb16-79"></a></span>
-<span id="cb16-82"><a href="#cb16-82"></a><span class="in">```{r}</span></span>
-<span id="cb16-83"><a href="#cb16-83"></a><span class="fu">autoplot</span>(result3)</span>
-<span id="cb16-84"><a href="#cb16-84"></a><span class="in">```</span></span>
-<span id="cb16-85"><a href="#cb16-85"></a></span>
-<span id="cb16-86"><a href="#cb16-86"></a><span class="fu">## Teal Module for Sample Differential Gene Expression</span></span>
-<span id="cb16-87"><a href="#cb16-87"></a></span>
-<span id="cb16-88"><a href="#cb16-88"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb16-89"><a href="#cb16-89"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb16-90"><a href="#cb16-90"></a>We can then use the provided teal module <span class="in">`tm_g_volcanoplot`</span> to include a volcano graph module in our teal app.</span>
-<span id="cb16-91"><a href="#cb16-91"></a></span>
-<span id="cb16-92"><a href="#cb16-92"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
-<span id="cb16-93"><a href="#cb16-93"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
-<span id="cb16-94"><a href="#cb16-94"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb16-95"><a href="#cb16-95"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb16-96"><a href="#cb16-96"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb16-97"><a href="#cb16-97"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb16-98"><a href="#cb16-98"></a></span>
-<span id="cb16-99"><a href="#cb16-99"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb16-100"><a href="#cb16-100"></a>  <span class="at">data =</span> data,</span>
-<span id="cb16-101"><a href="#cb16-101"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb16-102"><a href="#cb16-102"></a>    <span class="fu">tm_g_volcanoplot</span>(</span>
-<span id="cb16-103"><a href="#cb16-103"></a>      <span class="at">label =</span> <span class="st">"volcanoplot"</span>,</span>
-<span id="cb16-104"><a href="#cb16-104"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb16-105"><a href="#cb16-105"></a>    )</span>
-<span id="cb16-106"><a href="#cb16-106"></a>  )</span>
-<span id="cb16-107"><a href="#cb16-107"></a>)</span>
-<span id="cb16-108"><a href="#cb16-108"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb16-109"><a href="#cb16-109"></a><span class="in">```</span></span>
-<span id="cb16-110"><a href="#cb16-110"></a></span>
-<span id="cb16-111"><a href="#cb16-111"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb16-112"><a href="#cb16-112"></a>:::</span>
+<div class="sourceCode" id="cb18" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">---</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="an">title:</span><span class="co"> RNAG5</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Differential Gene Expression Analysis</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="co">---</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a></span>
+<span id="cb18-7"><a href="#cb18-7"></a>------------------------------------------------------------------------</span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a>::: panel-tabset</span>
+<span id="cb18-10"><a href="#cb18-10"></a><span class="fu">## Setup: Import and Filter</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a></span>
+<span id="cb18-12"><a href="#cb18-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to take differential gene expression analysis between samples in <span class="in">`HermesData`</span>, visualize them in a volcano graph, and create an interactive volcano graph using <span class="in">`teal.module.hermes`</span>.</span>
+<span id="cb18-13"><a href="#cb18-13"></a></span>
+<span id="cb18-14"><a href="#cb18-14"></a>The function used to calculate differential gene expression uses <span class="in">`HermesData`</span> as input.</span>
+<span id="cb18-15"><a href="#cb18-15"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
+<span id="cb18-16"><a href="#cb18-16"></a>In particular, the differential gene expression analysis does not require to normalize <span class="in">`HermesData`</span>.</span>
+<span id="cb18-17"><a href="#cb18-17"></a></span>
+<span id="cb18-18"><a href="#cb18-18"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb18-19"><a href="#cb18-19"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb18-20"><a href="#cb18-20"></a></span>
+<span id="cb18-21"><a href="#cb18-21"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
+<span id="cb18-22"><a href="#cb18-22"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb18-23"><a href="#cb18-23"></a>  <span class="fu">filter</span>()</span>
+<span id="cb18-24"><a href="#cb18-24"></a></span>
+<span id="cb18-25"><a href="#cb18-25"></a><span class="fu">colData</span>(object) <span class="ot">&lt;-</span> <span class="fu">df_cols_to_factor</span>(<span class="fu">colData</span>(object))</span>
+<span id="cb18-26"><a href="#cb18-26"></a><span class="in">```</span></span>
+<span id="cb18-27"><a href="#cb18-27"></a></span>
+<span id="cb18-28"><a href="#cb18-28"></a><span class="fu">## Differential Gene Expression Analysis via Limma-Voom Method</span></span>
+<span id="cb18-29"><a href="#cb18-29"></a></span>
+<span id="cb18-30"><a href="#cb18-30"></a>We can calculate a data frame in <span class="in">`HermesDataDiffExpr`</span> class to include the gene differential expression between groups in <span class="in">`HermesData`</span> using <span class="in">`diff_expression()`</span> function.</span>
+<span id="cb18-31"><a href="#cb18-31"></a>By default, <span class="in">`diff_expression()`</span> function uses the <span class="in">`limma-voom`</span> method to calculate the gene differential expression, unless specified otherwise as argument.</span>
+<span id="cb18-32"><a href="#cb18-32"></a>The <span class="in">`group`</span> argument is to set the groups for comparison.</span>
+<span id="cb18-33"><a href="#cb18-33"></a>The <span class="in">`group`</span> factors should be a 2-level factor in <span class="in">`colData(HermesData)`</span>.</span>
+<span id="cb18-34"><a href="#cb18-34"></a></span>
+<span id="cb18-37"><a href="#cb18-37"></a><span class="in">```{r}</span></span>
+<span id="cb18-38"><a href="#cb18-38"></a>result1 <span class="ot">&lt;-</span> <span class="fu">diff_expression</span>(object, <span class="at">group =</span> <span class="st">"SEX"</span>)</span>
+<span id="cb18-39"><a href="#cb18-39"></a><span class="in">```</span></span>
+<span id="cb18-40"><a href="#cb18-40"></a></span>
+<span id="cb18-41"><a href="#cb18-41"></a><span class="fu">## Differential Gene Expression Analysis via DESeq2 Method</span></span>
+<span id="cb18-42"><a href="#cb18-42"></a></span>
+<span id="cb18-43"><a href="#cb18-43"></a>We can also use the <span class="in">`DESeq2`</span> Method for gene differential expression.</span>
+<span id="cb18-44"><a href="#cb18-44"></a></span>
+<span id="cb18-47"><a href="#cb18-47"></a><span class="in">```{r}</span></span>
+<span id="cb18-48"><a href="#cb18-48"></a>result2 <span class="ot">&lt;-</span> <span class="fu">diff_expression</span>(object, <span class="at">group =</span> <span class="st">"SEX"</span>, <span class="at">method =</span> <span class="st">"deseq2"</span>)</span>
+<span id="cb18-49"><a href="#cb18-49"></a><span class="in">```</span></span>
+<span id="cb18-50"><a href="#cb18-50"></a></span>
+<span id="cb18-51"><a href="#cb18-51"></a><span class="fu">## Additional Arguments</span></span>
+<span id="cb18-52"><a href="#cb18-52"></a></span>
+<span id="cb18-53"><a href="#cb18-53"></a>It is also possible to pass additional arguments to the function behind the methods in the <span class="in">`diff_expression()`</span>, ex.</span>
+<span id="cb18-54"><a href="#cb18-54"></a>if we wish to change the type of size factor estimation when using the <span class="in">`DESeq2`</span> method.</span>
+<span id="cb18-55"><a href="#cb18-55"></a>See <span class="in">`?DESeq2::DESeq()`</span> or <span class="in">`?limma::eBayes()`</span> for details about the additional parameters available.</span>
+<span id="cb18-56"><a href="#cb18-56"></a></span>
+<span id="cb18-59"><a href="#cb18-59"></a><span class="in">```{r}</span></span>
+<span id="cb18-60"><a href="#cb18-60"></a>result3 <span class="ot">&lt;-</span> <span class="fu">diff_expression</span>(object, <span class="at">group =</span> <span class="st">"SEX"</span>, <span class="at">method =</span> <span class="st">"deseq2"</span>, <span class="at">sfType =</span> <span class="st">"ratio"</span>)</span>
+<span id="cb18-61"><a href="#cb18-61"></a><span class="in">```</span></span>
+<span id="cb18-62"><a href="#cb18-62"></a></span>
+<span id="cb18-63"><a href="#cb18-63"></a><span class="fu">## Plot Differential Gene Expression in Volcano Graph</span></span>
+<span id="cb18-64"><a href="#cb18-64"></a></span>
+<span id="cb18-65"><a href="#cb18-65"></a>We can then plot a volcano graph for differential gene expression between groups in <span class="in">`HermesData`</span> using the <span class="in">`autoplot()`</span> function.</span>
+<span id="cb18-66"><a href="#cb18-66"></a>The threshold values for adjusted p-values and log2 folder change can be specified.</span>
+<span id="cb18-67"><a href="#cb18-67"></a></span>
+<span id="cb18-70"><a href="#cb18-70"></a><span class="in">```{r}</span></span>
+<span id="cb18-71"><a href="#cb18-71"></a><span class="fu">autoplot</span>(result1)</span>
+<span id="cb18-72"><a href="#cb18-72"></a><span class="in">```</span></span>
+<span id="cb18-73"><a href="#cb18-73"></a></span>
+<span id="cb18-76"><a href="#cb18-76"></a><span class="in">```{r}</span></span>
+<span id="cb18-77"><a href="#cb18-77"></a><span class="fu">autoplot</span>(result2, <span class="at">adj_p_val_thresh =</span> <span class="fl">0.025</span>, <span class="at">log2_fc_thresh =</span> <span class="dv">5</span>)</span>
+<span id="cb18-78"><a href="#cb18-78"></a><span class="in">```</span></span>
+<span id="cb18-79"><a href="#cb18-79"></a></span>
+<span id="cb18-82"><a href="#cb18-82"></a><span class="in">```{r}</span></span>
+<span id="cb18-83"><a href="#cb18-83"></a><span class="fu">autoplot</span>(result3)</span>
+<span id="cb18-84"><a href="#cb18-84"></a><span class="in">```</span></span>
+<span id="cb18-85"><a href="#cb18-85"></a></span>
+<span id="cb18-86"><a href="#cb18-86"></a><span class="fu">## Teal Module for Sample Differential Gene Expression</span></span>
+<span id="cb18-87"><a href="#cb18-87"></a></span>
+<span id="cb18-88"><a href="#cb18-88"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb18-89"><a href="#cb18-89"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb18-90"><a href="#cb18-90"></a>We can then use the provided teal module <span class="in">`tm_g_volcanoplot`</span> to include a volcano graph module in our teal app.</span>
+<span id="cb18-91"><a href="#cb18-91"></a></span>
+<span id="cb18-92"><a href="#cb18-92"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
+<span id="cb18-93"><a href="#cb18-93"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
+<span id="cb18-94"><a href="#cb18-94"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb18-95"><a href="#cb18-95"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb18-96"><a href="#cb18-96"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb18-97"><a href="#cb18-97"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
+<span id="cb18-98"><a href="#cb18-98"></a></span>
+<span id="cb18-99"><a href="#cb18-99"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb18-100"><a href="#cb18-100"></a>  <span class="at">data =</span> data,</span>
+<span id="cb18-101"><a href="#cb18-101"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb18-102"><a href="#cb18-102"></a>    <span class="fu">tm_g_volcanoplot</span>(</span>
+<span id="cb18-103"><a href="#cb18-103"></a>      <span class="at">label =</span> <span class="st">"volcanoplot"</span>,</span>
+<span id="cb18-104"><a href="#cb18-104"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb18-105"><a href="#cb18-105"></a>    )</span>
+<span id="cb18-106"><a href="#cb18-106"></a>  )</span>
+<span id="cb18-107"><a href="#cb18-107"></a>)</span>
+<span id="cb18-108"><a href="#cb18-108"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb18-109"><a href="#cb18-109"></a><span class="in">```</span></span>
+<span id="cb18-110"><a href="#cb18-110"></a></span>
+<span id="cb18-111"><a href="#cb18-111"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb18-112"><a href="#cb18-112"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

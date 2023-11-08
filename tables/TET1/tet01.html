@@ -987,21 +987,24 @@ cookieconsent.run({
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">build_table</span>(lyt, adtte)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>                                 CTRL           TRT     
-                               (N=134)        (N=266)   
-————————————————————————————————————————————————————————
-Patients with event (%)       87 (64.9%)    195 (73.3%) 
-Patients without event (%)    47 (35.1%)     71 (26.7%) 
-Time to Event (months)                                  
-  Median                         27.5           21.3    
-    95% CI                   (17.3, 30.2)   (16.3, 25.6)
-  25% and 75%-ile             9.5, 54.9      7.1, 50.9  
-  Range (censored)           0.9 to 91.0    0.3 to 154.7
-  Range (event)              0.0 to 122.4   0.1 to 116.4
-Unstratified Analysis                                   
-  p-value (log-rank)                           0.2146   
-  Hazard Ratio                                  1.17    
-  95% CI                                    (0.91, 1.51)</code></pre>
+<pre><code>                                 CTRL             TRT       
+                               (N=134)          (N=266)     
+————————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)      195 (73.3%)   
+Patients without event (%)    47 (35.1%)       71 (26.7%)   
+Time to Event (months)                                      
+  Median                         27.5             21.3      
+    95% CI                   (17.3, 30.2)     (16.3, 25.6)  
+  25% and 75%-ile             9.5, 54.9        7.1, 50.9    
+  Range                      0.0 to 122.4   0.1 to 154.7 {1}
+Unstratified Analysis                                       
+  p-value (log-rank)                             0.2146     
+  Hazard Ratio                                    1.17      
+  95% CI                                      (0.91, 1.51)  
+————————————————————————————————————————————————————————————
+
+{1} - Censored observation: range maximum
+————————————————————————————————————————————————————————————</code></pre>
 </div>
 </div>
 </div>
@@ -1032,7 +1035,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):

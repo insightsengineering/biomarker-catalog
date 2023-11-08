@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sat, 04 Nov 2023 17:46:15 GMT</lastBuildDate>
+<lastBuildDate>Wed, 08 Nov 2023 18:03:04 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
@@ -177,7 +177,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -207,7 +207,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -414,7 +414,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -444,7 +444,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -681,7 +681,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -711,7 +711,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -884,7 +884,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -914,7 +914,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -1105,7 +1105,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -1134,7 +1134,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1337,7 +1337,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -1366,7 +1366,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1549,7 +1549,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -1578,7 +1578,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1794,7 +1794,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -1823,7 +1823,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -1993,7 +1993,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -2022,7 +2022,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -2193,7 +2193,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -2222,7 +2222,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2498,21 +2498,24 @@ font-style: inherit;">"coxph_unstratified"</span></span>
 background-color: null;
 font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>                                 CTRL           TRT     
-                               (N=134)        (N=266)   
-————————————————————————————————————————————————————————
-Patients with event (%)       87 (64.9%)    195 (73.3%) 
-Patients without event (%)    47 (35.1%)     71 (26.7%) 
-Time to Event (months)                                  
-  Median                         27.5           21.3    
-    95% CI                   (17.3, 30.2)   (16.3, 25.6)
-  25% and 75%-ile             9.5, 54.9      7.1, 50.9  
-  Range (censored)           0.9 to 91.0    0.3 to 154.7
-  Range (event)              0.0 to 122.4   0.1 to 116.4
-Unstratified Analysis                                   
-  p-value (log-rank)                           0.2146   
-  Hazard Ratio                                  1.17    
-  95% CI                                    (0.91, 1.51)</code></pre>
+<pre><code>                                 CTRL             TRT       
+                               (N=134)          (N=266)     
+————————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)      195 (73.3%)   
+Patients without event (%)    47 (35.1%)       71 (26.7%)   
+Time to Event (months)                                      
+  Median                         27.5             21.3      
+    95% CI                   (17.3, 30.2)     (16.3, 25.6)  
+  25% and 75%-ile             9.5, 54.9        7.1, 50.9    
+  Range                      0.0 to 122.4   0.1 to 154.7 {1}
+Unstratified Analysis                                       
+  p-value (log-rank)                             0.2146     
+  Hazard Ratio                                    1.17      
+  95% CI                                      (0.91, 1.51)  
+————————————————————————————————————————————————————————————
+
+{1} - Censored observation: range maximum
+————————————————————————————————————————————————————————————</code></pre>
 </div>
 </div>
 </div>
@@ -2545,7 +2548,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -2574,7 +2577,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2896,25 +2899,28 @@ font-style: inherit;">"coxph_stratified"</span></span>
 background-color: null;
 font-style: inherit;">build_table</span>(lyt2, adtte)</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>                                 CTRL           TRT     
-                               (N=134)        (N=266)   
-————————————————————————————————————————————————————————
-Patients with event (%)       87 (64.9%)    195 (73.3%) 
-Patients without event (%)    47 (35.1%)     71 (26.7%) 
-Time to Event (months)                                  
-  Median                         27.5           21.3    
-    95% CI                   (17.3, 30.2)   (16.3, 25.6)
-  25% and 75%-ile             9.5, 54.9      7.1, 50.9  
-  Range (censored)           0.9 to 91.0    0.3 to 154.7
-  Range (event)              0.0 to 122.4   0.1 to 116.4
-Unstratified Analysis                                   
-  p-value (log-rank)                           0.2146   
-  Hazard Ratio                                  1.17    
-  95% CI                                    (0.91, 1.51)
-Stratified Analysis                                     
-  p-value (log-rank)                           0.2072   
-  Hazard Ratio                                  1.18    
-  95% CI                                    (0.91, 1.52)</code></pre>
+<pre><code>                                 CTRL             TRT       
+                               (N=134)          (N=266)     
+————————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)      195 (73.3%)   
+Patients without event (%)    47 (35.1%)       71 (26.7%)   
+Time to Event (months)                                      
+  Median                         27.5             21.3      
+    95% CI                   (17.3, 30.2)     (16.3, 25.6)  
+  25% and 75%-ile             9.5, 54.9        7.1, 50.9    
+  Range                      0.0 to 122.4   0.1 to 154.7 {1}
+Unstratified Analysis                                       
+  p-value (log-rank)                             0.2146     
+  Hazard Ratio                                    1.17      
+  95% CI                                      (0.91, 1.51)  
+Stratified Analysis                                         
+  p-value (log-rank)                             0.2072     
+  Hazard Ratio                                    1.18      
+  95% CI                                      (0.91, 1.52)  
+————————————————————————————————————————————————————————————
+
+{1} - Censored observation: range maximum
+————————————————————————————————————————————————————————————</code></pre>
 </div>
 </div>
 </div>
@@ -2947,7 +2953,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.3           tern_0.9.2.9007       rtables_0.6.5.9009   
+[1] dplyr_1.1.3           tern_0.9.2.9014       rtables_0.6.5.9011   
 [4] magrittr_2.0.3        formatters_0.5.4.9002
 
 loaded via a namespace (and not attached):
@@ -2976,7 +2982,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Sat, 04 Nov 2023 17:46:15 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 18:03:04 GMT</pubDate>
 </item>
 </channel>
 </rss>

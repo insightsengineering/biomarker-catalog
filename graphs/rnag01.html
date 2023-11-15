@@ -1021,24 +1021,20 @@ FALSE
 <span id="cb16-2"><a href="#cb16-2"></a>pos <span class="ot">&lt;-</span> <span class="fu">position_jitter</span>(<span class="fl">0.4</span>)</span>
 <span id="cb16-3"><a href="#cb16-3"></a><span class="fu">draw_nonzero_boxplot</span>(norm_result, <span class="at">position =</span> pos) <span class="sc">+</span></span>
 <span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> norm_result<span class="sc">$</span>SampleID), <span class="at">position =</span> pos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Warning: ggrepel: 1 unlabeled data points (too many overlaps). Consider
-increasing max.overlaps</code></pre>
-</div>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 <p>The <code>draw_nonzero_boxplot()</code> displays a box plot of the non-zero expressed genes per sample.</p>
 <div class="cell" data-hash="rnag01_cache/html/unnamed-chunk-11_7fef0411a31108b60ac1b453174b0461">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">draw_genes_barplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">draw_genes_barplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 <p>We can also select for specific chromosomes by specifying the values in the <code>chromosomes</code> parameter. For example, to only display chromosomes 1 and 2 separately and ignore all others:</p>
 <div class="cell" data-hash="rnag01_cache/html/unnamed-chunk-12_2ae2a1220809ae23c6c92de6dbe38458">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">draw_genes_barplot</span>(norm_result, <span class="at">chromosomes =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>), <span class="at">include_others =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">draw_genes_barplot</span>(norm_result, <span class="at">chromosomes =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>), <span class="at">include_others =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="1440"></p>
 </div>
@@ -1047,7 +1043,7 @@ increasing max.overlaps</code></pre>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p>It is also possible to call all available <code>draw_*</code> functions with one function, <code>autoplot()</code>. Note: <code>autoplot()</code> does not allow for customization of the plots. We recommend using the appropriate <code>draw_*</code> function if you wish to make adjustments to the plots.</p>
 <div class="cell" data-hash="rnag01_cache/html/unnamed-chunk-13_ed8be1ea2d4b1f28faa998cfdbb0b5d1">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">autoplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">autoplot</span>(norm_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="1440"></p>
 </div>
@@ -1068,28 +1064,28 @@ increasing max.overlaps</code></pre>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <p>We start by importing a <code>MultiAssayExperiment</code>; here we use the example <code>multi_assay_experiment</code> available in <code>hermes</code>. It is wrapped as a <code>teal::dataset</code>. We can then use the provided teal module <code>tm_g_quality</code> to include a QC module in our teal app.</p>
 <div class="cell" data-screenshot.opts="{&quot;delay&quot;:24}">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb21-2"><a href="#cb21-2"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb21-3"><a href="#cb21-3"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb21-4"><a href="#cb21-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb20-3"><a href="#cb20-3"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb20-4"><a href="#cb20-4"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>Warning: The `data_objects` argument of `teal_data()` should use data directly. Using
 TealDatasetConnector and TealDataset is deprecated. Find more information on
 https://github.com/insightsengineering/teal/discussions/945 as of teal.data
 0.3.1.</code></pre>
 </div>
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb23-2"><a href="#cb23-2"></a>  <span class="at">data =</span> data,</span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb23-4"><a href="#cb23-4"></a>    <span class="fu">tm_g_quality</span>(</span>
-<span id="cb23-5"><a href="#cb23-5"></a>      <span class="at">label =</span> <span class="st">"quality"</span>,</span>
-<span id="cb23-6"><a href="#cb23-6"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb23-7"><a href="#cb23-7"></a>    )</span>
-<span id="cb23-8"><a href="#cb23-8"></a>  )</span>
-<span id="cb23-9"><a href="#cb23-9"></a>)</span>
-<span id="cb23-10"><a href="#cb23-10"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="at">data =</span> data,</span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb22-4"><a href="#cb22-4"></a>    <span class="fu">tm_g_quality</span>(</span>
+<span id="cb22-5"><a href="#cb22-5"></a>      <span class="at">label =</span> <span class="st">"quality"</span>,</span>
+<span id="cb22-6"><a href="#cb22-6"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>    )</span>
+<span id="cb22-8"><a href="#cb22-8"></a>  )</span>
+<span id="cb22-9"><a href="#cb22-9"></a>)</span>
+<span id="cb22-10"><a href="#cb22-10"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-11-11 17:51:34.0111 pid:9067 token:[acb98d75] teal Initializing reporter_previewer_module</code></pre>
+<pre><code>[INFO] 2023-11-15 17:44:27.5361 pid:9847 token:[143bf515] teal Initializing reporter_previewer_module</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="rnag01_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="1440"></p>
@@ -1098,7 +1094,7 @@ https://github.com/insightsengineering/teal/discussions/945 as of teal.data
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
 <div class="cell" data-hash="rnag01_cache/html/sessioninfo_c2d47f54b94e482acbbbb8cf37178067">
-<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open=""><summary>Code</summary><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -1124,7 +1120,7 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9017              
+ [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9018              
  [3] teal.transform_0.4.0.9006      magrittr_2.0.3                
  [5] teal.slice_0.4.0.9022          teal.data_0.3.0.9009          
  [7] shiny_1.7.5.1                  ggrepel_0.9.4                 
@@ -1622,152 +1618,152 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb27" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">---</span></span>
-<span id="cb27-2"><a href="#cb27-2"></a><span class="an">title:</span><span class="co"> RNAG1</span></span>
-<span id="cb27-3"><a href="#cb27-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq QC Graphs</span></span>
-<span id="cb27-4"><a href="#cb27-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb27-5"><a href="#cb27-5"></a><span class="co">---</span></span>
-<span id="cb27-6"><a href="#cb27-6"></a></span>
-<span id="cb27-7"><a href="#cb27-7"></a>------------------------------------------------------------------------</span>
-<span id="cb27-8"><a href="#cb27-8"></a></span>
-<span id="cb27-9"><a href="#cb27-9"></a>::: panel-tabset</span>
-<span id="cb27-10"><a href="#cb27-10"></a><span class="fu">## Setup</span></span>
-<span id="cb27-11"><a href="#cb27-11"></a></span>
-<span id="cb27-12"><a href="#cb27-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions for simple QC analyses of RNA-seq gene expression data and to create interactive QC graphs using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb27-13"><a href="#cb27-13"></a></span>
-<span id="cb27-14"><a href="#cb27-14"></a>We start by creating <span class="in">`HermesData`</span> from a <span class="in">`SummarizedExperiment`</span> (SE) object.</span>
-<span id="cb27-15"><a href="#cb27-15"></a>An example <span class="in">`SummarizedExperiment`</span> object with name <span class="in">`summarized_experiment`</span> is available in <span class="in">`hermes`</span>.</span>
-<span id="cb27-16"><a href="#cb27-16"></a></span>
-<span id="cb27-17"><a href="#cb27-17"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb27-18"><a href="#cb27-18"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb27-19"><a href="#cb27-19"></a></span>
-<span id="cb27-20"><a href="#cb27-20"></a><span class="fu">HermesData</span>(summarized_experiment)</span>
-<span id="cb27-21"><a href="#cb27-21"></a><span class="in">```</span></span>
-<span id="cb27-22"><a href="#cb27-22"></a></span>
-<span id="cb27-23"><a href="#cb27-23"></a>At this point we can also take the already prepared object <span class="in">`hermes_data`</span> instead.</span>
-<span id="cb27-24"><a href="#cb27-24"></a>First we add all quality flags (low expression, low read depth, technical failure).</span>
-<span id="cb27-25"><a href="#cb27-25"></a></span>
-<span id="cb27-26"><a href="#cb27-26"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb27-27"><a href="#cb27-27"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
-<span id="cb27-28"><a href="#cb27-28"></a>  <span class="fu">add_quality_flags</span>()</span>
-<span id="cb27-29"><a href="#cb27-29"></a><span class="in">```</span></span>
-<span id="cb27-30"><a href="#cb27-30"></a></span>
-<span id="cb27-31"><a href="#cb27-31"></a>We can look at how many samples or genes have been flagged.</span>
-<span id="cb27-32"><a href="#cb27-32"></a></span>
-<span id="cb27-35"><a href="#cb27-35"></a><span class="in">```{r}</span></span>
-<span id="cb27-36"><a href="#cb27-36"></a><span class="fu">table</span>(<span class="fu">get_low_expression</span>(object))</span>
-<span id="cb27-37"><a href="#cb27-37"></a><span class="fu">table</span>(<span class="fu">get_tech_failure</span>(object))</span>
-<span id="cb27-38"><a href="#cb27-38"></a><span class="fu">table</span>(<span class="fu">get_low_depth</span>(object))</span>
-<span id="cb27-39"><a href="#cb27-39"></a><span class="in">```</span></span>
-<span id="cb27-40"><a href="#cb27-40"></a></span>
-<span id="cb27-41"><a href="#cb27-41"></a>We then filter for samples that pass all quality checks (i.e. all flags are <span class="in">`FALSE`</span>).</span>
-<span id="cb27-42"><a href="#cb27-42"></a></span>
-<span id="cb27-45"><a href="#cb27-45"></a><span class="in">```{r}</span></span>
-<span id="cb27-46"><a href="#cb27-46"></a>result <span class="ot">&lt;-</span> <span class="fu">filter</span>(object)</span>
-<span id="cb27-47"><a href="#cb27-47"></a><span class="in">```</span></span>
-<span id="cb27-48"><a href="#cb27-48"></a></span>
-<span id="cb27-49"><a href="#cb27-49"></a>It is also possible to only filter genes or samples via the <span class="in">`what`</span> argument of <span class="in">`filter()`</span>.</span>
-<span id="cb27-50"><a href="#cb27-50"></a></span>
-<span id="cb27-51"><a href="#cb27-51"></a><span class="fu">## Normalization</span></span>
-<span id="cb27-52"><a href="#cb27-52"></a></span>
-<span id="cb27-53"><a href="#cb27-53"></a>Now that the samples are properly filtered, we can apply our normalization method.</span>
-<span id="cb27-54"><a href="#cb27-54"></a>By default, if a method is not specified for <span class="in">`normalize()`</span> then five methods (<span class="in">`cpm`</span>, <span class="in">`rpkm`</span>, <span class="in">`tpm`</span>, <span class="in">`voom`</span>, <span class="in">`vst`</span>) will be performed and results saved as separate assays.</span>
-<span id="cb27-55"><a href="#cb27-55"></a>If only one method is needed, it can be easily specified in the <span class="in">`methods`</span> argument.</span>
-<span id="cb27-56"><a href="#cb27-56"></a>In addition, if the <span class="in">`rlog`</span> transformation method is preferred, it can also be specified in the <span class="in">`methods`</span> argument.</span>
-<span id="cb27-57"><a href="#cb27-57"></a></span>
-<span id="cb27-60"><a href="#cb27-60"></a><span class="in">```{r}</span></span>
-<span id="cb27-61"><a href="#cb27-61"></a>norm_result <span class="ot">&lt;-</span> <span class="fu">normalize</span>(result)</span>
-<span id="cb27-62"><a href="#cb27-62"></a><span class="in">```</span></span>
-<span id="cb27-63"><a href="#cb27-63"></a></span>
-<span id="cb27-64"><a href="#cb27-64"></a><span class="fu">## Graphs: Separate Graph Functions</span></span>
-<span id="cb27-65"><a href="#cb27-65"></a></span>
-<span id="cb27-66"><a href="#cb27-66"></a>The <span class="in">`hermes`</span> package offers a series of <span class="in">`draw_*`</span> functions to help in the QC process.</span>
-<span id="cb27-67"><a href="#cb27-67"></a>First we introduce <span class="in">`draw_libsize_hist()`</span> which displays a histogram of the sample library sizes.</span>
-<span id="cb27-68"><a href="#cb27-68"></a></span>
-<span id="cb27-71"><a href="#cb27-71"></a><span class="in">```{r}</span></span>
-<span id="cb27-72"><a href="#cb27-72"></a><span class="fu">draw_libsize_hist</span>(norm_result, <span class="at">fill =</span> <span class="st">"lightblue"</span>)</span>
-<span id="cb27-73"><a href="#cb27-73"></a><span class="in">```</span></span>
-<span id="cb27-74"><a href="#cb27-74"></a></span>
-<span id="cb27-75"><a href="#cb27-75"></a>The <span class="in">`draw_libsize_qq()`</span> displays a QQ plot of the samples library size.</span>
-<span id="cb27-76"><a href="#cb27-76"></a>Here we look for potential outliers.</span>
-<span id="cb27-77"><a href="#cb27-77"></a></span>
-<span id="cb27-80"><a href="#cb27-80"></a><span class="in">```{r}</span></span>
-<span id="cb27-81"><a href="#cb27-81"></a><span class="fu">draw_libsize_qq</span>(norm_result, <span class="at">color =</span> <span class="st">"red"</span>)</span>
-<span id="cb27-82"><a href="#cb27-82"></a><span class="in">```</span></span>
-<span id="cb27-83"><a href="#cb27-83"></a></span>
-<span id="cb27-84"><a href="#cb27-84"></a>The <span class="in">`draw_libsize_densities()`</span> displays a density plot of the (log) counts distributions.</span>
-<span id="cb27-85"><a href="#cb27-85"></a>Distribution lines correspond to each sample.</span>
-<span id="cb27-86"><a href="#cb27-86"></a></span>
-<span id="cb27-89"><a href="#cb27-89"></a><span class="in">```{r}</span></span>
-<span id="cb27-90"><a href="#cb27-90"></a><span class="fu">draw_libsize_densities</span>(norm_result)</span>
-<span id="cb27-91"><a href="#cb27-91"></a><span class="in">```</span></span>
-<span id="cb27-92"><a href="#cb27-92"></a></span>
-<span id="cb27-93"><a href="#cb27-93"></a>The <span class="in">`draw_nonzero_boxplot()`</span> displays a box plot of the non-zero expressed genes per sample.</span>
-<span id="cb27-94"><a href="#cb27-94"></a></span>
-<span id="cb27-95"><a href="#cb27-95"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb27-96"><a href="#cb27-96"></a><span class="fu">draw_nonzero_boxplot</span>(norm_result)</span>
-<span id="cb27-97"><a href="#cb27-97"></a><span class="in">```</span></span>
-<span id="cb27-98"><a href="#cb27-98"></a></span>
-<span id="cb27-99"><a href="#cb27-99"></a>It's also possible to add an additional <span class="in">`ggplot2`</span> layer to get the sample ID of any points of interest, reusing the same position for labeling.</span>
-<span id="cb27-100"><a href="#cb27-100"></a>If the labeling of several data points overlaps, the parameters of <span class="in">`position_jitter()`</span> or <span class="in">`geom_text_repel()`</span> can be adjusted to avoid that.</span>
-<span id="cb27-101"><a href="#cb27-101"></a></span>
-<span id="cb27-102"><a href="#cb27-102"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb27-103"><a href="#cb27-103"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb27-104"><a href="#cb27-104"></a>pos <span class="ot">&lt;-</span> <span class="fu">position_jitter</span>(<span class="fl">0.4</span>)</span>
-<span id="cb27-105"><a href="#cb27-105"></a><span class="fu">draw_nonzero_boxplot</span>(norm_result, <span class="at">position =</span> pos) <span class="sc">+</span></span>
-<span id="cb27-106"><a href="#cb27-106"></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> norm_result<span class="sc">$</span>SampleID), <span class="at">position =</span> pos)</span>
-<span id="cb27-107"><a href="#cb27-107"></a><span class="in">```</span></span>
-<span id="cb27-108"><a href="#cb27-108"></a></span>
-<span id="cb27-109"><a href="#cb27-109"></a>The <span class="in">`draw_nonzero_boxplot()`</span> displays a box plot of the non-zero expressed genes per sample.</span>
-<span id="cb27-110"><a href="#cb27-110"></a></span>
-<span id="cb27-113"><a href="#cb27-113"></a><span class="in">```{r}</span></span>
-<span id="cb27-114"><a href="#cb27-114"></a><span class="fu">draw_genes_barplot</span>(norm_result)</span>
-<span id="cb27-115"><a href="#cb27-115"></a><span class="in">```</span></span>
-<span id="cb27-116"><a href="#cb27-116"></a></span>
-<span id="cb27-117"><a href="#cb27-117"></a>We can also select for specific chromosomes by specifying the values in the <span class="in">`chromosomes`</span> parameter.</span>
-<span id="cb27-118"><a href="#cb27-118"></a>For example, to only display chromosomes 1 and 2 separately and ignore all others:</span>
-<span id="cb27-119"><a href="#cb27-119"></a></span>
-<span id="cb27-122"><a href="#cb27-122"></a><span class="in">```{r}</span></span>
-<span id="cb27-123"><a href="#cb27-123"></a><span class="fu">draw_genes_barplot</span>(norm_result, <span class="at">chromosomes =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>), <span class="at">include_others =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb27-124"><a href="#cb27-124"></a><span class="in">```</span></span>
-<span id="cb27-125"><a href="#cb27-125"></a></span>
-<span id="cb27-126"><a href="#cb27-126"></a><span class="fu">## Graphs: All Graphs at Once</span></span>
-<span id="cb27-127"><a href="#cb27-127"></a></span>
-<span id="cb27-128"><a href="#cb27-128"></a>It is also possible to call all available <span class="in">`draw_*`</span> functions with one function, <span class="in">`autoplot()`</span>.</span>
-<span id="cb27-129"><a href="#cb27-129"></a>Note: <span class="in">`autoplot()`</span> does not allow for customization of the plots.</span>
-<span id="cb27-130"><a href="#cb27-130"></a>We recommend using the appropriate <span class="in">`draw_*`</span> function if you wish to make adjustments to the plots.</span>
-<span id="cb27-131"><a href="#cb27-131"></a></span>
-<span id="cb27-134"><a href="#cb27-134"></a><span class="in">```{r}</span></span>
-<span id="cb27-135"><a href="#cb27-135"></a><span class="fu">autoplot</span>(norm_result)</span>
-<span id="cb27-136"><a href="#cb27-136"></a><span class="in">```</span></span>
-<span id="cb27-137"><a href="#cb27-137"></a></span>
-<span id="cb27-138"><a href="#cb27-138"></a><span class="fu">## Teal Module for QC Graphs</span></span>
-<span id="cb27-139"><a href="#cb27-139"></a></span>
-<span id="cb27-140"><a href="#cb27-140"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb27-141"><a href="#cb27-141"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb27-142"><a href="#cb27-142"></a>We can then use the provided teal module <span class="in">`tm_g_quality`</span> to include a QC module in our teal app.</span>
-<span id="cb27-143"><a href="#cb27-143"></a></span>
-<span id="cb27-144"><a href="#cb27-144"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
-<span id="cb27-145"><a href="#cb27-145"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
-<span id="cb27-146"><a href="#cb27-146"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb27-147"><a href="#cb27-147"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
-<span id="cb27-148"><a href="#cb27-148"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
-<span id="cb27-149"><a href="#cb27-149"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
-<span id="cb27-150"><a href="#cb27-150"></a></span>
-<span id="cb27-151"><a href="#cb27-151"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb27-152"><a href="#cb27-152"></a>  <span class="at">data =</span> data,</span>
-<span id="cb27-153"><a href="#cb27-153"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb27-154"><a href="#cb27-154"></a>    <span class="fu">tm_g_quality</span>(</span>
-<span id="cb27-155"><a href="#cb27-155"></a>      <span class="at">label =</span> <span class="st">"quality"</span>,</span>
-<span id="cb27-156"><a href="#cb27-156"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb27-157"><a href="#cb27-157"></a>    )</span>
-<span id="cb27-158"><a href="#cb27-158"></a>  )</span>
-<span id="cb27-159"><a href="#cb27-159"></a>)</span>
-<span id="cb27-160"><a href="#cb27-160"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb27-161"><a href="#cb27-161"></a><span class="in">```</span></span>
-<span id="cb27-162"><a href="#cb27-162"></a></span>
-<span id="cb27-163"><a href="#cb27-163"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb27-164"><a href="#cb27-164"></a>:::</span>
+<div class="sourceCode" id="cb26" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1"></a><span class="co">---</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="an">title:</span><span class="co"> RNAG1</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq QC Graphs</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a><span class="co">---</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a></span>
+<span id="cb26-7"><a href="#cb26-7"></a>------------------------------------------------------------------------</span>
+<span id="cb26-8"><a href="#cb26-8"></a></span>
+<span id="cb26-9"><a href="#cb26-9"></a>::: panel-tabset</span>
+<span id="cb26-10"><a href="#cb26-10"></a><span class="fu">## Setup</span></span>
+<span id="cb26-11"><a href="#cb26-11"></a></span>
+<span id="cb26-12"><a href="#cb26-12"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions for simple QC analyses of RNA-seq gene expression data and to create interactive QC graphs using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb26-13"><a href="#cb26-13"></a></span>
+<span id="cb26-14"><a href="#cb26-14"></a>We start by creating <span class="in">`HermesData`</span> from a <span class="in">`SummarizedExperiment`</span> (SE) object.</span>
+<span id="cb26-15"><a href="#cb26-15"></a>An example <span class="in">`SummarizedExperiment`</span> object with name <span class="in">`summarized_experiment`</span> is available in <span class="in">`hermes`</span>.</span>
+<span id="cb26-16"><a href="#cb26-16"></a></span>
+<span id="cb26-17"><a href="#cb26-17"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb26-18"><a href="#cb26-18"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb26-19"><a href="#cb26-19"></a></span>
+<span id="cb26-20"><a href="#cb26-20"></a><span class="fu">HermesData</span>(summarized_experiment)</span>
+<span id="cb26-21"><a href="#cb26-21"></a><span class="in">```</span></span>
+<span id="cb26-22"><a href="#cb26-22"></a></span>
+<span id="cb26-23"><a href="#cb26-23"></a>At this point we can also take the already prepared object <span class="in">`hermes_data`</span> instead.</span>
+<span id="cb26-24"><a href="#cb26-24"></a>First we add all quality flags (low expression, low read depth, technical failure).</span>
+<span id="cb26-25"><a href="#cb26-25"></a></span>
+<span id="cb26-26"><a href="#cb26-26"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb26-27"><a href="#cb26-27"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
+<span id="cb26-28"><a href="#cb26-28"></a>  <span class="fu">add_quality_flags</span>()</span>
+<span id="cb26-29"><a href="#cb26-29"></a><span class="in">```</span></span>
+<span id="cb26-30"><a href="#cb26-30"></a></span>
+<span id="cb26-31"><a href="#cb26-31"></a>We can look at how many samples or genes have been flagged.</span>
+<span id="cb26-32"><a href="#cb26-32"></a></span>
+<span id="cb26-35"><a href="#cb26-35"></a><span class="in">```{r}</span></span>
+<span id="cb26-36"><a href="#cb26-36"></a><span class="fu">table</span>(<span class="fu">get_low_expression</span>(object))</span>
+<span id="cb26-37"><a href="#cb26-37"></a><span class="fu">table</span>(<span class="fu">get_tech_failure</span>(object))</span>
+<span id="cb26-38"><a href="#cb26-38"></a><span class="fu">table</span>(<span class="fu">get_low_depth</span>(object))</span>
+<span id="cb26-39"><a href="#cb26-39"></a><span class="in">```</span></span>
+<span id="cb26-40"><a href="#cb26-40"></a></span>
+<span id="cb26-41"><a href="#cb26-41"></a>We then filter for samples that pass all quality checks (i.e. all flags are <span class="in">`FALSE`</span>).</span>
+<span id="cb26-42"><a href="#cb26-42"></a></span>
+<span id="cb26-45"><a href="#cb26-45"></a><span class="in">```{r}</span></span>
+<span id="cb26-46"><a href="#cb26-46"></a>result <span class="ot">&lt;-</span> <span class="fu">filter</span>(object)</span>
+<span id="cb26-47"><a href="#cb26-47"></a><span class="in">```</span></span>
+<span id="cb26-48"><a href="#cb26-48"></a></span>
+<span id="cb26-49"><a href="#cb26-49"></a>It is also possible to only filter genes or samples via the <span class="in">`what`</span> argument of <span class="in">`filter()`</span>.</span>
+<span id="cb26-50"><a href="#cb26-50"></a></span>
+<span id="cb26-51"><a href="#cb26-51"></a><span class="fu">## Normalization</span></span>
+<span id="cb26-52"><a href="#cb26-52"></a></span>
+<span id="cb26-53"><a href="#cb26-53"></a>Now that the samples are properly filtered, we can apply our normalization method.</span>
+<span id="cb26-54"><a href="#cb26-54"></a>By default, if a method is not specified for <span class="in">`normalize()`</span> then five methods (<span class="in">`cpm`</span>, <span class="in">`rpkm`</span>, <span class="in">`tpm`</span>, <span class="in">`voom`</span>, <span class="in">`vst`</span>) will be performed and results saved as separate assays.</span>
+<span id="cb26-55"><a href="#cb26-55"></a>If only one method is needed, it can be easily specified in the <span class="in">`methods`</span> argument.</span>
+<span id="cb26-56"><a href="#cb26-56"></a>In addition, if the <span class="in">`rlog`</span> transformation method is preferred, it can also be specified in the <span class="in">`methods`</span> argument.</span>
+<span id="cb26-57"><a href="#cb26-57"></a></span>
+<span id="cb26-60"><a href="#cb26-60"></a><span class="in">```{r}</span></span>
+<span id="cb26-61"><a href="#cb26-61"></a>norm_result <span class="ot">&lt;-</span> <span class="fu">normalize</span>(result)</span>
+<span id="cb26-62"><a href="#cb26-62"></a><span class="in">```</span></span>
+<span id="cb26-63"><a href="#cb26-63"></a></span>
+<span id="cb26-64"><a href="#cb26-64"></a><span class="fu">## Graphs: Separate Graph Functions</span></span>
+<span id="cb26-65"><a href="#cb26-65"></a></span>
+<span id="cb26-66"><a href="#cb26-66"></a>The <span class="in">`hermes`</span> package offers a series of <span class="in">`draw_*`</span> functions to help in the QC process.</span>
+<span id="cb26-67"><a href="#cb26-67"></a>First we introduce <span class="in">`draw_libsize_hist()`</span> which displays a histogram of the sample library sizes.</span>
+<span id="cb26-68"><a href="#cb26-68"></a></span>
+<span id="cb26-71"><a href="#cb26-71"></a><span class="in">```{r}</span></span>
+<span id="cb26-72"><a href="#cb26-72"></a><span class="fu">draw_libsize_hist</span>(norm_result, <span class="at">fill =</span> <span class="st">"lightblue"</span>)</span>
+<span id="cb26-73"><a href="#cb26-73"></a><span class="in">```</span></span>
+<span id="cb26-74"><a href="#cb26-74"></a></span>
+<span id="cb26-75"><a href="#cb26-75"></a>The <span class="in">`draw_libsize_qq()`</span> displays a QQ plot of the samples library size.</span>
+<span id="cb26-76"><a href="#cb26-76"></a>Here we look for potential outliers.</span>
+<span id="cb26-77"><a href="#cb26-77"></a></span>
+<span id="cb26-80"><a href="#cb26-80"></a><span class="in">```{r}</span></span>
+<span id="cb26-81"><a href="#cb26-81"></a><span class="fu">draw_libsize_qq</span>(norm_result, <span class="at">color =</span> <span class="st">"red"</span>)</span>
+<span id="cb26-82"><a href="#cb26-82"></a><span class="in">```</span></span>
+<span id="cb26-83"><a href="#cb26-83"></a></span>
+<span id="cb26-84"><a href="#cb26-84"></a>The <span class="in">`draw_libsize_densities()`</span> displays a density plot of the (log) counts distributions.</span>
+<span id="cb26-85"><a href="#cb26-85"></a>Distribution lines correspond to each sample.</span>
+<span id="cb26-86"><a href="#cb26-86"></a></span>
+<span id="cb26-89"><a href="#cb26-89"></a><span class="in">```{r}</span></span>
+<span id="cb26-90"><a href="#cb26-90"></a><span class="fu">draw_libsize_densities</span>(norm_result)</span>
+<span id="cb26-91"><a href="#cb26-91"></a><span class="in">```</span></span>
+<span id="cb26-92"><a href="#cb26-92"></a></span>
+<span id="cb26-93"><a href="#cb26-93"></a>The <span class="in">`draw_nonzero_boxplot()`</span> displays a box plot of the non-zero expressed genes per sample.</span>
+<span id="cb26-94"><a href="#cb26-94"></a></span>
+<span id="cb26-95"><a href="#cb26-95"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb26-96"><a href="#cb26-96"></a><span class="fu">draw_nonzero_boxplot</span>(norm_result)</span>
+<span id="cb26-97"><a href="#cb26-97"></a><span class="in">```</span></span>
+<span id="cb26-98"><a href="#cb26-98"></a></span>
+<span id="cb26-99"><a href="#cb26-99"></a>It's also possible to add an additional <span class="in">`ggplot2`</span> layer to get the sample ID of any points of interest, reusing the same position for labeling.</span>
+<span id="cb26-100"><a href="#cb26-100"></a>If the labeling of several data points overlaps, the parameters of <span class="in">`position_jitter()`</span> or <span class="in">`geom_text_repel()`</span> can be adjusted to avoid that.</span>
+<span id="cb26-101"><a href="#cb26-101"></a></span>
+<span id="cb26-102"><a href="#cb26-102"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb26-103"><a href="#cb26-103"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb26-104"><a href="#cb26-104"></a>pos <span class="ot">&lt;-</span> <span class="fu">position_jitter</span>(<span class="fl">0.4</span>)</span>
+<span id="cb26-105"><a href="#cb26-105"></a><span class="fu">draw_nonzero_boxplot</span>(norm_result, <span class="at">position =</span> pos) <span class="sc">+</span></span>
+<span id="cb26-106"><a href="#cb26-106"></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> norm_result<span class="sc">$</span>SampleID), <span class="at">position =</span> pos)</span>
+<span id="cb26-107"><a href="#cb26-107"></a><span class="in">```</span></span>
+<span id="cb26-108"><a href="#cb26-108"></a></span>
+<span id="cb26-109"><a href="#cb26-109"></a>The <span class="in">`draw_nonzero_boxplot()`</span> displays a box plot of the non-zero expressed genes per sample.</span>
+<span id="cb26-110"><a href="#cb26-110"></a></span>
+<span id="cb26-113"><a href="#cb26-113"></a><span class="in">```{r}</span></span>
+<span id="cb26-114"><a href="#cb26-114"></a><span class="fu">draw_genes_barplot</span>(norm_result)</span>
+<span id="cb26-115"><a href="#cb26-115"></a><span class="in">```</span></span>
+<span id="cb26-116"><a href="#cb26-116"></a></span>
+<span id="cb26-117"><a href="#cb26-117"></a>We can also select for specific chromosomes by specifying the values in the <span class="in">`chromosomes`</span> parameter.</span>
+<span id="cb26-118"><a href="#cb26-118"></a>For example, to only display chromosomes 1 and 2 separately and ignore all others:</span>
+<span id="cb26-119"><a href="#cb26-119"></a></span>
+<span id="cb26-122"><a href="#cb26-122"></a><span class="in">```{r}</span></span>
+<span id="cb26-123"><a href="#cb26-123"></a><span class="fu">draw_genes_barplot</span>(norm_result, <span class="at">chromosomes =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>), <span class="at">include_others =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb26-124"><a href="#cb26-124"></a><span class="in">```</span></span>
+<span id="cb26-125"><a href="#cb26-125"></a></span>
+<span id="cb26-126"><a href="#cb26-126"></a><span class="fu">## Graphs: All Graphs at Once</span></span>
+<span id="cb26-127"><a href="#cb26-127"></a></span>
+<span id="cb26-128"><a href="#cb26-128"></a>It is also possible to call all available <span class="in">`draw_*`</span> functions with one function, <span class="in">`autoplot()`</span>.</span>
+<span id="cb26-129"><a href="#cb26-129"></a>Note: <span class="in">`autoplot()`</span> does not allow for customization of the plots.</span>
+<span id="cb26-130"><a href="#cb26-130"></a>We recommend using the appropriate <span class="in">`draw_*`</span> function if you wish to make adjustments to the plots.</span>
+<span id="cb26-131"><a href="#cb26-131"></a></span>
+<span id="cb26-134"><a href="#cb26-134"></a><span class="in">```{r}</span></span>
+<span id="cb26-135"><a href="#cb26-135"></a><span class="fu">autoplot</span>(norm_result)</span>
+<span id="cb26-136"><a href="#cb26-136"></a><span class="in">```</span></span>
+<span id="cb26-137"><a href="#cb26-137"></a></span>
+<span id="cb26-138"><a href="#cb26-138"></a><span class="fu">## Teal Module for QC Graphs</span></span>
+<span id="cb26-139"><a href="#cb26-139"></a></span>
+<span id="cb26-140"><a href="#cb26-140"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb26-141"><a href="#cb26-141"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb26-142"><a href="#cb26-142"></a>We can then use the provided teal module <span class="in">`tm_g_quality`</span> to include a QC module in our teal app.</span>
+<span id="cb26-143"><a href="#cb26-143"></a></span>
+<span id="cb26-144"><a href="#cb26-144"></a><span class="in">```{r,  message = FALSE, cache = FALSE}</span></span>
+<span id="cb26-145"><a href="#cb26-145"></a><span class="co">#| screenshot.opts = list(delay = 24)</span></span>
+<span id="cb26-146"><a href="#cb26-146"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb26-147"><a href="#cb26-147"></a>mae <span class="ot">&lt;-</span> hermes<span class="sc">::</span>multi_assay_experiment</span>
+<span id="cb26-148"><a href="#cb26-148"></a>mae_data <span class="ot">&lt;-</span> <span class="fu">dataset</span>(<span class="st">"MAE"</span>, mae)</span>
+<span id="cb26-149"><a href="#cb26-149"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>(mae_data)</span>
+<span id="cb26-150"><a href="#cb26-150"></a></span>
+<span id="cb26-151"><a href="#cb26-151"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb26-152"><a href="#cb26-152"></a>  <span class="at">data =</span> data,</span>
+<span id="cb26-153"><a href="#cb26-153"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb26-154"><a href="#cb26-154"></a>    <span class="fu">tm_g_quality</span>(</span>
+<span id="cb26-155"><a href="#cb26-155"></a>      <span class="at">label =</span> <span class="st">"quality"</span>,</span>
+<span id="cb26-156"><a href="#cb26-156"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb26-157"><a href="#cb26-157"></a>    )</span>
+<span id="cb26-158"><a href="#cb26-158"></a>  )</span>
+<span id="cb26-159"><a href="#cb26-159"></a>)</span>
+<span id="cb26-160"><a href="#cb26-160"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb26-161"><a href="#cb26-161"></a><span class="in">```</span></span>
+<span id="cb26-162"><a href="#cb26-162"></a></span>
+<span id="cb26-163"><a href="#cb26-163"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb26-164"><a href="#cb26-164"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

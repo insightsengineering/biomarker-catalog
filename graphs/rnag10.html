@@ -1036,11 +1036,12 @@ https://github.com/insightsengineering/teal/discussions/945 as of teal.data
 <span id="cb9-9"><a href="#cb9-9"></a>  )</span>
 <span id="cb9-10"><a href="#cb9-10"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-11-18 17:52:15.1852 pid:14444 token:[] teal.modules.hermes Initializing tm_g_forest_tte</code></pre>
+<pre><code>[INFO] 2023-11-22 17:44:33.4035 pid:9449 token:[] teal.modules.hermes Initializing tm_g_forest_tte</code></pre>
 </div>
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2023-11-18 17:52:16.3260 pid:14444 token:[c1db2a6a] teal Initializing reporter_previewer_module</code></pre>
+<pre><code>Error in new_teal_data(data = data_objects, code = code, join_keys = join_keys) : 
+  Assertion on 'join_keys' failed: Must inherit from class 'join_keys', but has class 'list'.</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="rnag10_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1440"></p>
@@ -1075,9 +1076,9 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.5.9006 teal_0.14.0.9018              
- [3] teal.transform_0.4.0.9006      teal.slice_0.4.0.9022         
- [5] teal.data_0.3.0.9009           shiny_1.7.5.1                 
+ [1] teal.modules.hermes_0.1.5.9007 teal_0.14.0.9024              
+ [3] teal.transform_0.4.0.9007      teal.slice_0.4.0.9024         
+ [5] teal.data_0.3.0.9014           shiny_1.7.5.1                 
  [7] hermes_1.0.1.9019              SummarizedExperiment_1.30.2   
  [9] Biobase_2.60.0                 GenomicRanges_1.52.1          
 [11] GenomeInfoDb_1.36.4            IRanges_2.34.1                
@@ -1100,58 +1101,56 @@ loaded via a namespace (and not attached):
  [19] broom_1.0.5                 sass_0.4.7                 
  [21] bslib_0.5.1                 fontawesome_0.5.2          
  [23] htmlwidgets_1.6.2           cachem_1.0.8               
- [25] teal.widgets_0.4.1.9007     mime_0.12                  
+ [25] teal.widgets_0.4.1.9008     mime_0.12                  
  [27] lifecycle_1.0.3             iterators_1.0.14           
  [29] pkgconfig_2.0.3             Matrix_1.6-1.1             
  [31] R6_2.5.1                    fastmap_1.1.1              
  [33] GenomeInfoDbData_1.2.10     rbibutils_2.2.15           
  [35] clue_0.3-65                 digest_0.6.33              
- [37] colorspace_2.1-0            shinycssloaders_1.0.0      
- [39] ps_1.7.5                    AnnotationDbi_1.62.2       
- [41] RSQLite_2.3.1               teal.code_0.4.1.9007       
- [43] filelock_1.0.2              fansi_1.0.5                
- [45] httr_1.4.7                  abind_1.4-5                
- [47] compiler_4.3.1              bit64_4.0.5                
- [49] withr_2.5.1                 doParallel_1.0.17          
- [51] backports_1.4.1             DBI_1.1.3                  
- [53] logger_0.2.2                R.utils_2.12.2             
- [55] biomaRt_2.56.1              rappdirs_0.3.3             
- [57] DelayedArray_0.26.7         rjson_0.2.21               
- [59] tools_4.3.1                 httpuv_1.6.12              
- [61] R.oo_1.25.0                 glue_1.6.2                 
- [63] callr_3.7.3                 R.cache_0.16.0             
- [65] promises_1.2.1              grid_4.3.1                 
- [67] checkmate_2.2.0             cluster_2.1.4              
- [69] generics_0.1.3              gtable_0.3.4               
- [71] R.methodsS3_1.8.2           tidyr_1.3.0                
- [73] hms_1.1.3                   xml2_1.3.5                 
- [75] utf8_1.2.4                  XVector_0.40.0             
- [77] ggrepel_0.9.4               foreach_1.5.2              
- [79] pillar_1.9.0                stringr_1.5.0              
- [81] later_1.3.1                 circlize_0.4.15            
- [83] splines_4.3.1               dplyr_1.1.3                
- [85] BiocFileCache_2.8.0         lattice_0.22-5             
- [87] survival_3.5-7              bit_4.0.5                  
- [89] tidyselect_1.2.0            ComplexHeatmap_2.16.0      
- [91] Biostrings_2.68.1           knitr_1.44                 
- [93] gridExtra_2.3               teal.logger_0.1.3.9007     
- [95] xfun_0.40                   stringi_1.7.12             
- [97] yaml_2.3.7                  shinyWidgets_0.8.0         
- [99] evaluate_0.22               codetools_0.2-19           
-[101] tibble_3.2.1                cli_3.6.1                  
-[103] xtable_1.8-4                Rdpack_2.5                 
-[105] processx_3.8.2              jquerylib_0.1.4            
-[107] munsell_0.5.0               styler_1.10.2              
-[109] teal.reporter_0.2.1.9012    Rcpp_1.0.11                
-[111] dbplyr_2.3.4                png_0.1-8                  
-[113] XML_3.99-0.14               parallel_4.3.1             
-[115] ellipsis_0.3.2              assertthat_0.2.1           
-[117] blob_1.2.4                  prettyunits_1.2.0          
-[119] bitops_1.0-7                scales_1.2.1               
-[121] purrr_1.0.2                 crayon_1.5.2               
-[123] GetoptLong_1.0.5            rlang_1.1.1                
-[125] formatR_1.14                KEGGREST_1.40.1            
-[127] shinyjs_2.1.0              </code></pre>
+ [37] colorspace_2.1-0            ps_1.7.5                   
+ [39] AnnotationDbi_1.62.2        RSQLite_2.3.1              
+ [41] teal.code_0.4.1.9009        filelock_1.0.2             
+ [43] fansi_1.0.5                 httr_1.4.7                 
+ [45] abind_1.4-5                 compiler_4.3.1             
+ [47] bit64_4.0.5                 withr_2.5.1                
+ [49] doParallel_1.0.17           backports_1.4.1            
+ [51] DBI_1.1.3                   logger_0.2.2               
+ [53] R.utils_2.12.2              biomaRt_2.56.1             
+ [55] rappdirs_0.3.3              DelayedArray_0.26.7        
+ [57] rjson_0.2.21                tools_4.3.1                
+ [59] httpuv_1.6.12               R.oo_1.25.0                
+ [61] glue_1.6.2                  callr_3.7.3                
+ [63] R.cache_0.16.0              promises_1.2.1             
+ [65] grid_4.3.1                  checkmate_2.2.0            
+ [67] cluster_2.1.4               generics_0.1.3             
+ [69] gtable_0.3.4                R.methodsS3_1.8.2          
+ [71] tidyr_1.3.0                 hms_1.1.3                  
+ [73] xml2_1.3.5                  utf8_1.2.4                 
+ [75] XVector_0.40.0              ggrepel_0.9.4              
+ [77] foreach_1.5.2               pillar_1.9.0               
+ [79] stringr_1.5.0               later_1.3.1                
+ [81] circlize_0.4.15             splines_4.3.1              
+ [83] dplyr_1.1.3                 BiocFileCache_2.8.0        
+ [85] lattice_0.22-5              survival_3.5-7             
+ [87] bit_4.0.5                   tidyselect_1.2.0           
+ [89] ComplexHeatmap_2.16.0       Biostrings_2.68.1          
+ [91] knitr_1.44                  gridExtra_2.3              
+ [93] teal.logger_0.1.3.9007      xfun_0.40                  
+ [95] stringi_1.7.12              yaml_2.3.7                 
+ [97] evaluate_0.22               codetools_0.2-19           
+ [99] tibble_3.2.1                cli_3.6.1                  
+[101] xtable_1.8-4                Rdpack_2.5                 
+[103] processx_3.8.2              jquerylib_0.1.4            
+[105] munsell_0.5.0               styler_1.10.2              
+[107] Rcpp_1.0.11                 dbplyr_2.3.4               
+[109] png_0.1-8                   XML_3.99-0.14              
+[111] parallel_4.3.1              ellipsis_0.3.2             
+[113] assertthat_0.2.1            blob_1.2.4                 
+[115] prettyunits_1.2.0           bitops_1.0-7               
+[117] scales_1.2.1                purrr_1.0.2                
+[119] crayon_1.5.2                GetoptLong_1.0.5           
+[121] rlang_1.1.1                 KEGGREST_1.40.1            
+[123] shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>

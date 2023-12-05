@@ -125,9 +125,7 @@ We can then use the provided teal module `tm_g_scatterplot` to have add a scatte
 ```{r,  message = FALSE, cache = FALSE}
 #| screenshot.opts = list(delay = 24)
 library(teal.modules.hermes)
-mae <- hermes::multi_assay_experiment
-mae_data <- dataset("MAE", mae)
-data <- teal_data(mae_data)
+data <- teal_data(MAE = hermes::multi_assay_experiment, code = "MAE <- hermes::multi_assay_experiment")
 
 app <- init(
   data = data,

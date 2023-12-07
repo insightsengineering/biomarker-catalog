@@ -109,12 +109,12 @@ data <- teal_data()
 data <- within(data, {
   library(scda)
   library(dplyr)
-  MAE <- hermes::multi_assay_experiment
+  library(hermes)
+  MAE <- multi_assay_experiment
   ADTTE <- synthetic_cdisc_dataset("latest", "adtte") %>%
     mutate(is_event = .data$CNSR == 0)
 })
-datanames <- c("MAE", "ADTTE")
-datanames(data) <- datanames
+datanames(data) <- c("MAE", "ADTTE")
 join_keys(data)["ADTTE", "ADTTE"] <- c("STUDYID", "USUBJID", "PARAMCD")
 
 app <- init(

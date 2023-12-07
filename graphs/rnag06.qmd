@@ -96,7 +96,13 @@ We can then use the provided teal module `tm_g_barplot` to have add a barplot mo
 ```{r,  message = FALSE, cache = FALSE}
 #| screenshot.opts = list(delay = 24)
 library(teal.modules.hermes)
-data <- teal_data(MAE = hermes::multi_assay_experiment, code = "MAE <- hermes::multi_assay_experiment")
+
+data <- teal_data()
+data <- within(data, {
+  library(hermes)
+  MAE <- multi_assay_experiment
+})
+datanames(data) <- "MAE"
 
 app <- init(
   data = data,

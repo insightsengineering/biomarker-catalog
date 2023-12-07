@@ -94,18 +94,18 @@ In case that we have different non-standard column names in our ADTTE data set w
 ```{r,  message = FALSE, cache = FALSE}
 #| screenshot.opts = list(delay = 24)
 library(teal.modules.hermes)
-mae <- hermes::multi_assay_experiment
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-  dplyr::mutate(is_event = .data$CNSR == 0)
-data <- teal_data(
-  dataset(
-    "ADTTE",
-    adtte,
-    code = 'adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-        dplyr::mutate(is_event = .data$CNSR == 0)'
-  ),
-  dataset("mae", mae)
-)
+
+data <- teal_data()
+data <- within(data, {
+  library(scda)
+  library(dplyr)
+  library(hermes)
+  MAE <- multi_assay_experiment
+  ADTTE <- synthetic_cdisc_dataset("latest", "adtte") %>%
+    mutate(is_event = .data$CNSR == 0)
+})
+datanames(data) <- c("MAE", "ADTTE")
+join_keys(data)["ADTTE", "ADTTE"] <- c("STUDYID", "USUBJID", "PARAMCD")
 
 app <- init(
   data = data,
@@ -113,7 +113,7 @@ app <- init(
     tm_g_km(
       label = "Kaplan-Meier Graph",
       adtte_name = "ADTTE",
-      mae_name = "mae",
+      mae_name = "MAE",
       exclude_assays = character()
     )
   )

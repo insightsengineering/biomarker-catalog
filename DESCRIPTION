@@ -29,14 +29,14 @@ Imports:
     pkgdown,
     scda,
     scda.2022,
-    teal.modules.clinical,
+    teal.modules.clinical (>= 0.8.16.9018),
     tern,
     tern.mmrm,
-    teal,
-    teal.modules.general,
+    teal (>= 0.14.0.9027),
+    teal.modules.general (>= 0.2.16.9014),
     rtables,
     ggplot2.utils,
     hermes,
-    teal.modules.hermes
+    teal.modules.hermes (>= 0.1.5.9009)
 Encoding: UTF-8
 Language: en-US

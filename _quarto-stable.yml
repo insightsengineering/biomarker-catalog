@@ -1,0 +1,8 @@
+website:
+  title: Biomarker Analysis Catalog - Stable
+  navbar:
+    right:
+      - text: "Stable"
+        menu:
+          - text: "Dev"
+            href: "https://insightsengineering.github.io/biomarker-catalog/development"

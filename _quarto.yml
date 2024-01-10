@@ -50,7 +50,6 @@ editor: visual
 highlight-style: github
 
 website:
-  title: Biomarker Analysis Catalog
   image: assets/images/logo.png
   favicon: assets/images/logo.png
   open-graph: true

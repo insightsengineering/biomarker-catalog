@@ -6,6 +6,8 @@ categories: [RNAG]
 
 ------------------------------------------------------------------------
 
+{{< include ../misc/hooks.qmd >}}
+
 ::: panel-tabset
 ## Setup: Import and Filter
 
@@ -77,8 +79,7 @@ We start by importing a `MultiAssayExperiment`; here we use the example `multi_a
 It is wrapped as a `teal::dataset`.
 We can then use the provided teal module `tm_g_volcanoplot` to include a volcano graph module in our teal app.
 
-```{r,  message = FALSE, cache = FALSE}
-#| screenshot.opts = list(delay = 24)
+```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}
 library(teal.modules.hermes)
 
 data <- teal_data()

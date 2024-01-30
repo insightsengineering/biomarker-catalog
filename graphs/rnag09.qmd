@@ -6,6 +6,8 @@ categories: [RNAG]
 
 ------------------------------------------------------------------------
 
+{{< include ../misc/hooks.qmd >}}
+
 ::: panel-tabset
 ## Setup: Import & Data Manipulation
 
@@ -91,8 +93,7 @@ We can then use the provided teal module `tm_g_km` to include the corresponding 
 Note that by default the `counts` assay is excluded via the `exclude_assays` argument, but we can include it by just saying that we don't want to exclude any assays.
 In case that we have different non-standard column names in our ADTTE data set we could also specify them via the `adtte_vars` argument, see the documentation `?tm_g_km` for more details.
 
-```{r,  message = FALSE, cache = FALSE}
-#| screenshot.opts = list(delay = 24)
+```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}
 library(teal.modules.hermes)
 
 data <- teal_data()

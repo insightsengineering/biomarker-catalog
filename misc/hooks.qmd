@@ -1,0 +1,12 @@
+```{r knitr_utils, include=FALSE}
+knitr::opts_template$set(
+  app = list(
+    webshot = "webshot2",
+    screenshot.force = TRUE,
+    screenshot.opts = list(delay = 15),
+    dev = "png",
+    fig.width = 15,
+    cache = FALSE
+  )
+)
+```

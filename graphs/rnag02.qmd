@@ -6,6 +6,8 @@ categories: [RNAG]
 
 ------------------------------------------------------------------------
 
+{{< include ../misc/hooks.qmd >}}
+
 ::: panel-tabset
 ## Setup: Import, Filter and Normalize
 
@@ -84,8 +86,7 @@ It is wrapped as a `teal::dataset`.
 We can select the top genes plot under the plot type menu.
 We can then use the provided teal module `tm_g_quality` to include a QC module in our teal app.
 
-```{r,  message = FALSE, cache = FALSE}
-#| screenshot.opts = list(delay = 24)
+```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}
 library(teal.modules.hermes)
 
 data <- teal_data()

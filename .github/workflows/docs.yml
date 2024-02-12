@@ -31,10 +31,10 @@ jobs:
       contents: write
     steps:
       - name: Checkout repo 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Cache artifacts 📀
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.staged.dependencies
@@ -71,7 +71,7 @@ jobs:
 
       - name: Upload docs ⬆
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site-development
           path: site.zip
@@ -100,10 +100,10 @@ jobs:
       contents: write
     steps:
       - name: Checkout repo 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Cache artifacts 📀
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             _freeze
@@ -135,7 +135,7 @@ jobs:
 
       - name: Upload docs ⬆
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site-stable
           path: site.zip
@@ -164,16 +164,16 @@ jobs:
         && !contains(github.event.commits[0].message, '[skip docs]')
     steps:
       - name: Checkout repo 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download artifact ⏬
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: site-development
           path: site-development
 
       - name: Download artifact ⏬
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: site-stable
           path: site-stable

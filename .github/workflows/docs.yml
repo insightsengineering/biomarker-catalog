@@ -122,8 +122,8 @@ jobs:
 
       - name: Render catalog 🖨
         run: |
-          quarto render --profile stable
           R CMD INSTALL .
+          quarto render --profile stable
         shell: bash
 
       # - name: Create artifact 📂

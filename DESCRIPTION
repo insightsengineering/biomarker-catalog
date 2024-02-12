@@ -37,6 +37,11 @@ Imports:
     rtables,
     ggplot2.utils,
     hermes,
-    teal.modules.hermes (>= 0.1.5.9009)
+    teal.modules.hermes (>= 0.1.5.9009),
+    goshawk,
+    teal.goshawk,
+    osprey,
+    teal.osprey,
+    nestcolor
 Encoding: UTF-8
 Language: en-US

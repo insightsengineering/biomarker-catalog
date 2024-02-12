@@ -18,6 +18,7 @@ on:
       - "v*"
     branches:
       - main
+      - fix-stable-dependency-installation
   schedule:
     - cron: "17 17 * * 3,6"
 
@@ -62,34 +63,34 @@ jobs:
           quarto render --profile development
         shell: bash
 
-      - name: Create artifact 📂
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: |
-          zip -r9 ../site.zip *
-        shell: bash
-        working-directory: _site
+      # - name: Create artifact 📂
+      #   if: startsWith(github.ref, 'refs/tags/v')
+      #   run: |
+      #     zip -r9 ../site.zip *
+      #   shell: bash
+      #   working-directory: _site
 
-      - name: Upload docs ⬆
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: actions/upload-artifact@v3
-        with:
-          name: site-development
-          path: site.zip
+      # - name: Upload docs ⬆
+      #   if: startsWith(github.ref, 'refs/tags/v')
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: site-development
+      #     path: site.zip
 
-      - name: Publish docs
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          destination_dir: development
+      # - name: Publish docs
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./_site
+      #     destination_dir: development
 
-      - name: GChat notification 🔔
-        if: (failure() || cancelled()) && env.gchat_webhook != ''
-        uses: insightsengineering/google-chat-notification@master
-        with:
-          name: ${{ github.event.repository.name }} - development
-          url: ${{ secrets.GCHAT_WEBHOOK }}
-          status: ${{ job.status }}
+      # - name: GChat notification 🔔
+      #   if: (failure() || cancelled()) && env.gchat_webhook != ''
+      #   uses: insightsengineering/google-chat-notification@master
+      #   with:
+      #     name: ${{ github.event.repository.name }} - development
+      #     url: ${{ secrets.GCHAT_WEBHOOK }}
+      #     status: ${{ job.status }}
 
   publish-stable:
     name: Build & Deploy Catalog (stable) 📖
@@ -122,36 +123,37 @@ jobs:
       - name: Render catalog 🖨
         run: |
           quarto render --profile stable
+          R CMD INSTALL .
         shell: bash
 
-      - name: Create artifact 📂
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: |
-          zip -r9 ../site.zip *
-        shell: bash
-        working-directory: _site
+      # - name: Create artifact 📂
+      #   if: startsWith(github.ref, 'refs/tags/v')
+      #   run: |
+      #     zip -r9 ../site.zip *
+      #   shell: bash
+      #   working-directory: _site
 
-      - name: Upload docs ⬆
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: actions/upload-artifact@v3
-        with:
-          name: site-stable
-          path: site.zip
+      # - name: Upload docs ⬆
+      #   if: startsWith(github.ref, 'refs/tags/v')
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: site-stable
+      #     path: site.zip
 
-      - name: Publish docs
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          destination_dir: stable
+      # - name: Publish docs
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./_site
+      #     destination_dir: stable
 
-      - name: GChat notification 🔔
-        if: (failure() || cancelled()) && env.gchat_webhook != ''
-        uses: insightsengineering/google-chat-notification@master
-        with:
-          name: ${{ github.event.repository.name }} - stable
-          url: ${{ secrets.GCHAT_WEBHOOK }}
-          status: ${{ job.status }}
+      # - name: GChat notification 🔔
+      #   if: (failure() || cancelled()) && env.gchat_webhook != ''
+      #   uses: insightsengineering/google-chat-notification@master
+      #   with:
+      #     name: ${{ github.event.repository.name }} - stable
+      #     url: ${{ secrets.GCHAT_WEBHOOK }}
+      #     status: ${{ job.status }}
 
   upload-release-assets:
     name: Upload assets 🔼

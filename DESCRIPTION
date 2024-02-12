@@ -41,6 +41,7 @@ Imports:
     goshawk,
     teal.goshawk,
     osprey,
-    teal.osprey
+    teal.osprey,
+    nestcolor
 Encoding: UTF-8
 Language: en-US

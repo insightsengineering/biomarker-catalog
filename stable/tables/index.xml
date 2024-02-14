@@ -1,0 +1,2988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Biomarker Analysis Catalog - Stable</title>
+<link>https://insightsengineering.github.io/biomarker-catalog/tables/</link>
+<atom:link href="https://insightsengineering.github.io/biomarker-catalog/tables/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<image>
+<url>https://insightsengineering.github.io/biomarker-catalog/assets/images/logo.png</url>
+<title>Biomarker Analysis Catalog - Stable</title>
+<link>https://insightsengineering.github.io/biomarker-catalog/tables/</link>
+<height>166</height>
+<width>144</width>
+</image>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Wed, 14 Feb 2024 17:49:04 GMT</lastBuildDate>
+<item>
+  <title>CPMT1</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package to illustrate the tables. We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival. We then convert time of overall survival to months and create a new variable for the event information.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(PARAMCD <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OS"</span>, BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVAL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">day2month</span>(AVAL),</span>
+<span id="cb1-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVALU =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Months"</span>,</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">event =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> CNSR</span>
+<span id="cb1-11">  )</span></code></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>The <code>summarize_coxreg()</code> function in <code>tern</code> takes the same <code>variables</code>, <code>at</code>, and <code>control</code> arguments that are used to fit a model using the <code>fit_coxreg_univar()</code> function - specifying the time, event and covariate in a <code>variables</code> list, and <code>control</code> and <code>at</code> with any further customizations to the model. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
+<p>Rather than fitting the model and then tidying the output via the <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code> function, we can directly input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, building the table with our pre-processed <code>adtte</code> data set.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_coxreg</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">variables =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">time =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"event"</span>,</span>
+<span id="cb2-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">covariates =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"COUNTRY"</span></span>
+<span id="cb2-6">  ))</span>
+<span id="cb2-7"></span>
+<span id="cb2-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                              Hazard Ratio      95% CI      p-value
+———————————————————————————————————————————————————————————————————
+Covariate:                                                         
+  Country (reference = CHN)                                 0.8447 
+    USA                           1.36       (0.70, 2.64)   0.3633 
+    BRA                           1.02       (0.55, 1.87)   0.9564 
+    PAK                           1.03       (0.54, 1.94)   0.9316 
+    NGA                           0.97       (0.46, 2.03)   0.9405 
+    RUS                           1.48       (0.64, 3.42)   0.3574 
+    JPN                           1.52       (0.61, 3.76)   0.3686 
+    GBR                           0.75       (0.30, 1.85)   0.5287 
+    CAN                           2.09       (0.65, 6.70)   0.2163 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  stringr_1.5.1     tidyr_1.3.1       splines_4.3.2    
+ [9] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5   
+[13] ggplot2_3.4.4     R6_2.5.1          generics_0.1.3    knitr_1.45       
+[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
+[21] checkmate_2.3.1   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
+[25] scda_0.1.6        pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
+[29] stringi_1.8.3     broom_1.0.5       xfun_0.42         cli_3.6.2        
+[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        lifecycle_1.0.4  
+[37] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        codetools_0.2-19 
+[41] abind_1.4-5       survival_3.5-7    carData_3.0-5     fansi_1.0.6      
+[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>CPM</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>CPMT2</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>We prepare the data similarly as in <a href="../../tables/cpmt01.html">CPMT1</a>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(PARAMCD <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OS"</span>, BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVAL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">day2month</span>(AVAL),</span>
+<span id="cb1-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVALU =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Months"</span>,</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> CNSR <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-11">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">var_relabel</span>(</span>
+<span id="cb1-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BMRKR1 =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Biomarker (Continuous)"</span>,</span>
+<span id="cb1-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BMRKR2 =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Biomarker (Categorical)"</span></span>
+<span id="cb1-15">  )</span></code></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>The multivariate Cox Proportional Hazards model can be displayed in a summary table using the <code>summarize_coxreg</code> function from <code>tern</code> with the <code>multivar</code> argument set to <code>TRUE</code>. Like the corresponding model fitting function <code>fit_coxreg_multivar()</code>, we specify the time, event, arm and covariates in a <code>variables</code> list, and any further customizations via the <code>control</code> argument. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
+<p>Rather than fitting the model and then tidying the output via the <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code> function, we can directly input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, building the table with our pre-processed <code>adtte</code> data set.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">result <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_coxreg</span>(</span>
+<span id="cb2-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">variables =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-4">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">time =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-5">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-6">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>,</span>
+<span id="cb2-7">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">covariates =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BMRKR1"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BMRKR2"</span>)</span>
+<span id="cb2-8">    ),</span>
+<span id="cb2-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">multivar =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb2-10">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">append_topleft</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Effect/Covariate Included in the Model"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(adtte)</span>
+<span id="cb2-13"></span>
+<span id="cb2-14">result</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>Effect/Covariate Included in the Model                 Hazard Ratio      95% CI      p-value
+————————————————————————————————————————————————————————————————————————————————————————————
+Treatment:                                                                                  
+  Description of Planned Arm (reference = A: Drug X)                                 &lt;0.0001
+    B: Placebo                                             1.49       (0.92, 2.40)   0.1037 
+    C: Combination                                         3.91       (2.53, 6.04)   &lt;0.0001
+Covariate:                                                                                  
+  Age                                                                                       
+    All                                                    1.00       (0.99, 1.02)   0.6236 
+  Biomarker (Continuous)                                                                    
+    All                                                    0.98       (0.93, 1.02)   0.3023 
+  Biomarker (Categorical) (reference = LOW)                                          0.6704 
+    MEDIUM                                                 1.00       (0.65, 1.53)   0.9909 
+    HIGH                                                   0.84       (0.56, 1.28)   0.4211 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  stringr_1.5.1     tidyr_1.3.1       splines_4.3.2    
+ [9] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5   
+[13] ggplot2_3.4.4     R6_2.5.1          generics_0.1.3    knitr_1.45       
+[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
+[21] checkmate_2.3.1   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
+[25] scda_0.1.6        pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
+[29] stringi_1.8.3     broom_1.0.5       xfun_0.42         cli_3.6.2        
+[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        lifecycle_1.0.4  
+[37] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        codetools_0.2-19 
+[41] abind_1.4-5       survival_3.5-7    carData_3.0-5     fansi_1.0.6      
+[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>CPM</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>CPMT2A</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>We prepare the data similarly as in <a href="../../tables/cpmt01.html">CPMT1</a>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(PARAMCD <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OS"</span>, BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVAL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">day2month</span>(AVAL),</span>
+<span id="cb1-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVALU =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Months"</span>,</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> CNSR <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-11">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">var_relabel</span>(</span>
+<span id="cb1-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BMRKR1 =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Biomarker (Continuous)"</span>,</span>
+<span id="cb1-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BMRKR2 =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Biomarker (Categorical)"</span></span>
+<span id="cb1-15">  )</span></code></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before. The <code>forcats</code> package provides convenience functions for the level reordering.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb2-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ARM =</span> forcats<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_relevel</span>(</span>
+<span id="cb2-4">      ARM,</span>
+<span id="cb2-5">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B: Placebo"</span>,</span>
+<span id="cb2-6">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"C: Combination"</span>,</span>
+<span id="cb2-7">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A: Drug X"</span></span>
+<span id="cb2-8">    )</span>
+<span id="cb2-9">  )</span></code></pre></div>
+</details>
+</div>
+<p>Now we can proceed in the same way as in <a href="../../tables/CPMT2/cpmt02.html">CPMT2</a>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">result <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_coxreg</span>(</span>
+<span id="cb3-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">variables =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb3-4">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">time =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb3-5">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb3-6">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>,</span>
+<span id="cb3-7">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">covariates =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BMRKR1"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BMRKR2"</span>)</span>
+<span id="cb3-8">    ),</span>
+<span id="cb3-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">multivar =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb3-10">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb3-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">append_topleft</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Effect/Covariate Included in the Model"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb3-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(adtte2)</span>
+<span id="cb3-13"></span>
+<span id="cb3-14">result</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>Effect/Covariate Included in the Model                  Hazard Ratio      95% CI      p-value
+—————————————————————————————————————————————————————————————————————————————————————————————
+Treatment:                                                                                   
+  Description of Planned Arm (reference = B: Placebo)                                 &lt;0.0001
+    C: Combination                                          2.63       (1.70, 4.05)   &lt;0.0001
+    A: Drug X                                               0.67       (0.42, 1.08)   0.1037 
+Covariate:                                                                                   
+  Age                                                                                        
+    All                                                     1.00       (0.99, 1.02)   0.6236 
+  Biomarker (Continuous)                                                                     
+    All                                                     0.98       (0.93, 1.02)   0.3023 
+  Biomarker (Categorical) (reference = LOW)                                           0.6704 
+    MEDIUM                                                  1.00       (0.65, 1.53)   0.9909 
+    HIGH                                                    0.84       (0.56, 1.28)   0.4211 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  stringr_1.5.1     tidyr_1.3.1       splines_4.3.2    
+ [9] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5   
+[13] ggplot2_3.4.4     R6_2.5.1          generics_0.1.3    knitr_1.45       
+[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
+[21] checkmate_2.3.1   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
+[25] scda_0.1.6        pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
+[29] stringi_1.8.3     broom_1.0.5       xfun_0.42         cli_3.6.2        
+[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        lifecycle_1.0.4  
+[37] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        codetools_0.2-19 
+[41] abind_1.4-5       survival_3.5-7    carData_3.0-5     fansi_1.0.6      
+[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>CPM</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>CPMT3</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>We prepare the data in the same way as in <a href="../tables/cpmt01.html">CPMT1</a>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(PARAMCD <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OS"</span>, BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVAL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">day2month</span>(AVAL),</span>
+<span id="cb1-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVALU =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Months"</span>,</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">event =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> CNSR</span>
+<span id="cb1-11">  )</span></code></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>The separate Cox Proportional Hazards models for each covariate can be fitted and summarized in a table using the <code>summarize_coxreg()</code> function in <code>tern</code>. This function takes the same <code>variables</code>, <code>at</code>, and <code>control</code> arguments that are used to fit a model using the <code>fit_coxreg_univar()</code> function - specifying the time, event and covariate in a <code>variables</code> list, and <code>control</code> and <code>at</code> with any further customizations to the model. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
+<p>We input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, and then build the table with our pre-processed <code>adtte</code> data set.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_coxreg</span>(</span>
+<span id="cb2-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">variables =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-4">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">time =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-5">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"event"</span>,</span>
+<span id="cb2-6">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">covariates =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"COUNTRY"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>)</span>
+<span id="cb2-7">    )</span>
+<span id="cb2-8">  )</span>
+<span id="cb2-9"></span>
+<span id="cb2-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lyt =</span> lyt, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">df =</span> adtte)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                              Hazard Ratio      95% CI      p-value
+———————————————————————————————————————————————————————————————————
+Covariate:                                                         
+  Country (reference = CHN)                                 0.8447 
+    USA                           1.36       (0.70, 2.64)   0.3633 
+    BRA                           1.02       (0.55, 1.87)   0.9564 
+    PAK                           1.03       (0.54, 1.94)   0.9316 
+    NGA                           0.97       (0.46, 2.03)   0.9405 
+    RUS                           1.48       (0.64, 3.42)   0.3574 
+    JPN                           1.52       (0.61, 3.76)   0.3686 
+    GBR                           0.75       (0.30, 1.85)   0.5287 
+    CAN                           2.09       (0.65, 6.70)   0.2163 
+  Age                                                              
+    All                           1.01       (0.99, 1.03)   0.5869 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  stringr_1.5.1     tidyr_1.3.1       splines_4.3.2    
+ [9] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5   
+[13] ggplot2_3.4.4     R6_2.5.1          generics_0.1.3    knitr_1.45       
+[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
+[21] checkmate_2.3.1   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
+[25] scda_0.1.6        pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
+[29] stringi_1.8.3     broom_1.0.5       xfun_0.42         cli_3.6.2        
+[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        lifecycle_1.0.4  
+[37] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        codetools_0.2-19 
+[41] abind_1.4-5       survival_3.5-7    carData_3.0-5     fansi_1.0.6      
+[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>CPM</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>DT1</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>The tables below compare the overall population (“All”) with the biomarker evaluable population (“BEP”) with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
+<p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BEP02FL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">replace =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)))</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">bep_groups <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb1-10">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"All"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>),</span>
+<span id="cb1-11">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span></span>
+<span id="cb1-12">)</span></code></pre></div>
+</details>
+</div>
+<p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>The simplest demographics table DT1 splits the columns by treatment arm and All vs.&nbsp;BEP, and summarizes selected demographic variables in the rows.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by_groups</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP01FL"</span>, bep_groups) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                      A: Drug X                  B: Placebo                C: Combination      
+                  All           BEP           All           BEP           All           BEP    
+                (N=134)       (N=68)        (N=134)       (N=63)        (N=132)       (N=66)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               134           68            134           63            132           66     
+  Mean (SD)   33.8 (6.6)    32.9 (6.6)    35.4 (7.9)    35.7 (8.3)    35.4 (7.7)    35.1 (8.1) 
+  Median         33.0          32.0          35.0          35.0          35.0          34.0    
+  Min - Max   21.0 - 50.0   21.0 - 50.0   21.0 - 62.0   23.0 - 62.0   20.0 - 69.0   21.0 - 69.0
+SEX                                                                                            
+  n               134           68            134           63            132           66     
+  F            79 (59%)     44 (64.7%)    82 (61.2%)    42 (66.7%)     70 (53%)     40 (60.6%) 
+  M            55 (41%)     24 (35.3%)    52 (38.8%)    21 (33.3%)     62 (47%)     26 (39.4%) </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>DT</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>DT1A</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>The tables below compare the overall population (“All”) with the biomarker evaluable population (“BEP”) with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
+<p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BEP02FL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">replace =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)))</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">bep_groups <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb1-10">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"All"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>),</span>
+<span id="cb1-11">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span></span>
+<span id="cb1-12">)</span></code></pre></div>
+</details>
+</div>
+<p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>We can reorder the treatment arm columns in the demographics table DT1 by using the <code>reorder_split_levels()</code> splitting function in <code>split_cols_by()</code> as done here.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">split_fun =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">reorder_split_levels</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B: Placebo"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A: Drug X"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"C: Combination"</span>))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by_groups</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP01FL"</span>, bep_groups) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                     B: Placebo                   A: Drug X                C: Combination      
+                  All           BEP           All           BEP           All           BEP    
+                (N=134)       (N=63)        (N=134)       (N=68)        (N=132)       (N=66)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               134           63            134           68            132           66     
+  Mean (SD)   35.4 (7.9)    35.7 (8.3)    33.8 (6.6)    32.9 (6.6)    35.4 (7.7)    35.1 (8.1) 
+  Median         35.0          35.0          33.0          32.0          35.0          34.0    
+  Min - Max   21.0 - 62.0   23.0 - 62.0   21.0 - 50.0   21.0 - 50.0   20.0 - 69.0   21.0 - 69.0
+SEX                                                                                            
+  n               134           63            134           68            132           66     
+  F           82 (61.2%)    42 (66.7%)     79 (59%)     44 (64.7%)     70 (53%)     40 (60.6%) 
+  M           52 (38.8%)    21 (33.3%)     55 (41%)     24 (35.3%)     62 (47%)     26 (39.4%) </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>DT</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>DT1B</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>The tables below compare the overall population (“All”) with the biomarker evaluable population (“BEP”) with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
+<p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BEP02FL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">replace =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)))</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">bep_groups <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb1-10">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"All"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>),</span>
+<span id="cb1-11">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span></span>
+<span id="cb1-12">)</span></code></pre></div>
+</details>
+</div>
+<p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>It is simple to omit the treatment arm split in the demographics table DT1, thus effectively combining the treatment arms.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by_groups</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP01FL"</span>, bep_groups) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                  All           BEP    
+                (N=400)       (N=197)  
+———————————————————————————————————————
+AGE                                    
+  n               400           197    
+  Mean (SD)   34.9 (7.4)    34.6 (7.7) 
+  Median         34.0          34.0    
+  Min - Max   20.0 - 69.0   21.0 - 69.0
+SEX                                    
+  n               400           197    
+  F           231 (57.8%)    126 (64%) 
+  M           169 (42.2%)    71 (36%)  </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>DT</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>DT1C</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>The tables below compare the overall population (“All”) with the biomarker evaluable population (“BEP”) with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
+<p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb1-5">adsl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BEP02FL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">replace =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)))</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">bep_groups <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb1-10">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"All"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>),</span>
+<span id="cb1-11">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span></span>
+<span id="cb1-12">)</span></code></pre></div>
+</details>
+</div>
+<p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>We can of course use a different BEP factor variable <code>BEP02FL</code> with corresponding groups definition <code>bep2_groups</code> in the demographics table DT1.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">bep2_groups <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-2">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"All"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span>),</span>
+<span id="cb2-3">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP2"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span></span>
+<span id="cb2-4">)</span>
+<span id="cb2-5"></span>
+<span id="cb2-6">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by_groups</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP02FL"</span>, bep2_groups) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                      A: Drug X                  B: Placebo                C: Combination      
+                  All          BEP2           All          BEP2           All          BEP2    
+                (N=134)       (N=68)        (N=134)       (N=75)        (N=132)       (N=68)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               134           68            134           75            132           68     
+  Mean (SD)   33.8 (6.6)    32.3 (6.2)    35.4 (7.9)    35.5 (7.4)    35.4 (7.7)    35.3 (6.7) 
+  Median         33.0          31.0          35.0          36.0          35.0          35.0    
+  Min - Max   21.0 - 50.0   21.0 - 47.0   21.0 - 62.0   23.0 - 58.0   20.0 - 69.0   21.0 - 49.0
+SEX                                                                                            
+  n               134           68            134           75            132           68     
+  F            79 (59%)     42 (61.8%)    82 (61.2%)     48 (64%)      70 (53%)      34 (50%)  
+  M            55 (41%)     26 (38.2%)    52 (38.8%)     27 (36%)      62 (47%)      34 (50%)  </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>DT</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>DT2</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>The tables below compare the biomarker evaluable population (BEP, below in the table “BEP Yes”) with the remainder non-BEP (“BEP No”) within each treatment arm with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables.</p>
+<p>In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable <code>BEP01FL</code> that categorises the evaluable and non evaluable subgroups. For readability in the tables, we define a separate label variable <code>BEP_label</code> below which is parallel to the original flag variable.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adsl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BEP_label =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(</span>
+<span id="cb1-8">      BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP Yes"</span>,</span>
+<span id="cb1-9">      BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP No"</span></span>
+<span id="cb1-10">    )</span>
+<span id="cb1-11">  )</span></code></pre></div>
+</details>
+</div>
+<p>This can then be used by the <code>rtables</code> layout function <code>split_cols_by()</code> below.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>The demographics table DT2 splits the columns by treatment arm and by the biomarker population (Yes vs.&nbsp;No), and summarizes selected demographic variables in the rows. You can see here how we use the separate labels variable to specify the labels used in the column headers.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP01FL"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels_var =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP_label"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>))</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                      A: Drug X                  B: Placebo                C: Combination      
+                BEP Yes       BEP No        BEP Yes       BEP No        BEP Yes       BEP No   
+                (N=68)        (N=66)        (N=63)        (N=71)        (N=66)        (N=66)   
+———————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                            
+  n               68            66            63            71            66            66     
+  Mean (SD)   32.9 (6.6)    34.6 (6.5)    35.7 (8.3)    35.2 (7.6)    35.1 (8.1)    35.8 (7.3) 
+  Median         32.0          34.0          35.0          35.0          34.0          35.0    
+  Min - Max   21.0 - 50.0   24.0 - 48.0   23.0 - 62.0   21.0 - 58.0   21.0 - 69.0   20.0 - 64.0
+SEX                                                                                            
+  n               68            66            63            71            66            66     
+  F           44 (64.7%)     35 (53%)     42 (66.7%)    40 (56.3%)    40 (60.6%)    30 (45.5%) 
+  M           24 (35.3%)     31 (47%)     21 (33.3%)    31 (43.7%)    26 (39.4%)    36 (54.5%) </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>DT</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>DT2A</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>The tables below compare the biomarker evaluable population (BEP, below in the table “BEP Yes”) with the remainder non-BEP (“BEP No”) within each treatment arm with regards to selected demographic variables.</p>
+<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables.</p>
+<p>In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable <code>BEP01FL</code> that categorises the evaluable and non evaluable subgroups. For readability in the tables, we define a separate label variable <code>BEP_label</code> below which is parallel to the original flag variable.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adsl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adsl <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BEP_label =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(</span>
+<span id="cb1-8">      BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP Yes"</span>,</span>
+<span id="cb1-9">      BEP01FL <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"N"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP No"</span></span>
+<span id="cb1-10">    )</span>
+<span id="cb1-11">  )</span></code></pre></div>
+</details>
+</div>
+<p>This can then be used by the <code>rtables</code> layout function <code>split_cols_by()</code> below.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>The demographics table DT2A splits the columns by treatment arm and by BEP vs.&nbsp;non-BEP, summarizes selected demographic variables in the rows and performs tests to compare demographic variables between Non-BEP vs.&nbsp;BEP population. Note that p-values can be <code>NA</code> when the test could not be performed due to row counts being all zero, e.g.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP01FL"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels_var =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BEP_label"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ref_group =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Y"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">compare_vars</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AGE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>))</span>
+<span id="cb2-6"></span>
+<span id="cb2-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                                      A: Drug X                B: Placebo              C: Combination     
+                                BEP Yes       BEP No      BEP Yes       BEP No      BEP Yes       BEP No  
+                                 (N=68)       (N=66)       (N=63)       (N=71)       (N=66)       (N=66)  
+——————————————————————————————————————————————————————————————————————————————————————————————————————————
+AGE                                                                                                       
+  n                                68           66           63           71           66           66    
+  Mean (SD)                    32.9 (6.6)   34.6 (6.5)   35.7 (8.3)   35.2 (7.6)   35.1 (8.1)   35.8 (7.3)
+  p-value (t-test)                            0.1384                    0.6846                    0.6139  
+SEX                                                                                                       
+  n                                68           66           63           71           66           66    
+  F                            44 (64.7%)    35 (53%)    42 (66.7%)   40 (56.3%)   40 (60.6%)   30 (45.5%)
+  M                            24 (35.3%)    31 (47%)    21 (33.3%)   31 (43.7%)   26 (39.4%)   36 (54.5%)
+  p-value (chi-squared test)                  0.2309                    0.2951                    0.1165  </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>DT</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>TET1</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(</span>
+<span id="cb1-7">    PARAMCD <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OS"</span></span>
+<span id="cb1-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVAL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">day2month</span>(AVAL),</span>
+<span id="cb1-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVALU =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Months"</span>,</span>
+<span id="cb1-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> CNSR <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,</span>
+<span id="cb1-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_not_event =</span> CNSR <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb1-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ARM_BIN =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_collapse_only</span>(</span>
+<span id="cb1-15">      ARM,</span>
+<span id="cb1-16">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">CTRL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B: Placebo"</span>),</span>
+<span id="cb1-17">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">TRT =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A: Drug X"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"C: Combination"</span>)</span>
+<span id="cb1-18">    )</span>
+<span id="cb1-19">  )</span></code></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>This time-to-event summary table splits the columns by treatment arm using <code>split_cols_by()</code>, creates a summary for patients with and without event using <code>summarize_vars()</code>, summarizes survival time using <code>surv_time()</code> and summarizes the analysis from unstratified Cox Proportional Hazards models using <code>coxph_pairwise()</code>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(</span>
+<span id="cb2-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM_BIN"</span>,</span>
+<span id="cb2-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ref_group =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CTRL"</span></span>
+<span id="cb2-5">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(</span>
+<span id="cb2-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.stats =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"count_fraction"</span>,</span>
+<span id="cb2-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">count_fraction =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patients with event (%)"</span>),</span>
+<span id="cb2-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nested =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>,</span>
+<span id="cb2-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">show_labels =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hidden"</span></span>
+<span id="cb2-13">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(</span>
+<span id="cb2-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_not_event"</span>,</span>
+<span id="cb2-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.stats =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"count_fraction"</span>,</span>
+<span id="cb2-17">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">count_fraction =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patients without event (%)"</span>),</span>
+<span id="cb2-18">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nested =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>,</span>
+<span id="cb2-19">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">show_labels =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hidden"</span></span>
+<span id="cb2-20">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-21">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">surv_time</span>(</span>
+<span id="cb2-22">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-23">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var_labels =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to Event (months)"</span>,</span>
+<span id="cb2-24">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-25">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">table_names =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"time_to_event"</span></span>
+<span id="cb2-26">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-27">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coxph_pairwise</span>(</span>
+<span id="cb2-28">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-29">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-30">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var_labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Unstratified Analysis"</span>),</span>
+<span id="cb2-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">control =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">control_coxph</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pval_method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"log-rank"</span>),</span>
+<span id="cb2-32">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">table_names =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"coxph_unstratified"</span></span>
+<span id="cb2-33">  )</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                                 CTRL             TRT       
+                               (N=134)          (N=266)     
+————————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)      195 (73.3%)   
+Patients without event (%)    47 (35.1%)       71 (26.7%)   
+Time to Event (months)                                      
+  Median                         27.5             21.3      
+    95% CI                   (17.3, 30.2)     (16.3, 25.6)  
+  25% and 75%-ile             9.5, 54.9        7.1, 50.9    
+  Range                      0.0 to 122.4   0.1 to 154.7 {1}
+Unstratified Analysis                                       
+  p-value (log-rank)                             0.2146     
+  Hazard Ratio                                    1.17      
+  95% CI                                      (0.91, 1.51)  
+————————————————————————————————————————————————————————————
+
+{1} - Censored observation: range maximum
+————————————————————————————————————————————————————————————</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>TET</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+<item>
+  <title>TET1A</title>
+  <link>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</link>
+  <description><![CDATA[ <hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tern)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">df_explicit_na</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(</span>
+<span id="cb1-7">    PARAMCD <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OS"</span></span>
+<span id="cb1-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVAL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">day2month</span>(AVAL),</span>
+<span id="cb1-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">AVALU =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Months"</span>,</span>
+<span id="cb1-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> CNSR <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,</span>
+<span id="cb1-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_not_event =</span> CNSR <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb1-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ARM_BIN =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_collapse_only</span>(</span>
+<span id="cb1-15">      ARM,</span>
+<span id="cb1-16">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">CTRL =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B: Placebo"</span>),</span>
+<span id="cb1-17">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">TRT =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A: Drug X"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"C: Combination"</span>)</span>
+<span id="cb1-18">    )</span>
+<span id="cb1-19">  )</span></code></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>We can add the summary of an analysis with Cox Proportional Hazards models stratified by <code>SEX</code> to the table above using <code>coxph_pairwise()</code>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">basic_table</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">split_cols_by</span>(</span>
+<span id="cb2-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ARM_BIN"</span>,</span>
+<span id="cb2-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ref_group =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CTRL"</span></span>
+<span id="cb2-5">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_colcounts</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(</span>
+<span id="cb2-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.stats =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"count_fraction"</span>,</span>
+<span id="cb2-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">count_fraction =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patients with event (%)"</span>),</span>
+<span id="cb2-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nested =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>,</span>
+<span id="cb2-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">show_labels =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hidden"</span></span>
+<span id="cb2-13">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize_vars</span>(</span>
+<span id="cb2-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_not_event"</span>,</span>
+<span id="cb2-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.stats =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"count_fraction"</span>,</span>
+<span id="cb2-17">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">count_fraction =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Patients without event (%)"</span>),</span>
+<span id="cb2-18">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nested =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>,</span>
+<span id="cb2-19">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">show_labels =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hidden"</span></span>
+<span id="cb2-20">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-21">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">surv_time</span>(</span>
+<span id="cb2-22">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-23">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var_labels =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to Event (months)"</span>,</span>
+<span id="cb2-24">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-25">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">table_names =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"time_to_event"</span></span>
+<span id="cb2-26">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-27">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coxph_pairwise</span>(</span>
+<span id="cb2-28">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb2-29">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb2-30">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var_labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Unstratified Analysis"</span>),</span>
+<span id="cb2-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">control =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">control_coxph</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pval_method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"log-rank"</span>),</span>
+<span id="cb2-32">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">table_names =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"coxph_unstratified"</span></span>
+<span id="cb2-33">  )</span></code></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning: `summarize_vars()` was deprecated in tern 0.8.5.9010.
+ℹ Please use `analyze_vars()` instead.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">lyt2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> lyt <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coxph_pairwise</span>(</span>
+<span id="cb4-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vars =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"AVAL"</span>,</span>
+<span id="cb4-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_event =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"is_event"</span>,</span>
+<span id="cb4-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">var_labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Stratified Analysis"</span>),</span>
+<span id="cb4-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">strat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SEX"</span>,</span>
+<span id="cb4-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">control =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">control_coxph</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pval_method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"log-rank"</span>),</span>
+<span id="cb4-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">table_names =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"coxph_stratified"</span></span>
+<span id="cb4-9">  )</span>
+<span id="cb4-10"></span>
+<span id="cb4-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build_table</span>(lyt2, adtte)</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>                                 CTRL             TRT       
+                               (N=134)          (N=266)     
+————————————————————————————————————————————————————————————
+Patients with event (%)       87 (64.9%)      195 (73.3%)   
+Patients without event (%)    47 (35.1%)       71 (26.7%)   
+Time to Event (months)                                      
+  Median                         27.5             21.3      
+    95% CI                   (17.3, 30.2)     (16.3, 25.6)  
+  25% and 75%-ile             9.5, 54.9        7.1, 50.9    
+  Range                      0.0 to 122.4   0.1 to 154.7 {1}
+Unstratified Analysis                                       
+  p-value (log-rank)                             0.2146     
+  Hazard Ratio                                    1.17      
+  95% CI                                      (0.91, 1.51)  
+Stratified Analysis                                         
+  p-value (log-rank)                             0.2072     
+  Hazard Ratio                                    1.18      
+  95% CI                                      (0.91, 1.52)  
+————————————————————————————————————————————————————————————
+
+{1} - Censored observation: range maximum
+————————————————————————————————————————————————————————————</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4      tern_0.9.3       rtables_0.6.6    magrittr_2.0.3  
+[5] formatters_0.5.5
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
+ [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
+ [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
+[13] R6_2.5.1          generics_0.1.3    knitr_1.45        forcats_1.0.0    
+[17] rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1   checkmate_2.3.1  
+[21] tibble_3.2.1      munsell_0.5.0     scda_0.1.6        pillar_1.9.0     
+[25] rlang_1.1.3       utf8_1.2.4        stringi_1.8.3     broom_1.0.5      
+[29] xfun_0.42         cli_3.6.2         Rdpack_2.6        digest_0.6.34    
+[33] grid_4.3.2        lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
+[37] glue_1.7.0        codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
+[41] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
+[45] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
+  <category>TET</category>
+  <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
+  <pubDate>Wed, 14 Feb 2024 17:49:04 GMT</pubDate>
+</item>
+</channel>
+</rss>

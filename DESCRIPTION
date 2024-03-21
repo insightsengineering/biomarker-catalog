@@ -35,7 +35,6 @@ Imports:
     teal (>= 0.14.0.9027),
     teal.modules.general (>= 0.2.16.9014),
     rtables,
-    ggplot2,
     ggplot2.utils,
     hermes,
     teal.modules.hermes (>= 0.1.5.9009),

@@ -21,11 +21,12 @@ adtte_arm_bep <- adtte_arm %>%
 Afterwards we can plot the basic KM graph, just using the further filtered dataset `adtte_bep`.
 Here we annotate the plot with median survival time, but could suppress it with `annot_surv_med = FALSE`.
 
-```{r}
+```{r, fig.width=9, fig.height=6}
 g_km(
   df = adtte_arm_bep,
   variables = variables,
-  annot_surv_med = TRUE
+  annot_surv_med = TRUE,
+  rel_height_plot = 0.85
 )
 ```
 

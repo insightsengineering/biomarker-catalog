@@ -14,7 +14,7 @@ categories: [KG]
 We can customize the color and line type used in the graph with the `col` and `lty` arguments of `g_km()`.
 We can first check the level order of the `ARM_BMRKR2` factor variable to know which color and line type order we need.
 
-```{r}
+```{r, fig.width=9, fig.height=6}
 levels(adtte$ARM_BMRKR2)
 g_km(
   df = adtte,

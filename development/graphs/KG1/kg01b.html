@@ -981,8 +981,9 @@ cookieconsent.run({
 <span id="cb3-7"><a href="#cb3-7"></a>)</span>
 <span id="cb3-8"><a href="#cb3-8"></a></span>
 <span id="cb3-9"><a href="#cb3-9"></a>g <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ggplot2<span class="sc">::</span><span class="fu">ggplotGrob</span>(res1), ggplot2<span class="sc">::</span><span class="fu">ggplotGrob</span>(res2), <span class="at">size =</span> <span class="st">"first"</span>)</span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="fu">grid.newpage</span>()</span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="fu">grid.draw</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="fu">grid.newpage</span>()</span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="fu">grid.draw</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="kg01b_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -1688,22 +1689,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-28"><a href="#cb6-28"></a>Once the <span class="in">`grid`</span> layout is defined, plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs.</span>
 <span id="cb6-29"><a href="#cb6-29"></a>Note that these steps need to executed in the order specified below to enable creation of these plots in one graph.</span>
 <span id="cb6-30"><a href="#cb6-30"></a></span>
-<span id="cb6-31"><a href="#cb6-31"></a><span class="in">```{r, fig.width=9, fig.height=12}</span></span>
-<span id="cb6-32"><a href="#cb6-32"></a><span class="in">res1 &lt;- g_km(</span></span>
-<span id="cb6-33"><a href="#cb6-33"></a><span class="in">  df = adtte, variables = variables, annot_surv_med = FALSE, ci_ribbon = TRUE</span></span>
-<span id="cb6-34"><a href="#cb6-34"></a><span class="in">)</span></span>
-<span id="cb6-35"><a href="#cb6-35"></a></span>
-<span id="cb6-36"><a href="#cb6-36"></a><span class="in">res2 &lt;- g_km(</span></span>
-<span id="cb6-37"><a href="#cb6-37"></a><span class="in">  df = filter(adtte, BEP01FL == "Y"), variables = variables, annot_surv_med = FALSE</span></span>
-<span id="cb6-38"><a href="#cb6-38"></a><span class="in">)</span></span>
-<span id="cb6-39"><a href="#cb6-39"></a></span>
-<span id="cb6-40"><a href="#cb6-40"></a><span class="in">g &lt;- rbind(ggplot2::ggplotGrob(res1), ggplot2::ggplotGrob(res2), size = "first")</span></span>
-<span id="cb6-41"><a href="#cb6-41"></a><span class="in">grid.newpage()</span></span>
-<span id="cb6-42"><a href="#cb6-42"></a><span class="in">grid.draw(g)</span></span>
-<span id="cb6-43"><a href="#cb6-43"></a><span class="in">```</span></span>
-<span id="cb6-44"><a href="#cb6-44"></a></span>
-<span id="cb6-45"><a href="#cb6-45"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb6-31"><a href="#cb6-31"></a>::: {.content-visible when-profile="development"}</span>
+<span id="cb6-32"><a href="#cb6-32"></a><span class="in">```{r, fig.width=9, fig.height=12}</span></span>
+<span id="cb6-33"><a href="#cb6-33"></a><span class="in">res1 &lt;- g_km(</span></span>
+<span id="cb6-34"><a href="#cb6-34"></a><span class="in">  df = adtte, variables = variables, annot_surv_med = FALSE, ci_ribbon = TRUE</span></span>
+<span id="cb6-35"><a href="#cb6-35"></a><span class="in">)</span></span>
+<span id="cb6-36"><a href="#cb6-36"></a></span>
+<span id="cb6-37"><a href="#cb6-37"></a><span class="in">res2 &lt;- g_km(</span></span>
+<span id="cb6-38"><a href="#cb6-38"></a><span class="in">  df = filter(adtte, BEP01FL == "Y"), variables = variables, annot_surv_med = FALSE</span></span>
+<span id="cb6-39"><a href="#cb6-39"></a><span class="in">)</span></span>
+<span id="cb6-40"><a href="#cb6-40"></a></span>
+<span id="cb6-41"><a href="#cb6-41"></a><span class="in">g &lt;- rbind(ggplot2::ggplotGrob(res1), ggplot2::ggplotGrob(res2), size = "first")</span></span>
+<span id="cb6-42"><a href="#cb6-42"></a></span>
+<span id="cb6-43"><a href="#cb6-43"></a><span class="in">grid.newpage()</span></span>
+<span id="cb6-44"><a href="#cb6-44"></a><span class="in">grid.draw(g)</span></span>
+<span id="cb6-45"><a href="#cb6-45"></a><span class="in">```</span></span>
 <span id="cb6-46"><a href="#cb6-46"></a>:::</span>
+<span id="cb6-47"><a href="#cb6-47"></a></span>
+<span id="cb6-48"><a href="#cb6-48"></a>::: {.content-visible when-profile="stable"}</span>
+<span id="cb6-49"><a href="#cb6-49"></a><span class="in">```{r, fig.width = 15, fig.height = 12}</span></span>
+<span id="cb6-50"><a href="#cb6-50"></a><span class="in">plot.new()</span></span>
+<span id="cb6-51"><a href="#cb6-51"></a><span class="in">lyt &lt;- grid.layout(nrow = 2, ncol = 1) %&gt;%</span></span>
+<span id="cb6-52"><a href="#cb6-52"></a><span class="in">  viewport(layout = .) %&gt;%</span></span>
+<span id="cb6-53"><a href="#cb6-53"></a><span class="in">  pushViewport()</span></span>
+<span id="cb6-54"><a href="#cb6-54"></a></span>
+<span id="cb6-55"><a href="#cb6-55"></a><span class="in">res &lt;- g_km(</span></span>
+<span id="cb6-56"><a href="#cb6-56"></a><span class="in">  df = adtte, variables = variables, newpage = FALSE, annot_surv_med = FALSE,</span></span>
+<span id="cb6-57"><a href="#cb6-57"></a><span class="in">  ci_ribbon = TRUE,</span></span>
+<span id="cb6-58"><a href="#cb6-58"></a><span class="in">  vp = viewport(layout.pos.row = 1, layout.pos.col = 1)</span></span>
+<span id="cb6-59"><a href="#cb6-59"></a><span class="in">)</span></span>
+<span id="cb6-60"><a href="#cb6-60"></a></span>
+<span id="cb6-61"><a href="#cb6-61"></a><span class="in">res &lt;- g_km(</span></span>
+<span id="cb6-62"><a href="#cb6-62"></a><span class="in">  df = filter(adtte, BEP01FL == "Y"), variables = variables, newpage = FALSE, annot_surv_med = FALSE,</span></span>
+<span id="cb6-63"><a href="#cb6-63"></a><span class="in">  vp = viewport(layout.pos.row = 2, layout.pos.col = 1)</span></span>
+<span id="cb6-64"><a href="#cb6-64"></a><span class="in">)</span></span>
+<span id="cb6-65"><a href="#cb6-65"></a><span class="in">```</span></span>
+<span id="cb6-66"><a href="#cb6-66"></a>:::</span>
+<span id="cb6-67"><a href="#cb6-67"></a></span>
+<span id="cb6-68"><a href="#cb6-68"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb6-69"><a href="#cb6-69"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

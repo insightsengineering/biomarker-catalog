@@ -13,21 +13,23 @@ categories: [KG]
 
 We can produce the basic graph using the `g_km()` function from `tern`.
 
-```{r}
+```{r, fig.width=9, fig.height=6}
 g_km(
   df = adtte_arm,
   variables = variables,
-  annot_surv_med = FALSE
+  annot_surv_med = FALSE,
+  rel_height_plot = 0.85
 )
 ```
 
 We can also choose to annotate the graph with the median survival time for the overall population using the `annot_surv_med = TRUE` option.
 
-```{r}
+```{r, fig.width=9, fig.height=6}
 g_km(
   df = adtte_arm,
   variables = variables,
-  annot_surv_med = TRUE
+  annot_surv_med = TRUE,
+  rel_height_plot = 0.85
 )
 ```
 

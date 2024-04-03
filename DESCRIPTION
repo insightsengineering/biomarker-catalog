@@ -30,7 +30,7 @@ Imports:
     scda,
     scda.2022,
     teal.modules.clinical (>= 0.8.16.9018),
-    tern,
+    tern (>= 0.9.3.9027),
     tern.mmrm,
     teal (>= 0.14.0.9027),
     teal.modules.general (>= 0.2.16.9014),

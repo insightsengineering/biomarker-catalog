@@ -10,6 +10,7 @@ We start by filtering the time-to-event dataset for the overall survival observa
 ```{r, message = FALSE}
 library(tern)
 library(dplyr)
+library(ggplot2)
 library(grid)
 
 adtte_arm <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%

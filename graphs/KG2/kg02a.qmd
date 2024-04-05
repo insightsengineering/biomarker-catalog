@@ -14,7 +14,7 @@ categories: [KG]
 The line color and line type in the plot can be customized using the `col` and `lty` arguments of `g_km()`, respectively.
 Note that the order of the levels of the treatment arm factor variable is matched with the order of the colors.
 
-```{r}
+```{r, fig.width=9, fig.height=6}
 g_km(
   df = adtte,
   variables = variables,

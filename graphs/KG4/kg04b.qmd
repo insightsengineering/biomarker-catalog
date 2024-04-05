@@ -13,7 +13,7 @@ categories: [KG]
 
 For reordering or renaming we can just modify the levels of the corresponding factors of the treatment arm and biomarker variables, and pass the result to `g_km()` as before.
 
-```{r}
+```{r, fig.width=9, fig.height=6}
 adtte_mod <- adtte %>%
   mutate(
     ARM_BMRKR2 = fct_collapse_only(

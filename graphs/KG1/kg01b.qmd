@@ -22,9 +22,8 @@ adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
 variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM")
 ```
 
-First create a new empty plot, and then setup a `grid` layout to allow plotting several KM curves on a single graph device.
-Once the `grid` layout is defined, plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs.
-Note that these steps need to executed in the order specified below to enable creation of these plots in one graph.
+Plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs, convert them to `ggplotGrob` objects, and combine the plots via `rbind`.
+Then, use the `grid` package to create an empty plot area, and draw the KM curves on the graph device.
 
 ```{r, fig.width=9, fig.height=12}
 res1 <- g_km(

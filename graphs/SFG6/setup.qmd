@@ -13,14 +13,14 @@ In detail the differences to the other survival forest graphs ([SFG1](../../grap
 -   The `extract_survival_subgroups()` and `tabulate_survival_subgroups()` functions only allow specification of a single treatment arm variable, while the `extract_survival_biomarkers()` and `tabulate_survival_biomarkers()` allow to look at multiple continuous biomarker variables at once.
 -   In addition to the treatment arms, the use of `extract_survival_subgroups()` and `tabulate_survival_subgroups()` functions can be extended to other binary variables, as done in [SFG3](../../graphs/SFG3/sfg03.qmd) and [SFG4](../../graphs/sfg04.qmd). For example, we could define the binarized `ARM` variable as `AGE>=65` vs. `AGE<65` and then look at the odds ratios across subgroups. For the `extract_survival_biomarkers()` and `tabulate_survival_biomarkers()` functions, we could use the original continuous biomarker variable `AGE`, and then look at the estimated effect across subgroups.
 
-Similarly like in [SFG3](../../graphs/SFG3/sfg03.qmd), we will use the `synthetic_cdisc_data$adtte` data set from the `scda` package.
+Similarly like in [SFG3](../../graphs/SFG3/sfg03.qmd), we will use the `cadtte` data set from the `random.cdisc.data` package.
 Here we just filter for the overall survival outcome in a single arm in the biomarker evaluable population.
 
 ```{r, message = FALSE}
 library(tern)
 library(dplyr)
 
-adtte_f <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte_f <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS",

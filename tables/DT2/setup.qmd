@@ -6,7 +6,7 @@ exclude-listing: true
 
 The tables below compare the biomarker evaluable population (BEP, below in the table "BEP Yes") with the remainder non-BEP ("BEP No") within each treatment arm with regards to selected demographic variables.
 
-We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the tables.
+We will use the `cadsl` data set from the `random.cdisc.data` package to illustrate the tables.
 
 In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable `BEP01FL` that categorises the evaluable and non evaluable subgroups.
 For readability in the tables, we define a separate label variable `BEP_label` below which is parallel to the original flag variable.
@@ -15,7 +15,7 @@ For readability in the tables, we define a separate label variable `BEP_label` b
 library(tern)
 library(dplyr)
 
-adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+adsl <- random.cdisc.data::cadsl %>%
   df_explicit_na() %>%
   mutate(
     BEP_label = case_when(

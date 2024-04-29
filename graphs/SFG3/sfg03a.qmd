@@ -12,11 +12,11 @@ categories: [SFG]
 ## Plot
 
 We prepare the data similarly as in [SFG3](sfg03.qmd).
-Additionally we are filtering `synthetic_cdisc_data$adtte` to keep only two categories for the `SEX` variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients.
+Additionally we are filtering `random.cdisc.data::cadtte` to keep only two categories for the `SEX` variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients.
 We then tabulate statistics to be able to use them as an input for the forest plot.
 
 ```{r}
-adtte_mf <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte_mf <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS",

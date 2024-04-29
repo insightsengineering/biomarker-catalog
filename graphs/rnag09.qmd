@@ -22,7 +22,7 @@ We define an event indicator variable, transform the time to months and filter d
 library(tern)
 library(dplyr)
 
-adtte_f <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte_f <- random.cdisc.data::cadtte %>%
   dplyr::mutate(
     is_event = .data$CNSR == 0,
     AVAL = day2month(.data$AVAL),
@@ -88,7 +88,7 @@ See [KG1](../graphs/KG1/kg01.qmd) to [KG5](../graphs/KG5/kg05.qmd) for additiona
 
 ## Teal Module for Kaplan-Meier Graph
 
-We start by importing a `MultiAssayExperiment` and sample `ADTTE` data; here we use the example `multi_assay_experiment` available in `hermes` and example `ADTTE` data from `scda`.
+We start by importing a `MultiAssayExperiment` and sample `ADTTE` data; here we use the example `multi_assay_experiment` available in `hermes` and example `ADTTE` data from `random.cdisc.data`.
 We can then use the provided teal module `tm_g_km` to include the corresponding interactive Kaplan-Meier analysis in our teal app.
 Note that by default the `counts` assay is excluded via the `exclude_assays` argument, but we can include it by just saying that we don't want to exclude any assays.
 In case that we have different non-standard column names in our ADTTE data set we could also specify them via the `adtte_vars` argument, see the documentation `?tm_g_km` for more details.
@@ -98,11 +98,11 @@ library(teal.modules.hermes)
 
 data <- teal_data()
 data <- within(data, {
-  library(scda)
+  library(random.cdisc.data)
   library(dplyr)
   library(hermes)
   MAE <- multi_assay_experiment
-  ADTTE <- synthetic_cdisc_dataset("latest", "adtte") %>%
+  ADTTE <- random.cdisc.data::cadtte %>%
     mutate(is_event = .data$CNSR == 0)
 })
 datanames(data) <- c("MAE", "ADTTE")

@@ -15,7 +15,7 @@ We prepare the data in the same way as in [CPMT1](../tables/cpmt01.qmd).
 library(tern)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(PARAMCD == "OS", BEP01FL == "Y") %>%
   mutate(

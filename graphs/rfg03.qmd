@@ -19,7 +19,7 @@ library(tern)
 library(ggplot2.utils)
 library(dplyr)
 
-adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+adrs <- random.cdisc.data::cadrs %>%
   df_explicit_na() %>%
   filter(PARAMCD == "BESRSPI", BMEASIFL == "Y") %>%
   mutate(

@@ -9,7 +9,7 @@ categories: [SPG]
 ::: panel-tabset
 ## Setup
 
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to create the STEP survival graph.
+We will use the `cadtte` data set from the `random.cdisc.data` package to create the STEP survival graph.
 We start by filtering the `adtte` data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the `ARM` variable, and discarding `BMRKR1` values for the non-BEP.
 We also relabel the biomarker evaluable population flag variable `BEP01FL`.
 
@@ -18,7 +18,7 @@ library(tern)
 library(ggplot2.utils)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS"

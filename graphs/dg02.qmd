@@ -11,7 +11,7 @@ categories: [DG]
 
 The graph below plots the distribution of a biomarker variable (on a continuous scale) as a boxplot by one or more categorical clinical variables with overlaid points.
 
-We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the graph and will select the biomarker evaluable population with `BEP01FL`.
+We will use the `cadsl` data set from the `random.cdisc.data` package to illustrate the graph and will select the biomarker evaluable population with `BEP01FL`.
 The column `BMRKR1` contains the biomarker values on a continuous scale.
 We will use `STRATA2` and `ARM` as categorical clinical variables.
 
@@ -20,7 +20,7 @@ library(tern)
 library(ggplot2.utils)
 library(dplyr)
 
-adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+adsl <- random.cdisc.data::cadsl %>%
   df_explicit_na() %>%
   filter(BEP01FL == "Y")
 ```

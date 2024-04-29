@@ -21,7 +21,7 @@ We define an event indicator variable, transform the time to months and filter d
 ```{r, message = FALSE}
 library(tern)
 
-adtte_f <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte_f <- random.cdisc.data::cadtte %>%
   dplyr::mutate(
     is_event = .data$CNSR == 0,
     AVAL = day2month(.data$AVAL),
@@ -99,7 +99,7 @@ See [SFG01](../graphs/SFG1/sfg01.qmd) to [SFG05](../graphs/SFG5/sfg05.qmd) for a
 
 ## Teal Module for Survival Forest Graph
 
-We start by importing a `MultiAssayExperiment` and sample `ADTTE` data; here we use the example `multi_assay_experiment` available in `hermes` and example `ADTTE` data from `scda`.
+We start by importing a `MultiAssayExperiment` and sample `ADTTE` data; here we use the example `multi_assay_experiment` available in `hermes` and example `ADTTE` data from `random.cdisc.data`.
 We can then use the provided teal module `tm_g_forest_tte` to include the corresponding interactive survival forest analysis in our teal app.
 In case that we have different non-standard column names in our ADTTE data set we could also specify them via the `adtte_vars` argument, see the documentation `?tm_g_forest_tte` for more details.
 
@@ -108,11 +108,11 @@ library(teal.modules.hermes)
 
 data <- teal_data()
 data <- within(data, {
-  library(scda)
+  library(random.cdisc.data)
   library(dplyr)
   library(hermes)
   MAE <- multi_assay_experiment
-  ADTTE <- synthetic_cdisc_dataset("latest", "adtte") %>%
+  ADTTE <- random.cdisc.data::cadtte %>%
     mutate(is_event = .data$CNSR == 0)
 })
 datanames(data) <- c("MAE", "ADTTE")

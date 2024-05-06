@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Biomarker Analysis Catalog - Stable - RNAG9</title>
 <style>
@@ -960,7 +960,7 @@ cookieconsent.run({
 <span id="cb1-10"><a href="#cb1-10"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(.data<span class="sc">$</span>PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Then we prepare the RNA-seq data. See <a href="../graphs/rnag01.html">RNAG1</a> for basic details on how to import, filter and normalize <code>HermesData</code>. We use <code>col_data_with_genes()</code> to extract the sample variables (<code>colData</code>) from the object, together with a single specified gene or a specified gene signature. See <code><a href="https://insightsengineering.github.io/hermes/latest-tag/reference/gene_spec.html">?hermes::gene_spec</a></code> for details on how to do this. Then we use <code>inner_join_cdisc()</code> to join this genetic data with the <code>ADTTE</code> data from above. See the help page for more details, in particular how the join keys can be customized if needed - here we just join based on <code>USUBJID</code> by default.</p>
+<p>Then we prepare the RNA-seq data. See <a href="../graphs/rnag01.html">RNAG1</a> for basic details on how to import, filter and normalize <code>HermesData</code>. We use <code>col_data_with_genes()</code> to extract the sample variables (<code>colData</code>) from the object, together with a single specified gene or a specified gene signature. See <code><a href="https://rdrr.io/pkg/hermes/man/gene_spec.html">?hermes::gene_spec</a></code> for details on how to do this. Then we use <code>inner_join_cdisc()</code> to join this genetic data with the <code>ADTTE</code> data from above. See the help page for more details, in particular how the join keys can be customized if needed - here we just join based on <code>USUBJID</code> by default.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(hermes)</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>

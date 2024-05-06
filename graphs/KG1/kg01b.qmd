@@ -22,26 +22,22 @@ adtte <- random.cdisc.data::cadtte %>%
 variables <- list(tte = "AVAL", is_event = "is_event", arm = "ARM")
 ```
 
-First create a new empty plot, and then setup a `grid` layout to allow plotting several KM curves on a single graph device.
-Once the `grid` layout is defined, plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs.
-Note that these steps need to executed in the order specified below to enable creation of these plots in one graph.
+Plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs, convert them to `ggplotGrob` objects, and combine the plots via `rbind`.
+Then, use the `grid` package to create an empty plot area, and draw the KM curves on the graph device.
 
-```{r, fig.width = 15, fig.height = 12}
-plot.new()
-lyt <- grid.layout(nrow = 2, ncol = 1) %>%
-  viewport(layout = .) %>%
-  pushViewport()
-
-res <- g_km(
-  df = adtte, variables = variables, newpage = FALSE, annot_surv_med = FALSE,
-  ci_ribbon = TRUE,
-  vp = viewport(layout.pos.row = 1, layout.pos.col = 1)
+```{r, fig.width=9, fig.height=12}
+res1 <- g_km(
+  df = adtte, variables = variables, annot_surv_med = FALSE, ci_ribbon = TRUE
 )
 
-res <- g_km(
-  df = filter(adtte, BEP01FL == "Y"), variables = variables, newpage = FALSE, annot_surv_med = FALSE,
-  vp = viewport(layout.pos.row = 2, layout.pos.col = 1)
+res2 <- g_km(
+  df = filter(adtte, BEP01FL == "Y"), variables = variables, annot_surv_med = FALSE
 )
+
+g <- rbind(ggplot2::ggplotGrob(res1), ggplot2::ggplotGrob(res2), size = "first")
+
+grid.newpage()
+grid.draw(g)
 ```
 
 {{< include ../../misc/session_info.qmd >}}

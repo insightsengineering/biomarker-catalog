@@ -12,7 +12,7 @@ library(dplyr)
 
 AGE_probs <- 0.5
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS"

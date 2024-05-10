@@ -13,7 +13,7 @@ library(dplyr)
 
 BMRKR1_probs <- c(0.25, 0.5, 0.75)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS"

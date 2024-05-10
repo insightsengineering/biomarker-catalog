@@ -27,9 +27,8 @@ URL: https://insightsengineering.github.io/biomarker-catalog/
 BugReports: https://github.com/insightsengineering/biomarker-catalog/issues
 Imports:
     pkgdown,
-    scda,
-    scda.2022,
-    teal.modules.clinical (>= 0.9.0.9014),
+    random.cdisc.data (>= 0.3.15),
+    teal.modules.clinical (>= 0.9.1),
     tern (>= 0.9.4),
     tern.mmrm,
     teal (>= 0.15.2),

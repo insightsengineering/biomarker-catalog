@@ -4,7 +4,7 @@ exclude-listing: true
 
 ## Setup
 
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to create the survival forest graph.
+We will use the `cadtte` data set from the `random.cdisc.data` package to create the survival forest graph.
 We start by filtering the `adtte` data set for the overall survival observations, converting time of overall survival to months, creating a new variable for event information, binarizing the `ARM` variable and creating a binned age variable by using the function `cut_quantile_bins()`.
 Note that we do not include the boundaries `0` and `1` in the corresponding cutoffs vector `AGE_probs`, but only the true cutoff probabilities to use (here `0.5`, i.e. the median).
 We restrict the analysis of the biomarker variables `BMRKR1` and `BMRKR2` to the BEP by setting them as missing for the non-BEP.
@@ -17,7 +17,7 @@ library(dplyr)
 
 AGE_probs <- 0.5
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS"

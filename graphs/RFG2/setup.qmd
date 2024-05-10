@@ -13,7 +13,7 @@ In detail the differences to [RFG1](../../graphs/RFG1/rfg01.qmd) are the followi
 -   The `extract_rsp_subgroups()` and `tabulate_rsp_subgroups()` functions only allow specification of a single treatment arm variable, while the `extract_rsp_biomarkers()` and `tabulate_rsp_biomarkers()` allow to look at multiple continuous biomarker variables at once.
 -   In addition to the treatment arms, the use of `extract_rsp_subgroups()` and `tabulate_rsp_subgroups()` functions can be extended to other binary variables. For example, we could define the binarized `ARM` variable as `AGE>=65` vs. `AGE<65` and then look at the odds ratios across subgroups. For the `extract_rsp_biomarkers()` and `tabulate_rsp_biomarkers()` functions, we could use the original continuous biomarker variable `AGE`, and then look at the estimated effect across subgroups.
 
-Similarly like in [RFG1](../../graphs/RFG1/rfg01.qmd), we will use the `synthetic_cdisc_data$adrs` data set from the `scda` package.
+Similarly like in [RFG1](../../graphs/RFG1/rfg01.qmd), we will use the `cadrs` data set from the `random.cdisc.data` package.
 Here we just filter for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline, and define a new variable `COMPRESP` to include complete responses only.
 
 ```{r, message = FALSE}
@@ -21,7 +21,7 @@ library(tern)
 library(dplyr)
 library(hermes)
 
-adrs <- scda::synthetic_cdisc_data("latest")$adrs
+adrs <- random.cdisc.data::cadrs
 
 adrs_f <- adrs %>%
   df_explicit_na() %>%

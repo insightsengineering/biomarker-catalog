@@ -7,7 +7,7 @@ exclude-listing: true
 These templates are helpful when we are interested in the odds ratios between two groups, usually two treatment arms.
 We would like to assess how the odds ratio changes when we look at different subgroups, often defined by categorical biomarker variables, e.g.
 
-We will use the `synthetic_cdisc_data$adrs` data set from the `scda` package to create the response forest graph.
+We will use the `cadrs` data set from the `random.cdisc.data` package to create the response forest graph.
 We start by filtering the `adrs` data set for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline `(BMEASIFL == "Y")`.
 We create a new variable for response information (we define response patients to include CR and PR patients), and binarize the `ARM` variable.
 We also fix a data artifact by setting the categorical biomarker variable `BMRKR2` to an explicit `<Missing>` level for the non-biomarker evaluable population.
@@ -19,7 +19,7 @@ library(tern)
 library(ggplot2.utils)
 library(dplyr)
 
-adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+adrs <- random.cdisc.data::cadrs %>%
   df_explicit_na() %>%
   filter(PARAMCD == "BESRSPI", BMEASIFL == "Y") %>%
   mutate(

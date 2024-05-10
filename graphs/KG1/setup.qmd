@@ -4,7 +4,7 @@ exclude-listing: true
 
 ## Setup
 
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to create the Kaplan-Meier (KM) plots.
+We will use the `cadtte` data set from the `random.cdisc.data` package to create the Kaplan-Meier (KM) plots.
 We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.
 
 ```{r, message = FALSE}
@@ -13,7 +13,7 @@ library(dplyr)
 library(ggplot2)
 library(grid)
 
-adtte_arm <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte_arm <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(PARAMCD == "OS", ARM == "A: Drug X") %>%
   mutate(is_event = CNSR == 0)

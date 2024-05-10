@@ -31,7 +31,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2.utils)
 
-adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+adsl <- random.cdisc.data::cadsl %>%
   df_explicit_na() %>%
   drop_na(BMRKR1)
 

@@ -9,7 +9,7 @@ categories: [CPM]
 ::: panel-tabset
 ## Setup
 
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package to illustrate the tables.
+We will use the `cadtte` data set from the `random.cdisc.data` package to illustrate the tables.
 We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival.
 We then convert time of overall survival to months and create a new variable for the event information.
 
@@ -17,7 +17,7 @@ We then convert time of overall survival to months and create a new variable for
 library(tern)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(PARAMCD == "OS", BEP01FL == "Y") %>%
   mutate(

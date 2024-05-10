@@ -4,14 +4,14 @@ exclude-listing: true
 
 ## Setup
 
-We will use the `synthetic_cdisc_data$adtte` data set from the `scda` package for the time-to-event summary table.
+We will use the `cadtte` data set from the `random.cdisc.data` package for the time-to-event summary table.
 We start by filtering the `adtte` data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the `ARM` variable.
 
 ```{r, message = FALSE}
 library(tern)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS"

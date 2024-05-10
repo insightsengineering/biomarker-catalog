@@ -11,7 +11,7 @@ categories: [DG]
 
 The graph below plots two continuous (biomarker) variables against each other.
 
-We will use the `synthetic_cdisc_data$adsl` data set from the `scda` package to illustrate the graph and will select the biomarker evaluable population with `BEP01FL`.
+We will use the `cadsl` data set from the `random.cdisc.data` package to illustrate the graph and will select the biomarker evaluable population with `BEP01FL`.
 The columns `AGE` and `BMRKR1` contain the biomarker values of interest on a continuous scale.
 
 ```{r, message = FALSE}
@@ -19,7 +19,7 @@ library(tern)
 library(ggplot2.utils)
 library(dplyr)
 
-adsl <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %>%
+adsl <- random.cdisc.data::cadsl %>%
   df_explicit_na() %>%
   filter(BEP01FL == "Y")
 ```

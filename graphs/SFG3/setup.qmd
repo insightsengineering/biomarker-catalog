@@ -10,7 +10,7 @@ We prepare the data similarly as in [SFG1](../../graphs/SFG1/sfg01.qmd), focusin
 library(tern)
 library(dplyr)
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(
     PARAMCD == "OS",

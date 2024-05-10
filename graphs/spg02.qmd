@@ -9,7 +9,7 @@ categories: [SPG]
 ::: panel-tabset
 ## Setup
 
-We will use the `synthetic_cdisc_data$adrs` data set from the `scda` package to create the STEP response graph.
+We will use the `cadrs` data set from the `random.cdisc.data` package to create the STEP response graph.
 We start by filtering the `adrs` data set for response evaluable patients and the response parameter of interest, creating a new logical variable encoding response (response patients should solely be CR patients), binarizing the `ARM` variable.
 
 ```{r, message = FALSE}
@@ -17,7 +17,7 @@ library(tern)
 library(ggplot2.utils)
 library(dplyr)
 
-adrs <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %>%
+adrs <- random.cdisc.data::cadrs %>%
   df_explicit_na() %>%
   filter(PARAM == "Best Confirmed Overall Response by Investigator", BMEASIFL == "Y") %>%
   mutate(

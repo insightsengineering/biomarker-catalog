@@ -16,7 +16,7 @@ The difference is that here we use the categorical biomarker variable `BMRKR2` a
 library(tern)
 library(dplyr)
 
-adtte_arm_bep <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+adtte_arm_bep <- random.cdisc.data::cadtte %>%
   df_explicit_na() %>%
   filter(PARAMCD == "OS", ARM == "A: Drug X", BEP01FL == "Y") %>%
   mutate(is_event = CNSR == 0)

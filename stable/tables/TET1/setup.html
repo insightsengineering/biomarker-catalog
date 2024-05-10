@@ -172,12 +172,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
+<p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>adtte <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">filter</span>(</span>
 <span id="cb1-7"><a href="#cb1-7"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
@@ -810,14 +810,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-4"><a href="#cb2-4"></a></span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="fu">## Setup</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>We will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package for the time-to-event summary table.</span>
+<span id="cb2-7"><a href="#cb2-7"></a>We will use the <span class="in">`cadtte`</span> data set from the <span class="in">`random.cdisc.data`</span> package for the time-to-event summary table.</span>
 <span id="cb2-8"><a href="#cb2-8"></a>We start by filtering the <span class="in">`adtte`</span> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <span class="in">`ARM`</span> variable.</span>
 <span id="cb2-9"><a href="#cb2-9"></a></span>
 <span id="cb2-10"><a href="#cb2-10"></a><span class="in">```{r, message = FALSE}</span></span>
 <span id="cb2-11"><a href="#cb2-11"></a><span class="in">library(tern)</span></span>
 <span id="cb2-12"><a href="#cb2-12"></a><span class="in">library(dplyr)</span></span>
 <span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="in">adtte &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="in">adtte &lt;- random.cdisc.data::cadtte %&gt;%</span></span>
 <span id="cb2-15"><a href="#cb2-15"></a><span class="in">  df_explicit_na() %&gt;%</span></span>
 <span id="cb2-16"><a href="#cb2-16"></a><span class="in">  filter(</span></span>
 <span id="cb2-17"><a href="#cb2-17"></a><span class="in">    PARAMCD == "OS"</span></span>

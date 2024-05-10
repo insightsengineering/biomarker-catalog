@@ -179,12 +179,12 @@ cookieconsent.run({
 <li>The <code>extract_survival_subgroups()</code> and <code>tabulate_survival_subgroups()</code> functions only allow specification of a single treatment arm variable, while the <code>extract_survival_biomarkers()</code> and <code>tabulate_survival_biomarkers()</code> allow to look at multiple continuous biomarker variables at once.</li>
 <li>In addition to the treatment arms, the use of <code>extract_survival_subgroups()</code> and <code>tabulate_survival_subgroups()</code> functions can be extended to other binary variables, as done in <a href="../../graphs/SFG3/sfg03.html">SFG3</a> and <a href="../../graphs/sfg04.html">SFG4</a>. For example, we could define the binarized <code>ARM</code> variable as <code>AGE&gt;=65</code> vs.&nbsp;<code>AGE&lt;65</code> and then look at the odds ratios across subgroups. For the <code>extract_survival_biomarkers()</code> and <code>tabulate_survival_biomarkers()</code> functions, we could use the original continuous biomarker variable <code>AGE</code>, and then look at the estimated effect across subgroups.</li>
 </ul>
-<p>Similarly like in <a href="../../graphs/SFG3/sfg03.html">SFG3</a>, we will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package. Here we just filter for the overall survival outcome in a single arm in the biomarker evaluable population.</p>
+<p>Similarly like in <a href="../../graphs/SFG3/sfg03.html">SFG3</a>, we will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package. Here we just filter for the overall survival outcome in a single arm in the biomarker evaluable population.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>adtte_f <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>adtte_f <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">filter</span>(</span>
 <span id="cb1-7"><a href="#cb1-7"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>,</span>
@@ -826,14 +826,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-13"><a href="#cb2-13"></a><span class="ss">-   </span>The <span class="in">`extract_survival_subgroups()`</span> and <span class="in">`tabulate_survival_subgroups()`</span> functions only allow specification of a single treatment arm variable, while the <span class="in">`extract_survival_biomarkers()`</span> and <span class="in">`tabulate_survival_biomarkers()`</span> allow to look at multiple continuous biomarker variables at once.</span>
 <span id="cb2-14"><a href="#cb2-14"></a><span class="ss">-   </span>In addition to the treatment arms, the use of <span class="in">`extract_survival_subgroups()`</span> and <span class="in">`tabulate_survival_subgroups()`</span> functions can be extended to other binary variables, as done in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../../graphs/SFG3/sfg03.qmd)</span> and <span class="co">[</span><span class="ot">SFG4</span><span class="co">](../../graphs/sfg04.qmd)</span>. For example, we could define the binarized <span class="in">`ARM`</span> variable as <span class="in">`AGE&gt;=65`</span> vs. <span class="in">`AGE&lt;65`</span> and then look at the odds ratios across subgroups. For the <span class="in">`extract_survival_biomarkers()`</span> and <span class="in">`tabulate_survival_biomarkers()`</span> functions, we could use the original continuous biomarker variable <span class="in">`AGE`</span>, and then look at the estimated effect across subgroups.</span>
 <span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>Similarly like in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../../graphs/SFG3/sfg03.qmd)</span>, we will use the <span class="in">`synthetic_cdisc_data$adtte`</span> data set from the <span class="in">`scda`</span> package.</span>
+<span id="cb2-16"><a href="#cb2-16"></a>Similarly like in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](../../graphs/SFG3/sfg03.qmd)</span>, we will use the <span class="in">`cadtte`</span> data set from the <span class="in">`random.cdisc.data`</span> package.</span>
 <span id="cb2-17"><a href="#cb2-17"></a>Here we just filter for the overall survival outcome in a single arm in the biomarker evaluable population.</span>
 <span id="cb2-18"><a href="#cb2-18"></a></span>
 <span id="cb2-19"><a href="#cb2-19"></a><span class="in">```{r, message = FALSE}</span></span>
 <span id="cb2-20"><a href="#cb2-20"></a><span class="in">library(tern)</span></span>
 <span id="cb2-21"><a href="#cb2-21"></a><span class="in">library(dplyr)</span></span>
 <span id="cb2-22"><a href="#cb2-22"></a></span>
-<span id="cb2-23"><a href="#cb2-23"></a><span class="in">adtte_f &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %&gt;%</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="in">adtte_f &lt;- random.cdisc.data::cadtte %&gt;%</span></span>
 <span id="cb2-24"><a href="#cb2-24"></a><span class="in">  df_explicit_na() %&gt;%</span></span>
 <span id="cb2-25"><a href="#cb2-25"></a><span class="in">  filter(</span></span>
 <span id="cb2-26"><a href="#cb2-26"></a><span class="in">    PARAMCD == "OS",</span></span>

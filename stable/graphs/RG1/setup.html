@@ -172,14 +172,14 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<p>We will use the <code>synthetic_cdisc_data$adrs</code> data set from the <code>scda</code> package to create the response plots. We transform the response variable into an <code>ordered</code> factor to ensure that the response labels are ordered correctly and a sequential color scheme is used in the graph. We select Best Confirmed Overall Response by Investigator to evaluate response. Finally, we select patients with measurable disease at baseline <code>(BMEASIFL == "Y")</code> as response evaluable patients.</p>
+<p>We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the response plots. We transform the response variable into an <code>ordered</code> factor to ensure that the response labels are ordered correctly and a sequential color scheme is used in the graph. We select Best Confirmed Overall Response by Investigator to evaluate response. Finally, we select patients with measurable disease at baseline <code>(BMEASIFL == "Y")</code> as response evaluable patients.</p>
 <p>For <code>ggplot()</code> used in all analyses, we add <code>by = BMEASIFL</code> in the aesthetics to support the calculation of proportions using <code>geom_text(stat = "prop")</code>.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2.utils)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadrs <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(<span class="at">AVALC =</span> <span class="fu">ordered</span>(AVALC, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"&lt;Missing&gt;"</span>, <span class="st">"NE"</span>, <span class="st">"PD"</span>, <span class="st">"SD"</span>, <span class="st">"PR"</span>, <span class="st">"CR"</span>))) <span class="sc">%&gt;%</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"BESRSPI"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -800,7 +800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-4"><a href="#cb2-4"></a></span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="fu">## Setup</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>We will use the <span class="in">`synthetic_cdisc_data$adrs`</span> data set from the <span class="in">`scda`</span> package to create the response plots.</span>
+<span id="cb2-7"><a href="#cb2-7"></a>We will use the <span class="in">`cadrs`</span> data set from the <span class="in">`random.cdisc.data`</span> package to create the response plots.</span>
 <span id="cb2-8"><a href="#cb2-8"></a>We transform the response variable into an <span class="in">`ordered`</span> factor to ensure that the response labels are ordered correctly and a sequential color scheme is used in the graph.</span>
 <span id="cb2-9"><a href="#cb2-9"></a>We select Best Confirmed Overall Response by Investigator to evaluate response.</span>
 <span id="cb2-10"><a href="#cb2-10"></a>Finally, we select patients with measurable disease at baseline <span class="in">`(BMEASIFL == "Y")`</span> as response evaluable patients.</span>
@@ -812,7 +812,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-16"><a href="#cb2-16"></a><span class="in">library(ggplot2.utils)</span></span>
 <span id="cb2-17"><a href="#cb2-17"></a><span class="in">library(dplyr)</span></span>
 <span id="cb2-18"><a href="#cb2-18"></a></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="in">adrs &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %&gt;%</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="in">adrs &lt;- random.cdisc.data::cadrs %&gt;%</span></span>
 <span id="cb2-20"><a href="#cb2-20"></a><span class="in">  df_explicit_na() %&gt;%</span></span>
 <span id="cb2-21"><a href="#cb2-21"></a><span class="in">  mutate(AVALC = ordered(AVALC, levels = c("&lt;Missing&gt;", "NE", "PD", "SD", "PR", "CR"))) %&gt;%</span></span>
 <span id="cb2-22"><a href="#cb2-22"></a><span class="in">  filter(PARAMCD == "BESRSPI", BMEASIFL == "Y")</span></span>

@@ -179,7 +179,7 @@ cookieconsent.run({
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2.utils)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadrs <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(<span class="at">AVALC =</span> <span class="fu">ordered</span>(AVALC, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"&lt;Missing&gt;"</span>, <span class="st">"NE"</span>, <span class="st">"PD"</span>, <span class="st">"SD"</span>, <span class="st">"PR"</span>, <span class="st">"CR"</span>))) <span class="sc">%&gt;%</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"BESRSPI"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -809,7 +809,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-13"><a href="#cb2-13"></a><span class="in">library(ggplot2.utils)</span></span>
 <span id="cb2-14"><a href="#cb2-14"></a><span class="in">library(dplyr)</span></span>
 <span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="in">adrs &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %&gt;%</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="in">adrs &lt;- random.cdisc.data::cadrs %&gt;%</span></span>
 <span id="cb2-17"><a href="#cb2-17"></a><span class="in">  df_explicit_na() %&gt;%</span></span>
 <span id="cb2-18"><a href="#cb2-18"></a><span class="in">  mutate(AVALC = ordered(AVALC, levels = c("&lt;Missing&gt;", "NE", "PD", "SD", "PR", "CR"))) %&gt;%</span></span>
 <span id="cb2-19"><a href="#cb2-19"></a><span class="in">  filter(PARAMCD == "BESRSPI", BMEASIFL == "Y")</span></span>

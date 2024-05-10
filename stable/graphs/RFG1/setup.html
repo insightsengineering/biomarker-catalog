@@ -173,14 +173,14 @@ cookieconsent.run({
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>These templates are helpful when we are interested in the odds ratios between two groups, usually two treatment arms. We would like to assess how the odds ratio changes when we look at different subgroups, often defined by categorical biomarker variables, e.g.</p>
-<p>We will use the <code>synthetic_cdisc_data$adrs</code> data set from the <code>scda</code> package to create the response forest graph. We start by filtering the <code>adrs</code> data set for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline <code>(BMEASIFL == "Y")</code>. We create a new variable for response information (we define response patients to include CR and PR patients), and binarize the <code>ARM</code> variable. We also fix a data artifact by setting the categorical biomarker variable <code>BMRKR2</code> to an explicit <code>&lt;Missing&gt;</code> level for the non-biomarker evaluable population.</p>
+<p>We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the response forest graph. We start by filtering the <code>adrs</code> data set for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline <code>(BMEASIFL == "Y")</code>. We create a new variable for response information (we define response patients to include CR and PR patients), and binarize the <code>ARM</code> variable. We also fix a data artifact by setting the categorical biomarker variable <code>BMRKR2</code> to an explicit <code>&lt;Missing&gt;</code> level for the non-biomarker evaluable population.</p>
 <p>We also relabel the biomarker evaluable population flag variable <code>BEP01FL</code> and the categorical biomarker variable <code>BMRKR2</code> to update the display label of these variables in the graph.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2.utils)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adrs <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadrs <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">filter</span>(PARAMCD <span class="sc">==</span> <span class="st">"BESRSPI"</span>, BMEASIFL <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">mutate</span>(</span>
@@ -816,7 +816,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-7"><a href="#cb2-7"></a>These templates are helpful when we are interested in the odds ratios between two groups, usually two treatment arms.</span>
 <span id="cb2-8"><a href="#cb2-8"></a>We would like to assess how the odds ratio changes when we look at different subgroups, often defined by categorical biomarker variables, e.g.</span>
 <span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a>We will use the <span class="in">`synthetic_cdisc_data$adrs`</span> data set from the <span class="in">`scda`</span> package to create the response forest graph.</span>
+<span id="cb2-10"><a href="#cb2-10"></a>We will use the <span class="in">`cadrs`</span> data set from the <span class="in">`random.cdisc.data`</span> package to create the response forest graph.</span>
 <span id="cb2-11"><a href="#cb2-11"></a>We start by filtering the <span class="in">`adrs`</span> data set for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline <span class="in">`(BMEASIFL == "Y")`</span>.</span>
 <span id="cb2-12"><a href="#cb2-12"></a>We create a new variable for response information (we define response patients to include CR and PR patients), and binarize the <span class="in">`ARM`</span> variable.</span>
 <span id="cb2-13"><a href="#cb2-13"></a>We also fix a data artifact by setting the categorical biomarker variable <span class="in">`BMRKR2`</span> to an explicit <span class="in">`&lt;Missing&gt;`</span> level for the non-biomarker evaluable population.</span>
@@ -828,7 +828,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-19"><a href="#cb2-19"></a><span class="in">library(ggplot2.utils)</span></span>
 <span id="cb2-20"><a href="#cb2-20"></a><span class="in">library(dplyr)</span></span>
 <span id="cb2-21"><a href="#cb2-21"></a></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="in">adrs &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adrs %&gt;%</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="in">adrs &lt;- random.cdisc.data::cadrs %&gt;%</span></span>
 <span id="cb2-23"><a href="#cb2-23"></a><span class="in">  df_explicit_na() %&gt;%</span></span>
 <span id="cb2-24"><a href="#cb2-24"></a><span class="in">  filter(PARAMCD == "BESRSPI", BMEASIFL == "Y") %&gt;%</span></span>
 <span id="cb2-25"><a href="#cb2-25"></a><span class="in">  mutate(</span></span>

@@ -951,7 +951,7 @@ cookieconsent.run({
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>adtte_f <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>adtte_f <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
 <span id="cb1-6"><a href="#cb1-6"></a>    <span class="at">is_event =</span> .data<span class="sc">$</span>CNSR <span class="sc">==</span> <span class="dv">0</span>,</span>
 <span id="cb1-7"><a href="#cb1-7"></a>    <span class="at">AVAL =</span> <span class="fu">day2month</span>(.data<span class="sc">$</span>AVAL),</span>
@@ -1012,17 +1012,17 @@ cookieconsent.run({
 <p>See <a href="../graphs/KG1/kg01.html">KG1</a> to <a href="../graphs/KG5/kg05.html">KG5</a> for additional customization options for the Kaplan-Meier graphs or the help page <code>?g_km()</code>.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>We start by importing a <code>MultiAssayExperiment</code> and sample <code>ADTTE</code> data; here we use the example <code>multi_assay_experiment</code> available in <code>hermes</code> and example <code>ADTTE</code> data from <code>scda</code>. We can then use the provided teal module <code>tm_g_km</code> to include the corresponding interactive Kaplan-Meier analysis in our teal app. Note that by default the <code>counts</code> assay is excluded via the <code>exclude_assays</code> argument, but we can include it by just saying that we don’t want to exclude any assays. In case that we have different non-standard column names in our ADTTE data set we could also specify them via the <code>adtte_vars</code> argument, see the documentation <code>?tm_g_km</code> for more details.</p>
+<p>We start by importing a <code>MultiAssayExperiment</code> and sample <code>ADTTE</code> data; here we use the example <code>multi_assay_experiment</code> available in <code>hermes</code> and example <code>ADTTE</code> data from <code>random.cdisc.data</code>. We can then use the provided teal module <code>tm_g_km</code> to include the corresponding interactive Kaplan-Meier analysis in our teal app. Note that by default the <code>counts</code> assay is excluded via the <code>exclude_assays</code> argument, but we can include it by just saying that we don’t want to exclude any assays. In case that we have different non-standard column names in our ADTTE data set we could also specify them via the <code>adtte_vars</code> argument, see the documentation <code>?tm_g_km</code> for more details.</p>
 <div class="cell" data-webshot="webshot2" data-screenshot.force="true" data-screenshot.opts="{&quot;delay&quot;:15}">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(teal.modules.hermes)</span>
 <span id="cb5-2"><a href="#cb5-2"></a></span>
 <span id="cb5-3"><a href="#cb5-3"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>()</span>
 <span id="cb5-4"><a href="#cb5-4"></a>data <span class="ot">&lt;-</span> <span class="fu">within</span>(data, {</span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">library</span>(scda)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">library</span>(random.cdisc.data)</span>
 <span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">library</span>(dplyr)</span>
 <span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">library</span>(hermes)</span>
 <span id="cb5-8"><a href="#cb5-8"></a>  MAE <span class="ot">&lt;-</span> multi_assay_experiment</span>
-<span id="cb5-9"><a href="#cb5-9"></a>  ADTTE <span class="ot">&lt;-</span> <span class="fu">synthetic_cdisc_dataset</span>(<span class="st">"latest"</span>, <span class="st">"adtte"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>  ADTTE <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb5-10"><a href="#cb5-10"></a>    <span class="fu">mutate</span>(<span class="at">is_event =</span> .data<span class="sc">$</span>CNSR <span class="sc">==</span> <span class="dv">0</span>)</span>
 <span id="cb5-11"><a href="#cb5-11"></a>})</span>
 <span id="cb5-12"><a href="#cb5-12"></a><span class="fu">datanames</span>(data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"MAE"</span>, <span class="st">"ADTTE"</span>)</span>
@@ -1038,15 +1038,9 @@ cookieconsent.run({
 <span id="cb5-22"><a href="#cb5-22"></a>      <span class="at">exclude_assays =</span> <span class="fu">character</span>()</span>
 <span id="cb5-23"><a href="#cb5-23"></a>    )</span>
 <span id="cb5-24"><a href="#cb5-24"></a>  )</span>
-<span id="cb5-25"><a href="#cb5-25"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2024-02-23 15:41:54.1103 pid:6130 token:[] teal.modules.hermes Initializing tm_g_km</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2024-02-23 15:41:55.6944 pid:6130 token:[c09d7c92] teal Initializing reporter_previewer_module</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
+<span id="cb5-25"><a href="#cb5-25"></a>)</span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Warning: 'experiments' dropped; see 'drops()'</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1059,23 +1053,18 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[1] C
 
 time zone: Etc/UTC
 tzcode source: system (glibc)
@@ -1085,83 +1074,82 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] scda_0.1.6.9016                teal.modules.hermes_0.1.6.9003
- [3] teal_0.15.1.9000               teal.slice_0.5.0.9003         
- [5] teal.data_0.5.0.9000           teal.code_0.5.0.9003          
- [7] shiny_1.8.0                    hermes_1.7.1.9000             
- [9] SummarizedExperiment_1.32.0    Biobase_2.62.0                
-[11] GenomicRanges_1.54.1           GenomeInfoDb_1.38.5           
-[13] IRanges_2.36.0                 S4Vectors_0.40.2              
-[15] BiocGenerics_0.48.1            MatrixGenerics_1.14.0         
-[17] matrixStats_1.2.0              ggfortify_0.4.16              
-[19] ggplot2_3.4.4                  dplyr_1.1.4                   
-[21] tern_0.9.3.9016                rtables_0.6.6.9010            
-[23] magrittr_2.0.3                 formatters_0.5.5.9010         
+ [1] random.cdisc.data_0.3.15.9003  teal.modules.hermes_0.1.6.9013
+ [3] teal_0.15.2.9036               teal.slice_0.5.1.9002         
+ [5] teal.data_0.6.0.9001           teal.code_0.5.0.9005          
+ [7] shiny_1.8.1.1                  hermes_1.7.1.9002             
+ [9] SummarizedExperiment_1.34.0    Biobase_2.64.0                
+[11] GenomicRanges_1.56.0           GenomeInfoDb_1.40.0           
+[13] IRanges_2.38.0                 S4Vectors_0.42.0              
+[15] BiocGenerics_0.50.0            MatrixGenerics_1.16.0         
+[17] matrixStats_1.3.0              ggfortify_0.4.17              
+[19] ggplot2_3.5.1                  dplyr_1.1.4                   
+[21] tern_0.9.4.9005                rtables_0.6.7.9001            
+[23] magrittr_2.0.3                 formatters_0.5.6.9004         
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          jsonlite_1.8.8             
-  [3] shape_1.4.6                 nestcolor_0.1.2.9009       
-  [5] MultiAssayExperiment_1.28.0 farver_2.1.1               
-  [7] rmarkdown_2.25              GlobalOptions_0.1.2        
-  [9] zlibbioc_1.48.0             vctrs_0.6.5                
- [11] memoise_2.0.1               RCurl_1.98-1.14            
- [13] webshot_0.5.5               BiocBaseUtils_1.5.0        
- [15] htmltools_0.5.7             S4Arrays_1.2.0             
- [17] forcats_1.0.0               progress_1.2.3             
- [19] curl_5.2.0                  broom_1.0.5                
- [21] SparseArray_1.2.3           sass_0.4.8                 
- [23] bslib_0.6.1                 fontawesome_0.5.2          
- [25] htmlwidgets_1.6.4           cachem_1.0.8               
- [27] teal.widgets_0.4.2.9005     mime_0.12                  
- [29] lifecycle_1.0.4             iterators_1.0.14           
- [31] pkgconfig_2.0.3             webshot2_0.1.1             
- [33] Matrix_1.6-5                R6_2.5.1                   
- [35] fastmap_1.1.1               GenomeInfoDbData_1.2.11    
- [37] rbibutils_2.2.16            clue_0.3-65                
- [39] digest_0.6.34               colorspace_2.1-0           
- [41] shinycssloaders_1.0.0       ps_1.7.6                   
- [43] AnnotationDbi_1.64.1        RSQLite_2.3.5              
- [45] filelock_1.0.3              labeling_0.4.3             
- [47] fansi_1.0.6                 httr_1.4.7                 
- [49] abind_1.4-5                 compiler_4.3.2             
- [51] bit64_4.0.5                 withr_3.0.0                
- [53] doParallel_1.0.17           backports_1.4.1            
- [55] DBI_1.2.1                   logger_0.2.2               
- [57] biomaRt_2.58.0              rappdirs_0.3.3             
- [59] DelayedArray_0.28.0         rjson_0.2.21               
- [61] chromote_0.1.2              tools_4.3.2                
- [63] httpuv_1.6.13               glue_1.7.0                 
- [65] callr_3.7.3                 promises_1.2.1             
- [67] grid_4.3.2                  checkmate_2.3.1            
- [69] cluster_2.1.6               generics_0.1.3             
- [71] gtable_0.3.4                websocket_1.4.1            
- [73] tidyr_1.3.1                 hms_1.1.3                  
- [75] xml2_1.3.6                  utf8_1.2.4                 
- [77] XVector_0.42.0              ggrepel_0.9.5              
- [79] foreach_1.5.2               pillar_1.9.0               
- [81] stringr_1.5.1               later_1.3.2                
- [83] circlize_0.4.15             splines_4.3.2              
- [85] BiocFileCache_2.10.1        lattice_0.22-5             
- [87] survival_3.5-7              bit_4.0.5                  
- [89] tidyselect_1.2.0            ComplexHeatmap_2.18.0      
- [91] Biostrings_2.70.1           knitr_1.45                 
- [93] gridExtra_2.3               teal.logger_0.1.3.9011     
- [95] xfun_0.41                   stringi_1.8.3              
- [97] yaml_2.3.8                  shinyWidgets_0.8.1         
- [99] evaluate_0.23               codetools_0.2-19           
+  [3] shape_1.4.6.1               MultiAssayExperiment_1.30.1
+  [5] farver_2.1.1                rmarkdown_2.26             
+  [7] GlobalOptions_0.1.2         zlibbioc_1.50.0            
+  [9] vctrs_0.6.5                 memoise_2.0.1              
+ [11] webshot_0.5.5               BiocBaseUtils_1.7.0        
+ [13] htmltools_0.5.8.1           S4Arrays_1.4.0             
+ [15] forcats_1.0.0               progress_1.2.3             
+ [17] curl_5.2.1                  broom_1.0.5                
+ [19] SparseArray_1.4.0           sass_0.4.9                 
+ [21] bslib_0.7.0                 fontawesome_0.5.2          
+ [23] htmlwidgets_1.6.4           httr2_1.0.1                
+ [25] cachem_1.0.8                teal.widgets_0.4.2.9011    
+ [27] mime_0.12                   lifecycle_1.0.4            
+ [29] iterators_1.0.14            pkgconfig_2.0.3            
+ [31] webshot2_0.1.1              Matrix_1.7-0               
+ [33] R6_2.5.1                    fastmap_1.1.1              
+ [35] GenomeInfoDbData_1.2.12     rbibutils_2.2.16           
+ [37] clue_0.3-65                 digest_0.6.35              
+ [39] colorspace_2.1-0            shinycssloaders_1.0.0      
+ [41] ps_1.7.6                    AnnotationDbi_1.66.0       
+ [43] RSQLite_2.3.6               filelock_1.0.3             
+ [45] labeling_0.4.3              fansi_1.0.6                
+ [47] httr_1.4.7                  abind_1.4-5                
+ [49] compiler_4.4.0              bit64_4.0.5                
+ [51] withr_3.0.0                 doParallel_1.0.17          
+ [53] backports_1.4.1             DBI_1.2.2                  
+ [55] logger_0.3.0                biomaRt_2.60.0             
+ [57] rappdirs_0.3.3              DelayedArray_0.30.0        
+ [59] rjson_0.2.21                chromote_0.2.0             
+ [61] tools_4.4.0                 httpuv_1.6.15              
+ [63] glue_1.7.0                  callr_3.7.6                
+ [65] promises_1.3.0              grid_4.4.0                 
+ [67] checkmate_2.3.1             cluster_2.1.6              
+ [69] generics_0.1.3              gtable_0.3.5               
+ [71] websocket_1.4.1             tidyr_1.3.1                
+ [73] hms_1.1.3                   xml2_1.3.6                 
+ [75] utf8_1.2.4                  XVector_0.44.0             
+ [77] ggrepel_0.9.5               foreach_1.5.2              
+ [79] pillar_1.9.0                stringr_1.5.1              
+ [81] later_1.3.2                 circlize_0.4.16            
+ [83] splines_4.4.0               BiocFileCache_2.12.0       
+ [85] lattice_0.22-6              survival_3.6-4             
+ [87] bit_4.0.5                   tidyselect_1.2.1           
+ [89] ComplexHeatmap_2.20.0       Biostrings_2.72.0          
+ [91] knitr_1.46                  gridExtra_2.3              
+ [93] teal.logger_0.2.0.9002      xfun_0.43                  
+ [95] stringi_1.8.3               UCSC.utils_1.0.0           
+ [97] yaml_2.3.8                  shinyWidgets_0.8.6         
+ [99] evaluate_0.23               codetools_0.2-20           
 [101] tibble_3.2.1                cli_3.6.2                  
 [103] xtable_1.8-4                Rdpack_2.6                 
-[105] processx_3.8.3              jquerylib_0.1.4            
-[107] munsell_0.5.0               teal.reporter_0.3.0.9003   
-[109] Rcpp_1.0.12                 dbplyr_2.4.0               
-[111] png_0.1-8                   XML_3.99-0.16.1            
-[113] parallel_4.3.2              ellipsis_0.3.2             
-[115] assertthat_0.2.1            blob_1.2.4                 
-[117] prettyunits_1.2.0           bitops_1.0-7               
-[119] scales_1.3.0                purrr_1.0.2                
-[121] crayon_1.5.2                GetoptLong_1.0.5           
-[123] rlang_1.1.3                 formatR_1.14               
-[125] KEGGREST_1.42.0             shinyjs_2.1.0              </code></pre>
+[105] jquerylib_0.1.4             processx_3.8.4             
+[107] munsell_0.5.1               teal.reporter_0.3.1.9005   
+[109] Rcpp_1.0.12                 dbplyr_2.5.0               
+[111] png_0.1-8                   parallel_4.4.0             
+[113] assertthat_0.2.1            blob_1.2.4                 
+[115] prettyunits_1.2.0           scales_1.3.0               
+[117] purrr_1.0.2                 crayon_1.5.2               
+[119] GetoptLong_1.0.5            rlang_1.1.3                
+[121] formatR_1.14                cowplot_1.1.3              
+[123] KEGGREST_1.44.0             shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>
@@ -1787,132 +1775,132 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> RNAG9</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Kaplan-Meier Graph</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="co">---</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a>------------------------------------------------------------------------</span>
-<span id="cb12-8"><a href="#cb12-8"></a></span>
-<span id="cb12-9"><a href="#cb12-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
-<span id="cb12-10"><a href="#cb12-10"></a></span>
-<span id="cb12-11"><a href="#cb12-11"></a>::: panel-tabset</span>
-<span id="cb12-12"><a href="#cb12-12"></a><span class="fu">## Setup: Import &amp; Data Manipulation</span></span>
-<span id="cb12-13"><a href="#cb12-13"></a></span>
-<span id="cb12-14"><a href="#cb12-14"></a>This page can be used as a template of how to produce Kaplan-Meier graphs for RNA-seq gene expression analysis using available <span class="in">`tern`</span> and <span class="in">`hermes`</span> functions, and to create an interactive Kaplan-Meier graph for RNA-seq gene expression analysis using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb12-15"><a href="#cb12-15"></a></span>
-<span id="cb12-16"><a href="#cb12-16"></a>The code below needs both RNA-seq data (in <span class="in">`HermesData`</span> format) and time-to-event data (in <span class="in">`ADTTE`</span> format) as input.</span>
-<span id="cb12-17"><a href="#cb12-17"></a></span>
-<span id="cb12-18"><a href="#cb12-18"></a>We first prepare the time-to-event data.</span>
-<span id="cb12-19"><a href="#cb12-19"></a>We define an event indicator variable, transform the time to months and filter down to the overall survival subset.</span>
-<span id="cb12-20"><a href="#cb12-20"></a></span>
-<span id="cb12-21"><a href="#cb12-21"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb12-22"><a href="#cb12-22"></a><span class="in">library(tern)</span></span>
-<span id="cb12-23"><a href="#cb12-23"></a><span class="in">library(dplyr)</span></span>
-<span id="cb12-24"><a href="#cb12-24"></a></span>
-<span id="cb12-25"><a href="#cb12-25"></a><span class="in">adtte_f &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %&gt;%</span></span>
-<span id="cb12-26"><a href="#cb12-26"></a><span class="in">  dplyr::mutate(</span></span>
-<span id="cb12-27"><a href="#cb12-27"></a><span class="in">    is_event = .data$CNSR == 0,</span></span>
-<span id="cb12-28"><a href="#cb12-28"></a><span class="in">    AVAL = day2month(.data$AVAL),</span></span>
-<span id="cb12-29"><a href="#cb12-29"></a><span class="in">    AVALU = "Months"</span></span>
-<span id="cb12-30"><a href="#cb12-30"></a><span class="in">  ) %&gt;%</span></span>
-<span id="cb12-31"><a href="#cb12-31"></a><span class="in">  dplyr::filter(.data$PARAMCD == "OS")</span></span>
-<span id="cb12-32"><a href="#cb12-32"></a><span class="in">```</span></span>
-<span id="cb12-33"><a href="#cb12-33"></a></span>
-<span id="cb12-34"><a href="#cb12-34"></a>Then we prepare the RNA-seq data.</span>
-<span id="cb12-35"><a href="#cb12-35"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for basic details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
-<span id="cb12-36"><a href="#cb12-36"></a>We use <span class="in">`col_data_with_genes()`</span> to extract the sample variables (<span class="in">`colData`</span>) from the object, together with a single specified gene or a specified gene signature.</span>
-<span id="cb12-37"><a href="#cb12-37"></a>See <span class="in">`?hermes::gene_spec`</span> for details on how to do this.</span>
-<span id="cb12-38"><a href="#cb12-38"></a>Then we use <span class="in">`inner_join_cdisc()`</span> to join this genetic data with the <span class="in">`ADTTE`</span> data from above.</span>
-<span id="cb12-39"><a href="#cb12-39"></a>See the help page for more details, in particular how the join keys can be customized if needed - here we just join based on <span class="in">`USUBJID`</span> by default.</span>
-<span id="cb12-40"><a href="#cb12-40"></a></span>
-<span id="cb12-41"><a href="#cb12-41"></a><span class="in">```{r,  message = FALSE}</span></span>
-<span id="cb12-42"><a href="#cb12-42"></a><span class="in">library(hermes)</span></span>
-<span id="cb12-43"><a href="#cb12-43"></a></span>
-<span id="cb12-44"><a href="#cb12-44"></a><span class="in">gene_data &lt;- col_data_with_genes(</span></span>
-<span id="cb12-45"><a href="#cb12-45"></a><span class="in">  object = hermes_data,</span></span>
-<span id="cb12-46"><a href="#cb12-46"></a><span class="in">  assay_name = "counts",</span></span>
-<span id="cb12-47"><a href="#cb12-47"></a><span class="in">  genes = gene_spec("GeneID:1820")</span></span>
-<span id="cb12-48"><a href="#cb12-48"></a><span class="in">)</span></span>
-<span id="cb12-49"><a href="#cb12-49"></a><span class="in">joined_data &lt;- inner_join_cdisc(</span></span>
-<span id="cb12-50"><a href="#cb12-50"></a><span class="in">  gene_data = gene_data,</span></span>
-<span id="cb12-51"><a href="#cb12-51"></a><span class="in">  cdisc_data = adtte_f</span></span>
-<span id="cb12-52"><a href="#cb12-52"></a><span class="in">)</span></span>
-<span id="cb12-53"><a href="#cb12-53"></a><span class="in">```</span></span>
-<span id="cb12-54"><a href="#cb12-54"></a></span>
-<span id="cb12-55"><a href="#cb12-55"></a>We can then cut the resulting gene column (we figure out the column name and save it in <span class="in">`arm_name`</span> below) in the <span class="in">`joined_data`</span> into quantile bins (in this example we want three equally sized groups).</span>
-<span id="cb12-56"><a href="#cb12-56"></a></span>
-<span id="cb12-59"><a href="#cb12-59"></a><span class="in">```{r}</span></span>
-<span id="cb12-60"><a href="#cb12-60"></a>arm_name <span class="ot">&lt;-</span> <span class="fu">attr</span>(gene_data, <span class="st">"gene_cols"</span>)</span>
-<span id="cb12-61"><a href="#cb12-61"></a>binned_data <span class="ot">&lt;-</span> joined_data <span class="sc">%&gt;%</span></span>
-<span id="cb12-62"><a href="#cb12-62"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb12-63"><a href="#cb12-63"></a>    <span class="at">gene_factor =</span> <span class="fu">cut_quantile_bins</span>(</span>
-<span id="cb12-64"><a href="#cb12-64"></a>      joined_data[[arm_name]],</span>
-<span id="cb12-65"><a href="#cb12-65"></a>      <span class="at">probs =</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>, <span class="dv">2</span> <span class="sc">/</span> <span class="dv">3</span>)</span>
-<span id="cb12-66"><a href="#cb12-66"></a>    )</span>
-<span id="cb12-67"><a href="#cb12-67"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb12-68"><a href="#cb12-68"></a>  <span class="fu">df_explicit_na</span>()</span>
-<span id="cb12-69"><a href="#cb12-69"></a><span class="in">```</span></span>
-<span id="cb12-70"><a href="#cb12-70"></a></span>
-<span id="cb12-71"><a href="#cb12-71"></a><span class="fu">## Kaplan-Meier Graph</span></span>
-<span id="cb12-72"><a href="#cb12-72"></a></span>
-<span id="cb12-73"><a href="#cb12-73"></a>It is now simple to create the Kaplan-Meier graph by providing the data set created above with the variable specification.</span>
-<span id="cb12-74"><a href="#cb12-74"></a>Note that we specify the above created <span class="in">`gene_factor`</span> as arm variable here.</span>
-<span id="cb12-75"><a href="#cb12-75"></a></span>
-<span id="cb12-78"><a href="#cb12-78"></a><span class="in">```{r}</span></span>
-<span id="cb12-79"><a href="#cb12-79"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb12-80"><a href="#cb12-80"></a>  <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
-<span id="cb12-81"><a href="#cb12-81"></a>  <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
-<span id="cb12-82"><a href="#cb12-82"></a>  <span class="at">arm =</span> <span class="st">"gene_factor"</span></span>
-<span id="cb12-83"><a href="#cb12-83"></a>)</span>
-<span id="cb12-84"><a href="#cb12-84"></a><span class="fu">g_km</span>(</span>
-<span id="cb12-85"><a href="#cb12-85"></a>  binned_data,</span>
-<span id="cb12-86"><a href="#cb12-86"></a>  <span class="at">variables =</span> variables,</span>
-<span id="cb12-87"><a href="#cb12-87"></a>  <span class="at">annot_coxph =</span> <span class="cn">TRUE</span></span>
-<span id="cb12-88"><a href="#cb12-88"></a>)</span>
-<span id="cb12-89"><a href="#cb12-89"></a><span class="in">```</span></span>
-<span id="cb12-90"><a href="#cb12-90"></a></span>
-<span id="cb12-91"><a href="#cb12-91"></a>See <span class="co">[</span><span class="ot">KG1</span><span class="co">](../graphs/KG1/kg01.qmd)</span> to <span class="co">[</span><span class="ot">KG5</span><span class="co">](../graphs/KG5/kg05.qmd)</span> for additional customization options for the Kaplan-Meier graphs or the help page <span class="in">`?g_km()`</span>.</span>
-<span id="cb12-92"><a href="#cb12-92"></a></span>
-<span id="cb12-93"><a href="#cb12-93"></a><span class="fu">## Teal Module for Kaplan-Meier Graph</span></span>
-<span id="cb12-94"><a href="#cb12-94"></a></span>
-<span id="cb12-95"><a href="#cb12-95"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span> and sample <span class="in">`ADTTE`</span> data; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span> and example <span class="in">`ADTTE`</span> data from <span class="in">`scda`</span>.</span>
-<span id="cb12-96"><a href="#cb12-96"></a>We can then use the provided teal module <span class="in">`tm_g_km`</span> to include the corresponding interactive Kaplan-Meier analysis in our teal app.</span>
-<span id="cb12-97"><a href="#cb12-97"></a>Note that by default the <span class="in">`counts`</span> assay is excluded via the <span class="in">`exclude_assays`</span> argument, but we can include it by just saying that we don't want to exclude any assays.</span>
-<span id="cb12-98"><a href="#cb12-98"></a>In case that we have different non-standard column names in our ADTTE data set we could also specify them via the <span class="in">`adtte_vars`</span> argument, see the documentation <span class="in">`?tm_g_km`</span> for more details.</span>
-<span id="cb12-99"><a href="#cb12-99"></a></span>
-<span id="cb12-100"><a href="#cb12-100"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
-<span id="cb12-101"><a href="#cb12-101"></a><span class="in">library(teal.modules.hermes)</span></span>
-<span id="cb12-102"><a href="#cb12-102"></a></span>
-<span id="cb12-103"><a href="#cb12-103"></a><span class="in">data &lt;- teal_data()</span></span>
-<span id="cb12-104"><a href="#cb12-104"></a><span class="in">data &lt;- within(data, {</span></span>
-<span id="cb12-105"><a href="#cb12-105"></a><span class="in">  library(scda)</span></span>
-<span id="cb12-106"><a href="#cb12-106"></a><span class="in">  library(dplyr)</span></span>
-<span id="cb12-107"><a href="#cb12-107"></a><span class="in">  library(hermes)</span></span>
-<span id="cb12-108"><a href="#cb12-108"></a><span class="in">  MAE &lt;- multi_assay_experiment</span></span>
-<span id="cb12-109"><a href="#cb12-109"></a><span class="in">  ADTTE &lt;- synthetic_cdisc_dataset("latest", "adtte") %&gt;%</span></span>
-<span id="cb12-110"><a href="#cb12-110"></a><span class="in">    mutate(is_event = .data$CNSR == 0)</span></span>
-<span id="cb12-111"><a href="#cb12-111"></a><span class="in">})</span></span>
-<span id="cb12-112"><a href="#cb12-112"></a><span class="in">datanames(data) &lt;- c("MAE", "ADTTE")</span></span>
-<span id="cb12-113"><a href="#cb12-113"></a><span class="in">join_keys(data)["ADTTE", "ADTTE"] &lt;- c("STUDYID", "USUBJID", "PARAMCD")</span></span>
-<span id="cb12-114"><a href="#cb12-114"></a></span>
-<span id="cb12-115"><a href="#cb12-115"></a><span class="in">app &lt;- init(</span></span>
-<span id="cb12-116"><a href="#cb12-116"></a><span class="in">  data = data,</span></span>
-<span id="cb12-117"><a href="#cb12-117"></a><span class="in">  modules = modules(</span></span>
-<span id="cb12-118"><a href="#cb12-118"></a><span class="in">    tm_g_km(</span></span>
-<span id="cb12-119"><a href="#cb12-119"></a><span class="in">      label = "Kaplan-Meier Graph",</span></span>
-<span id="cb12-120"><a href="#cb12-120"></a><span class="in">      adtte_name = "ADTTE",</span></span>
-<span id="cb12-121"><a href="#cb12-121"></a><span class="in">      mae_name = "MAE",</span></span>
-<span id="cb12-122"><a href="#cb12-122"></a><span class="in">      exclude_assays = character()</span></span>
-<span id="cb12-123"><a href="#cb12-123"></a><span class="in">    )</span></span>
-<span id="cb12-124"><a href="#cb12-124"></a><span class="in">  )</span></span>
-<span id="cb12-125"><a href="#cb12-125"></a><span class="in">)</span></span>
-<span id="cb12-126"><a href="#cb12-126"></a><span class="in">shinyApp(app$ui, app$server)</span></span>
-<span id="cb12-127"><a href="#cb12-127"></a><span class="in">```</span></span>
-<span id="cb12-128"><a href="#cb12-128"></a></span>
-<span id="cb12-129"><a href="#cb12-129"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb12-130"><a href="#cb12-130"></a>:::</span>
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> RNAG9</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Kaplan-Meier Graph</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">---</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a>------------------------------------------------------------------------</span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a>::: panel-tabset</span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="fu">## Setup: Import &amp; Data Manipulation</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a></span>
+<span id="cb9-14"><a href="#cb9-14"></a>This page can be used as a template of how to produce Kaplan-Meier graphs for RNA-seq gene expression analysis using available <span class="in">`tern`</span> and <span class="in">`hermes`</span> functions, and to create an interactive Kaplan-Meier graph for RNA-seq gene expression analysis using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a>The code below needs both RNA-seq data (in <span class="in">`HermesData`</span> format) and time-to-event data (in <span class="in">`ADTTE`</span> format) as input.</span>
+<span id="cb9-17"><a href="#cb9-17"></a></span>
+<span id="cb9-18"><a href="#cb9-18"></a>We first prepare the time-to-event data.</span>
+<span id="cb9-19"><a href="#cb9-19"></a>We define an event indicator variable, transform the time to months and filter down to the overall survival subset.</span>
+<span id="cb9-20"><a href="#cb9-20"></a></span>
+<span id="cb9-21"><a href="#cb9-21"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb9-22"><a href="#cb9-22"></a><span class="in">library(tern)</span></span>
+<span id="cb9-23"><a href="#cb9-23"></a><span class="in">library(dplyr)</span></span>
+<span id="cb9-24"><a href="#cb9-24"></a></span>
+<span id="cb9-25"><a href="#cb9-25"></a><span class="in">adtte_f &lt;- random.cdisc.data::cadtte %&gt;%</span></span>
+<span id="cb9-26"><a href="#cb9-26"></a><span class="in">  dplyr::mutate(</span></span>
+<span id="cb9-27"><a href="#cb9-27"></a><span class="in">    is_event = .data$CNSR == 0,</span></span>
+<span id="cb9-28"><a href="#cb9-28"></a><span class="in">    AVAL = day2month(.data$AVAL),</span></span>
+<span id="cb9-29"><a href="#cb9-29"></a><span class="in">    AVALU = "Months"</span></span>
+<span id="cb9-30"><a href="#cb9-30"></a><span class="in">  ) %&gt;%</span></span>
+<span id="cb9-31"><a href="#cb9-31"></a><span class="in">  dplyr::filter(.data$PARAMCD == "OS")</span></span>
+<span id="cb9-32"><a href="#cb9-32"></a><span class="in">```</span></span>
+<span id="cb9-33"><a href="#cb9-33"></a></span>
+<span id="cb9-34"><a href="#cb9-34"></a>Then we prepare the RNA-seq data.</span>
+<span id="cb9-35"><a href="#cb9-35"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for basic details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
+<span id="cb9-36"><a href="#cb9-36"></a>We use <span class="in">`col_data_with_genes()`</span> to extract the sample variables (<span class="in">`colData`</span>) from the object, together with a single specified gene or a specified gene signature.</span>
+<span id="cb9-37"><a href="#cb9-37"></a>See <span class="in">`?hermes::gene_spec`</span> for details on how to do this.</span>
+<span id="cb9-38"><a href="#cb9-38"></a>Then we use <span class="in">`inner_join_cdisc()`</span> to join this genetic data with the <span class="in">`ADTTE`</span> data from above.</span>
+<span id="cb9-39"><a href="#cb9-39"></a>See the help page for more details, in particular how the join keys can be customized if needed - here we just join based on <span class="in">`USUBJID`</span> by default.</span>
+<span id="cb9-40"><a href="#cb9-40"></a></span>
+<span id="cb9-41"><a href="#cb9-41"></a><span class="in">```{r,  message = FALSE}</span></span>
+<span id="cb9-42"><a href="#cb9-42"></a><span class="in">library(hermes)</span></span>
+<span id="cb9-43"><a href="#cb9-43"></a></span>
+<span id="cb9-44"><a href="#cb9-44"></a><span class="in">gene_data &lt;- col_data_with_genes(</span></span>
+<span id="cb9-45"><a href="#cb9-45"></a><span class="in">  object = hermes_data,</span></span>
+<span id="cb9-46"><a href="#cb9-46"></a><span class="in">  assay_name = "counts",</span></span>
+<span id="cb9-47"><a href="#cb9-47"></a><span class="in">  genes = gene_spec("GeneID:1820")</span></span>
+<span id="cb9-48"><a href="#cb9-48"></a><span class="in">)</span></span>
+<span id="cb9-49"><a href="#cb9-49"></a><span class="in">joined_data &lt;- inner_join_cdisc(</span></span>
+<span id="cb9-50"><a href="#cb9-50"></a><span class="in">  gene_data = gene_data,</span></span>
+<span id="cb9-51"><a href="#cb9-51"></a><span class="in">  cdisc_data = adtte_f</span></span>
+<span id="cb9-52"><a href="#cb9-52"></a><span class="in">)</span></span>
+<span id="cb9-53"><a href="#cb9-53"></a><span class="in">```</span></span>
+<span id="cb9-54"><a href="#cb9-54"></a></span>
+<span id="cb9-55"><a href="#cb9-55"></a>We can then cut the resulting gene column (we figure out the column name and save it in <span class="in">`arm_name`</span> below) in the <span class="in">`joined_data`</span> into quantile bins (in this example we want three equally sized groups).</span>
+<span id="cb9-56"><a href="#cb9-56"></a></span>
+<span id="cb9-59"><a href="#cb9-59"></a><span class="in">```{r}</span></span>
+<span id="cb9-60"><a href="#cb9-60"></a>arm_name <span class="ot">&lt;-</span> <span class="fu">attr</span>(gene_data, <span class="st">"gene_cols"</span>)</span>
+<span id="cb9-61"><a href="#cb9-61"></a>binned_data <span class="ot">&lt;-</span> joined_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-62"><a href="#cb9-62"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb9-63"><a href="#cb9-63"></a>    <span class="at">gene_factor =</span> <span class="fu">cut_quantile_bins</span>(</span>
+<span id="cb9-64"><a href="#cb9-64"></a>      joined_data[[arm_name]],</span>
+<span id="cb9-65"><a href="#cb9-65"></a>      <span class="at">probs =</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>, <span class="dv">2</span> <span class="sc">/</span> <span class="dv">3</span>)</span>
+<span id="cb9-66"><a href="#cb9-66"></a>    )</span>
+<span id="cb9-67"><a href="#cb9-67"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb9-68"><a href="#cb9-68"></a>  <span class="fu">df_explicit_na</span>()</span>
+<span id="cb9-69"><a href="#cb9-69"></a><span class="in">```</span></span>
+<span id="cb9-70"><a href="#cb9-70"></a></span>
+<span id="cb9-71"><a href="#cb9-71"></a><span class="fu">## Kaplan-Meier Graph</span></span>
+<span id="cb9-72"><a href="#cb9-72"></a></span>
+<span id="cb9-73"><a href="#cb9-73"></a>It is now simple to create the Kaplan-Meier graph by providing the data set created above with the variable specification.</span>
+<span id="cb9-74"><a href="#cb9-74"></a>Note that we specify the above created <span class="in">`gene_factor`</span> as arm variable here.</span>
+<span id="cb9-75"><a href="#cb9-75"></a></span>
+<span id="cb9-78"><a href="#cb9-78"></a><span class="in">```{r}</span></span>
+<span id="cb9-79"><a href="#cb9-79"></a>variables <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb9-80"><a href="#cb9-80"></a>  <span class="at">tte =</span> <span class="st">"AVAL"</span>,</span>
+<span id="cb9-81"><a href="#cb9-81"></a>  <span class="at">is_event =</span> <span class="st">"is_event"</span>,</span>
+<span id="cb9-82"><a href="#cb9-82"></a>  <span class="at">arm =</span> <span class="st">"gene_factor"</span></span>
+<span id="cb9-83"><a href="#cb9-83"></a>)</span>
+<span id="cb9-84"><a href="#cb9-84"></a><span class="fu">g_km</span>(</span>
+<span id="cb9-85"><a href="#cb9-85"></a>  binned_data,</span>
+<span id="cb9-86"><a href="#cb9-86"></a>  <span class="at">variables =</span> variables,</span>
+<span id="cb9-87"><a href="#cb9-87"></a>  <span class="at">annot_coxph =</span> <span class="cn">TRUE</span></span>
+<span id="cb9-88"><a href="#cb9-88"></a>)</span>
+<span id="cb9-89"><a href="#cb9-89"></a><span class="in">```</span></span>
+<span id="cb9-90"><a href="#cb9-90"></a></span>
+<span id="cb9-91"><a href="#cb9-91"></a>See <span class="co">[</span><span class="ot">KG1</span><span class="co">](../graphs/KG1/kg01.qmd)</span> to <span class="co">[</span><span class="ot">KG5</span><span class="co">](../graphs/KG5/kg05.qmd)</span> for additional customization options for the Kaplan-Meier graphs or the help page <span class="in">`?g_km()`</span>.</span>
+<span id="cb9-92"><a href="#cb9-92"></a></span>
+<span id="cb9-93"><a href="#cb9-93"></a><span class="fu">## Teal Module for Kaplan-Meier Graph</span></span>
+<span id="cb9-94"><a href="#cb9-94"></a></span>
+<span id="cb9-95"><a href="#cb9-95"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span> and sample <span class="in">`ADTTE`</span> data; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span> and example <span class="in">`ADTTE`</span> data from <span class="in">`random.cdisc.data`</span>.</span>
+<span id="cb9-96"><a href="#cb9-96"></a>We can then use the provided teal module <span class="in">`tm_g_km`</span> to include the corresponding interactive Kaplan-Meier analysis in our teal app.</span>
+<span id="cb9-97"><a href="#cb9-97"></a>Note that by default the <span class="in">`counts`</span> assay is excluded via the <span class="in">`exclude_assays`</span> argument, but we can include it by just saying that we don't want to exclude any assays.</span>
+<span id="cb9-98"><a href="#cb9-98"></a>In case that we have different non-standard column names in our ADTTE data set we could also specify them via the <span class="in">`adtte_vars`</span> argument, see the documentation <span class="in">`?tm_g_km`</span> for more details.</span>
+<span id="cb9-99"><a href="#cb9-99"></a></span>
+<span id="cb9-100"><a href="#cb9-100"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
+<span id="cb9-101"><a href="#cb9-101"></a><span class="in">library(teal.modules.hermes)</span></span>
+<span id="cb9-102"><a href="#cb9-102"></a></span>
+<span id="cb9-103"><a href="#cb9-103"></a><span class="in">data &lt;- teal_data()</span></span>
+<span id="cb9-104"><a href="#cb9-104"></a><span class="in">data &lt;- within(data, {</span></span>
+<span id="cb9-105"><a href="#cb9-105"></a><span class="in">  library(random.cdisc.data)</span></span>
+<span id="cb9-106"><a href="#cb9-106"></a><span class="in">  library(dplyr)</span></span>
+<span id="cb9-107"><a href="#cb9-107"></a><span class="in">  library(hermes)</span></span>
+<span id="cb9-108"><a href="#cb9-108"></a><span class="in">  MAE &lt;- multi_assay_experiment</span></span>
+<span id="cb9-109"><a href="#cb9-109"></a><span class="in">  ADTTE &lt;- random.cdisc.data::cadtte %&gt;%</span></span>
+<span id="cb9-110"><a href="#cb9-110"></a><span class="in">    mutate(is_event = .data$CNSR == 0)</span></span>
+<span id="cb9-111"><a href="#cb9-111"></a><span class="in">})</span></span>
+<span id="cb9-112"><a href="#cb9-112"></a><span class="in">datanames(data) &lt;- c("MAE", "ADTTE")</span></span>
+<span id="cb9-113"><a href="#cb9-113"></a><span class="in">join_keys(data)["ADTTE", "ADTTE"] &lt;- c("STUDYID", "USUBJID", "PARAMCD")</span></span>
+<span id="cb9-114"><a href="#cb9-114"></a></span>
+<span id="cb9-115"><a href="#cb9-115"></a><span class="in">app &lt;- init(</span></span>
+<span id="cb9-116"><a href="#cb9-116"></a><span class="in">  data = data,</span></span>
+<span id="cb9-117"><a href="#cb9-117"></a><span class="in">  modules = modules(</span></span>
+<span id="cb9-118"><a href="#cb9-118"></a><span class="in">    tm_g_km(</span></span>
+<span id="cb9-119"><a href="#cb9-119"></a><span class="in">      label = "Kaplan-Meier Graph",</span></span>
+<span id="cb9-120"><a href="#cb9-120"></a><span class="in">      adtte_name = "ADTTE",</span></span>
+<span id="cb9-121"><a href="#cb9-121"></a><span class="in">      mae_name = "MAE",</span></span>
+<span id="cb9-122"><a href="#cb9-122"></a><span class="in">      exclude_assays = character()</span></span>
+<span id="cb9-123"><a href="#cb9-123"></a><span class="in">    )</span></span>
+<span id="cb9-124"><a href="#cb9-124"></a><span class="in">  )</span></span>
+<span id="cb9-125"><a href="#cb9-125"></a><span class="in">)</span></span>
+<span id="cb9-126"><a href="#cb9-126"></a><span class="in">shinyApp(app$ui, app$server)</span></span>
+<span id="cb9-127"><a href="#cb9-127"></a><span class="in">```</span></span>
+<span id="cb9-128"><a href="#cb9-128"></a></span>
+<span id="cb9-129"><a href="#cb9-129"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb9-130"><a href="#cb9-130"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Wed, 08 May 2024 17:31:42 GMT</lastBuildDate>
+<lastBuildDate>Fri, 10 May 2024 18:36:07 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
@@ -30,7 +30,7 @@
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p>We will use the <code>synthetic_cdisc_data$adtte</code> data set from the <code>scda</code> package to illustrate the tables. We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival. We then convert time of overall survival to months and create a new variable for the event information.</p>
+<p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables. We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival. We then convert time of overall survival to months and create a new variable for the event information.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -41,15 +41,9 @@ font-style: inherit;">library</span>(dplyr)</span>
 <span id="cb1-3"></span>
 <span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;-</span> random.cdisc.data<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">::</span>cadtte <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb1-5">  <span class="fu" style="color: #4758AB;
@@ -134,17 +128,17 @@ background-color: null;
 font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                              Hazard Ratio      95% CI      p-value
-———————————————————————————————————————————————————————————————————
+-------------------------------------------------------------------
 Covariate:                                                         
-  Country (reference = CHN)                                 0.8447 
-    USA                           1.36       (0.70, 2.64)   0.3633 
-    BRA                           1.02       (0.55, 1.87)   0.9564 
-    PAK                           1.03       (0.54, 1.94)   0.9316 
-    NGA                           0.97       (0.46, 2.03)   0.9405 
-    RUS                           1.48       (0.64, 3.42)   0.3574 
-    JPN                           1.52       (0.61, 3.76)   0.3686 
-    GBR                           0.75       (0.30, 1.85)   0.5287 
-    CAN                           2.09       (0.65, 6.70)   0.2163 </code></pre>
+  Country (reference = CHN)                                 0.1604 
+    USA                           1.67       (0.87, 3.19)   0.1230 
+    BRA                           0.43       (0.17, 1.07)   0.0698 
+    PAK                           0.38       (0.12, 1.22)   0.1043 
+    NGA                           1.67       (0.76, 3.66)   0.2048 
+    RUS                           0.91       (0.33, 2.50)   0.8488 
+    JPN                           1.40       (0.51, 3.85)   0.5206 
+    GBR                           0.78       (0.24, 2.49)   0.6738 
+    CAN                           1.31       (0.41, 4.21)   0.6460 </code></pre>
 </div>
 </div>
 </div>
@@ -154,21 +148,16 @@ Covariate:
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[1] C
 
 time zone: Etc/UTC
 tzcode source: system (glibc)
@@ -177,23 +166,35 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.4           tern_0.9.3.9016       rtables_0.6.6.9010   
-[4] magrittr_2.0.3        formatters_0.5.5.9010
+[1] dplyr_1.1.4           tern_0.9.4.9005       rtables_0.6.7.9001   
+[4] magrittr_2.0.3        formatters_0.5.6.9004
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
- [5] tidyselect_1.2.0  stringr_1.5.1     tidyr_1.3.1       splines_4.3.2    
- [9] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5   
-[13] ggplot2_3.4.4     R6_2.5.1          generics_0.1.3    knitr_1.45       
-[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
-[21] checkmate_2.3.1   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
-[25] scda_0.1.6.9016   pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
-[29] stringi_1.8.3     broom_1.0.5       xfun_0.41         cli_3.6.2        
-[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        lifecycle_1.0.4  
-[37] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        codetools_0.2-19 
-[41] abind_1.4-5       survival_3.5-7    carData_3.0-5     fansi_1.0.6      
-[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
-[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+ [1] Matrix_1.7-0                  gtable_0.3.5                 
+ [3] jsonlite_1.8.8                compiler_4.4.0               
+ [5] tidyselect_1.2.1              stringr_1.5.1                
+ [7] tidyr_1.3.1                   splines_4.4.0                
+ [9] scales_1.3.0                  yaml_2.3.8                   
+[11] fastmap_1.1.1                 lattice_0.22-6               
+[13] ggplot2_3.5.1                 R6_2.5.1                     
+[15] generics_0.1.3                knitr_1.46                   
+[17] forcats_1.0.0                 rbibutils_2.2.16             
+[19] htmlwidgets_1.6.4             backports_1.4.1              
+[21] checkmate_2.3.1               tibble_3.2.1                 
+[23] car_3.1-2                     munsell_0.5.1                
+[25] pillar_1.9.0                  rlang_1.1.3                  
+[27] utf8_1.2.4                    stringi_1.8.3                
+[29] broom_1.0.5                   xfun_0.43                    
+[31] cli_3.6.2                     Rdpack_2.6                   
+[33] digest_0.6.35                 grid_4.4.0                   
+[35] lifecycle_1.0.4               vctrs_0.6.5                  
+[37] evaluate_0.23                 glue_1.7.0                   
+[39] codetools_0.2-20              abind_1.4-5                  
+[41] survival_3.6-4                carData_3.0-5                
+[43] random.cdisc.data_0.3.15.9003 fansi_1.0.6                  
+[45] colorspace_2.1-0              rmarkdown_2.26               
+[47] purrr_1.0.2                   tools_4.4.0                  
+[49] pkgconfig_2.0.3               htmltools_0.5.8.1            </code></pre>
 </div>
 </div>
 </div>
@@ -207,7 +208,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -444,7 +445,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -711,7 +712,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -736,15 +737,9 @@ font-style: inherit;">library</span>(dplyr)</span>
 <span id="cb1-3"></span>
 <span id="cb1-4">adtte <span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&lt;-</span> scda<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;-</span> random.cdisc.data<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">synthetic_cdisc_data</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rcd_2022_06_27"</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>adtte <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">::</span>cadtte <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb1-5">  <span class="fu" style="color: #4758AB;
@@ -839,19 +834,19 @@ background-color: null;
 font-style: inherit;">df =</span> adtte)</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                              Hazard Ratio      95% CI      p-value
-———————————————————————————————————————————————————————————————————
+-------------------------------------------------------------------
 Covariate:                                                         
-  Country (reference = CHN)                                 0.8447 
-    USA                           1.36       (0.70, 2.64)   0.3633 
-    BRA                           1.02       (0.55, 1.87)   0.9564 
-    PAK                           1.03       (0.54, 1.94)   0.9316 
-    NGA                           0.97       (0.46, 2.03)   0.9405 
-    RUS                           1.48       (0.64, 3.42)   0.3574 
-    JPN                           1.52       (0.61, 3.76)   0.3686 
-    GBR                           0.75       (0.30, 1.85)   0.5287 
-    CAN                           2.09       (0.65, 6.70)   0.2163 
+  Country (reference = CHN)                                 0.1604 
+    USA                           1.67       (0.87, 3.19)   0.1230 
+    BRA                           0.43       (0.17, 1.07)   0.0698 
+    PAK                           0.38       (0.12, 1.22)   0.1043 
+    NGA                           1.67       (0.76, 3.66)   0.2048 
+    RUS                           0.91       (0.33, 2.50)   0.8488 
+    JPN                           1.40       (0.51, 3.85)   0.5206 
+    GBR                           0.78       (0.24, 2.49)   0.6738 
+    CAN                           1.31       (0.41, 4.21)   0.6460 
   Age                                                              
-    All                           1.01       (0.99, 1.03)   0.5869 </code></pre>
+    All                           1.01       (0.98, 1.03)   0.5600 </code></pre>
 </div>
 </div>
 </div>
@@ -861,21 +856,16 @@ Covariate:
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[1] C
 
 time zone: Etc/UTC
 tzcode source: system (glibc)
@@ -884,23 +874,35 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.4           tern_0.9.3.9016       rtables_0.6.6.9010   
-[4] magrittr_2.0.3        formatters_0.5.5.9010
+[1] dplyr_1.1.4           tern_0.9.4.9005       rtables_0.6.7.9001   
+[4] magrittr_2.0.3        formatters_0.5.6.9004
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
- [5] tidyselect_1.2.0  stringr_1.5.1     tidyr_1.3.1       splines_4.3.2    
- [9] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5   
-[13] ggplot2_3.4.4     R6_2.5.1          generics_0.1.3    knitr_1.45       
-[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
-[21] checkmate_2.3.1   tibble_3.2.1      car_3.1-2         munsell_0.5.0    
-[25] scda_0.1.6.9016   pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
-[29] stringi_1.8.3     broom_1.0.5       xfun_0.41         cli_3.6.2        
-[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        lifecycle_1.0.4  
-[37] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        codetools_0.2-19 
-[41] abind_1.4-5       survival_3.5-7    carData_3.0-5     fansi_1.0.6      
-[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
-[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+ [1] Matrix_1.7-0                  gtable_0.3.5                 
+ [3] jsonlite_1.8.8                compiler_4.4.0               
+ [5] tidyselect_1.2.1              stringr_1.5.1                
+ [7] tidyr_1.3.1                   splines_4.4.0                
+ [9] scales_1.3.0                  yaml_2.3.8                   
+[11] fastmap_1.1.1                 lattice_0.22-6               
+[13] ggplot2_3.5.1                 R6_2.5.1                     
+[15] generics_0.1.3                knitr_1.46                   
+[17] forcats_1.0.0                 rbibutils_2.2.16             
+[19] htmlwidgets_1.6.4             backports_1.4.1              
+[21] checkmate_2.3.1               tibble_3.2.1                 
+[23] car_3.1-2                     munsell_0.5.1                
+[25] pillar_1.9.0                  rlang_1.1.3                  
+[27] utf8_1.2.4                    stringi_1.8.3                
+[29] broom_1.0.5                   xfun_0.43                    
+[31] cli_3.6.2                     Rdpack_2.6                   
+[33] digest_0.6.35                 grid_4.4.0                   
+[35] lifecycle_1.0.4               vctrs_0.6.5                  
+[37] evaluate_0.23                 glue_1.7.0                   
+[39] codetools_0.2-20              abind_1.4-5                  
+[41] survival_3.6-4                carData_3.0-5                
+[43] random.cdisc.data_0.3.15.9003 fansi_1.0.6                  
+[45] colorspace_2.1-0              rmarkdown_2.26               
+[47] purrr_1.0.2                   tools_4.4.0                  
+[49] pkgconfig_2.0.3               htmltools_0.5.8.1            </code></pre>
 </div>
 </div>
 </div>
@@ -914,7 +916,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -1134,7 +1136,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1366,7 +1368,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1578,7 +1580,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1823,7 +1825,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -2022,7 +2024,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -2222,7 +2224,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2577,7 +2579,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2982,7 +2984,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Wed, 08 May 2024 17:31:42 GMT</pubDate>
+  <pubDate>Fri, 10 May 2024 18:36:07 GMT</pubDate>
 </item>
 </channel>
 </rss>

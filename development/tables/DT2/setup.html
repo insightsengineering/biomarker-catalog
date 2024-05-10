@@ -173,13 +173,13 @@ cookieconsent.run({
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>The tables below compare the biomarker evaluable population (BEP, below in the table “BEP Yes”) with the remainder non-BEP (“BEP No”) within each treatment arm with regards to selected demographic variables.</p>
-<p>We will use the <code>synthetic_cdisc_data$adsl</code> data set from the <code>scda</code> package to illustrate the tables.</p>
+<p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables.</p>
 <p>In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable <code>BEP01FL</code> that categorises the evaluable and non evaluable subgroups. For readability in the tables, we define a separate label variable <code>BEP_label</code> below which is parallel to the original flag variable.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>adsl <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adsl <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>adsl <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadsl <span class="sc">%&gt;%</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb1-7"><a href="#cb1-7"></a>    <span class="at">BEP_label =</span> <span class="fu">case_when</span>(</span>
@@ -807,7 +807,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-6"><a href="#cb2-6"></a></span>
 <span id="cb2-7"><a href="#cb2-7"></a>The tables below compare the biomarker evaluable population (BEP, below in the table "BEP Yes") with the remainder non-BEP ("BEP No") within each treatment arm with regards to selected demographic variables.</span>
 <span id="cb2-8"><a href="#cb2-8"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a>We will use the <span class="in">`synthetic_cdisc_data$adsl`</span> data set from the <span class="in">`scda`</span> package to illustrate the tables.</span>
+<span id="cb2-9"><a href="#cb2-9"></a>We will use the <span class="in">`cadsl`</span> data set from the <span class="in">`random.cdisc.data`</span> package to illustrate the tables.</span>
 <span id="cb2-10"><a href="#cb2-10"></a></span>
 <span id="cb2-11"><a href="#cb2-11"></a>In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable <span class="in">`BEP01FL`</span> that categorises the evaluable and non evaluable subgroups.</span>
 <span id="cb2-12"><a href="#cb2-12"></a>For readability in the tables, we define a separate label variable <span class="in">`BEP_label`</span> below which is parallel to the original flag variable.</span>
@@ -816,7 +816,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-15"><a href="#cb2-15"></a><span class="in">library(tern)</span></span>
 <span id="cb2-16"><a href="#cb2-16"></a><span class="in">library(dplyr)</span></span>
 <span id="cb2-17"><a href="#cb2-17"></a></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="in">adsl &lt;- scda::synthetic_cdisc_data("rcd_2022_06_27")$adsl %&gt;%</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="in">adsl &lt;- random.cdisc.data::cadsl %&gt;%</span></span>
 <span id="cb2-19"><a href="#cb2-19"></a><span class="in">  df_explicit_na() %&gt;%</span></span>
 <span id="cb2-20"><a href="#cb2-20"></a><span class="in">  mutate(</span></span>
 <span id="cb2-21"><a href="#cb2-21"></a><span class="in">    BEP_label = case_when(</span></span>

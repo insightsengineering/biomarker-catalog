@@ -948,7 +948,7 @@ cookieconsent.run({
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>adtte <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">filter</span>(</span>
 <span id="cb1-7"><a href="#cb1-7"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>,</span>
@@ -968,9 +968,9 @@ cookieconsent.run({
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>We prepare the data similarly as in <a href="../../graphs/SFG3/sfg03.html">SFG3</a>. Additionally we are filtering <code>synthetic_cdisc_data$adtte</code> to keep only two categories for the <code>SEX</code> variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients. We then tabulate statistics to be able to use them as an input for the forest plot.</p>
+<p>We prepare the data similarly as in <a href="../../graphs/SFG3/sfg03.html">SFG3</a>. Additionally we are filtering <code><a href="https://insightsengineering.github.io/random.cdisc.data/main/reference/cadtte.html">random.cdisc.data::cadtte</a></code> to keep only two categories for the <code>SEX</code> variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients. We then tabulate statistics to be able to use them as an input for the forest plot.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>adtte_mf <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>adtte_mf <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">filter</span>(</span>
 <span id="cb2-4"><a href="#cb2-4"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>,</span>
@@ -1022,21 +1022,16 @@ cookieconsent.run({
 <div class="cell">
 <details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[1] C
 
 time zone: Etc/UTC
 tzcode source: system (glibc)
@@ -1045,23 +1040,36 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.4           tern_0.9.3.9016       rtables_0.6.6.9010   
-[4] magrittr_2.0.3        formatters_0.5.5.9010
+[1] dplyr_1.1.4           tern_0.9.4.9005       rtables_0.6.7.9001   
+[4] magrittr_2.0.3        formatters_0.5.6.9004
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
- [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
- [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
-[13] R6_2.5.1          labeling_0.4.3    generics_0.1.3    knitr_1.45       
-[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
-[21] checkmate_2.3.1   tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9016  
-[25] pillar_1.9.0      rlang_1.1.3       utf8_1.2.4        stringi_1.8.3    
-[29] broom_1.0.5       xfun_0.41         cli_3.6.2         withr_3.0.0      
-[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        cowplot_1.1.3    
-[37] lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23     glue_1.7.0       
-[41] farver_2.1.1      codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
-[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
-[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+ [1] Matrix_1.7-0                  gtable_0.3.5                 
+ [3] jsonlite_1.8.8                compiler_4.4.0               
+ [5] tidyselect_1.2.1              stringr_1.5.1                
+ [7] tidyr_1.3.1                   splines_4.4.0                
+ [9] scales_1.3.0                  yaml_2.3.8                   
+[11] fastmap_1.1.1                 lattice_0.22-6               
+[13] ggplot2_3.5.1                 R6_2.5.1                     
+[15] labeling_0.4.3                generics_0.1.3               
+[17] knitr_1.46                    forcats_1.0.0                
+[19] rbibutils_2.2.16              htmlwidgets_1.6.4            
+[21] backports_1.4.1               checkmate_2.3.1              
+[23] tibble_3.2.1                  munsell_0.5.1                
+[25] pillar_1.9.0                  rlang_1.1.3                  
+[27] utf8_1.2.4                    stringi_1.8.3                
+[29] broom_1.0.5                   xfun_0.43                    
+[31] cli_3.6.2                     withr_3.0.0                  
+[33] Rdpack_2.6                    digest_0.6.35                
+[35] grid_4.4.0                    cowplot_1.1.3                
+[37] lifecycle_1.0.4               vctrs_0.6.5                  
+[39] evaluate_0.23                 glue_1.7.0                   
+[41] farver_2.1.1                  codetools_0.2-20             
+[43] survival_3.6-4                random.cdisc.data_0.3.15.9003
+[45] fansi_1.0.6                   colorspace_2.1-0             
+[47] rmarkdown_2.26                purrr_1.0.2                  
+[49] tools_4.4.0                   pkgconfig_2.0.3              
+[51] htmltools_0.5.8.1            </code></pre>
 </div>
 </div>
 </div>
@@ -1701,11 +1709,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-12"><a href="#cb6-12"></a><span class="fu">## Plot</span></span>
 <span id="cb6-13"><a href="#cb6-13"></a></span>
 <span id="cb6-14"><a href="#cb6-14"></a>We prepare the data similarly as in <span class="co">[</span><span class="ot">SFG3</span><span class="co">](sfg03.qmd)</span>.</span>
-<span id="cb6-15"><a href="#cb6-15"></a>Additionally we are filtering <span class="in">`synthetic_cdisc_data$adtte`</span> to keep only two categories for the <span class="in">`SEX`</span> variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients.</span>
+<span id="cb6-15"><a href="#cb6-15"></a>Additionally we are filtering <span class="in">`random.cdisc.data::cadtte`</span> to keep only two categories for the <span class="in">`SEX`</span> variable (otherwise we would not be able to do the forest plot), and we are keeping all ITT patients.</span>
 <span id="cb6-16"><a href="#cb6-16"></a>We then tabulate statistics to be able to use them as an input for the forest plot.</span>
 <span id="cb6-17"><a href="#cb6-17"></a></span>
 <span id="cb6-20"><a href="#cb6-20"></a><span class="in">```{r}</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a>adtte_mf <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a>adtte_mf <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb6-22"><a href="#cb6-22"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb6-23"><a href="#cb6-23"></a>  <span class="fu">filter</span>(</span>
 <span id="cb6-24"><a href="#cb6-24"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span>,</span>

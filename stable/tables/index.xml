@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Sat, 18 May 2024 17:32:25 GMT</lastBuildDate>
+<lastBuildDate>Wed, 22 May 2024 17:28:40 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
@@ -128,7 +128,7 @@ background-color: null;
 font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                              Hazard Ratio      95% CI      p-value
--------------------------------------------------------------------
+———————————————————————————————————————————————————————————————————
 Covariate:                                                         
   Country (reference = CHN)                                 0.1604 
     USA                           1.67       (0.87, 3.19)   0.1230 
@@ -157,7 +157,12 @@ BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
-[1] C
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: Etc/UTC
 tzcode source: system (glibc)
@@ -200,7 +205,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -437,7 +442,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -704,7 +709,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -826,7 +831,7 @@ background-color: null;
 font-style: inherit;">df =</span> adtte)</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                              Hazard Ratio      95% CI      p-value
--------------------------------------------------------------------
+———————————————————————————————————————————————————————————————————
 Covariate:                                                         
   Country (reference = CHN)                                 0.1604 
     USA                           1.67       (0.87, 3.19)   0.1230 
@@ -857,7 +862,12 @@ BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
-[1] C
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: Etc/UTC
 tzcode source: system (glibc)
@@ -900,7 +910,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -1120,7 +1130,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1352,7 +1362,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1564,7 +1574,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1809,7 +1819,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -2008,7 +2018,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -2208,7 +2218,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2563,7 +2573,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2968,7 +2978,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Sat, 18 May 2024 17:32:25 GMT</pubDate>
+  <pubDate>Wed, 22 May 2024 17:28:40 GMT</pubDate>
 </item>
 </channel>
 </rss>

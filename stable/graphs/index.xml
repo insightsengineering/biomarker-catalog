@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Sat, 08 Jun 2024 17:25:46 GMT</lastBuildDate>
+<lastBuildDate>Wed, 12 Jun 2024 17:26:06 GMT</lastBuildDate>
 <item>
   <title>AG1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</link>
@@ -478,7 +478,7 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4               generics_0.1.3           EnvStats_2.8.1          
  [4] stringi_1.8.4            lattice_0.22-6           digest_0.6.35           
- [7] evaluate_0.23            fastmap_1.2.0            jsonlite_1.8.8          
+ [7] evaluate_0.24.0          fastmap_1.2.0            jsonlite_1.8.8          
 [10] Matrix_1.7-0             backports_1.5.0          survival_3.6-4          
 [13] purrr_1.0.2              fansi_1.0.6              scales_1.3.0            
 [16] codetools_0.2-20         Rdpack_2.6               cli_3.6.2               
@@ -507,7 +507,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>AG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG1</title>
@@ -778,7 +778,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG1A</title>
@@ -1099,7 +1099,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG1B</title>
@@ -1291,7 +1291,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG2</title>
@@ -1581,7 +1581,7 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4               generics_0.1.3           tidyr_1.3.1             
  [4] EnvStats_2.8.1           stringi_1.8.4            lattice_0.22-6          
- [7] digest_0.6.35            evaluate_0.23            grid_4.4.0              
+ [7] digest_0.6.35            evaluate_0.24.0          grid_4.4.0              
 [10] fastmap_1.2.0            jsonlite_1.8.8           Matrix_1.7-0            
 [13] backports_1.5.0          survival_3.6-4           purrr_1.0.2             
 [16] fansi_1.0.6              scales_1.3.0             codetools_0.2-20        
@@ -1610,7 +1610,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG3</title>
@@ -1974,7 +1974,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG3A</title>
@@ -2192,7 +2192,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>DG4</title>
@@ -2347,7 +2347,7 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4               generics_0.1.3           tidyr_1.3.1             
  [4] EnvStats_2.8.1           stringi_1.8.4            lattice_0.22-6          
- [7] digest_0.6.35            evaluate_0.23            grid_4.4.0              
+ [7] digest_0.6.35            evaluate_0.24.0          grid_4.4.0              
 [10] fastmap_1.2.0            jsonlite_1.8.8           Matrix_1.7-0            
 [13] backports_1.5.0          survival_3.6-4           purrr_1.0.2             
 [16] fansi_1.0.6              scales_1.3.0             codetools_0.2-20        
@@ -2376,7 +2376,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG1</title>
@@ -2566,7 +2566,7 @@ loaded via a namespace (and not attached):
 [28] broom_1.0.6              xfun_0.44                cli_3.6.2               
 [31] withr_3.0.0              Rdpack_2.6               digest_0.6.35           
 [34] cowplot_1.1.3            lifecycle_1.0.4          vctrs_0.6.5             
-[37] evaluate_0.23            glue_1.7.0               farver_2.1.2            
+[37] evaluate_0.24.0          glue_1.7.0               farver_2.1.2            
 [40] codetools_0.2-20         survival_3.6-4           random.cdisc.data_0.3.15
 [43] fansi_1.0.6              colorspace_2.1-0         rmarkdown_2.27          
 [46] purrr_1.0.2              tools_4.4.0              pkgconfig_2.0.3         
@@ -2584,7 +2584,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG1A</title>
@@ -2761,7 +2761,7 @@ loaded via a namespace (and not attached):
 [28] broom_1.0.6              xfun_0.44                cli_3.6.2               
 [31] withr_3.0.0              Rdpack_2.6               digest_0.6.35           
 [34] cowplot_1.1.3            lifecycle_1.0.4          vctrs_0.6.5             
-[37] evaluate_0.23            glue_1.7.0               farver_2.1.2            
+[37] evaluate_0.24.0          glue_1.7.0               farver_2.1.2            
 [40] codetools_0.2-20         survival_3.6-4           random.cdisc.data_0.3.15
 [43] fansi_1.0.6              colorspace_2.1-0         rmarkdown_2.27          
 [46] purrr_1.0.2              tools_4.4.0              pkgconfig_2.0.3         
@@ -2779,7 +2779,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01a.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG1B</title>
@@ -3038,7 +3038,7 @@ loaded via a namespace (and not attached):
 [28] broom_1.0.6              xfun_0.44                cli_3.6.2               
 [31] withr_3.0.0              Rdpack_2.6               digest_0.6.35           
 [34] cowplot_1.1.3            lifecycle_1.0.4          vctrs_0.6.5             
-[37] evaluate_0.23            glue_1.7.0               farver_2.1.2            
+[37] evaluate_0.24.0          glue_1.7.0               farver_2.1.2            
 [40] codetools_0.2-20         survival_3.6-4           random.cdisc.data_0.3.15
 [43] fansi_1.0.6              colorspace_2.1-0         rmarkdown_2.27          
 [46] purrr_1.0.2              tools_4.4.0              pkgconfig_2.0.3         
@@ -3056,7 +3056,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01b.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG2</title>
@@ -3225,7 +3225,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -3243,7 +3243,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG2A</title>
@@ -3404,7 +3404,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -3422,7 +3422,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02a.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG3</title>
@@ -3599,7 +3599,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -3617,7 +3617,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/kg03.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG4</title>
@@ -3897,7 +3897,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -3915,7 +3915,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG4A</title>
@@ -4153,7 +4153,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -4171,7 +4171,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04a.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG4B</title>
@@ -4438,7 +4438,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -4456,7 +4456,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04b.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG5</title>
@@ -4728,7 +4728,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -4746,7 +4746,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG5A</title>
@@ -4996,7 +4996,7 @@ loaded via a namespace (and not attached):
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.44               
 [31] cli_3.6.2                withr_3.0.0              Rdpack_2.6              
 [34] digest_0.6.35            grid_4.4.0               cowplot_1.1.3           
-[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.23           
+[37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.6-4           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
@@ -5014,7 +5014,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05a.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 <item>
   <title>KG5B</title>
@@ -5302,7 +5302,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05b.html</guid>
-  <pubDate>Sat, 08 Jun 2024 17:25:46 GMT</pubDate>
+  <pubDate>Wed, 12 Jun 2024 17:26:06 GMT</pubDate>
 </item>
 </channel>
 </rss>

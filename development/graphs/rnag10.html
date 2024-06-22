@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Biomarker Analysis Catalog - Dev - RNAG10</title>
 <style>
@@ -1092,21 +1092,21 @@ attached base packages:
 
 other attached packages:
  [1] dplyr_1.1.4                    random.cdisc.data_0.3.15.9004 
- [3] teal.modules.hermes_0.1.6.9017 teal_0.15.2.9044              
+ [3] teal.modules.hermes_0.1.6.9017 teal_0.15.2.9045              
  [5] teal.slice_0.5.1.9005          teal.data_0.6.0.9005          
  [7] teal.code_0.5.0.9006           shiny_1.8.1.1                 
  [9] hermes_1.7.1.9002              SummarizedExperiment_1.34.0   
-[11] Biobase_2.64.0                 GenomicRanges_1.56.0          
-[13] GenomeInfoDb_1.40.0            IRanges_2.38.0                
+[11] Biobase_2.64.0                 GenomicRanges_1.56.1          
+[13] GenomeInfoDb_1.40.1            IRanges_2.38.0                
 [15] S4Vectors_0.42.0               BiocGenerics_0.50.0           
 [17] MatrixGenerics_1.16.0          matrixStats_1.3.0             
 [19] ggfortify_0.4.17               ggplot2_3.5.1                 
-[21] tern_0.9.4.9010                rtables_0.6.7.9007            
+[21] tern_0.9.5.9000                rtables_0.6.8.9000            
 [23] magrittr_2.0.3                 formatters_0.5.8.9000         
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          jsonlite_1.8.8             
-  [3] shape_1.4.6.1               MultiAssayExperiment_1.30.1
+  [3] shape_1.4.6.1               MultiAssayExperiment_1.30.2
   [5] farver_2.1.2                rmarkdown_2.27             
   [7] GlobalOptions_0.1.2         zlibbioc_1.50.0            
   [9] vctrs_0.6.5                 memoise_2.0.1              
@@ -1114,59 +1114,61 @@ loaded via a namespace (and not attached):
  [13] htmltools_0.5.8.1           S4Arrays_1.4.1             
  [15] forcats_1.0.0               progress_1.2.3             
  [17] curl_5.2.1                  broom_1.0.6                
- [19] SparseArray_1.4.5           sass_0.4.9                 
- [21] bslib_0.7.0                 fontawesome_0.5.2          
- [23] htmlwidgets_1.6.4           httr2_1.0.1                
- [25] cachem_1.1.0                teal.widgets_0.4.2.9012    
- [27] mime_0.12                   lifecycle_1.0.4            
- [29] iterators_1.0.14            pkgconfig_2.0.3            
- [31] webshot2_0.1.1              Matrix_1.7-0               
- [33] R6_2.5.1                    fastmap_1.2.0              
- [35] GenomeInfoDbData_1.2.12     rbibutils_2.2.16           
- [37] clue_0.3-65                 digest_0.6.35              
- [39] colorspace_2.1-0            shinycssloaders_1.0.0      
- [41] ps_1.7.6                    AnnotationDbi_1.66.0       
- [43] RSQLite_2.3.6               filelock_1.0.3             
- [45] labeling_0.4.3              fansi_1.0.6                
- [47] httr_1.4.7                  abind_1.4-5                
- [49] compiler_4.4.0              bit64_4.0.5                
- [51] withr_3.0.0                 doParallel_1.0.17          
- [53] backports_1.4.1             DBI_1.2.2                  
- [55] logger_0.3.0                biomaRt_2.60.0             
- [57] rappdirs_0.3.3              DelayedArray_0.30.1        
- [59] rjson_0.2.21                chromote_0.2.0             
- [61] tools_4.4.0                 httpuv_1.6.15              
- [63] glue_1.7.0                  callr_3.7.6                
- [65] promises_1.3.0              grid_4.4.0                 
- [67] checkmate_2.3.1             cluster_2.1.6              
- [69] generics_0.1.3              gtable_0.3.5               
- [71] websocket_1.4.1             tidyr_1.3.1                
- [73] hms_1.1.3                   xml2_1.3.6                 
- [75] utf8_1.2.4                  XVector_0.44.0             
- [77] ggrepel_0.9.5               foreach_1.5.2              
- [79] pillar_1.9.0                stringr_1.5.1              
- [81] later_1.3.2                 circlize_0.4.16            
- [83] splines_4.4.0               BiocFileCache_2.12.0       
- [85] lattice_0.22-6              survival_3.6-4             
- [87] bit_4.0.5                   tidyselect_1.2.1           
- [89] ComplexHeatmap_2.20.0       Biostrings_2.72.0          
- [91] knitr_1.46                  gridExtra_2.3              
- [93] teal.logger_0.2.0.9005      xfun_0.44                  
- [95] stringi_1.8.4               UCSC.utils_1.0.0           
- [97] yaml_2.3.8                  shinyWidgets_0.8.6         
- [99] evaluate_0.23               codetools_0.2-20           
-[101] tibble_3.2.1                cli_3.6.2                  
-[103] xtable_1.8-4                Rdpack_2.6                 
-[105] jquerylib_0.1.4             processx_3.8.4             
-[107] munsell_0.5.1               teal.reporter_0.3.1.9010   
-[109] Rcpp_1.0.12                 dbplyr_2.5.0               
-[111] png_0.1-8                   parallel_4.4.0             
-[113] assertthat_0.2.1            blob_1.2.4                 
-[115] prettyunits_1.2.0           scales_1.3.0               
-[117] purrr_1.0.2                 crayon_1.5.2               
-[119] GetoptLong_1.0.5            rlang_1.1.3                
-[121] formatR_1.14                cowplot_1.1.3              
-[123] KEGGREST_1.44.0             shinyjs_2.1.0              </code></pre>
+ [19] SparseArray_1.4.8           sass_0.4.9                 
+ [21] parallelly_1.37.1           bslib_0.7.0                
+ [23] fontawesome_0.5.2           htmlwidgets_1.6.4          
+ [25] httr2_1.0.1                 cachem_1.1.0               
+ [27] teal.widgets_0.4.2.9012     mime_0.12                  
+ [29] lifecycle_1.0.4             iterators_1.0.14           
+ [31] pkgconfig_2.0.3             webshot2_0.1.1             
+ [33] Matrix_1.7-0                R6_2.5.1                   
+ [35] fastmap_1.2.0               future_1.33.2              
+ [37] GenomeInfoDbData_1.2.12     rbibutils_2.2.16           
+ [39] clue_0.3-65                 digest_0.6.35              
+ [41] colorspace_2.1-0            shinycssloaders_1.0.0      
+ [43] ps_1.7.6                    AnnotationDbi_1.66.0       
+ [45] RSQLite_2.3.7               filelock_1.0.3             
+ [47] labeling_0.4.3              fansi_1.0.6                
+ [49] httr_1.4.7                  abind_1.4-5                
+ [51] compiler_4.4.0              bit64_4.0.5                
+ [53] withr_3.0.0                 doParallel_1.0.17          
+ [55] backports_1.5.0             DBI_1.2.3                  
+ [57] logger_0.3.0                biomaRt_2.60.0             
+ [59] rappdirs_0.3.3              DelayedArray_0.30.1        
+ [61] rjson_0.2.21                chromote_0.2.0             
+ [63] tools_4.4.0                 httpuv_1.6.15              
+ [65] glue_1.7.0                  callr_3.7.6                
+ [67] promises_1.3.0              grid_4.4.0                 
+ [69] checkmate_2.3.1             cluster_2.1.6              
+ [71] generics_0.1.3              gtable_0.3.5               
+ [73] websocket_1.4.1             tidyr_1.3.1                
+ [75] hms_1.1.3                   xml2_1.3.6                 
+ [77] utf8_1.2.4                  XVector_0.44.0             
+ [79] ggrepel_0.9.5               foreach_1.5.2              
+ [81] pillar_1.9.0                stringr_1.5.1              
+ [83] later_1.3.2                 circlize_0.4.16            
+ [85] splines_4.4.0               BiocFileCache_2.12.0       
+ [87] lattice_0.22-6              survival_3.7-0             
+ [89] bit_4.0.5                   tidyselect_1.2.1           
+ [91] ComplexHeatmap_2.20.0       Biostrings_2.72.1          
+ [93] knitr_1.47                  gridExtra_2.3              
+ [95] teal.logger_0.2.0.9005      xfun_0.45                  
+ [97] stringi_1.8.4               UCSC.utils_1.0.0           
+ [99] yaml_2.3.8                  shinyWidgets_0.8.6         
+[101] evaluate_0.24.0             codetools_0.2-20           
+[103] tibble_3.2.1                cli_3.6.3                  
+[105] xtable_1.8-4                Rdpack_2.6                 
+[107] jquerylib_0.1.4             processx_3.8.4             
+[109] munsell_0.5.1               teal.reporter_0.3.1.9010   
+[111] Rcpp_1.0.12                 globals_0.16.3             
+[113] dbplyr_2.5.0                png_0.1-8                  
+[115] parallel_4.4.0              assertthat_0.2.1           
+[117] blob_1.2.4                  prettyunits_1.2.0          
+[119] listenv_0.9.1               scales_1.3.0               
+[121] purrr_1.0.2                 crayon_1.5.3               
+[123] GetoptLong_1.0.5            rlang_1.1.4                
+[125] formatR_1.14                cowplot_1.1.3              
+[127] KEGGREST_1.44.1             shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>

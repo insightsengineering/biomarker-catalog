@@ -22,7 +22,7 @@ bep2_groups <- list(
 lyt <- basic_table() %>%
   split_cols_by("ARM") %>%
   split_cols_by_groups("BEP02FL", bep2_groups) %>%
-  summarize_vars(c("AGE", "SEX")) %>%
+  analyze_vars(c("AGE", "SEX")) %>%
   add_colcounts()
 
 build_table(lyt, adsl)

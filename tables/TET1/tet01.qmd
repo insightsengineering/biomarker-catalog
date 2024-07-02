@@ -20,14 +20,14 @@ lyt <- basic_table() %>%
     ref_group = "CTRL"
   ) %>%
   add_colcounts() %>%
-  summarize_vars(
+  analyze_vars(
     vars = "is_event",
     .stats = "count_fraction",
     .labels = c(count_fraction = "Patients with event (%)"),
     nested = FALSE,
     show_labels = "hidden"
   ) %>%
-  summarize_vars(
+  analyze_vars(
     vars = "is_not_event",
     .stats = "count_fraction",
     .labels = c(count_fraction = "Patients without event (%)"),

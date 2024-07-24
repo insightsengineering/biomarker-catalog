@@ -16,8 +16,8 @@
 <height>166</height>
 <width>144</width>
 </image>
-<generator>quarto-1.5.53</generator>
-<lastBuildDate>Sat, 20 Jul 2024 17:29:26 GMT</lastBuildDate>
+<generator>quarto-1.5.55</generator>
+<lastBuildDate>Wed, 24 Jul 2024 17:27:09 GMT</lastBuildDate>
 <item>
   <title>AG1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</link>
@@ -447,7 +447,7 @@ font-style: inherit;">"Page 6 of 129"</span></span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -483,8 +483,8 @@ loaded via a namespace (and not attached):
 [13] purrr_1.0.2              fansi_1.0.6              scales_1.3.0            
 [16] codetools_0.2-20         Rdpack_2.6               cli_3.6.3               
 [19] ggpp_0.5.8-1             rlang_1.1.4              rbibutils_2.2.16        
-[22] munsell_0.5.1            splines_4.4.0            withr_3.0.0             
-[25] yaml_2.3.9               tools_4.4.0              polynom_1.4-1           
+[22] munsell_0.5.1            splines_4.4.1            withr_3.0.0             
+[25] yaml_2.3.9               tools_4.4.1              polynom_1.4-1           
 [28] checkmate_2.3.1          colorspace_2.1-0         forcats_1.0.0           
 [31] ggstats_0.6.0            broom_1.0.6              vctrs_0.6.5             
 [34] R6_2.5.1                 lifecycle_1.0.4          stringr_1.5.1           
@@ -493,7 +493,7 @@ loaded via a namespace (and not attached):
 [43] xfun_0.46                tibble_3.2.1             tidyselect_1.2.1        
 [46] knitr_1.48               farver_2.1.2             htmltools_0.5.8.1       
 [49] labeling_0.4.3           rmarkdown_2.27           random.cdisc.data_0.3.15
-[52] compiler_4.4.0          </code></pre>
+[52] compiler_4.4.1          </code></pre>
 </div>
 </div>
 </div>
@@ -507,7 +507,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>AG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG1</title>
@@ -778,7 +778,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG1A</title>
@@ -1099,7 +1099,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG1B</title>
@@ -1291,7 +1291,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG2</title>
@@ -1551,7 +1551,7 @@ font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -1581,14 +1581,14 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4               generics_0.1.3           tidyr_1.3.1             
  [4] EnvStats_2.8.1           stringi_1.8.4            lattice_0.22-6          
- [7] digest_0.6.36            evaluate_0.24.0          grid_4.4.0              
+ [7] digest_0.6.36            evaluate_0.24.0          grid_4.4.1              
 [10] fastmap_1.2.0            jsonlite_1.8.8           Matrix_1.7-0            
 [13] backports_1.5.0          survival_3.7-0           purrr_1.0.2             
 [16] fansi_1.0.6              scales_1.3.0             codetools_0.2-20        
 [19] Rdpack_2.6               cli_3.6.3                ggpp_0.5.8-1            
 [22] rlang_1.1.4              rbibutils_2.2.16         munsell_0.5.1           
-[25] splines_4.4.0            withr_3.0.0              yaml_2.3.9              
-[28] tools_4.4.0              polynom_1.4-1            checkmate_2.3.1         
+[25] splines_4.4.1            withr_3.0.0              yaml_2.3.9              
+[28] tools_4.4.1              polynom_1.4-1            checkmate_2.3.1         
 [31] colorspace_2.1-0         forcats_1.0.0            ggstats_0.6.0           
 [34] broom_1.0.6              vctrs_0.6.5              R6_2.5.1                
 [37] lifecycle_1.0.4          stringr_1.5.1            htmlwidgets_1.6.4       
@@ -1596,7 +1596,7 @@ loaded via a namespace (and not attached):
 [43] gtable_0.3.5             glue_1.7.0               xfun_0.46               
 [46] tibble_3.2.1             tidyselect_1.2.1         knitr_1.48              
 [49] farver_2.1.2             htmltools_0.5.8.1        labeling_0.4.3          
-[52] rmarkdown_2.27           random.cdisc.data_0.3.15 compiler_4.4.0          </code></pre>
+[52] rmarkdown_2.27           random.cdisc.data_0.3.15 compiler_4.4.1          </code></pre>
 </div>
 </div>
 </div>
@@ -1610,7 +1610,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG3</title>
@@ -1974,7 +1974,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG3A</title>
@@ -2192,7 +2192,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>DG4</title>
@@ -2317,7 +2317,7 @@ font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -2347,14 +2347,14 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4               generics_0.1.3           tidyr_1.3.1             
  [4] EnvStats_2.8.1           stringi_1.8.4            lattice_0.22-6          
- [7] digest_0.6.36            evaluate_0.24.0          grid_4.4.0              
+ [7] digest_0.6.36            evaluate_0.24.0          grid_4.4.1              
 [10] fastmap_1.2.0            jsonlite_1.8.8           Matrix_1.7-0            
 [13] backports_1.5.0          survival_3.7-0           purrr_1.0.2             
 [16] fansi_1.0.6              scales_1.3.0             codetools_0.2-20        
 [19] Rdpack_2.6               cli_3.6.3                ggpp_0.5.8-1            
 [22] rlang_1.1.4              rbibutils_2.2.16         munsell_0.5.1           
-[25] splines_4.4.0            withr_3.0.0              yaml_2.3.9              
-[28] tools_4.4.0              polynom_1.4-1            checkmate_2.3.1         
+[25] splines_4.4.1            withr_3.0.0              yaml_2.3.9              
+[28] tools_4.4.1              polynom_1.4-1            checkmate_2.3.1         
 [31] colorspace_2.1-0         forcats_1.0.0            ggstats_0.6.0           
 [34] broom_1.0.6              vctrs_0.6.5              R6_2.5.1                
 [37] lifecycle_1.0.4          stringr_1.5.1            htmlwidgets_1.6.4       
@@ -2362,7 +2362,7 @@ loaded via a namespace (and not attached):
 [43] gtable_0.3.5             glue_1.7.0               xfun_0.46               
 [46] tibble_3.2.1             tidyselect_1.2.1         knitr_1.48              
 [49] farver_2.1.2             htmltools_0.5.8.1        labeling_0.4.3          
-[52] rmarkdown_2.27           random.cdisc.data_0.3.15 compiler_4.4.0          </code></pre>
+[52] rmarkdown_2.27           random.cdisc.data_0.3.15 compiler_4.4.1          </code></pre>
 </div>
 </div>
 </div>
@@ -2376,7 +2376,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG1</title>
@@ -2526,7 +2526,7 @@ font-style: inherit;">0.85</span></span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -2555,8 +2555,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] R6_2.5.1                 labeling_0.4.3           generics_0.1.3          
 [16] knitr_1.48               forcats_1.0.0            rbibutils_2.2.16        
@@ -2569,7 +2569,7 @@ loaded via a namespace (and not attached):
 [37] evaluate_0.24.0          glue_1.7.0               farver_2.1.2            
 [40] codetools_0.2-20         survival_3.7-0           random.cdisc.data_0.3.15
 [43] fansi_1.0.6              colorspace_2.1-0         rmarkdown_2.27          
-[46] purrr_1.0.2              tools_4.4.0              pkgconfig_2.0.3         
+[46] purrr_1.0.2              tools_4.4.1              pkgconfig_2.0.3         
 [49] htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
@@ -2584,7 +2584,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG1A</title>
@@ -2721,7 +2721,7 @@ font-style: inherit;">0.85</span></span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -2750,8 +2750,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] R6_2.5.1                 labeling_0.4.3           generics_0.1.3          
 [16] knitr_1.48               forcats_1.0.0            rbibutils_2.2.16        
@@ -2764,7 +2764,7 @@ loaded via a namespace (and not attached):
 [37] evaluate_0.24.0          glue_1.7.0               farver_2.1.2            
 [40] codetools_0.2-20         survival_3.7-0           random.cdisc.data_0.3.15
 [43] fansi_1.0.6              colorspace_2.1-0         rmarkdown_2.27          
-[46] purrr_1.0.2              tools_4.4.0              pkgconfig_2.0.3         
+[46] purrr_1.0.2              tools_4.4.1              pkgconfig_2.0.3         
 [49] htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
@@ -2779,7 +2779,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01a.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG1B</title>
@@ -2998,7 +2998,7 @@ font-style: inherit;">grid.draw</span>(g)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -3027,8 +3027,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] R6_2.5.1                 labeling_0.4.3           generics_0.1.3          
 [16] knitr_1.48               forcats_1.0.0            rbibutils_2.2.16        
@@ -3041,7 +3041,7 @@ loaded via a namespace (and not attached):
 [37] evaluate_0.24.0          glue_1.7.0               farver_2.1.2            
 [40] codetools_0.2-20         survival_3.7-0           random.cdisc.data_0.3.15
 [43] fansi_1.0.6              colorspace_2.1-0         rmarkdown_2.27          
-[46] purrr_1.0.2              tools_4.4.0              pkgconfig_2.0.3         
+[46] purrr_1.0.2              tools_4.4.1              pkgconfig_2.0.3         
 [49] htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
@@ -3056,7 +3056,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01b.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG2</title>
@@ -3186,7 +3186,7 @@ font-style: inherit;">TRUE</span></span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -3214,8 +3214,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -3224,12 +3224,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -3243,7 +3243,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG2A</title>
@@ -3365,7 +3365,7 @@ font-style: inherit;">5</span></span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -3393,8 +3393,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -3403,12 +3403,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -3422,7 +3422,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02a.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG3</title>
@@ -3560,7 +3560,7 @@ font-style: inherit;">TRUE</span></span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -3588,8 +3588,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -3598,12 +3598,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -3617,7 +3617,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/kg03.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG4</title>
@@ -3858,7 +3858,7 @@ font-style: inherit;">2</span>)</span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -3886,8 +3886,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -3896,12 +3896,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -3915,7 +3915,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG4A</title>
@@ -4114,7 +4114,7 @@ font-style: inherit;">3</span>)</span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -4142,8 +4142,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -4152,12 +4152,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -4171,7 +4171,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04a.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG4B</title>
@@ -4399,7 +4399,7 @@ font-style: inherit;">2</span>)</span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -4427,8 +4427,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -4437,12 +4437,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -4456,7 +4456,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04b.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG5</title>
@@ -4689,7 +4689,7 @@ font-style: inherit;">2</span>)</span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -4717,8 +4717,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -4727,12 +4727,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -4746,7 +4746,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG5A</title>
@@ -4957,7 +4957,7 @@ font-style: inherit;">2</span>)</span>
 background-color: null;
 font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
+<pre><code>R version 4.4.1 (2024-06-14)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.4 LTS
 
@@ -4985,8 +4985,8 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0             gtable_0.3.5             jsonlite_1.8.8          
- [4] compiler_4.4.0           tidyselect_1.2.1         stringr_1.5.1           
- [7] tidyr_1.3.1              splines_4.4.0            scales_1.3.0            
+ [4] compiler_4.4.1           tidyselect_1.2.1         stringr_1.5.1           
+ [7] tidyr_1.3.1              splines_4.4.1            scales_1.3.0            
 [10] yaml_2.3.9               fastmap_1.2.0            lattice_0.22-6          
 [13] ggplot2_3.5.1            R6_2.5.1                 labeling_0.4.3          
 [16] generics_0.1.3           knitr_1.48               forcats_1.0.0           
@@ -4995,12 +4995,12 @@ loaded via a namespace (and not attached):
 [25] pillar_1.9.0             rlang_1.1.4              utf8_1.2.4              
 [28] stringi_1.8.4            broom_1.0.6              xfun_0.46               
 [31] cli_3.6.3                withr_3.0.0              Rdpack_2.6              
-[34] digest_0.6.36            grid_4.4.0               cowplot_1.1.3           
+[34] digest_0.6.36            grid_4.4.1               cowplot_1.1.3           
 [37] lifecycle_1.0.4          vctrs_0.6.5              evaluate_0.24.0         
 [40] glue_1.7.0               farver_2.1.2             codetools_0.2-20        
 [43] survival_3.7-0           random.cdisc.data_0.3.15 fansi_1.0.6             
 [46] colorspace_2.1-0         rmarkdown_2.27           purrr_1.0.2             
-[49] tools_4.4.0              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
+[49] tools_4.4.1              pkgconfig_2.0.3          htmltools_0.5.8.1       </code></pre>
 </div>
 </div>
 </div>
@@ -5014,7 +5014,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05a.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 <item>
   <title>KG5B</title>
@@ -5302,7 +5302,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05b.html</guid>
-  <pubDate>Sat, 20 Jul 2024 17:29:26 GMT</pubDate>
+  <pubDate>Wed, 24 Jul 2024 17:27:09 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -17,7 +17,7 @@
 <width>144</width>
 </image>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Wed, 07 Aug 2024 17:35:47 GMT</lastBuildDate>
+<lastBuildDate>Sat, 10 Aug 2024 17:34:08 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
@@ -172,7 +172,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -213,7 +213,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -450,7 +450,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -717,7 +717,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -885,7 +885,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -926,7 +926,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -1109,7 +1109,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -1149,7 +1149,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1344,7 +1344,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -1384,7 +1384,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1559,7 +1559,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -1599,7 +1599,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1807,7 +1807,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -1847,7 +1847,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -2009,7 +2009,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -2049,7 +2049,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -2249,7 +2249,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2567,7 +2567,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -2607,7 +2607,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2981,7 +2981,7 @@ attached base packages:
 
 other attached packages:
 [1] dplyr_1.1.4           tern_0.9.5.9012       rtables_0.6.9.9005   
-[4] magrittr_2.0.3        formatters_0.5.8.9002
+[4] magrittr_2.0.3        formatters_0.5.8.9003
 
 loaded via a namespace (and not attached):
  [1] Matrix_1.7-0                  gtable_0.3.5                 
@@ -3021,7 +3021,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Wed, 07 Aug 2024 17:35:47 GMT</pubDate>
+  <pubDate>Sat, 10 Aug 2024 17:34:08 GMT</pubDate>
 </item>
 </channel>
 </rss>

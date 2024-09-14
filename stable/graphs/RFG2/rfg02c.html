@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>RFG2C – Biomarker Analysis Catalog - Stable</title>
 <style>
@@ -950,13 +950,13 @@ cookieconsent.run({
 <li>The <code>extract_rsp_subgroups()</code> and <code>tabulate_rsp_subgroups()</code> functions only allow specification of a single treatment arm variable, while the <code>extract_rsp_biomarkers()</code> and <code>tabulate_rsp_biomarkers()</code> allow to look at multiple continuous biomarker variables at once.</li>
 <li>In addition to the treatment arms, the use of <code>extract_rsp_subgroups()</code> and <code>tabulate_rsp_subgroups()</code> functions can be extended to other binary variables. For example, we could define the binarized <code>ARM</code> variable as <code>AGE&gt;=65</code> vs.&nbsp;<code>AGE&lt;65</code> and then look at the odds ratios across subgroups. For the <code>extract_rsp_biomarkers()</code> and <code>tabulate_rsp_biomarkers()</code> functions, we could use the original continuous biomarker variable <code>AGE</code>, and then look at the estimated effect across subgroups.</li>
 </ul>
-<p>Similarly like in <a href="../../graphs/RFG1/rfg01.html">RFG1</a>, we will use the <code>synthetic_cdisc_data$adrs</code> data set from the <code>scda</code> package. Here we just filter for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline, and define a new variable <code>COMPRESP</code> to include complete responses only.</p>
+<p>Similarly like in <a href="../../graphs/RFG1/rfg01.html">RFG1</a>, we will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package. Here we just filter for the Best Confirmed Overall Response by Investigator and patients with measurable disease at baseline, and define a new variable <code>COMPRESP</code> to include complete responses only.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tern)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(hermes)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"latest"</span>)<span class="sc">$</span>adrs</span>
+<span id="cb1-5"><a href="#cb1-5"></a>adrs <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadrs</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
 <span id="cb1-7"><a href="#cb1-7"></a>adrs_f <span class="ot">&lt;-</span> adrs <span class="sc">%&gt;%</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
@@ -977,10 +977,53 @@ cookieconsent.run({
 <span id="cb2-7"><a href="#cb2-7"></a>    <span class="at">strat =</span> <span class="fu">c</span>(<span class="st">"STRATA1"</span>, <span class="st">"STRATA2"</span>)</span>
 <span id="cb2-8"><a href="#cb2-8"></a>  ),</span>
 <span id="cb2-9"><a href="#cb2-9"></a>  <span class="at">data =</span> adrs_f</span>
-<span id="cb2-10"><a href="#cb2-10"></a>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a>result <span class="ot">&lt;-</span> <span class="fu">tabulate_rsp_biomarkers</span>(df, <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot"</span>, <span class="st">"n_rsp"</span>, <span class="st">"prop"</span>, <span class="st">"or"</span>, <span class="st">"ci"</span>))</span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="fu">g_forest</span>(result, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">0.7</span>, <span class="fl">1.4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-10"><a href="#cb2-10"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning in extract_rsp_biomarkers(variables = list(rsp = "COMPRESP", biomarkers = c("BMRKR1", : Warning: the `strat` element name of the `variables` list argument to `extract_rsp_biomarkers() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_logistic_mult_cont_df(variables = variables, data = data, control = control): Warning: the `strat` element name of the `variables` list argument to `h_logistic_mult_cont_df() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.
+Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_logistic_mult_cont_df(variables = variables, data = grp$df, : Warning: the `strat` element name of the `variables` list argument to `h_logistic_mult_cont_df() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.
+Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_logistic_mult_cont_df(variables = variables, data = grp$df, : Warning: the `strat` element name of the `variables` list argument to `h_logistic_mult_cont_df() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.
+Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_logistic_mult_cont_df(variables = variables, data = grp$df, : Warning: the `strat` element name of the `variables` list argument to `h_logistic_mult_cont_df() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.
+Warning in h_rsp_to_logistic_variables(variables, bm): Warning: the `strat` element name of the `variables` list argument to `h_rsp_to_logistic_variables() was deprecated in tern 0.9.3.
+  Please use the name `strata` instead of `strat` in the `variables` argument.</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>result <span class="ot">&lt;-</span> <span class="fu">tabulate_rsp_biomarkers</span>(df, <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"n_tot"</span>, <span class="st">"n_rsp"</span>, <span class="st">"prop"</span>, <span class="st">"or"</span>, <span class="st">"ci"</span>))</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">g_forest</span>(result, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">0.7</span>, <span class="fl">1.4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="rfg02c_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -991,11 +1034,11 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1017,66 +1060,67 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] hermes_1.7.1                SummarizedExperiment_1.32.0
- [3] Biobase_2.62.0              GenomicRanges_1.54.1       
- [5] GenomeInfoDb_1.38.5         IRanges_2.36.0             
- [7] S4Vectors_0.40.2            BiocGenerics_0.48.1        
- [9] MatrixGenerics_1.14.0       matrixStats_1.2.0          
-[11] ggfortify_0.4.16            ggplot2_3.4.4              
-[13] dplyr_1.1.4                 tern_0.9.3                 
-[15] rtables_0.6.6               magrittr_2.0.3             
-[17] formatters_0.5.5           
+ [1] hermes_1.8.1                SummarizedExperiment_1.34.0
+ [3] Biobase_2.64.0              GenomicRanges_1.56.1       
+ [5] GenomeInfoDb_1.40.1         IRanges_2.38.1             
+ [7] S4Vectors_0.42.1            BiocGenerics_0.50.0        
+ [9] MatrixGenerics_1.16.0       matrixStats_1.4.1          
+[11] ggfortify_0.4.17            ggplot2_3.5.1              
+[13] dplyr_1.1.4                 tern_0.9.5                 
+[15] rtables_0.6.9               magrittr_2.0.3             
+[17] formatters_0.5.9           
 
 loaded via a namespace (and not attached):
- [1] Rdpack_2.6                  DBI_1.2.1                  
- [3] bitops_1.0-7                gridExtra_2.3              
- [5] biomaRt_2.58.0              rlang_1.1.3                
- [7] clue_0.3-65                 GetoptLong_1.0.5           
- [9] compiler_4.3.2              RSQLite_2.3.5              
-[11] png_0.1-8                   vctrs_0.6.5                
-[13] stringr_1.5.1               pkgconfig_2.0.3            
-[15] shape_1.4.6                 crayon_1.5.2               
-[17] fastmap_1.1.1               dbplyr_2.4.0               
-[19] backports_1.4.1             XVector_0.42.0             
-[21] utf8_1.2.4                  rmarkdown_2.25             
-[23] purrr_1.0.2                 bit_4.0.5                  
-[25] xfun_0.42                   MultiAssayExperiment_1.28.0
-[27] scda_0.1.6                  zlibbioc_1.48.0            
-[29] cachem_1.0.8                jsonlite_1.8.8             
-[31] progress_1.2.3              blob_1.2.4                 
-[33] DelayedArray_0.28.0         prettyunits_1.2.0          
-[35] broom_1.0.5                 parallel_4.3.2             
-[37] cluster_2.1.6               R6_2.5.1                   
-[39] stringi_1.8.3               RColorBrewer_1.1-3         
-[41] Rcpp_1.0.12                 assertthat_0.2.1           
-[43] iterators_1.0.14            knitr_1.45                 
-[45] Matrix_1.6-5                splines_4.3.2              
-[47] tidyselect_1.2.0            abind_1.4-5                
-[49] yaml_2.3.8                  doParallel_1.0.17          
-[51] codetools_0.2-19            curl_5.2.0                 
-[53] lattice_0.22-5              tibble_3.2.1               
-[55] withr_3.0.0                 KEGGREST_1.42.0            
-[57] evaluate_0.23               survival_3.5-7             
-[59] BiocFileCache_2.10.1        xml2_1.3.6                 
-[61] Biostrings_2.70.1           circlize_0.4.15            
-[63] filelock_1.0.3              pillar_1.9.0               
-[65] checkmate_2.3.1             foreach_1.5.2              
-[67] generics_0.1.3              RCurl_1.98-1.14            
-[69] hms_1.1.3                   munsell_0.5.0              
-[71] scales_1.3.0                glue_1.7.0                 
-[73] tools_4.3.2                 forcats_1.0.0              
-[75] XML_3.99-0.16.1             grid_4.3.2                 
-[77] tidyr_1.3.1                 rbibutils_2.2.16           
-[79] AnnotationDbi_1.64.1        colorspace_2.1-0           
-[81] GenomeInfoDbData_1.2.11     cli_3.6.2                  
-[83] rappdirs_0.3.3              fansi_1.0.6                
-[85] S4Arrays_1.2.0              ComplexHeatmap_2.18.0      
-[87] gtable_0.3.4                digest_0.6.34              
-[89] SparseArray_1.2.3           ggrepel_0.9.5              
-[91] rjson_0.2.21                htmlwidgets_1.6.4          
-[93] memoise_2.0.1               htmltools_0.5.7            
-[95] lifecycle_1.0.4             httr_1.4.7                 
-[97] GlobalOptions_0.1.2         bit64_4.0.5                </code></pre>
+  [1] Rdpack_2.6.1                DBI_1.2.3                  
+  [3] httr2_1.0.4                 gridExtra_2.3              
+  [5] biomaRt_2.60.1              rlang_1.1.4                
+  [7] clue_0.3-65                 GetoptLong_1.0.5           
+  [9] compiler_4.4.1              RSQLite_2.3.7              
+ [11] png_0.1-8                   vctrs_0.6.5                
+ [13] stringr_1.5.1               pkgconfig_2.0.3            
+ [15] shape_1.4.6.1               crayon_1.5.3               
+ [17] fastmap_1.2.0               dbplyr_2.5.0               
+ [19] backports_1.5.0             XVector_0.44.0             
+ [21] labeling_0.4.3              utf8_1.2.4                 
+ [23] rmarkdown_2.28              UCSC.utils_1.0.0           
+ [25] purrr_1.0.2                 bit_4.0.5                  
+ [27] xfun_0.47                   MultiAssayExperiment_1.30.3
+ [29] zlibbioc_1.50.0             cachem_1.1.0               
+ [31] jsonlite_1.8.8              progress_1.2.3             
+ [33] blob_1.2.4                  DelayedArray_0.30.1        
+ [35] prettyunits_1.2.0           broom_1.0.6                
+ [37] parallel_4.4.1              cluster_2.1.6              
+ [39] R6_2.5.1                    stringi_1.8.4              
+ [41] RColorBrewer_1.1-3          Rcpp_1.0.13                
+ [43] assertthat_0.2.1            iterators_1.0.14           
+ [45] knitr_1.48                  Matrix_1.7-0               
+ [47] splines_4.4.1               tidyselect_1.2.1           
+ [49] abind_1.4-8                 yaml_2.3.10                
+ [51] doParallel_1.0.17           codetools_0.2-20           
+ [53] curl_5.2.2                  lattice_0.22-6             
+ [55] tibble_3.2.1                withr_3.0.1                
+ [57] KEGGREST_1.44.1             evaluate_0.24.0            
+ [59] survival_3.7-0              BiocFileCache_2.12.0       
+ [61] xml2_1.3.6                  circlize_0.4.16            
+ [63] Biostrings_2.72.1           filelock_1.0.3             
+ [65] pillar_1.9.0                checkmate_2.3.2            
+ [67] foreach_1.5.2               generics_0.1.3             
+ [69] hms_1.1.3                   munsell_0.5.1              
+ [71] scales_1.3.0                glue_1.7.0                 
+ [73] tools_4.4.1                 forcats_1.0.0              
+ [75] cowplot_1.1.3               grid_4.4.1                 
+ [77] tidyr_1.3.1                 rbibutils_2.2.16           
+ [79] AnnotationDbi_1.66.0        colorspace_2.1-1           
+ [81] random.cdisc.data_0.3.15    GenomeInfoDbData_1.2.12    
+ [83] cli_3.6.3                   rappdirs_0.3.3             
+ [85] fansi_1.0.6                 S4Arrays_1.4.1             
+ [87] ComplexHeatmap_2.20.0       gtable_0.3.5               
+ [89] digest_0.6.37               SparseArray_1.4.8          
+ [91] ggrepel_0.9.6               farver_2.1.2               
+ [93] rjson_0.2.22                htmlwidgets_1.6.4          
+ [95] memoise_2.0.1               htmltools_0.5.8.1          
+ [97] lifecycle_1.0.4             httr_1.4.7                 
+ [99] GlobalOptions_0.1.2         bit64_4.0.5                </code></pre>
 </div>
 </div>
 </div>
@@ -1713,39 +1757,39 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">---</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="an">title:</span><span class="co"> RFG2C</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="an">subtitle:</span><span class="co"> Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups (Multiple Continuous Biomarkers with Stratification)</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="an">categories:</span><span class="co"> [RFG]</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co">---</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a>------------------------------------------------------------------------</span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a>::: panel-tabset</span>
-<span id="cb5-10"><a href="#cb5-10"></a>{{&lt; include setup.qmd &gt;}}</span>
-<span id="cb5-11"><a href="#cb5-11"></a></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="fu">## Plot</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a></span>
-<span id="cb5-14"><a href="#cb5-14"></a>Finally we can also specify stratification variables with the <span class="in">`strat`</span> variable element, which leads to the use of conditional logistic regression models.</span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="in">```{r, fig.width = 15}</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="in">df &lt;- extract_rsp_biomarkers(</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="in">  variables = list(</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="in">    rsp = "COMPRESP",</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a><span class="in">    biomarkers = c("BMRKR1", "AGE"),</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="in">    covariates = "SEX",</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="in">    subgroups = "BMRKR2",</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a><span class="in">    strat = c("STRATA1", "STRATA2")</span></span>
-<span id="cb5-24"><a href="#cb5-24"></a><span class="in">  ),</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a><span class="in">  data = adrs_f</span></span>
-<span id="cb5-26"><a href="#cb5-26"></a><span class="in">)</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a></span>
-<span id="cb5-28"><a href="#cb5-28"></a><span class="in">result &lt;- tabulate_rsp_biomarkers(df, vars = c("n_tot", "n_rsp", "prop", "or", "ci"))</span></span>
-<span id="cb5-29"><a href="#cb5-29"></a><span class="in">g_forest(result, xlim = c(0.7, 1.4))</span></span>
-<span id="cb5-30"><a href="#cb5-30"></a><span class="in">```</span></span>
-<span id="cb5-31"><a href="#cb5-31"></a></span>
-<span id="cb5-32"><a href="#cb5-32"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
-<span id="cb5-33"><a href="#cb5-33"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="an">title:</span><span class="co"> RFG2C</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="an">subtitle:</span><span class="co"> Response Forest Graphs for Comparing Continuous Biomarker Effects Across Subgroups (Multiple Continuous Biomarkers with Stratification)</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="an">categories:</span><span class="co"> [RFG]</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="co">---</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a></span>
+<span id="cb15-7"><a href="#cb15-7"></a>------------------------------------------------------------------------</span>
+<span id="cb15-8"><a href="#cb15-8"></a></span>
+<span id="cb15-9"><a href="#cb15-9"></a>::: panel-tabset</span>
+<span id="cb15-10"><a href="#cb15-10"></a>{{&lt; include setup.qmd &gt;}}</span>
+<span id="cb15-11"><a href="#cb15-11"></a></span>
+<span id="cb15-12"><a href="#cb15-12"></a><span class="fu">## Plot</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a></span>
+<span id="cb15-14"><a href="#cb15-14"></a>Finally we can also specify stratification variables with the <span class="in">`strat`</span> variable element, which leads to the use of conditional logistic regression models.</span>
+<span id="cb15-15"><a href="#cb15-15"></a></span>
+<span id="cb15-16"><a href="#cb15-16"></a><span class="in">```{r, fig.width = 15}</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a><span class="in">df &lt;- extract_rsp_biomarkers(</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a><span class="in">  variables = list(</span></span>
+<span id="cb15-19"><a href="#cb15-19"></a><span class="in">    rsp = "COMPRESP",</span></span>
+<span id="cb15-20"><a href="#cb15-20"></a><span class="in">    biomarkers = c("BMRKR1", "AGE"),</span></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="in">    covariates = "SEX",</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a><span class="in">    subgroups = "BMRKR2",</span></span>
+<span id="cb15-23"><a href="#cb15-23"></a><span class="in">    strat = c("STRATA1", "STRATA2")</span></span>
+<span id="cb15-24"><a href="#cb15-24"></a><span class="in">  ),</span></span>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="in">  data = adrs_f</span></span>
+<span id="cb15-26"><a href="#cb15-26"></a><span class="in">)</span></span>
+<span id="cb15-27"><a href="#cb15-27"></a></span>
+<span id="cb15-28"><a href="#cb15-28"></a><span class="in">result &lt;- tabulate_rsp_biomarkers(df, vars = c("n_tot", "n_rsp", "prop", "or", "ci"))</span></span>
+<span id="cb15-29"><a href="#cb15-29"></a><span class="in">g_forest(result, xlim = c(0.7, 1.4))</span></span>
+<span id="cb15-30"><a href="#cb15-30"></a><span class="in">```</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a></span>
+<span id="cb15-32"><a href="#cb15-32"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb15-33"><a href="#cb15-33"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">

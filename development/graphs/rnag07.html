@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>RNAG7 – Biomarker Analysis Catalog - Dev</title>
 <style>
@@ -1077,15 +1077,10 @@ cookieconsent.run({
 <span id="cb8-15"><a href="#cb8-15"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
 <span id="cb8-16"><a href="#cb8-16"></a>    )</span>
 <span id="cb8-17"><a href="#cb8-17"></a>  )</span>
-<span id="cb8-18"><a href="#cb8-18"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2024-02-23 15:47:26.2982 pid:10889 token:[] teal.modules.hermes Initializing tm_g_boxplot</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2024-02-23 15:47:27.8947 pid:10889 token:[0f2d3bf2] teal Initializing reporter_previewer_module</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
+<span id="cb8-18"><a href="#cb8-18"></a>)</span>
+<span id="cb8-19"><a href="#cb8-19"></a></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Warning: 'experiments' dropped; see 'drops()'</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1098,11 +1093,11 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1124,83 +1119,84 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.6.9003 teal_0.15.1.9000              
- [3] teal.slice_0.5.0.9003          teal.data_0.5.0.9000          
- [5] teal.code_0.5.0.9003           shiny_1.8.0                   
- [7] hermes_1.7.1.9000              SummarizedExperiment_1.32.0   
- [9] Biobase_2.62.0                 GenomicRanges_1.54.1          
-[11] GenomeInfoDb_1.38.5            IRanges_2.36.0                
-[13] S4Vectors_0.40.2               BiocGenerics_0.48.1           
-[15] MatrixGenerics_1.14.0          matrixStats_1.2.0             
-[17] ggfortify_0.4.16               ggplot2_3.4.4                 
+ [1] teal.modules.hermes_0.1.6.9020 teal_0.15.2.9061              
+ [3] teal.slice_0.5.1.9011          teal.data_0.6.0.9010          
+ [5] teal.code_0.5.0.9009           shiny_1.9.1                   
+ [7] hermes_1.7.2.9002              SummarizedExperiment_1.34.0   
+ [9] Biobase_2.64.0                 GenomicRanges_1.56.1          
+[11] GenomeInfoDb_1.40.1            IRanges_2.38.1                
+[13] S4Vectors_0.42.1               BiocGenerics_0.50.0           
+[15] MatrixGenerics_1.16.0          matrixStats_1.4.1             
+[17] ggfortify_0.4.17               ggplot2_3.5.1                 
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          jsonlite_1.8.8             
-  [3] shape_1.4.6                 MultiAssayExperiment_1.28.0
-  [5] magrittr_2.0.3              farver_2.1.1               
-  [7] rmarkdown_2.25              GlobalOptions_0.1.2        
-  [9] zlibbioc_1.48.0             vctrs_0.6.5                
- [11] memoise_2.0.1               RCurl_1.98-1.14            
- [13] webshot_0.5.5               BiocBaseUtils_1.5.0        
- [15] htmltools_0.5.7             S4Arrays_1.2.0             
- [17] forcats_1.0.0               progress_1.2.3             
- [19] curl_5.2.0                  SparseArray_1.2.3          
- [21] sass_0.4.8                  bslib_0.6.1                
+  [3] shape_1.4.6.1               MultiAssayExperiment_1.30.3
+  [5] magrittr_2.0.3              farver_2.1.2               
+  [7] rmarkdown_2.28              GlobalOptions_0.1.2        
+  [9] zlibbioc_1.50.0             vctrs_0.6.5                
+ [11] memoise_2.0.1               webshot_0.5.5              
+ [13] BiocBaseUtils_1.7.3         htmltools_0.5.8.1          
+ [15] S4Arrays_1.4.1              forcats_1.0.0              
+ [17] progress_1.2.3              curl_5.2.2                 
+ [19] SparseArray_1.4.8           sass_0.4.9                 
+ [21] parallelly_1.38.0           bslib_0.8.0                
  [23] fontawesome_0.5.2           htmlwidgets_1.6.4          
- [25] testthat_3.2.1              cachem_1.0.8               
- [27] teal.widgets_0.4.2.9005     mime_0.12                  
- [29] lifecycle_1.0.4             iterators_1.0.14           
- [31] pkgconfig_2.0.3             webshot2_0.1.1             
- [33] Matrix_1.6-5                R6_2.5.1                   
- [35] fastmap_1.1.1               GenomeInfoDbData_1.2.11    
- [37] rbibutils_2.2.16            clue_0.3-65                
- [39] digest_0.6.34               colorspace_2.1-0           
- [41] shinycssloaders_1.0.0       ps_1.7.6                   
- [43] AnnotationDbi_1.64.1        DESeq2_1.42.0              
- [45] RSQLite_2.3.5               filelock_1.0.3             
- [47] labeling_0.4.3              fansi_1.0.6                
- [49] httr_1.4.7                  abind_1.4-5                
- [51] compiler_4.3.2              bit64_4.0.5                
- [53] withr_3.0.0                 doParallel_1.0.17          
- [55] backports_1.4.1             BiocParallel_1.36.0        
- [57] DBI_1.2.1                   logger_0.2.2               
- [59] biomaRt_2.58.0              rappdirs_0.3.3             
- [61] DelayedArray_0.28.0         rjson_0.2.21               
- [63] chromote_0.1.2              tools_4.3.2                
- [65] httpuv_1.6.13               glue_1.7.0                 
- [67] callr_3.7.3                 promises_1.2.1             
- [69] grid_4.3.2                  checkmate_2.3.1            
- [71] cluster_2.1.6               generics_0.1.3             
- [73] gtable_0.3.4                websocket_1.4.1            
- [75] tidyr_1.3.1                 hms_1.1.3                  
- [77] xml2_1.3.6                  utf8_1.2.4                 
- [79] XVector_0.42.0              ggrepel_0.9.5              
- [81] foreach_1.5.2               pillar_1.9.0               
- [83] stringr_1.5.1               limma_3.58.1               
- [85] later_1.3.2                 circlize_0.4.15            
- [87] dplyr_1.1.4                 BiocFileCache_2.10.1       
- [89] lattice_0.22-5              bit_4.0.5                  
- [91] tidyselect_1.2.0            ComplexHeatmap_2.18.0      
- [93] locfit_1.5-9.8              Biostrings_2.70.1          
- [95] knitr_1.45                  gridExtra_2.3              
- [97] teal.logger_0.1.3.9011      edgeR_4.0.12               
- [99] xfun_0.41                   statmod_1.5.0              
-[101] brio_1.1.4                  stringi_1.8.3              
-[103] yaml_2.3.8                  shinyWidgets_0.8.1         
-[105] evaluate_0.23               codetools_0.2-19           
-[107] tibble_3.2.1                cli_3.6.2                  
-[109] xtable_1.8-4                Rdpack_2.6                 
-[111] processx_3.8.3              jquerylib_0.1.4            
-[113] munsell_0.5.0               teal.reporter_0.3.0.9003   
-[115] Rcpp_1.0.12                 dbplyr_2.4.0               
-[117] png_0.1-8                   XML_3.99-0.16.1            
-[119] parallel_4.3.2              ellipsis_0.3.2             
-[121] assertthat_0.2.1            blob_1.2.4                 
-[123] prettyunits_1.2.0           bitops_1.0-7               
-[125] scales_1.3.0                purrr_1.0.2                
-[127] crayon_1.5.2                GetoptLong_1.0.5           
-[129] rlang_1.1.3                 formatR_1.14               
-[131] KEGGREST_1.42.0             shinyjs_2.1.0              </code></pre>
+ [25] testthat_3.2.1.1            httr2_1.0.3                
+ [27] cachem_1.1.0                teal.widgets_0.4.2.9020    
+ [29] mime_0.12                   lifecycle_1.0.4            
+ [31] iterators_1.0.14            pkgconfig_2.0.3            
+ [33] webshot2_0.1.1              Matrix_1.7-0               
+ [35] R6_2.5.1                    fastmap_1.2.0              
+ [37] future_1.34.0               GenomeInfoDbData_1.2.12    
+ [39] rbibutils_2.2.16            clue_0.3-65                
+ [41] digest_0.6.37               colorspace_2.1-1           
+ [43] shinycssloaders_1.1.0       ps_1.8.0                   
+ [45] AnnotationDbi_1.66.0        DESeq2_1.44.0              
+ [47] RSQLite_2.3.7               filelock_1.0.3             
+ [49] labeling_0.4.3              fansi_1.0.6                
+ [51] httr_1.4.7                  abind_1.4-8                
+ [53] compiler_4.4.1              bit64_4.0.5                
+ [55] withr_3.0.1                 doParallel_1.0.17          
+ [57] backports_1.5.0             BiocParallel_1.38.0        
+ [59] DBI_1.2.3                   logger_0.3.0               
+ [61] biomaRt_2.60.1              rappdirs_0.3.3             
+ [63] DelayedArray_0.30.1         rjson_0.2.22               
+ [65] chromote_0.3.1              tools_4.4.1                
+ [67] httpuv_1.6.15               glue_1.7.0                 
+ [69] callr_3.7.6                 promises_1.3.0             
+ [71] grid_4.4.1                  checkmate_2.3.2            
+ [73] cluster_2.1.6               generics_0.1.3             
+ [75] gtable_0.3.5                websocket_1.4.2            
+ [77] tidyr_1.3.1                 hms_1.1.3                  
+ [79] xml2_1.3.6                  utf8_1.2.4                 
+ [81] XVector_0.44.0              ggrepel_0.9.6              
+ [83] foreach_1.5.2               pillar_1.9.0               
+ [85] stringr_1.5.1               limma_3.60.4               
+ [87] later_1.3.2                 circlize_0.4.16            
+ [89] dplyr_1.1.4                 BiocFileCache_2.12.0       
+ [91] lattice_0.22-6              bit_4.0.5                  
+ [93] tidyselect_1.2.1            ComplexHeatmap_2.20.0      
+ [95] locfit_1.5-9.10             Biostrings_2.72.1          
+ [97] knitr_1.48                  gridExtra_2.3              
+ [99] teal.logger_0.2.0.9009      edgeR_4.2.1                
+[101] xfun_0.47                   statmod_1.5.0              
+[103] brio_1.1.5                  stringi_1.8.4              
+[105] UCSC.utils_1.0.0            yaml_2.3.10                
+[107] shinyWidgets_0.8.6          evaluate_0.24.0            
+[109] codetools_0.2-20            tibble_3.2.1               
+[111] cli_3.6.3                   xtable_1.8-4               
+[113] Rdpack_2.6.1                jquerylib_0.1.4            
+[115] processx_3.8.4              munsell_0.5.1              
+[117] teal.reporter_0.3.1.9015    Rcpp_1.0.13                
+[119] globals_0.16.3              dbplyr_2.5.0               
+[121] png_0.1-8                   parallel_4.4.1             
+[123] assertthat_0.2.1            blob_1.2.4                 
+[125] prettyunits_1.2.0           listenv_0.9.1              
+[127] scales_1.3.0                purrr_1.0.2                
+[129] crayon_1.5.3                GetoptLong_1.0.5           
+[131] rlang_1.1.4                 formatR_1.14               
+[133] KEGGREST_1.44.1             shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>
@@ -1837,140 +1833,140 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">---</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="an">title:</span><span class="co"> RNAG7</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Boxplot</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="co">---</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a>------------------------------------------------------------------------</span>
-<span id="cb15-8"><a href="#cb15-8"></a></span>
-<span id="cb15-9"><a href="#cb15-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
-<span id="cb15-10"><a href="#cb15-10"></a></span>
-<span id="cb15-11"><a href="#cb15-11"></a>::: panel-tabset</span>
-<span id="cb15-12"><a href="#cb15-12"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
-<span id="cb15-13"><a href="#cb15-13"></a></span>
-<span id="cb15-14"><a href="#cb15-14"></a>This page can be used as a template of how to create boxplots for RNA-seq gene expression data using available <span class="in">`hermes`</span>, and to create interactive boxplot for RNA-seq gene expression analysis using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb15-15"><a href="#cb15-15"></a></span>
-<span id="cb15-16"><a href="#cb15-16"></a>The <span class="in">`draw_boxplot()`</span> function used below needs <span class="in">`HermesData`</span> as input.</span>
-<span id="cb15-17"><a href="#cb15-17"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
-<span id="cb15-18"><a href="#cb15-18"></a></span>
-<span id="cb15-19"><a href="#cb15-19"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb15-20"><a href="#cb15-20"></a><span class="in">library(hermes)</span></span>
-<span id="cb15-21"><a href="#cb15-21"></a><span class="in">object &lt;- hermes_data %&gt;%</span></span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="in">  add_quality_flags() %&gt;%</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a><span class="in">  filter() %&gt;%</span></span>
-<span id="cb15-24"><a href="#cb15-24"></a><span class="in">  normalize()</span></span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="in">```</span></span>
-<span id="cb15-26"><a href="#cb15-26"></a></span>
-<span id="cb15-27"><a href="#cb15-27"></a><span class="fu">## Boxplot for Single Gene Expression Values</span></span>
-<span id="cb15-28"><a href="#cb15-28"></a></span>
-<span id="cb15-29"><a href="#cb15-29"></a>We can create boxplots for expression values of single genes by providing the gene ID in a <span class="in">`gene_spec`</span> (gene specification) as follows.</span>
-<span id="cb15-30"><a href="#cb15-30"></a></span>
-<span id="cb15-33"><a href="#cb15-33"></a><span class="in">```{r}</span></span>
-<span id="cb15-34"><a href="#cb15-34"></a><span class="fu">draw_boxplot</span>(</span>
-<span id="cb15-35"><a href="#cb15-35"></a>  <span class="at">object =</span> object,</span>
-<span id="cb15-36"><a href="#cb15-36"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb15-37"><a href="#cb15-37"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="st">"GeneID:11185"</span>)</span>
-<span id="cb15-38"><a href="#cb15-38"></a>)</span>
-<span id="cb15-39"><a href="#cb15-39"></a><span class="in">```</span></span>
-<span id="cb15-40"><a href="#cb15-40"></a></span>
-<span id="cb15-41"><a href="#cb15-41"></a><span class="fu">## Boxplot for Multiple Genes Expression Values</span></span>
-<span id="cb15-42"><a href="#cb15-42"></a></span>
-<span id="cb15-43"><a href="#cb15-43"></a>We can also create boxplots for multiple genes next to each other, simply by specifying multiple gene IDs in the <span class="in">`gene_spec`</span>.</span>
-<span id="cb15-44"><a href="#cb15-44"></a>Note that names given to the gene ID vector are used in the plot instead of the IDs.</span>
-<span id="cb15-45"><a href="#cb15-45"></a></span>
-<span id="cb15-48"><a href="#cb15-48"></a><span class="in">```{r}</span></span>
-<span id="cb15-49"><a href="#cb15-49"></a><span class="fu">draw_boxplot</span>(</span>
-<span id="cb15-50"><a href="#cb15-50"></a>  <span class="at">object =</span> object,</span>
-<span id="cb15-51"><a href="#cb15-51"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb15-52"><a href="#cb15-52"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">c</span>(</span>
-<span id="cb15-53"><a href="#cb15-53"></a>    <span class="at">A =</span> <span class="st">"GeneID:11185"</span>, <span class="at">B =</span> <span class="st">"GeneID:10677"</span>, <span class="at">C =</span> <span class="st">"GeneID:286205"</span>, <span class="at">D =</span> <span class="st">"GeneID:8365"</span>, <span class="at">E =</span> <span class="st">"GeneID:6804"</span></span>
-<span id="cb15-54"><a href="#cb15-54"></a>  ))</span>
-<span id="cb15-55"><a href="#cb15-55"></a>)</span>
-<span id="cb15-56"><a href="#cb15-56"></a><span class="in">```</span></span>
-<span id="cb15-57"><a href="#cb15-57"></a></span>
-<span id="cb15-58"><a href="#cb15-58"></a><span class="fu">## Boxplot for Gene Signatures</span></span>
-<span id="cb15-59"><a href="#cb15-59"></a></span>
-<span id="cb15-60"><a href="#cb15-60"></a>We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.</span>
-<span id="cb15-61"><a href="#cb15-61"></a>Note that here we just want to use the first 6 genes from the <span class="in">`object`</span> without explicitly specifying the gene IDs, and this can be done through the <span class="in">`genes()`</span> function in <span class="in">`hermes`</span>.</span>
-<span id="cb15-62"><a href="#cb15-62"></a></span>
-<span id="cb15-65"><a href="#cb15-65"></a><span class="in">```{r}</span></span>
-<span id="cb15-66"><a href="#cb15-66"></a><span class="fu">draw_boxplot</span>(</span>
-<span id="cb15-67"><a href="#cb15-67"></a>  <span class="at">object =</span> object,</span>
-<span id="cb15-68"><a href="#cb15-68"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb15-69"><a href="#cb15-69"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>], <span class="at">fun =</span> colMeans)</span>
-<span id="cb15-70"><a href="#cb15-70"></a>)</span>
-<span id="cb15-71"><a href="#cb15-71"></a><span class="in">```</span></span>
-<span id="cb15-72"><a href="#cb15-72"></a></span>
-<span id="cb15-73"><a href="#cb15-73"></a><span class="fu">## Additional Options for Customization</span></span>
-<span id="cb15-74"><a href="#cb15-74"></a></span>
-<span id="cb15-75"><a href="#cb15-75"></a>We can add sample variables for stratification (<span class="in">`x_var`</span>), faceting (<span class="in">`facet_var`</span>) or coloring (<span class="in">`color_var`</span>).</span>
-<span id="cb15-76"><a href="#cb15-76"></a></span>
-<span id="cb15-79"><a href="#cb15-79"></a><span class="in">```{r}</span></span>
-<span id="cb15-80"><a href="#cb15-80"></a><span class="fu">draw_boxplot</span>(</span>
-<span id="cb15-81"><a href="#cb15-81"></a>  <span class="at">object =</span> object,</span>
-<span id="cb15-82"><a href="#cb15-82"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb15-83"><a href="#cb15-83"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>]),</span>
-<span id="cb15-84"><a href="#cb15-84"></a>  <span class="at">x_var =</span> <span class="st">"AGE18"</span>,</span>
-<span id="cb15-85"><a href="#cb15-85"></a>  <span class="at">facet_var =</span> <span class="st">"SEX"</span>,</span>
-<span id="cb15-86"><a href="#cb15-86"></a>  <span class="at">color_var =</span> <span class="st">"RACE"</span></span>
-<span id="cb15-87"><a href="#cb15-87"></a>)</span>
-<span id="cb15-88"><a href="#cb15-88"></a><span class="in">```</span></span>
-<span id="cb15-89"><a href="#cb15-89"></a></span>
-<span id="cb15-90"><a href="#cb15-90"></a>We can also add jittering to the data points overlaying the boxplot using the <span class="in">`jitter`</span> flag.</span>
-<span id="cb15-91"><a href="#cb15-91"></a></span>
-<span id="cb15-94"><a href="#cb15-94"></a><span class="in">```{r}</span></span>
-<span id="cb15-95"><a href="#cb15-95"></a><span class="fu">draw_boxplot</span>(</span>
-<span id="cb15-96"><a href="#cb15-96"></a>  <span class="at">object =</span> object,</span>
-<span id="cb15-97"><a href="#cb15-97"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb15-98"><a href="#cb15-98"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>]),</span>
-<span id="cb15-99"><a href="#cb15-99"></a>  <span class="at">jitter =</span> <span class="cn">TRUE</span></span>
-<span id="cb15-100"><a href="#cb15-100"></a>)</span>
-<span id="cb15-101"><a href="#cb15-101"></a><span class="in">```</span></span>
-<span id="cb15-102"><a href="#cb15-102"></a></span>
-<span id="cb15-103"><a href="#cb15-103"></a>We can also create violin plots instead of boxplots using the <span class="in">`violin`</span> flag.</span>
-<span id="cb15-104"><a href="#cb15-104"></a></span>
-<span id="cb15-107"><a href="#cb15-107"></a><span class="in">```{r}</span></span>
-<span id="cb15-108"><a href="#cb15-108"></a><span class="fu">draw_boxplot</span>(</span>
-<span id="cb15-109"><a href="#cb15-109"></a>  <span class="at">object =</span> object,</span>
-<span id="cb15-110"><a href="#cb15-110"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
-<span id="cb15-111"><a href="#cb15-111"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>]),</span>
-<span id="cb15-112"><a href="#cb15-112"></a>  <span class="at">violin =</span> <span class="cn">TRUE</span></span>
-<span id="cb15-113"><a href="#cb15-113"></a>)</span>
-<span id="cb15-114"><a href="#cb15-114"></a><span class="in">```</span></span>
-<span id="cb15-115"><a href="#cb15-115"></a></span>
-<span id="cb15-116"><a href="#cb15-116"></a><span class="fu">## Teal Module for Boxplot</span></span>
-<span id="cb15-117"><a href="#cb15-117"></a></span>
-<span id="cb15-118"><a href="#cb15-118"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb15-119"><a href="#cb15-119"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb15-120"><a href="#cb15-120"></a>We can then use the provided teal module <span class="in">`tm_g_boxplot`</span> to have a boxplot module in our teal app.</span>
-<span id="cb15-121"><a href="#cb15-121"></a></span>
-<span id="cb15-122"><a href="#cb15-122"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
-<span id="cb15-123"><a href="#cb15-123"></a><span class="in">library(teal.modules.hermes)</span></span>
-<span id="cb15-124"><a href="#cb15-124"></a></span>
-<span id="cb15-125"><a href="#cb15-125"></a><span class="in">data &lt;- teal_data()</span></span>
-<span id="cb15-126"><a href="#cb15-126"></a><span class="in">data &lt;- within(data, {</span></span>
-<span id="cb15-127"><a href="#cb15-127"></a><span class="in">  library(hermes)</span></span>
-<span id="cb15-128"><a href="#cb15-128"></a><span class="in">  MAE &lt;- multi_assay_experiment</span></span>
-<span id="cb15-129"><a href="#cb15-129"></a><span class="in">})</span></span>
-<span id="cb15-130"><a href="#cb15-130"></a><span class="in">datanames(data) &lt;- "MAE"</span></span>
-<span id="cb15-131"><a href="#cb15-131"></a></span>
-<span id="cb15-132"><a href="#cb15-132"></a><span class="in">app &lt;- init(</span></span>
-<span id="cb15-133"><a href="#cb15-133"></a><span class="in">  data = data,</span></span>
-<span id="cb15-134"><a href="#cb15-134"></a><span class="in">  modules = modules(</span></span>
-<span id="cb15-135"><a href="#cb15-135"></a><span class="in">    tm_g_boxplot(</span></span>
-<span id="cb15-136"><a href="#cb15-136"></a><span class="in">      label = "boxplot",</span></span>
-<span id="cb15-137"><a href="#cb15-137"></a><span class="in">      mae_name = "MAE"</span></span>
-<span id="cb15-138"><a href="#cb15-138"></a><span class="in">    )</span></span>
-<span id="cb15-139"><a href="#cb15-139"></a><span class="in">  )</span></span>
-<span id="cb15-140"><a href="#cb15-140"></a><span class="in">)</span></span>
-<span id="cb15-141"><a href="#cb15-141"></a></span>
-<span id="cb15-142"><a href="#cb15-142"></a><span class="in">shinyApp(app$ui, app$server)</span></span>
-<span id="cb15-143"><a href="#cb15-143"></a><span class="in">```</span></span>
-<span id="cb15-144"><a href="#cb15-144"></a></span>
-<span id="cb15-145"><a href="#cb15-145"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb15-146"><a href="#cb15-146"></a>:::</span>
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> RNAG7</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Boxplot</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">---</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a>------------------------------------------------------------------------</span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
+<span id="cb12-10"><a href="#cb12-10"></a></span>
+<span id="cb12-11"><a href="#cb12-11"></a>::: panel-tabset</span>
+<span id="cb12-12"><a href="#cb12-12"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a></span>
+<span id="cb12-14"><a href="#cb12-14"></a>This page can be used as a template of how to create boxplots for RNA-seq gene expression data using available <span class="in">`hermes`</span>, and to create interactive boxplot for RNA-seq gene expression analysis using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb12-15"><a href="#cb12-15"></a></span>
+<span id="cb12-16"><a href="#cb12-16"></a>The <span class="in">`draw_boxplot()`</span> function used below needs <span class="in">`HermesData`</span> as input.</span>
+<span id="cb12-17"><a href="#cb12-17"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-19"><a href="#cb12-19"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="in">library(hermes)</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="in">object &lt;- hermes_data %&gt;%</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a><span class="in">  add_quality_flags() %&gt;%</span></span>
+<span id="cb12-23"><a href="#cb12-23"></a><span class="in">  filter() %&gt;%</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a><span class="in">  normalize()</span></span>
+<span id="cb12-25"><a href="#cb12-25"></a><span class="in">```</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a></span>
+<span id="cb12-27"><a href="#cb12-27"></a><span class="fu">## Boxplot for Single Gene Expression Values</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a></span>
+<span id="cb12-29"><a href="#cb12-29"></a>We can create boxplots for expression values of single genes by providing the gene ID in a <span class="in">`gene_spec`</span> (gene specification) as follows.</span>
+<span id="cb12-30"><a href="#cb12-30"></a></span>
+<span id="cb12-33"><a href="#cb12-33"></a><span class="in">```{r}</span></span>
+<span id="cb12-34"><a href="#cb12-34"></a><span class="fu">draw_boxplot</span>(</span>
+<span id="cb12-35"><a href="#cb12-35"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-36"><a href="#cb12-36"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-37"><a href="#cb12-37"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="st">"GeneID:11185"</span>)</span>
+<span id="cb12-38"><a href="#cb12-38"></a>)</span>
+<span id="cb12-39"><a href="#cb12-39"></a><span class="in">```</span></span>
+<span id="cb12-40"><a href="#cb12-40"></a></span>
+<span id="cb12-41"><a href="#cb12-41"></a><span class="fu">## Boxplot for Multiple Genes Expression Values</span></span>
+<span id="cb12-42"><a href="#cb12-42"></a></span>
+<span id="cb12-43"><a href="#cb12-43"></a>We can also create boxplots for multiple genes next to each other, simply by specifying multiple gene IDs in the <span class="in">`gene_spec`</span>.</span>
+<span id="cb12-44"><a href="#cb12-44"></a>Note that names given to the gene ID vector are used in the plot instead of the IDs.</span>
+<span id="cb12-45"><a href="#cb12-45"></a></span>
+<span id="cb12-48"><a href="#cb12-48"></a><span class="in">```{r}</span></span>
+<span id="cb12-49"><a href="#cb12-49"></a><span class="fu">draw_boxplot</span>(</span>
+<span id="cb12-50"><a href="#cb12-50"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-51"><a href="#cb12-51"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-52"><a href="#cb12-52"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">c</span>(</span>
+<span id="cb12-53"><a href="#cb12-53"></a>    <span class="at">A =</span> <span class="st">"GeneID:11185"</span>, <span class="at">B =</span> <span class="st">"GeneID:10677"</span>, <span class="at">C =</span> <span class="st">"GeneID:286205"</span>, <span class="at">D =</span> <span class="st">"GeneID:8365"</span>, <span class="at">E =</span> <span class="st">"GeneID:6804"</span></span>
+<span id="cb12-54"><a href="#cb12-54"></a>  ))</span>
+<span id="cb12-55"><a href="#cb12-55"></a>)</span>
+<span id="cb12-56"><a href="#cb12-56"></a><span class="in">```</span></span>
+<span id="cb12-57"><a href="#cb12-57"></a></span>
+<span id="cb12-58"><a href="#cb12-58"></a><span class="fu">## Boxplot for Gene Signatures</span></span>
+<span id="cb12-59"><a href="#cb12-59"></a></span>
+<span id="cb12-60"><a href="#cb12-60"></a>We can also specify a gene summary function for multiple genes, thereby using the corresponding gene signature.</span>
+<span id="cb12-61"><a href="#cb12-61"></a>Note that here we just want to use the first 6 genes from the <span class="in">`object`</span> without explicitly specifying the gene IDs, and this can be done through the <span class="in">`genes()`</span> function in <span class="in">`hermes`</span>.</span>
+<span id="cb12-62"><a href="#cb12-62"></a></span>
+<span id="cb12-65"><a href="#cb12-65"></a><span class="in">```{r}</span></span>
+<span id="cb12-66"><a href="#cb12-66"></a><span class="fu">draw_boxplot</span>(</span>
+<span id="cb12-67"><a href="#cb12-67"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-68"><a href="#cb12-68"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-69"><a href="#cb12-69"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>], <span class="at">fun =</span> colMeans)</span>
+<span id="cb12-70"><a href="#cb12-70"></a>)</span>
+<span id="cb12-71"><a href="#cb12-71"></a><span class="in">```</span></span>
+<span id="cb12-72"><a href="#cb12-72"></a></span>
+<span id="cb12-73"><a href="#cb12-73"></a><span class="fu">## Additional Options for Customization</span></span>
+<span id="cb12-74"><a href="#cb12-74"></a></span>
+<span id="cb12-75"><a href="#cb12-75"></a>We can add sample variables for stratification (<span class="in">`x_var`</span>), faceting (<span class="in">`facet_var`</span>) or coloring (<span class="in">`color_var`</span>).</span>
+<span id="cb12-76"><a href="#cb12-76"></a></span>
+<span id="cb12-79"><a href="#cb12-79"></a><span class="in">```{r}</span></span>
+<span id="cb12-80"><a href="#cb12-80"></a><span class="fu">draw_boxplot</span>(</span>
+<span id="cb12-81"><a href="#cb12-81"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-82"><a href="#cb12-82"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-83"><a href="#cb12-83"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>]),</span>
+<span id="cb12-84"><a href="#cb12-84"></a>  <span class="at">x_var =</span> <span class="st">"AGE18"</span>,</span>
+<span id="cb12-85"><a href="#cb12-85"></a>  <span class="at">facet_var =</span> <span class="st">"SEX"</span>,</span>
+<span id="cb12-86"><a href="#cb12-86"></a>  <span class="at">color_var =</span> <span class="st">"RACE"</span></span>
+<span id="cb12-87"><a href="#cb12-87"></a>)</span>
+<span id="cb12-88"><a href="#cb12-88"></a><span class="in">```</span></span>
+<span id="cb12-89"><a href="#cb12-89"></a></span>
+<span id="cb12-90"><a href="#cb12-90"></a>We can also add jittering to the data points overlaying the boxplot using the <span class="in">`jitter`</span> flag.</span>
+<span id="cb12-91"><a href="#cb12-91"></a></span>
+<span id="cb12-94"><a href="#cb12-94"></a><span class="in">```{r}</span></span>
+<span id="cb12-95"><a href="#cb12-95"></a><span class="fu">draw_boxplot</span>(</span>
+<span id="cb12-96"><a href="#cb12-96"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-97"><a href="#cb12-97"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-98"><a href="#cb12-98"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>]),</span>
+<span id="cb12-99"><a href="#cb12-99"></a>  <span class="at">jitter =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-100"><a href="#cb12-100"></a>)</span>
+<span id="cb12-101"><a href="#cb12-101"></a><span class="in">```</span></span>
+<span id="cb12-102"><a href="#cb12-102"></a></span>
+<span id="cb12-103"><a href="#cb12-103"></a>We can also create violin plots instead of boxplots using the <span class="in">`violin`</span> flag.</span>
+<span id="cb12-104"><a href="#cb12-104"></a></span>
+<span id="cb12-107"><a href="#cb12-107"></a><span class="in">```{r}</span></span>
+<span id="cb12-108"><a href="#cb12-108"></a><span class="fu">draw_boxplot</span>(</span>
+<span id="cb12-109"><a href="#cb12-109"></a>  <span class="at">object =</span> object,</span>
+<span id="cb12-110"><a href="#cb12-110"></a>  <span class="at">assay_name =</span> <span class="st">"counts"</span>,</span>
+<span id="cb12-111"><a href="#cb12-111"></a>  <span class="at">genes =</span> <span class="fu">gene_spec</span>(<span class="fu">genes</span>(object)[<span class="dv">1</span>]),</span>
+<span id="cb12-112"><a href="#cb12-112"></a>  <span class="at">violin =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-113"><a href="#cb12-113"></a>)</span>
+<span id="cb12-114"><a href="#cb12-114"></a><span class="in">```</span></span>
+<span id="cb12-115"><a href="#cb12-115"></a></span>
+<span id="cb12-116"><a href="#cb12-116"></a><span class="fu">## Teal Module for Boxplot</span></span>
+<span id="cb12-117"><a href="#cb12-117"></a></span>
+<span id="cb12-118"><a href="#cb12-118"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb12-119"><a href="#cb12-119"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb12-120"><a href="#cb12-120"></a>We can then use the provided teal module <span class="in">`tm_g_boxplot`</span> to have a boxplot module in our teal app.</span>
+<span id="cb12-121"><a href="#cb12-121"></a></span>
+<span id="cb12-122"><a href="#cb12-122"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
+<span id="cb12-123"><a href="#cb12-123"></a><span class="in">library(teal.modules.hermes)</span></span>
+<span id="cb12-124"><a href="#cb12-124"></a></span>
+<span id="cb12-125"><a href="#cb12-125"></a><span class="in">data &lt;- teal_data()</span></span>
+<span id="cb12-126"><a href="#cb12-126"></a><span class="in">data &lt;- within(data, {</span></span>
+<span id="cb12-127"><a href="#cb12-127"></a><span class="in">  library(hermes)</span></span>
+<span id="cb12-128"><a href="#cb12-128"></a><span class="in">  MAE &lt;- multi_assay_experiment</span></span>
+<span id="cb12-129"><a href="#cb12-129"></a><span class="in">})</span></span>
+<span id="cb12-130"><a href="#cb12-130"></a><span class="in">datanames(data) &lt;- "MAE"</span></span>
+<span id="cb12-131"><a href="#cb12-131"></a></span>
+<span id="cb12-132"><a href="#cb12-132"></a><span class="in">app &lt;- init(</span></span>
+<span id="cb12-133"><a href="#cb12-133"></a><span class="in">  data = data,</span></span>
+<span id="cb12-134"><a href="#cb12-134"></a><span class="in">  modules = modules(</span></span>
+<span id="cb12-135"><a href="#cb12-135"></a><span class="in">    tm_g_boxplot(</span></span>
+<span id="cb12-136"><a href="#cb12-136"></a><span class="in">      label = "boxplot",</span></span>
+<span id="cb12-137"><a href="#cb12-137"></a><span class="in">      mae_name = "MAE"</span></span>
+<span id="cb12-138"><a href="#cb12-138"></a><span class="in">    )</span></span>
+<span id="cb12-139"><a href="#cb12-139"></a><span class="in">  )</span></span>
+<span id="cb12-140"><a href="#cb12-140"></a><span class="in">)</span></span>
+<span id="cb12-141"><a href="#cb12-141"></a></span>
+<span id="cb12-142"><a href="#cb12-142"></a><span class="in">shinyApp(app$ui, app$server)</span></span>
+<span id="cb12-143"><a href="#cb12-143"></a><span class="in">```</span></span>
+<span id="cb12-144"><a href="#cb12-144"></a></span>
+<span id="cb12-145"><a href="#cb12-145"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb12-146"><a href="#cb12-146"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

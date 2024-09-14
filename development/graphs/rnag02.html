@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>RNAG2 – Biomarker Analysis Catalog - Dev</title>
 <style>
@@ -1028,10 +1028,7 @@ cookieconsent.run({
 <span id="cb9-17"><a href="#cb9-17"></a>  )</span>
 <span id="cb9-18"><a href="#cb9-18"></a>)</span>
 <span id="cb9-19"><a href="#cb9-19"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2024-02-23 15:35:37.1401 pid:2697 token:[4c18a7e1] teal Initializing reporter_previewer_module</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Warning: 'experiments' dropped; see 'drops()'</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1050,11 +1047,11 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1076,85 +1073,86 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.6.9003 teal_0.15.1.9000              
- [3] teal.slice_0.5.0.9003          teal.data_0.5.0.9000          
- [5] teal.code_0.5.0.9003           shiny_1.8.0                   
- [7] hermes_1.7.1.9000              SummarizedExperiment_1.32.0   
- [9] Biobase_2.62.0                 GenomicRanges_1.54.1          
-[11] GenomeInfoDb_1.38.5            IRanges_2.36.0                
-[13] S4Vectors_0.40.2               BiocGenerics_0.48.1           
-[15] MatrixGenerics_1.14.0          matrixStats_1.2.0             
-[17] ggfortify_0.4.16               ggplot2_3.4.4                 
+ [1] teal.modules.hermes_0.1.6.9020 teal_0.15.2.9061              
+ [3] teal.slice_0.5.1.9011          teal.data_0.6.0.9010          
+ [5] teal.code_0.5.0.9009           shiny_1.9.1                   
+ [7] hermes_1.7.2.9002              SummarizedExperiment_1.34.0   
+ [9] Biobase_2.64.0                 GenomicRanges_1.56.1          
+[11] GenomeInfoDb_1.40.1            IRanges_2.38.1                
+[13] S4Vectors_0.42.1               BiocGenerics_0.50.0           
+[15] MatrixGenerics_1.16.0          matrixStats_1.4.1             
+[17] ggfortify_0.4.17               ggplot2_3.5.1                 
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3          jsonlite_1.8.8             
-  [3] shape_1.4.6                 MultiAssayExperiment_1.28.0
-  [5] magrittr_2.0.3              farver_2.1.1               
-  [7] rmarkdown_2.25              ragg_1.2.7                 
-  [9] GlobalOptions_0.1.2         zlibbioc_1.48.0            
+  [3] shape_1.4.6.1               MultiAssayExperiment_1.30.3
+  [5] magrittr_2.0.3              farver_2.1.2               
+  [7] rmarkdown_2.28              ragg_1.3.3                 
+  [9] GlobalOptions_0.1.2         zlibbioc_1.50.0            
  [11] vctrs_0.6.5                 memoise_2.0.1              
- [13] RCurl_1.98-1.14             webshot_0.5.5              
- [15] BiocBaseUtils_1.5.0         htmltools_0.5.7            
- [17] S4Arrays_1.2.0              forcats_1.0.0              
- [19] progress_1.2.3              curl_5.2.0                 
- [21] SparseArray_1.2.3           sass_0.4.8                 
- [23] bslib_0.6.1                 fontawesome_0.5.2          
- [25] htmlwidgets_1.6.4           testthat_3.2.1             
- [27] cachem_1.0.8                teal.widgets_0.4.2.9005    
- [29] mime_0.12                   lifecycle_1.0.4            
- [31] iterators_1.0.14            pkgconfig_2.0.3            
- [33] webshot2_0.1.1              Matrix_1.6-5               
- [35] R6_2.5.1                    fastmap_1.1.1              
- [37] GenomeInfoDbData_1.2.11     rbibutils_2.2.16           
- [39] clue_0.3-65                 digest_0.6.34              
- [41] colorspace_2.1-0            shinycssloaders_1.0.0      
- [43] ps_1.7.6                    AnnotationDbi_1.64.1       
- [45] DESeq2_1.42.0               textshaping_0.3.7          
- [47] RSQLite_2.3.5               filelock_1.0.3             
- [49] labeling_0.4.3              fansi_1.0.6                
- [51] httr_1.4.7                  abind_1.4-5                
- [53] compiler_4.3.2              bit64_4.0.5                
- [55] withr_3.0.0                 doParallel_1.0.17          
- [57] backports_1.4.1             BiocParallel_1.36.0        
- [59] DBI_1.2.1                   logger_0.2.2               
- [61] biomaRt_2.58.0              rappdirs_0.3.3             
- [63] DelayedArray_0.28.0         rjson_0.2.21               
- [65] chromote_0.1.2              tools_4.3.2                
- [67] httpuv_1.6.13               glue_1.7.0                 
- [69] callr_3.7.3                 promises_1.2.1             
- [71] grid_4.3.2                  checkmate_2.3.1            
- [73] cluster_2.1.6               generics_0.1.3             
- [75] gtable_0.3.4                websocket_1.4.1            
- [77] tidyr_1.3.1                 hms_1.1.3                  
- [79] xml2_1.3.6                  utf8_1.2.4                 
- [81] XVector_0.42.0              ggrepel_0.9.5              
- [83] foreach_1.5.2               pillar_1.9.0               
- [85] stringr_1.5.1               limma_3.58.1               
- [87] later_1.3.2                 circlize_0.4.15            
- [89] dplyr_1.1.4                 BiocFileCache_2.10.1       
- [91] lattice_0.22-5              bit_4.0.5                  
- [93] tidyselect_1.2.0            ComplexHeatmap_2.18.0      
- [95] locfit_1.5-9.8              Biostrings_2.70.1          
- [97] knitr_1.45                  gridExtra_2.3              
- [99] teal.logger_0.1.3.9011      edgeR_4.0.12               
-[101] xfun_0.41                   statmod_1.5.0              
-[103] brio_1.1.4                  stringi_1.8.3              
-[105] yaml_2.3.8                  shinyWidgets_0.8.1         
-[107] evaluate_0.23               codetools_0.2-19           
-[109] tibble_3.2.1                cli_3.6.2                  
-[111] systemfonts_1.0.5           xtable_1.8-4               
-[113] Rdpack_2.6                  processx_3.8.3             
-[115] jquerylib_0.1.4             munsell_0.5.0              
-[117] teal.reporter_0.3.0.9003    Rcpp_1.0.12                
-[119] dbplyr_2.4.0                png_0.1-8                  
-[121] XML_3.99-0.16.1             parallel_4.3.2             
-[123] ellipsis_0.3.2              assertthat_0.2.1           
-[125] blob_1.2.4                  prettyunits_1.2.0          
-[127] bitops_1.0-7                scales_1.3.0               
-[129] purrr_1.0.2                 crayon_1.5.2               
-[131] GetoptLong_1.0.5            rlang_1.1.3                
-[133] formatR_1.14                KEGGREST_1.42.0            
-[135] shinyjs_2.1.0              </code></pre>
+ [13] webshot_0.5.5               BiocBaseUtils_1.7.3        
+ [15] htmltools_0.5.8.1           S4Arrays_1.4.1             
+ [17] forcats_1.0.0               progress_1.2.3             
+ [19] curl_5.2.2                  SparseArray_1.4.8          
+ [21] sass_0.4.9                  parallelly_1.38.0          
+ [23] bslib_0.8.0                 fontawesome_0.5.2          
+ [25] htmlwidgets_1.6.4           testthat_3.2.1.1           
+ [27] httr2_1.0.3                 cachem_1.1.0               
+ [29] teal.widgets_0.4.2.9020     mime_0.12                  
+ [31] lifecycle_1.0.4             iterators_1.0.14           
+ [33] pkgconfig_2.0.3             webshot2_0.1.1             
+ [35] Matrix_1.7-0                R6_2.5.1                   
+ [37] fastmap_1.2.0               future_1.34.0              
+ [39] GenomeInfoDbData_1.2.12     rbibutils_2.2.16           
+ [41] clue_0.3-65                 digest_0.6.37              
+ [43] colorspace_2.1-1            shinycssloaders_1.1.0      
+ [45] ps_1.8.0                    AnnotationDbi_1.66.0       
+ [47] DESeq2_1.44.0               textshaping_0.4.0          
+ [49] RSQLite_2.3.7               filelock_1.0.3             
+ [51] labeling_0.4.3              fansi_1.0.6                
+ [53] httr_1.4.7                  abind_1.4-8                
+ [55] compiler_4.4.1              bit64_4.0.5                
+ [57] withr_3.0.1                 doParallel_1.0.17          
+ [59] backports_1.5.0             BiocParallel_1.38.0        
+ [61] DBI_1.2.3                   logger_0.3.0               
+ [63] biomaRt_2.60.1              rappdirs_0.3.3             
+ [65] DelayedArray_0.30.1         rjson_0.2.22               
+ [67] chromote_0.3.1              tools_4.4.1                
+ [69] httpuv_1.6.15               glue_1.7.0                 
+ [71] callr_3.7.6                 promises_1.3.0             
+ [73] grid_4.4.1                  checkmate_2.3.2            
+ [75] cluster_2.1.6               generics_0.1.3             
+ [77] gtable_0.3.5                websocket_1.4.2            
+ [79] tidyr_1.3.1                 hms_1.1.3                  
+ [81] xml2_1.3.6                  utf8_1.2.4                 
+ [83] XVector_0.44.0              ggrepel_0.9.6              
+ [85] foreach_1.5.2               pillar_1.9.0               
+ [87] stringr_1.5.1               limma_3.60.4               
+ [89] later_1.3.2                 circlize_0.4.16            
+ [91] dplyr_1.1.4                 BiocFileCache_2.12.0       
+ [93] lattice_0.22-6              bit_4.0.5                  
+ [95] tidyselect_1.2.1            ComplexHeatmap_2.20.0      
+ [97] locfit_1.5-9.10             Biostrings_2.72.1          
+ [99] knitr_1.48                  gridExtra_2.3              
+[101] teal.logger_0.2.0.9009      edgeR_4.2.1                
+[103] xfun_0.47                   statmod_1.5.0              
+[105] brio_1.1.5                  stringi_1.8.4              
+[107] UCSC.utils_1.0.0            yaml_2.3.10                
+[109] shinyWidgets_0.8.6          evaluate_0.24.0            
+[111] codetools_0.2-20            tibble_3.2.1               
+[113] cli_3.6.3                   systemfonts_1.1.0          
+[115] xtable_1.8-4                Rdpack_2.6.1               
+[117] jquerylib_0.1.4             processx_3.8.4             
+[119] munsell_0.5.1               teal.reporter_0.3.1.9015   
+[121] Rcpp_1.0.13                 globals_0.16.3             
+[123] dbplyr_2.5.0                png_0.1-8                  
+[125] parallel_4.4.1              assertthat_0.2.1           
+[127] blob_1.2.4                  prettyunits_1.2.0          
+[129] listenv_0.9.1               scales_1.3.0               
+[131] purrr_1.0.2                 crayon_1.5.3               
+[133] GetoptLong_1.0.5            rlang_1.1.4                
+[135] formatR_1.14                KEGGREST_1.44.1            
+[137] shinyjs_2.1.0              </code></pre>
 </div>
 </div>
 </div>
@@ -1791,118 +1789,118 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> RNAG2</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Top Genes Plot</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="co">---</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a></span>
-<span id="cb14-7"><a href="#cb14-7"></a>------------------------------------------------------------------------</span>
-<span id="cb14-8"><a href="#cb14-8"></a></span>
-<span id="cb14-9"><a href="#cb14-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
-<span id="cb14-10"><a href="#cb14-10"></a></span>
-<span id="cb14-11"><a href="#cb14-11"></a>::: panel-tabset</span>
-<span id="cb14-12"><a href="#cb14-12"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
-<span id="cb14-13"><a href="#cb14-13"></a></span>
-<span id="cb14-14"><a href="#cb14-14"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to derive and plot top genes for RNA-seq RNA-seq gene expression data and to create an interactive top genes plot using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb14-15"><a href="#cb14-15"></a></span>
-<span id="cb14-16"><a href="#cb14-16"></a>Derivation of top genes uses <span class="in">`HermesData`</span> as input.</span>
-<span id="cb14-17"><a href="#cb14-17"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
-<span id="cb14-18"><a href="#cb14-18"></a></span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a><span class="in">library(hermes)</span></span>
-<span id="cb14-21"><a href="#cb14-21"></a><span class="in">object &lt;- hermes_data %&gt;%</span></span>
-<span id="cb14-22"><a href="#cb14-22"></a><span class="in">  add_quality_flags() %&gt;%</span></span>
-<span id="cb14-23"><a href="#cb14-23"></a><span class="in">  filter() %&gt;%</span></span>
-<span id="cb14-24"><a href="#cb14-24"></a><span class="in">  normalize()</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a><span class="in">```</span></span>
-<span id="cb14-26"><a href="#cb14-26"></a></span>
-<span id="cb14-27"><a href="#cb14-27"></a><span class="fu">## Derive Top Genes</span></span>
-<span id="cb14-28"><a href="#cb14-28"></a></span>
-<span id="cb14-29"><a href="#cb14-29"></a>We can derive top most expressed genes in <span class="in">`HermesData`</span> using the <span class="in">`top_genes()`</span> function.</span>
-<span id="cb14-30"><a href="#cb14-30"></a>By default, this function uses the <span class="in">`counts`</span> assay and summary statistic function <span class="in">`rowMeans()`</span> with no minimum threshold to derive the 10 most expressed genes.</span>
-<span id="cb14-31"><a href="#cb14-31"></a>You can change this number, or instead work with a minimum threshold on the derived statistic.</span>
-<span id="cb14-32"><a href="#cb14-32"></a></span>
-<span id="cb14-35"><a href="#cb14-35"></a><span class="in">```{r}</span></span>
-<span id="cb14-36"><a href="#cb14-36"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object)</span>
-<span id="cb14-37"><a href="#cb14-37"></a><span class="in">```</span></span>
-<span id="cb14-38"><a href="#cb14-38"></a></span>
-<span id="cb14-39"><a href="#cb14-39"></a>If we want to derive only the 5 most expressed genes, we can specify this via <span class="in">`n_top`</span>.</span>
-<span id="cb14-40"><a href="#cb14-40"></a></span>
-<span id="cb14-43"><a href="#cb14-43"></a><span class="in">```{r}</span></span>
-<span id="cb14-44"><a href="#cb14-44"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">n_top =</span> <span class="dv">5</span>)</span>
-<span id="cb14-45"><a href="#cb14-45"></a><span class="in">```</span></span>
-<span id="cb14-46"><a href="#cb14-46"></a></span>
-<span id="cb14-47"><a href="#cb14-47"></a>Alternatively, we can also set a minimum threshold of average counts (across samples).</span>
-<span id="cb14-48"><a href="#cb14-48"></a></span>
-<span id="cb14-51"><a href="#cb14-51"></a><span class="in">```{r}</span></span>
-<span id="cb14-52"><a href="#cb14-52"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">min_threshold =</span> <span class="dv">50000</span>)</span>
-<span id="cb14-53"><a href="#cb14-53"></a><span class="in">```</span></span>
-<span id="cb14-54"><a href="#cb14-54"></a></span>
-<span id="cb14-55"><a href="#cb14-55"></a>If we want to derive top genes for a specific assay, we can also specify this via <span class="in">`assay_name`</span>.</span>
-<span id="cb14-56"><a href="#cb14-56"></a>By default, <span class="in">`top_genes()`</span> function uses the <span class="in">`counts`</span> assay.</span>
-<span id="cb14-57"><a href="#cb14-57"></a>It is important to ensure that the same normalization method is applied on the <span class="in">`HermesData`</span> object prior to deriving top genes, otherwise the assay would not be available here.</span>
-<span id="cb14-58"><a href="#cb14-58"></a></span>
-<span id="cb14-61"><a href="#cb14-61"></a><span class="in">```{r}</span></span>
-<span id="cb14-62"><a href="#cb14-62"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">assay_name =</span> <span class="st">"tpm"</span>)</span>
-<span id="cb14-63"><a href="#cb14-63"></a><span class="in">```</span></span>
-<span id="cb14-64"><a href="#cb14-64"></a></span>
-<span id="cb14-65"><a href="#cb14-65"></a>You can also change which summary statistic function is used.</span>
-<span id="cb14-66"><a href="#cb14-66"></a>Most important here is that this function needs to work on the matrix (genes in rows, samples in columns) and return back a value for each gene, thus summarizing the values from all samples for this gene.</span>
-<span id="cb14-67"><a href="#cb14-67"></a>Thus all row-wise statistic functions (like <span class="in">`rowMeans()`</span> from package <span class="in">`stats`</span>, <span class="in">`rowMaxs()`</span>, <span class="in">`rowSds()`</span>, ... from package <span class="in">`matrixStats`</span>) are well suited.</span>
-<span id="cb14-68"><a href="#cb14-68"></a></span>
-<span id="cb14-69"><a href="#cb14-69"></a>Here, the statistic chosen is the maximum count across samples:</span>
-<span id="cb14-70"><a href="#cb14-70"></a></span>
-<span id="cb14-73"><a href="#cb14-73"></a><span class="in">```{r}</span></span>
-<span id="cb14-74"><a href="#cb14-74"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">summary_fun =</span> rowMaxs)</span>
-<span id="cb14-75"><a href="#cb14-75"></a><span class="in">```</span></span>
-<span id="cb14-76"><a href="#cb14-76"></a></span>
-<span id="cb14-77"><a href="#cb14-77"></a><span class="fu">## Plot Top Genes</span></span>
-<span id="cb14-78"><a href="#cb14-78"></a></span>
-<span id="cb14-79"><a href="#cb14-79"></a>We can then create a simple bar plot for these top genes using <span class="in">`autoplot()`</span> function.</span>
-<span id="cb14-80"><a href="#cb14-80"></a></span>
-<span id="cb14-83"><a href="#cb14-83"></a><span class="in">```{r}</span></span>
-<span id="cb14-84"><a href="#cb14-84"></a><span class="fu">autoplot</span>(result)</span>
-<span id="cb14-85"><a href="#cb14-85"></a><span class="in">```</span></span>
-<span id="cb14-86"><a href="#cb14-86"></a></span>
-<span id="cb14-87"><a href="#cb14-87"></a>By default, y-axis label is set to summary function name and assay name used to generate the object with top genes using <span class="in">`top_genes()`</span> function.</span>
-<span id="cb14-88"><a href="#cb14-88"></a>It is up to the user to optionally adjust the y-axis label via the <span class="in">`y_lab`</span> argument, and also the x-axis label and title can be adjusted.</span>
-<span id="cb14-89"><a href="#cb14-89"></a></span>
-<span id="cb14-92"><a href="#cb14-92"></a><span class="in">```{r}</span></span>
-<span id="cb14-93"><a href="#cb14-93"></a><span class="fu">autoplot</span>(result, <span class="at">y_lab =</span> <span class="st">"Maximum Count per Sample"</span>, <span class="at">x_lab =</span> <span class="st">"Genes"</span>, <span class="at">title =</span> <span class="st">"Top Genes"</span>)</span>
-<span id="cb14-94"><a href="#cb14-94"></a><span class="in">```</span></span>
-<span id="cb14-95"><a href="#cb14-95"></a></span>
-<span id="cb14-96"><a href="#cb14-96"></a><span class="fu">## Teal Module for Top Genes Plot</span></span>
-<span id="cb14-97"><a href="#cb14-97"></a></span>
-<span id="cb14-98"><a href="#cb14-98"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb14-99"><a href="#cb14-99"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb14-100"><a href="#cb14-100"></a>We can select the top genes plot under the plot type menu.</span>
-<span id="cb14-101"><a href="#cb14-101"></a>We can then use the provided teal module <span class="in">`tm_g_quality`</span> to include a QC module in our teal app.</span>
-<span id="cb14-102"><a href="#cb14-102"></a></span>
-<span id="cb14-103"><a href="#cb14-103"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
-<span id="cb14-104"><a href="#cb14-104"></a><span class="in">library(teal.modules.hermes)</span></span>
-<span id="cb14-105"><a href="#cb14-105"></a></span>
-<span id="cb14-106"><a href="#cb14-106"></a><span class="in">data &lt;- teal_data()</span></span>
-<span id="cb14-107"><a href="#cb14-107"></a><span class="in">data &lt;- within(data, {</span></span>
-<span id="cb14-108"><a href="#cb14-108"></a><span class="in">  library(hermes)</span></span>
-<span id="cb14-109"><a href="#cb14-109"></a><span class="in">  MAE &lt;- multi_assay_experiment</span></span>
-<span id="cb14-110"><a href="#cb14-110"></a><span class="in">})</span></span>
-<span id="cb14-111"><a href="#cb14-111"></a><span class="in">datanames(data) &lt;- "MAE"</span></span>
-<span id="cb14-112"><a href="#cb14-112"></a></span>
-<span id="cb14-113"><a href="#cb14-113"></a><span class="in">app &lt;- init(</span></span>
-<span id="cb14-114"><a href="#cb14-114"></a><span class="in">  data = data,</span></span>
-<span id="cb14-115"><a href="#cb14-115"></a><span class="in">  modules = modules(</span></span>
-<span id="cb14-116"><a href="#cb14-116"></a><span class="in">    tm_g_quality(</span></span>
-<span id="cb14-117"><a href="#cb14-117"></a><span class="in">      label = "quality",</span></span>
-<span id="cb14-118"><a href="#cb14-118"></a><span class="in">      mae_name = "MAE"</span></span>
-<span id="cb14-119"><a href="#cb14-119"></a><span class="in">    )</span></span>
-<span id="cb14-120"><a href="#cb14-120"></a><span class="in">  )</span></span>
-<span id="cb14-121"><a href="#cb14-121"></a><span class="in">)</span></span>
-<span id="cb14-122"><a href="#cb14-122"></a><span class="in">shinyApp(app$ui, app$server)</span></span>
-<span id="cb14-123"><a href="#cb14-123"></a><span class="in">```</span></span>
-<span id="cb14-124"><a href="#cb14-124"></a></span>
-<span id="cb14-125"><a href="#cb14-125"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb14-126"><a href="#cb14-126"></a>:::</span>
+<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> RNAG2</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Top Genes Plot</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">---</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a></span>
+<span id="cb13-7"><a href="#cb13-7"></a>------------------------------------------------------------------------</span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
+<span id="cb13-10"><a href="#cb13-10"></a></span>
+<span id="cb13-11"><a href="#cb13-11"></a>::: panel-tabset</span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a></span>
+<span id="cb13-14"><a href="#cb13-14"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to derive and plot top genes for RNA-seq RNA-seq gene expression data and to create an interactive top genes plot using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb13-15"><a href="#cb13-15"></a></span>
+<span id="cb13-16"><a href="#cb13-16"></a>Derivation of top genes uses <span class="in">`HermesData`</span> as input.</span>
+<span id="cb13-17"><a href="#cb13-17"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details on how to import, filter and normalize <span class="in">`HermesData`</span>.</span>
+<span id="cb13-18"><a href="#cb13-18"></a></span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a><span class="in">library(hermes)</span></span>
+<span id="cb13-21"><a href="#cb13-21"></a><span class="in">object &lt;- hermes_data %&gt;%</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a><span class="in">  add_quality_flags() %&gt;%</span></span>
+<span id="cb13-23"><a href="#cb13-23"></a><span class="in">  filter() %&gt;%</span></span>
+<span id="cb13-24"><a href="#cb13-24"></a><span class="in">  normalize()</span></span>
+<span id="cb13-25"><a href="#cb13-25"></a><span class="in">```</span></span>
+<span id="cb13-26"><a href="#cb13-26"></a></span>
+<span id="cb13-27"><a href="#cb13-27"></a><span class="fu">## Derive Top Genes</span></span>
+<span id="cb13-28"><a href="#cb13-28"></a></span>
+<span id="cb13-29"><a href="#cb13-29"></a>We can derive top most expressed genes in <span class="in">`HermesData`</span> using the <span class="in">`top_genes()`</span> function.</span>
+<span id="cb13-30"><a href="#cb13-30"></a>By default, this function uses the <span class="in">`counts`</span> assay and summary statistic function <span class="in">`rowMeans()`</span> with no minimum threshold to derive the 10 most expressed genes.</span>
+<span id="cb13-31"><a href="#cb13-31"></a>You can change this number, or instead work with a minimum threshold on the derived statistic.</span>
+<span id="cb13-32"><a href="#cb13-32"></a></span>
+<span id="cb13-35"><a href="#cb13-35"></a><span class="in">```{r}</span></span>
+<span id="cb13-36"><a href="#cb13-36"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object)</span>
+<span id="cb13-37"><a href="#cb13-37"></a><span class="in">```</span></span>
+<span id="cb13-38"><a href="#cb13-38"></a></span>
+<span id="cb13-39"><a href="#cb13-39"></a>If we want to derive only the 5 most expressed genes, we can specify this via <span class="in">`n_top`</span>.</span>
+<span id="cb13-40"><a href="#cb13-40"></a></span>
+<span id="cb13-43"><a href="#cb13-43"></a><span class="in">```{r}</span></span>
+<span id="cb13-44"><a href="#cb13-44"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">n_top =</span> <span class="dv">5</span>)</span>
+<span id="cb13-45"><a href="#cb13-45"></a><span class="in">```</span></span>
+<span id="cb13-46"><a href="#cb13-46"></a></span>
+<span id="cb13-47"><a href="#cb13-47"></a>Alternatively, we can also set a minimum threshold of average counts (across samples).</span>
+<span id="cb13-48"><a href="#cb13-48"></a></span>
+<span id="cb13-51"><a href="#cb13-51"></a><span class="in">```{r}</span></span>
+<span id="cb13-52"><a href="#cb13-52"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">min_threshold =</span> <span class="dv">50000</span>)</span>
+<span id="cb13-53"><a href="#cb13-53"></a><span class="in">```</span></span>
+<span id="cb13-54"><a href="#cb13-54"></a></span>
+<span id="cb13-55"><a href="#cb13-55"></a>If we want to derive top genes for a specific assay, we can also specify this via <span class="in">`assay_name`</span>.</span>
+<span id="cb13-56"><a href="#cb13-56"></a>By default, <span class="in">`top_genes()`</span> function uses the <span class="in">`counts`</span> assay.</span>
+<span id="cb13-57"><a href="#cb13-57"></a>It is important to ensure that the same normalization method is applied on the <span class="in">`HermesData`</span> object prior to deriving top genes, otherwise the assay would not be available here.</span>
+<span id="cb13-58"><a href="#cb13-58"></a></span>
+<span id="cb13-61"><a href="#cb13-61"></a><span class="in">```{r}</span></span>
+<span id="cb13-62"><a href="#cb13-62"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">assay_name =</span> <span class="st">"tpm"</span>)</span>
+<span id="cb13-63"><a href="#cb13-63"></a><span class="in">```</span></span>
+<span id="cb13-64"><a href="#cb13-64"></a></span>
+<span id="cb13-65"><a href="#cb13-65"></a>You can also change which summary statistic function is used.</span>
+<span id="cb13-66"><a href="#cb13-66"></a>Most important here is that this function needs to work on the matrix (genes in rows, samples in columns) and return back a value for each gene, thus summarizing the values from all samples for this gene.</span>
+<span id="cb13-67"><a href="#cb13-67"></a>Thus all row-wise statistic functions (like <span class="in">`rowMeans()`</span> from package <span class="in">`stats`</span>, <span class="in">`rowMaxs()`</span>, <span class="in">`rowSds()`</span>, ... from package <span class="in">`matrixStats`</span>) are well suited.</span>
+<span id="cb13-68"><a href="#cb13-68"></a></span>
+<span id="cb13-69"><a href="#cb13-69"></a>Here, the statistic chosen is the maximum count across samples:</span>
+<span id="cb13-70"><a href="#cb13-70"></a></span>
+<span id="cb13-73"><a href="#cb13-73"></a><span class="in">```{r}</span></span>
+<span id="cb13-74"><a href="#cb13-74"></a>result <span class="ot">&lt;-</span> <span class="fu">top_genes</span>(object, <span class="at">summary_fun =</span> rowMaxs)</span>
+<span id="cb13-75"><a href="#cb13-75"></a><span class="in">```</span></span>
+<span id="cb13-76"><a href="#cb13-76"></a></span>
+<span id="cb13-77"><a href="#cb13-77"></a><span class="fu">## Plot Top Genes</span></span>
+<span id="cb13-78"><a href="#cb13-78"></a></span>
+<span id="cb13-79"><a href="#cb13-79"></a>We can then create a simple bar plot for these top genes using <span class="in">`autoplot()`</span> function.</span>
+<span id="cb13-80"><a href="#cb13-80"></a></span>
+<span id="cb13-83"><a href="#cb13-83"></a><span class="in">```{r}</span></span>
+<span id="cb13-84"><a href="#cb13-84"></a><span class="fu">autoplot</span>(result)</span>
+<span id="cb13-85"><a href="#cb13-85"></a><span class="in">```</span></span>
+<span id="cb13-86"><a href="#cb13-86"></a></span>
+<span id="cb13-87"><a href="#cb13-87"></a>By default, y-axis label is set to summary function name and assay name used to generate the object with top genes using <span class="in">`top_genes()`</span> function.</span>
+<span id="cb13-88"><a href="#cb13-88"></a>It is up to the user to optionally adjust the y-axis label via the <span class="in">`y_lab`</span> argument, and also the x-axis label and title can be adjusted.</span>
+<span id="cb13-89"><a href="#cb13-89"></a></span>
+<span id="cb13-92"><a href="#cb13-92"></a><span class="in">```{r}</span></span>
+<span id="cb13-93"><a href="#cb13-93"></a><span class="fu">autoplot</span>(result, <span class="at">y_lab =</span> <span class="st">"Maximum Count per Sample"</span>, <span class="at">x_lab =</span> <span class="st">"Genes"</span>, <span class="at">title =</span> <span class="st">"Top Genes"</span>)</span>
+<span id="cb13-94"><a href="#cb13-94"></a><span class="in">```</span></span>
+<span id="cb13-95"><a href="#cb13-95"></a></span>
+<span id="cb13-96"><a href="#cb13-96"></a><span class="fu">## Teal Module for Top Genes Plot</span></span>
+<span id="cb13-97"><a href="#cb13-97"></a></span>
+<span id="cb13-98"><a href="#cb13-98"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb13-99"><a href="#cb13-99"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb13-100"><a href="#cb13-100"></a>We can select the top genes plot under the plot type menu.</span>
+<span id="cb13-101"><a href="#cb13-101"></a>We can then use the provided teal module <span class="in">`tm_g_quality`</span> to include a QC module in our teal app.</span>
+<span id="cb13-102"><a href="#cb13-102"></a></span>
+<span id="cb13-103"><a href="#cb13-103"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
+<span id="cb13-104"><a href="#cb13-104"></a><span class="in">library(teal.modules.hermes)</span></span>
+<span id="cb13-105"><a href="#cb13-105"></a></span>
+<span id="cb13-106"><a href="#cb13-106"></a><span class="in">data &lt;- teal_data()</span></span>
+<span id="cb13-107"><a href="#cb13-107"></a><span class="in">data &lt;- within(data, {</span></span>
+<span id="cb13-108"><a href="#cb13-108"></a><span class="in">  library(hermes)</span></span>
+<span id="cb13-109"><a href="#cb13-109"></a><span class="in">  MAE &lt;- multi_assay_experiment</span></span>
+<span id="cb13-110"><a href="#cb13-110"></a><span class="in">})</span></span>
+<span id="cb13-111"><a href="#cb13-111"></a><span class="in">datanames(data) &lt;- "MAE"</span></span>
+<span id="cb13-112"><a href="#cb13-112"></a></span>
+<span id="cb13-113"><a href="#cb13-113"></a><span class="in">app &lt;- init(</span></span>
+<span id="cb13-114"><a href="#cb13-114"></a><span class="in">  data = data,</span></span>
+<span id="cb13-115"><a href="#cb13-115"></a><span class="in">  modules = modules(</span></span>
+<span id="cb13-116"><a href="#cb13-116"></a><span class="in">    tm_g_quality(</span></span>
+<span id="cb13-117"><a href="#cb13-117"></a><span class="in">      label = "quality",</span></span>
+<span id="cb13-118"><a href="#cb13-118"></a><span class="in">      mae_name = "MAE"</span></span>
+<span id="cb13-119"><a href="#cb13-119"></a><span class="in">    )</span></span>
+<span id="cb13-120"><a href="#cb13-120"></a><span class="in">  )</span></span>
+<span id="cb13-121"><a href="#cb13-121"></a><span class="in">)</span></span>
+<span id="cb13-122"><a href="#cb13-122"></a><span class="in">shinyApp(app$ui, app$server)</span></span>
+<span id="cb13-123"><a href="#cb13-123"></a><span class="in">```</span></span>
+<span id="cb13-124"><a href="#cb13-124"></a></span>
+<span id="cb13-125"><a href="#cb13-125"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb13-126"><a href="#cb13-126"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

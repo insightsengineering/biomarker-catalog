@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>SFG5C – Biomarker Analysis Catalog - Dev</title>
 <style>
@@ -950,7 +950,7 @@ cookieconsent.run({
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a>AGE_probs <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>adtte <span class="ot">&lt;-</span> scda<span class="sc">::</span><span class="fu">synthetic_cdisc_data</span>(<span class="st">"rcd_2022_06_27"</span>)<span class="sc">$</span>adtte <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>adtte <span class="ot">&lt;-</span> random.cdisc.data<span class="sc">::</span>cadtte <span class="sc">%&gt;%</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">df_explicit_na</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">filter</span>(</span>
 <span id="cb1-9"><a href="#cb1-9"></a>    PARAMCD <span class="sc">==</span> <span class="st">"OS"</span></span>
@@ -1020,23 +1020,26 @@ cookieconsent.run({
 <span id="cb2-36"><a href="#cb2-36"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"(33%,66%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>),</span>
 <span id="cb2-37"><a href="#cb2-37"></a>  <span class="fu">tables_all</span>(<span class="at">filter_var =</span> <span class="st">"AGE_BIN2"</span>, <span class="at">filter_condition =</span> <span class="st">"(66%,100%]"</span>, <span class="at">sub_var =</span> <span class="st">"BMRKR2_BIN"</span>)</span>
 <span id="cb2-38"><a href="#cb2-38"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>Warning in coxph.fit(X, Y, istrat, offset, init, control, weights = weights, :
+Loglik converged before variable 1 ; coefficient may be infinite.</code></pre>
+</div>
 </div>
 <p>We can now produce the forest plot using the <code>g_forest()</code> function.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
-<span id="cb3-2"><a href="#cb3-2"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"AGE_BIN2 = [0%,33%]"</span>),</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"AGE_BIN2 = (33%,66%]"</span>),</span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = (66%,100%]"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6"></a>)</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">g_forest</span>(</span>
-<span id="cb3-8"><a href="#cb3-8"></a>  result,</span>
-<span id="cb3-9"><a href="#cb3-9"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
-<span id="cb3-10"><a href="#cb3-10"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>one_table <span class="ot">&lt;-</span> tables_list[[<span class="dv">1</span>]]</span>
+<span id="cb4-2"><a href="#cb4-2"></a>result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">1</span>]], <span class="st">"AGE_BIN2 = [0%,33%]"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">2</span>]], <span class="st">"AGE_BIN2 = (33%,66%]"</span>),</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">add_subtitle</span>(tables_list[[<span class="dv">3</span>]], <span class="st">"AGE_BIN = (66%,100%]"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="fu">g_forest</span>(</span>
+<span id="cb4-8"><a href="#cb4-8"></a>  result,</span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="at">col_x =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_x"</span>),</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="at">col_ci =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_ci"</span>),</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="at">forest_header =</span> <span class="fu">attr</span>(one_table, <span class="st">"forest_header"</span>),</span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="at">col_symbol_size =</span> <span class="fu">attr</span>(one_table, <span class="st">"col_symbol_size"</span>)</span>
+<span id="cb4-13"><a href="#cb4-13"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="sfg05c_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1047,11 +1050,11 @@ cookieconsent.run({
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1072,23 +1075,36 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.1.4           tern_0.9.3.9016       rtables_0.6.6.9010   
-[4] magrittr_2.0.3        formatters_0.5.5.9010
+[1] dplyr_1.1.4           tern_0.9.5.9022       rtables_0.6.9.9014   
+[4] magrittr_2.0.3        formatters_0.5.9.9001
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.6-5      gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.2   
- [5] tidyselect_1.2.0  tidyr_1.3.1       splines_4.3.2     scales_1.3.0     
- [9] yaml_2.3.8        fastmap_1.1.1     lattice_0.22-5    ggplot2_3.4.4    
-[13] R6_2.5.1          labeling_0.4.3    generics_0.1.3    knitr_1.45       
-[17] forcats_1.0.0     rbibutils_2.2.16  htmlwidgets_1.6.4 backports_1.4.1  
-[21] checkmate_2.3.1   tibble_3.2.1      munsell_0.5.0     scda_0.1.6.9016  
-[25] pillar_1.9.0      rlang_1.1.3       utf8_1.2.4        stringi_1.8.3    
-[29] broom_1.0.5       xfun_0.41         cli_3.6.2         withr_3.0.0      
-[33] Rdpack_2.6        digest_0.6.34     grid_4.3.2        cowplot_1.1.3    
-[37] lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23     glue_1.7.0       
-[41] farver_2.1.1      codetools_0.2-19  survival_3.5-7    fansi_1.0.6      
-[45] colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2       tools_4.3.2      
-[49] pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+ [1] Matrix_1.7-0                  gtable_0.3.5                 
+ [3] jsonlite_1.8.8                compiler_4.4.1               
+ [5] tidyselect_1.2.1              stringr_1.5.1                
+ [7] tidyr_1.3.1                   splines_4.4.1                
+ [9] scales_1.3.0                  yaml_2.3.10                  
+[11] fastmap_1.2.0                 lattice_0.22-6               
+[13] ggplot2_3.5.1                 R6_2.5.1                     
+[15] labeling_0.4.3                generics_0.1.3               
+[17] knitr_1.48                    forcats_1.0.0                
+[19] rbibutils_2.2.16              htmlwidgets_1.6.4            
+[21] backports_1.5.0               checkmate_2.3.2              
+[23] tibble_3.2.1                  munsell_0.5.1                
+[25] pillar_1.9.0                  rlang_1.1.4                  
+[27] utf8_1.2.4                    broom_1.0.6                  
+[29] stringi_1.8.4                 xfun_0.47                    
+[31] cli_3.6.3                     withr_3.0.1                  
+[33] Rdpack_2.6.1                  digest_0.6.37                
+[35] grid_4.4.1                    cowplot_1.1.3                
+[37] lifecycle_1.0.4               vctrs_0.6.5                  
+[39] evaluate_0.24.0               glue_1.7.0                   
+[41] farver_2.1.2                  codetools_0.2-20             
+[43] survival_3.7-0                random.cdisc.data_0.3.15.9009
+[45] fansi_1.0.6                   colorspace_2.1-1             
+[47] purrr_1.0.2                   rmarkdown_2.28               
+[49] tools_4.4.1                   pkgconfig_2.0.3              
+[51] htmltools_0.5.8.1            </code></pre>
 </div>
 </div>
 </div>
@@ -1725,83 +1741,83 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> SFG5C</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="an">subtitle:</span><span class="co"> Survival Forest Graph for Subgroups Defined by Multiple Bins of Continuous Variable</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="an">categories:</span><span class="co"> [SFG]</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="co">---</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a>------------------------------------------------------------------------</span>
-<span id="cb6-8"><a href="#cb6-8"></a></span>
-<span id="cb6-9"><a href="#cb6-9"></a>::: panel-tabset</span>
-<span id="cb6-10"><a href="#cb6-10"></a>{{&lt; include setup.qmd &gt;}}</span>
-<span id="cb6-11"><a href="#cb6-11"></a></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">## Plot</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a></span>
-<span id="cb6-14"><a href="#cb6-14"></a>First, we derive a new variable <span class="in">`AGE_BIN2`</span> with three bins for age, in a similar way as we derived <span class="in">`AGE_BIN`</span> above.</span>
-<span id="cb6-15"><a href="#cb6-15"></a>We then use the same <span class="in">`tables_all()`</span> function above and combine all subtables using <span class="in">`rbind()`</span> to tabulate statistics to be able to use as an input for forest plot.</span>
-<span id="cb6-16"><a href="#cb6-16"></a></span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="in">tables_all &lt;- function(filter_var, filter_condition, sub_var) {</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a><span class="in">  dataset &lt;- adtte %&gt;%</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a><span class="in">    filter(!!as.name(filter_var) == filter_condition)</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a><span class="in">  if (nrow(dataset) == 0) {</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a><span class="in">    stop(paste("Subset", filter_var, "==", filter_condition, "is empty"))</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a><span class="in">  }</span></span>
-<span id="cb6-24"><a href="#cb6-24"></a><span class="in">  tbl &lt;- extract_survival_subgroups(</span></span>
-<span id="cb6-25"><a href="#cb6-25"></a><span class="in">    variables = list(</span></span>
-<span id="cb6-26"><a href="#cb6-26"></a><span class="in">      tte = "AVAL",</span></span>
-<span id="cb6-27"><a href="#cb6-27"></a><span class="in">      is_event = "is_event",</span></span>
-<span id="cb6-28"><a href="#cb6-28"></a><span class="in">      arm = "ARM_BIN",</span></span>
-<span id="cb6-29"><a href="#cb6-29"></a><span class="in">      subgroups = sub_var</span></span>
-<span id="cb6-30"><a href="#cb6-30"></a><span class="in">    ),</span></span>
-<span id="cb6-31"><a href="#cb6-31"></a><span class="in">    label_all = "ITT",</span></span>
-<span id="cb6-32"><a href="#cb6-32"></a><span class="in">    data = dataset</span></span>
-<span id="cb6-33"><a href="#cb6-33"></a><span class="in">  )</span></span>
-<span id="cb6-34"><a href="#cb6-34"></a><span class="in">  basic_table() %&gt;%</span></span>
-<span id="cb6-35"><a href="#cb6-35"></a><span class="in">    tabulate_survival_subgroups(</span></span>
-<span id="cb6-36"><a href="#cb6-36"></a><span class="in">      df = tbl,</span></span>
-<span id="cb6-37"><a href="#cb6-37"></a><span class="in">      vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),</span></span>
-<span id="cb6-38"><a href="#cb6-38"></a><span class="in">      time_unit = dataset$AVALU[1]</span></span>
-<span id="cb6-39"><a href="#cb6-39"></a><span class="in">    )</span></span>
-<span id="cb6-40"><a href="#cb6-40"></a><span class="in">}</span></span>
-<span id="cb6-41"><a href="#cb6-41"></a></span>
-<span id="cb6-42"><a href="#cb6-42"></a><span class="in">add_subtitle &lt;- function(sub_tab, sub_title) {</span></span>
-<span id="cb6-43"><a href="#cb6-43"></a><span class="in">  label_at_path(sub_tab, path = row_paths(sub_tab)[[1]][1]) &lt;- sub_title</span></span>
-<span id="cb6-44"><a href="#cb6-44"></a><span class="in">  sub_tab</span></span>
-<span id="cb6-45"><a href="#cb6-45"></a><span class="in">}</span></span>
-<span id="cb6-46"><a href="#cb6-46"></a></span>
-<span id="cb6-47"><a href="#cb6-47"></a><span class="in">AGE_probs2 &lt;- c(0.33, 0.66)</span></span>
-<span id="cb6-48"><a href="#cb6-48"></a></span>
-<span id="cb6-49"><a href="#cb6-49"></a><span class="in">adtte &lt;- adtte %&gt;%</span></span>
-<span id="cb6-50"><a href="#cb6-50"></a><span class="in">  mutate(AGE_BIN2 = cut_quantile_bins(AGE, probs = AGE_probs2))</span></span>
-<span id="cb6-51"><a href="#cb6-51"></a><span class="in">tables_list &lt;- list(</span></span>
-<span id="cb6-52"><a href="#cb6-52"></a><span class="in">  tables_all(filter_var = "AGE_BIN2", filter_condition = "[0%,33%]", sub_var = "BMRKR2_BIN"),</span></span>
-<span id="cb6-53"><a href="#cb6-53"></a><span class="in">  tables_all(filter_var = "AGE_BIN2", filter_condition = "(33%,66%]", sub_var = "BMRKR2_BIN"),</span></span>
-<span id="cb6-54"><a href="#cb6-54"></a><span class="in">  tables_all(filter_var = "AGE_BIN2", filter_condition = "(66%,100%]", sub_var = "BMRKR2_BIN")</span></span>
-<span id="cb6-55"><a href="#cb6-55"></a><span class="in">)</span></span>
-<span id="cb6-56"><a href="#cb6-56"></a><span class="in">```</span></span>
-<span id="cb6-57"><a href="#cb6-57"></a></span>
-<span id="cb6-58"><a href="#cb6-58"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
-<span id="cb6-59"><a href="#cb6-59"></a></span>
-<span id="cb6-60"><a href="#cb6-60"></a><span class="in">```{r, fig.width = 15, fig.height = 6}</span></span>
-<span id="cb6-61"><a href="#cb6-61"></a><span class="in">one_table &lt;- tables_list[[1]]</span></span>
-<span id="cb6-62"><a href="#cb6-62"></a><span class="in">result &lt;- rbind(</span></span>
-<span id="cb6-63"><a href="#cb6-63"></a><span class="in">  add_subtitle(tables_list[[1]], "AGE_BIN2 = [0%,33%]"),</span></span>
-<span id="cb6-64"><a href="#cb6-64"></a><span class="in">  add_subtitle(tables_list[[2]], "AGE_BIN2 = (33%,66%]"),</span></span>
-<span id="cb6-65"><a href="#cb6-65"></a><span class="in">  add_subtitle(tables_list[[3]], "AGE_BIN = (66%,100%]")</span></span>
-<span id="cb6-66"><a href="#cb6-66"></a><span class="in">)</span></span>
-<span id="cb6-67"><a href="#cb6-67"></a><span class="in">g_forest(</span></span>
-<span id="cb6-68"><a href="#cb6-68"></a><span class="in">  result,</span></span>
-<span id="cb6-69"><a href="#cb6-69"></a><span class="in">  col_x = attr(one_table, "col_x"),</span></span>
-<span id="cb6-70"><a href="#cb6-70"></a><span class="in">  col_ci = attr(one_table, "col_ci"),</span></span>
-<span id="cb6-71"><a href="#cb6-71"></a><span class="in">  forest_header = attr(one_table, "forest_header"),</span></span>
-<span id="cb6-72"><a href="#cb6-72"></a><span class="in">  col_symbol_size = attr(one_table, "col_symbol_size")</span></span>
-<span id="cb6-73"><a href="#cb6-73"></a><span class="in">)</span></span>
-<span id="cb6-74"><a href="#cb6-74"></a><span class="in">```</span></span>
-<span id="cb6-75"><a href="#cb6-75"></a></span>
-<span id="cb6-76"><a href="#cb6-76"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
-<span id="cb6-77"><a href="#cb6-77"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> SFG5C</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="an">subtitle:</span><span class="co"> Survival Forest Graph for Subgroups Defined by Multiple Bins of Continuous Variable</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="an">categories:</span><span class="co"> [SFG]</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">---</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>------------------------------------------------------------------------</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>::: panel-tabset</span>
+<span id="cb7-10"><a href="#cb7-10"></a>{{&lt; include setup.qmd &gt;}}</span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">## Plot</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>First, we derive a new variable <span class="in">`AGE_BIN2`</span> with three bins for age, in a similar way as we derived <span class="in">`AGE_BIN`</span> above.</span>
+<span id="cb7-15"><a href="#cb7-15"></a>We then use the same <span class="in">`tables_all()`</span> function above and combine all subtables using <span class="in">`rbind()`</span> to tabulate statistics to be able to use as an input for forest plot.</span>
+<span id="cb7-16"><a href="#cb7-16"></a></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a><span class="in">tables_all &lt;- function(filter_var, filter_condition, sub_var) {</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="in">  dataset &lt;- adtte %&gt;%</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="in">    filter(!!as.name(filter_var) == filter_condition)</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a><span class="in">  if (nrow(dataset) == 0) {</span></span>
+<span id="cb7-22"><a href="#cb7-22"></a><span class="in">    stop(paste("Subset", filter_var, "==", filter_condition, "is empty"))</span></span>
+<span id="cb7-23"><a href="#cb7-23"></a><span class="in">  }</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a><span class="in">  tbl &lt;- extract_survival_subgroups(</span></span>
+<span id="cb7-25"><a href="#cb7-25"></a><span class="in">    variables = list(</span></span>
+<span id="cb7-26"><a href="#cb7-26"></a><span class="in">      tte = "AVAL",</span></span>
+<span id="cb7-27"><a href="#cb7-27"></a><span class="in">      is_event = "is_event",</span></span>
+<span id="cb7-28"><a href="#cb7-28"></a><span class="in">      arm = "ARM_BIN",</span></span>
+<span id="cb7-29"><a href="#cb7-29"></a><span class="in">      subgroups = sub_var</span></span>
+<span id="cb7-30"><a href="#cb7-30"></a><span class="in">    ),</span></span>
+<span id="cb7-31"><a href="#cb7-31"></a><span class="in">    label_all = "ITT",</span></span>
+<span id="cb7-32"><a href="#cb7-32"></a><span class="in">    data = dataset</span></span>
+<span id="cb7-33"><a href="#cb7-33"></a><span class="in">  )</span></span>
+<span id="cb7-34"><a href="#cb7-34"></a><span class="in">  basic_table() %&gt;%</span></span>
+<span id="cb7-35"><a href="#cb7-35"></a><span class="in">    tabulate_survival_subgroups(</span></span>
+<span id="cb7-36"><a href="#cb7-36"></a><span class="in">      df = tbl,</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a><span class="in">      vars = c("n_tot_events", "n", "n_events", "median", "hr", "ci"),</span></span>
+<span id="cb7-38"><a href="#cb7-38"></a><span class="in">      time_unit = dataset$AVALU[1]</span></span>
+<span id="cb7-39"><a href="#cb7-39"></a><span class="in">    )</span></span>
+<span id="cb7-40"><a href="#cb7-40"></a><span class="in">}</span></span>
+<span id="cb7-41"><a href="#cb7-41"></a></span>
+<span id="cb7-42"><a href="#cb7-42"></a><span class="in">add_subtitle &lt;- function(sub_tab, sub_title) {</span></span>
+<span id="cb7-43"><a href="#cb7-43"></a><span class="in">  label_at_path(sub_tab, path = row_paths(sub_tab)[[1]][1]) &lt;- sub_title</span></span>
+<span id="cb7-44"><a href="#cb7-44"></a><span class="in">  sub_tab</span></span>
+<span id="cb7-45"><a href="#cb7-45"></a><span class="in">}</span></span>
+<span id="cb7-46"><a href="#cb7-46"></a></span>
+<span id="cb7-47"><a href="#cb7-47"></a><span class="in">AGE_probs2 &lt;- c(0.33, 0.66)</span></span>
+<span id="cb7-48"><a href="#cb7-48"></a></span>
+<span id="cb7-49"><a href="#cb7-49"></a><span class="in">adtte &lt;- adtte %&gt;%</span></span>
+<span id="cb7-50"><a href="#cb7-50"></a><span class="in">  mutate(AGE_BIN2 = cut_quantile_bins(AGE, probs = AGE_probs2))</span></span>
+<span id="cb7-51"><a href="#cb7-51"></a><span class="in">tables_list &lt;- list(</span></span>
+<span id="cb7-52"><a href="#cb7-52"></a><span class="in">  tables_all(filter_var = "AGE_BIN2", filter_condition = "[0%,33%]", sub_var = "BMRKR2_BIN"),</span></span>
+<span id="cb7-53"><a href="#cb7-53"></a><span class="in">  tables_all(filter_var = "AGE_BIN2", filter_condition = "(33%,66%]", sub_var = "BMRKR2_BIN"),</span></span>
+<span id="cb7-54"><a href="#cb7-54"></a><span class="in">  tables_all(filter_var = "AGE_BIN2", filter_condition = "(66%,100%]", sub_var = "BMRKR2_BIN")</span></span>
+<span id="cb7-55"><a href="#cb7-55"></a><span class="in">)</span></span>
+<span id="cb7-56"><a href="#cb7-56"></a><span class="in">```</span></span>
+<span id="cb7-57"><a href="#cb7-57"></a></span>
+<span id="cb7-58"><a href="#cb7-58"></a>We can now produce the forest plot using the <span class="in">`g_forest()`</span> function.</span>
+<span id="cb7-59"><a href="#cb7-59"></a></span>
+<span id="cb7-60"><a href="#cb7-60"></a><span class="in">```{r, fig.width = 15, fig.height = 6}</span></span>
+<span id="cb7-61"><a href="#cb7-61"></a><span class="in">one_table &lt;- tables_list[[1]]</span></span>
+<span id="cb7-62"><a href="#cb7-62"></a><span class="in">result &lt;- rbind(</span></span>
+<span id="cb7-63"><a href="#cb7-63"></a><span class="in">  add_subtitle(tables_list[[1]], "AGE_BIN2 = [0%,33%]"),</span></span>
+<span id="cb7-64"><a href="#cb7-64"></a><span class="in">  add_subtitle(tables_list[[2]], "AGE_BIN2 = (33%,66%]"),</span></span>
+<span id="cb7-65"><a href="#cb7-65"></a><span class="in">  add_subtitle(tables_list[[3]], "AGE_BIN = (66%,100%]")</span></span>
+<span id="cb7-66"><a href="#cb7-66"></a><span class="in">)</span></span>
+<span id="cb7-67"><a href="#cb7-67"></a><span class="in">g_forest(</span></span>
+<span id="cb7-68"><a href="#cb7-68"></a><span class="in">  result,</span></span>
+<span id="cb7-69"><a href="#cb7-69"></a><span class="in">  col_x = attr(one_table, "col_x"),</span></span>
+<span id="cb7-70"><a href="#cb7-70"></a><span class="in">  col_ci = attr(one_table, "col_ci"),</span></span>
+<span id="cb7-71"><a href="#cb7-71"></a><span class="in">  forest_header = attr(one_table, "forest_header"),</span></span>
+<span id="cb7-72"><a href="#cb7-72"></a><span class="in">  col_symbol_size = attr(one_table, "col_symbol_size")</span></span>
+<span id="cb7-73"><a href="#cb7-73"></a><span class="in">)</span></span>
+<span id="cb7-74"><a href="#cb7-74"></a><span class="in">```</span></span>
+<span id="cb7-75"><a href="#cb7-75"></a></span>
+<span id="cb7-76"><a href="#cb7-76"></a>{{&lt; include ../../misc/session_info.qmd &gt;}}</span>
+<span id="cb7-77"><a href="#cb7-77"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">

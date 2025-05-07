@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,8 +21,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -69,17 +70,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-662ae1889177880cb371f83234c0a158.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-e2182856f2c32102dd26b05a5ef16cb5.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-662ae1889177880cb371f83234c0a158.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-65bc2e334d5ed542638bad88f98d2a34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-8f59d2f2f2d1f23072d7cae7cea960c6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-511053daf38071c4c7cb86003319ffe2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-06dd196ffd10e97cb1afad1fad0db363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-511053daf38071c4c7cb86003319ffe2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -207,7 +211,169 @@ window.Quarto = {
 <meta property="og:site_name" content="Biomarker Analysis Catalog - Stable">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1003,6 +1169,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Graphs</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
@@ -1026,7 +1193,7 @@ window.Quarto = {
 <p>This is a collection of Biomarker Analysis graph templates.</p>
 <div id="listing-graphs" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QUc=" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
+<div class="g-col-1" data-index="0" data-categories="QUc=" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
 <a href="../graphs/ag01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="ag01_files/figure-html/unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1035,11 +1202,11 @@ window.Quarto = {
 AG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUc='); return false;">
-AG
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUc='); return false;">AG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 In this page we collect standard utilities for plotting which can be applied in principle to all graphs. Then we don’t need to repeat explaining these in each of the other…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1048,10 +1215,9 @@ In this page we collect standard utilities for plotting which can be applied in 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="REc=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
+<div class="g-col-1" data-index="1" data-categories="REc=" data-listing-file-modified-sort="1746638698834" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
 <a href="../graphs/DG1/dg01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="DG1/dg01_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1060,11 +1226,11 @@ In this page we collect standard utilities for plotting which can be applied in 
 DG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1073,10 +1239,9 @@ We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="REc=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="2" data-listing-word-count-sort="240">
+<div class="g-col-1" data-index="2" data-categories="REc=" data-listing-file-modified-sort="1746638698834" data-listing-reading-time-sort="2" data-listing-word-count-sort="240">
 <a href="../graphs/DG1/dg01a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="DG1/dg01a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1085,11 +1250,11 @@ We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</co
 DG1A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1098,10 +1263,9 @@ We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="REc=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="56">
+<div class="g-col-1" data-index="3" data-categories="REc=" data-listing-file-modified-sort="1746638698834" data-listing-reading-time-sort="1" data-listing-word-count-sort="56">
 <a href="../graphs/DG1/dg01b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="DG1/dg01b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1110,11 +1274,11 @@ We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</co
 DG1B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1123,10 +1287,9 @@ We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="REc=" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="2" data-listing-word-count-sort="307">
+<div class="g-col-1" data-index="4" data-categories="REc=" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="307">
 <a href="../graphs/dg02.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="dg02_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1135,11 +1298,11 @@ We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</co
 DG2
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The graph below plots the distribution of a biomarker variable (on a continuous scale) as a boxplot by one or more categorical clinical variables with overlaid points.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1148,10 +1311,9 @@ The graph below plots the distribution of a biomarker variable (on a continuous 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="REc=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="2" data-listing-word-count-sort="220">
+<div class="g-col-1" data-index="5" data-categories="REc=" data-listing-file-modified-sort="1746638698834" data-listing-reading-time-sort="2" data-listing-word-count-sort="220">
 <a href="../graphs/DG3/dg03.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="DG3/dg03_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1160,11 +1322,11 @@ The graph below plots the distribution of a biomarker variable (on a continuous 
 DG3
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1173,10 +1335,9 @@ The graphs below summarize the distribution of a categorical biomarker variable 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="REc=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
+<div class="g-col-1" data-index="6" data-categories="REc=" data-listing-file-modified-sort="1746638698834" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
 <a href="../graphs/DG3/dg03a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="DG3/dg03a_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1185,11 +1346,11 @@ The graphs below summarize the distribution of a categorical biomarker variable 
 DG3A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1198,10 +1359,9 @@ The graphs below summarize the distribution of a categorical biomarker variable 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="REc=" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
+<div class="g-col-1" data-index="7" data-categories="REc=" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
 <a href="../graphs/dg04.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="dg04_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1210,11 +1370,11 @@ The graphs below summarize the distribution of a categorical biomarker variable 
 DG4
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">
-DG
+
+<div class="listing-category" onclick="window.quartoListingCategory('REc='); return false;">DG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The graph below plots two continuous (biomarker) variables against each other.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1223,10 +1383,9 @@ The graph below plots two continuous (biomarker) variables against each other.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
+<div class="g-col-1" data-index="8" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
 <a href="../graphs/KG1/kg01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG1/kg01_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1235,11 +1394,11 @@ The graph below plots two continuous (biomarker) variables against each other.
 KG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1248,10 +1407,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="80">
+<div class="g-col-1" data-index="9" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="80">
 <a href="../graphs/KG1/kg01a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG1/kg01a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1260,11 +1418,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 KG1A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1273,10 +1431,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
+<div class="g-col-1" data-index="10" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
 <a href="../graphs/KG1/kg01b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG1/kg01b_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1285,11 +1442,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 KG1B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1298,10 +1455,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
+<div class="g-col-1" data-index="11" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
 <a href="../graphs/KG2/kg02.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG2/kg02_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1310,11 +1466,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 KG2
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in KG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1323,10 +1479,9 @@ The same setup as in KG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
+<div class="g-col-1" data-index="12" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
 <a href="../graphs/KG2/kg02a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG2/kg02a_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1335,11 +1490,11 @@ The same setup as in KG1 is used.
 KG2A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in KG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1348,10 +1503,9 @@ The same setup as in KG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="S0c=" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
+<div class="g-col-1" data-index="13" data-categories="S0c=" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
 <a href="../graphs/kg03.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="kg03_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1360,11 +1514,11 @@ The same setup as in KG1 is used.
 KG3
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same data set as in KG1A is used. The difference is that here we use the categorical biomarker variable <code>BMRKR2</code> as the treatment arm in <code>variables</code> which is then used by <code>g_k…</code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1373,10 +1527,9 @@ The same data set as in KG1A is used. The difference is that here we use the cat
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="14" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="g-col-1" data-index="14" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <a href="../graphs/KG4/kg04.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG4/kg04_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1385,11 +1538,11 @@ The same data set as in KG1A is used. The difference is that here we use the cat
 KG4
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 A setup similar to KG1 is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1398,10 +1551,9 @@ A setup similar to KG1 is used, with some additional data manipulation steps to 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="15" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
+<div class="g-col-1" data-index="15" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
 <a href="../graphs/KG4/kg04a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG4/kg04a_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1410,11 +1562,11 @@ A setup similar to KG1 is used, with some additional data manipulation steps to 
 KG4A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 A setup similar to KG1 is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1423,10 +1575,9 @@ A setup similar to KG1 is used, with some additional data manipulation steps to 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="16" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
+<div class="g-col-1" data-index="16" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
 <a href="../graphs/KG4/kg04b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG4/kg04b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1435,11 +1586,11 @@ A setup similar to KG1 is used, with some additional data manipulation steps to 
 KG4B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 A setup similar to KG1 is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine…<code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1448,10 +1599,9 @@ A setup similar to KG1 is used, with some additional data manipulation steps to 
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="17" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="g-col-1" data-index="17" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <a href="../graphs/KG5/kg05.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="KG5/kg05_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1460,11 +1610,11 @@ A setup similar to KG1 is used, with some additional data manipulation steps to 
 KG5
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 A setup similar to KG4 is used. The difference here is that we create the initial binary biomarker variable <code>BMRKR1_BIN</code> from comparing the continuous biomarker variable <code>BMRKR1</code>…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1473,10 +1623,9 @@ A setup similar to KG4 is used. The difference here is that we create the initia
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="18" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
+<div class="g-col-1" data-index="18" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
 <a href="../graphs/KG5/kg05a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="KG5/kg05a_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1485,11 +1634,11 @@ A setup similar to KG4 is used. The difference here is that we create the initia
 KG5A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 A setup similar to KG4 is used. The difference here is that we create the initial binary biomarker variable <code>BMRKR1_BIN</code> from comparing the continuous biomarker variable <code>BMRKR1</code>…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1498,10 +1647,9 @@ A setup similar to KG4 is used. The difference here is that we create the initia
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="19" data-categories="S0c=" data-listing-file-modified-sort="1746293028167" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
+<div class="g-col-1" data-index="19" data-categories="S0c=" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
 <a href="../graphs/KG5/kg05b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="KG5/kg05b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1510,11 +1658,11 @@ A setup similar to KG4 is used. The difference here is that we create the initia
 KG5B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">
-KG
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0c='); return false;">KG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 A setup similar to KG4 is used. The difference here is that we create the initial binary biomarker variable <code>BMRKR1_BIN</code> from comparing the continuous biomarker variable <code>BMRKR1</code>…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1523,10 +1671,9 @@ A setup similar to KG4 is used. The difference here is that we create the initia
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="20" data-categories="UkZH" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
+<div class="g-col-1" data-index="20" data-categories="UkZH" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
 <a href="../graphs/RFG1/rfg01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RFG1/rfg01_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1535,11 +1682,11 @@ A setup similar to KG4 is used. The difference here is that we create the initia
 RFG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">
-RFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">RFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in the odds ratios between two groups, usually two treatment arms. We would like to assess how the odds ratio changes when…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1548,10 +1695,9 @@ These templates are helpful when we are interested in the odds ratios between tw
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="21" data-categories="UkZH" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
+<div class="g-col-1" data-index="21" data-categories="UkZH" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
 <a href="../graphs/RFG1/rfg01a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RFG1/rfg01a_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1560,11 +1706,11 @@ These templates are helpful when we are interested in the odds ratios between tw
 RFG1A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">
-RFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">RFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in the odds ratios between two groups, usually two treatment arms. We would like to assess how the odds ratio changes when…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1573,10 +1719,9 @@ These templates are helpful when we are interested in the odds ratios between tw
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="22" data-categories="UkZH" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
+<div class="g-col-1" data-index="22" data-categories="UkZH" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
 <a href="../graphs/RFG2/rfg02a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RFG2/rfg02a_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1585,11 +1730,11 @@ These templates are helpful when we are interested in the odds ratios between tw
 RFG2A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">
-RFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">RFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on the binary response outcome, conditional on covariates…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1598,10 +1743,9 @@ These templates are helpful when we are interested in modelling the effects of c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="23" data-categories="UkZH" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
+<div class="g-col-1" data-index="23" data-categories="UkZH" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
 <a href="../graphs/RFG2/rfg02b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RFG2/rfg02b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1610,11 +1754,11 @@ These templates are helpful when we are interested in modelling the effects of c
 RFG2B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">
-RFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">RFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on the binary response outcome, conditional on covariates…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1623,10 +1767,9 @@ These templates are helpful when we are interested in modelling the effects of c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="24" data-categories="UkZH" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="89">
+<div class="g-col-1" data-index="24" data-categories="UkZH" data-listing-file-modified-sort="1746638698835" data-listing-reading-time-sort="1" data-listing-word-count-sort="89">
 <a href="../graphs/RFG2/rfg02c.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RFG2/rfg02c_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1635,11 +1778,11 @@ These templates are helpful when we are interested in modelling the effects of c
 RFG2C
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">
-RFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">RFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on the binary response outcome, conditional on covariates…
 </div>
 <div class="card-attribution card-text-small start">
@@ -1648,10 +1791,9 @@ These templates are helpful when we are interested in modelling the effects of c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="25" data-categories="UkZH" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
+<div class="g-col-1" data-index="25" data-categories="UkZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
 <a href="../graphs/rfg03.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -1660,11 +1802,11 @@ These templates are helpful when we are interested in modelling the effects of c
 RFG3
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">
-RFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkZH'); return false;">RFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 For response endpoints it is good to show how to obtain within-treatment-arms comparisons of biomarker subgroups. This is similar to SFG04.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1673,10 +1815,9 @@ For response endpoints it is good to show how to obtain within-treatment-arms co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="26" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
+<div class="g-col-1" data-index="26" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
 <a href="../graphs/RG1/rg01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG1/rg01_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1685,11 +1826,11 @@ For response endpoints it is good to show how to obtain within-treatment-arms co
 RG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the response plots. We transform the response variable into an <code>ordered</code> factor to ensure that the…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1698,10 +1839,9 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="27" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
+<div class="g-col-1" data-index="27" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
 <a href="../graphs/RG1/rg01a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG1/rg01a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1710,11 +1850,11 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 RG1A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the response plots. We transform the response variable into an <code>ordered</code> factor to ensure that the…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1723,10 +1863,9 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="28" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
+<div class="g-col-1" data-index="28" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
 <a href="../graphs/RG1/rg01b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG1/rg01b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1735,11 +1874,11 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 RG1B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the response plots. We transform the response variable into an <code>ordered</code> factor to ensure that the…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1748,10 +1887,9 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="29" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
+<div class="g-col-1" data-index="29" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
 <a href="../graphs/RG1/rg01c.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG1/rg01c_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1760,11 +1898,11 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 RG1C
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the response plots. We transform the response variable into an <code>ordered</code> factor to ensure that the…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1773,10 +1911,9 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="30" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
+<div class="g-col-1" data-index="30" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
 <a href="../graphs/RG2/rg02.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG2/rg02_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1785,11 +1922,11 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 RG2
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in RG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1798,10 +1935,9 @@ The same setup as in RG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="31" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
+<div class="g-col-1" data-index="31" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
 <a href="../graphs/RG2/rg02a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG2/rg02a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1810,11 +1946,11 @@ The same setup as in RG1 is used.
 RG2A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in RG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1823,10 +1959,9 @@ The same setup as in RG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="32" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="149">
+<div class="g-col-1" data-index="32" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="149">
 <a href="../graphs/RG3/rg03.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG3/rg03_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1835,11 +1970,11 @@ The same setup as in RG1 is used.
 RG3
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in RG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1848,10 +1983,9 @@ The same setup as in RG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="33" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
+<div class="g-col-1" data-index="33" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
 <a href="../graphs/RG3/rg03a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG3/rg03a_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1860,11 +1994,11 @@ The same setup as in RG1 is used.
 RG3A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in RG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1873,10 +2007,9 @@ The same setup as in RG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="34" data-categories="Ukc=" data-listing-file-modified-sort="1746293028168" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
+<div class="g-col-1" data-index="34" data-categories="Ukc=" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
 <a href="../graphs/RG3/rg03b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="RG3/rg03b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1885,11 +2018,11 @@ The same setup as in RG1 is used.
 RG3B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">
-RG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ukc='); return false;">RG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 The same setup as in RG1 is used.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1898,10 +2031,9 @@ The same setup as in RG1 is used.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="35" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="535">
+<div class="g-col-1" data-index="35" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="535">
 <a href="../graphs/rnag01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag01_files/figure-html/unnamed-chunk-6-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1910,11 +2042,11 @@ The same setup as in RG1 is used.
 RNAG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions for simple QC analyses of RNA-seq gene expression data and to create interactive QC graphs…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1923,10 +2055,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="36" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="589">
+<div class="g-col-1" data-index="36" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="589">
 <a href="../graphs/rnag10.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag10_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1935,11 +2066,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG10
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to produce survival forest graphs for RNA-seq gene expression analysis using available <code>tern</code> and <code>hermes</code> functions, and to create an…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1948,10 +2079,9 @@ This page can be used as a template of how to produce survival forest graphs for
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="37" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="493">
+<div class="g-col-1" data-index="37" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="493">
 <a href="../graphs/rnag02.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag02_files/figure-html/unnamed-chunk-7-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1960,11 +2090,11 @@ This page can be used as a template of how to produce survival forest graphs for
 RNAG2
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions to derive and plot top genes for RNA-seq RNA-seq gene expression data and to create an…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -1973,10 +2103,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="38" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="423">
+<div class="g-col-1" data-index="38" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="423">
 <a href="../graphs/rnag03.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag03_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -1985,11 +2114,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG3
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions for principal components analysis and plots of RNAseq data sets.
 </div>
 <div class="card-attribution card-text-small start">
@@ -1998,10 +2127,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="39" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="2" data-listing-word-count-sort="285">
+<div class="g-col-1" data-index="39" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="2" data-listing-word-count-sort="285">
 <a href="../graphs/rnag04.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag04_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2010,11 +2138,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG4
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions to calculate the correlation between samples in <code>HermesData</code>, visualize them in a heatmap, and…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2023,10 +2151,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="40" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="2" data-listing-word-count-sort="380">
+<div class="g-col-1" data-index="40" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="2" data-listing-word-count-sort="380">
 <a href="../graphs/rnag05.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag05_files/figure-html/unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2035,11 +2162,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG5
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions to take differential gene expression analysis between samples in <code>HermesData</code>, visualize them…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2048,10 +2175,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="41" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="431">
+<div class="g-col-1" data-index="41" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="431">
 <a href="../graphs/rnag06.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag06_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2060,11 +2186,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG6
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions to produce a barplot of the dichotomized gene expression counts into two or three categories…
 </div>
 <div class="card-attribution card-text-small start">
@@ -2073,10 +2199,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="42" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
+<div class="g-col-1" data-index="42" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
 <a href="../graphs/rnag07.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag07_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2085,11 +2210,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG7
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to create boxplots for RNA-seq gene expression data using available <code>hermes</code>, and to create interactive boxplot for RNA-seq gene…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2098,10 +2223,9 @@ This page can be used as a template of how to create boxplots for RNA-seq gene e
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="43" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="529">
+<div class="g-col-1" data-index="43" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="529">
 <a href="../graphs/rnag08.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag08_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2110,11 +2234,11 @@ This page can be used as a template of how to create boxplots for RNA-seq gene e
 RNAG8
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to use the available <code>hermes</code> functions to produce a scatterplot of two genes or gene signatures and to create an interactive…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2123,10 +2247,9 @@ This page can be used as a template of how to use the available <code>hermes</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="44" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="3" data-listing-word-count-sort="588">
+<div class="g-col-1" data-index="44" data-categories="Uk5BRw==" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="3" data-listing-word-count-sort="588">
 <a href="../graphs/rnag09.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="rnag09_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2135,11 +2258,11 @@ This page can be used as a template of how to use the available <code>hermes</co
 RNAG9
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">
-RNAG
+
+<div class="listing-category" onclick="window.quartoListingCategory('Uk5BRw=='); return false;">RNAG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 This page can be used as a template of how to produce Kaplan-Meier graphs for RNA-seq gene expression analysis using available <code>tern</code> and <code>hermes</code> functions, and to create an…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2148,10 +2271,9 @@ This page can be used as a template of how to produce Kaplan-Meier graphs for RN
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="45" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
+<div class="g-col-1" data-index="45" data-categories="U0ZH" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
 <a href="../graphs/SFG1/sfg01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG1/sfg01_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2160,11 +2282,11 @@ This page can be used as a template of how to produce Kaplan-Meier graphs for RN
 SFG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the survival forest graph. We start by filtering the <code>adtte</code> data set for the overall survival…<code></code><code></code><code></code><code></code><code></code><code></code><code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2173,10 +2295,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="46" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
+<div class="g-col-1" data-index="46" data-categories="U0ZH" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
 <a href="../graphs/SFG1/sfg01a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG1/sfg01a_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2185,11 +2306,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 SFG1A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the survival forest graph. We start by filtering the <code>adtte</code> data set for the overall survival…<code></code><code></code><code></code><code></code><code></code><code></code><code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2198,10 +2319,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="47" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
+<div class="g-col-1" data-index="47" data-categories="U0ZH" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
 <a href="../graphs/SFG1/sfg01b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG1/sfg01b_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2210,11 +2330,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 SFG1B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the survival forest graph. We start by filtering the <code>adtte</code> data set for the overall survival…<code></code><code></code><code></code><code></code><code></code><code></code><code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2223,10 +2343,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="48" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="172">
+<div class="g-col-1" data-index="48" data-categories="U0ZH" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="172">
 <a href="../graphs/SFG2/sfg02.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG2/sfg02_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2235,11 +2354,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 SFG2
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1. In particular we use again the <code>cut_quantile_bins()</code> function, here to obtain quartile bins of the continuous biomarker <code>BMRKR1</code>.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2248,10 +2367,9 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="49" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
+<div class="g-col-1" data-index="49" data-categories="U0ZH" data-listing-file-modified-sort="1746638698836" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
 <a href="../graphs/SFG2/sfg02a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG2/sfg02a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2260,11 +2378,11 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 SFG2A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1. In particular we use again the <code>cut_quantile_bins()</code> function, here to obtain quartile bins of the continuous biomarker <code>BMRKR1</code>.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2273,10 +2391,9 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="50" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
+<div class="g-col-1" data-index="50" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
 <a href="../graphs/SFG2/sfg02b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG2/sfg02b_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2285,11 +2402,11 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 SFG2B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1. In particular we use again the <code>cut_quantile_bins()</code> function, here to obtain quartile bins of the continuous biomarker <code>BMRKR1</code>.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2298,10 +2415,9 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="51" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
+<div class="g-col-1" data-index="51" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
 <a href="../graphs/SFG2/sfg02c.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG2/sfg02c_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2310,11 +2426,11 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 SFG2C
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1. In particular we use again the <code>cut_quantile_bins()</code> function, here to obtain quartile bins of the continuous biomarker <code>BMRKR1</code>.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2323,10 +2439,9 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="52" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="221">
+<div class="g-col-1" data-index="52" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="221">
 <a href="../graphs/SFG2/sfg02d.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG2/sfg02d_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2335,11 +2450,11 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 SFG2D
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1. In particular we use again the <code>cut_quantile_bins()</code> function, here to obtain quartile bins of the continuous biomarker <code>BMRKR1</code>.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2348,10 +2463,9 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="53" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="277">
+<div class="g-col-1" data-index="53" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="277">
 <a href="../graphs/SFG3/sfg03.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG3/sfg03_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2360,11 +2474,11 @@ We prepare the data similarly as in SFG1. In particular we use again the <code>c
 SFG3
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1, focusing on a single arm in the biomarker evaluable population.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2373,10 +2487,9 @@ We prepare the data similarly as in SFG1, focusing on a single arm in the biomar
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="54" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="222">
+<div class="g-col-1" data-index="54" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="222">
 <a href="../graphs/SFG3/sfg03a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG3/sfg03a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2385,11 +2498,11 @@ We prepare the data similarly as in SFG1, focusing on a single arm in the biomar
 SFG3A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1, focusing on a single arm in the biomarker evaluable population.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2398,10 +2511,9 @@ We prepare the data similarly as in SFG1, focusing on a single arm in the biomar
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="55" data-categories="U0ZH" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="2" data-listing-word-count-sort="386">
+<div class="g-col-1" data-index="55" data-categories="U0ZH" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="2" data-listing-word-count-sort="386">
 <a href="../graphs/sfg04.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="sfg04_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2410,11 +2522,11 @@ We prepare the data similarly as in SFG1, focusing on a single arm in the biomar
 SFG4
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2423,10 +2535,9 @@ We prepare the data similarly as in SFG1.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="56" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
+<div class="g-col-1" data-index="56" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
 <a href="../graphs/SFG5/sfg05.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG5/sfg05_files/figure-html/unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2435,11 +2546,11 @@ We prepare the data similarly as in SFG1.
 SFG5
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2448,10 +2559,9 @@ We prepare the data similarly as in SFG1.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="57" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="298">
+<div class="g-col-1" data-index="57" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="298">
 <a href="../graphs/SFG5/sfg05a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG5/sfg05a_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2460,11 +2570,11 @@ We prepare the data similarly as in SFG1.
 SFG5A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2473,10 +2583,9 @@ We prepare the data similarly as in SFG1.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="58" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="288">
+<div class="g-col-1" data-index="58" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="288">
 <a href="../graphs/SFG5/sfg05b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG5/sfg05b_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2485,11 +2594,11 @@ We prepare the data similarly as in SFG1.
 SFG5B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2498,10 +2607,9 @@ We prepare the data similarly as in SFG1.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="59" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="306">
+<div class="g-col-1" data-index="59" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="306">
 <a href="../graphs/SFG5/sfg05c.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG5/sfg05c_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2510,11 +2618,11 @@ We prepare the data similarly as in SFG1.
 SFG5C
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We prepare the data similarly as in SFG1.
 </div>
 <div class="card-attribution card-text-small start">
@@ -2523,10 +2631,9 @@ We prepare the data similarly as in SFG1.
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="60" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="2" data-listing-word-count-sort="207">
+<div class="g-col-1" data-index="60" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="2" data-listing-word-count-sort="207">
 <a href="../graphs/SFG6/sfg06a.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG6/sfg06a_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2535,11 +2642,11 @@ We prepare the data similarly as in SFG1.
 SFG6A
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on a time-to-event (survival) outcome, conditional on…
 </div>
 <div class="card-attribution card-text-small start">
@@ -2548,10 +2655,9 @@ These templates are helpful when we are interested in modelling the effects of c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="61" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
+<div class="g-col-1" data-index="61" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
 <a href="../graphs/SFG6/sfg06b.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG6/sfg06b_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2560,11 +2666,11 @@ These templates are helpful when we are interested in modelling the effects of c
 SFG6B
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on a time-to-event (survival) outcome, conditional on…
 </div>
 <div class="card-attribution card-text-small start">
@@ -2573,10 +2679,9 @@ These templates are helpful when we are interested in modelling the effects of c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="62" data-categories="U0ZH" data-listing-file-modified-sort="1746293028169" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
+<div class="g-col-1" data-index="62" data-categories="U0ZH" data-listing-file-modified-sort="1746638698837" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
 <a href="../graphs/SFG6/sfg06c.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="SFG6/sfg06c_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2585,11 +2690,11 @@ These templates are helpful when we are interested in modelling the effects of c
 SFG6C
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">
-SFG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0ZH'); return false;">SFG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 These templates are helpful when we are interested in modelling the effects of continuous biomarker variables on a time-to-event (survival) outcome, conditional on…
 </div>
 <div class="card-attribution card-text-small start">
@@ -2598,10 +2703,9 @@ These templates are helpful when we are interested in modelling the effects of c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="63" data-categories="U1BH" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
+<div class="g-col-1" data-index="63" data-categories="U1BH" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
 <a href="../graphs/spg01.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="spg01_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2610,11 +2714,11 @@ These templates are helpful when we are interested in modelling the effects of c
 SPG1
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U1BH'); return false;">
-SPG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U1BH'); return false;">SPG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the STEP survival graph. We start by filtering the <code>adtte</code> data set for the overall survival…<code></code><code></code><code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2623,10 +2727,9 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="64" data-categories="U1BH" data-listing-file-modified-sort="1746293028170" data-listing-reading-time-sort="2" data-listing-word-count-sort="373">
+<div class="g-col-1" data-index="64" data-categories="U1BH" data-listing-file-modified-sort="1746638698838" data-listing-reading-time-sort="2" data-listing-word-count-sort="373">
 <a href="../graphs/spg02.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img data-src="spg02_files/figure-html/unnamed-chunk-4-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -2635,11 +2738,11 @@ We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</c
 SPG2
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U1BH'); return false;">
-SPG
+
+<div class="listing-category" onclick="window.quartoListingCategory('U1BH'); return false;">SPG</div>
+
 </div>
-</div>
-<div class="card-text listing-description">
+<div class="card-text listing-description delink">
 We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</code> package to create the STEP response graph. We start by filtering the <code>adrs</code> data set for response evaluable patients…<code></code>
 </div>
 <div class="card-attribution card-text-small start">
@@ -2648,13 +2751,10 @@ We will use the <code>cadrs</code> data set from the <code>random.cdisc.data</co
 </div>
 </div>
 </div>
+</div></a>
 </div>
-</a>
 </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<div class="listing-no-matching d-none">No matching items</div>
 <nav id="graphs-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
@@ -2667,431 +2767,306 @@ No matching items
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
     }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
     }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
     }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
       }
     }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
     }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/insightsengineering\.github\.io\/biomarker-catalog");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
       });
     }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/insightsengineering\.github\.io\/biomarker-catalog");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
         }
-        return container.innerHTML
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -3099,189 +3074,193 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
-<script src="https://giscus.app/client.js" data-repo="insightsengineering/biomarker-catalog" data-repo-id="R_kgDOJMeENQ" data-category="General" data-category-id="DIC_kwDOJMeENc4CVB9s" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <input type="hidden" id="giscus-base-theme" value="light">
 <input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "insightsengineering/biomarker-catalog";
+    script.dataset.repoId = "R_kgDOJMeENQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOJMeENc4CVB9s";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
   </div>

@@ -16,23 +16,23 @@
 <height>166</height>
 <width>144</width>
 </image>
-<generator>quarto-1.7.34</generator>
-<lastBuildDate>Sat, 20 Sep 2025 17:26:53 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Wed, 22 Oct 2025 17:25:40 GMT</lastBuildDate>
 <item>
   <title>CPMT1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</link>
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables. We start by selecting the biomarker evaluable population (BEP) and the time-to-event endpoint of interest, here overall survival. We then convert time of overall survival to months and create a new variable for the event information.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -84,7 +84,7 @@ background-color: null;
 font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> CNSR</span>
-<span id="cb1-11">  )</span></code></pre></div>
+<span id="cb1-11">  )</span></code></pre></div></div>
 </details>
 </div>
 </div>
@@ -92,7 +92,7 @@ font-style: inherit;">-</span> CNSR</span>
 <p>The <code>summarize_coxreg()</code> function in <code>tern</code> takes the same <code>variables</code>, <code>at</code>, and <code>control</code> arguments that are used to fit a model using the <code>fit_coxreg_univar()</code> function - specifying the time, event and covariate in a <code>variables</code> list, and <code>control</code> and <code>at</code> with any further customizations to the model. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
 <p>Rather than fitting the model and then tidying the output via the <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code> function, we can directly input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, building the table with our pre-processed <code>adtte</code> data set.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -125,7 +125,7 @@ font-style: inherit;">"COUNTRY"</span></span>
 <span id="cb2-7"></span>
 <span id="cb2-8"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                              Hazard Ratio      95% CI      p-value
 ———————————————————————————————————————————————————————————————————
@@ -144,9 +144,9 @@ Covariate:
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -205,7 +205,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt01.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2</title>
@@ -213,15 +213,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We prepare the data similarly as in <a href="../../tables/cpmt01.html">CPMT1</a>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -289,7 +289,7 @@ background-color: null;
 font-style: inherit;">BMRKR2 =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Biomarker (Categorical)"</span></span>
-<span id="cb1-15">  )</span></code></pre></div>
+<span id="cb1-15">  )</span></code></pre></div></div>
 </details>
 </div>
 </div>
@@ -297,7 +297,7 @@ font-style: inherit;">"Biomarker (Categorical)"</span></span>
 <p>The multivariate Cox Proportional Hazards model can be displayed in a summary table using the <code>summarize_coxreg</code> function from <code>tern</code> with the <code>multivar</code> argument set to <code>TRUE</code>. Like the corresponding model fitting function <code>fit_coxreg_multivar()</code>, we specify the time, event, arm and covariates in a <code>variables</code> list, and any further customizations via the <code>control</code> argument. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
 <p>Rather than fitting the model and then tidying the output via the <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code> function, we can directly input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, building the table with our pre-processed <code>adtte</code> data set.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">result <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">result <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -358,7 +358,7 @@ font-style: inherit;">%&gt;%</span></span>
 background-color: null;
 font-style: inherit;">build_table</span>(adtte)</span>
 <span id="cb2-13"></span>
-<span id="cb2-14">result</span></code></pre></div>
+<span id="cb2-14">result</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>Effect/Covariate Included in the Model                 Hazard Ratio      95% CI      p-value
 ————————————————————————————————————————————————————————————————————————————————————————————
@@ -379,9 +379,9 @@ Covariate:
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -440,7 +440,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>CPMT2A</title>
@@ -448,15 +448,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We prepare the data similarly as in <a href="../../tables/cpmt01.html">CPMT1</a>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -524,14 +524,14 @@ background-color: null;
 font-style: inherit;">BMRKR2 =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Biomarker (Categorical)"</span></span>
-<span id="cb1-15">  )</span></code></pre></div>
+<span id="cb1-15">  )</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>For changing the reference levels, for example to use placebo as reference for a treatment arm variable, we can just reorder the levels of the corresponding factor variables, and pass the resulting dataset to the model fitting function as before. The <code>forcats</code> package provides convenience functions for the level reordering.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte2 <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte2 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adtte <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -557,12 +557,12 @@ font-style: inherit;">"C: Combination"</span>,</span>
 background-color: null;
 font-style: inherit;">"A: Drug X"</span></span>
 <span id="cb2-8">    )</span>
-<span id="cb2-9">  )</span></code></pre></div>
+<span id="cb2-9">  )</span></code></pre></div></div>
 </details>
 </div>
 <p>Now we can proceed in the same way as in <a href="../../tables/CPMT2/cpmt02.html">CPMT2</a>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">result <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">result <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -623,7 +623,7 @@ font-style: inherit;">%&gt;%</span></span>
 background-color: null;
 font-style: inherit;">build_table</span>(adtte2)</span>
 <span id="cb3-13"></span>
-<span id="cb3-14">result</span></code></pre></div>
+<span id="cb3-14">result</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>Effect/Covariate Included in the Model                  Hazard Ratio      95% CI      p-value
 —————————————————————————————————————————————————————————————————————————————————————————————
@@ -644,9 +644,9 @@ Covariate:
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -705,7 +705,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/CPMT2/cpmt02a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>CPMT3</title>
@@ -713,15 +713,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We prepare the data in the same way as in <a href="../tables/cpmt01.html">CPMT1</a>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -773,7 +773,7 @@ background-color: null;
 font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> CNSR</span>
-<span id="cb1-11">  )</span></code></pre></div>
+<span id="cb1-11">  )</span></code></pre></div></div>
 </details>
 </div>
 </div>
@@ -781,7 +781,7 @@ font-style: inherit;">-</span> CNSR</span>
 <p>The separate Cox Proportional Hazards models for each covariate can be fitted and summarized in a table using the <code>summarize_coxreg()</code> function in <code>tern</code>. This function takes the same <code>variables</code>, <code>at</code>, and <code>control</code> arguments that are used to fit a model using the <code>fit_coxreg_univar()</code> function - specifying the time, event and covariate in a <code>variables</code> list, and <code>control</code> and <code>at</code> with any further customizations to the model. Note that the default confidence level is 95% but this can be customized via the <code>conf_level</code> element in <code>control</code>.</p>
 <p>We input these three arguments into the <code>summarize_coxreg()</code> function to summarize the model fit in a table layout, and then build the table with our pre-processed <code>adtte</code> data set.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -824,7 +824,7 @@ font-style: inherit;">build_table</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">lyt =</span> lyt, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">df =</span> adtte)</span></code></pre></div>
+font-style: inherit;">df =</span> adtte)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                              Hazard Ratio      95% CI      p-value
 ———————————————————————————————————————————————————————————————————
@@ -845,9 +845,9 @@ Covariate:
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -906,7 +906,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>CPM</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/cpmt03.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1</title>
@@ -914,9 +914,9 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -924,7 +924,7 @@ loaded via a namespace (and not attached):
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
 <p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -995,7 +995,7 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Y"</span></span>
-<span id="cb1-12">)</span></code></pre></div>
+<span id="cb1-12">)</span></code></pre></div></div>
 </details>
 </div>
 <p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
@@ -1003,7 +1003,7 @@ font-style: inherit;">"Y"</span></span>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>The simplest demographics table DT1 splits the columns by treatment arm and All vs.&nbsp;BEP, and summarizes selected demographic variables in the rows.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1041,7 +1041,7 @@ font-style: inherit;">add_colcounts</span>()</span>
 <span id="cb2-6"></span>
 <span id="cb2-7"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                      A: Drug X                  B: Placebo                C: Combination      
                   All           BEP           All           BEP           All           BEP    
@@ -1061,9 +1061,9 @@ SEX
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1121,7 +1121,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1A</title>
@@ -1129,9 +1129,9 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -1139,7 +1139,7 @@ loaded via a namespace (and not attached):
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
 <p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1210,7 +1210,7 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Y"</span></span>
-<span id="cb1-12">)</span></code></pre></div>
+<span id="cb1-12">)</span></code></pre></div></div>
 </details>
 </div>
 <p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
@@ -1218,7 +1218,7 @@ font-style: inherit;">"Y"</span></span>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can reorder the treatment arm columns in the demographics table DT1 by using the <code>reorder_split_levels()</code> splitting function in <code>split_cols_by()</code> as done here.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1268,7 +1268,7 @@ font-style: inherit;">add_colcounts</span>()</span>
 <span id="cb2-6"></span>
 <span id="cb2-7"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                     B: Placebo                   A: Drug X                C: Combination      
                   All           BEP           All           BEP           All           BEP    
@@ -1288,9 +1288,9 @@ SEX
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1348,7 +1348,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1B</title>
@@ -1356,9 +1356,9 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -1366,7 +1366,7 @@ loaded via a namespace (and not attached):
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
 <p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1437,7 +1437,7 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Y"</span></span>
-<span id="cb1-12">)</span></code></pre></div>
+<span id="cb1-12">)</span></code></pre></div></div>
 </details>
 </div>
 <p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
@@ -1445,7 +1445,7 @@ font-style: inherit;">"Y"</span></span>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>It is simple to omit the treatment arm split in the demographics table DT1, thus effectively combining the treatment arms.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1476,7 +1476,7 @@ font-style: inherit;">add_colcounts</span>()</span>
 <span id="cb2-5"></span>
 <span id="cb2-6"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                  All           BEP    
                 (N=400)       (N=197)  
@@ -1495,9 +1495,9 @@ SEX
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1555,7 +1555,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01b.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>DT1C</title>
@@ -1563,9 +1563,9 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -1573,7 +1573,7 @@ loaded via a namespace (and not attached):
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables. We add a second artificial BEP flag variable <code>BEP02FL</code>.</p>
 <p>In order to compare All with BEP, we need to define a list <code>bep_groups</code> defining these two groups. The reason is that these two groups are overlapping (BEP is a subset of All). Here, we refer in the list elements to the levels <code>Y</code> and <code>N</code> of the biomarker population flag variable <code>BEP01FL</code> from <code>adsl</code> which we will use below:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1644,7 +1644,7 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Y"</span></span>
-<span id="cb1-12">)</span></code></pre></div>
+<span id="cb1-12">)</span></code></pre></div></div>
 </details>
 </div>
 <p>This can then be used by the <code>tern</code> layout function <code>split_cols_by_groups()</code> below.</p>
@@ -1652,7 +1652,7 @@ font-style: inherit;">"Y"</span></span>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can of course use a different BEP factor variable <code>BEP02FL</code> with corresponding groups definition <code>bep2_groups</code> in the demographics table DT1.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">bep2_groups <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">bep2_groups <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1715,7 +1715,7 @@ font-style: inherit;">add_colcounts</span>()</span>
 <span id="cb2-11"></span>
 <span id="cb2-12"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                      A: Drug X                  B: Placebo                C: Combination      
                   All          BEP2           All          BEP2           All          BEP2    
@@ -1735,9 +1735,9 @@ SEX
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1795,7 +1795,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT1/dt01c.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>DT2</title>
@@ -1803,9 +1803,9 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -1813,7 +1813,7 @@ loaded via a namespace (and not attached):
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables.</p>
 <p>In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable <code>BEP01FL</code> that categorises the evaluable and non evaluable subgroups. For readability in the tables, we define a separate label variable <code>BEP_label</code> below which is parallel to the original flag variable.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1859,7 +1859,7 @@ font-style: inherit;">~</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"BEP No"</span></span>
 <span id="cb1-10">    )</span>
-<span id="cb1-11">  )</span></code></pre></div>
+<span id="cb1-11">  )</span></code></pre></div></div>
 </details>
 </div>
 <p>This can then be used by the <code>rtables</code> layout function <code>split_cols_by()</code> below.</p>
@@ -1867,7 +1867,7 @@ font-style: inherit;">"BEP No"</span></span>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>The demographics table DT2 splits the columns by treatment arm and by the biomarker population (Yes vs.&nbsp;No), and summarizes selected demographic variables in the rows. You can see here how we use the separate labels variable to specify the labels used in the column headers.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1909,7 +1909,7 @@ font-style: inherit;">"SEX"</span>))</span>
 <span id="cb2-6"></span>
 <span id="cb2-7"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                      A: Drug X                  B: Placebo                C: Combination      
                 BEP Yes       BEP No        BEP Yes       BEP No        BEP Yes       BEP No   
@@ -1929,9 +1929,9 @@ SEX
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1989,7 +1989,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>DT2A</title>
@@ -1997,9 +1997,9 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -2007,7 +2007,7 @@ loaded via a namespace (and not attached):
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the tables.</p>
 <p>In order to compare the BEP with the non-BEP, we only need to split columns on the BEP flag variable <code>BEP01FL</code> that categorises the evaluable and non evaluable subgroups. For readability in the tables, we define a separate label variable <code>BEP_label</code> below which is parallel to the original flag variable.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2053,7 +2053,7 @@ font-style: inherit;">~</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"BEP No"</span></span>
 <span id="cb1-10">    )</span>
-<span id="cb1-11">  )</span></code></pre></div>
+<span id="cb1-11">  )</span></code></pre></div></div>
 </details>
 </div>
 <p>This can then be used by the <code>rtables</code> layout function <code>split_cols_by()</code> below.</p>
@@ -2061,7 +2061,7 @@ font-style: inherit;">"BEP No"</span></span>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>The demographics table DT2A splits the columns by treatment arm and by BEP vs.&nbsp;non-BEP, summarizes selected demographic variables in the rows and performs tests to compare demographic variables between Non-BEP vs.&nbsp;BEP population. Note that p-values can be <code>NA</code> when the test could not be performed due to row counts being all zero, e.g.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2107,7 +2107,7 @@ font-style: inherit;">"SEX"</span>))</span>
 <span id="cb2-6"></span>
 <span id="cb2-7"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adsl)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                                      A: Drug X                B: Placebo              C: Combination     
                                 BEP Yes       BEP No      BEP Yes       BEP No      BEP Yes       BEP No  
@@ -2127,9 +2127,9 @@ SEX
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2187,7 +2187,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DT</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/DT2/dt02a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>TET1</title>
@@ -2195,15 +2195,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2283,14 +2283,14 @@ font-style: inherit;">"A: Drug X"</span>, <span class="st" style="color: #20794D
 background-color: null;
 font-style: inherit;">"C: Combination"</span>)</span>
 <span id="cb1-18">    )</span>
-<span id="cb1-19">  )</span></code></pre></div>
+<span id="cb1-19">  )</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>This time-to-event summary table splits the columns by treatment arm using <code>split_cols_by()</code>, creates a summary for patients with and without event using <code>summarize_vars()</code>, summarizes survival time using <code>surv_time()</code> and summarizes the analysis from unstratified Cox Proportional Hazards models using <code>coxph_pairwise()</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2452,7 +2452,7 @@ font-style: inherit;">"coxph_unstratified"</span></span>
 <span id="cb2-34"></span>
 <span id="cb2-35"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt, adtte)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                                  CTRL               TRT      
                                  (N=134)           (N=266)    
@@ -2477,9 +2477,9 @@ Unstratified Analysis
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2537,7 +2537,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 <item>
   <title>TET1A</title>
@@ -2545,15 +2545,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Table</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Table</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package for the time-to-event summary table. We start by filtering the <code>adtte</code> data set for the overall survival observations, converting time of overall survival to months, creating new variables for event and non-event information and binarizing the <code>ARM</code> variable.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2633,14 +2633,14 @@ font-style: inherit;">"A: Drug X"</span>, <span class="st" style="color: #20794D
 background-color: null;
 font-style: inherit;">"C: Combination"</span>)</span>
 <span id="cb1-18">    )</span>
-<span id="cb1-19">  )</span></code></pre></div>
+<span id="cb1-19">  )</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can add the summary of an analysis with Cox Proportional Hazards models stratified by <code>SEX</code> to the table above using <code>coxph_pairwise()</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">lyt <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2847,7 +2847,7 @@ font-style: inherit;">"coxph_stratified"</span></span>
 <span id="cb2-43"></span>
 <span id="cb2-44"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">build_table</span>(lyt2, adtte)</span></code></pre></div>
+font-style: inherit;">build_table</span>(lyt2, adtte)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                                  CTRL               TRT      
                                  (N=134)           (N=266)    
@@ -2876,9 +2876,9 @@ Stratified Analysis
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2936,7 +2936,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>TET</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/tables/TET1/tet01a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:26:53 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:25:40 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -16,23 +16,23 @@
 <height>166</height>
 <width>144</width>
 </image>
-<generator>quarto-1.7.34</generator>
-<lastBuildDate>Sat, 20 Sep 2025 17:28:11 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Wed, 22 Oct 2025 17:26:45 GMT</lastBuildDate>
 <item>
   <title>AG1</title>
   <link>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</link>
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Purpose</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Title, Axis and Caption Labels</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false">Coordinates</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false">Themes</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" aria-controls="tabset-1-6" aria-selected="false">Scales</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" aria-controls="tabset-1-7" aria-selected="false">Faceting</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" aria-controls="tabset-1-8" aria-selected="false">Titles, Footnotes, and Page Numbers</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" aria-controls="tabset-1-9" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Purpose</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Title, Axis and Caption Labels</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false" href="">Coordinates</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false" href="">Themes</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" aria-controls="tabset-1-6" aria-selected="false" href="">Scales</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" aria-controls="tabset-1-7" aria-selected="false" href="">Faceting</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" aria-controls="tabset-1-8" aria-selected="false" href="">Titles, Footnotes, and Page Numbers</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" aria-controls="tabset-1-9" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
@@ -43,7 +43,7 @@
 <p>We also typically apply the <code>df_explicit_na()</code> function to the incoming dataset to convert character to factor variables, and code missing values as an explicit factor level, which avoids downstream problems.</p>
 <p>Note that you may still run into warning messages after producing some of the graphs if a continuous variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step below to remove the rows containing NAs for the specific numeric column (e.g.&nbsp;<code>drop_na(BMRKR1)</code> to remove rows where <code>BMRKR1</code> is missing).</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -106,7 +106,7 @@ font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">after_stat</span>(density)))</span>
 <span id="cb1-13"></span>
-<span id="cb1-14">graph</span></code></pre></div>
+<span id="cb1-14">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -116,7 +116,7 @@ font-style: inherit;">after_stat</span>(density)))</span>
 </div>
 <p>Another possibility is to add <code>na.rm = TRUE</code> option to the <code>ggplot()</code> arguments, or alternatively <code>select()</code> the relevant variables and then delete any rows with missing values by <code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code> and finally pipe that to <code>ggplot()</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(adsl, <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -150,14 +150,14 @@ font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">after_stat</span>(density)))</span></code></pre></div>
+font-style: inherit;">after_stat</span>(density)))</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
 </figure>
 </div>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">adsl <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">adsl <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb3-2">  <span class="fu" style="color: #4758AB;
@@ -200,7 +200,7 @@ font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">after_stat</span>(density)))</span></code></pre></div>
+font-style: inherit;">after_stat</span>(density)))</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="1440"></p>
@@ -212,7 +212,7 @@ font-style: inherit;">after_stat</span>(density)))</span></code></pre></div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <p>Title, subtitle, axis as well as caption labels can be added with the <code>labs()</code> layer. Alternatively specific <code>tern</code> functions can be used, see [Titles and Footnotes] below.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -242,7 +242,7 @@ background-color: null;
 font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Note: No outliers have been removed here."</span></span>
-<span id="cb4-7">)</span></code></pre></div>
+<span id="cb4-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/labels-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -254,11 +254,11 @@ font-style: inherit;">"Note: No outliers have been removed here."</span></span>
 <div id="tabset-1-4" class="tab-pane" aria-labelledby="tabset-1-4-tab">
 <p>We can change the coordinate system with <code>coord_*()</code> layers, e.g.&nbsp;to rotate the plot.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">coord_flip</span>()</span></code></pre></div>
+font-style: inherit;">coord_flip</span>()</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/coordinates-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -268,7 +268,7 @@ font-style: inherit;">coord_flip</span>()</span></code></pre></div>
 </div>
 <p>We can set the limits of the coordinate axes with <code>coord_cartesian()</code>. This performs a real zoom into the plot, instead of just replacing outside values with <code>NA</code> as <code>xlim()</code> or <code>lims()</code> are doing it. It is therefore preferred.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb6-2">  <span class="fu" style="color: #4758AB;
@@ -298,7 +298,7 @@ font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Note: biomarker values greater than 15 are not shown on this plot."</span>)</span></code></pre></div>
+font-style: inherit;">"Note: biomarker values greater than 15 are not shown on this plot."</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/zoom-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -310,11 +310,11 @@ font-style: inherit;">"Note: biomarker values greater than 15 are not shown on t
 <div id="tabset-1-5" class="tab-pane" aria-labelledby="tabset-1-5-tab">
 <p>General plot theme can be specified with <code>theme_*()</code> functions. The default theme is <code>theme_gray()</code>. For example in publications other themes might be preferred, such as <code>theme_classic()</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">theme_classic</span>()</span></code></pre></div>
+font-style: inherit;">theme_classic</span>()</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/theme-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -327,11 +327,11 @@ font-style: inherit;">theme_classic</span>()</span></code></pre></div>
 <p>Many different scales mapping data values to visual values of an aesthetic are available in <code>scale_*()</code> functions.</p>
 <p>We can change the location scale easily, for example to show <code>x</code> on a log scale:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">scale_x_log10</span>()</span></code></pre></div>
+font-style: inherit;">scale_x_log10</span>()</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/logscale-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -343,13 +343,13 @@ font-style: inherit;">scale_x_log10</span>()</span></code></pre></div>
 <div id="tabset-1-7" class="tab-pane" aria-labelledby="tabset-1-7-tab">
 <p>Faceting is an elegant approach to create the same graph separately for each of the levels of one or multiple other factors. It can just be added as an additional layer to the existing graph. For example, we can show the distribution of the biomarker for each of the gender levels.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">facet_grid</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">~</span>SEX)</span></code></pre></div>
+font-style: inherit;">~</span>SEX)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/faceting-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -363,7 +363,7 @@ font-style: inherit;">~</span>SEX)</span></code></pre></div>
 <p>First, we need to prepare the pieces: graph, titles/footnotes. A ggplot object must be converted to a <code>grob</code>. We can use <code>ggplot::ggplotGrob()</code> to accomplish this easily.</p>
 <p>Titles and footnotes can be defined as vectors where each element is a new line. Tip: The <code><a href="https://rdrr.io/r/base/paste.html">paste()</a></code> function can be helpful to split long sentences across multiple lines.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1">grob_graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1">grob_graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -399,12 +399,12 @@ font-style: inherit;">"Data Cut-off: 01 JAN 2021; RAVE Data Extracted: 15 JAN 20
 <span id="cb10-12">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Program: biomark1_analysis.R"</span></span>
-<span id="cb10-13">)</span></code></pre></div>
+<span id="cb10-13">)</span></code></pre></div></div>
 </details>
 </div>
 <p>Now that the pieces are ready, we can put them together. The <code>grid</code> package allows us to manipulate grobs. Using <code><a href="https://rdrr.io/r/grid/grid.draw.html">grid::grid.draw()</a></code> we can apply <code><a href="https://insightsengineering.github.io/tern/latest-tag/reference/decorate_grob.html">tern::decorate_grob()</a></code> to our object, thus adding the titles/footnotes.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(grid)</span>
 <span id="cb11-2"></span>
@@ -432,7 +432,7 @@ font-style: inherit;">page =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Page 6 of 129"</span></span>
 <span id="cb11-10">  )</span>
-<span id="cb11-11">)</span></code></pre></div>
+<span id="cb11-11">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/ag01_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -443,9 +443,9 @@ font-style: inherit;">"Page 6 of 129"</span></span>
 </div>
 <div id="tabset-1-9" class="tab-pane" aria-labelledby="tabset-1-9-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -506,7 +506,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>AG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/ag01.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG1</title>
@@ -514,15 +514,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric variables. We start by selecting the biomarker evaluable population with the flag variable <code>BEP01FL</code> and then populating a new continuous biomarker variable, <code>BMRKR3</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -575,14 +575,14 @@ font-style: inherit;">7</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>))</span></code></pre></div>
+font-style: inherit;">2</span>))</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>In this example, we will create a combined histogram/density graph of a continuous biomarker variable. Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(BMRKR1)</code>).</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -616,7 +616,7 @@ font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">after_stat</span>(density)))</span>
 <span id="cb2-4"></span>
-<span id="cb2-5">graph</span></code></pre></div>
+<span id="cb2-5">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -626,7 +626,7 @@ font-style: inherit;">after_stat</span>(density)))</span>
 </div>
 <p>We can also calculate some descriptive statistics and populate a table that we can overlay on top of the plot. The <code>tibble</code> function is used to build a data frame <code>data_tb</code> with 3 variables. The <code>x</code> and <code>y</code> variables represent the coordinates on the plot to show the statistic values and can be modified based on preference. For example, <code>x = 1</code> and <code>y = 1</code> will put the statistics table in the top right corner of the graph, while <code>x = 0</code> and <code>y = 0</code> will put the statistics table in the bottom left corner of the graph. The <code>tb</code> variable contains the statistics to be shown on the plot, in the form of a nested list column starting from the original statistics tibble <code>orig_tb</code>. Finally, we can use the <code>geom_table_npc()</code> layer function to process the <code>data_tb</code> input and add the statistics table to the existing graph.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">orig_tb <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">orig_tb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -702,7 +702,7 @@ font-style: inherit;">npcy =</span> y, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">label =</span> tb))</span>
 <span id="cb3-14"></span>
-<span id="cb3-15">graph</span></code></pre></div>
+<span id="cb3-15">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -713,9 +713,9 @@ font-style: inherit;">label =</span> tb))</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -776,7 +776,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG1A</title>
@@ -784,15 +784,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric variables. We start by selecting the biomarker evaluable population with the flag variable <code>BEP01FL</code> and then populating a new continuous biomarker variable, <code>BMRKR3</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -845,14 +845,14 @@ font-style: inherit;">7</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>))</span></code></pre></div>
+font-style: inherit;">2</span>))</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>In this example, we will manipulate the variables that we want to show in the graph into a long data format using the <code>pivot_longer()</code> function from <code>tidyr</code>. This is necessary such that below we can use the faceting layer <code>facet_grid()</code> to plot each variable in its own facet.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">num_var_long <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">num_var_long <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adsl <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -878,12 +878,12 @@ background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb2-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">select</span>(var, value)</span></code></pre></div>
+font-style: inherit;">select</span>(var, value)</span></code></pre></div></div>
 </details>
 </div>
 <p>Producing the base plot is then simple: We use the same code as above but just add the faceting layer.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -924,7 +924,7 @@ font-style: inherit;">facet_grid</span>(var <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">~</span> .)</span>
 <span id="cb3-5"></span>
-<span id="cb3-6">graph</span></code></pre></div>
+<span id="cb3-6">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -934,7 +934,7 @@ font-style: inherit;">~</span> .)</span>
 </div>
 <p>Similar to the DG1 example, we will calculate and populate the statistics table to accompany the plot. Note that also here we can use the <code>pivot_longer()</code> function to also obtain the statistics table input <code>orig_tb</code> and then <code>data_tb</code> in long format, and thus parallel to the biomarker variable format in <code>num_var_long</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">orig_tb <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">orig_tb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> num_var_long <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1022,7 +1022,7 @@ font-style: inherit;">npcy =</span> y, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">label =</span> tb))</span>
 <span id="cb4-16"></span>
-<span id="cb4-17">graph</span></code></pre></div>
+<span id="cb4-17">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1033,9 +1033,9 @@ font-style: inherit;">label =</span> tb))</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1096,7 +1096,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG1B</title>
@@ -1104,15 +1104,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package and <code>ggplot2</code> to create the plots. In this example, we will plot histograms of one or multiple numeric variables. We start by selecting the biomarker evaluable population with the flag variable <code>BEP01FL</code> and then populating a new continuous biomarker variable, <code>BMRKR3</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1165,14 +1165,14 @@ font-style: inherit;">7</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>))</span></code></pre></div>
+font-style: inherit;">2</span>))</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Below example shows histograms for the <code>BMRKR1</code> variable by treatment <code>ARM</code>. Including a statistics table in this graph works in the same way as we did above for DG1A.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1213,7 +1213,7 @@ font-style: inherit;">facet_grid</span>(ARM <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">~</span> .)</span>
 <span id="cb2-5"></span>
-<span id="cb2-6">graph</span></code></pre></div>
+<span id="cb2-6">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1224,9 +1224,9 @@ font-style: inherit;">~</span> .)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1286,7 +1286,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG1/dg01b.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG2</title>
@@ -1294,16 +1294,16 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The graph below plots the distribution of a biomarker variable (on a continuous scale) as a boxplot by one or more categorical clinical variables with overlaid points.</p>
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the graph and will select the biomarker evaluable population with <code>BEP01FL</code>. The column <code>BMRKR1</code> contains the biomarker values on a continuous scale. We will use <code>STRATA2</code> and <code>ARM</code> as categorical clinical variables.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1331,14 +1331,14 @@ font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
+font-style: inherit;">"Y"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Here below the code for a simple boxplot with the outliers displayed. Note that you may run into warning messages after producing the graph if the variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(BMRKR1)</code>).</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1364,7 +1364,7 @@ font-style: inherit;">geom =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"errorbar"</span>)</span>
 <span id="cb2-4"></span>
-<span id="cb2-5">graph</span></code></pre></div>
+<span id="cb2-5">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1374,7 +1374,7 @@ font-style: inherit;">"errorbar"</span>)</span>
 </div>
 <p>Now we overlay the original data points, and remove the display of the outliers to avoid duplicate points.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1428,7 +1428,7 @@ background-color: null;
 font-style: inherit;">4</span></span>
 <span id="cb3-7">  )</span>
 <span id="cb3-8"></span>
-<span id="cb3-9">graph</span></code></pre></div>
+<span id="cb3-9">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1438,7 +1438,7 @@ font-style: inherit;">4</span></span>
 </div>
 <p>We can customize the labels of the axes.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb4-2">  <span class="fu" style="color: #4758AB;
@@ -1476,7 +1476,7 @@ font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #
 background-color: null;
 font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div>
+font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1486,7 +1486,7 @@ font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div>
 </div>
 <p>We can add the group sizes as annotations.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb5-2">  <span class="fu" style="color: #4758AB;
@@ -1495,7 +1495,7 @@ font-style: inherit;">stat_n_text</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">text.box =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
+font-style: inherit;">TRUE</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1505,14 +1505,14 @@ font-style: inherit;">TRUE</span>)</span></code></pre></div>
 </div>
 <p>We can also display the biomarker by a further categorical variable with the <code>facet_grid()</code> layer.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb6-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">~</span> ARM)</span></code></pre></div>
+font-style: inherit;">~</span> ARM)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1522,7 +1522,7 @@ font-style: inherit;">~</span> ARM)</span></code></pre></div>
 </div>
 <p>This example shows how to display the biomarker axis on a log scale.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb7-2">  <span class="fu" style="color: #4758AB;
@@ -1531,7 +1531,7 @@ font-style: inherit;">scale_y_log10</span>(<span class="at" style="color: #65742
 background-color: null;
 font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
+font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg02_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1542,9 +1542,9 @@ font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1605,7 +1605,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg02.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG3</title>
@@ -1613,16 +1613,16 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.</p>
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the graph and will select on the biomarker evaluable population with <code>BEP01FL</code>. The column <code>BMRKR2</code> contains the biomarker values on a categorical scale. We will use <code>ARM</code> as categorical clinical variable.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -1650,14 +1650,14 @@ font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
+font-style: inherit;">"Y"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Here below the code for a simple barplot showing the counts of the categories.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1670,7 +1670,7 @@ font-style: inherit;">+</span></span>
 background-color: null;
 font-style: inherit;">geom_bar</span>()</span>
 <span id="cb2-3"></span>
-<span id="cb2-4">graph</span></code></pre></div>
+<span id="cb2-4">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1680,7 +1680,7 @@ font-style: inherit;">geom_bar</span>()</span>
 </div>
 <p>We can customize the labels of the axes.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb3-2">  <span class="fu" style="color: #4758AB;
@@ -1722,7 +1722,7 @@ font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #
 background-color: null;
 font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"count"</span>)</span></code></pre></div>
+font-style: inherit;">"count"</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1732,7 +1732,7 @@ font-style: inherit;">"count"</span>)</span></code></pre></div>
 </div>
 <p>We can also add the absolute count above each of the columns.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb4-2">  <span class="fu" style="color: #4758AB;
@@ -1757,7 +1757,7 @@ background-color: null;
 font-style: inherit;">-</span>.<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span></span>
-<span id="cb4-6">  )</span></code></pre></div>
+<span id="cb4-6">  )</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1767,7 +1767,7 @@ font-style: inherit;">5</span></span>
 </div>
 <p>If instead of counts we want to display the percentages then the following options could be used:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1805,7 +1805,7 @@ font-style: inherit;">+</span></span>
 background-color: null;
 font-style: inherit;">geom_bar</span>()</span>
 <span id="cb5-10"></span>
-<span id="cb5-11">graph</span></code></pre></div>
+<span id="cb5-11">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1815,7 +1815,7 @@ font-style: inherit;">geom_bar</span>()</span>
 </div>
 <p>We can customize the axes.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb6-2">  <span class="fu" style="color: #4758AB;
@@ -1866,7 +1866,7 @@ background-color: null;
 font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Biomarker"</span></span>
-<span id="cb6-10">  )</span></code></pre></div>
+<span id="cb6-10">  )</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1876,7 +1876,7 @@ font-style: inherit;">"Biomarker"</span></span>
 </div>
 <p>We can add the percentages above each of the columns.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb7-2">  <span class="fu" style="color: #4758AB;
@@ -1894,7 +1894,7 @@ background-color: null;
 font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.5</span></span>
-<span id="cb7-5">  )</span></code></pre></div>
+<span id="cb7-5">  )</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -1905,9 +1905,9 @@ font-style: inherit;">0.5</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -1968,7 +1968,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG3A</title>
@@ -1976,16 +1976,16 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The graphs below summarize the distribution of a categorical biomarker variable as barplots, either in the overall population or by one or more categorical clinical variables.</p>
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the graph and will select on the biomarker evaluable population with <code>BEP01FL</code>. The column <code>BMRKR2</code> contains the biomarker values on a categorical scale. We will use <code>ARM</code> as categorical clinical variable.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2013,14 +2013,14 @@ font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
+font-style: inherit;">"Y"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Here below the code for a simple distribution of the category counts of a first biomarker variable (<code>BMRKR2</code>) split by a second categorical variable (<code>ARM</code>). We can use again the <code>facet_grid()</code> layer.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2040,7 +2040,7 @@ font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">~</span> ARM)</span>
 <span id="cb2-4"></span>
-<span id="cb2-5">graph</span></code></pre></div>
+<span id="cb2-5">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -2050,7 +2050,7 @@ font-style: inherit;">~</span> ARM)</span>
 </div>
 <p>We could instead display the columns next to each other within the same graph with the <code>fill</code> aesthetic and the <code>position_dodge()</code> option instead of using the <code>facet_grid()</code> layer.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2069,7 +2069,7 @@ font-style: inherit;">position =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">position_dodge</span>())</span>
 <span id="cb3-3"></span>
-<span id="cb3-4">graph</span></code></pre></div>
+<span id="cb3-4">graph</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -2079,7 +2079,7 @@ font-style: inherit;">position_dodge</span>())</span>
 </div>
 <p>We can then again add the absolute count above each of the columns.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb4-2">  <span class="fu" style="color: #4758AB;
@@ -2111,7 +2111,7 @@ background-color: null;
 font-style: inherit;">-</span>.<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span></span>
-<span id="cb4-7">  )</span></code></pre></div>
+<span id="cb4-7">  )</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -2122,9 +2122,9 @@ font-style: inherit;">5</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2185,7 +2185,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/DG3/dg03a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>DG4</title>
@@ -2193,16 +2193,16 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The graph below plots two continuous (biomarker) variables against each other.</p>
 <p>We will use the <code>cadsl</code> data set from the <code>random.cdisc.data</code> package to illustrate the graph and will select the biomarker evaluable population with <code>BEP01FL</code>. The columns <code>AGE</code> and <code>BMRKR1</code> contain the biomarker values of interest on a continuous scale.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2230,14 +2230,14 @@ font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
+font-style: inherit;">"Y"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Here is an example first on the original scale. Note that you may run into warning messages after producing the graph if the continuous variable you want to analyze contains NAs. To avoid these warning messages, you can use the <code>drop_na()</code> function from <code>tidyr</code> in the data manipulation step above to remove the NAs rows from the dataset (e.g <code>drop_na(AGE, BMRKR1)</code>).</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">graph <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2267,7 +2267,7 @@ font-style: inherit;">"Age (Years)"</span>, <span class="at" style="color: #6574
 background-color: null;
 font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div>
+font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg04_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -2277,7 +2277,7 @@ font-style: inherit;">"Biomarker (Units)"</span>)</span></code></pre></div>
 </div>
 <p>We can also plot it on a log scale.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="sc" style="color: #5E5E5E;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">graph <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb3-2">  <span class="fu" style="color: #4758AB;
@@ -2295,7 +2295,7 @@ font-style: inherit;">"Age (Years)"</span>, <span class="at" style="color: #6574
 background-color: null;
 font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
+font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/dg04_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
@@ -2306,9 +2306,9 @@ font-style: inherit;">"Biomarker (Log(Units))"</span>)</span></code></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2369,7 +2369,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>DG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/dg04.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG1</title>
@@ -2377,15 +2377,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2449,14 +2449,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can produce the basic graph using the <code>g_km()</code> function from <code>tern</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb2-2">  <span class="at" style="color: #657422;
@@ -2475,7 +2475,7 @@ background-color: null;
 font-style: inherit;">rel_height_plot =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.85</span></span>
-<span id="cb2-6">)</span></code></pre></div>
+<span id="cb2-6">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -2485,7 +2485,7 @@ font-style: inherit;">0.85</span></span>
 </div>
 <p>We can also choose to annotate the graph with the median survival time for the overall population using the <code>annot_surv_med = TRUE</code> option.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb3-2">  <span class="at" style="color: #657422;
@@ -2504,7 +2504,7 @@ background-color: null;
 font-style: inherit;">rel_height_plot =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.85</span></span>
-<span id="cb3-6">)</span></code></pre></div>
+<span id="cb3-6">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -2515,9 +2515,9 @@ font-style: inherit;">0.85</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2576,7 +2576,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG1A</title>
@@ -2584,15 +2584,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2656,14 +2656,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can filter the dataset further for the biomarker evaluable population using the corresponding flag variable, here <code>BEP01FL</code>:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte_arm_bep <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte_arm_bep <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adtte_arm <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2674,12 +2674,12 @@ font-style: inherit;">filter</span>(BEP01FL <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Y"</span>)</span></code></pre></div>
+font-style: inherit;">"Y"</span>)</span></code></pre></div></div>
 </details>
 </div>
 <p>Afterwards we can plot the basic KM graph, just using the further filtered dataset <code>adtte_bep</code>. Here we annotate the plot with median survival time, but could suppress it with <code>annot_surv_med = FALSE</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb3-2">  <span class="at" style="color: #657422;
@@ -2698,7 +2698,7 @@ background-color: null;
 font-style: inherit;">rel_height_plot =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.85</span></span>
-<span id="cb3-6">)</span></code></pre></div>
+<span id="cb3-6">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01a_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -2709,9 +2709,9 @@ font-style: inherit;">0.85</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -2770,7 +2770,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG1B</title>
@@ -2778,15 +2778,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>We will use the <code>cadtte</code> data set from the <code>random.cdisc.data</code> package to create the Kaplan-Meier (KM) plots. We start by filtering the time-to-event dataset for the overall survival observations and by one treatment arm (A), creating a new variable for event information, and curating a list of variables required to produce the plot.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2850,14 +2850,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Here we only filter the time-to-event dataset for the overall survival observations, but keep all treatment arms and the overall population.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> random.cdisc.data<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2904,12 +2904,12 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM"</span>)</span></code></pre></div></div>
 </details>
 </div>
 <p>Plot the ITT (top, with CIs) and BEP (bottom, without CIs) KM graphs, convert them to <code>ggplotGrob</code> objects, and combine the plots via <code>rbind</code>. Then, use the <code>grid</code> package to create an empty plot area, and draw the KM curves on the graph device.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">res1 <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">res1 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2974,7 +2974,7 @@ background-color: null;
 font-style: inherit;">grid.newpage</span>()</span>
 <span id="cb3-12"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">grid.draw</span>(g)</span></code></pre></div>
+font-style: inherit;">grid.draw</span>(g)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01b_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -2985,9 +2985,9 @@ font-style: inherit;">grid.draw</span>(g)</span></code></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -3046,7 +3046,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG1/kg01b.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG2</title>
@@ -3054,15 +3054,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The same setup as in <a href="../../graphs/KG1/kg01.html">KG1</a> is used.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -3116,14 +3116,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can produce the basic plot using the <code>g_km()</code> function from <code>tern</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb2-2">  <span class="at" style="color: #657422;
@@ -3137,7 +3137,7 @@ background-color: null;
 font-style: inherit;">annot_surv_med =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span></span>
-<span id="cb2-5">)</span></code></pre></div>
+<span id="cb2-5">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3147,7 +3147,7 @@ font-style: inherit;">FALSE</span></span>
 </div>
 <p>We can also choose to annotate the plot with the median survival time for each of the treatment arms using the <code>annot_surv_med = TRUE</code> option.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb3-2">  <span class="at" style="color: #657422;
@@ -3161,7 +3161,7 @@ background-color: null;
 font-style: inherit;">annot_surv_med =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span></span>
-<span id="cb3-5">)</span></code></pre></div>
+<span id="cb3-5">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3172,9 +3172,9 @@ font-style: inherit;">TRUE</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -3233,7 +3233,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG2A</title>
@@ -3241,15 +3241,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The same setup as in <a href="../../graphs/KG1/kg01.html">KG1</a> is used.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -3303,14 +3303,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>The line color and line type in the plot can be customized using the <code>col</code> and <code>lty</code> arguments of <code>g_km()</code>, respectively. Note that the order of the levels of the treatment arm factor variable is matched with the order of the colors.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb2-2">  <span class="at" style="color: #657422;
@@ -3340,7 +3340,7 @@ background-color: null;
 font-style: inherit;">lty =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span></span>
-<span id="cb2-7">)</span></code></pre></div>
+<span id="cb2-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02a_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3351,9 +3351,9 @@ font-style: inherit;">5</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -3412,7 +3412,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG2/kg02a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG3</title>
@@ -3420,15 +3420,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>The same data set as in <a href="../graphs/KG1/kg01a.html">KG1A</a> is used. The difference is that here we use the categorical biomarker variable <code>BMRKR2</code> as the treatment arm in <code>variables</code> which is then used by <code>g_km()</code> below.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -3490,14 +3490,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"BMRKR2"</span>)</span></code></pre></div>
+font-style: inherit;">"BMRKR2"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can produce the basic plot using the <code>g_km()</code> function from <code>tern</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb2-2">  <span class="at" style="color: #657422;
@@ -3511,7 +3511,7 @@ background-color: null;
 font-style: inherit;">annot_surv_med =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span></span>
-<span id="cb2-5">)</span></code></pre></div>
+<span id="cb2-5">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/kg03_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3521,7 +3521,7 @@ font-style: inherit;">FALSE</span></span>
 </div>
 <p>We can also choose to annotate the plot with the median survival time for each of the biomarker subgroups using the <code>annot_surv_med = TRUE</code> option.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb3-2">  <span class="at" style="color: #657422;
@@ -3535,7 +3535,7 @@ background-color: null;
 font-style: inherit;">annot_surv_med =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span></span>
-<span id="cb3-5">)</span></code></pre></div>
+<span id="cb3-5">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/kg03_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3546,9 +3546,9 @@ font-style: inherit;">TRUE</span></span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -3607,7 +3607,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/kg03.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG4</title>
@@ -3615,15 +3615,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>A setup similar to <a href="../../graphs/KG1/kg01.html">KG1</a> is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine both into a new interaction variable <code>ARM_BMRKR2</code>. Since we are using biomarker information, we filter on the biomarker evaluable population using the flag variable <code>BEP01FL</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -3736,14 +3736,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM_BMRKR2"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM_BMRKR2"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can produce the basic graph using the <code>g_km()</code> function from <code>tern</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb2-2">  <span class="at" style="color: #657422;
@@ -3783,7 +3783,7 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb2-7">)</span></code></pre></div>
+<span id="cb2-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3793,7 +3793,7 @@ font-style: inherit;">2</span>)</span>
 </div>
 <p>We can also choose to annotate the plot with the median survival time for each of the treatment arms using the <code>annot_surv_med = TRUE</code> option.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb3-2">  <span class="at" style="color: #657422;
@@ -3833,7 +3833,7 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb3-7">)</span></code></pre></div>
+<span id="cb3-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -3844,9 +3844,9 @@ font-style: inherit;">2</span>)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -3905,7 +3905,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG4A</title>
@@ -3913,15 +3913,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>A setup similar to <a href="../../graphs/KG1/kg01.html">KG1</a> is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine both into a new interaction variable <code>ARM_BMRKR2</code>. Since we are using biomarker information, we filter on the biomarker evaluable population using the flag variable <code>BEP01FL</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -4034,22 +4034,22 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM_BMRKR2"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM_BMRKR2"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can customize the color and line type used in the graph with the <code>col</code> and <code>lty</code> arguments of <code>g_km()</code>. We can first check the level order of the <code>ARM_BMRKR2</code> factor variable to know which color and line type order we need.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">levels</span>(adtte<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$</span>ARM_BMRKR2)</span></code></pre></div>
+font-style: inherit;">$</span>ARM_BMRKR2)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] "CTRL.High" "TRT.High"  "CTRL.Low"  "TRT.Low"  </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb4-2">  <span class="at" style="color: #657422;
@@ -4089,7 +4089,7 @@ background-color: null;
 font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>)</span>
-<span id="cb4-7">)</span></code></pre></div>
+<span id="cb4-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04a_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -4100,9 +4100,9 @@ font-style: inherit;">3</span>)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -4161,7 +4161,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG4B</title>
@@ -4169,15 +4169,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>A setup similar to <a href="../../graphs/KG1/kg01.html">KG1</a> is used, with some additional data manipulation steps to first binarize the continuous biomarker and the treatment arm variables, and then combine both into a new interaction variable <code>ARM_BMRKR2</code>. Since we are using biomarker information, we filter on the biomarker evaluable population using the flag variable <code>BEP01FL</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -4290,14 +4290,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM_BMRKR2"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM_BMRKR2"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>For reordering or renaming we can just modify the levels of the corresponding factors of the treatment arm and biomarker variables, and pass the result to <code>g_km()</code> as before.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte_mod <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte_mod <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adtte <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4374,7 +4374,7 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb2-18">)</span></code></pre></div>
+<span id="cb2-18">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04b_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -4385,9 +4385,9 @@ font-style: inherit;">2</span>)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -4446,7 +4446,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG4/kg04b.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG5</title>
@@ -4454,15 +4454,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>A setup similar to <a href="../../graphs/KG4/kg04.html">KG4</a> is used. The difference here is that we create the initial binary biomarker variable <code>BMRKR1_BIN</code> from comparing the continuous biomarker variable <code>BMRKR1</code> with a cutoff of interest.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -4567,14 +4567,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM_BMRKR1"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM_BMRKR1"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>We can produce the basic graph using the <code>g_km()</code> function from <code>tern</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb2-2">  <span class="at" style="color: #657422;
@@ -4614,7 +4614,7 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb2-7">)</span></code></pre></div>
+<span id="cb2-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -4624,7 +4624,7 @@ font-style: inherit;">2</span>)</span>
 </div>
 <p>We can also choose to annotate the plot with the median survival time for each of the treatment arms using the <code>annot_surv_med = TRUE</code> option.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb3-2">  <span class="at" style="color: #657422;
@@ -4664,7 +4664,7 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb3-7">)</span></code></pre></div>
+<span id="cb3-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
@@ -4675,9 +4675,9 @@ font-style: inherit;">2</span>)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -4736,7 +4736,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG5A</title>
@@ -4744,15 +4744,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>A setup similar to <a href="../../graphs/KG4/kg04.html">KG4</a> is used. The difference here is that we create the initial binary biomarker variable <code>BMRKR1_BIN</code> from comparing the continuous biomarker variable <code>BMRKR1</code> with a cutoff of interest.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -4857,14 +4857,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM_BMRKR1"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM_BMRKR1"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>Alternatively we can also use the <code><a href="https://rdrr.io/r/base/cut.html">cut()</a></code> function to cut the continuous biomarker variable <code>BMRKR1</code> into a factor with two levels <code>BMRKR1_CAT</code>, and then create its interaction with the treatment arm variable, to create effectively the same graphical comparison.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte2 <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte2 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adtte <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4932,7 +4932,7 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb2-13">)</span></code></pre></div>
+<span id="cb2-13">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05a_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
@@ -4943,9 +4943,9 @@ font-style: inherit;">2</span>)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -5004,7 +5004,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05a.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 <item>
   <title>KG5B</title>
@@ -5012,15 +5012,15 @@ loaded via a namespace (and not attached):
   <description><![CDATA[ <hr>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Setup</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Plot</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Session Info</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Setup</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Plot</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Session Info</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <p>A setup similar to <a href="../../graphs/KG4/kg04.html">KG4</a> is used. The difference here is that we create the initial binary biomarker variable <code>BMRKR1_BIN</code> from comparing the continuous biomarker variable <code>BMRKR1</code> with a cutoff of interest.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(tern)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -5125,14 +5125,14 @@ font-style: inherit;">"is_event"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">arm =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ARM_BMRKR1"</span>)</span></code></pre></div>
+font-style: inherit;">"ARM_BMRKR1"</span>)</span></code></pre></div></div>
 </details>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <p>The advantage of using the <code><a href="https://rdrr.io/r/base/cut.html">cut()</a></code> function is that it is sufficient to add additional cutoffs in order to obtain more than two bins for the cut version of the continuous biomarker variable. Again we can check the order of the factor levels to determine the <code>col</code> and <code>lty</code> arguments for <code>g_km()</code>. Here we want to always use red for the control and blue for the treatment arm, and then vary the line type for the different biomarker bins.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte3 <span class="ot" style="color: #003B4F;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">adtte3 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adtte <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -5165,12 +5165,12 @@ font-style: inherit;">interaction</span>(ARM_BIN, BMRKR1_CAT)</span>
 background-color: null;
 font-style: inherit;">levels</span>(adtte3<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$</span>ARM_BMRKR1)</span></code></pre></div>
+font-style: inherit;">$</span>ARM_BMRKR1)</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] "CTRL.(0,5]"   "TRT.(0,5]"    "CTRL.(5,10]"  "TRT.(5,10]"   "CTRL.(10,22]"
 [6] "TRT.(10,22]" </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g_km</span>(</span>
 <span id="cb4-2">  <span class="at" style="color: #657422;
@@ -5218,7 +5218,7 @@ background-color: null;
 font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>)</span>
-<span id="cb4-7">)</span></code></pre></div>
+<span id="cb4-7">)</span></code></pre></div></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05b_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1152"></p>
@@ -5229,9 +5229,9 @@ font-style: inherit;">3</span>)</span>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
@@ -5290,7 +5290,7 @@ loaded via a namespace (and not attached):
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Copyright 2023, Hoffmann-La Roche Ltd.</div></div></section></div> ]]></description>
   <category>KG</category>
   <guid>https://insightsengineering.github.io/biomarker-catalog/graphs/KG5/kg05b.html</guid>
-  <pubDate>Sat, 20 Sep 2025 17:28:11 GMT</pubDate>
+  <pubDate>Wed, 22 Oct 2025 17:26:45 GMT</pubDate>
 </item>
 </channel>
 </rss>

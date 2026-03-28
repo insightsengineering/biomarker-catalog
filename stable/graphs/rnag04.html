@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-a06763021a52c43c40a351ac8b799b8f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fff3d34d4619a3bfa21fbca3f266cb7c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-70f5609f1ab2c86614bc0d1c45cba595.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-fff3d34d4619a3bfa21fbca3f266cb7c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-969f72a577db6c464d5c97d8ce03f8f6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d0e220d926a2a05f40d89f0bb281df22.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-969f72a577db6c464d5c97d8ce03f8f6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
   "collapse-after": 3,
@@ -1180,13 +1180,17 @@ cookieconsent.run({
 <span id="cb7-6"><a href="#cb7-6"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
 <span id="cb7-7"><a href="#cb7-7"></a>    )</span>
 <span id="cb7-8"><a href="#cb7-8"></a>  )</span>
-<span id="cb7-9"><a href="#cb7-9"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[INFO] 2025-02-19 17:31:12.1917 pid:6519 token:[] teal.modules.hermes Initializing tm_g_pca</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-9"><a href="#cb7-9"></a>)</span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>Warning: 'experiments' dropped; see 'drops()'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information.
+ℹ The deprecated feature was likely used in the ggfortify package.
+  Please report the issue at &lt;https://github.com/sinhrks/ggfortify/issues&gt;.</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
@@ -1194,21 +1198,15 @@ cookieconsent.run({
 </figure>
 </div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="rnag04_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="1440"></p>
-</figure>
-</div>
-</div>
 </div>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.2 (2024-10-31)
+<pre><code>R version 4.5.2 (2025-10-31)
 Platform: x86_64-pc-linux-gnu
-Running under: Ubuntu 24.04.1 LTS
+Running under: Ubuntu 24.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1230,84 +1228,84 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] teal.modules.hermes_0.1.6   teal_0.16.0                
- [3] teal.slice_0.6.0            teal.data_0.7.0            
- [5] teal.code_0.6.1             shiny_1.10.0               
- [7] hermes_1.10.0               SummarizedExperiment_1.36.0
- [9] Biobase_2.66.0              GenomicRanges_1.58.0       
-[11] GenomeInfoDb_1.42.3         IRanges_2.40.1             
-[13] S4Vectors_0.44.0            BiocGenerics_0.52.0        
-[15] MatrixGenerics_1.18.1       matrixStats_1.5.0          
-[17] ggfortify_0.4.17            ggplot2_3.5.1              
+ [1] teal.modules.hermes_0.2.0   teal_1.1.0                 
+ [3] teal.slice_0.7.1            teal.data_0.8.0            
+ [5] teal.code_0.7.1             shiny_1.13.0               
+ [7] hermes_1.14.0               SummarizedExperiment_1.40.0
+ [9] Biobase_2.70.0              GenomicRanges_1.62.1       
+[11] Seqinfo_1.0.0               IRanges_2.44.0             
+[13] S4Vectors_0.48.0            BiocGenerics_0.56.0        
+[15] generics_0.1.4              MatrixGenerics_1.22.0      
+[17] matrixStats_1.5.0           ggfortify_0.4.19           
+[19] ggplot2_4.0.2              
 
 loaded via a namespace (and not attached):
-  [1] RColorBrewer_1.1-3          jsonlite_1.9.0             
-  [3] shape_1.4.6.1               MultiAssayExperiment_1.32.0
-  [5] magrittr_2.0.3              magick_2.8.5               
-  [7] farver_2.1.2                rmarkdown_2.29             
-  [9] ragg_1.3.3                  GlobalOptions_0.1.2        
- [11] zlibbioc_1.52.0             vctrs_0.6.5                
+  [1] RColorBrewer_1.1-3          jsonlite_2.0.0             
+  [3] shape_1.4.6.1               MultiAssayExperiment_1.36.1
+  [5] magrittr_2.0.4              magick_2.9.1               
+  [7] farver_2.1.2                rmarkdown_2.31             
+  [9] fs_2.0.1                    GlobalOptions_0.1.3        
+ [11] ragg_1.5.2                  vctrs_0.7.2                
  [13] memoise_2.0.1               webshot_0.5.5              
- [15] BiocBaseUtils_1.9.0         htmltools_0.5.8.1          
- [17] S4Arrays_1.6.0              forcats_1.0.0              
- [19] progress_1.2.3              curl_6.2.1                 
- [21] SparseArray_1.6.1           sass_0.4.9                 
- [23] bslib_0.9.0                 fontawesome_0.5.3          
- [25] htmlwidgets_1.6.4           testthat_3.2.3             
- [27] httr2_1.1.0                 cachem_1.1.0               
- [29] teal.widgets_0.4.3          mime_0.12                  
- [31] lifecycle_1.0.4             iterators_1.0.14           
- [33] pkgconfig_2.0.3             webshot2_0.1.1             
- [35] Matrix_1.7-2                R6_2.6.1                   
- [37] fastmap_1.2.0               GenomeInfoDbData_1.2.13    
- [39] rbibutils_2.3               clue_0.3-66                
- [41] digest_0.6.37               colorspace_2.1-1           
- [43] shinycssloaders_1.1.0       AnnotationDbi_1.68.0       
- [45] ps_1.9.0                    DESeq2_1.46.0              
- [47] textshaping_1.0.0           crosstalk_1.2.1            
- [49] RSQLite_2.3.9               labeling_0.4.3             
- [51] filelock_1.0.3              httr_1.4.7                 
- [53] abind_1.4-8                 compiler_4.4.2             
- [55] bit64_4.6.0-1               withr_3.0.2                
- [57] doParallel_1.0.17           backports_1.5.0            
- [59] BiocParallel_1.40.0         DBI_1.2.3                  
- [61] logger_0.4.0                biomaRt_2.62.1             
- [63] rappdirs_0.3.3              DelayedArray_0.32.0        
- [65] rjson_0.2.23                tools_4.4.2                
- [67] chromote_0.4.0              httpuv_1.6.15              
- [69] glue_1.8.0                  callr_3.7.6                
- [71] promises_1.3.2              grid_4.4.2                 
- [73] checkmate_2.3.2             cluster_2.1.8              
- [75] generics_0.1.3              gtable_0.3.6               
- [77] websocket_1.4.2             tidyr_1.3.1                
- [79] hms_1.1.3                   xml2_1.3.6                 
- [81] XVector_0.46.0              ggrepel_0.9.6              
- [83] foreach_1.5.2               pillar_1.10.1              
- [85] stringr_1.5.1               limma_3.62.2               
- [87] later_1.4.1                 circlize_0.4.16            
- [89] dplyr_1.1.4                 BiocFileCache_2.14.0       
- [91] lattice_0.22-6              bit_4.5.0.1                
- [93] tidyselect_1.2.1            ComplexHeatmap_2.22.0      
- [95] locfit_1.5-9.11             Biostrings_2.74.1          
- [97] knitr_1.49                  gridExtra_2.3              
- [99] teal.logger_0.3.2           edgeR_4.4.2                
-[101] xfun_0.51                   statmod_1.5.0              
-[103] brio_1.1.5                  DT_0.33                    
-[105] stringi_1.8.4               UCSC.utils_1.2.0           
-[107] yaml_2.3.10                 shinyWidgets_0.8.7         
-[109] evaluate_1.0.3              codetools_0.2-20           
-[111] tibble_3.2.1                cli_3.6.4                  
-[113] systemfonts_1.2.1           xtable_1.8-4               
-[115] Rdpack_2.6.2                jquerylib_0.1.4            
-[117] munsell_0.5.1               processx_3.8.5             
-[119] teal.reporter_0.4.0         Rcpp_1.0.14                
-[121] dbplyr_2.5.0                png_0.1-8                  
-[123] parallel_4.4.2              assertthat_0.2.1           
-[125] blob_1.2.4                  prettyunits_1.2.0          
-[127] scales_1.3.0                purrr_1.0.4                
-[129] crayon_1.5.3                GetoptLong_1.0.5           
-[131] rlang_1.1.5                 formatR_1.14               
-[133] KEGGREST_1.46.0             shinyjs_2.1.0              </code></pre>
+ [15] htmltools_0.5.9             S4Arrays_1.10.1            
+ [17] forcats_1.0.1               BiocBaseUtils_1.13.0       
+ [19] progress_1.2.3              curl_7.0.0                 
+ [21] SparseArray_1.10.9          sass_0.4.10                
+ [23] bslib_0.10.0                fontawesome_0.5.3          
+ [25] htmlwidgets_1.6.4           httr2_1.2.2                
+ [27] cachem_1.1.0                teal.widgets_0.6.0         
+ [29] mime_0.13                   lifecycle_1.0.5            
+ [31] iterators_1.0.14            pkgconfig_2.0.3            
+ [33] webshot2_0.1.2              Matrix_1.7-4               
+ [35] R6_2.6.1                    fastmap_1.2.0              
+ [37] rbibutils_2.4.1             clue_0.3-67                
+ [39] digest_0.6.39               colorspace_2.1-2           
+ [41] shinycssloaders_1.1.0       ps_1.9.1                   
+ [43] AnnotationDbi_1.72.0        DESeq2_1.50.2              
+ [45] crosstalk_1.2.2             textshaping_1.0.5          
+ [47] RSQLite_2.4.6               labeling_0.4.3             
+ [49] filelock_1.0.3              httr_1.4.8                 
+ [51] abind_1.4-8                 compiler_4.5.2             
+ [53] bit64_4.6.0-1               withr_3.0.2                
+ [55] doParallel_1.0.17           S7_0.2.1                   
+ [57] backports_1.5.0             bsicons_0.1.2              
+ [59] BiocParallel_1.44.0         DBI_1.3.0                  
+ [61] logger_0.4.1                biomaRt_2.66.2             
+ [63] rappdirs_0.3.4              DelayedArray_0.36.0        
+ [65] rjson_0.2.23                chromote_0.5.1             
+ [67] tools_4.5.2                 otel_0.2.0                 
+ [69] httpuv_1.6.17               glue_1.8.0                 
+ [71] callr_3.7.6                 promises_1.5.0             
+ [73] grid_4.5.2                  checkmate_2.3.4            
+ [75] cluster_2.1.8.2             gtable_0.3.6               
+ [77] websocket_1.4.4             tidyr_1.3.2                
+ [79] hms_1.1.4                   XVector_0.50.0             
+ [81] ggrepel_0.9.8               foreach_1.5.2              
+ [83] pillar_1.11.1               stringr_1.6.0              
+ [85] limma_3.66.0                later_1.4.8                
+ [87] circlize_0.4.17             dplyr_1.2.0                
+ [89] BiocFileCache_3.0.0         lattice_0.22-9             
+ [91] bit_4.6.0                   tidyselect_1.2.1           
+ [93] ComplexHeatmap_2.26.1       locfit_1.5-9.12            
+ [95] Biostrings_2.78.0           knitr_1.51                 
+ [97] gridExtra_2.3               teal.logger_0.4.1          
+ [99] edgeR_4.8.2                 xfun_0.57                  
+[101] statmod_1.5.1               DT_0.34.0                  
+[103] stringi_1.8.7               yaml_2.3.12                
+[105] shinyWidgets_0.9.1          evaluate_1.0.5             
+[107] codetools_0.2-20            tibble_3.3.1               
+[109] cli_3.6.5                   xtable_1.8-8               
+[111] systemfonts_1.3.2           Rdpack_2.6.6               
+[113] jquerylib_0.1.4             processx_3.8.6             
+[115] dichromat_2.0-0.1           Rcpp_1.1.1                 
+[117] teal.reporter_0.6.1         dbplyr_2.5.2               
+[119] png_0.1-9                   parallel_4.5.2             
+[121] assertthat_0.2.1            blob_1.3.0                 
+[123] prettyunits_1.2.0           scales_1.4.0               
+[125] purrr_1.2.1                 crayon_1.5.3               
+[127] GetoptLong_1.1.0            rlang_1.1.7                
+[129] KEGGREST_1.50.0             formatR_1.14               
+[131] shinyjs_2.1.1              </code></pre>
 </div>
 </div>
 </div>
@@ -1821,93 +1819,93 @@ loaded via a namespace (and not attached):
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> RNAG4</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Sample Correlation Graph</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="co">---</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a></span>
-<span id="cb13-7"><a href="#cb13-7"></a>------------------------------------------------------------------------</span>
-<span id="cb13-8"><a href="#cb13-8"></a></span>
-<span id="cb13-9"><a href="#cb13-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
-<span id="cb13-10"><a href="#cb13-10"></a></span>
-<span id="cb13-11"><a href="#cb13-11"></a>::: panel-tabset</span>
-<span id="cb13-12"><a href="#cb13-12"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a></span>
-<span id="cb13-14"><a href="#cb13-14"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to calculate the correlation between samples in <span class="in">`HermesData`</span>, visualize them in a heatmap, and create an interactive sample correlation graph using <span class="in">`teal.modules.hermes`</span>.</span>
-<span id="cb13-15"><a href="#cb13-15"></a></span>
-<span id="cb13-16"><a href="#cb13-16"></a>The function used to calculate correlation uses <span class="in">`HermesData`</span> as input.</span>
-<span id="cb13-17"><a href="#cb13-17"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
-<span id="cb13-18"><a href="#cb13-18"></a></span>
-<span id="cb13-19"><a href="#cb13-19"></a><span class="in">```{r, message = FALSE}</span></span>
-<span id="cb13-20"><a href="#cb13-20"></a><span class="fu">library</span>(hermes)</span>
-<span id="cb13-21"><a href="#cb13-21"></a></span>
-<span id="cb13-22"><a href="#cb13-22"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
-<span id="cb13-23"><a href="#cb13-23"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb13-24"><a href="#cb13-24"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb13-25"><a href="#cb13-25"></a>  <span class="fu">normalize</span>()</span>
-<span id="cb13-26"><a href="#cb13-26"></a><span class="in">```</span></span>
-<span id="cb13-27"><a href="#cb13-27"></a></span>
-<span id="cb13-28"><a href="#cb13-28"></a><span class="fu">## Calculate Correlation</span></span>
-<span id="cb13-29"><a href="#cb13-29"></a></span>
-<span id="cb13-30"><a href="#cb13-30"></a>We can calculate correlation matrix between samples in <span class="in">`HermesData`</span> using <span class="in">`correlate()`</span> function.</span>
-<span id="cb13-31"><a href="#cb13-31"></a>By default, <span class="in">`correlate()`</span> function uses the <span class="in">`counts`</span> assay to calculate the Pearson correlation coefficients, unless specified otherwise in the arguments.</span>
-<span id="cb13-32"><a href="#cb13-32"></a></span>
-<span id="cb13-35"><a href="#cb13-35"></a><span class="in">```{r}</span></span>
-<span id="cb13-36"><a href="#cb13-36"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object)</span>
-<span id="cb13-37"><a href="#cb13-37"></a></span>
-<span id="cb13-38"><a href="#cb13-38"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object, <span class="at">assay_name =</span> <span class="st">"tpm"</span>, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
-<span id="cb13-39"><a href="#cb13-39"></a><span class="in">```</span></span>
-<span id="cb13-40"><a href="#cb13-40"></a></span>
-<span id="cb13-41"><a href="#cb13-41"></a><span class="fu">## Plot Correlation</span></span>
-<span id="cb13-42"><a href="#cb13-42"></a></span>
-<span id="cb13-43"><a href="#cb13-43"></a>We can then plot a heatmap for correlation between samples in <span class="in">`HermesData`</span> using the <span class="in">`autoplot()`</span> function.</span>
-<span id="cb13-44"><a href="#cb13-44"></a>See <span class="in">`?calc_cor`</span> for details.</span>
-<span id="cb13-45"><a href="#cb13-45"></a></span>
-<span id="cb13-48"><a href="#cb13-48"></a><span class="in">```{r}</span></span>
-<span id="cb13-49"><a href="#cb13-49"></a><span class="fu">autoplot</span>(result)</span>
-<span id="cb13-50"><a href="#cb13-50"></a><span class="in">```</span></span>
-<span id="cb13-51"><a href="#cb13-51"></a></span>
-<span id="cb13-52"><a href="#cb13-52"></a>If there are still (because we already filtered some samples above) samples that have low correlation with others, we might want to flag them manually as technical failures and filter again.</span>
-<span id="cb13-53"><a href="#cb13-53"></a>Here just as an example:</span>
-<span id="cb13-54"><a href="#cb13-54"></a></span>
-<span id="cb13-57"><a href="#cb13-57"></a><span class="in">```{r}</span></span>
-<span id="cb13-58"><a href="#cb13-58"></a>object <span class="ot">&lt;-</span> object <span class="sc">%&gt;%</span></span>
-<span id="cb13-59"><a href="#cb13-59"></a>  <span class="fu">set_tech_failure</span>(<span class="st">"06520011B0023R"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb13-60"><a href="#cb13-60"></a>  <span class="fu">filter</span>()</span>
-<span id="cb13-61"><a href="#cb13-61"></a><span class="in">```</span></span>
-<span id="cb13-62"><a href="#cb13-62"></a></span>
-<span id="cb13-63"><a href="#cb13-63"></a><span class="fu">## Teal Module for Sample Correlation Graph</span></span>
-<span id="cb13-64"><a href="#cb13-64"></a></span>
-<span id="cb13-65"><a href="#cb13-65"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
-<span id="cb13-66"><a href="#cb13-66"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
-<span id="cb13-67"><a href="#cb13-67"></a>We can select the sample correlation tab above the plot area.</span>
-<span id="cb13-68"><a href="#cb13-68"></a>We can then use the provided teal module <span class="in">`tm_g_pca`</span> to include a PCA module in our teal app.</span>
-<span id="cb13-69"><a href="#cb13-69"></a></span>
-<span id="cb13-70"><a href="#cb13-70"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
-<span id="cb13-71"><a href="#cb13-71"></a><span class="fu">library</span>(teal.modules.hermes)</span>
-<span id="cb13-72"><a href="#cb13-72"></a></span>
-<span id="cb13-73"><a href="#cb13-73"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>()</span>
-<span id="cb13-74"><a href="#cb13-74"></a>data <span class="ot">&lt;-</span> <span class="fu">within</span>(data, {</span>
-<span id="cb13-75"><a href="#cb13-75"></a>  <span class="fu">library</span>(hermes)</span>
-<span id="cb13-76"><a href="#cb13-76"></a>  MAE <span class="ot">&lt;-</span> multi_assay_experiment</span>
-<span id="cb13-77"><a href="#cb13-77"></a>})</span>
-<span id="cb13-78"><a href="#cb13-78"></a><span class="fu">datanames</span>(data) <span class="ot">&lt;-</span> <span class="st">"MAE"</span></span>
-<span id="cb13-79"><a href="#cb13-79"></a></span>
-<span id="cb13-80"><a href="#cb13-80"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
-<span id="cb13-81"><a href="#cb13-81"></a>  <span class="at">data =</span> data,</span>
-<span id="cb13-82"><a href="#cb13-82"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
-<span id="cb13-83"><a href="#cb13-83"></a>    <span class="fu">tm_g_pca</span>(</span>
-<span id="cb13-84"><a href="#cb13-84"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
-<span id="cb13-85"><a href="#cb13-85"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
-<span id="cb13-86"><a href="#cb13-86"></a>    )</span>
-<span id="cb13-87"><a href="#cb13-87"></a>  )</span>
-<span id="cb13-88"><a href="#cb13-88"></a>)</span>
-<span id="cb13-89"><a href="#cb13-89"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
-<span id="cb13-90"><a href="#cb13-90"></a><span class="in">```</span></span>
-<span id="cb13-91"><a href="#cb13-91"></a></span>
-<span id="cb13-92"><a href="#cb13-92"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
-<span id="cb13-93"><a href="#cb13-93"></a>:::</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> RNAG4</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> RNAseq Sample Correlation Graph</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="an">categories:</span><span class="co"> [RNAG]</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">---</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a>------------------------------------------------------------------------</span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a>{{&lt; include ../misc/hooks.qmd &gt;}}</span>
+<span id="cb12-10"><a href="#cb12-10"></a></span>
+<span id="cb12-11"><a href="#cb12-11"></a>::: panel-tabset</span>
+<span id="cb12-12"><a href="#cb12-12"></a><span class="fu">## Setup: Import, Filter and Normalize</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a></span>
+<span id="cb12-14"><a href="#cb12-14"></a>This page can be used as a template of how to use the available <span class="in">`hermes`</span> functions to calculate the correlation between samples in <span class="in">`HermesData`</span>, visualize them in a heatmap, and create an interactive sample correlation graph using <span class="in">`teal.modules.hermes`</span>.</span>
+<span id="cb12-15"><a href="#cb12-15"></a></span>
+<span id="cb12-16"><a href="#cb12-16"></a>The function used to calculate correlation uses <span class="in">`HermesData`</span> as input.</span>
+<span id="cb12-17"><a href="#cb12-17"></a>See <span class="co">[</span><span class="ot">RNAG1</span><span class="co">](../graphs/rnag01.qmd)</span> for details.</span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-19"><a href="#cb12-19"></a><span class="in">```{r, message = FALSE}</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="fu">library</span>(hermes)</span>
+<span id="cb12-21"><a href="#cb12-21"></a></span>
+<span id="cb12-22"><a href="#cb12-22"></a>object <span class="ot">&lt;-</span> hermes_data <span class="sc">%&gt;%</span></span>
+<span id="cb12-23"><a href="#cb12-23"></a>  <span class="fu">add_quality_flags</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a>  <span class="fu">filter</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-25"><a href="#cb12-25"></a>  <span class="fu">normalize</span>()</span>
+<span id="cb12-26"><a href="#cb12-26"></a><span class="in">```</span></span>
+<span id="cb12-27"><a href="#cb12-27"></a></span>
+<span id="cb12-28"><a href="#cb12-28"></a><span class="fu">## Calculate Correlation</span></span>
+<span id="cb12-29"><a href="#cb12-29"></a></span>
+<span id="cb12-30"><a href="#cb12-30"></a>We can calculate correlation matrix between samples in <span class="in">`HermesData`</span> using <span class="in">`correlate()`</span> function.</span>
+<span id="cb12-31"><a href="#cb12-31"></a>By default, <span class="in">`correlate()`</span> function uses the <span class="in">`counts`</span> assay to calculate the Pearson correlation coefficients, unless specified otherwise in the arguments.</span>
+<span id="cb12-32"><a href="#cb12-32"></a></span>
+<span id="cb12-35"><a href="#cb12-35"></a><span class="in">```{r}</span></span>
+<span id="cb12-36"><a href="#cb12-36"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object)</span>
+<span id="cb12-37"><a href="#cb12-37"></a></span>
+<span id="cb12-38"><a href="#cb12-38"></a>result <span class="ot">&lt;-</span> <span class="fu">correlate</span>(object, <span class="at">assay_name =</span> <span class="st">"tpm"</span>, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
+<span id="cb12-39"><a href="#cb12-39"></a><span class="in">```</span></span>
+<span id="cb12-40"><a href="#cb12-40"></a></span>
+<span id="cb12-41"><a href="#cb12-41"></a><span class="fu">## Plot Correlation</span></span>
+<span id="cb12-42"><a href="#cb12-42"></a></span>
+<span id="cb12-43"><a href="#cb12-43"></a>We can then plot a heatmap for correlation between samples in <span class="in">`HermesData`</span> using the <span class="in">`autoplot()`</span> function.</span>
+<span id="cb12-44"><a href="#cb12-44"></a>See <span class="in">`?calc_cor`</span> for details.</span>
+<span id="cb12-45"><a href="#cb12-45"></a></span>
+<span id="cb12-48"><a href="#cb12-48"></a><span class="in">```{r}</span></span>
+<span id="cb12-49"><a href="#cb12-49"></a><span class="fu">autoplot</span>(result)</span>
+<span id="cb12-50"><a href="#cb12-50"></a><span class="in">```</span></span>
+<span id="cb12-51"><a href="#cb12-51"></a></span>
+<span id="cb12-52"><a href="#cb12-52"></a>If there are still (because we already filtered some samples above) samples that have low correlation with others, we might want to flag them manually as technical failures and filter again.</span>
+<span id="cb12-53"><a href="#cb12-53"></a>Here just as an example:</span>
+<span id="cb12-54"><a href="#cb12-54"></a></span>
+<span id="cb12-57"><a href="#cb12-57"></a><span class="in">```{r}</span></span>
+<span id="cb12-58"><a href="#cb12-58"></a>object <span class="ot">&lt;-</span> object <span class="sc">%&gt;%</span></span>
+<span id="cb12-59"><a href="#cb12-59"></a>  <span class="fu">set_tech_failure</span>(<span class="st">"06520011B0023R"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-60"><a href="#cb12-60"></a>  <span class="fu">filter</span>()</span>
+<span id="cb12-61"><a href="#cb12-61"></a><span class="in">```</span></span>
+<span id="cb12-62"><a href="#cb12-62"></a></span>
+<span id="cb12-63"><a href="#cb12-63"></a><span class="fu">## Teal Module for Sample Correlation Graph</span></span>
+<span id="cb12-64"><a href="#cb12-64"></a></span>
+<span id="cb12-65"><a href="#cb12-65"></a>We start by importing a <span class="in">`MultiAssayExperiment`</span>; here we use the example <span class="in">`multi_assay_experiment`</span> available in <span class="in">`hermes`</span>.</span>
+<span id="cb12-66"><a href="#cb12-66"></a>It is wrapped as a <span class="in">`teal::dataset`</span>.</span>
+<span id="cb12-67"><a href="#cb12-67"></a>We can select the sample correlation tab above the plot area.</span>
+<span id="cb12-68"><a href="#cb12-68"></a>We can then use the provided teal module <span class="in">`tm_g_pca`</span> to include a PCA module in our teal app.</span>
+<span id="cb12-69"><a href="#cb12-69"></a></span>
+<span id="cb12-70"><a href="#cb12-70"></a><span class="in">```{r,  message = FALSE, cache = FALSE, opts.label=c('app')}</span></span>
+<span id="cb12-71"><a href="#cb12-71"></a><span class="fu">library</span>(teal.modules.hermes)</span>
+<span id="cb12-72"><a href="#cb12-72"></a></span>
+<span id="cb12-73"><a href="#cb12-73"></a>data <span class="ot">&lt;-</span> <span class="fu">teal_data</span>()</span>
+<span id="cb12-74"><a href="#cb12-74"></a>data <span class="ot">&lt;-</span> <span class="fu">within</span>(data, {</span>
+<span id="cb12-75"><a href="#cb12-75"></a>  <span class="fu">library</span>(hermes)</span>
+<span id="cb12-76"><a href="#cb12-76"></a>  MAE <span class="ot">&lt;-</span> multi_assay_experiment</span>
+<span id="cb12-77"><a href="#cb12-77"></a>})</span>
+<span id="cb12-78"><a href="#cb12-78"></a><span class="fu">datanames</span>(data) <span class="ot">&lt;-</span> <span class="st">"MAE"</span></span>
+<span id="cb12-79"><a href="#cb12-79"></a></span>
+<span id="cb12-80"><a href="#cb12-80"></a>app <span class="ot">&lt;-</span> <span class="fu">init</span>(</span>
+<span id="cb12-81"><a href="#cb12-81"></a>  <span class="at">data =</span> data,</span>
+<span id="cb12-82"><a href="#cb12-82"></a>  <span class="at">modules =</span> <span class="fu">modules</span>(</span>
+<span id="cb12-83"><a href="#cb12-83"></a>    <span class="fu">tm_g_pca</span>(</span>
+<span id="cb12-84"><a href="#cb12-84"></a>      <span class="at">label =</span> <span class="st">"pca"</span>,</span>
+<span id="cb12-85"><a href="#cb12-85"></a>      <span class="at">mae_name =</span> <span class="st">"MAE"</span></span>
+<span id="cb12-86"><a href="#cb12-86"></a>    )</span>
+<span id="cb12-87"><a href="#cb12-87"></a>  )</span>
+<span id="cb12-88"><a href="#cb12-88"></a>)</span>
+<span id="cb12-89"><a href="#cb12-89"></a><span class="fu">shinyApp</span>(app<span class="sc">$</span>ui, app<span class="sc">$</span>server)</span>
+<span id="cb12-90"><a href="#cb12-90"></a><span class="in">```</span></span>
+<span id="cb12-91"><a href="#cb12-91"></a></span>
+<span id="cb12-92"><a href="#cb12-92"></a>{{&lt; include ../misc/session_info.qmd &gt;}}</span>
+<span id="cb12-93"><a href="#cb12-93"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
